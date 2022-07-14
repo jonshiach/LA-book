@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; Linear Algebra Lecture Notes</title>
+    <title>Index &#8212; Runge-Kutta Methods and Computational Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -87,9 +87,14 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
       
       
-      <h1 class="site-logo" id="site-title">Linear Algebra Lecture Notes</h1>
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Runge-Kutta Methods and Computational Linear Algebra</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -100,57 +105,20 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="index.html">
-                    <no title>
+                <a class="reference internal" href="0_Introduction.html">
+                    Introduction
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Preliminaries
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="0_Preliminaries/0.0_about.html">
-   About
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="0_Preliminaries/0.1_Teaching_schedule.html">
-   Teaching schedule
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="0_Preliminaries/0.2_Assessment.html">
-   Assessment
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="0_Preliminaries/0.3_Mathematical_preliminaries.html">
-   Mathematical preliminaries
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="0_Preliminaries/0.4_Python.html">
-   Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="0_Preliminaries/0.5_How_to_pass.html">
-   How to pass the unit
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Chapters
+  Runge-Kutta Methods
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="1_Matrices/1.0_Matrices.html">
-   Matrices
+  <a class="reference internal" href="1.0_IVPs.html">
+   1. Initial Value Problems
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -159,45 +127,45 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="1_Matrices/1.1_Matrix_multiplication.html">
-     Matrix multiplication
+    <a class="reference internal" href="1.1_Taylor_Series.html">
+     The Taylor Series
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="1_Matrices/1.2_Matrix_transpose.html">
-     Matrix transpose
+    <a class="reference internal" href="1.2_Euler_Method.html">
+     The Euler method
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="1_Matrices/1.3_Special_matrices.html">
-     Special matrices
+    <a class="reference internal" href="1.3_Error_Analysis.html">
+     Error analysis
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="1_Matrices/1.4_Determinants.html">
-     Determinants
+    <a class="reference internal" href="1.4_RK2.html">
+     The Second-Order Runge-Kutta Method
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="1_Matrices/1.5_Inverse_matrix.html">
-     Inverse matrix
+    <a class="reference internal" href="1.5_Higher_Order_ODEs.html">
+     Higher-order Ordinary Differential Equations
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="1_Matrices/1.6_Matrix_algebra.html">
-     Matrix algebra
+    <a class="reference internal" href="1.6_IVP_Summary.html">
+     Initial Value Problems Chapter Summary
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="1_Matrices/1.8_Matrices_exercises.html">
-     Matrices exercises
+    <a class="reference internal" href="1.7_Exercises.html">
+     Initial Value Problems Exercises
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="2_Systems_of_Linear%20Equations/2.0_Systems_of_linear_equations.html">
-   Systems of Linear Equations
+  <a class="reference internal" href="2.0_ERKs.html">
+   2. Explicit Runge-Kutta Methods
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -206,50 +174,35 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="2_Systems_of_Linear%20Equations/2.1_Solving_using_inverse_matrix.html">
-     Solving systems of linear equations using the inverse matrix
+    <a class="reference internal" href="2.1_ERK_Derivation.html">
+     Derivation of Explicit Runge-Kutta Methods
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="2_Systems_of_Linear%20Equations/2.2_Cramers_rule.html">
-     Cramer’s rule
+    <a class="reference internal" href="2.2_RK4_Derivation.html">
+     Derivation of a fourth-order explicit Runge-Kutta method
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="2_Systems_of_Linear%20Equations/2.3_Gaussian_elimination.html">
-     Gaussian elimination
+    <a class="reference internal" href="2.3_Solving_IVPs_using_ERK_methods.html">
+     Solving initial value problems using explicit Runge-Kutta methods
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="2_Systems_of_Linear%20Equations/2.4_Partial_pivoting.html">
-     Partial pivoting
+    <a class="reference internal" href="2.4_ERK_Summary.html">
+     Chapter Summary
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="2_Systems_of_Linear%20Equations/2.5_Gauss_Jordan_elimination.html">
-     Gauss-Jordan elimination
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2_Systems_of_Linear%20Equations/2.6_Consistent_inconsistent_and_indeterminate_systems.html">
-     Consistent, inconsistent and indeterminate systems
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2_Systems_of_Linear%20Equations/2.7_Homogeneous_systems.html">
-     Homogeneous systems
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="2_Systems_of_Linear%20Equations/2.9_Systems_of_linear_equations_exercises.html">
-     Systems of linear equations exercises
+    <a class="reference internal" href="2.5_ERK_Exercises.html">
+     Explicit Runge-Kutta Methods Exercises
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="3_Vectors/3.0_Vectors.html">
-   Vectors
+  <a class="reference internal" href="3.0_IRKs.html">
+   3. Implicit Runge-Kutta Methods
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -258,35 +211,30 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="3_Vectors/3.1_Arithmetic_operations_on_vectors.html">
-     Arithmetic operations on vectors
+    <a class="reference internal" href="3.1_Deriving_IRK_methods.html">
+     Deriving implicit Runge-Kutta methods
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3_Vectors/3.2_Vector_magnitude.html">
-     Vector magnitude
+    <a class="reference internal" href="3.2_Solving_IVPs_using_IRK_methods.html">
+     Solving initial value problems using implicit Runge-Kutta methods
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3_Vectors/3.3_Vector_products.html">
-     Vector products
+    <a class="reference internal" href="3.3_IRK_summary.html">
+     Chapter Summary
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3_Vectors/3.4_Linear_combination_of_vectors.html">
-     Linear combination of vectors
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3_Vectors/3.6_Vectors_exercises.html">
-     Vectors exercises
+    <a class="reference internal" href="3.4_IRK_exercises.html">
+     Implicit Runge-Kutta Methods Exercises
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="4_Coordinate_geometry/4.0_Coordinate_geometry.html">
-   Co-ordinate Geometry
+  <a class="reference internal" href="4.0_Stability.html">
+   4. Stability
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -295,25 +243,35 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="4_Coordinate_geometry/4.1_Planes.html">
-     Planes
+    <a class="reference internal" href="4.1_Stability_functions.html">
+     Stability functions
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="4_Coordinate_geometry/4.2_Shortest_distance_problems.html">
-     Shortest distance problems
+    <a class="reference internal" href="4.2_RK_stability_function.html">
+     Stability function of a Runge-Kutta method
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="4_Coordinate_geometry/4.4_Coordinate_geometry_exercises.html">
-     Co-ordinate geometry exercises
+    <a class="reference internal" href="4.3_IRK_stability_function.html">
+     Stability functions of implicit methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4.4_Stability_summary.html">
+     Chapter summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4.5_Stability_exercises.html">
+     Stability Exercises
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="5_Vector_spaces/5.0_Vector_spaces.html">
-   Vector spaces
+  <a class="reference internal" href="5.0_BVPs.html">
+   5. Boundary Value Problems
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -322,30 +280,37 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="5_Vector_spaces/5.1_Subspaces.html">
-     Subspaces
+    <a class="reference internal" href="5.1_Shooting_method.html">
+     The shooting method
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="5_Vector_spaces/5.2_Linear_dependence.html">
-     Linear dependence
+    <a class="reference internal" href="5.2_Finite_difference_method.html">
+     The finite-difference method
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="5_Vector_spaces/5.3_Basis.html">
-     Basis
+    <a class="reference internal" href="5.3_BVP_summary.html">
+     Chapter summary
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="5_Vector_spaces/5.5_Vector_spaces_exercises.html">
-     Vector spaces exercises
+    <a class="reference internal" href="5.4_BVP_exercises.html">
+     Boundary value problems exercises
     </a>
    </li>
   </ul>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Solving Linear Systems of Equations
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="6_Linear_transformations/6.0_Linear_transformations.html">
-   Linear Transformations
+  <a class="reference internal" href="6.0_Direct_methods.html">
+   6. Direct Methods
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
@@ -354,43 +319,78 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="6_Linear_transformations/6.1_Composite_linear_transformations.html">
-     Composite linear transformations
+    <a class="reference internal" href="6.1_LU_decomposition.html">
+     LU decomposition
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="6_Linear_transformations/6.2_Rotation_reflection_and_scaling.html">
-     Rotation, reflection and scaling
+    <a class="reference internal" href="6.2_LUP_decomposition.html">
+     LUP decomposition
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="6_Linear_transformations/6.3_Translation.html">
-     Translation
+    <a class="reference internal" href="6.3_Cholesky_decomposition.html">
+     Cholesky decomposition
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="6_Linear_transformations/6.5_Transformations_exercises.html">
-     Transformations exercises
+    <a class="reference internal" href="6.4_QR_decomposition.html">
+     QR decomposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="6.5_Direct_methods_summary.html">
+     Chapter summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="6.6_Direct_methods_exercises.html">
+     Direct methods exercises
     </a>
    </li>
   </ul>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendices
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="7_Appendices/7.1_Cheat_sheet.html">
-   Linear Algebra Cheat Sheet
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="7.0_Indirect_methods.html">
+   7. Indirect Methods
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="7_Appendices/7.2_Sympy.html">
-   SymPy commands
-  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="7.1_Jacobi_method.html">
+     Jacobi method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="7.2_Gauss_Seidel_method.html">
+     Gauss-Seidel method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="7.3_Convergence_of_indirect_methods.html">
+     Convergence of indirect methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="7.4_SOR_method.html">
+     The Successive Over Relaxation (SOR) method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="7.5_Indirect_methods_summary.html">
+     Chapter summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="7.6_Indirect_methods_exercises.html">
+     Indirect methods exercises
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -484,358 +484,8 @@ title="Fullscreen mode"
 <h1 id="index">Index</h1>
 
 <div class="genindex-jumpbox">
- <a href="#A"><strong>A</strong></a>
- | <a href="#B"><strong>B</strong></a>
- | <a href="#C"><strong>C</strong></a>
- | <a href="#D"><strong>D</strong></a>
- | <a href="#E"><strong>E</strong></a>
- | <a href="#F"><strong>F</strong></a>
- | <a href="#G"><strong>G</strong></a>
- | <a href="#H"><strong>H</strong></a>
- | <a href="#I"><strong>I</strong></a>
- | <a href="#L"><strong>L</strong></a>
- | <a href="#M"><strong>M</strong></a>
- | <a href="#N"><strong>N</strong></a>
- | <a href="#O"><strong>O</strong></a>
- | <a href="#P"><strong>P</strong></a>
- | <a href="#R"><strong>R</strong></a>
- | <a href="#S"><strong>S</strong></a>
- | <a href="#T"><strong>T</strong></a>
- | <a href="#U"><strong>U</strong></a>
- | <a href="#V"><strong>V</strong></a>
- | <a href="#Z"><strong>Z</strong></a>
  
 </div>
-<h2 id="A">A</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Addition-subtraction"><strong>Addition/subtraction</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Adjoint-matrix"><strong>Adjoint matrix</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="B">B</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Basis"><strong>Basis</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Basis-vectors-in-mathbb-R-3"><strong>Basis vectors in \mathbb{R}^3</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="C">C</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Calculating-an-inverse-matrix-using-Gauss-Jordan-elimination"><strong>Calculating an inverse matrix using Gauss-Jordan elimination</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Change-of-basis"><strong>Change of basis</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Change-of-basis-matrix"><strong>Change of basis matrix</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Co-factor"><strong>Co-factor</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Composite-transformation"><strong>Composite transformation</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Composite-transformation-matrices"><strong>Composite transformation matrices</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Consistent-system"><strong>Consistent system</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Cramer-s-rule"><strong>Cramer&#39;s rule</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="D">D</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Determinant-of-an-2-times-2-matrix"><strong>Determinant of an 2\times 2 matrix</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Determinant-of-an-n-times-n-matrix"><strong>Determinant of an n \times n matrix</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Diagonal-matrix"><strong>Diagonal matrix</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="E">E</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Elementary-Row-Operations-EROs"><strong>Elementary Row Operations (EROs)</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Euclidean-space"><strong>Euclidean space</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="F">F</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Finding-the-transformation-matrix-from-the-images"><strong>Finding the transformation matrix from the images</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="G">G</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Gauss-Jordan-Elimination-GJE"><strong>Gauss-Jordan Elimination (GJE)</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Gaussian-Elimination-GE"><strong>Gaussian Elimination (GE)</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Geometric-definition-of-the-cross-product"><strong>Geometric definition of the cross product</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Geometric-definition-of-the-dot-product"><strong>Geometric definition of the dot product</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="H">H</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Homogeneous-co-ordinates"><strong>Homogeneous co-ordinates</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="I">I</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Identity-matrix"><strong>Identity matrix</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Image"><strong>Image</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Inconsistent-system"><strong>Inconsistent system</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Indeterminate-system"><strong>Indeterminate system</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Intersecting-lines"><strong>Intersecting lines</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Intersection-between-three-planes"><strong>Intersection between three planes</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Inverse-matrix"><strong>Inverse matrix</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Inverse-transformation"><strong>Inverse transformation</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="L">L</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Linear-combination"><strong>Linear combination</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Linear-dependence"><strong>Linear dependence</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Linear-independence"><strong>Linear independence</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Linear-transformation"><strong>Linear transformation</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Lines"><strong>Lines</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="M">M</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Magnitude-of-a-vector"><strong>Magnitude of a vector</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Matrix"><strong>Matrix</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Matrix-equality"><strong>Matrix equality</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Matrix-exponent"><strong>Matrix exponent</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Matrix-indexing"><strong>Matrix indexing</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Matrix-multiplication"><strong>Matrix multiplication</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Matrix-transpose"><strong>Matrix transpose</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Minor"><strong>Minor</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Multiplication-by-a-scalar"><strong>Multiplication by a scalar</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="N">N</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Normal-vector"><strong>Normal vector</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Normalising-a-vector"><strong>Normalising a vector</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="O">O</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Orthogonal-basis"><strong>Orthogonal basis</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Orthonormal-basis"><strong>Orthonormal basis</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="P">P</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Parallel-lines"><strong>Parallel lines</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Partial-pivoting"><strong>Partial pivoting</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Perpendicular-lines"><strong>Perpendicular lines</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Pivot-element"><strong>Pivot element</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Planes"><strong>Planes</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Point-normal-equation-of-a-plane"><strong>Point-normal equation of a plane</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Points"><strong>Points</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Position-vector"><strong>Position vector</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="R">R</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Rank-of-a-matrix"><strong>Rank of a matrix</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Reduced-Row-Echelon-Form-RREF"><strong>Reduced Row Echelon Form (RREF)</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Reflection"><strong>Reflection</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Row-Echelon-Form-REF"><strong>Row Echelon Form (REF)</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Row-reduction-to-reduced-row-echelon-form"><strong>Row reduction to reduced row echelon form</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Row-reduction-to-row-echelon-form"><strong>Row reduction to row echelon form</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Row-reduction-using-partial-pivoting"><strong>Row reduction using partial pivoting</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="S">S</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Scaling"><strong>Scaling</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Shortest-distance-between-a-point-and-a-line"><strong>Shortest distance between a point and a line</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Shortest-distance-between-a-point-and-a-plane"><strong>Shortest distance between a point and a plane</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Shortest-distance-between-two-points"><strong>Shortest distance between two points</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Shortest-distance-between-two-skew-lines"><strong>Shortest distance between two skew lines</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Skew-lines"><strong>Skew lines</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Solution-of-a-linear-system-of-equations-used-inverse-matrix"><strong>Solution of a linear system of equations used inverse matrix</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Solution-of-an-indeterminate-system"><strong>Solution of an indeterminate system</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Spanning-set"><strong>Spanning set</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Standard-basis"><strong>Standard basis</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Subspace"><strong>Subspace</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Symmetric-matrix"><strong>Symmetric matrix</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-System-of-linear-equations"><strong>System of linear equations</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="T">T</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-The-adjoint-determinant-formula"><strong>The adjoint-determinant formula</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-The-cross-product"><strong>The cross product</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-The-dot-product"><strong>The dot product</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Transformation-matrix"><strong>Transformation matrix</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Translation"><strong>Translation</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="U">U</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Unit-vector"><strong>Unit vector</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="V">V</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Vector"><strong>Vector</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Vector-equation-of-a-line"><strong>Vector equation of a line</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Vector-space"><strong>Vector space</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Vector-space-axioms"><strong>Vector space axioms</strong></a>
-</li>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Vector-space-dimension"><strong>Vector space dimension</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="Z">Z</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="7_Appendices/7.1_Cheat_sheet.html#term-Zero-matrix"><strong>Zero matrix</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
 
 
               </div>

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Search &#8212; Runge-Kutta Methods and Computational Linear Algebra</title>
+    <title>1. Initial Value Problems &#8212; Runge-Kutta Methods and Computational Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -30,7 +30,6 @@
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -50,19 +49,18 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="_static/searchtools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" />
-  <script src="searchindex.js" defer></script>
-  
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Taylor Series" href="1.1_Taylor_Series.html" />
+    <link rel="prev" title="Introduction" href="0_Introduction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
 
     <!-- Google Analytics -->
     
-
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
 <!-- Checkboxes to toggle the left sidebar -->
@@ -103,7 +101,7 @@ const thebe_selector_output = ".output, .cell_output"
       <h1 class="site-logo" id="site-title">Runge-Kutta Methods and Computational Linear Algebra</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="#" method="get">
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -121,12 +119,12 @@ const thebe_selector_output = ".output, .cell_output"
   Runge-Kutta Methods
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="1.0_IVPs.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
    1. Initial Value Problems
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
@@ -449,6 +447,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/drjonshiach/ODEs_book/main?urlpath=tree/1.0_IVPs.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -463,22 +490,105 @@ title="Fullscreen mode"
 
 </button>
 
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/1.0_IVPs.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ordinary-differential-equations-odes">
+   Ordinary Differential Equations (ODEs)
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1></h1>
+                <h1>1. Initial Value Problems</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ordinary-differential-equations-odes">
+   Ordinary Differential Equations (ODEs)
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -486,36 +596,92 @@ title="Fullscreen mode"
                 
               <div>
                 
-  <h1 id="search-documentation">Search</h1>
-  
-  <noscript>
-  <div class="admonition warning">
-  <p>
-    Please activate JavaScript to enable the search
-    functionality.
-  </p>
-  </div>
-  </noscript>
-  
-  
-  <p>
-    Searching for multiple words only shows matches that contain
-    all words.
-  </p>
-  
-  
-  <form action="" method="get">
-    <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-    <input type="submit" value="search" />
-    <span id="search-progress" style="padding-left: 10px"></span>
-  </form>
-  
-  
-  
-  <div id="search-results">
-  
-  </div>
-  
+  <div class="tex2jax_ignore mathjax_ignore section" id="initial-value-problems">
+<span id="ivp-chapter"></span><h1>1. Initial Value Problems<a class="headerlink" href="#initial-value-problems" title="Permalink to this headline">#</a></h1>
+<p><strong>Learning Outcomes</strong></p>
+<p>On successful completion of this chapter readers will be able to:</p>
+<ul class="simple">
+<li><p>identify an <a class="reference internal" href="#ivp-definition"><span class="std std-ref">initial value problem</span></a>;</p></li>
+<li><p>approximate a function using the <a class="reference internal" href="1.1_Taylor_Series.html#taylor-series-definition"><span class="std std-ref">Taylor series</span></a>;</p></li>
+<li><p>derive the <a class="reference internal" href="1.2_Euler_Method.html#euler-method-definition"><span class="std std-ref">Euler method</span></a> and apply it to solve first-order ordinary differential equations;</p></li>
+<li><p>express a <a class="reference internal" href="1.5_Higher_Order_ODEs.html#higher-order-odes-section"><span class="std std-ref">higher-order ordinary differential equation</span></a> as a system of first-order ordinary differential equation;</p></li>
+<li><p>apply an ODE solver to <a class="reference internal" href="1.5_Higher_Order_ODEs.html#solving-systems-of-odes-section"><span class="std std-ref">solve a system of ordinary differential equation</span></a>.</p></li>
+</ul>
+<hr class="docutils" />
+<div class="section" id="ordinary-differential-equations-odes">
+<span id="sec-odes"></span><h2>Ordinary Differential Equations (ODEs)<a class="headerlink" href="#ordinary-differential-equations-odes" title="Permalink to this headline">#</a></h2>
+<div class="note admonition" id="ode-definition">
+<p class="admonition-title">Definition: Ordinary Differential Equation</p>
+<p>An Ordinary Differential Equation (ODE) is an equation of the form</p>
+<div class="math notranslate nohighlight">
+\[y^{(n)} = f(t, y, y', y'', \ldots, y^{(n-1)}),\]</div>
+<p>where <span class="math notranslate nohighlight">\(y = y(t)\)</span> is some function of the independent variable <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(y^{(n)}\)</span> is the <span class="math notranslate nohighlight">\(n\)</span>th derivative of <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(f\)</span> is some function of <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(y\)</span> and its derivatives.</p>
+</div>
+<p>The solution of an ODE is a function <span class="math notranslate nohighlight">\(y=y(t)\)</span> that satisfies the ODE over the domain of <span class="math notranslate nohighlight">\(t\)</span>. For example, consider the following ODE</p>
+<div class="math notranslate nohighlight" id="equation-simple-ode">
+<span class="eqno">(1)<a class="headerlink" href="#equation-simple-ode" title="Permalink to this equation">#</a></span>\[ y' = y,\]</div>
+<p>where <span class="math notranslate nohighlight">\(t \in \mathbb{R}\)</span>. Rewriting this using Leibniz notation and integrating both sides we have</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \frac{\mathrm{d} y}{\mathrm{d} t} &amp; = y \\
+    \frac{\mathrm{d} y}{y} &amp;= \mathrm{d} t \\
+    \int \frac{1}{y} \mathrm{d} y &amp;= \int 1 \mathrm{d} t \\
+    \ln (y) + c_1 &amp;= t + c_2 \\
+    \ln (y) &amp;= t + c_1 + c_2 \\
+    y &amp;= e^{t + c},
+\end{align*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(c = c_1 + c_2\)</span> is some constant. The solution can be verified by differentiating <span class="math notranslate nohighlight">\(y\)</span> and check that it satisfies the original ODE. This solution has been plotted for various values of the constant <span class="math notranslate nohighlight">\(c\)</span>. Note that there are an infinite number of solutions since <span class="math notranslate nohighlight">\(c\)</span> can be any value.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/1.0_IVPs_1_0.png" src="_images/1.0_IVPs_1_0.png" />
+</div>
+</div>
+<p>However, if we know that the value of the solution <span class="math notranslate nohighlight">\(y\)</span> for some <span class="math notranslate nohighlight">\(t\)</span> then we can calculate <span class="math notranslate nohighlight">\(c\)</span>. For example, if the solution to the ODE from equation <a class="reference internal" href="#equation-simple-ode">(1)</a> is known to be <span class="math notranslate nohighlight">\(y(0) = \alpha\)</span> then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \alpha &amp;= e^{0 + c} = e^c \\
+    \therefore c &amp;= \ln(\alpha)
+\end{align*}\]</div>
+<p>so the ODE has the solution</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    y &amp;= e^{t + \ln(\alpha)}.
+\end{align*}\]</div>
+<p>Different values of <span class="math notranslate nohighlight">\(\alpha\)</span> in the initial solution <span class="math notranslate nohighlight">\(y(0)=\alpha\)</span> give different unique solutions to the ODE. Problems of this type are known as <strong>initial value problems</strong>.</p>
+<div class="note admonition" id="ivp-definition">
+<p class="admonition-title">Definition: Initial value problem</p>
+<p>An Initial Value Problem (IVP) is an ODE where the initial solution at the lower boundary of the domain is known. For example,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    y' = f(t,y), \qquad t\in [a ,b ], \qquad y(a) = \alpha.
+\end{align*}\]</div>
+<p>Here a first-order ODE <span class="math notranslate nohighlight">\(y'=f(t,y)\)</span> is defined over the domain <span class="math notranslate nohighlight">\(t\in [a ,b]\)</span> and the initial solution <span class="math notranslate nohighlight">\(y(a)\)</span> is the known value <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+</div>
+<p>Unfortunately, for most real world practical applications initial value problems cannot be solved using analytical methods so instead we use numerical methods to approximate the solution.</p>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -524,6 +690,20 @@ title="Fullscreen mode"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="0_Introduction.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Introduction</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="1.1_Taylor_Series.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The Taylor Series</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
