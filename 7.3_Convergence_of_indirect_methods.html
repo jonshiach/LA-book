@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Search &#8212; Runge-Kutta Methods and Computational Linear Algebra</title>
+    <title>Convergence of indirect methods &#8212; Runge-Kutta Methods and Computational Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -30,7 +30,6 @@
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -50,19 +49,18 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="_static/searchtools.js"></script>
-    <script src="_static/language_data.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" />
-  <script src="searchindex.js" defer></script>
-  
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Successive Over Relaxation (SOR) method" href="7.4_SOR_method.html" />
+    <link rel="prev" title="Gauss-Seidel method" href="7.2_Gauss_Seidel_method.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
 
     <!-- Google Analytics -->
     
-
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
 <!-- Checkboxes to toggle the left sidebar -->
@@ -103,7 +101,7 @@ const thebe_selector_output = ".output, .cell_output"
       <h1 class="site-logo" id="site-title">Runge-Kutta Methods and Computational Linear Algebra</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="#" method="get">
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -313,7 +311,7 @@ const thebe_selector_output = ".output, .cell_output"
   Solving Linear Systems of Equations
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="6.0_Direct_methods.html">
    6. Direct Methods
@@ -356,16 +354,16 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="7.0_Indirect_methods.html">
    7. Indirect Methods
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
   <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="7.1_Jacobi_method.html">
      Jacobi method
@@ -376,8 +374,8 @@ const thebe_selector_output = ".output, .cell_output"
      Gauss-Seidel method
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="7.3_Convergence_of_indirect_methods.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Convergence of indirect methods
     </a>
    </li>
@@ -449,6 +447,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/drjonshiach/ODEs_book/main?urlpath=tree/7.3_Convergence_of_indirect_methods.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -463,6 +490,52 @@ title="Fullscreen mode"
 
 </button>
 
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/7.3_Convergence_of_indirect_methods.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
     </div>
 </div>
 
@@ -474,7 +547,7 @@ title="Fullscreen mode"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1></h1>
+                <h1>Convergence of indirect methods</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -486,36 +559,111 @@ title="Fullscreen mode"
                 
               <div>
                 
-  <h1 id="search-documentation">Search</h1>
-  
-  <noscript>
-  <div class="admonition warning">
-  <p>
-    Please activate JavaScript to enable the search
-    functionality.
-  </p>
-  </div>
-  </noscript>
-  
-  
-  <p>
-    Searching for multiple words only shows matches that contain
-    all words.
-  </p>
-  
-  
-  <form action="" method="get">
-    <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-    <input type="submit" value="search" />
-    <span id="search-progress" style="padding-left: 10px"></span>
-  </form>
-  
-  
-  
-  <div id="search-results">
-  
-  </div>
-  
+  <div class="tex2jax_ignore mathjax_ignore section" id="convergence-of-indirect-methods">
+<span id="convergence-of-indirect-methods-section"></span><h1>Convergence of indirect methods<a class="headerlink" href="#convergence-of-indirect-methods" title="Permalink to this headline">#</a></h1>
+<p>We have seen that both the <a class="reference internal" href="7.1_Jacobi_method.html#jacobi-method-section"><span class="std std-ref">Jacobi</span></a> and <a class="reference internal" href="7.2_Gauss_Seidel_method.html#gauss-seidel-method-section"><span class="std std-ref">Gauss-Seidel</span></a> methods are iterated until the estimates of the solution converge to a given tolerance. In <a class="reference internal" href="7.1_Jacobi_method.html#jacobi-method-example"><span class="std std-ref">example 7.1</span></a> required 49 iterations to converge to the solution of a system of linear equations whereas in <a class="reference internal" href="7.2_Gauss_Seidel_method.html#gauss-seidel-method-example"><span class="std std-ref">example 7.2</span></a> only required 20 iterations to converge to the solution for the same system.</p>
+<p>Not all indirect methods will converge for a given system of linear equations, we can establish whether a method will be convergent using the theorem below. Let <span class="math notranslate nohighlight">\(\mathbf{e}^{(k)} = |\mathbf{x} - \mathbf{x}^{(k)}|\)</span> be the error between the exact solution <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> and the estimate <span class="math notranslate nohighlight">\(\mathbf{x}^{(k)}\)</span>. The error from one estimate to the next is updated using the iteration matrix for the method</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \mathbf{e}^{(k+1)} = T\mathbf{e}^{(k)}.
+\end{align*}\]</div>
+<p>We can write the first error, <span class="math notranslate nohighlight">\(\mathbf{e}^{(0)}\)</span> as a linear combination of some vectors <span class="math notranslate nohighlight">\(\mathbf{v}_i\)</span></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \mathbf{e}^{(0)} =\alpha_1 \mathbf{v}_1 +\alpha_2 \mathbf{v}_2 +\cdots +\alpha_n \mathbf{v}_n =\sum_{i=1}^n \alpha_i \mathbf{v}_i,
+\end{align*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\alpha_i\)</span> are scalars. If <span class="math notranslate nohighlight">\(\mathbf{v}_i\)</span> are the <a class="reference external" href="https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors">eigenvectors</a> of the matrix <span class="math notranslate nohighlight">\(T\)</span> with eigenvalues <span class="math notranslate nohighlight">\(\lambda_i\)</span> so <span class="math notranslate nohighlight">\(T\mathbf{v}_i = \lambda_i \mathbf{v}_i\)</span> then iterating <span class="math notranslate nohighlight">\(\mathbf{e}^{(k)}\)</span> gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \mathbf{e}^{(1)} &amp;= T\mathbf{e}^{(0)} =T\left(\sum_{i=1}^n \alpha_i \mathbf{v}_i \right)=\sum_{i=1}^n \alpha_i T\mathbf{v}_i = \sum_{i=1}^n \alpha_i \lambda_i \mathbf{v}_i , \\
+    \mathbf{e}^{(2)} &amp;=T\mathbf{e}^{(1)} =T\left(\sum_{i=1}^n \alpha_i \lambda_i \mathbf{v}_i \right)=\sum_{i=1}^n \alpha_i \lambda_i T\mathbf{v}_i =\sum_{i=1}^n \alpha_i \lambda_i^2 \mathbf{v}_i , \\
+    &amp;\vdots \\
+    \mathbf{e}^{(k+1)} &amp;=\sum_{i=1}^n \alpha_i \lambda_i^{k+1} \mathbf{v}_i .
+\end{align*}\]</div>
+<p>If <span class="math notranslate nohighlight">\(|\lambda_1|&gt;\lambda_2, \lambda_3, \ldots \lambda_n\)</span> then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \mathbf{e}^{(k+1)} =\alpha_1 \lambda_1^{k+1} \mathbf{v}_1 +\sum_{i=2}^n \alpha_i \lambda_i^{k+1} \mathbf{v}_i =\lambda_1^{k+1} \left(\alpha_1 \mathbf{v}_1 +\sum_{i=2}^n \alpha_i \mathbf{v}_i {\left(\frac{\lambda_i }{\lambda_1 }\right)}^{k+1} \right)
+\end{align*}\]</div>
+<p>and since <span class="math notranslate nohighlight">\(\lambda_i / \lambda_ 1 &lt; 1\)</span> then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \lim_{k\to \infty } \mathbf{e}^{(k+1)} =\alpha_1 \lambda_1^{k+1} \mathbf{v}_1 .
+\end{align*}\]</div>
+<p>This means that as the number of iterations increases, the error varies by a factor of <span class="math notranslate nohighlight">\(\lambda_1^{k+1}\)</span> where <span class="math notranslate nohighlight">\(\lambda_1\)</span> is the largest eigenvalue of <span class="math notranslate nohighlight">\(T\)</span> which is known as the <strong>spectral radius</strong>.</p>
+<div class="note admonition" id="spectral-radius-definition">
+<p class="admonition-title">Definition: Spectral radius</p>
+<p>Let <span class="math notranslate nohighlight">\(\lambda_1, \lambda_2, \ldots, \lambda_n\)</span> be the eigenvalues of a matrix <span class="math notranslate nohighlight">\(A\)</span> then the spectral radius of <span class="math notranslate nohighlight">\(A\)</span> denoted by <span class="math notranslate nohighlight">\(\rho(A)\)</span> is</p>
+<div class="math notranslate nohighlight" id="equation-spectral-radius-definition">
+<span class="eqno">(45)<a class="headerlink" href="#equation-spectral-radius-definition" title="Permalink to this equation">#</a></span>\[\begin{align*}
+    \rho(A) = \max_i(|\lambda_i|).
+\end{align*}\]</div>
+</div>
+<div class="important admonition" id="indirect-methods-convergence-criteria-theorem">
+<p class="admonition-title">Theorem: Convergence criteria for an indirect method</p>
+<p>The spectral radius of <span class="math notranslate nohighlight">\(T\)</span> gives us the following information about an indirect method</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(\rho (T) &gt; 1\)</span> then the errors will increase over each iteration, therefore for an indirect method to converge to the solution we require <span class="math notranslate nohighlight">\(\rho (T)&lt; 1\)</span>.</p></li>
+<li><p>The smaller the value of <span class="math notranslate nohighlight">\(\rho (T)\)</span> the faster the errors will tend to zero.
+\end{itemize}</p></li>
+</ul>
+</div>
+<div class="seealso admonition" id="convergence-example">
+<p class="admonition-title">Example 7.3</p>
+<p>Show that the Jacobi and Gauss-Seidel methods are convergent of the system of linear equations from <a class="reference internal" href="7.1_Jacobi_method.html#jacobi-method-example"><span class="std std-ref">example 7.1</span></a>.</p>
+<p><strong>Solution</strong></p>
+<p>The coefficient matrix for this linear system is</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    A = \begin{pmatrix} 4 &amp; 3 &amp; 0 \\ 3 &amp; 4 &amp; -1 \\ 0 &amp; -1 &amp; 4 \end{pmatrix}.
+\end{align*}\]</div>
+<p>so</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    L &amp;= \begin{pmatrix} 0 &amp; 0 &amp; 0 \\ 3 &amp; 0 &amp; 0 \\ 0 &amp; -1 &amp; 0 \end{pmatrix}, &amp;
+    D &amp;= \begin{pmatrix} 4 &amp; 0 &amp; 0 \\ 0 &amp; 4 &amp; 0 \\ 0 &amp; 0 &amp; 4 \end{pmatrix}, \\
+    U &amp;= \begin{pmatrix} 0 &amp; 3 &amp; 0 \\ 0 &amp; 0 &amp; -1 \\ 0 &amp; 0 &amp; 0 \end{pmatrix}.
+\end{align*}\]</div>
+<p>The iteration matrices for the Jacobi and Gauss-Seidel methods are given in equations <a class="reference internal" href="7.1_Jacobi_method.html#equation-jacobi-method-iteration-matrix-equation">(41)</a> and <a class="reference internal" href="7.2_Gauss_Seidel_method.html#equation-gauss-seidel-method-iteration-matrix-equation">(44)</a> which for this system are</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    T_J &amp;= -D ( L + U) 
+    = -\begin{pmatrix} 4 &amp; 0 &amp; 0 \\ 0 &amp; 4 &amp; 0 \\ 0 &amp; 0 &amp; 4 \end{pmatrix} \left(
+    \begin{pmatrix} 0 &amp; 0 &amp; 0 \\ 3 &amp; 0 &amp; 0 \\ 0 &amp; -1 &amp; 0 \end{pmatrix} +
+    \begin{pmatrix} 4 &amp; 0 &amp; 0 \\ 0 &amp; 4 &amp; 0 \\ 0 &amp; 0 &amp; 4 \end{pmatrix} \right) \\
+    &amp;= - \begin{pmatrix} \frac{1}{4} &amp; 0 &amp; 0 \\ 0 &amp; \frac{1}{4} &amp; 0 \\ 0 &amp; 0 &amp; \frac{1}{4} \end{pmatrix}
+    \begin{pmatrix} 0 &amp; 3 &amp; 0 \\ 3 &amp; 0 &amp; -1 \\ 0 &amp; -1 &amp; 0 \end{pmatrix} 
+    = \begin{pmatrix} 0 &amp; -\frac{3}{4} &amp; 0 \\ -\frac{3}{4} &amp; 0 &amp; \frac{1}{4} \\ 0 &amp; \frac{1}{4} &amp; 0 \end{pmatrix}, \\
+    T_{GS} &amp;= - (L + D)^{-1} U 
+    = - \begin{pmatrix} 3 &amp; 0 &amp; 0 \\ 3 &amp; 4 &amp; 0 \\ 0 &amp; -1 &amp; 4 \end{pmatrix}^{-1}
+    \begin{pmatrix} 0 &amp; 3 &amp; 0 \\ 0 &amp; 0 &amp; -1 \\ 0 &amp; 0 &amp; 0 \end{pmatrix} \\ 
+    &amp;= \begin{pmatrix} -\frac{1}{4} &amp; 0 &amp; 0 \\ \frac{3}{16} &amp; \frac{1}{4} &amp; 0 \\ \frac{3}{64} &amp; -\frac{1}{16} &amp; \frac{1}{4} \end{pmatrix}
+    \begin{pmatrix} 0 &amp; 3 &amp; 0 \\ 0 &amp; 0 &amp; -1 \\ 0 &amp; 0 &amp; 0 \end{pmatrix} =
+    \begin{pmatrix} 0 &amp; -\frac{3}{4} &amp; 0 \\ 0 &amp; \frac{9}{16} &amp; \frac{1}{4} \\ 0 &amp; \frac{9}{64} &amp; \frac{1}{16} \end{pmatrix}
+\end{align*}\]</div>
+<p>Calculating the spectral radius for these iteration matrices gives <span class="math notranslate nohighlight">\(\rho(T_J )=0.7906\)</span> and <span class="math notranslate nohighlight">\(\rho (T_{GS})=0.625\)</span> which are both less than 1 so both of these methods are convergent for this system. Furthermore, the Gauss-Seidel method will converge faster than the Jacobi method since it has a smaller spectral radius.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -524,6 +672,20 @@ title="Fullscreen mode"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="7.2_Gauss_Seidel_method.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Gauss-Seidel method</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="7.4_SOR_method.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The Successive Over Relaxation (SOR) method</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
