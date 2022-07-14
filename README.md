@@ -1,3 +1,2 @@
-# jupyter-books
-
-A repository for my Jupyter Books.
+# Linear algebra book
+ Lecture notes for level 4 linear algebra.
