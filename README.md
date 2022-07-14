@@ -1,3 +1,3 @@
-# jupyter-books
+# LA-book
 
-A repository for my Jupyter Books.
+Lecture notes for linear algebra.
