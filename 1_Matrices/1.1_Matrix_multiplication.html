@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Matrix multiplication</title>
+    <title>Matrix multiplication &#8212; Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -91,7 +91,14 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
       
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Linear Algebra</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -107,34 +114,29 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Preliminaries
- </span>
-</p>
-<ul class="nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../0_Preliminaries/0.1_Teaching_schedule.html">
+  <a class="reference internal" href="../0_Preamble/0.1_Teaching_schedule.html">
    Teaching schedule
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../0_Preliminaries/0.2_Assessment.html">
+  <a class="reference internal" href="../0_Preamble/0.2_Assessment.html">
    Assessment
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../0_Preliminaries/0.3_Mathematical_preliminaries.html">
+  <a class="reference internal" href="../0_Preamble/0.3_Mathematical_preliminaries.html">
    Mathematical preliminaries
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../0_Preliminaries/0.4_Python.html">
+  <a class="reference internal" href="../0_Preamble/0.4_Python.html">
    Python
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../0_Preliminaries/0.5_How_to_pass.html">
+  <a class="reference internal" href="../0_Preamble/0.5_How_to_pass.html">
    How to pass the unit
   </a>
  </li>
@@ -193,7 +195,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../2_Systems_of_Linear%20Equations/2.0_Systems_of_linear_equations.html">
+  <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.0_Systems_of_linear_equations.html">
    Systems of Linear Equations
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -201,47 +203,7 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear%20Equations/2.1_Solving_using_inverse_matrix.html">
-     Solving systems of linear equations using the inverse matrix
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear%20Equations/2.2_Cramers_rule.html">
-     Cramer’s rule
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear%20Equations/2.3_Gaussian_elimination.html">
-     Gaussian elimination
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear%20Equations/2.4_Partial_pivoting.html">
-     Partial pivoting
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear%20Equations/2.5_Gauss_Jordan_elimination.html">
-     Gauss-Jordan elimination
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear%20Equations/2.6_Consistent_inconsistent_and_indeterminate_systems.html">
-     Consistent, inconsistent and indeterminate systems
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear%20Equations/2.7_Homogeneous_systems.html">
-     Homogeneous systems
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear%20Equations/2.9_Systems_of_linear_equations_exercises.html">
-     Systems of linear equations exercises
-    </a>
-   </li>
+  <ul class="simple">
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -773,8 +735,8 @@ Solution<div class="sd-summary-down docutils">
 <div class="note admonition" id="matrix-exponents-definition">
 <p class="admonition-title">Definition: Matrix exponents</p>
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be a square <span class="math notranslate nohighlight">\(n \times n\)</span> matrix. Then we write <span class="math notranslate nohighlight">\(A^2=AA\)</span> and more generally:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0dbc59d2-31a6-4f2c-ad32-aae3fd0b10a5">
-<span class="eqno">(1)<a class="headerlink" href="#equation-0dbc59d2-31a6-4f2c-ad32-aae3fd0b10a5" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7289a8cc-87b0-4123-9b41-fa73970103bb">
+<span class="eqno">(1)<a class="headerlink" href="#equation-7289a8cc-87b0-4123-9b41-fa73970103bb" title="Permalink to this equation">#</a></span>\[\begin{align}
     A^n = \underbrace{A A \cdots A}_{n \text{ times}}.
 \end{align}\]</div>
 </div>

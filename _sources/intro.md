@@ -20,7 +20,7 @@ Matrices
 ::::
 
 ::::{grid-item-card}
-:link: 2_Systems_of_Linear Equations/2.0_Systems_of_linear_equations
+:link: 2_Systems_of_Linear_Equations/2.0_Systems_of_linear_equations
 :link-type: doc
 :class-header: bg-light
 :columns: 4

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Consistent, inconsistent and indeterminate systems</title>
+    <title>Consistent, inconsistent and indeterminate systems &#8212; Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -93,6 +93,8 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
+      <h1 class="site-logo" id="site-title">Linear Algebra</h1>
+      
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
@@ -107,34 +109,29 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Preliminaries
- </span>
-</p>
-<ul class="nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../0_Preliminaries/0.1_Teaching_schedule.html">
+  <a class="reference internal" href="../0_Preamble/0.1_Teaching_schedule.html">
    Teaching schedule
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../0_Preliminaries/0.2_Assessment.html">
+  <a class="reference internal" href="../0_Preamble/0.2_Assessment.html">
    Assessment
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../0_Preliminaries/0.3_Mathematical_preliminaries.html">
+  <a class="reference internal" href="../0_Preamble/0.3_Mathematical_preliminaries.html">
    Mathematical preliminaries
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../0_Preliminaries/0.4_Python.html">
+  <a class="reference internal" href="../0_Preamble/0.4_Python.html">
    Python
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../0_Preliminaries/0.5_How_to_pass.html">
+  <a class="reference internal" href="../0_Preamble/0.5_How_to_pass.html">
    How to pass the unit
   </a>
  </li>
@@ -642,9 +639,6 @@ title="Print to PDF"
 \end{align*}\]</div>
 <p>The lines for these two equations have been plotted in <a class="reference internal" href="#consistent-system-plot"><span class="std std-numref">Fig. 1</span></a> below.</p>
 <div class="figure align-default" id="consistent-system-plot" style="width: 500px">
-<div class="cell_output docutils container">
-<img alt="../_images/2.6_Consistent_inconsistent_and_indeterminate_systems_2_1.png" src="../_images/2.6_Consistent_inconsistent_and_indeterminate_systems_2_1.png" />
-</div>
 <p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Plots of the lines <span class="math notranslate nohighlight">\(x_1 + x_2 = 3\)</span> and <span class="math notranslate nohighlight">\(x_1 - x_2 = .1\)</span></span><a class="headerlink" href="#consistent-system-plot" title="Permalink to this image">#</a></p>
 </div>
 <p>The two lines intersect at <span class="math notranslate nohighlight">\((2,1)\)</span> so this system is consistent and has a unique solution. This can easily be confirmed using Gaussian elimination.</p>
@@ -677,9 +671,6 @@ title="Print to PDF"
 \end{align*}\]</div>
 <p>The lines for these two equations have been plotted in <a class="reference internal" href="#inconsistent-system-plot"><span class="std std-numref">Fig. 2</span></a> below.</p>
 <div class="figure align-default" id="inconsistent-system-plot" style="width: 500px">
-<div class="cell_output docutils container">
-<img alt="../_images/2.6_Consistent_inconsistent_and_indeterminate_systems_2_3.png" src="../_images/2.6_Consistent_inconsistent_and_indeterminate_systems_2_3.png" />
-</div>
 <p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Plots of the lines <span class="math notranslate nohighlight">\(x_1 - x_2 = 1\)</span> and <span class="math notranslate nohighlight">\(x_1 - x_2 = -1\)</span>.</span><a class="headerlink" href="#inconsistent-system-plot" title="Permalink to this image">#</a></p>
 </div>
 <p>The two lines do not intersect so this system does not have a solution. If we attempt to solve this using Gaussian elimination</p>
@@ -712,9 +703,6 @@ title="Print to PDF"
 \end{align*}\]</div>
 <p>The lines for these two equations have been plotted in <a class="reference internal" href="#indeterminate-system-plot"><span class="std std-numref">Fig. 3</span></a> below.</p>
 <div class="figure align-default" id="indeterminate-system-plot" style="width: 500px">
-<div class="cell_output docutils container">
-<img alt="../_images/2.6_Consistent_inconsistent_and_indeterminate_systems_2_5.png" src="../_images/2.6_Consistent_inconsistent_and_indeterminate_systems_2_5.png" />
-</div>
 <p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Plots of the lines <span class="math notranslate nohighlight">\(x_1 - x_2 = 1\)</span> and <span class="math notranslate nohighlight">\(2x_1 - 2x_2 = 2\)</span>.</span><a class="headerlink" href="#indeterminate-system-plot" title="Permalink to this image">#</a></p>
 </div>
 <p>The two lines are the same so any point along either line represents a solution to the system. If we attempt to solve this using Gaussian elimination</p>
