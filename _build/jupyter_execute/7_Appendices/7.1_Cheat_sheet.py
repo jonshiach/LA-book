@@ -122,7 +122,7 @@
 #     $$ C_{21} = (-1)^{2+1} M_{21} = (-1)^3 (-24) = 24. $$
 # 
 # Determinant of an $n \times n$ matrix
-#     The [determinant of an $n \times n$ matrix]((nxn-determinant-example)) $A$ is calculated using $\det(A) = \displaystyle\sum_{i = 1}^n a_{ij} C_{ij}$ for $j \in \{1, \ldots, n\}$ for $C_{ij}$ is the co-factor for the element $a_{ij}$. For example, for the matrix $A$ defined above
+#     The [determinant of an $n \times n$ matrix](nxn-determinant-example) $A$ is calculated using $\det(A) = \displaystyle\sum_{i = 1}^n a_{ij} C_{ij}$ for $j \in \{1, \ldots, n\}$ for $C_{ij}$ is the co-factor for the element $a_{ij}$. For example, for the matrix $A$ defined above
 # 
 #     \begin{align*}
 #         \begin{vmatrix} 1 & 0 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{vmatrix} 

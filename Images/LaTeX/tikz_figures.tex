@@ -13,15 +13,15 @@
 \begin{document}
 
 % R3
-% \begin{tikzpicture}
-%     \draw [-stealth'] (0,0) -- ++(330:3) node [right] {$x$};
-%     \draw [-stealth'] (0,0) -- ++(30:3) node [right] {$y$};
-%     \draw [-stealth'] (0,0) -- ++(90:3) node [left] {$z$};
-%     \draw [dashed,help lines] (330:1.5) -- ++(30:1) -- ++(150:1.5) -- ++(210:1)
-%         (90:2) -- ++(330:1.5) -- ++(30:1) -- ++(150:1.5) -- ++(210:1)
-%         (330:1.5) -- ++(90:2) (30:1) -- ++(90:2) ($(330:1.5)+(30:1)$) -- ++(90:2) coordinate (1);
-%     \node [point,label={45:$(x,y,z)$}] at (1) {};
-% \end{tikzpicture}
+\begin{tikzpicture}
+    \draw [-stealth'] (0,0) -- ++(330:3) node [right] {$x$};
+    \draw [-stealth'] (0,0) -- ++(30:3) node [right] {$y$};
+    \draw [-stealth'] (0,0) -- ++(90:3) node [left] {$z$};
+    \draw [help lines] (330:1.5) -- ++(30:1) -- ++(150:1.5) -- ++(210:1)
+        (90:2) -- ++(330:1.5) -- ++(30:1) -- ++(150:1.5) -- ++(210:1)
+        (330:1.5) -- ++(90:2) (30:1) -- ++(90:2) ($(330:1.5)+(30:1)$) -- ++(90:2) coordinate (1);
+    \node [point,blue,label={45:$(x,y,z)$}] at (1) {};
+\end{tikzpicture}
 
 % Vector
 % \begin{tikzpicture}
@@ -66,27 +66,27 @@
 
 
 % % Vector addition
-\begin{tikzpicture}
-    \draw [stealth'-stealth'] (0, 5) node [left] {$y$} -- (0, 0) -- (6, 0) node [below] {$x$};
-    \coordinate (1) at (1, 1);
-    \coordinate (2) at (2, 3);
-    \coordinate (3) at (4, 2);
-    \coordinate (4) at (5, 4);
-    \draw [vector] (1) -- node [above left] {$\mathbf{a}$} (2);
-    \draw [vector, red] (2) -- node [above left] {$\mathbf{b}$} (4);
-    \draw [vector, red] (1) -- node [below right] {$\mathbf{b}$} (3);
-    \draw [vector] (3) -- node [below right] {$\mathbf{a}$} (4);
-    \draw [vector, green!75!black] (1) -- node [above,rotate=36.87] {$\mathbf{a}+\mathbf{b}$} (4);
-    \draw [help lines] (-1, 1) -- (1) -- (1, -1);
-    \draw [help lines] (-0.5, 3) -- (2) -- (2, -0.5);
-    \draw [help lines] (-1, 4) -- (4) -- (5, -1);
-    \draw [latex'-latex',help lines,blue] (1, -0.2) -- node [below] {$a_1$} ++(1, 0);
-    \draw [latex'-latex',help lines,red] (2, -0.2) -- node [below] {$b_1$} ++(3, 0);
-    \draw [latex'-latex',help lines,green!75!black] (1, -0.8) -- node [below] {$a_1+b_1$} ++(4, 0);
-    \draw [latex'-latex',help lines,blue] (-0.2, 1) -- node [left] {$a_2$} ++(0, 2);
-    \draw [latex'-latex',help lines,red] (-0.2, 3) -- node [left] {$b_2$} ++(0, 1);
-    \draw [latex'-latex',help lines,green!75!black] (-0.8, 1) -- node [above,rotate=90] {$a_2+b_2$} ++(0, 3);
-\end{tikzpicture}
+% \begin{tikzpicture}
+%     \draw [stealth'-stealth'] (0, 5) node [left] {$y$} -- (0, 0) -- (6, 0) node [below] {$x$};
+%     \coordinate (1) at (1, 1);
+%     \coordinate (2) at (2, 3);
+%     \coordinate (3) at (4, 2);
+%     \coordinate (4) at (5, 4);
+%     \draw [vector] (1) -- node [above left] {$\mathbf{a}$} (2);
+%     \draw [vector, red] (2) -- node [above left] {$\mathbf{b}$} (4);
+%     \draw [vector, red] (1) -- node [below right] {$\mathbf{b}$} (3);
+%     \draw [vector] (3) -- node [below right] {$\mathbf{a}$} (4);
+%     \draw [vector, green!75!black] (1) -- node [above,rotate=36.87] {$\mathbf{a}+\mathbf{b}$} (4);
+%     \draw [help lines] (-1, 1) -- (1) -- (1, -1);
+%     \draw [help lines] (-0.5, 3) -- (2) -- (2, -0.5);
+%     \draw [help lines] (-1, 4) -- (4) -- (5, -1);
+%     \draw [latex'-latex',help lines,blue] (1, -0.2) -- node [below] {$a_1$} ++(1, 0);
+%     \draw [latex'-latex',help lines,red] (2, -0.2) -- node [below] {$b_1$} ++(3, 0);
+%     \draw [latex'-latex',help lines,green!75!black] (1, -0.8) -- node [below] {$a_1+b_1$} ++(4, 0);
+%     \draw [latex'-latex',help lines,blue] (-0.2, 1) -- node [left] {$a_2$} ++(0, 2);
+%     \draw [latex'-latex',help lines,red] (-0.2, 3) -- node [left] {$b_2$} ++(0, 1);
+%     \draw [latex'-latex',help lines,green!75!black] (-0.8, 1) -- node [above,rotate=90] {$a_2+b_2$} ++(0, 3);
+% \end{tikzpicture}
 
 % Scalar multipliction of a vector
 % \begin{tikzpicture}

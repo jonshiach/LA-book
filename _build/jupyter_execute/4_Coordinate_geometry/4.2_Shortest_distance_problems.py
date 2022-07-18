@@ -116,7 +116,7 @@
 # Given two lines described by $\ell_1: P_1 + t\mathbf{d}_1$ and $\ell_2: P_2 + t\mathbf{d}_2$ in $\mathbb{R}^n$ we have three situations to consider
 # 
 # - If the two lines intersect then obviously the shortest distance is obviously 0.   
-# - If the two lines are parallel then any point on $\ell_1$ can gives the shortest distance between $\ell_1$ and $\ell_2$. Hence we simply choose a point $R$ on $\ell_2$ and apply method for [finding the distance between a point and a line](point-line-distance-definition).
+# - If the two lines are parallel then any point on $\ell_1$ can gives the shortest distance between $\ell_1$ and $\ell_2$. Hence we simply choose a point $R$ on $\ell_2$ and apply method for [finding the distance between a point and a line](point-line-distance-theorem).
 # - If the two lines are skew then the shortest distance is the distance of the chord that is perpendicular to both $\ell_1$ and $\ell_2$ ({numref}`line-line-distance-figure`). 
 # 
 # :::{figure} ../Images/line_line_distance.png

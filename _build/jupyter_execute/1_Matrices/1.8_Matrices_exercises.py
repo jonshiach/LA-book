@@ -486,7 +486,7 @@
 # 
 # Check $(AB)(AB)^{-1} = \begin{pmatrix} 6 & -15 \\ 10 & 10 \end{pmatrix} \begin{pmatrix} \frac{1}{21} & \frac{1}{14} \\ -\frac{1}{21} & \frac{1}{35} \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} \quad \checkmark$
 # 
-# (k) &emsp; Using the [properties of inverse matrices](properties-of-inverse-matrices-theorem) we know that $(AB)^{-1} = B^{-1}A^{-1}$ so
+# (k) &emsp; Using the [properties of inverse matrices](inverse-matrix-definition) we know that $(AB)^{-1} = B^{-1}A^{-1}$ so
 # 
 # \begin{align*}
 #     B^{-1}A^{-1} = \begin{pmatrix} \frac{1}{21} & \frac{1}{14} \\ -\frac{1}{21} & \frac{1}{35} \end{pmatrix}

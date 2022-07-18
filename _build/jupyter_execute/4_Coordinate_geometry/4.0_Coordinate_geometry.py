@@ -12,7 +12,7 @@
 # - determine whether two lines [intersect](line-line-intersection-definition), are [parallel](parallel-lines-definition), [skew](skew-lines-definition) and/or [perpendicular](perpendicular-lines-definition);
 # - define a plane using the [point-normal definition of a plane](point-normal-definition);
 # - determine the [intersection of two planes](intersection-of-planes-section); 
-# - calculate the shortest distance between [two points](shortest-distance-between-two-points), [a point and a line](point-line-distance-definition), [between two skew lines](line-line-distance-definition) and [a point and a plane](ex4.7).
+# - calculate the shortest distance between [two points](shortest-distance-between-two-points), [a point and a line](point-line-distance-theorem), [between two skew lines](line-line-distance-theorem) and [a point and a plane](ex4.7).
 # 
 # ---
 # ## Definition

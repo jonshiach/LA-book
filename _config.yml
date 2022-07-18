@@ -1,9 +1,9 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Linear Algebra Lecture Notes
+title: Linear Algebra
 author: Dr Jon Shiach
-# logo: Images/MMU_logo.png
+logo: Images/logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -48,3 +48,7 @@ sphinx:
   config:
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     bibtex_reference_style: author_year
+
+exclude_patterns: [README.md]
+
+only_build_toc_files: true

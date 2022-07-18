@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Partial pivoting &#8212; Linear Algebra Lecture Notes</title>
+    <title>Partial pivoting &#8212; Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -93,7 +93,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <h1 class="site-logo" id="site-title">Linear Algebra Lecture Notes</h1>
+      <h1 class="site-logo" id="site-title">Linear Algebra</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -104,44 +104,34 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../index.html">
-                    <no title>
+                <a class="reference internal" href="../intro.html">
+                    Introduction
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Preliminaries
- </span>
-</p>
-<ul class="nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../0_Preliminaries/0.0_about.html">
-   About
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../0_Preliminaries/0.1_Teaching_schedule.html">
+  <a class="reference internal" href="../0_Preamble/0.1_Teaching_schedule.html">
    Teaching schedule
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../0_Preliminaries/0.2_Assessment.html">
+  <a class="reference internal" href="../0_Preamble/0.2_Assessment.html">
    Assessment
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../0_Preliminaries/0.3_Mathematical_preliminaries.html">
+  <a class="reference internal" href="../0_Preamble/0.3_Mathematical_preliminaries.html">
    Mathematical preliminaries
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../0_Preliminaries/0.4_Python.html">
+  <a class="reference internal" href="../0_Preamble/0.4_Python.html">
    Python
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../0_Preliminaries/0.5_How_to_pass.html">
+  <a class="reference internal" href="../0_Preamble/0.5_How_to_pass.html">
    How to pass the unit
   </a>
  </li>
@@ -562,8 +552,8 @@ title="Print to PDF"
   <div class="tex2jax_ignore mathjax_ignore section" id="partial-pivoting">
 <span id="partial-pivoting-section"></span><h1>Partial pivoting<a class="headerlink" href="#partial-pivoting" title="Permalink to this headline">#</a></h1>
 <p>In most practical applications of row reduction to solve a linear system we use computers to perform the calculations. Computers use floating point numbers to compute arithmetic operations which are not exact and can be prone to rounding errors. Consider the following linear system of equations</p>
-<div class="amsmath math notranslate nohighlight" id="equation-44b87b1e-dcd3-43c5-90d3-7d6102581e2f">
-<span class="eqno">(7)<a class="headerlink" href="#equation-44b87b1e-dcd3-43c5-90d3-7d6102581e2f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-48a783c1-76e1-4f8d-9754-3f65a10f4a5f">
+<span class="eqno">(7)<a class="headerlink" href="#equation-48a783c1-76e1-4f8d-9754-3f65a10f4a5f" title="Permalink to this equation">#</a></span>\[\begin{align}
   \begin{pmatrix}0.0001 &amp; 1 \\ 1 &amp; 1 \end{pmatrix}\begin{pmatrix} x_1 \\ x_2 \end{pmatrix}= 
   \begin{pmatrix}1 \\ 2 \end{pmatrix}.
 \end{align}\]</div>

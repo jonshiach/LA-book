@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Subspaces &#8212; Linear Algebra Lecture Notes</title>
+    <title>Subspaces &#8212; Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -91,9 +91,14 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
       
       
-      <h1 class="site-logo" id="site-title">Linear Algebra Lecture Notes</h1>
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Linear Algebra</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -104,44 +109,34 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../index.html">
-                    <no title>
+                <a class="reference internal" href="../intro.html">
+                    Introduction
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Preliminaries
- </span>
-</p>
-<ul class="nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../0_Preliminaries/0.0_about.html">
-   About
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../0_Preliminaries/0.1_Teaching_schedule.html">
+  <a class="reference internal" href="../0_Preamble/0.1_Teaching_schedule.html">
    Teaching schedule
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../0_Preliminaries/0.2_Assessment.html">
+  <a class="reference internal" href="../0_Preamble/0.2_Assessment.html">
    Assessment
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../0_Preliminaries/0.3_Mathematical_preliminaries.html">
+  <a class="reference internal" href="../0_Preamble/0.3_Mathematical_preliminaries.html">
    Mathematical preliminaries
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../0_Preliminaries/0.4_Python.html">
+  <a class="reference internal" href="../0_Preamble/0.4_Python.html">
    Python
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../0_Preliminaries/0.5_How_to_pass.html">
+  <a class="reference internal" href="../0_Preamble/0.5_How_to_pass.html">
    How to pass the unit
   </a>
  </li>
@@ -200,7 +195,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../2_Systems_of_Linear%20Equations/2.0_Systems_of_linear_equations.html">
+  <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.0_Systems_of_linear_equations.html">
    Systems of Linear Equations
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -208,47 +203,7 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear%20Equations/2.1_Solving_using_inverse_matrix.html">
-     Solving systems of linear equations using the inverse matrix
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear%20Equations/2.2_Cramers_rule.html">
-     Cramer’s rule
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear%20Equations/2.3_Gaussian_elimination.html">
-     Gaussian elimination
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear%20Equations/2.4_Partial_pivoting.html">
-     Partial pivoting
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear%20Equations/2.5_Gauss_Jordan_elimination.html">
-     Gauss-Jordan elimination
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear%20Equations/2.6_Consistent_inconsistent_and_indeterminate_systems.html">
-     Consistent, inconsistent and indeterminate systems
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear%20Equations/2.7_Homogeneous_systems.html">
-     Homogeneous systems
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear%20Equations/2.9_Systems_of_linear_equations_exercises.html">
-     Systems of linear equations exercises
-    </a>
-   </li>
+  <ul class="simple">
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -603,16 +558,16 @@ title="Print to PDF"
 <p class="admonition-title">Definition: Subspace</p>
 <p>A non-empty subset <span class="math notranslate nohighlight">\(W\)</span> of a vector space <span class="math notranslate nohighlight">\(V\)</span> is called a <strong>subspace</strong> (or a vector subspace) if it satisfies all the vector space properties A1 – A4 and M1 – M4.</p>
 </div>
-<p>Actually most of the <a class="reference internal" href="5.0_Vector_spaces.html#vector-space-axioms-theorem"><span class="std std-ref">axioms</span></a> A1 – A4 and M1 – M4 are automatically satisfied, simply because they’re satisfied in <span class="math notranslate nohighlight">\(V\)</span>. The only things we really need to check are that addition and scalar multiplication are well-defined. In other words we need to check that when we ‘add’ or ‘multiply’ in <span class="math notranslate nohighlight">\(W\)</span> we are not taken outside of <span class="math notranslate nohighlight">\(W\)</span> (<a class="reference internal" href="#vector-space-figure"><span class="std std-numref">Fig. 23</span></a>). This idea is formalised in <a class="reference internal" href="#subspace-condition-theorem"><span class="std std-ref">the subspace condition</span></a>.</p>
+<p>Actually most of the <a class="reference internal" href="5.0_Vector_spaces.html#vector-space-axioms-theorem"><span class="std std-ref">axioms</span></a> A1 – A4 and M1 – M4 are automatically satisfied, simply because they’re satisfied in <span class="math notranslate nohighlight">\(V\)</span>. The only things we really need to check are that addition and scalar multiplication are well-defined. In other words we need to check that when we ‘add’ or ‘multiply’ in <span class="math notranslate nohighlight">\(W\)</span> we are not taken outside of <span class="math notranslate nohighlight">\(W\)</span> (<a class="reference internal" href="#vector-space-figure"><span class="std std-numref">Fig. 20</span></a>). This idea is formalised in <a class="reference internal" href="#subspace-condition-theorem"><span class="std std-ref">the subspace condition</span></a>.</p>
 <div class="figure align-default" id="vector-space-figure">
 <img alt="../_images/vector_space.png" src="../_images/vector_space.png" />
-<p class="caption"><span class="caption-number">Fig. 23 </span><span class="caption-text">Illustration of a subspace <span class="math notranslate nohighlight">\(W\)</span> of a vector space <span class="math notranslate nohighlight">\(V\)</span>.</span><a class="headerlink" href="#vector-space-figure" title="Permalink to this image">#</a></p>
+<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">Illustration of a subspace <span class="math notranslate nohighlight">\(W\)</span> of a vector space <span class="math notranslate nohighlight">\(V\)</span>.</span><a class="headerlink" href="#vector-space-figure" title="Permalink to this image">#</a></p>
 </div>
 <div class="important admonition" id="subspace-condition-theorem">
 <p class="admonition-title">Theorem: Subspace condition</p>
 <p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(W\)</span> be a non-empty subset of <span class="math notranslate nohighlight">\(V\)</span> then <span class="math notranslate nohighlight">\(W\)</span> is a subspace if and only if the following condition is satisfied</p>
 <div class="math notranslate nohighlight" id="equation-subspace-condition-equation">
-<span class="eqno">(19)<a class="headerlink" href="#equation-subspace-condition-equation" title="Permalink to this equation">#</a></span>\[\mathbf{u} + \alpha\mathbf{w} \in W,\]</div>
+<span class="eqno">(17)<a class="headerlink" href="#equation-subspace-condition-equation" title="Permalink to this equation">#</a></span>\[\mathbf{u} + \alpha\mathbf{w} \in W,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\mathbf{u}, \mathbf{w} \in W\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span>.</p>
 </div>
 <p>To demonstrate the use of <a class="reference internal" href="#subspace-condition-theorem"><span class="std std-ref">the subspace condition</span></a> let’s check whether <span class="math notranslate nohighlight">\(W = \{(x, y, z) : x + 2y - 3z = 0\}\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. First we need to verify that <span class="math notranslate nohighlight">\(W\)</span> is non-empty. To do this we simply need to find an element of <span class="math notranslate nohighlight">\(W\)</span>, e.g., <span class="math notranslate nohighlight">\((0, 0, 0) \in W\)</span> so <span class="math notranslate nohighlight">\(W\)</span> is non-empty.</p>
