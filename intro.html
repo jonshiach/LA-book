@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Search</title>
+    <title>Introduction</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -30,7 +30,6 @@
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -50,19 +49,15 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="_static/searchtools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" />
-  <script src="searchindex.js" defer></script>
-  
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Teaching schedule" href="0_Preliminaries/0.1_Teaching_schedule.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
 
     <!-- Google Analytics -->
     
-
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
 <!-- Checkboxes to toggle the left sidebar -->
@@ -96,15 +91,15 @@ const thebe_selector_output = ".output, .cell_output"
       
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="#" method="get">
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="intro.html">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
                     Introduction
                 </a>
             </li>
@@ -456,22 +451,105 @@ title="Fullscreen mode"
 
 </button>
 
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/intro.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contact-information">
+   Contact information
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1></h1>
+                <h1>Introduction</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contact-information">
+   Contact information
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -479,36 +557,122 @@ title="Fullscreen mode"
                 
               <div>
                 
-  <h1 id="search-documentation">Search</h1>
-  
-  <noscript>
-  <div class="admonition warning">
-  <p>
-    Please activate JavaScript to enable the search
-    functionality.
-  </p>
-  </div>
-  </noscript>
-  
-  
-  <p>
-    Searching for multiple words only shows matches that contain
-    all words.
-  </p>
-  
-  
-  <form action="" method="get">
-    <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-    <input type="submit" value="search" />
-    <span id="search-progress" style="padding-left: 10px"></span>
-  </form>
-  
-  
-  
-  <div id="search-results">
-  
-  </div>
-  
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h1>
+<p>These are the lecture notes that accompany the teaching of linear algebra on the first year of the Mathematics course at the Manchester Metropolitan university. They can be accessed through a standard web browser on a computer or mobile device. Whilst these notes cover all of the material necessary for students to successfully pass the unit, it is advisable to seek out other sources of information either on the internet or textbooks. Mathematical notation can differ between authors and these notes have been written to use notation that is most commonly found online.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 text-center docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text">Matrices</p>
+</div>
+<div class="sd-card-body docutils">
+<div class="figure align-default">
+<img alt="_images/matrix.png" src="_images/matrix.png" />
+</div>
+</div>
+<a class="sd-stretched-link reference internal" href="1_Matrices/1.0_Matrices.html"><span class="doc"></span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text">Systems of Linear Equations</p>
+</div>
+<div class="sd-card-body docutils">
+<div class="figure align-default">
+<img alt="_images/linear_system1.png" src="_images/linear_system1.png" />
+</div>
+</div>
+<span class="sd-stretched-link"></span></div>
+</div>
+<div class="sd-col sd-d-flex-row sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text">Vectors</p>
+</div>
+<div class="sd-card-body docutils">
+<div class="figure align-default">
+<img alt="_images/dot_product.png" src="_images/dot_product.png" />
+</div>
+</div>
+<a class="sd-stretched-link reference internal" href="3_Vectors/3.0_Vectors.html"><span class="doc"></span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text">Co-ordinate Geometry</p>
+</div>
+<div class="sd-card-body docutils">
+<div class="figure align-default">
+<img alt="_images/line_line_distance.png" src="_images/line_line_distance.png" />
+</div>
+</div>
+<a class="sd-stretched-link reference internal" href="4_Coordinate_geometry/4.0_Coordinate_geometry.html"><span class="doc"></span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text">Vector Spaces</p>
+</div>
+<div class="sd-card-body docutils">
+<div class="figure align-default">
+<img alt="_images/vector_space.png" src="_images/vector_space.png" />
+</div>
+</div>
+<a class="sd-stretched-link reference internal" href="5_Vector_spaces/5.0_Vector_spaces.html"><span class="doc"></span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-header bg-light docutils">
+<p class="sd-card-text">Linear Transformations</p>
+</div>
+<div class="sd-card-body docutils">
+<div class="figure align-default">
+<img alt="_images/rotation.png" src="_images/rotation.png" />
+</div>
+</div>
+<a class="sd-stretched-link reference internal" href="6_Linear_transformations/6.0_Linear_transformations.html"><span class="doc"></span></a></div>
+</div>
+</div>
+</div>
+<p>Students are advised to read through the relevant section of the lecture notes prior to attending the lecture. Do not worry about trying to understand everything when you first read through them. Reading mathematics is not like reading a novel, it often requires repeated reading of a passage before you fully grasp the concepts that are being explained. In the lectures we will explain the various topics and provide more insight than what is written in the notes.</p>
+<p>The examples and exercises contained in this book have the solutions hidden from the reader by default but can be revealed by clicking on the drop down link. Readers are advised to avoid the temptation of accessing the solutions before an attempt has been made to answer the questions.</p>
+<div class="section" id="contact-information">
+<h2>Contact information<a class="headerlink" href="#contact-information" title="Permalink to this headline">#</a></h2>
+<a class="reference internal image-reference" href="_images/jon_Shiach.jpeg"><img alt="_images/jon_Shiach.jpeg" class="align-left" src="_images/jon_Shiach.jpeg" style="width: 125px;" /></a>
+<p>Dr Jon Shiach <br>
+Email: <a class="reference external" href="mailto:j&#46;shiach&#37;&#52;&#48;mmu&#46;ac&#46;uk">j<span>&#46;</span>shiach<span>&#64;</span>mmu<span>&#46;</span>ac<span>&#46;</span>uk</a> <br>
+Tel: 0161 247 1515 <br>
+Office: E115b</p>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -517,6 +681,13 @@ title="Fullscreen mode"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='right-next' id="next-link" href="0_Preliminaries/0.1_Teaching_schedule.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Teaching schedule</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
