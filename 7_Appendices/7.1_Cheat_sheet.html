@@ -203,7 +203,47 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.1_Solving_using_inverse_matrix.html">
+     Solving systems of linear equations using the inverse matrix
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.2_Cramers_rule.html">
+     Cramer’s rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.3_Gaussian_elimination.html">
+     Gaussian elimination
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.4_Partial_pivoting.html">
+     Partial pivoting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.5_Gauss_Jordan_elimination.html">
+     Gauss-Jordan elimination
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.6_Consistent_inconsistent_and_indeterminate_systems.html">
+     Consistent, inconsistent and indeterminate systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.7_Homogeneous_systems.html">
+     Homogeneous systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.9_Systems_of_linear_equations_exercises.html">
+     Systems of linear equations exercises
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -752,18 +792,18 @@ title="Print to PDF"
     \begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{pmatrix}.
 \end{align*}\]</div>
 </dd>
-<dt id="term-Elementary-Row-Operations-EROs">Elementary Row Operations (EROs)<a class="headerlink" href="#term-Elementary-Row-Operations-EROs" title="Permalink to this term">#</a></dt><dd><p>The following <span class="xref myst"><strong>elementary row operations</strong></span> can be applied to a system without changing the solution</p>
+<dt id="term-Elementary-Row-Operations-EROs">Elementary Row Operations (EROs)<a class="headerlink" href="#term-Elementary-Row-Operations-EROs" title="Permalink to this term">#</a></dt><dd><p>The following <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.3_Gaussian_elimination.html#ero-definition"><span class="std std-ref"><strong>elementary row operations</strong></span></a> can be applied to a system without changing the solution</p>
 <ul class="simple">
 <li><p><strong>Swap rows <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span></strong>:    <span class="math notranslate nohighlight">\(R_i \leftrightarrow R_j\)</span></p></li>
 <li><p><strong>Multiply row <span class="math notranslate nohighlight">\(i\)</span> by <span class="math notranslate nohighlight">\(k\)</span></strong>:    <span class="math notranslate nohighlight">\(kR_i\)</span></p></li>
 <li><p><strong>Add row <span class="math notranslate nohighlight">\(j\)</span> multiplied by <span class="math notranslate nohighlight">\(k\)</span> to row <span class="math notranslate nohighlight">\(i\)</span></strong>:    <span class="math notranslate nohighlight">\(R_i + kR_j\)</span></p></li>
 </ul>
 </dd>
-<dt id="term-Pivot-element">Pivot element<a class="headerlink" href="#term-Pivot-element" title="Permalink to this term">#</a></dt><dd><p>The <span class="xref myst">pivot element</span> is the first non-zero element in the row.</p>
+<dt id="term-Pivot-element">Pivot element<a class="headerlink" href="#term-Pivot-element" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.3_Gaussian_elimination.html#ref-definition"><span class="std std-ref">pivot element</span></a> is the first non-zero element in the row.</p>
 </dd>
-<dt id="term-Row-Echelon-Form-REF">Row Echelon Form (REF)<a class="headerlink" href="#term-Row-Echelon-Form-REF" title="Permalink to this term">#</a></dt><dd><p>A matrix is in <span class="xref myst">row echelon form</span> if in each non-zero row the pivot element is to the right of the pivot element of the row above.</p>
+<dt id="term-Row-Echelon-Form-REF">Row Echelon Form (REF)<a class="headerlink" href="#term-Row-Echelon-Form-REF" title="Permalink to this term">#</a></dt><dd><p>A matrix is in <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.3_Gaussian_elimination.html#ref-definition"><span class="std std-ref">row echelon form</span></a> if in each non-zero row the pivot element is to the right of the pivot element of the row above.</p>
 </dd>
-<dt id="term-Row-reduction-to-row-echelon-form">Row reduction to row echelon form<a class="headerlink" href="#term-Row-reduction-to-row-echelon-form" title="Permalink to this term">#</a></dt><dd><p>To <span class="xref myst">row reduce</span> an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> to reduced row echelon form we do the following:</p>
+<dt id="term-Row-reduction-to-row-echelon-form">Row reduction to row echelon form<a class="headerlink" href="#term-Row-reduction-to-row-echelon-form" title="Permalink to this term">#</a></dt><dd><p>To <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.3_Gaussian_elimination.html#ge-definition"><span class="std std-ref">row reduce</span></a> an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> to reduced row echelon form we do the following:</p>
 <ol class="simple">
 <li><p>Initialise the pivot row to <span class="math notranslate nohighlight">\(i=1\)</span> and pivot column to <span class="math notranslate nohighlight">\(k=1\)</span></p></li>
 <li><p>If <span class="math notranslate nohighlight">\(a_{ik} = 0\)</span> perform a row swap with a row beneath the pivot row <span class="math notranslate nohighlight">\(i\)</span> with a non-zero element in the pivot column <span class="math notranslate nohighlight">\(k\)</span>. If no such rows exist set <span class="math notranslate nohighlight">\(k = k + 1\)</span> and repeat step 2.</p></li>
@@ -773,7 +813,7 @@ title="Print to PDF"
 </dd>
 <dt id="term-Partial-pivoting">Partial pivoting<a class="headerlink" href="#term-Partial-pivoting" title="Permalink to this term">#</a></dt><dd><p>A row swap is performed so that the pivot element has a larger absolute value than the elements in the column below it.</p>
 </dd>
-<dt id="term-Row-reduction-using-partial-pivoting">Row reduction using partial pivoting<a class="headerlink" href="#term-Row-reduction-using-partial-pivoting" title="Permalink to this term">#</a></dt><dd><p>To row reduce an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> to row echelon form using <span class="xref myst">partial pivoting</span> we do the following:</p>
+<dt id="term-Row-reduction-using-partial-pivoting">Row reduction using partial pivoting<a class="headerlink" href="#term-Row-reduction-using-partial-pivoting" title="Permalink to this term">#</a></dt><dd><p>To row reduce an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> to row echelon form using <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.4_Partial_pivoting.html#ge-pp-definition"><span class="std std-ref">partial pivoting</span></a> we do the following:</p>
 <ol class="simple">
 <li><p>Initialise the pivot row to <span class="math notranslate nohighlight">\(i=1\)</span> and pivot column to <span class="math notranslate nohighlight">\(k=1\)</span></p></li>
 <li><p>Swap the pivot row <span class="math notranslate nohighlight">\(i\)</span> with the row below which has the largest absolute value element in the pivot column <span class="math notranslate nohighlight">\(k\)</span> which is greater than the absolute value of the pivot element <span class="math notranslate nohighlight">\(|a_{ik}|\)</span>.</p></li>
@@ -782,9 +822,9 @@ title="Print to PDF"
 <li><p>Set <span class="math notranslate nohighlight">\(i = 1 + 1\)</span> and <span class="math notranslate nohighlight">\(k = k + 1\)</span> and repeat steps 2 to 4 until <span class="math notranslate nohighlight">\(i &gt; m\)</span> or <span class="math notranslate nohighlight">\(k &gt; n\)</span>.</p></li>
 </ol>
 </dd>
-<dt id="term-Reduced-Row-Echelon-Form-RREF">Reduced Row Echelon Form (RREF)<a class="headerlink" href="#term-Reduced-Row-Echelon-Form-RREF" title="Permalink to this term">#</a></dt><dd><p>The matrix is in <span class="xref myst">reduced row echelon form</span> if the pivot element in each row has a value of 1 and it is the only non-zero element in its column.</p>
+<dt id="term-Reduced-Row-Echelon-Form-RREF">Reduced Row Echelon Form (RREF)<a class="headerlink" href="#term-Reduced-Row-Echelon-Form-RREF" title="Permalink to this term">#</a></dt><dd><p>The matrix is in <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.5_Gauss_Jordan_elimination.html#rref-definition"><span class="std std-ref">reduced row echelon form</span></a> if the pivot element in each row has a value of 1 and it is the only non-zero element in its column.</p>
 </dd>
-<dt id="term-Row-reduction-to-reduced-row-echelon-form">Row reduction to reduced row echelon form<a class="headerlink" href="#term-Row-reduction-to-reduced-row-echelon-form" title="Permalink to this term">#</a></dt><dd><p>To row reduce an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> to <span class="xref myst">reduced row echelon form</span> we do the following</p>
+<dt id="term-Row-reduction-to-reduced-row-echelon-form">Row reduction to reduced row echelon form<a class="headerlink" href="#term-Row-reduction-to-reduced-row-echelon-form" title="Permalink to this term">#</a></dt><dd><p>To row reduce an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> to <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.5_Gauss_Jordan_elimination.html#rref-definition"><span class="std std-ref">reduced row echelon form</span></a> we do the following</p>
 <ol class="simple">
 <li><p>Initalise the pivot row to <span class="math notranslate nohighlight">\(i=1\)</span> and pivot column to <span class="math notranslate nohighlight">\(k=1\)</span></p></li>
 <li><p>If <span class="math notranslate nohighlight">\(a_{ik} = 0\)</span> perform a row swap with a row beneath the pivot row <span class="math notranslate nohighlight">\(i\)</span> with a non-zero element in the pivot column <span class="math notranslate nohighlight">\(k\)</span>. If no such rows exist set <span class="math notranslate nohighlight">\(k = k + 1\)</span> and repeat step 2.</p></li>
@@ -793,25 +833,25 @@ title="Print to PDF"
 <li><p>Set <span class="math notranslate nohighlight">\(i = 1 + 1\)</span> and <span class="math notranslate nohighlight">\(k = k + 1\)</span> and repeat steps 2 to 4 until <span class="math notranslate nohighlight">\(i &gt; m\)</span> or <span class="math notranslate nohighlight">\(k &gt; n\)</span>.</p></li>
 </ol>
 </dd>
-<dt id="term-Solution-of-a-linear-system-of-equations-used-inverse-matrix">Solution of a linear system of equations used inverse matrix<a class="headerlink" href="#term-Solution-of-a-linear-system-of-equations-used-inverse-matrix" title="Permalink to this term">#</a></dt><dd><p>The solution to a linear system of equations <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span> can be calculated using the <span class="xref myst">inverse matrix</span> by <span class="math notranslate nohighlight">\(\mathbf{x} = A^{-1} \mathbf{b}\)</span></p>
+<dt id="term-Solution-of-a-linear-system-of-equations-used-inverse-matrix">Solution of a linear system of equations used inverse matrix<a class="headerlink" href="#term-Solution-of-a-linear-system-of-equations-used-inverse-matrix" title="Permalink to this term">#</a></dt><dd><p>The solution to a linear system of equations <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span> can be calculated using the <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.1_Solving_using_inverse_matrix.html#solution-using-inverse-matrix-theorem"><span class="std std-ref">inverse matrix</span></a> by <span class="math notranslate nohighlight">\(\mathbf{x} = A^{-1} \mathbf{b}\)</span></p>
 </dd>
-<dt id="term-Cramer-s-rule">Cramer’s rule<a class="headerlink" href="#term-Cramer-s-rule" title="Permalink to this term">#</a></dt><dd><p><span class="xref myst">Cramer’s rule</span> for calculating the solution to a system of linear equations <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span> is <span class="math notranslate nohighlight">\(x_i = \dfrac{\det(A_i)}{\det(A)}\)</span> where <span class="math notranslate nohighlight">\(A_i\)</span> is a matrix formed by replacing column <span class="math notranslate nohighlight">\(i\)</span> of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</p>
+<dt id="term-Cramer-s-rule">Cramer’s rule<a class="headerlink" href="#term-Cramer-s-rule" title="Permalink to this term">#</a></dt><dd><p><a class="reference internal" href="../2_Systems_of_Linear_Equations/2.2_Cramers_rule.html#cramers-rule-theorem"><span class="std std-ref">Cramer’s rule</span></a> for calculating the solution to a system of linear equations <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span> is <span class="math notranslate nohighlight">\(x_i = \dfrac{\det(A_i)}{\det(A)}\)</span> where <span class="math notranslate nohighlight">\(A_i\)</span> is a matrix formed by replacing column <span class="math notranslate nohighlight">\(i\)</span> of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</p>
 </dd>
-<dt id="term-Gaussian-Elimination-GE">Gaussian Elimination (GE)<a class="headerlink" href="#term-Gaussian-Elimination-GE" title="Permalink to this term">#</a></dt><dd><p>To calculate the solution to a system of linear equations using <span class="xref myst"><strong>Gaussian elimination</strong></span> form an augmented matrix <span class="math notranslate nohighlight">\((A \mid \mathbf{b})\)</span> and use elementary row operations to row reduce to row echelon form. The solution is then calculated using back substitution.</p>
+<dt id="term-Gaussian-Elimination-GE">Gaussian Elimination (GE)<a class="headerlink" href="#term-Gaussian-Elimination-GE" title="Permalink to this term">#</a></dt><dd><p>To calculate the solution to a system of linear equations using <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.3_Gaussian_elimination.html#ge-definition"><span class="std std-ref"><strong>Gaussian elimination</strong></span></a> form an augmented matrix <span class="math notranslate nohighlight">\((A \mid \mathbf{b})\)</span> and use elementary row operations to row reduce to row echelon form. The solution is then calculated using back substitution.</p>
 </dd>
-<dt id="term-Gauss-Jordan-Elimination-GJE">Gauss-Jordan Elimination (GJE)<a class="headerlink" href="#term-Gauss-Jordan-Elimination-GJE" title="Permalink to this term">#</a></dt><dd><p>To calculate the solution to a system of linear equations using <span class="xref myst"><strong>Gauss-Jordan elimination</strong></span> form an augmented matrix <span class="math notranslate nohighlight">\((A \mid \mathbf{b})\)</span> and use elementary row operations to row reduce to reduced row echelon form. The solution vector <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> is contained to the right of the partition.</p>
+<dt id="term-Gauss-Jordan-Elimination-GJE">Gauss-Jordan Elimination (GJE)<a class="headerlink" href="#term-Gauss-Jordan-Elimination-GJE" title="Permalink to this term">#</a></dt><dd><p>To calculate the solution to a system of linear equations using <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.5_Gauss_Jordan_elimination.html#gje-definition"><span class="std std-ref"><strong>Gauss-Jordan elimination</strong></span></a> form an augmented matrix <span class="math notranslate nohighlight">\((A \mid \mathbf{b})\)</span> and use elementary row operations to row reduce to reduced row echelon form. The solution vector <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> is contained to the right of the partition.</p>
 </dd>
 <dt id="term-Calculating-an-inverse-matrix-using-Gauss-Jordan-elimination">Calculating an inverse matrix using Gauss-Jordan elimination<a class="headerlink" href="#term-Calculating-an-inverse-matrix-using-Gauss-Jordan-elimination" title="Permalink to this term">#</a></dt><dd><p>To calculate the inverse of a non-singular matrix <span class="math notranslate nohighlight">\(A\)</span> form an augmented matrix <span class="math notranslate nohighlight">\((A \mid I)\)</span> and row reduce to reduced row echelon form. The inverse of <span class="math notranslate nohighlight">\(A\)</span> is the matrix to the right-hand side of the partition.</p>
 </dd>
-<dt id="term-Rank-of-a-matrix">Rank of a matrix<a class="headerlink" href="#term-Rank-of-a-matrix" title="Permalink to this term">#</a></dt><dd><p>The <span class="xref myst">rank</span> of a matrix <span class="math notranslate nohighlight">\(\operatorname{rank}(A)\)</span> is the number of non-zero rows of the row echelon form of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<dt id="term-Rank-of-a-matrix">Rank of a matrix<a class="headerlink" href="#term-Rank-of-a-matrix" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.6_Consistent_inconsistent_and_indeterminate_systems.html#rank-definition"><span class="std std-ref">rank</span></a> of a matrix <span class="math notranslate nohighlight">\(\operatorname{rank}(A)\)</span> is the number of non-zero rows of the row echelon form of <span class="math notranslate nohighlight">\(A\)</span>.</p>
 </dd>
-<dt id="term-Consistent-system">Consistent system <a class="headerlink" href="#term-Consistent-system" title="Permalink to this term">#</a></dt><dd><p>A system of linear equations is <span class="xref myst">consistent</span> and has a solution if <span class="math notranslate nohighlight">\(\operatorname{rank}(A \mid \mathbf{b}) = \operatorname{rank}(A)\)</span>.</p>
+<dt id="term-Consistent-system">Consistent system <a class="headerlink" href="#term-Consistent-system" title="Permalink to this term">#</a></dt><dd><p>A system of linear equations is <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.6_Consistent_inconsistent_and_indeterminate_systems.html#consistent-system-theorem"><span class="std std-ref">consistent</span></a> and has a solution if <span class="math notranslate nohighlight">\(\operatorname{rank}(A \mid \mathbf{b}) = \operatorname{rank}(A)\)</span>.</p>
 </dd>
-<dt id="term-Inconsistent-system">Inconsistent system     <a class="headerlink" href="#term-Inconsistent-system" title="Permalink to this term">#</a></dt><dd><p>A system of linear equations is <span class="xref myst">inconsistent</span> and does not have a solution if <span class="math notranslate nohighlight">\(\operatorname{rank}(A \mid \mathbf{b}) &gt; \operatorname{rank}(A)\)</span>.</p>
+<dt id="term-Inconsistent-system">Inconsistent system     <a class="headerlink" href="#term-Inconsistent-system" title="Permalink to this term">#</a></dt><dd><p>A system of linear equations is <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.6_Consistent_inconsistent_and_indeterminate_systems.html#inconsistent-system-theorem"><span class="std std-ref">inconsistent</span></a> and does not have a solution if <span class="math notranslate nohighlight">\(\operatorname{rank}(A \mid \mathbf{b}) &gt; \operatorname{rank}(A)\)</span>.</p>
 </dd>
-<dt id="term-Indeterminate-system">Indeterminate system<a class="headerlink" href="#term-Indeterminate-system" title="Permalink to this term">#</a></dt><dd><p>A system of <span class="math notranslate nohighlight">\(n\)</span> linear equations is <span class="xref myst">indeterminate</span> and has an infinite number of solutions if it is consistent and <span class="math notranslate nohighlight">\(\operatorname{rank}(A \mid \mathbf{b}) &lt; n\)</span>.</p>
+<dt id="term-Indeterminate-system">Indeterminate system<a class="headerlink" href="#term-Indeterminate-system" title="Permalink to this term">#</a></dt><dd><p>A system of <span class="math notranslate nohighlight">\(n\)</span> linear equations is <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.6_Consistent_inconsistent_and_indeterminate_systems.html#indeterminate-system-theorem"><span class="std std-ref">indeterminate</span></a> and has an infinite number of solutions if it is consistent and <span class="math notranslate nohighlight">\(\operatorname{rank}(A \mid \mathbf{b}) &lt; n\)</span>.</p>
 </dd>
-<dt id="term-Solution-of-an-indeterminate-system">Solution of an indeterminate system<a class="headerlink" href="#term-Solution-of-an-indeterminate-system" title="Permalink to this term">#</a></dt><dd><p>A general <span class="xref myst">solution to an indeterminate system</span> can be found by assigning parameters to the free variables and solving for the rest.</p>
+<dt id="term-Solution-of-an-indeterminate-system">Solution of an indeterminate system<a class="headerlink" href="#term-Solution-of-an-indeterminate-system" title="Permalink to this term">#</a></dt><dd><p>A general <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.6_Consistent_inconsistent_and_indeterminate_systems.html#indeterminate-system-theorem"><span class="std std-ref">solution to an indeterminate system</span></a> can be found by assigning parameters to the free variables and solving for the rest.</p>
 </dd>
 </dl>
 </div>

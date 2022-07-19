@@ -203,7 +203,47 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.1_Solving_using_inverse_matrix.html">
+     Solving systems of linear equations using the inverse matrix
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.2_Cramers_rule.html">
+     Cramer’s rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.3_Gaussian_elimination.html">
+     Gaussian elimination
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.4_Partial_pivoting.html">
+     Partial pivoting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.5_Gauss_Jordan_elimination.html">
+     Gauss-Jordan elimination
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.6_Consistent_inconsistent_and_indeterminate_systems.html">
+     Consistent, inconsistent and indeterminate systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.7_Homogeneous_systems.html">
+     Homogeneous systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.9_Systems_of_linear_equations_exercises.html">
+     Systems of linear equations exercises
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -568,7 +608,7 @@ title="Print to PDF"
 <p class="admonition-title">Definition: Vector magnitude</p>
 <p>The <strong>magnitude</strong> of a vector <span class="math notranslate nohighlight">\(\mathbf{a} = (a_1, a_2, \ldots, a_n)\)</span> denoted by <span class="math notranslate nohighlight">\(|\mathbf{a}|\)</span> is calculated using</p>
 <div class="math notranslate nohighlight" id="equation-magnitude-equation">
-<span class="eqno">(6)<a class="headerlink" href="#equation-magnitude-equation" title="Permalink to this equation">#</a></span>\[|\mathbf{a}| = \sqrt{\sum_{i=1}^n a_i^2} = \sqrt{a_1^2 + a_2^2 + \cdots + a_n^2}.\]</div>
+<span class="eqno">(8)<a class="headerlink" href="#equation-magnitude-equation" title="Permalink to this equation">#</a></span>\[|\mathbf{a}| = \sqrt{\sum_{i=1}^n a_i^2} = \sqrt{a_1^2 + a_2^2 + \cdots + a_n^2}.\]</div>
 </div>
 <p>Vector magnitude is also known as the <a class="reference external" href="https://en.wikipedia.org/wiki/Norm_(mathematics)"><strong>Euclidean norm</strong></a>. Note that <span class="math notranslate nohighlight">\(|\mathbf{a}|=0\)</span> if and only if <span class="math notranslate nohighlight">\(\mathbf{a}=(0, 0, \ldots, 0)\)</span>.</p>
 <div class="seealso admonition" id="magitude-example">
@@ -600,8 +640,8 @@ Solution<div class="sd-summary-down docutils">
 <p class="admonition-title">Proposition: Normalising a vector</p>
 <p>Any non-zero vector can be scaled to transform it into a unit vector by dividing all its coordinates by its magnitude</p>
 <div class="math notranslate nohighlight" id="equation-normalising-a-vector-equation">
-<span class="eqno">(7)<a class="headerlink" href="#equation-normalising-a-vector-equation" title="Permalink to this equation">#</a></span>\[\hat{\mathbf{a}} = \frac{\mathbf{a}}{|\mathbf{a}|}.\]</div>
-<p>This process is called <strong>normalising a vector</strong>. Unit vectors are denoted with a caret above the vector name, i.e., <span class="math notranslate nohighlight">\(\hat{\mathbf{a}}\)</span> which is read as ``<span class="math notranslate nohighlight">\(\mathbf{a}\)</span> hat’’.</p>
+<span class="eqno">(9)<a class="headerlink" href="#equation-normalising-a-vector-equation" title="Permalink to this equation">#</a></span>\[\hat{\mathbf{a}} = \frac{\mathbf{a}}{|\mathbf{a}|}.\]</div>
+<p>This process is called <strong>normalising a vector</strong>. Unit vectors are denoted with a caret above the vector name, i.e., <span class="math notranslate nohighlight">\(\hat{\mathbf{a}}\)</span> which is read as <em>‘<span class="math notranslate nohighlight">\(\mathbf{a}\)</span> hat’</em>.</p>
 </div>
 <p><strong>Proof</strong></p>
 <p><em>Let <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> be a non-zero vector</em></p>

@@ -203,7 +203,47 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.1_Solving_using_inverse_matrix.html">
+     Solving systems of linear equations using the inverse matrix
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.2_Cramers_rule.html">
+     Cramer’s rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.3_Gaussian_elimination.html">
+     Gaussian elimination
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.4_Partial_pivoting.html">
+     Partial pivoting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.5_Gauss_Jordan_elimination.html">
+     Gauss-Jordan elimination
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.6_Consistent_inconsistent_and_indeterminate_systems.html">
+     Consistent, inconsistent and indeterminate systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.7_Homogeneous_systems.html">
+     Homogeneous systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.9_Systems_of_linear_equations_exercises.html">
+     Systems of linear equations exercises
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -585,19 +625,19 @@ title="Print to PDF"
 </div>
 <div class="section" id="shortest-distance-between-a-line-and-a-point">
 <h2>Shortest distance between a line and a point<a class="headerlink" href="#shortest-distance-between-a-line-and-a-point" title="Permalink to this headline">#</a></h2>
-<p>To find the shortest distance, <span class="math notranslate nohighlight">\(d\)</span>, between a line <span class="math notranslate nohighlight">\(\ell: P + \mathbf{d}t\)</span> and a point <span class="math notranslate nohighlight">\(Q\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> we look at a plane they both lie in. Let <span class="math notranslate nohighlight">\(R\)</span> be a point on the line such that the vector <span class="math notranslate nohighlight">\(\overrightarrow{RQ}\)</span> is perpendicular to <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> (<a class="reference internal" href="#line-point-distance-figure"><span class="std std-numref">Fig. 18</span></a>) then</p>
+<p>To find the shortest distance, <span class="math notranslate nohighlight">\(d\)</span>, between a line <span class="math notranslate nohighlight">\(\ell: P + \mathbf{d}t\)</span> and a point <span class="math notranslate nohighlight">\(Q\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> we look at a plane they both lie in. Let <span class="math notranslate nohighlight">\(R\)</span> be a point on the line such that the vector <span class="math notranslate nohighlight">\(\overrightarrow{RQ}\)</span> is perpendicular to <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> (<a class="reference internal" href="#line-point-distance-figure"><span class="std std-numref">Fig. 21</span></a>) then</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     d = | \overrightarrow{RQ} |.
 \end{align*}\]</div>
 <div class="figure align-default" id="line-point-distance-figure">
 <img alt="../_images/line_point_distance.png" src="../_images/line_point_distance.png" />
-<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">The shortest distance of a point <span class="math notranslate nohighlight">\(Q\)</span> from the line <span class="math notranslate nohighlight">\(\ell\)</span> is the length of the chord <span class="math notranslate nohighlight">\(R \to Q\)</span> which is perpendicular to <span class="math notranslate nohighlight">\(\ell\)</span>.</span><a class="headerlink" href="#line-point-distance-figure" title="Permalink to this image">#</a></p>
+<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">The shortest distance of a point <span class="math notranslate nohighlight">\(Q\)</span> from the line <span class="math notranslate nohighlight">\(\ell\)</span> is the length of the chord <span class="math notranslate nohighlight">\(R \to Q\)</span> which is perpendicular to <span class="math notranslate nohighlight">\(\ell\)</span>.</span><a class="headerlink" href="#line-point-distance-figure" title="Permalink to this image">#</a></p>
 </div>
 <p>Since <span class="math notranslate nohighlight">\(\overrightarrow{RQ}\)</span> is perpendicular to <span class="math notranslate nohighlight">\(d\)</span> then <span class="math notranslate nohighlight">\(\overrightarrow{RQ} \cdot \mathbf{d} = 0\)</span> so we calculate the position of <span class="math notranslate nohighlight">\(R\)</span> that satisfies</p>
 <div class="math notranslate nohighlight" id="equation-point-line-distance-equation">
-<span class="eqno">(13)<a class="headerlink" href="#equation-point-line-distance-equation" title="Permalink to this equation">#</a></span>\[(Q - R) \cdot \mathbf{d} = 0.\]</div>
-<p>Substituting <span class="math notranslate nohighlight">\(R = P + t\mathbf{d}\)</span> into equation <a class="reference internal" href="#equation-point-line-distance-equation">(13)</a> and rearranging to make <span class="math notranslate nohighlight">\(t\)</span> the subject gives</p>
+<span class="eqno">(15)<a class="headerlink" href="#equation-point-line-distance-equation" title="Permalink to this equation">#</a></span>\[(Q - R) \cdot \mathbf{d} = 0.\]</div>
+<p>Substituting <span class="math notranslate nohighlight">\(R = P + t\mathbf{d}\)</span> into equation <a class="reference internal" href="#equation-point-line-distance-equation">(15)</a> and rearranging to make <span class="math notranslate nohighlight">\(t\)</span> the subject gives</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     (Q - P - t \mathbf{d}) \cdot \mathbf{d} &amp;= 0 \\
@@ -609,7 +649,7 @@ title="Print to PDF"
 <p class="admonition-title">Theorem: The shortest distance between a point and a line</p>
 <p>The shortest distance between the point <span class="math notranslate nohighlight">\(Q\)</span> and a line that passes through the point <span class="math notranslate nohighlight">\(P\)</span> in the direction <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> is <span class="math notranslate nohighlight">\(|Q - R|\)</span> where <span class="math notranslate nohighlight">\(R = P + t\mathbf{d}\)</span> and</p>
 <div class="math notranslate nohighlight" id="equation-point-line-t-equation">
-<span class="eqno">(14)<a class="headerlink" href="#equation-point-line-t-equation" title="Permalink to this equation">#</a></span>\[t = \frac{(Q - P) \cdot \mathbf{d}}{ \mathbf{d} \cdot \mathbf{d}}.\]</div>
+<span class="eqno">(16)<a class="headerlink" href="#equation-point-line-t-equation" title="Permalink to this equation">#</a></span>\[t = \frac{(Q - P) \cdot \mathbf{d}}{ \mathbf{d} \cdot \mathbf{d}}.\]</div>
 </div>
 <div class="seealso admonition" id="point-line-distance-example">
 <p class="admonition-title">Example 4.8</p>
@@ -627,7 +667,7 @@ Solution<div class="sd-summary-down docutils">
     \begin{pmatrix} 0 \\ -2 \\ 1 \end{pmatrix} + t
     \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix},
 \end{align*}\]</div>
-<p class="sd-card-text">so the direction vector is <span class="math notranslate nohighlight">\(\mathbf{d} = (1, 1, 1)\)</span>. Using <a class="reference internal" href="#equation-point-line-distance-equation">(13)</a></p>
+<p class="sd-card-text">so the direction vector is <span class="math notranslate nohighlight">\(\mathbf{d} = (1, 1, 1)\)</span>. Using <a class="reference internal" href="#equation-point-line-distance-equation">(15)</a></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     t &amp;= \frac{ \left( \begin{pmatrix} 2 \\ 2 \\ 2 \end{pmatrix} - 
@@ -665,16 +705,16 @@ Solution<div class="sd-summary-down docutils">
 <ul class="simple">
 <li><p>If the two lines intersect then obviously the shortest distance is obviously 0.</p></li>
 <li><p>If the two lines are parallel then any point on <span class="math notranslate nohighlight">\(\ell_1\)</span> can gives the shortest distance between <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span>. Hence we simply choose a point <span class="math notranslate nohighlight">\(R\)</span> on <span class="math notranslate nohighlight">\(\ell_2\)</span> and apply method for <a class="reference internal" href="#point-line-distance-theorem"><span class="std std-ref">finding the distance between a point and a line</span></a>.</p></li>
-<li><p>If the two lines are skew then the shortest distance is the distance of the chord that is perpendicular to both <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> (<a class="reference internal" href="#line-line-distance-figure"><span class="std std-numref">Fig. 19</span></a>).</p></li>
+<li><p>If the two lines are skew then the shortest distance is the distance of the chord that is perpendicular to both <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> (<a class="reference internal" href="#line-line-distance-figure"><span class="std std-numref">Fig. 22</span></a>).</p></li>
 </ul>
 <div class="figure align-default" id="line-line-distance-figure">
 <img alt="../_images/line_line_distance.png" src="../_images/line_line_distance.png" />
-<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">The shortest distance between skew lines is the distance of the chord which is perpendicular to both lines.</span><a class="headerlink" href="#line-line-distance-figure" title="Permalink to this image">#</a></p>
+<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">The shortest distance between skew lines is the distance of the chord which is perpendicular to both lines.</span><a class="headerlink" href="#line-line-distance-figure" title="Permalink to this image">#</a></p>
 </div>
 <p>If <span class="math notranslate nohighlight">\(Q_1\)</span> and <span class="math notranslate nohighlight">\(Q_2\)</span> are points on the lines <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> respectively then the chord <span class="math notranslate nohighlight">\(Q_2 - Q_1\)</span> which is perpendicular to both lines has the direction vector <span class="math notranslate nohighlight">\(\mathbf{n} = \mathbf{d}_1 \times \mathbf{d}_2\)</span>. If <span class="math notranslate nohighlight">\(d\)</span> is the distance between <span class="math notranslate nohighlight">\(Q_1\)</span> and <span class="math notranslate nohighlight">\(Q_2\)</span> then</p>
 <div class="math notranslate nohighlight" id="equation-line-line-distance-equation-1">
-<span class="eqno">(15)<a class="headerlink" href="#equation-line-line-distance-equation-1" title="Permalink to this equation">#</a></span>\[Q_2 - Q_1 = d (\mathbf{d}_1 \times \mathbf{d}_2),\]</div>
-<p>Let <span class="math notranslate nohighlight">\(\hat{\mathbf{n}} = \dfrac{\mathbf{d}_1 \times \mathbf{d}_2}{|\mathbf{d}_1 \times \mathbf{d}_2|}\)</span> and substituting the equations of <span class="math notranslate nohighlight">\(Q_1\)</span> and <span class="math notranslate nohighlight">\(Q_2\)</span> equation <a class="reference internal" href="#equation-line-line-distance-equation-1">(15)</a> gives</p>
+<span class="eqno">(17)<a class="headerlink" href="#equation-line-line-distance-equation-1" title="Permalink to this equation">#</a></span>\[Q_2 - Q_1 = d (\mathbf{d}_1 \times \mathbf{d}_2),\]</div>
+<p>Let <span class="math notranslate nohighlight">\(\hat{\mathbf{n}} = \dfrac{\mathbf{d}_1 \times \mathbf{d}_2}{|\mathbf{d}_1 \times \mathbf{d}_2|}\)</span> and substituting the equations of <span class="math notranslate nohighlight">\(Q_1\)</span> and <span class="math notranslate nohighlight">\(Q_2\)</span> equation <a class="reference internal" href="#equation-line-line-distance-equation-1">(17)</a> gives</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     Q_2 - Q_1 &amp;= d \hat{\mathbf{n}}\\
@@ -699,7 +739,7 @@ Solution<div class="sd-summary-down docutils">
 <p class="admonition-title">Theorem: The shortest distance between two skew lines</p>
 <p>The shortest distance between two skew lines <span class="math notranslate nohighlight">\(Q_1 = P_1 + t \mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(Q_2 = P_2 + t \mathbf{d}_2\)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-line-line-distance-equation">
-<span class="eqno">(16)<a class="headerlink" href="#equation-line-line-distance-equation" title="Permalink to this equation">#</a></span>\[d = (P_2 - P_1) \cdot \hat{\mathbf{n}}.\]</div>
+<span class="eqno">(18)<a class="headerlink" href="#equation-line-line-distance-equation" title="Permalink to this equation">#</a></span>\[d = (P_2 - P_1) \cdot \hat{\mathbf{n}}.\]</div>
 <p>where <span class="math notranslate nohighlight">\(\mathbf{n} = \dfrac{\mathbf{d}_1 \times \mathbf{d}_2}{|\mathbf{d}_1 \times \mathbf{d}_2|}\)</span>.</p>
 </div>
 <div class="seealso admonition" id="line-line-distance-example">
@@ -735,7 +775,7 @@ Solution<div class="sd-summary-down docutils">
     \begin{pmatrix} \frac{6}{\sqrt{41}} \\ -\frac{2}{\sqrt{41}} \\ \frac{1}{\sqrt{41}} \end{pmatrix} 
     = \begin{pmatrix} \frac{6\sqrt{41}}{41} \\ -\frac{2\sqrt{41}}{41} \\ \frac{\sqrt{41}}{41} \end{pmatrix}.
 \end{align*}\]</div>
-<p class="sd-card-text">Note that since <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> is non-zero, <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> are skew lines. Using equation <a class="reference internal" href="#equation-line-line-distance-equation">(16)</a></p>
+<p class="sd-card-text">Note that since <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> is non-zero, <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> are skew lines. Using equation <a class="reference internal" href="#equation-line-line-distance-equation">(18)</a></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     d &amp;= (P_2 - P_1) \cdot \hat{\mathbf{n}} \\

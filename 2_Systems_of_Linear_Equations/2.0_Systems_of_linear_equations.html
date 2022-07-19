@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Vectors" href="../3_Vectors/3.0_Vectors.html" />
+    <link rel="next" title="Solving systems of linear equations using the inverse matrix" href="2.1_Solving_using_inverse_matrix.html" />
     <link rel="prev" title="Matrices exercises" href="../1_Matrices/1.8_Matrices_exercises.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -203,7 +203,47 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.1_Solving_using_inverse_matrix.html">
+     Solving systems of linear equations using the inverse matrix
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.2_Cramers_rule.html">
+     Cramer’s rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.3_Gaussian_elimination.html">
+     Gaussian elimination
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.4_Partial_pivoting.html">
+     Partial pivoting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">
+     Gauss-Jordan elimination
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.6_Consistent_inconsistent_and_indeterminate_systems.html">
+     Consistent, inconsistent and indeterminate systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.7_Homogeneous_systems.html">
+     Homogeneous systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.9_Systems_of_linear_equations_exercises.html">
+     Systems of linear equations exercises
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -567,13 +607,13 @@ title="Print to PDF"
 <p>On successful completion of this chapters students will be able to:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#system-of-linear-equation-definition"><span class="std std-ref">define a linear system of equations</span></a> and write them as a matrix equation;</p></li>
-<li><p>calculate the solution to a system of linear equations using the <span class="xref myst">inverse matrix</span> and <span class="xref myst">Cramer’s rule</span>;</p></li>
-<li><p>use <span class="xref myst">Gaussian elimination</span> to row reduce a matrix to <span class="xref myst">row echelon form</span> and calculate the solution to a linear system of equations using back substitution;</p></li>
-<li><p>use <span class="xref myst">partial pivoting</span> to reduce the risk of rounding errors whilst performing Gaussian elimination;</p></li>
-<li><p>use <span class="xref myst">Gauss-Jordan elimination</span> to row reduce a matrix to <span class="xref myst">reduced row echelon form</span> and use it to solver a system of linear equations</p></li>
-<li><p>use Gauss-Jordan elimination to calculate the <span class="xref myst">inverse of a matrix</span>;</p></li>
-<li><p>identity when a system of linear equations is <span class="xref myst">consistent</span>, <span class="xref myst">inconsistent</span> or <span class="xref myst">indeterminate</span>;</p></li>
-<li><p>solve a <span class="xref myst">homogeneous system of linear equations</span>.</p></li>
+<li><p>calculate the solution to a system of linear equations using the <a class="reference internal" href="2.1_Solving_using_inverse_matrix.html#solution-using-inverse-matrix-theorem"><span class="std std-ref">inverse matrix</span></a> and <a class="reference internal" href="2.2_Cramers_rule.html#cramers-rule-theorem"><span class="std std-ref">Cramer’s rule</span></a>;</p></li>
+<li><p>use <a class="reference internal" href="2.3_Gaussian_elimination.html#ge-definition"><span class="std std-ref">Gaussian elimination</span></a> to row reduce a matrix to <a class="reference internal" href="2.3_Gaussian_elimination.html#ref-definition"><span class="std std-ref">row echelon form</span></a> and calculate the solution to a linear system of equations using back substitution;</p></li>
+<li><p>use <a class="reference internal" href="2.4_Partial_pivoting.html#ge-pp-definition"><span class="std std-ref">partial pivoting</span></a> to reduce the risk of rounding errors whilst performing Gaussian elimination;</p></li>
+<li><p>use <a class="reference internal" href="2.5_Gauss_Jordan_elimination.html#gje-definition"><span class="std std-ref">Gauss-Jordan elimination</span></a> to row reduce a matrix to <a class="reference internal" href="2.5_Gauss_Jordan_elimination.html#rref-definition"><span class="std std-ref">reduced row echelon form</span></a> and use it to solver a system of linear equations</p></li>
+<li><p>use Gauss-Jordan elimination to calculate the <a class="reference internal" href="2.5_Gauss_Jordan_elimination.html#gj-matrix-inverse-section"><span class="std std-ref">inverse of a matrix</span></a>;</p></li>
+<li><p>identity when a system of linear equations is <a class="reference internal" href="2.6_Consistent_inconsistent_and_indeterminate_systems.html#consistent-system-theorem"><span class="std std-ref">consistent</span></a>, <a class="reference internal" href="2.6_Consistent_inconsistent_and_indeterminate_systems.html#inconsistent-system-theorem"><span class="std std-ref">inconsistent</span></a> or <a class="reference internal" href="2.6_Consistent_inconsistent_and_indeterminate_systems.html#indeterminate-system-theorem"><span class="std std-ref">indeterminate</span></a>;</p></li>
+<li><p>solve a <a class="reference internal" href="2.7_Homogeneous_systems.html#homogeneous-system-definition"><span class="std std-ref">homogeneous system of linear equations</span></a>.</p></li>
 </ul>
 <hr class="docutils" />
 <div class="section" id="definition">
@@ -698,10 +738,10 @@ Solution<div class="sd-summary-down docutils">
             <p class="prev-next-title">Matrices exercises</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../3_Vectors/3.0_Vectors.html" title="next page">
+    <a class='right-next' id="next-link" href="2.1_Solving_using_inverse_matrix.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Vectors</p>
+        <p class="prev-next-title">Solving systems of linear equations using the inverse matrix</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
