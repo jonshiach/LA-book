@@ -18,7 +18,7 @@ parts:
 
   - file: 2_Systems_of_Linear_Equations/2.0_Systems_of_linear_equations
     sections:
-    - glob: 2_Systems_of_Linear Equations/2.*
+    - glob: 2_Systems_of_Linear_Equations/2.*
 
   - file: 3_Vectors/3.0_Vectors
     sections:

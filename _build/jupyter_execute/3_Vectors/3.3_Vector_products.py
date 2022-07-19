@@ -3,6 +3,8 @@
 
 # # Vector products
 # 
+# There are two ways in which we calculate the product of two vectors, the dot product and the cross product.
+# 
 # (dot-product-section)=
 # ## Dot product
 # 

@@ -64,7 +64,7 @@
 # \hat{\mathbf{a}} = \frac{\mathbf{a}}{|\mathbf{a}|}.
 # :::
 # 
-# This process is called **normalising a vector**. Unit vectors are denoted with a caret above the vector name, i.e., $\hat{\mathbf{a}}$ which is read as ``$\mathbf{a}$ hat''.
+# This process is called **normalising a vector**. Unit vectors are denoted with a caret above the vector name, i.e., $\hat{\mathbf{a}}$ which is read as *'$\mathbf{a}$ hat'*.
 # 
 # :::::
 # 

@@ -94,9 +94,10 @@ The examples and exercises contained in this book have the solutions hidden from
 :::{image} ./Images/jon_Shiach.jpeg
 :width: 125px
 :align: left
+:alt: Jon Shiach
 :::
 
-Dr Jon Shiach <br>
+[Dr Jon Shiach](https://jonshiach.github.io/) <br>
 Email: [j.shiach@mmu.ac.uk](mailto:j.shiach@mmu.ac.uk) <br>
 Tel: 0161 247 1515 <br>
 Office: E115b 
