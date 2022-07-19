@@ -16,22 +16,6 @@
         "application/papermill.record/image/png": null
       }
     },
-    "inconsistent_system_plot": {
-      "output_type": "display_data",
-      "metadata": {
-        "scrapbook": {
-          "name": "inconsistent_system_plot",
-          "mime_prefix": "application/papermill.record/"
-        },
-        "filenames": {
-          "image/png": "/Volumes/DataHD/jon/OneDrive - MMU/Documents/github/LA-book/_build/jupyter_execute/2_Systems_of_Linear_Equations/2.6_Consistent_inconsistent_and_indeterminate_systems_2_3.png"
-        }
-      },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 576x432 with 1 Axes>",
-        "application/papermill.record/image/png": null
-      }
-    },
     "indeterminate_system_plot": {
       "output_type": "display_data",
       "metadata": {
@@ -41,6 +25,22 @@
         },
         "filenames": {
           "image/png": "/Volumes/DataHD/jon/OneDrive - MMU/Documents/github/LA-book/_build/jupyter_execute/2_Systems_of_Linear_Equations/2.6_Consistent_inconsistent_and_indeterminate_systems_2_5.png"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "<Figure size 576x432 with 1 Axes>",
+        "application/papermill.record/image/png": null
+      }
+    },
+    "inconsistent_system_plot": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "inconsistent_system_plot",
+          "mime_prefix": "application/papermill.record/"
+        },
+        "filenames": {
+          "image/png": "/Volumes/DataHD/jon/OneDrive - MMU/Documents/github/LA-book/_build/jupyter_execute/2_Systems_of_Linear_Equations/2.6_Consistent_inconsistent_and_indeterminate_systems_2_3.png"
         }
       },
       "data": {

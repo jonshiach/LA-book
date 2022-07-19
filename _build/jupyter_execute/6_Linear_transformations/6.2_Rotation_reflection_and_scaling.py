@@ -11,7 +11,7 @@
 # :class: note
 # :name: rotation-definition
 # 
-# The linear transformation $\operatorname{Rot}(\theta): \mathbb{R}^2 \to \mathbb{R}^2$ applied to the vector $\mathbf{u}$ rotates $\mathbf{u}$ by an angle $\theta$ *anti-clockwise* about the origin.
+# The linear transformation $Rot(\theta): \mathbb{R}^2 \to \mathbb{R}^2$ applied to the vector $\mathbf{u}$ rotates $\mathbf{u}$ by an angle $\theta$ *anti-clockwise* about the origin.
 # 
 # :::{figure} ../Images/rotation.png
 # :name: rotation-figure
@@ -21,7 +21,7 @@
 # ::::
 # 
 # 
-# Consider the diagram in {numref}`rotation-figure`. To determine the linear mapping $\operatorname{Rot}(\theta): \mathbf{u} \mapsto \mathbf{v}$ we first consider the values of $\mathbf{u} = (x, y)$ as the vector which points along the $x$-axis with the same magnitude as $\mathbf{u}$ rotated by an angle $\phi$ anti-clockwise about the origin. Forming a right-angled triangle with the angle $\phi$ and hypotenuse of length $|\mathbf{u}|$ then
+# Consider the diagram in {numref}`rotation-figure`. To determine the linear mapping $Rot(\theta): \mathbf{u} \mapsto \mathbf{v}$ we first consider the values of $\mathbf{u} = (x, y)$ as the vector which points along the $x$-axis with the same magnitude as $\mathbf{u}$ rotated by an angle $\phi$ anti-clockwise about the origin. Forming a right-angled triangle with the angle $\phi$ and hypotenuse of length $|\mathbf{u}|$ then
 # 
 # :::{math}
 # :label: rotation-equation-1
@@ -67,7 +67,7 @@
 # Therefore the rotation matrix is
 # 
 # \begin{align*}
-#     \operatorname{Rot}(\theta)\mathbf{u} = \begin{pmatrix} 
+#     Rot(\theta)\mathbf{u} = \begin{pmatrix} 
 #         x \cos(\theta) - y \sin(\theta) \\ 
 #         x \sin(\theta) + y \cos(\theta)
 #     \end{pmatrix}
@@ -77,10 +77,10 @@
 # :class: important
 # :name: rotation-in-R2-theorem
 # 
-# The rotation of a vector $\mathbf{u} \in \mathbb{R}^2$ **anti-clockwise** by an angle $\theta$ is the linear transformation $\operatorname{Rot}(\theta): \mathbb{R}^2 \to \mathbb{R}^2$ defined by
+# The rotation of a vector $\mathbf{u} \in \mathbb{R}^2$ **anti-clockwise** by an angle $\theta$ is the linear transformation $Rot(\theta): \mathbb{R}^2 \to \mathbb{R}^2$ defined by
 # 
 # \begin{align*}
-#     \operatorname{Rot}(\theta) \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} \mapsto 
+#     Rot(\theta) \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} \mapsto 
 #     \begin{pmatrix} u_1 \cos(\theta) - u_2 \sin(\theta) \\ u_1 \sin(\theta) + u_2 \cos(\theta) \end{pmatrix}.
 # \end{align*}
 # 
@@ -90,7 +90,7 @@
 # :label: rotation-matrix-equation
 # 
 # \begin{align*}
-#     \operatorname{Rot}(\theta) = \begin{pmatrix} 
+#     Rot(\theta) = \begin{pmatrix} 
 #         \cos(\theta) & -\sin(\theta) \\
 #         \sin(\theta) & \cos(\theta)
 #     \end{pmatrix}.
@@ -104,7 +104,7 @@
 # The inverse transformation of rotating a vector anti-clockwise by an angle $\theta$ is rotating **clockwise** by the same angle. This can be achieved by negating $\theta$, since $\cos(-\theta) = \cos(\theta)$ and $\sin(-\theta) = -\sin(\theta)$ then
 # 
 # \begin{align*}
-#     \operatorname{Rot}(\theta)^{-1} &= \begin{pmatrix}
+#     Rot(\theta)^{-1} &= \begin{pmatrix}
 #         \cos(-\theta) & -\sin(-\theta) \\
 #         \sin(-\theta) & \cos(-\theta)
 #    \end{pmatrix} 
@@ -117,7 +117,7 @@
 # We could have also calculated the inverse of the rotation matrix to give the same result
 # 
 # \begin{align*}
-#     \operatorname{Rot}(\theta)^{-1} &= \frac{\operatorname{adj}(\operatorname{Rot}(\theta))}{\det(\operatorname{Rot}(\theta))} \\
+#     Rot(\theta)^{-1} &= \frac{\operatorname{adj}(Rot(\theta))}{\det(Rot(\theta))} \\
 #     &= \frac{1}{\cos^2(\theta) + \sin^2(\theta)}
 #     \begin{pmatrix}
 #         \cos(\theta) & -\sin(\theta) \\
@@ -140,7 +140,7 @@
 # The transformation matrix for this rotation is
 # 
 # \begin{align*}
-#     \operatorname{Rot} \left( \frac{\pi}{2} \right) &= 
+#     Rot \left( \frac{\pi}{2} \right) &= 
 #     \begin{pmatrix}
 #         \cos(\frac{\pi}{2}) & -\sin(\frac{\pi}{2}) \\
 #         \sin(\frac{\pi}{2}) & \cos(\frac{\pi}{2})
@@ -154,7 +154,7 @@
 # Applying the transformation to $\mathbf{u} = (2, 1)$
 # 
 # \begin{align*}
-#     \operatorname{Rot}\left( \frac{\pi}{2} \right) (\mathbf{u}) &= 
+#     Rot\left( \frac{\pi}{2} \right) (\mathbf{u}) &= 
 #     \begin{pmatrix}
 #         0 & -1 \\ 
 #         1 & 0
@@ -178,7 +178,7 @@
 # :class: note
 # :name: reflection-definition
 # 
-# The linear transformation $\operatorname{Ref}(\theta): \mathbb{R}^2 \to \mathbb{R^2}$ is the reflection of a vector $\mathbf{u} \in \mathbf{R}^2$ about the line which passes through the origin and makes an angle of $\theta$ with the $x$-axis such that the distance of the head of the image vector $\mathbf{v}$ is the same as that of $\mathbf{u}$. 
+# The linear transformation $Ref(\theta): \mathbb{R}^2 \to \mathbb{R^2}$ is the reflection of a vector $\mathbf{u} \in \mathbf{R}^2$ about the line which passes through the origin and makes an angle of $\theta$ with the $x$-axis such that the distance of the head of the image vector $\mathbf{v}$ is the same as that of $\mathbf{u}$. 
 # 
 # :::{figure} ../Images/reflection.png
 # :name: reflection-figure
@@ -189,14 +189,14 @@
 # 
 # The simplest reflection we can perform is to reflect a vector $\mathbf{u} =(x, y)$ about the $x$-axis or $y$-axis. For example, to reflect about the $x$-axis we simply change the sign of the $y$ co-ordinate ({numref}`reflection-about-x-figure`), i.e.,
 # 
-# $$\operatorname{Ref}(0) \begin{pmatrix} x \\ y \end{pmatrix} &= \begin{pmatrix} x \\ -y \end{pmatrix},$$
+# $$Ref(0) \begin{pmatrix} x \\ y \end{pmatrix} &= \begin{pmatrix} x \\ -y \end{pmatrix},$$
 # 
 # and the transformation matrix is
 # 
 # :::{math}
 # :label: reflection-about-x-equation
 # 
-# \operatorname{Ref}(0) = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.
+# Ref(0) = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.
 # :::
 # 
 # Note that here the line of reflection makes an angle of $\theta=0$ with the $x$-axis.
@@ -242,13 +242,13 @@
 # Using composite transformations we can calculate the transformation matrix for reflection about a line
 # 
 # \begin{align*}
-#     \operatorname{Ref}(\theta) &= \operatorname{Rot}(\theta) \cdot \operatorname{Ref}(0) \cdot \operatorname{Rot}(-\theta),
+#     Ref(\theta) &= Rot(\theta) \cdot Ref(0) \cdot Rot(-\theta),
 # \end{align*}
 # 
 # therefore
 # 
 # \begin{align*}
-#     \operatorname{Ref}(\theta) &= 
+#     Ref(\theta) &= 
 #     \begin{pmatrix} \cos(\theta) & -\sin(\theta) \\ \sin(\theta) & \cos(\theta) \end{pmatrix}
 #     \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} 
 #     \begin{pmatrix} \cos(\theta) & \sin(\theta) \\ -\sin(\theta) & \cos(\theta) \end{pmatrix} \\
@@ -268,7 +268,7 @@
 # then
 # 
 # \begin{align*}
-#     \operatorname{Ref}(\theta) &= 
+#     Ref(\theta) &= 
 #     \begin{pmatrix} 
 #         \cos(2\theta) & \sin(2\theta) \\
 #         \sin(2\theta) & -\cos(2\theta)
@@ -291,7 +291,7 @@
 # :::{math}
 # :label: reflection-matrix-equation
 # \begin{align*}
-#     \operatorname{Ref}(\theta) = 
+#     Ref(\theta) = 
 #     \begin{pmatrix} 
 #         \cos(2\theta) & \sin(2 \theta) \\ 
 #         \sin(2\theta) & -\cos(2\theta) 
@@ -305,7 +305,7 @@
 # 
 # The inverse of reflecting about a line is to simply perform the reflection again, i.e.,
 # 
-# $$\operatorname{Ref}^{-1}(\theta) = \operatorname{Ref}(\theta).$$
+# $$Ref^{-1}(\theta) = Ref(\theta).$$
 # 
 # :::::{admonition} Example 6.8
 # :class: seealso
@@ -317,7 +317,7 @@
 # 
 # Since the line of reflection has gradient 1 then $\theta = \tan^{-1}(1) = \frac{\pi}{4}$ and the reflection matrix is
 # \begin{align*}
-#     \operatorname{Ref} \left( \frac{\pi}{4} \right) = \begin{pmatrix}
+#     Ref \left( \frac{\pi}{4} \right) = \begin{pmatrix}
 #         \cos(\frac{\pi}{2}) & \sin(\frac{\pi}{2}) \\
 #         \sin(\frac{\pi}{2}) & -\cos(\frac{\pi}{2})
 #     \end{pmatrix} =
@@ -328,7 +328,7 @@
 # \end{align*}
 # Applying the transformation to $\mathbf{u} = (3, -1)$
 # \begin{align*}
-#     \operatorname{Ref}\left(\frac{\pi}{4}\right) = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}
+#     Ref\left(\frac{\pi}{4}\right) = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}
 #     \begin{pmatrix} 3 \\ -1 \end{pmatrix} =
 #     \begin{pmatrix} -1 \\ 3 \end{pmatrix}.
 # \end{align*}
@@ -347,7 +347,7 @@
 # :class: note
 # :name: scaling-definition
 # 
-# The linear transformation $\operatorname{S}(\mathbf{s}) : \mathbf{R}^n \to \mathbf{R}^n$ where $\mathbf{s} \in \mathbb{R}^n$ applied to the position vector $\mathbf{u} \in \mathbb{R}^n$ scales $\mathbf{u}$ so that the head is moved closer or further away from the origin.
+# The linear transformation $S(\mathbf{s}) : \mathbf{R}^n \to \mathbf{R}^n$ where $\mathbf{s} \in \mathbb{R}^n$ applied to the position vector $\mathbf{u} \in \mathbb{R}^n$ scales $\mathbf{u}$ so that the head is moved closer or further away from the origin.
 # 
 # :::{figure} ../Images/scaling.png
 # :name: scaling-figure
@@ -363,10 +363,10 @@
 # :class: important
 # :name: scaling-theorem
 # 
-# The scaling of a vector $\mathbf{u} \in \mathbb{R}^n$ by the scaling vector $\mathbf{s}$ is the linear transformation $\operatorname{S}(\mathbf{s}): \mathbf(u) \mapsto \mathbf{v}$ calculated using
+# The scaling of a vector $\mathbf{u} \in \mathbb{R}^n$ by the scaling vector $\mathbf{s}$ is the linear transformation $S(\mathbf{s}): \mathbf(u) \mapsto \mathbf{v}$ calculated using
 # 
 # \begin{align*}
-#     \operatorname{S}(\mathbf{v}): \begin{pmatrix} u_1 \\ u_2 \\ \vdots \\ u_n \end{pmatrix} \mapsto 
+#     S(\mathbf{v}): \begin{pmatrix} u_1 \\ u_2 \\ \vdots \\ u_n \end{pmatrix} \mapsto 
 #     \begin{pmatrix} s_1 u_1 \\ s_2 u_2 \\ \vdots \\ s_n u_n \end{pmatrix}.
 # \end{align*}
 # 
@@ -375,7 +375,7 @@
 # :::{math}
 # :label: scaling-matrix-equation
 # \begin{align*}
-#     \operatorname{S}(\mathbf{s}) = 
+#     S(\mathbf{s}) = 
 #     \begin{pmatrix} 
 #         s_1 & 0 & \cdots & 0 \\ 
 #         0 & s_2 & \ddots & \vdots \\ 
@@ -392,7 +392,7 @@
 # Since the inverse operation of scalar multiplication is scalar division then the inverse scaling matrix is 
 # 
 # \begin{align*}
-#     \operatorname{S}^{-1}(\mathbf{v}) = 
+#     S^{-1}(\mathbf{v}) = 
 #     \begin{pmatrix} 
 #         \frac{1}{s_1} & 0 & \cdots & 0 \\ 
 #         0 & \frac{1}{s_2} & \ddots & \vdots \\ 
@@ -412,13 +412,13 @@
 # The transformation matrix is 
 # 
 # \begin{align*}
-#     \operatorname{S}(2, 3) = \begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix}.
+#     S(2, 3) = \begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix}.
 # \end{align*}
 # 
 # Applying the transformation to $\mathbf{u} = (2, 1)$
 # 
 # \begin{align*}
-#     \operatorname{S}(\mathbf{u}) = \begin{pmatrix}
+#     S(\mathbf{u}) = \begin{pmatrix}
 #         2 & 0 \\ 0 & 3
 #     \end{pmatrix}
 #     \begin{pmatrix} 2 \\ 1 \end{pmatrix}
