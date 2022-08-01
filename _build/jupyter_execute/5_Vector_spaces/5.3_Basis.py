@@ -4,6 +4,8 @@
 # (basis-section)=
 # # Basis
 # 
+# We have already met the concept of a basis in the chapter on vectors where we saw that [the basis vectors for $\mathbb{R}^3$](basis-vectors-section) are the vectors $\mathbf{i} = (1, 0, 0)$, $\mathbf{j} = (0, 1, 0)$ and $\mathbf{k} = (0, 0, 1)$ and any vector in $\mathbb{R}^3$ can be represented as a linear combination of these basis vectors. The concept of a basis is not limited to Euclidean geometry and we can define a basis for any vector space so that an element in the vector space can be expressed as a linear combination of the basis elements. 
+# 
 # ## Spanning sets
 # 
 # ::::{admonition} Definition: Spanning set

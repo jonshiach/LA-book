@@ -554,11 +554,17 @@ title="Print to PDF"
 <span class="eqno">(21)<a class="headerlink" href="#equation-linear-dependence-equation" title="Permalink to this equation">#</a></span>\[\alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 + \cdots + \alpha_n \mathbf{v}_n = \mathbf{0},\]</div>
 <p>where <span class="math notranslate nohighlight">\(\alpha \in F\)</span>. The vectors <span class="math notranslate nohighlight">\(\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n \in V\)</span> are said to be <strong>linearly independent over <span class="math notranslate nohighlight">\(F\)</span></strong> if the only solution to the above equation is when all of the <span class="math notranslate nohighlight">\(\alpha_i\)</span> values are zero (this solution is called the trivial solution). If the above equation is satisfied where <span class="math notranslate nohighlight">\(\alpha_i \neq 0\)</span> for <span class="math notranslate nohighlight">\(1 \leq i \leq n\)</span>, then the vectors <span class="math notranslate nohighlight">\(\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n \in V\)</span> are said to be <strong>linearly dependent over <span class="math notranslate nohighlight">\(F\)</span></strong>.</p>
 </div>
-<p>Another way to think about linear independence is that a set of vectors is linearly independent if none of the vectors in the set can be represented as a linear combination of the other vectors in the same set. For example, are the matrices <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 1 \\ 0 &amp; 2 \end{pmatrix}\)</span>, <span class="math notranslate nohighlight">\(B = \begin{pmatrix} -1 &amp; -1 \\ 0 &amp; -2 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(C = \begin{pmatrix} -4 &amp; 0 \\ 0 &amp; -8 \end{pmatrix}\)</span> linearly independent over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>?</p>
-<p>We can see by inspection that <span class="math notranslate nohighlight">\(B = -A\)</span> therefore <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(C\)</span> are linearly dependent as</p>
+<p>Another way to think about linear independence is that a set of vectors is linearly independent if none of the vectors in the set can be represented as a linear combination of the other vectors in the same set. For example, are the matrices</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    1 \cdot A + 1 \cdot B + 0 \cdot C = \mathbf{0}_{2\times 2}.
+    A &amp;= \begin{pmatrix} 1 &amp; 1 \\ 0 &amp; 2 \end{pmatrix}, &amp;
+    B &amp;= \begin{pmatrix} -1 &amp; -1 \\ 0 &amp; -2 \end{pmatrix}, &amp;
+    C &amp;= \begin{pmatrix} -4 &amp; 0 \\ 0 &amp; -8 \end{pmatrix}
+\end{align*}\]</div>
+<p>linearly independent over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>? We can see by inspection that <span class="math notranslate nohighlight">\(B = -A\)</span> therefore <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(C\)</span> are linearly dependent as</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    1A + 1B + 0C = \mathbf{0}_{2\times 2}.
 \end{align*}\]</div>
 <p>So if any two members of a set are scalar multiples of each other then they are linearly dependent because we can choose <span class="math notranslate nohighlight">\(\alpha_i\)</span> values to satisfy equation <a class="reference internal" href="#equation-linear-dependence-equation">(21)</a>.</p>
 <div class="seealso admonition" id="linear-dependence-equation">

@@ -34,11 +34,17 @@
 # where $\alpha \in F$. The vectors $\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n \in V$ are said to be **linearly independent over $F$** if the only solution to the above equation is when all of the $\alpha_i$ values are zero (this solution is called the trivial solution). If the above equation is satisfied where $\alpha_i \neq 0$ for $1 \leq i \leq n$, then the vectors $\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n \in V$ are said to be **linearly dependent over $F$**.
 # ::::
 # 
-# Another way to think about linear independence is that a set of vectors is linearly independent if none of the vectors in the set can be represented as a linear combination of the other vectors in the same set. For example, are the matrices $A = \begin{pmatrix} 1 & 1 \\ 0 & 2 \end{pmatrix}$, $B = \begin{pmatrix} -1 & -1 \\ 0 & -2 \end{pmatrix}$ and $C = \begin{pmatrix} -4 & 0 \\ 0 & -8 \end{pmatrix}$ linearly independent over $\mathbb{R}$? 
+# Another way to think about linear independence is that a set of vectors is linearly independent if none of the vectors in the set can be represented as a linear combination of the other vectors in the same set. For example, are the matrices
 # 
-# We can see by inspection that $B = -A$ therefore $A$, $B$ and $C$ are linearly dependent as
 # \begin{align*}
-#     1 \cdot A + 1 \cdot B + 0 \cdot C = \mathbf{0}_{2\times 2}.
+#     A &= \begin{pmatrix} 1 & 1 \\ 0 & 2 \end{pmatrix}, &
+#     B &= \begin{pmatrix} -1 & -1 \\ 0 & -2 \end{pmatrix}, &
+#     C &= \begin{pmatrix} -4 & 0 \\ 0 & -8 \end{pmatrix}
+# \end{align*}
+# 
+# linearly independent over $\mathbb{R}$? We can see by inspection that $B = -A$ therefore $A$, $B$ and $C$ are linearly dependent as
+# \begin{align*}
+#     1A + 1B + 0C = \mathbf{0}_{2\times 2}.
 # \end{align*} 
 # 
 # So if any two members of a set are scalar multiples of each other then they are linearly dependent because we can choose $\alpha_i$ values to satisfy equation {eq}`linear-dependence-equation`.
