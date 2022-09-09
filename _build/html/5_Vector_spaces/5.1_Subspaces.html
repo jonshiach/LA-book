@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Subspaces &#8212; Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -575,7 +576,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="subspaces">
+  <section class="tex2jax_ignore mathjax_ignore" id="subspaces">
 <span id="subspaces-section"></span><h1>Subspaces<a class="headerlink" href="#subspaces" title="Permalink to this headline">#</a></h1>
 <p>We have seen that a <a class="reference internal" href="5.0_Vector_spaces.html#vector-space-definition"><span class="std std-ref">vector space</span></a> is a set, and hence we can consider studying its <a class="reference external" href="https://en.wikipedia.org/wiki/Subset">subsets</a>. Think of the Euclidean space <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> (which we think of with the usual <span class="math notranslate nohighlight">\(x,y,z\)</span>-coordinates). This is a vector space, and consider the plane <span class="math notranslate nohighlight">\(p = \{(x,y,z) : x + y + z = 0\} \subseteq \mathbb{R}^3\)</span>. In fact, we can view <span class="math notranslate nohighlight">\(p\)</span> itself as a vector space, meaning it satisfies the <a class="reference internal" href="5.0_Vector_spaces.html#vector-space-axioms-theorem"><span class="std std-ref">vector space axioms</span></a> A1 – A4 and M1 – M4, where we define addition and scalar multiplication as coming from <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. We saw in <a class="reference internal" href="../4_Coordinate_geometry/4.0_Coordinate_geometry.html#coordinate-geometry-chapter"><span class="std std-ref">Co-ordinate geometry</span></a> that this vector space <span class="math notranslate nohighlight">\(p\)</span> actually closely resembles <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>.</p>
 <div class="note admonition" id="subspace-definition">
@@ -583,10 +584,12 @@ title="Print to PDF"
 <p>A non-empty subset <span class="math notranslate nohighlight">\(W\)</span> of a vector space <span class="math notranslate nohighlight">\(V\)</span> is called a <strong>subspace</strong> (or a vector subspace) if it satisfies all the vector space properties A1 – A4 and M1 – M4.</p>
 </div>
 <p>Actually most of the <a class="reference internal" href="5.0_Vector_spaces.html#vector-space-axioms-theorem"><span class="std std-ref">axioms</span></a> A1 – A4 and M1 – M4 are automatically satisfied, simply because they’re satisfied in <span class="math notranslate nohighlight">\(V\)</span>. The only things we really need to check are that addition and scalar multiplication are well-defined. In other words we need to check that when we ‘add’ or ‘multiply’ in <span class="math notranslate nohighlight">\(W\)</span> we are not taken outside of <span class="math notranslate nohighlight">\(W\)</span> (<a class="reference internal" href="#vector-space-figure"><span class="std std-numref">Fig. 23</span></a>). This idea is formalised in <a class="reference internal" href="#subspace-condition-theorem"><span class="std std-ref">the subspace condition</span></a>.</p>
-<div class="figure align-default" id="vector-space-figure">
+<figure class="align-default" id="vector-space-figure">
 <img alt="../_images/vector_space.png" src="../_images/vector_space.png" />
-<p class="caption"><span class="caption-number">Fig. 23 </span><span class="caption-text">Illustration of a subspace <span class="math notranslate nohighlight">\(W\)</span> of a vector space <span class="math notranslate nohighlight">\(V\)</span>.</span><a class="headerlink" href="#vector-space-figure" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Illustration of a subspace <span class="math notranslate nohighlight">\(W\)</span> of a vector space <span class="math notranslate nohighlight">\(V\)</span>.</span><a class="headerlink" href="#vector-space-figure" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="important admonition" id="subspace-condition-theorem">
 <p class="admonition-title">Theorem: Subspace condition</p>
 <p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(W\)</span> be a non-empty subset of <span class="math notranslate nohighlight">\(V\)</span> then <span class="math notranslate nohighlight">\(W\)</span> is a subspace if and only if the following condition is satisfied</p>
@@ -660,7 +663,7 @@ Solution<div class="sd-summary-down docutils">
 <p class="sd-card-text">so <span class="math notranslate nohighlight">\((p + \alpha r)(x) \in W\)</span> is an even function therefore <span class="math notranslate nohighlight">\(W\)</span> is a subspace.</p>
 </div>
 </details></div>
-<div class="section" id="non-examples-of-subspaces">
+<section id="non-examples-of-subspaces">
 <h2>Non-examples of Subspaces<a class="headerlink" href="#non-examples-of-subspaces" title="Permalink to this headline">#</a></h2>
 <p>Not all subsets of a vector space will be a subspace. For example, define <span class="math notranslate nohighlight">\(p\)</span> as the polynomial</p>
 <div class="amsmath math notranslate nohighlight">
@@ -700,8 +703,8 @@ Solution<div class="sd-summary-down docutils">
 <p class="sd-card-text">(iii)    Let <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 2, 2) \in W\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v} = (2, 1, 2) \in W\)</span>, then <span class="math notranslate nohighlight">\(\mathbf{u} + \mathbf{v} = (3, 3, 4) \notin W\)</span>. We could’ve also just noted that <span class="math notranslate nohighlight">\(0 \notin W\)</span>.</p>
 </div>
 </details></div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

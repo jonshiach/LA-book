@@ -15,33 +15,19 @@
 #     X &= A^{-1}B & & \textsf{since $IX = X$}. 
 # \end{align*}
 # 
-# :::::{admonition} Example 1.17
+# ````{admonition} Example 1.17
 # :class: seealso
 # :name: matrix-algebra-example
 # 
 # Solve the following matrix equations for $X$:
-#     
-# ::::{grid}
-# :gutter: 2
 # 
-# :::{grid-item}
-# :columns: 4
 # (i) &emsp; $2X = A$
-# :::
 # 
-# :::{grid-item}
-# :columns: 4
 # (ii) &emsp; $kX + A = I$
-# :::
 # 
-# :::{grid-item}
-# :columns: 4
 # (iii) &emsp; $A(X + B) = C$
-# :::
 # 
-# ::::
-# 
-# ::::{dropdown} Solution
+# ```{dropdown} Solution
 # (i)
 # \begin{align*}
 # 2X &= A  \\
@@ -63,5 +49,5 @@
 # A^{-1}AX &= A^{-1}(C - AB) \\
 # X &= A^{-1}(C - AB).
 # \end{align*}
-# ::::
-# :::::
+# ```
+# ````

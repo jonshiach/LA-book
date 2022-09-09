@@ -55,7 +55,7 @@
 # 
 # In this method, we used three types of operations on the equations in the system. These operations are known as **Elementary Row Operations (EROs)**.
 # 
-# ::::{admonition} Definition: Elementary Row Operations (EROs)
+# ```{admonition} Definition: Elementary Row Operations (EROs)
 # :class: note
 # :name: ero-definition
 # 
@@ -64,18 +64,18 @@
 # - Type I: swap any two rows of the system;
 # - Type II: multiply one row by a non-zero scalar;
 # - Type III: replace a single row by itself plus a multiple of another row.
-# ::::
+# ```
 # 
 # In the solution to the linear system of equations shown above we used a type I row operation in step 1, a type II row operation in step 3 and type III row operations in steps 2 and 4.
 # 
 # We can represent the linear system using matrices for convenience. We begin by expressing the linear system using an augmented matrix consisting of the concatenation of $A$ and $\mathbf{x}$ so any EROs that are applied to the augmented matrix are applied to the coefficients and the constant terms at the same time.
 # 
-# ::::{admonition} Definition: Augemented matrix
+# ```{admonition} Definition: Augemented matrix
 # :class: note
 # :name: augmented-matrix-definition
 # 
 # The **augmented matrix** is a representation of a system of linear equations $A\mathbf{x}=\mathbf{b}$ such that the $m\times n$ coefficient matrix $A$ and right-hand side constant vector $\mathbf{b}$ are combined into a single $m\times (n+1)$ matrix $(A \mid \mathbf{b})$. 
-# ::::
+# ```
 # 
 # When writing the augmented matrix we often draw a partition separating $A$ and $\mathbf{b}$ (although this is not strictly necessary), i.e.,
 # 
@@ -92,7 +92,7 @@
 # 
 # Elementary row operations are applied to the augmented matrix so that we reduce it to what is known as row echelon form where the solution of the system can be easily calculated. 
 # 
-# ::::{admonition} Definition: Row Echelon Form (REF)
+# ```{admonition} Definition: Row Echelon Form (REF)
 # :class: note
 # :name: ref-definition
 # 
@@ -100,7 +100,7 @@
 # 
 # - any non-zero rows are above any all-zero rows;
 # - in each non-zero row, with the exception of the first row, the **pivot element** (the first non-zero element in the row) is to the right of the pivot element in the row above;
-# ::::
+# ```
 # 
 # For example, the following matrices are in row echelon form and the red numbers are the pivot elements
 # 
@@ -269,7 +269,7 @@
 # 
 # Solving using back substitution gives $x_1 = 1$, $x_2 = -10$ and $x_3 = -4$ which was the same solution as we saw before.
 # 
-# :::::{admonition} Definition: Gaussian elimination
+# ````{admonition} Definition: Gaussian elimination
 # :class: note
 # :name: ge-definition
 # 
@@ -279,34 +279,26 @@
 # 2. If $a_{ik} = 0$ perform a row swap with a row beneath the pivot row $i$ with a non-zero element in the pivot column $k$. If no such rows exist set $k = k + 1$ and repeat step 2.
 # 3. For each row $j = i+1 \ldots m$ beneath the pivot row subtract the pivot row $i$ multiplied by $\dfrac{a_{jk}}{a_{ik}}$ from row $j$. 
 # 4. Set $i = 1 + 1$ and $k = k + 1$ and repeat steps 2 and 3 until $i > m$ or $k > n$.
-# :::::
+# ````
 # 
-# :::::{admonition} Example 2.4
+# ````{admonition} Example 2.4
 # :class: seealso
 # :name: ge-example
 # 
 # Use Gaussian-elimination to solve the following systems of linear equations:
 # 
-# ::::{grid}
-# 
-# :::{grid-item}
-# (i) &emsp; $\begin{array}{rl}
+# &emsp; (i) &emsp; $\begin{array}{rl}
 #     x_1 + 2x_2 &= 7, \\ 
 #     3x_1 - 4x_2 &= 1.
 #     \end{array}$
-# :::
 # 
-# :::{grid-item}
-# (ii) &emsp; $\begin{array}{rl}
+# &emsp; (ii) &emsp; $\begin{array}{rl}
 #     x_1 + x_3 &= 3, \\ 
 #     -2x_1 + x_2 + 3x_3 &= 3, \\
 #     -x_1 + 2x_2 + 4x_3 &= 5.
 #     \end{array}$
-# :::
 # 
-# ::::
-# 
-# ::::{dropdown} Solution
+# ```{dropdown} Solution
 # 
 # (i) 
 # \begin{align*}
@@ -355,5 +347,5 @@
 #     x_2 + 5x_3 &= 9 & \therefore x_2 &= 9 - 5x_3 = 9 - 5(2) = -1, \\
 #     x_1 + x_3 &= 3 & \therefore x_1 &= 3 - x_3 = 3 - 2 = 1.
 # \end{align*}
-# ::::
-# :::::
+# ```
+# ````

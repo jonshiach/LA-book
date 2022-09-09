@@ -6,7 +6,7 @@
 # 
 # **Gauss-Jordan elimination (GJE)** is similar to [Gaussian elimination](gaussian-elimination-section) with the difference that the augmented matrix is row reduced so that the values of the pivot elements are 1 and are the only non-zero element in the column. This allows the solution to be read from the final augmented matrix without the need to perform back substitution. A matrix in this form is said to be in reduced row echelon form.
 # 
-# ::::{admonition} Definition: Reduced Row Echelon Form (RREF)
+# ```{admonition} Definition: Reduced Row Echelon Form (RREF)
 # :class: note
 # :name: rref-definition
 # 
@@ -15,7 +15,7 @@
 # - it is in row echelon form;
 # - the leading entry in each non-zero row has a value of 1;
 # - the leading entry in each non-zero row is the only non-zero element in its column.
-# ::::
+# ```
 # 
 # For example the following matrices are in reduced row echelon form:
 # \begin{align*}
@@ -27,7 +27,7 @@
 # 
 # The method of Gauss-Jordan elimination is summarised by the steps below.
 # 
-# :::::{admonition} Definition: Gauss-Jordan elimination
+# ````{admonition} Definition: Gauss-Jordan elimination
 # :class: note
 # :name: gje-definition
 # 
@@ -38,9 +38,9 @@
 # 3. Divide the pivot row $i$ by the value of the pivot element $a_{ik}$.
 # 4. For each row $j = 1 \ldots m$ where $i \neq j$ subtract the pivot row $i$ multiplied by $a_{ik}$ from row $j$. 
 # 5. Set $i = 1 + 1$ and $k = k + 1$ and repeat steps 2 to 4 until $i > m$ or $k > n$.
-# :::::
+# ````
 # 
-# :::::{admonition} Example 2.6
+# ````{admonition} Example 2.6
 # :class: seealso
 # :name: gje-example
 # 
@@ -52,7 +52,7 @@
 #     2x_1 - 3x_2 + 7x_3 &= 4.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ```{dropdown} Solution
 # \begin{align*}
 #     & \left( \begin{array}{ccc|c}
 #         3 & 1 & -2 & 1 \\
@@ -97,8 +97,8 @@
 # \end{align*}
 # Therefore the solution is $x_1 = 1$, $x_2 = -10$ and $x_3 = -4$.
 # 
-# ::::
-# :::::
+# ```
+# ````
 # 
 # ## Python code
 # 
@@ -134,12 +134,12 @@ display(x)
 # 
 # Gauss-Jordan elimination allows us to calculate the inverse of matrices which is much more computationally efficient than the [adjoint-determinant formula](adjoint-determinant-formula-definition). To show how we can use ERO to calculate an inverse of a matrix we first need to consider elementary matrices.
 # 
-# ::::{admonition} Elementary matrix
+# ```{admonition} Elementary matrix
 # :class: note
 # :name: elementary-matrix-definition
 #     
 # An **elementary matrix**, $E$, is an $n\times n$ matrix that is obtained by applying a single elementary row operation to the identity matrix $I_n$.
-# ::::
+# ```
 # 
 # Since we have three types of elementary row operations there are three types of elementary matrices. Consider examples of the three types for $I_3$:
 # 
@@ -155,12 +155,12 @@ display(x)
 # 
 # Since the inverse of an elementary matrix is obtained by applying an elementary row operation to the identity matrix, by definition it must also be an elementary matrix.
 # 
-# ::::{admonition} Theorem: Multiplication by an elementary matrix
+# ```{admonition} Theorem: Multiplication by an elementary matrix
 # :class: important
 # :name: multiplication-by-an-elementary-matrix-theorem
 # 
 # If $A$ is an $n\times n$ matrix then the product $EA$, where $E$ is an elementary matrix obtained by performing a single elementary row operation on $I_n$, is equivalent to performing the elementary row operation on $A$.
-# ::::
+# ```
 # 
 # For example, let $A = \begin{pmatrix} 1 & 0 & 4 \\ 2 & -1 & 3 \\ 0 & 5 & 1 \end{pmatrix}$ and consider the following row operations:
 # 
@@ -176,14 +176,14 @@ display(x)
 # 
 # $$EA = \begin{pmatrix} 1 & 0 & 0  \\ 0 & 1 & 0 \\ 0 & 3 & 1 \end{pmatrix}\begin{pmatrix} 1 & 0 & 4 \\ 2 & -1 & 3 \\ 0 & 5 & 1 \end{pmatrix} = \begin{pmatrix} 1 & 0 & 4 \\ 2 & -1 & 3 \\ 6 & 2 & 10 \end{pmatrix}$$
 # 
-# ::::{admonition} Theorem: Expressing an inverse matrix as a product of elementary matrices
+# ```{admonition} Theorem: Expressing an inverse matrix as a product of elementary matrices
 # :class: important
 # :name: inverse-as-product-of-elementary-matrices-theorem
 # 
 # If $A$ is an $n\times n$ non-singular matrix which which has been reduced to $I_n$ by use of $k$ elementary row operations $E_1, E_2, \ldots E_k$ then 
 # 
 # $$A^{-1} = E_kE_{k-1}\ldots E_2E_1.$$
-# ::::
+# ```
 # 
 # **Proof**
 # 
@@ -195,7 +195,7 @@ display(x)
 # 
 # Combining the theorems for [mulitplication by an elementary matrix](multiplication-by-an-elementary-matrix-theorem) and [expressing an inverse matrix as a product of elementary matrices](inverse-as-product-of-elementary-matrices-theorem) means that if we perform the same elementary row operations to $I$ as we have done to row reduce a non-singular matrix $A$ to $I$ then the results is the inverse of $A$. We do this by forming an augmented matrix $(A\mid I)$ and perform Gauss-Jordan elimination on the left-hand matrix. Once the left-hand matrix has been reduced to $I$ the right-hand matrix is then the inverse of $A$.
 # 
-# :::::{admonition} Example 2.7
+# ````{admonition} Example 2.7
 # :class: seealso
 # :name: gje-inverse-example
 # 
@@ -204,7 +204,7 @@ display(x)
 #     A = \begin{pmatrix}1 & 0 & 2 \\ 2 & -1 & 3 \\ 1 & 4 & 4 \end{pmatrix}.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ```{dropdown} Solution
 # 
 # \begin{align*}
 #     & \left( \begin{array}{ccc|ccc} 
@@ -267,8 +267,8 @@ display(x)
 #         0 & 0 & 1 
 #     \end{pmatrix} = I.
 # \end{align*}
-# ::::
-# :::::
+# ```
+# ````
 # 
 # The calculation of a matrix inverse using Gauss-Jordan elimination is more efficient that using the adjoint-determinant formula when dealing with larger matrices (i.e., when $n > 3$) since the steps can be easily programmed into a computer and it does not require the calculation of determinants which can be computationally expensive.
 # 

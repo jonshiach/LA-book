@@ -5,21 +5,21 @@
 # 
 # **Cramer's rule** is an explicit rule for calculating the solution to a system of linear equations using determinants.
 # 
-# ::::{admonition} Theorem: Cramer's rule
+# ````{admonition} Theorem: Cramer's rule
 # :class: important
 # :name: cramers-rule-theorem
 # 
 # The solution to a non-singular linear system of equations of the form $A\mathbf{x}=\mathbf{b}$ can be calculated using Cramer's rule which is
 # 
-# :::{math}
+# ```{math}
 # :label: cramers-rule-equation
 # 
 # x_i = \frac{\det(A_i)}{\det(A)},
-# :::
+# ```
 # 
 # where $A_i$ is a matrix obtained by replacing column $i$ of $A$ with $\mathbf{b}$.
 # 
-# ::::
+# ````
 # 
 # **Proof**
 # 
@@ -50,34 +50,26 @@
 # *Doing similar for the other variables completes the proof.* <div style="text-align: right"> &#9633; </div>
 # 
 # 
-# :::::{admonition} Example 2.3
+# ````{admonition} Example 2.3
 # :class: seealso
 # :name: cramers-rule-example
 # 
 # Solve the following systems of linear equations using Cramer's rule
 # 
-# ::::{grid}
-# 
-# :::{grid-item}
-# (i) &emsp; $\begin{array}{rl}
+# &emsp; (i) &emsp; $\begin{array}{rl}
 #     3x_1 - 2x_2 &= -4, \\
 #     x_1 - 3x_2 &= 1.
 # \end{array}$
-# :::
 # 
-# :::{grid-item}
-# (ii) &emsp; $\begin{array}{rl}
+# &emsp; (ii) &emsp; $\begin{array}{rl}
 #     -2x_1 - 3x_2 - x_3 &= -5, \\
 #     -4x_1 + 4x_2 + 3x_3 &= -20, \\
 #     -3x_1 &= -12.
 # \end{array}$
-# :::
 # 
-# ::::
+# ```{dropdown} Solution
 # 
-# ::::{dropdown} Solution
-# 
-# (i) $A = \begin{pmatrix} 3 & -2 \\ 1 & -3 \end{pmatrix}$ and $\mathbf{b} = \begin{pmatrix} -4 \\ 1 \end{pmatrix}$
+# (i) &emsp; $A = \begin{pmatrix} 3 & -2 \\ 1 & -3 \end{pmatrix}$ and $\mathbf{b} = \begin{pmatrix} -4 \\ 1 \end{pmatrix}$
 # 
 # \begin{align*}
 #     x_1 &= \frac{
@@ -96,7 +88,7 @@
 #     \begin{pmatrix} -4 \\ 1 \end{pmatrix} = \mathbf{b}.
 # \end{align*}
 # 
-# (ii) $A = \begin{pmatrix} -2 & -3 & -1 \\ -4 & 4 & 3 \\ -3 & 0 & 0 \end{pmatrix}$ and $\mathbf{b} = \begin{pmatrix} -5 \\ -20 \\ -12 \end{pmatrix}$
+# (ii) &emsp; $A = \begin{pmatrix} -2 & -3 & -1 \\ -4 & 4 & 3 \\ -3 & 0 & 0 \end{pmatrix}$ and $\mathbf{b} = \begin{pmatrix} -5 \\ -20 \\ -12 \end{pmatrix}$
 # 
 # \begin{align*}
 #     x_1 &= \frac{
@@ -127,6 +119,6 @@
 #     \begin{pmatrix} -5 \\ -20 \\ -12 \end{pmatrix} = \mathbf{b}.
 # \end{align*}
 # 
-# ::::
+# ```
 # 
-# :::::
+# ````

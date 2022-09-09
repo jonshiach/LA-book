@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Special matrices &#8212; Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -647,9 +648,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="special-matrices">
+  <section class="tex2jax_ignore mathjax_ignore" id="special-matrices">
 <h1>Special matrices<a class="headerlink" href="#special-matrices" title="Permalink to this headline">#</a></h1>
-<div class="section" id="diagonal-matrix">
+<section id="diagonal-matrix">
 <h2>Diagonal matrix<a class="headerlink" href="#diagonal-matrix" title="Permalink to this headline">#</a></h2>
 <div class="note admonition" id="diagonal-matrix-definition">
 <p class="admonition-title">Definition: Diagonal matrix</p>
@@ -671,8 +672,8 @@ title="Print to PDF"
     &amp;\begin{pmatrix} 3.7 &amp; 0 &amp; 0 \\ 0 &amp; 12 &amp; 0 \\ 0 &amp; 0 &amp; 2.1 \end{pmatrix}, &amp;
     &amp;\begin{pmatrix} x &amp; 0 &amp; 0 \\ 0 &amp; y &amp; 0 \\ 0 &amp; 0 &amp; z \end{pmatrix}.
 \end{align*}\]</div>
-</div>
-<div class="section" id="zero-matrix">
+</section>
+<section id="zero-matrix">
 <h2>Zero matrix<a class="headerlink" href="#zero-matrix" title="Permalink to this headline">#</a></h2>
 <p>Similarly to <span class="math notranslate nohighlight">\(0\)</span> being a neutral element with respect to addition of real numbers, an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix of zeros plays the role of a neutral element for addition of matrices.</p>
 <div class="note admonition" id="zero-matrix-definition">
@@ -693,7 +694,7 @@ title="Print to PDF"
 \[A + \mathbf{0} = \mathbf{0} + A = A.\]</div>
 <p>Thus zero matrices are <strong>neutral elements with respect to matrix addition</strong>.</p>
 </div>
-<div class="section" id="python-code">
+<section id="python-code">
 <h3>Python code<a class="headerlink" href="#python-code" title="Permalink to this headline">#</a></h3>
 <p>The SymPy code for generating an <span class="math notranslate nohighlight">\(m \times n\)</span> zero matrix is <code class="docutils literal notranslate"><span class="pre">zeros(m,</span> <span class="pre">n)</span></code>. The Python code below generates the zero matrices given above</p>
 <div class="cell docutils container">
@@ -720,9 +721,9 @@ title="Print to PDF"
 \[\begin{split}\displaystyle \left[\begin{matrix}0\\0\\0\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="the-identity-matrix">
+</section>
+</section>
+<section id="the-identity-matrix">
 <h2>The identity matrix<a class="headerlink" href="#the-identity-matrix" title="Permalink to this headline">#</a></h2>
 <div class="note admonition" id="identity-matrix-definition">
 <p class="admonition-title">Definition: The identity matrix</p>
@@ -751,19 +752,9 @@ title="Print to PDF"
 <div class="seealso admonition" id="identity-matrix-example">
 <p class="admonition-title">Example 1.8</p>
 <p>Given the matrices <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(B = \begin{pmatrix} 1 &amp; 2 \\ 4 &amp; 3 \\ -2 &amp; 1 \end{pmatrix}\)</span> evaluate:</p>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row docutils">
-<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
-<p>(i)   <span class="math notranslate nohighlight">\(IA\)</span></p>
-</div>
-<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
-<p>(ii)   <span class="math notranslate nohighlight">\(AI\)</span></p>
-</div>
-<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
-<p>(iii)   <span class="math notranslate nohighlight">\(IB\)</span></p>
-</div>
-</div>
-</div>
+<p>  (i)   <span class="math notranslate nohighlight">\(IA\)</span></p>
+<p>  (ii)   <span class="math notranslate nohighlight">\(AI\)</span></p>
+<p>  (iii)   <span class="math notranslate nohighlight">\(IB\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -771,21 +762,21 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">(i)</p>
+<p class="sd-card-text">  (i)</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     IA &amp;= \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix} \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix} 
     = \begin{pmatrix} 1 + 0 &amp; 0  + 0 \\ 0 - 2 &amp; 0 + 3 \end{pmatrix} \\
     &amp;= \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix}
 \end{align*}\]</div>
-<p class="sd-card-text">(ii)</p>
+<p class="sd-card-text">  (ii)</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     AI &amp;= \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix} \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}
     = \begin{pmatrix} 1 + 0 &amp; 0 + 0 \\ -2 + 0 &amp; 0 + 3 \end{pmatrix} \\
     &amp;= \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix}
 \end{align*}\]</div>
-<p class="sd-card-text">(iii)</p>
+<p class="sd-card-text">  (iii)</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     IB &amp;= \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} \begin{pmatrix} 1 &amp; 2 \\ 4 &amp; 3 \\ -2 &amp; 1 \end{pmatrix} 
@@ -794,7 +785,7 @@ Solution<div class="sd-summary-down docutils">
 \end{align*}\]</div>
 </div>
 </details></div>
-<div class="section" id="id1">
+<section id="id1">
 <h3>Python code<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p>The Python code for generating an <span class="math notranslate nohighlight">\(n \times n\)</span> identity matrix is <code class="docutils literal notranslate"><span class="pre">eye(n)</span></code>. The code below calculates the solution to <a class="reference internal" href="#identity-matrix-example"><span class="std std-ref">example 1.8</span></a>.</p>
 <div class="cell docutils container">
@@ -839,9 +830,9 @@ Solution<div class="sd-summary-down docutils">
 \[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 2\\4 &amp; 3\\-2 &amp; 1\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="symmetric-matrix">
+</section>
+</section>
+<section id="symmetric-matrix">
 <h2>Symmetric matrix<a class="headerlink" href="#symmetric-matrix" title="Permalink to this headline">#</a></h2>
 <div class="note admonition" id="symmetric-matrix-definition">
 <p class="admonition-title">Definition: Symmetric matrix</p>
@@ -849,32 +840,21 @@ Solution<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[[A]_{ij} = [A]_{ji},\]</div>
 <p>for all <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span>. It is called a symmetric matrix because the values of the elements are ‘symmetric’ about the main diagonal</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    \begin{pmatrix}
-        a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
-        a_{12} &amp; a_{11} &amp; \cdots &amp; a_{2n} \\
-        \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-        a_{1n} &amp; a_{2n} &amp; \cdots &amp; a_{nn}
-    \end{pmatrix}
-\end{align*}\]</div>
+<p>\begin{align*}
+\begin{pmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \
+a_{12} &amp; a_{11} &amp; \cdots &amp; a_{2n} \
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \
+a_{1n} &amp; a_{2n} &amp; \cdots &amp; a_{nn}
+\end{pmatrix}
+\nd{align*}</p>
 </div>
 <div class="seealso admonition" id="symmetric-matrix-example">
 <p class="admonition-title">Example 1.9</p>
 <p>Which of the following matrices are symmetric matrices?</p>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
-<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
-<p>(i)   <span class="math notranslate nohighlight">\(A=\begin{pmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{pmatrix}\)</span></p>
-</div>
-<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
-<p>(ii)   <span class="math notranslate nohighlight">\(B=\begin{pmatrix} 2 &amp; 0 &amp; -3 \\ 0 &amp; 5 &amp; 7 \\ -3 &amp; 7 &amp; 1 \end{pmatrix}\)</span></p>
-</div>
-<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
-<p>(iii)   <span class="math notranslate nohighlight">\(C=\begin{pmatrix} 2 &amp; 4 \\ 3 &amp; 2 \end{pmatrix}\)</span></p>
-</div>
-</div>
-</div>
+<p>  (i)   <span class="math notranslate nohighlight">\(A=\begin{pmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{pmatrix}\)</span></p>
+<p>  (ii)   <span class="math notranslate nohighlight">\(B=\begin{pmatrix} 2 &amp; 0 &amp; -3 \\ 0 &amp; 5 &amp; 7 \\ -3 &amp; 7 &amp; 1 \end{pmatrix}\)</span></p>
+<p>  (iii)   <span class="math notranslate nohighlight">\(C=\begin{pmatrix} 2 &amp; 4 \\ 3 &amp; 2 \end{pmatrix}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -882,20 +862,20 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">(i)   <span class="math notranslate nohighlight">\(A=\begin{pmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{pmatrix}\)</span> is a symmetric matrix since</p>
+<p class="sd-card-text">  (i)   <span class="math notranslate nohighlight">\(A=\begin{pmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{pmatrix}\)</span> is a symmetric matrix since</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     \begin{pmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{pmatrix}^\mathrm{T} = \begin{pmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{pmatrix} = A.
 \end{align*}\]</div>
-<p class="sd-card-text">(ii)   <span class="math notranslate nohighlight">\(B = \begin{pmatrix} 2 &amp; 0 &amp; -3 \\ 0 &amp; 5 &amp; 7 \\ -3 &amp; 7 &amp; 1 \end{pmatrix}\)</span> is a symmetric matrix since</p>
+<p class="sd-card-text">  (ii)   <span class="math notranslate nohighlight">\(B = \begin{pmatrix} 2 &amp; 0 &amp; -3 \\ 0 &amp; 5 &amp; 7 \\ -3 &amp; 7 &amp; 1 \end{pmatrix}\)</span> is a symmetric matrix since</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     \begin{pmatrix} 2 &amp; 0 &amp; -3 \\ 0 &amp; 5 &amp; 7 \\ -3 &amp; 7 &amp; 1 \end{pmatrix}^\mathrm{T} = \begin{pmatrix} 2 &amp; 0 &amp; -3 \\ 0 &amp; 5 &amp; 7 \\ -3 &amp; 7 &amp; 1 \end{pmatrix} = B.
 \end{align*}\]</div>
-<p class="sd-card-text">(iii)   <span class="math notranslate nohighlight">\(C = \begin{pmatrix} 2 &amp; 4 \\ 3 &amp; 2 \end{pmatrix}\)</span> is not a symmetric matrix since <span class="math notranslate nohighlight">\([C]_{12} \neq [C]_{21}\)</span>.</p>
+<p class="sd-card-text">  (iii)   <span class="math notranslate nohighlight">\(C = \begin{pmatrix} 2 &amp; 4 \\ 3 &amp; 2 \end{pmatrix}\)</span> is not a symmetric matrix since <span class="math notranslate nohighlight">\([C]_{12} \neq [C]_{21}\)</span>.</p>
 </div>
 </details></div>
-<div class="section" id="id2">
+<section id="id2">
 <h3>Python code<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <p>The code below calculates the solution to <a class="reference internal" href="#symmetric-matrix-example"><span class="std std-ref">example 1.9</span></a>.</p>
 <div class="cell docutils container">
@@ -922,9 +902,9 @@ Solution<div class="sd-summary-down docutils">
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

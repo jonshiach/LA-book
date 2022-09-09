@@ -11,12 +11,12 @@
 #     \mathbf{x} &= A^{-1}\mathbf{b} \qquad \text{(since $I = A^{-1}A$)}.
 # \end{align*}
 # 
-# ::::{admonition} Theorem: Solution of a linear system of equations using the inverse matrix
+# ```{admonition} Theorem: Solution of a linear system of equations using the inverse matrix
 # :class: important
 # :name: solution-using-inverse-matrix-theorem
 # 
 # The solution to a system of linear equations $A\mathbf{x} = \mathbf{b}$ can be calculated using $\mathbf{x} = A^{-1}\mathbf{b}$. 
-# ::::
+# ```
 # 
 # Consider the system of linear equations from [example 2.1](system-of-linear-equations-matrix-form-example). 
 # 
@@ -56,34 +56,25 @@
 #     \begin{pmatrix} 4 \\ 10 \end{pmatrix} = \mathbf{b}.
 # \end{align*}
 # 
-# :::::{admonition} Example 2.2
+# ````{admonition} Example 2.2
 # :class: seealso
 # :name: solution-by-inverse-example
 # 
 # Solve the following systems of linear equations using the inverse of the coefficient matrix:
 # 
-# ::::{grid}
-# 
-# :::{grid-item}
-# (i) &emsp; $\begin{array}{rl}
+# &emsp; (i) &emsp; $\begin{array}{rl}
 #         x_1 - 2x_2 &= 11, \\
 #         2x_1 + 4x_2 &= -18.
 #     \end{array}$
-# :::
 # 
-# :::{grid-item}
-# (ii) &emsp; $\begin{array}{rl}
+# &emsp; (ii) &emsp; $\begin{array}{rl}
 #         x_1 - 2x_2 + 3x_3 &= -7, \\
 #         2x_2 - 4x_3 &= 8, \\
 #         3x_1 + x_2 - 4x_3 &= 7.
 #     \end{array}$
-# :::
 # 
-# ::::
-# 
-# ::::{dropdown} Solution
-# 
-# (i) $A = \begin{pmatrix} 1 & -2 \\ 2 & 4 \end{pmatrix}$ and $\mathbf{b} = \begin{pmatrix} 11 \\ -18 \end{pmatrix}$
+# ```{dropdown} Solution
+# (i) &emsp; $A = \begin{pmatrix} 1 & -2 \\ 2 & 4 \end{pmatrix}$ and $\mathbf{b} = \begin{pmatrix} 11 \\ -18 \end{pmatrix}$
 # \begin{align*}
 #     \det\begin{pmatrix} 1 & -2 \\ 2 & 4 \end{pmatrix} &= 8, \\
 #     \operatorname{adj}\begin{pmatrix} 1 & -2 \\ 2 & 4 \end{pmatrix} &= 
@@ -101,7 +92,7 @@
 # 
 # $$A\mathbf{x} = \begin{pmatrix} 1 & -2 \\ 2 & 4 \end{pmatrix} \begin{pmatrix} 1 \\ -5 \end{pmatrix} = \begin{pmatrix}  11 \\  -18    \end{pmatrix}  = \mathbf{b}.$$
 # 
-# (ii) $A = \begin{pmatrix} 1 & -2 & 3 \\ 0 & 2 & -4 \\ 3 & 1 & -4 \end{pmatrix}$ and $\mathbf{b} = \begin{pmatrix}-7 \\ 8 \\ 7 \end{pmatrix}$
+# (ii) &emsp; $A = \begin{pmatrix} 1 & -2 & 3 \\ 0 & 2 & -4 \\ 3 & 1 & -4 \end{pmatrix}$ and $\mathbf{b} = \begin{pmatrix}-7 \\ 8 \\ 7 \end{pmatrix}$
 # \begin{align*}
 #     \det \begin{pmatrix} 1 & -2 & 3 \\ 0 & 2 & -4 \\ 3 & 1 & -4 \end{pmatrix} &= 
 #     \begin{vmatrix} 2 & -4 \\ 1 & -4 \end{vmatrix} + 
@@ -119,8 +110,8 @@
 # Check solution:
 # 
 # $$A \mathbf{x} = \begin{pmatrix} 1 & -2 &  3 \\ 0 & 2 & -4 \\ 3 & 1 & -4 \end{pmatrix} \begin{pmatrix} 1 \\ 4 \\ 0 \end{pmatrix} = \begin{pmatrix} -7 \\ 8 \\ 7 \end{pmatrix} = \mathbf{b}.$$
-# ::::
-# :::::
+# ```
+# ````
 # 
 # ## Python code
 # 

@@ -9,10 +9,10 @@
 # 
 # On successful completion of this chapter students will be able to:
 # 
-# -  define and [index](indexing-a-matrix-section) matrices;
+# -  define and [index]&emsp; (indexing-a-matrix-section) matrices;
 # -  perform the arithmetic operations of [addition](matrix-addition-section), [multiplication by a scalar](scalar-multiplication-of-matrices), [matrix multiplication](matrix-multiplication-definition), [matrix exponents](matrix-exponents-definition) and [matrix transpose](matrix-transpose-definition);  
-# -  recognise and define special matrices such as [diagonal matrices](diagonal-matrix-definition), the [zero matrix](zero-matrix-definition), the [identity matrix](identity-matrix-definition) and [symmetric matrices](symmetric-matrix-definition);
-# -  calculate the determinant of a [$2\times 2$](2x2-determinant-definition) and [$n\times n$](nxn-determinant-definition) matrix, the [adjoint](adjoint-definition) and [inverse](inverse-matrix-definition) of a non-singular square matrix using the [adjoint-determinant formula](adjoint-determinant-formula-definition);
+# -  recognise and define special matrices such as [diagonal matrices](diagonal-matrix-definition), the [zero matrix](zero-matrix-definition), the [identity matrix]&emsp; (identity-matrix-definition) and [symmetric matrices](symmetric-matrix-definition);
+# -  calculate the determinant of a [$2\times 2$](2x2-determinant-definition) and [$n\times n$](nxn-determinant-definition) matrix, the [adjoint](adjoint-definition) and [inverse]&emsp; (inverse-matrix-definition) of a non-singular square matrix using the [adjoint-determinant formula](adjoint-determinant-formula-definition);
 # - perform [algebraic manipulation](matrix-algebra-section) of equations involving matrices. 
 # 
 # ---
@@ -31,55 +31,40 @@
 #     
 # This matrix contains 6 elements arranged in 2 (horizontal) rows and 3 (vertical) columns.
 # 
-# ::::{admonition} Definition: Dimension of a matrix
+# ````{admonition} Definition: Dimension of a matrix
 # :class: note
 # :name: dimension-of-a-matrix-definition
 # 
 # The dimension or size of a matrix is defined to be **rows** $\times$ **columns**, where 'rows' is the number of horizontal rows and 'columns' the number of vertical columns of said matrix. If rows $=$ columns we say that the matrix is a square matrix.
-# ::::
+# ````
 # 
-# :::::{admonition} Example 1.1
+# `````{admonition} Example 1.1
 # :class: seealso
 # :name: matrix-dimension-example
 # 
 # Determine the dimensions of the following matrices:
 # 
-# ::::{grid}
-# :gutter: 2
+# &emsp; (i) &emsp; $A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}$
 # 
-# :::{grid-item}
-# :columns: 6
-# (i) &emsp; $A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}$
-# :::
+# &emsp; (ii) &emsp; $B = \begin{pmatrix} a & b \\ c & d \\ e & f \end{pmatrix}$
 # 
-# :::{grid-item}
-# :columns: 6
-# (ii) &emsp; $B = \begin{pmatrix} a & b \\ c & d \\ e & f \end{pmatrix}$
-# :::
+# &emsp; (iii) &emsp; $C = \begin{pmatrix} \sin(x) & \ln(x) & \cos(x+1) \end{pmatrix}$
 # 
-# :::{grid-item}
-# :columns: 6
-# (iii) &emsp; $C = \begin{pmatrix} \sin(x) & \ln(x) & \cos(x+1) \end{pmatrix}$
-# :::
+# &emsp; (iv) &emsp; $D = \begin{pmatrix} 0 \end{pmatrix}$
 # 
-# :::{grid-item}
-# :columns: 6
-# (iv) &emsp; $D = \begin{pmatrix} 0 \end{pmatrix}$
-# :::
+# ````
 # 
-# ::::
+# ````{dropdown} Solution
 # 
-# ::::{dropdown} Solution
+# &emsp; (i) &emsp; $2\times 2 $
 # 
-# (i) &emsp; $2\times 2 $
+# &emsp; (ii) &emsp; $3\times 2$
 # 
-# (ii) &emsp; $3\times 2$
+# &emsp; (iii) &emsp; $1 \times 3$
 # 
-# (iii) &emsp; $1 \times 3$
-# 
-# (iv) &emsp; $1 \times 1$
-# ::::
-# :::::
+# &emsp; (iv) &emsp; $1 \times 1$
+# ````
+# `````
 # 
 # ### Python code
 # 
@@ -105,7 +90,7 @@ nrows, ncols = A.shape
 print(f"The matrix A is an {nrows} x {ncols} matrix")
 
 
-# (indexing-a-matrix-section)=
+# &emsp; (indexing-a-matrix-section)=
 # ## Indexing a matrix
 # 
 # Matrices are typically labeled using uppercase characters (e.g. $A$) and the elements of a matrix are labeled with the corresponding lowercase character (e.g. $a$). Individual entries of a matrix are **indexed** using two subscript indices: $a_{ij}$ where $i$ corresponds to the row number reading from top to bottom and $j$ is the column number reading from left to right. 
@@ -123,7 +108,7 @@ print(f"The matrix A is an {nrows} x {ncols} matrix")
 # 
 # $$a_{ij} = [A]_{ij} = A[i,j].$$
 # 
-# :::::{admonition} Example 1.2
+# `````{admonition} Example 1.2
 # :class: seealso
 # :name: matrix-indexing-example
 # 
@@ -135,45 +120,34 @@ print(f"The matrix A is an {nrows} x {ncols} matrix")
 # 
 # write down the following elements:
 # 
+# &emsp; (i) &emsp; $a_{11}$
 # 
-# ::::{grid}
-# :::{grid-item}
-# (i) &emsp; $a_{11}$
-# :::
+# &emsp; (ii) &emsp; $a_{13}$
 # 
-# :::{grid-item}
-# (ii) &emsp; $a_{13}$
-# :::
+# &emsp; (iii) &emsp; $[A]_{21}$
 # 
-# :::{grid-item}
-# (iii) &emsp; $[A]_{21}$
-# :::
+# &emsp; (iv) &emsp; $A[2,2]$
 # 
-# :::{grid-item}
-# (iv) &emsp; $A[2,2]$
-# :::
-# ::::
+# ````{dropdown} Solution
 # 
-# ::::{dropdown} Solution
+# &emsp; (i)  $a_{11} = 2$
 # 
-# (i)  $a_{11} = 2$
+# &emsp; (ii) $a_{13} = -3$
 # 
-# (ii) $a_{13} = -3$
+# &emsp; (iii) $[A]_{21} = 1$
 # 
-# (iii) $[A]_{21} = 1$
-# 
-# (iv) $A[2,2] = 7$
+# &emsp; (iv) $A[2,2] = 7$
 #     
-# ::::
-# :::::
+# ````
+# `````
 # 
 # ### Python code
 # 
 # Matrices and arrays in Python are indexed using the syntax `A[i,j]` which returns the value of the element in row `i` and column `j`. 
 # 
-# :::{important}
+# ```{important}
 # Python is a **zero indexing** language which means indexing starts at zero. So to index the element $a_{23}$ we would use `a[1,2]` i.e., remember to subtract 1 from the indices.
-# :::
+# ```
 # 
 # The following code defines the matrix $A$ from [example 1.2](matrix-indexing-example) and outputs the values of the indexed elements. 
 
@@ -195,7 +169,7 @@ print(f"(iv)  A[2,2] = {A[1,1]}")
 # 
 # ### Matrix equality
 # 
-# ::::{admonition} Definition: Matrix equality 
+# ````{admonition} Definition: Matrix equality 
 # :class: note
 # :name: matrix-equality-definition
 # 
@@ -203,7 +177,7 @@ print(f"(iv)  A[2,2] = {A[1,1]}")
 # 
 # - they have the same dimensions, in other words $m = p$ and $n = q$;
 # - for all $1 \leq i \leq m$ and $1 \leq j \leq n$, $a_{ij} = b_{ij}$.
-# ::::
+# ````
 # 
 # For example, consider the following matrices
 # 
@@ -218,7 +192,7 @@ print(f"(iv)  A[2,2] = {A[1,1]}")
 # (matrix-addition-section)=
 # ### Matrix addition
 # 
-# ::::{admonition} Definition: Matrix addition and subtraction 
+# ````{admonition} Definition: Matrix addition and subtraction 
 # :class: note
 # :name: matrix-addition-definition
 # 
@@ -248,11 +222,11 @@ print(f"(iv)  A[2,2] = {A[1,1]}")
 #         a_{m1} \pm b_{m1} & a_{m2} \pm b_{m2} & \cdots & a_{mn} \pm b_{mn}
 #     \end{pmatrix}.
 # \end{align*}
-# ::::
+# ````
 # 
 # The addition and subtraction of two matrices of different sizes is **not defined**.
 # 
-# ::::{admonition} Theorem: Properties of matrix addition
+# ````{admonition} Theorem: Properties of matrix addition
 # :class: important
 # :name: properties-of-matrix-addition-theorem
 # 
@@ -260,45 +234,34 @@ print(f"(iv)  A[2,2] = {A[1,1]}")
 # 
 # - matrix addition is commutative, i.e., $A + B = B + A$;
 # - matrix addition is associative, i.e., $A + (B + C) = (A + B) + C$.
-# ::::
+# ````
 # 
-# :::::{admonition} Example 1.3
+# `````{admonition} Example 1.3
 # :class: seealso
 # :name: matrix-addition-example
 # 
 # Evaluate the following:
 # 
-# ::::{grid}
-# :gutter: 2
+# &emsp; (i) $\begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} + \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix}$
 # 
-# :::{grid-item}
-# (i) $\begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} + \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix}$
-# :::
+# &emsp; (ii) $\begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix} - \begin{pmatrix} 7 \\ -11 \\ -13 \end{pmatrix}$
 # 
-# :::{grid-item}
-# (ii) $\begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix} - \begin{pmatrix} 7 \\ -11 \\ -13 \end{pmatrix}$
-# :::
+# &emsp; (iii) $\begin{pmatrix} 1 & 3 & 5 \\ 7 & 9 & 11 \end{pmatrix} + \begin{pmatrix}2 & 3 \\ 5 & 7 \end{pmatrix}$
 # 
-# :::{grid-item}
-# :columns: 12
 # 
-# (iii) $\begin{pmatrix} 1 & 3 & 5 \\ 7 & 9 & 11 \end{pmatrix} + \begin{pmatrix}2 & 3 \\ 5 & 7 \end{pmatrix}$
-# :::
-# ::::
+# ````{dropdown} Solution
 # 
-# ::::{dropdown} Solution
+# &emsp; (i) $\begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} + \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix} = \begin{pmatrix} 1 + 5 & 2 + 6 \\ 3 + 7 & 4 + 8 \end{pmatrix}= \begin{pmatrix}6 & 8 \\ 10 & 12 \end{pmatrix}$
 # 
-# (i) $\begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} + \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix} = \begin{pmatrix} 1 + 5 & 2 + 6 \\ 3 + 7 & 4 + 8 \end{pmatrix}= \begin{pmatrix}6 & 8 \\ 10 & 12 \end{pmatrix}$
+# &emsp; (ii) $\begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix} - \begin{pmatrix} 7 \\ -11 \\ -13 \end{pmatrix} = \begin{pmatrix}2 - 7 \\ 3 + 11 \\ 5 + 13 \end{pmatrix} = \begin{pmatrix} -5 \\ 14 \\ 18\end{pmatrix}$
 # 
-# (ii) $\begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix} - \begin{pmatrix} 7 \\ -11 \\ -13 \end{pmatrix} = \begin{pmatrix}2 - 7 \\ 3 + 11 \\ 5 + 13 \end{pmatrix} = \begin{pmatrix} -5 \\ 14 \\ 18\end{pmatrix}$
-# 
-# (iii) undefined since the left matrix is $2\times 3$ and the right matrix is $2\times 2$
-# ::::
-# :::::
+# &emsp; (iii) undefined since the left matrix is $2\times 3$ and the right matrix is $2\times 2$
+# ````
+# `````
 # 
 # #### Python code
 # 
-# The Python command for calculating the sum of two matrices `A` and `B` is simply `A + B`. The Python code below calculates the solution to question (i) from [example 1.3](matrix-addition-example).
+# The Python command for calculating the sum of two matrices `A` and `B` is simply `A + B`. The Python code below calculates the solution to question &emsp; (i) from [example 1.3](matrix-addition-example).
 
 # In[4]:
 
@@ -313,7 +276,7 @@ display(AplusB)
 # (scalar-multiplication-of-matrices)=
 # ### Scalar multiplication of matrices
 # 
-# ::::{admonition} Definition: Scalar multiplication 
+# ````{admonition} Definition: Scalar multiplication 
 # :class: note
 # :name: scalar-multiplication-of-a-matrix-definition
 # 
@@ -337,9 +300,9 @@ display(AplusB)
 #         ka_{m1} & ka_{m2} & \cdots & ka_{mn}
 #     \end{pmatrix}
 # \end{align*}
-# ::::
+# ````
 # 
-# ::::{admonition} Theorem: Properties of scalar multiplication of matrices
+# ````{admonition} Theorem: Properties of scalar multiplication of matrices
 # :class: important
 # :name: properties-of-scalar-multiplication-of-matrices-theorem
 # 
@@ -351,51 +314,35 @@ display(AplusB)
 # - scalar multiplication is associative: $k(\ell A) = (k \ell)A$;
 # - multiplication by $-1$ gives the additive inverse: $(-1)A = -A$.
 # 
-# ::::
+# ````
 # 
-# :::::{admonition} Example 1.4
+# `````{admonition} Example 1.4
 # :class: seealso
 # :name: scalar-multiplication-of-matrices-example
 # 
 # Evaluate the following:
 # 
-# ::::{grid}
-# :gutter: 2
 # 
-# :::{grid-item}
-# :columns: 6
-# (i) $2 \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}$
-# :::
+# &emsp; (i) $2 \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}$
 # 
-# :::{grid-item}
-# :columns: 6
-# (ii) $\dfrac{1}{2} \begin{pmatrix} 0 & -1 \\ 3 & 2 \\ 4 & -2 \end{pmatrix}$
-# :::
+# &emsp; (ii) $\dfrac{1}{2} \begin{pmatrix} 0 & -1 \\ 3 & 2 \\ 4 & -2 \end{pmatrix}$
 # 
-# :::{grid-item}
-# :columns: 6
-# (iii) $\dfrac{1}{3} \begin{pmatrix}1 & 6 & 4 \\ 0 & 3 & -1 \end{pmatrix}$
-# :::
+# &emsp; (iii) $\dfrac{1}{3} \begin{pmatrix}1 & 6 & 4 \\ 0 & 3 & -1 \end{pmatrix}$
 # 
-# :::{grid-item}
-# :columns: 6
-# (iv) $101 \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} - 99 \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix}$
-# :::
+# &emsp; (iv) $101 \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} - 99 \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix}$
 # 
-# ::::
+# ````{dropdown} Solution
 # 
-# ::::{dropdown} Solution
+# &emsp; (i) $2 \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} = \begin{pmatrix}2 & 4 \\ 6 & 8 \end{pmatrix}$
 # 
-# (i) $2 \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} = \begin{pmatrix}2 & 4 \\ 6 & 8 \end{pmatrix}$
+# &emsp; (ii) $\dfrac{1}{2} \begin{pmatrix} 0 & -1 \\ 3 & 2 \\ 4 & -2 \end{pmatrix} =  \begin{pmatrix} 0 & -\frac{1}{2} \\ \frac{3}{2} & 1 \\ 2 & -1 \end{pmatrix}$
 # 
-# (ii) $\dfrac{1}{2} \begin{pmatrix} 0 & -1 \\ 3 & 2 \\ 4 & -2 \end{pmatrix} =  \begin{pmatrix} 0 & -\frac{1}{2} \\ \frac{3}{2} & 1 \\ 2 & -1 \end{pmatrix}$
+# &emsp; (iii) $\dfrac{1}{3} \begin{pmatrix}1 & 6 & 4 \\ 0 & 3 & -1 \end{pmatrix} = \begin{pmatrix} \frac{1}{3} & 2 & \frac{4}{3} \\ 0 & 1 & -\frac{1}{3} \end{pmatrix}$
 # 
-# (iii) $\dfrac{1}{3} \begin{pmatrix}1 & 6 & 4 \\ 0 & 3 & -1 \end{pmatrix} = \begin{pmatrix} \frac{1}{3} & 2 & \frac{4}{3} \\ 0 & 1 & -\frac{1}{3} \end{pmatrix}$
+# &emsp; (iv) $101\begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} - 99 \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} = 2 \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} =  \begin{pmatrix} 2 & 4 \\ 0 & 2 \end{pmatrix}$
 # 
-# (iv) $101\begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} - 99 \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} = 2 \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} =  \begin{pmatrix} 2 & 4 \\ 0 & 2 \end{pmatrix}$
-# 
-# ::::
-# :::::
+# ````
+# `````
 # 
 # ### Python code
 # 

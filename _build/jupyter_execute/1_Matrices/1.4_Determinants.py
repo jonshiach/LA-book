@@ -38,76 +38,56 @@
 # 
 # ## Calculating the determinant of a $2\times 2$ matrix
 # 
-# ::::{admonition} Definition: Determinant of a $2\times 2$ matrix
+# ````{admonition} Definition: Determinant of a $2\times 2$ matrix
 # :class: note
 # :name: 2x2-determinant-definition
 # 
 # The determinant of the $2\times 2$ matrix $\begin{pmatrix}a & b \\ c & d \end{pmatrix}$ is
 # 
-# :::{math}
+# ```{math}
 # :label: 2x2-determinant-equation
 # \begin{align*}
 #     \det \begin{pmatrix} a & b \\ c & d \end{pmatrix} =
 #     \begin{vmatrix} a & b \\ c & d \end{vmatrix} = ad - bc,
 # \end{align*}
-# :::
+# ```
 # i.e., the product of the elements on the main diagonal minus the product of the other two elements. Note that the vertical bars denoting a determinant is different from brackets that denote a matrix.
-# ::::
+# ````
 # 
-# :::::{admonition} Example 1.10
+# ````{admonition} Example 1.10
 # :class: seealso
 # :name: 2x2-determinant-example
 # 
 # Calculate the following determinants
 # 
-# ::::{grid}
-# :gutter: 2
+# &emsp; (i) &emsp; $\begin{vmatrix} 5 & 2 \\ 3 & 4 \end{vmatrix}$
 # 
-# :::{grid-item}
-# :columns: 6
-# (i) &emsp; $\begin{vmatrix} 5 & 2 \\ 3 & 4 \end{vmatrix}$
-# :::
+# &emsp; (ii) &emsp; $\det \begin{pmatrix} a & b \\ ka & kb \end{pmatrix}$
 # 
-# :::{grid-item}
-# :columns: 6
-# (ii) &emsp; $\det \begin{pmatrix} a & b \\ ka & kb \end{pmatrix}$
-# :::
+# &emsp; (iii) &emsp; $\begin{vmatrix} 5 & 0 \\ 0 & 2 \end{vmatrix}$
 # 
-# :::{grid-item}
-# :columns: 6
-# (iii) &emsp; $\begin{vmatrix} 5 & 0 \\ 0 & 2 \end{vmatrix}$
-# :::
+# ```{dropdown} Solution
+# &emsp; (i) &emsp; $\begin{vmatrix} 5 & 2 \\ 3 & 4 \end{vmatrix} = 5 \times 4 - 2 \times 3 = 20 - 6 = 14$
 # 
-# :::{grid-item}
-# :columns: 6
-# (iv) &emsp; $\begin{vmatrix} 2-\alpha & 3 \\ 5 & 6 - \alpha \end{vmatrix}$
-# :::
+# &emsp; (ii) &emsp; $\det \begin{pmatrix} a & b \\ ka & kb \end{pmatrix} = akb - akb = 0$
 # 
-# ::::
+# &emsp; (iii) &emsp; $\begin{vmatrix} 5 & 0 \\ 0 & 2 \end{vmatrix} = 5 \times 2 - 0 \times 0 = 10 - 0 = 10$
 # 
-# ::::{dropdown} Solution
-# 
-# (i) &emsp; $\begin{vmatrix} 5 & 2 \\ 3 & 4 \end{vmatrix} = 5 \times 4 - 2 \times 3 = 20 - 6 = 14$
-# 
-# (ii) &emsp; $\det \begin{pmatrix} a & b \\ ka & kb \end{pmatrix} = akb - akb = 0$
-# 
-# (iii) &emsp; $\begin{vmatrix} 5 & 0 \\ 0 & 2 \end{vmatrix} = 5 \times 2 - 0 \times 0 = 10 - 0 = 10$
-# 
-# (iv) &emsp; $\begin{vmatrix} 2-\alpha & 3 \\ 5 & 6 - \alpha \end{vmatrix} = (2-\alpha)(6-\alpha) - 3 \times 5 = \alpha^2 - 8\alpha - 3$
-# ::::
-# :::::
+# &emsp; (iv) &emsp; $\begin{vmatrix} 2-\alpha & 3 \\ 5 & 6 - \alpha \end{vmatrix} = (2-\alpha)(6-\alpha) - 3 \times 5 = \alpha^2 - 8\alpha - 3$
+# ```
+# ````
 # 
 # ## Calculating the determinant of an $n \times n$ matrix
 # 
 # To compute the determinant of a matrix larger than $2\times 2$ we need to split the matrix up into multiple $2\times 2$ matrices so we can use equation {eq}`2x2-determinant-equation`. This is done in a specific way explained below which using things called **minors** and **cofactors**.
 # 
 # 
-# ::::{admonition} Definition: Minor
+# ```{admonition} Definition: Minor
 # :class: note
 # :name: minor-definition
 # 
 # The **minor** of an element of an $n\times n$ square matrix is denoted by $M_{ij}$ and is the determinant of the $(n-1)\times (n-1)$ square matrix that is formed by removing row $i$ and column $j$ from $A$. 
-# ::::
+# ```
 # 
 # For example, if 
 # $A = \begin{pmatrix}
@@ -129,55 +109,41 @@
 #     = a_{12}a_{33} - a_{13}a_{32}.
 # \end{align*}
 # 
-# :::::{admonition} Example 1.11
+# ````{admonition} Example 1.11
 # :class: seealso
 # :name: minor-example
 # 
 # Given the matrix $A = \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{pmatrix},$ calculate:
 # 
+# &emsp; (i) &emsp; $M_{11}$
 # 
-# ::::{grid}
+# &emsp; (ii) &emsp; $M_{12}$
 # 
-# :::{grid-item}
-# :columns: 2
-# (i) &emsp; $M_{11}$
-# :::
+# &emsp; (iii) &emsp; $M_{13}$
 # 
-# :::{grid-item}
-# :columns: 2
-# (ii) &emsp; $M_{12}$
-# :::
+# ```{dropdown} Solution
+# &emsp; (i) &emsp; $M_{11} = \begin{vmatrix} 5 & 6 \\ 8 & 9 \end{vmatrix} = 5(9) - 6(8) = 45 - 48 = -3$
 # 
-# :::{grid-item}
-# :columns: 2
-# (iii) &emsp; $M_{13}$
-# :::
+# &emsp; (ii) &emsp; $M_{12} = \begin{vmatrix} 4 & 6 \\ 7 & 9 \end{vmatrix} = 4(9) - 6(7) = 36 - 42 = -6$
 # 
-# ::::
+# &emsp; (iii) &emsp; $M_{13} = \begin{vmatrix} 4 & 5 \\ 7 & 8 \end{vmatrix} = 4(8) - 5(7) = 32 - 35 = -3$
+# ```
+# ````
 # 
-# ::::{dropdown} Solution
-# (i) &emsp; $M_{11} = \begin{vmatrix} 5 & 6 \\ 8 & 9 \end{vmatrix} = 5(9) - 6(8) = 45 - 48 = -3$
-# 
-# (ii) &emsp; $M_{12} = \begin{vmatrix} 4 & 6 \\ 7 & 9 \end{vmatrix} = 4(9) - 6(7) = 36 - 42 = -6$
-# 
-# (iii) &emsp; $M_{13} = \begin{vmatrix} 4 & 5 \\ 7 & 8 \end{vmatrix} = 4(8) - 5(7) = 32 - 35 = -3$
-# ::::
-# :::::
-# 
-# ::::{admonition} Definition: Cofactor
+# ````{admonition} Definition: Cofactor
 # :class: note
 # :name: cofactor-definition
 # 
 # The **cofactor** of an element of a square matrix is denoted by $C_{ij}$ and is defined by
 # 
-# :::{math}
+# ```{math}
 # :label: cofactor-equation
 # 
 # \begin{align*}
 #     C_{ij} = (-1)^{i+j}M_{ij}.
 # \end{align*}
-# :::
-# ::::
+# ```
+# ````
 # 
 # Note that the $(-1)^{i+j}$ in equation {eq}`cofactor-equation` is positive when $i + j$ is even and negative when $i+j$ is odd which results in the following pattern of signs
 # 
@@ -191,21 +157,21 @@
 # \end{align*}
 # 
 # 
-# ::::{admonition} Definition: Determinant of an $n\times n$ matrix
+# ````{admonition} Definition: Determinant of an $n\times n$ matrix
 # :class: note
 # :name: nxn-determinant-definition
 # 
 # The determinant of an $n\times n$ matrix $A$ is defined by
 # 
-# :::{math}
+# ```{math}
 # :label: nxn-determinant-equation
 # 
 # \begin{align*}
 #     \det(A) = \sum_{i=1}^n a_{ik} C_{ik} = \sum_{j=1}^n a_{kj} C_{kj},
 # \end{align*}
-# :::
+# ```
 # for some fixed value $1 \leq k \leq n$ which represents a single row or column of $A$.
-# ::::
+# ````
 # 
 # Equation {eq}`nxn-determinant-equation` allows us to express the determinant of an $n\times n$ matrix in terms of determinants of $(n-1)\times(n-1)$ matrices. We can then if needed, apply the formula again to the sub-matrices. Continuing in this fashion we will eventually just be calculating $2\times 2$ matrices, which we know how to do from equation {eq}`2x2-determinant-equation`.
 # 
@@ -239,7 +205,7 @@
 # 
 # Which is the same as the result when expanded along row 1. So it does not matter which row or column we expand along to compute the determinant, we will always get the same answer. It is usually preferable to expand along the row or columns with the most zero elements or smallest integer values to simplify the calculations.
 # 
-# :::::{admonition} Example 1.12
+# ````{admonition} Example 1.12
 # :class: seealso
 # :name: nxn-determinant-example
 # 
@@ -251,23 +217,13 @@
 # 
 # by expanding along:
 # 
-# ::::{grid}
+# &emsp; (i) &emsp; row 1
 # 
-# :::{grid-item}
-# :columns: 3
-# (i) &emsp; row 1
-# :::
+# &emsp; (ii) &emsp; column 3
 # 
-# :::{grid-item}
-# :columns: 3
-# (ii) &emsp; column 3
-# :::
+# ```{dropdown} Solution
 # 
-# ::::
-# 
-# ::::{dropdown} Solution
-# 
-# (i) 
+# &emsp; (i) 
 # \begin{align*}
 #     \begin{vmatrix}1 & 0 & 4 \\ 2 & 5 & 6 \\ 4 & 5 & 2 \end{vmatrix} 
 #     &= 1\begin{vmatrix}5 & 6 \\ 5 & 2 \end{vmatrix} - 0 \begin{vmatrix} 2 & 6 \\ 4 & 2 \end{vmatrix} + 4 \begin{vmatrix}2 & 5 \\ 4 & 5 \end{vmatrix} \\
@@ -275,19 +231,19 @@
 #     &= -60
 # \end{align*}
 # 
-# (ii) 
+# &emsp; (ii) 
 # \begin{align*} 
 #     \begin{vmatrix}1 & 0 & 4 \\ 2 & 5 & 6 \\ 4 & 5 & 2 \end{vmatrix} 
 #     &= 4 \begin{vmatrix} 2 & 5 \\ 4 & 5 \end{vmatrix} - 6\begin{vmatrix}1 & 0 \\ 4 & 5 \end{vmatrix} + 2\begin{vmatrix}1 & 0 \\ 2 & 5 \end{vmatrix} \\
 #     &= 4(10-20) - 6(5 - 0) + 2(5 - 0) \\
 #     &= -60
 # \end{align*}
-# ::::
-# :::::
+# ```
+# ````
 # 
 # For larger matrices we have to apply equation {eq}`nxn-determinant-equation` recursively until we get to $2 \times 2$ determinants where we can use {eq}`2x2-determinant-equation`.
 # 
-# :::::{admonition} Example 1.13
+# ````{admonition} Example 1.13
 # :class: seealso
 # :name: 4x4-determinant-example
 # 
@@ -295,7 +251,7 @@
 #    
 # $$\begin{pmatrix} 1 & -1 & 4 & 3 \\ 2 & 0 & 5 & -3 \\ 1 & 2 & 4 & 5 \\ 2 & 0 & -2 & 4 \end{pmatrix}.$$
 # 
-# ::::{dropdown} Solution
+# ```{dropdown} Solution
 # 
 # Here column 2 has two zero elements so it would be simpler to expand along this column
 # \begin{align*}
@@ -312,10 +268,10 @@
 #     & \qquad - 2(20-6) + 8(8+6) - 6(-4-10) \\
 #     &= 280.
 # \end{align*}
-# ::::
-# :::::
+# ```
+# ````
 # 
-# ::::{admonition} Theorem: Properties of determinants
+# ```{admonition} Theorem: Properties of determinants
 # :class: important
 # :name: properties-of-determinants-theorem
 # 
@@ -328,7 +284,7 @@
 # - If all elements in a row are multiplied by a scalar $k$ then the determinant is also multiplied by $k$.
 # - If one row of a matrix is a multiple of another row then the matrix has a determinant of zero.
 # - The value of a determinant is unchanged by adding a multiple of one row to another row.
-# ::::
+# ```
 # 
 # ### Python
 # 

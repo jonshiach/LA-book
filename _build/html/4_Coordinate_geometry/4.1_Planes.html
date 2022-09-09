@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Planes &#8212; Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -581,7 +582,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="planes">
+  <section class="tex2jax_ignore mathjax_ignore" id="planes">
 <span id="planes-section"></span><h1>Planes<a class="headerlink" href="#planes" title="Permalink to this headline">#</a></h1>
 <p>A <strong>plane</strong> is a flat two-dimensional surface. The vector equation for a plane in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> is very similar to that of a line. We just need two direction vectors instead of just the one we needed for a line.</p>
 <div class="note admonition" id="plane-vector-equation">
@@ -591,18 +592,22 @@ title="Print to PDF"
 \[ Q = P + t_1 \mathbf{d}_1 + t_2 \mathbf{d}_2, \]</div>
 <p>where <span class="math notranslate nohighlight">\(Q\)</span> is a general point on <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(t_1,t_2 \in \mathbb{R}\)</span> are parameter (<a class="reference internal" href="#plane-1-figure"><span class="std std-numref">Fig. 18</span></a>).</p>
 </div>
-<div class="figure align-default" id="plane-1-figure">
+<figure class="align-default" id="plane-1-figure">
 <img alt="../_images/plane_1.png" src="../_images/plane_1.png" />
-<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">The position of a point <span class="math notranslate nohighlight">\(Q\)</span> on the plane <span class="math notranslate nohighlight">\(p\)</span> can be obtained by adding scalar multiples of the direction vectors <span class="math notranslate nohighlight">\(\mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}_2\)</span> to <span class="math notranslate nohighlight">\(P\)</span>.</span><a class="headerlink" href="#plane-1-figure" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">The position of a point <span class="math notranslate nohighlight">\(Q\)</span> on the plane <span class="math notranslate nohighlight">\(p\)</span> can be obtained by adding scalar multiples of the direction vectors <span class="math notranslate nohighlight">\(\mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}_2\)</span> to <span class="math notranslate nohighlight">\(P\)</span>.</span><a class="headerlink" href="#plane-1-figure" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>In other words, every point on <span class="math notranslate nohighlight">\(p\)</span> is obtained by adding some scalar multiples of <span class="math notranslate nohighlight">\(\mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}_2\)</span> to <span class="math notranslate nohighlight">\(P\)</span>. So <span class="math notranslate nohighlight">\(p\)</span> is indeed the plane which passes through <span class="math notranslate nohighlight">\(P\)</span> in the directions of <span class="math notranslate nohighlight">\(\mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}_2\)</span>. We call the vectors <span class="math notranslate nohighlight">\(\mathbf{d}_1,\mathbf{d}_2\)</span> <strong>direction vectors</strong> of the plane. Note we needed <span class="math notranslate nohighlight">\(\mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}_2\)</span> not to be parallel else we would have only described a line again.</p>
 <div class="note admonition" id="normal-vector-definition">
 <p class="admonition-title">Definition: The normal vector</p>
 <p>The <strong>normal vector</strong> to a plane is a vector that is perpendicular to that plane. If <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> are two vectors that lie on a plane then the normal vector is calculated using <span class="math notranslate nohighlight">\(\mathbf{n} = \mathbf{a} \times \mathbf{b}\)</span>.</p>
-<div class="figure align-default" id="plane-2-figure">
+<figure class="align-default" id="plane-2-figure">
 <img alt="../_images/plane_2.png" src="../_images/plane_2.png" />
-<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">The normal vector <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> is perpendicular to the plane <span class="math notranslate nohighlight">\(p\)</span>.</span><a class="headerlink" href="#plane-2-figure" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">The normal vector <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> is perpendicular to the plane <span class="math notranslate nohighlight">\(p\)</span>.</span><a class="headerlink" href="#plane-2-figure" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </div>
 <p>Recall that <a class="reference internal" href="../3_Vectors/3.3_Vector_products.html#dot-product-definition"><span class="std std-ref">the dot product</span></a> between two perpendicular vectors is zero. So if a plane is defined by the normal vector <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> and a point <span class="math notranslate nohighlight">\(P=(x_0, y_0, z_0)\)</span> which lies on the plane and if <span class="math notranslate nohighlight">\(Q=(x,y,z)\)</span> is another point the plane then</p>
 <div class="amsmath math notranslate nohighlight">
@@ -615,10 +620,12 @@ title="Print to PDF"
     \mathbf{n} \cdot \begin{pmatrix} x - x_0 \\ y - y_0 \\ z - z_0 \end{pmatrix} &amp;= 0.
 \end{align*}\]</div>
 <p>This is known as the point normal definition for a plane.</p>
-<div class="figure align-default" id="point-normal-figure">
+<figure class="align-default" id="point-normal-figure">
 <img alt="../_images/plane_3.png" src="../_images/plane_3.png" />
-<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">The point normal definition of a plane.</span><a class="headerlink" href="#point-normal-figure" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">The point normal definition of a plane.</span><a class="headerlink" href="#point-normal-figure" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="note admonition" id="point-normal-definition">
 <p class="admonition-title">Definition: Point normal equation of a plane</p>
 <p>The plane in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> which passes through the point with co-ordinates <span class="math notranslate nohighlight">\((x_0, y_0, z_0)\)</span> with normal vector <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> can be defined by</p>
@@ -690,7 +697,7 @@ Solution<div class="sd-summary-down docutils">
 <p class="sd-card-text">so <span class="math notranslate nohighlight">\(P_5\)</span> does lie on <span class="math notranslate nohighlight">\(p\)</span>.</p>
 </div>
 </details></div>
-<div class="section" id="intersection-of-planes-in-mathbb-r-3">
+<section id="intersection-of-planes-in-mathbb-r-3">
 <span id="intersection-of-planes-section"></span><h2>Intersection of planes in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span><a class="headerlink" href="#intersection-of-planes-in-mathbb-r-3" title="Permalink to this headline">#</a></h2>
 <p>We distinguish between various arrangements of planes, which are defined in terms of their normal vectors. We saw that a plane <span class="math notranslate nohighlight">\(p\)</span> is perpendicular to a normal vector <span class="math notranslate nohighlight">\(\mathbf{n}\)</span>. Now, any plane that can be described using <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> as a direction vector will be described as a <strong>plane perpendicular to <span class="math notranslate nohighlight">\(p\)</span></strong>. This is equivalent to the two normal vectors being perpendicular. In a similar way if two distinct planes <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(r\)</span> have the same normal vector then they are <strong>parallel</strong>.</p>
 <p>Often we would like to know when (and how) two or more objects in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> meet. Similar to the lines in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> we present a finite list of arrangements for three planes meeting in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
@@ -699,9 +706,9 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-col sd-d-flex-row sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../_images/intersecting_planes_1.png" src="../_images/intersecting_planes_1.png" />
-</div>
+</figure>
 <p class="sd-card-text">3 planes intersect at a single point: a unique solution</p>
 </div>
 </div>
@@ -709,9 +716,9 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-col sd-d-flex-row sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../_images/intersecting_planes_2.png" src="../_images/intersecting_planes_2.png" />
-</div>
+</figure>
 <p class="sd-card-text">3 planes intersect on a single line: infinite solutions</p>
 </div>
 </div>
@@ -719,9 +726,9 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-col sd-d-flex-row sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../_images/intersecting_planes_3.png" src="../_images/intersecting_planes_3.png" />
-</div>
+</figure>
 <p class="sd-card-text">2 planes coincide and intersect a third: infinite solutions</p>
 </div>
 </div>
@@ -729,9 +736,9 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-col sd-d-flex-row sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../_images/intersecting_planes_4.png" src="../_images/intersecting_planes_4.png" />
-</div>
+</figure>
 <p class="sd-card-text">2 parallel planes intersect another: no solutions</p>
 </div>
 </div>
@@ -739,9 +746,9 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-col sd-d-flex-row sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../_images/intersecting_planes_5.png" src="../_images/intersecting_planes_5.png" />
-</div>
+</figure>
 <p class="sd-card-text">each plane intersects with 2 others: no solutions</p>
 </div>
 </div>
@@ -749,9 +756,9 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-col sd-d-flex-row sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../_images/intersecting_planes_6.png" src="../_images/intersecting_planes_6.png" />
-</div>
+</figure>
 <p class="sd-card-text">3 parallel planes: no solutions</p>
 </div>
 </div>
@@ -759,9 +766,9 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-col sd-d-flex-row sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../_images/intersecting_planes_7.png" src="../_images/intersecting_planes_7.png" />
-</div>
+</figure>
 <p class="sd-card-text">2 coincident planes parallel to another: no solutions</p>
 </div>
 </div>
@@ -770,9 +777,9 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <br>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../_images/intersecting_planes_8.png" src="../_images/intersecting_planes_8.png" />
-</div>
+</figure>
 <br>
 all 3 planes coincide: infinite solutions
 </div>
@@ -820,8 +827,8 @@ Solution<div class="sd-summary-down docutils">
 \end{align*}\]</div>
 </div>
 </details></div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

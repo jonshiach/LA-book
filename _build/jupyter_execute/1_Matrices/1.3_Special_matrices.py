@@ -5,7 +5,7 @@
 # 
 # ## Diagonal matrix
 # 
-# ::::{admonition} Definition: Diagonal matrix
+# ```{admonition} Definition: Diagonal matrix
 # :class: note
 # :name: diagonal-matrix-definition
 # 
@@ -19,7 +19,7 @@
 #         0 & \cdots & 0 & a_{nn}
 #     \end{pmatrix}.
 # \end{align*}
-# ::::
+# ```
 # 
 # For example
 # 
@@ -33,12 +33,12 @@
 # 
 # Similarly to $0$ being a neutral element with respect to addition of real numbers, an $m \times n$ matrix of zeros plays the role of a neutral element for addition of matrices.
 # 
-# ::::{admonition} Definition: Zero matrix
+# ```{admonition} Definition: Zero matrix
 # :class: note
 # :name: zero-matrix-definition
 # 
 # A **zero matrix** (or **null matrix**) is an $m \times n$ matrix $\mathbf{0}_{m \times n} = \mathbf{0}$ where all the entries are zero, that is $[\mathbf{0}]_{ij} = 0$ for all $i$ and $j$
-# ::::
+# ```
 # 
 # For example
 # \begin{align*}
@@ -47,7 +47,7 @@
 #     \mathbf{0}_{3 \times 1} &= \begin{pmatrix}0 \\ 0 \\ 0 \end{pmatrix}.
 # \end{align*}
 # 
-# ::::{admonition} Theorem: Addition of a zero matrix
+# ```{admonition} Theorem: Addition of a zero matrix
 # :class: important
 # :name: zero-matrix-theorem
 # 
@@ -56,7 +56,7 @@
 # $$A + \mathbf{0} = \mathbf{0} + A = A.$$
 #  
 # Thus zero matrices are **neutral elements with respect to matrix addition**.
-# ::::
+# ```
 # 
 # ### Python code
 # 
@@ -79,7 +79,7 @@ display(zeros_3x1)
 
 # ## The identity matrix
 # 
-# ::::{admonition} Definition: The identity matrix
+# ```{admonition} Definition: The identity matrix
 # :class: note
 # :name: identity-matrix-definition
 # 
@@ -88,7 +88,7 @@ display(zeros_3x1)
 # \begin{align*}
 #     [I]_{ij} = \begin{cases} 1, & i = j, \\ 0, & i\neq j. \end{cases}
 # \end{align*}
-# ::::
+# ```
 # 
 # For example
 # \begin{align*}
@@ -99,7 +99,7 @@ display(zeros_3x1)
 # 
 # It is common to omit the subscript as it should be clear what the dimensions are from the context.
 # 
-# ::::{admonition} Theorem: Properties of the identity matrix
+# ```{admonition} Theorem: Properties of the identity matrix
 # :class: important
 # :name: properties-of-the-identity-matrix
 # 
@@ -107,57 +107,45 @@ display(zeros_3x1)
 # - For any $n\times n$ square matrix $A$, $IA=AI=A$.
 # 
 # Thus for square matrices $I$ is an identity element with respect to matrix multiplication.
-# ::::
+# ```
 # 
-# :::::{admonition} Example 1.8
+# ````{admonition} Example 1.8
 # :class: seealso
 # :name: identity-matrix-example
 # 
 # Given the matrices $A = \begin{pmatrix} 1 & 0 \\ -2 & 3 \end{pmatrix}$ and $B = \begin{pmatrix} 1 & 2 \\ 4 & 3 \\ -2 & 1 \end{pmatrix}$ evaluate:
 # 
-# ::::{grid}
 # 
-# :::{grid-item}
-# :columns: 2
-# (i) &emsp; $IA$
-# :::
+# &emsp; (i) &emsp; $IA$
 # 
-# :::{grid-item}
-# :columns: 2
-# (ii) &emsp; $AI$
-# :::
+# &emsp; (ii) &emsp; $AI$
 # 
-# :::{grid-item}
-# :columns: 2
-# (iii) &emsp; $IB$
-# :::
+# &emsp; (iii) &emsp; $IB$
 # 
-# ::::
+# ```{dropdown} Solution
 # 
-# ::::{dropdown} Solution
-# 
-# (i) 
+# &emsp; (i) 
 # \begin{align*}
 #     IA &= \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} \begin{pmatrix} 1 & 0 \\ -2 & 3 \end{pmatrix} 
 #     = \begin{pmatrix} 1 + 0 & 0  + 0 \\ 0 - 2 & 0 + 3 \end{pmatrix} \\
 #     &= \begin{pmatrix} 1 & 0 \\ -2 & 3 \end{pmatrix}
 # \end{align*}
 #         
-# (ii) 
+# &emsp; (ii) 
 # \begin{align*}
 #     AI &= \begin{pmatrix} 1 & 0 \\ -2 & 3 \end{pmatrix} \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}
 #     = \begin{pmatrix} 1 + 0 & 0 + 0 \\ -2 + 0 & 0 + 3 \end{pmatrix} \\
 #     &= \begin{pmatrix} 1 & 0 \\ -2 & 3 \end{pmatrix}
 # \end{align*}
 #         
-# (iii)
+# &emsp; (iii)
 # \begin{align*}
 #     IB &= \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} 1 & 2 \\ 4 & 3 \\ -2 & 1 \end{pmatrix} 
 #     = \begin{pmatrix} 1 + 0 + 0 & 2 + 0 + 0 \\ 0 + 4 + 0 & 0 + 3 + 0 \\ 0 + 0 - 2 & 0 + 0 + 1 \end{pmatrix} \\
 #     &= \begin{pmatrix} 1 & 2 \\ 4 & 3 \\ -2 & 1 \end{pmatrix}
 # \end{align*}
-# ::::
-# :::::
+# ```
+# ````
 # 
 # ### Python code
 # 
@@ -189,7 +177,7 @@ display(IB)
 
 # ## Symmetric matrix
 # 
-# ::::{admonition} Definition: Symmetric matrix
+# ```{admonition} Definition: Symmetric matrix
 # :class: note
 # :name: symmetric-matrix-definition
 # 
@@ -206,54 +194,40 @@ display(IB)
 #         \vdots & \vdots & \ddots & \vdots \\
 #         a_{1n} & a_{2n} & \cdots & a_{nn}
 #     \end{pmatrix}
-# \end{align*}
-# ::::
+# \nd{align*}
+# ````
 # 
-# :::::{admonition} Example 1.9
+# ````{admonition} Example 1.9
 # :class: seealso
 # :name: symmetric-matrix-example
 # 
 # Which of the following matrices are symmetric matrices?
 #     
 # 
-# ::::{grid}
-# :gutter: 2
+# &emsp; (i) &emsp; $A=\begin{pmatrix} 1 & 2 \\ 2 & 1 \end{pmatrix}$
 # 
-# :::{grid-item}
-# :columns: 6
-# (i) &emsp; $A=\begin{pmatrix} 1 & 2 \\ 2 & 1 \end{pmatrix}$
-# :::
+# &emsp; (ii) &emsp; $B=\begin{pmatrix} 2 & 0 & -3 \\ 0 & 5 & 7 \\ -3 & 7 & 1 \end{pmatrix}$
 # 
-# :::{grid-item}
-# :columns: 6
-# (ii) &emsp; $B=\begin{pmatrix} 2 & 0 & -3 \\ 0 & 5 & 7 \\ -3 & 7 & 1 \end{pmatrix}$
-# :::
+# &emsp; (iii) &emsp; $C=\begin{pmatrix} 2 & 4 \\ 3 & 2 \end{pmatrix}$
 # 
-# :::{grid-item}
-# :columns: 6
-# (iii) &emsp; $C=\begin{pmatrix} 2 & 4 \\ 3 & 2 \end{pmatrix}$
-# :::
+# ```{dropdown} Solution
 # 
-# ::::
-# 
-# ::::{dropdown} Solution
-# 
-# (i) &emsp; $A=\begin{pmatrix} 1 & 2 \\ 2 & 1 \end{pmatrix}$ is a symmetric matrix since 
+# &emsp; (i) &emsp; $A=\begin{pmatrix} 1 & 2 \\ 2 & 1 \end{pmatrix}$ is a symmetric matrix since 
 # 
 # \begin{align*}
 #     \begin{pmatrix} 1 & 2 \\ 2 & 1 \end{pmatrix}^\mathrm{T} = \begin{pmatrix} 1 & 2 \\ 2 & 1 \end{pmatrix} = A.
 # \end{align*}
 #         
-# (ii) &emsp; $B = \begin{pmatrix} 2 & 0 & -3 \\ 0 & 5 & 7 \\ -3 & 7 & 1 \end{pmatrix}$ is a symmetric matrix since 
+# &emsp; (ii) &emsp; $B = \begin{pmatrix} 2 & 0 & -3 \\ 0 & 5 & 7 \\ -3 & 7 & 1 \end{pmatrix}$ is a symmetric matrix since 
 # 
 # \begin{align*}
 #     \begin{pmatrix} 2 & 0 & -3 \\ 0 & 5 & 7 \\ -3 & 7 & 1 \end{pmatrix}^\mathrm{T} = \begin{pmatrix} 2 & 0 & -3 \\ 0 & 5 & 7 \\ -3 & 7 & 1 \end{pmatrix} = B.
 # \end{align*}
 #         
-# (iii) &emsp; $C = \begin{pmatrix} 2 & 4 \\ 3 & 2 \end{pmatrix}$ is not a symmetric matrix since $[C]_{12} \neq [C]_{21}$. 
+# &emsp; (iii) &emsp; $C = \begin{pmatrix} 2 & 4 \\ 3 & 2 \end{pmatrix}$ is not a symmetric matrix since $[C]_{12} \neq [C]_{21}$. 
 # 
-# ::::
-# :::::
+# ```
+# ````
 # 
 # ### Python code
 # 

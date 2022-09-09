@@ -21,7 +21,7 @@
 # ## Definition
 # 
 # 
-# ::::{admonition} Definition: System of linear equations
+# ```{admonition} Definition: System of linear equations
 # :class: note
 # :name: system-of-linear-equation-definition
 # 
@@ -34,7 +34,7 @@
 #     a_{m1} x_1+a_{m2} x_2+\cdots+a_{mn}x_n &=b_m,
 # \end{align*}
 # where $x_1, x_2, \ldots, x_n$ are **variables**, $a_{11}, a_{12}, \ldots, a_{mn}$ are **coefficients** and $b_1, b_2, \ldots, b_n$ are **constant** terms.
-# ::::
+# ```
 # 
 # In general we would know the values of $a_{ij}$ and $b_i$ and we would like to find out what the values of $x_i$ are.
 # 
@@ -58,7 +58,7 @@
 #     \end{array}
 # \end{align*}
 # 
-# :::::{admonition} Example 2.1
+# ````{admonition} Example 2.1
 # :class: seealso
 # :name: system-of-linear-equations-matrix-form-example
 # 
@@ -68,7 +68,7 @@
 #     4x_1 + 3x_2 &= 10.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ```{dropdown} Solution
 # \begin{align*}
 #     \begin{pmatrix} 
 #         2 & 1 \\ 
@@ -81,8 +81,8 @@
 #         4 \\ 10 
 #     \end{pmatrix}.
 # \end{align*}
-# ::::
-# :::::
+# ```
+# ````
 # 
 # (solving-linear-systems-using-algebra-section)=
 # ## Solving linear systems using algebra

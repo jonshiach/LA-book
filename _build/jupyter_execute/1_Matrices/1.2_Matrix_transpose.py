@@ -30,43 +30,32 @@
 #     \end{pmatrix}.
 # \end{align*}
 # 
-# :::::{admonition} Example 1.7
+# ````{admonition} Example 1.7
 # :class: seealso
 # :name: matrix-transpose-example
 # 
 # Evaluate the following:
 # 
-# ::::{grid}
+# &emsp; (i) &emsp; $\begin{pmatrix} 1 & 3 \\ 2 & 4 \end{pmatrix}^\mathrm{T}$
 # 
-# :::{grid-item}
-# :columns: 4
-# (i) &emsp; $\begin{pmatrix} 1 & 3 \\ 2 & 4 \end{pmatrix}^\mathrm{T}$
-# :::
 # 
-# :::{grid-item}
-# :columns: 4
-# (ii) &emsp; $\begin{pmatrix} 1 & 0 & -2 \\ 3 & -4 & 1 \end{pmatrix}^\mathrm{T}$
-# :::
+# &emsp; (ii) &emsp; $\begin{pmatrix} 1 & 0 & -2 \\ 3 & -4 & 1 \end{pmatrix}^\mathrm{T}$
 # 
-# :::{grid-item}
-# :columns: 4
-# (iii) &emsp; $\begin{pmatrix}2 & 3 & 5 \end{pmatrix}^\mathrm{T}$
-# :::
 # 
-# ::::
+# &emsp; (iii) &emsp; $\begin{pmatrix}2 & 3 & 5 \end{pmatrix}^\mathrm{T}$
 # 
-# ````{dropdown} Solution
+# ```{dropdown} Solution
 # 
-# (i) &emsp; $\begin{pmatrix} 1 & 3 \\ 2 & 4 \end{pmatrix}^\mathrm{T} = 
+# &emsp; (i) &emsp; $\begin{pmatrix} 1 & 3 \\ 2 & 4 \end{pmatrix}^\mathrm{T} = 
 #     \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}$
 # 
-# (ii) &emsp; $\begin{pmatrix} 1 & 0 & -2 \\ 3 & -4 & 1 \end{pmatrix}^\mathrm{T} =
+# &emsp; (ii) &emsp; $\begin{pmatrix} 1 & 0 & -2 \\ 3 & -4 & 1 \end{pmatrix}^\mathrm{T} =
 #     \begin{pmatrix} 1 & 3 \\ 0 & -4 \\ -2 & 1 \end{pmatrix}$
 # 
-# (iii) &emsp; $\begin{pmatrix}2 & 3 & 5 \end{pmatrix}^\mathrm{T} = 
+# &emsp; (iii) &emsp; $\begin{pmatrix}2 & 3 & 5 \end{pmatrix}^\mathrm{T} = 
 #     \begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix}$
+# ```
 # ````
-# :::::
 # 
 # ````{admonition} Theorem: Properties of matrix transpose
 # :class: important

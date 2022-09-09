@@ -5,7 +5,7 @@
 # 
 # We can multiply any two real numbers together but multiplication of two or more matrices is a much more complicated idea. Similarly to addition, which is only defined for matrices of the same size, matrix multiplication has constrains on the sizes of the multipliers:
 # 
-# ::::{admonition} Definition: Matrix multiplication
+# ````{admonition} Definition: Matrix multiplication
 # :class: note
 # :name: matrix-multiplication-definition
 # 
@@ -29,7 +29,7 @@
 #         a_{21} b_{11} + a_{22}b_{21} & a_{21}b_{12} + a_{22} b_{22}
 #     \end{pmatrix}.
 # \end{align*}
-# ::::
+# ````
 # 
 # The technique used to multiply two matrices together requires us to move across the horizontal rows of the first matrix (the $i$ index) and down the vertical columns of the second matrix (the $j$ index). We multiply corresponding elements together and sum the result. For example, consider the multiplication of the two $2\times 2$ matrices below
 # 
@@ -96,7 +96,7 @@
 #     = \begin{pmatrix} 19 & 22 \\ 43 & 50 \end{pmatrix}.
 # \end{align*}
 # 
-# :::::{admonition} Example 1.5
+# ````{admonition} Example 1.5
 # :class: seealso
 # :name: matrix-multiplication-example
 # 
@@ -110,45 +110,32 @@
 # 
 # calculate the following (where possible):
 # 
-# ::::{grid}
+# &emsp; (i) &emsp; $AB$
 # 
-# :::{grid-item}
-# :columns: 2
-# (i) &emsp; $AB$
-# :::
+# &emsp; (ii) &emsp; $BC$
 # 
-# :::{grid-item}
-# :columns: 2
-# (ii) &emsp; $BC$
-# :::
+# &emsp; (iii) &emsp; $CD$
 # 
-# :::{grid-item}
-# :columns: 2
-# (iii) &emsp; $CD$
-# :::
+# ```{dropdown} Solution
 # 
-# ::::
-# 
-# ::::{dropdown} Solution
-# 
-# (i) 
+# &emsp; (i) 
 # \begin{align*}
 #     AB &= \begin{pmatrix} 1 & 0 \\ -2 & 3 \end{pmatrix} \begin{pmatrix} 2 & 3 \\ 1 & 5 \end{pmatrix} \\
 #     &= \begin{pmatrix} 2+0 & 3 + 0 \\ -4+3 & -6+15\end{pmatrix} \\
 #     &= \begin{pmatrix} 2 & 3 \\ -1 & 9 \end{pmatrix}
 # \end{align*}
 # 
-# (ii) 
+# &emsp; (ii) 
 # \begin{align*}
 #     BC &= \begin{pmatrix} 2 & 3 \\ 1 & 5 \end{pmatrix} \begin{pmatrix} 1 & 1 & 0 \\ 3 & -2 & 1 \end{pmatrix} \\
 #     &= \begin{pmatrix} 2+9 & 2-6 & 0+3 \\ 1+15 & 1-10 & 0+5 \end{pmatrix} \\
 #     &= \begin{pmatrix}11 & -4 & 3 \\ 16 & -9 & 5 \end{pmatrix}
 # \end{align*}
 # 
-# (iii) &emsp; $CD$ is undefined since $C$ is $2\times 3$ and $D$ is $2\times 1$.
-# ::::
+# &emsp; (iii) &emsp; $CD$ is undefined since $C$ is $2\times 3$ and $D$ is $2\times 1$.
+# ```
 #     
-# :::::
+# ````
 # 
 # ## Python code
 # 
@@ -169,7 +156,7 @@ display(AB)
 
 # ## Matrix exponents
 # 
-# ::::{admonition} Definition: Matrix exponents
+# ````{admonition} Definition: Matrix exponents
 # :class: note
 # :name: matrix-exponents-definition
 # 
@@ -178,9 +165,9 @@ display(AB)
 # \begin{align}
 #     A^n = \underbrace{A A \cdots A}_{n \text{ times}}.
 # \end{align}
-# ::::
+# ````
 # 
-# :::::{admonition} Example 1.6
+# ````{admonition} Example 1.6
 # :class: seealso
 # :name: matrix-exponents-example
 # 
@@ -190,28 +177,15 @@ display(AB)
 # $
 # evaluate:
 # 
-# ::::{grid}
+# &emsp; (i) &emsp; $A^2$
 # 
-# :::{grid-item}
-# :columns: 2
-# (i) &emsp; $A^2$
-# :::
+# &emsp; (ii) &emsp; $A^3$
 # 
-# :::{grid-item}
-# :columns: 2
-# (ii) &emsp; $A^3$
-# :::
+# &emsp; (iii) &emsp; $A^5$
 # 
-# :::{grid-item}
-# :columns: 2
-# (iii) &emsp; $A^5$
-# :::
 # 
-# ::::
-# 
-# ::::{dropdown} Solution
-# 
-# (i) 
+# ```{dropdown} Solution
+# &emsp; (i) 
 # \begin{align*}
 #     A^2 &= AA = \begin{pmatrix} 1 & 0 \\ 3 & 2 \end{pmatrix}
 #     \begin{pmatrix} 1 & 0 \\ 3 & 2 \end{pmatrix} \\
@@ -219,7 +193,7 @@ display(AB)
 #     &= \begin{pmatrix} 1 & 0 \\ 9 & 4 \end{pmatrix}
 # \end{align*}
 # 
-# (ii) 
+# &emsp; (ii) 
 # \begin{align*}
 #     A^3 &= A^2A = \begin{pmatrix} 1 & 0 \\ 9 & 4 \end{pmatrix}
 #     \begin{pmatrix} 1 & 0 \\ 3 & 2 \end{pmatrix} \\
@@ -227,15 +201,16 @@ display(AB)
 #     &= \begin{pmatrix} 1 & 0 \\ 21 & 8 \end{pmatrix}
 # \end{align*}
 # 
-# (iii)
+# &emsp; (iii)
 # \begin{align*}
 #     A^5 &= A^3A^2 = \begin{pmatrix} 1 & 0 \\ 21 & 8 \end{pmatrix}
 #     \begin{pmatrix} 1 & 0 \\ 9 & 4 \end{pmatrix} \\
 #     &= \begin{pmatrix} 1 + 0 & 0 + 0 \\ 21 + 72 & 0 + 32 \end{pmatrix} \\
 #     &= \begin{pmatrix} 1 & 0 \\ 93 & 32 \end{pmatrix}
 # \end{align*}
-# ::::
-# :::::
+# ```
+# 
+# ````
 # 
 # ### Python code
 # 

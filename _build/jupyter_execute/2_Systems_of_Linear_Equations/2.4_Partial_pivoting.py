@@ -57,7 +57,7 @@
 # 
 # So $x_2 = 1.000$ as before but using back substitution we now have $x_1 = 1.000$ which is consistent with the original system. This process is called *partial pivoting* and it's where we perform a row swap to ensure that the pivot element has a larger absolute value from the elements in the column beneath the pivot.
 # 
-# :::::{admonition} Definition: Gaussian elimination with partial pivoting
+# ````{admonition} Definition: Gaussian elimination with partial pivoting
 # :class: note
 # :name: ge-pp-definition
 # 
@@ -68,9 +68,9 @@
 # 3. If $a_{ik} = 0$ then set $k = k + 1$ and repeat step 2.
 # 4. For each row $j = i+1 \ldots m$ beneath the pivot row subtract the pivot row $i$ multiplied by $\dfrac{a_{jk}}{a_{ik}}$ from row $j$. 
 # 5. Set $i = 1 + 1$ and $k = k + 1$ and repeat steps 2 to 4 until $i > m$ or $k > n$.
-# :::::
+# ````
 # 
-# :::::{admonition} Example 2.5
+# ````{admonition} Example 2.5
 # :class: seealso
 # :name: partial-pivoting-example
 # 
@@ -84,7 +84,7 @@
 #     \end{array}
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ```{dropdown} Solution
 # \begin{align*}
 #     & \left(\begin{array}{ccc|c} 
 #         1 & -1 & 3 & 13 \\
@@ -128,5 +128,5 @@
 #     x_1 &= \frac{1}{4}( 15 + 2(-2) - 3) = 2. 
 # \end{align*}
 #  
-# ::::
-# :::::
+# ```
+# ````

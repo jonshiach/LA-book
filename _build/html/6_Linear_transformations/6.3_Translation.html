@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Translation &#8212; Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -575,16 +576,18 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="translation">
+  <section class="tex2jax_ignore mathjax_ignore" id="translation">
 <span id="translation-section"></span><h1>Translation<a class="headerlink" href="#translation" title="Permalink to this headline">#</a></h1>
 <p>In the <a class="reference internal" href="6.2_Rotation_reflection_and_scaling.html#rotation-reflection-and-scaling-section"><span class="std std-ref">previous section</span></a> we looked at how to rotate, reflect and scale a vector. To complete the movement of vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> we need to be able to <strong>translate</strong> vectors.</p>
 <div class="note admonition" id="translation-definition">
 <p class="admonition-title">Definition: Translation</p>
 <p>The translation of a position vector <span class="math notranslate nohighlight">\(\mathbf{u} \in \mathbb{R}^n\)</span> by a translation vector <span class="math notranslate nohighlight">\(\mathbf{t} \in \mathbb{R}^n\)</span> is the linear transformation <span class="math notranslate nohighlight">\(T(\mathbf{t}): \mathbf{u} \mapsto \mathbf{u} + \mathbf{t}\)</span>.</p>
-<div class="figure align-default" id="translation-figure">
+<figure class="align-default" id="translation-figure">
 <img alt="../_images/translation.png" src="../_images/translation.png" />
-<p class="caption"><span class="caption-number">Fig. 33 </span><span class="caption-text">The translation of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> by the vector <span class="math notranslate nohighlight">\(\mathbf{t}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>.</span><a class="headerlink" href="#translation-figure" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 33 </span><span class="caption-text">The translation of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> by the vector <span class="math notranslate nohighlight">\(\mathbf{t}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>.</span><a class="headerlink" href="#translation-figure" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </div>
 <p>The problem we have here is what is the matrix representation of translation, i.e., in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> what is the matrix <span class="math notranslate nohighlight">\(T\)</span> that satisfies</p>
 <div class="amsmath math notranslate nohighlight">
@@ -656,12 +659,12 @@ Solution<div class="sd-summary-down docutils">
     \begin{pmatrix} 4 \\ 3 \\ 1 \end{pmatrix},
 \end{align*}\]</div>
 <p class="sd-card-text">so expressed in Cartesian co-ordinates we have <span class="math notranslate nohighlight">\(T(3, 1)(\mathbf{u}) = (4, 3)\)</span>.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="../_images/translation_example.png" src="../_images/translation_example.png" />
-</div>
+</figure>
 </div>
 </details></div>
-<div class="section" id="combining-rotation-reflection-scaling-and-translation">
+<section id="combining-rotation-reflection-scaling-and-translation">
 <h2>Combining rotation, reflection, scaling and translation<a class="headerlink" href="#combining-rotation-reflection-scaling-and-translation" title="Permalink to this headline">#</a></h2>
 <p>If we want to combine translation with rotation, reflection and scaling transformations in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> then we need all of the transformation matrices to be the same size. This is easily done by adding the third row and column of the identity matrix to <span class="math notranslate nohighlight">\(Rot(\theta)\)</span>, <span class="math notranslate nohighlight">\(Ref(\theta)\)</span> and <span class="math notranslate nohighlight">\(S(\mathbf{s})\)</span> , i.e.,</p>
 <div class="amsmath math notranslate nohighlight">
@@ -717,9 +720,9 @@ Solution<div class="sd-summary-down docutils">
     \begin{pmatrix} -1 &amp; 1 &amp; 0 \\ -1 &amp; -1 &amp; 2 \\ 1 &amp; 1 &amp; 1 \end{pmatrix}\\
     &amp;= \begin{pmatrix} -2 &amp; 2 &amp; 0 \\ -2 &amp; -2 &amp; 4 \\ 1 &amp; 1 &amp; 1 \end{pmatrix}.
 \end{align*}\]</div>
-<div class="figure align-default">
+<figure class="align-default">
 <a class="reference internal image-reference" href="../_images/homogeneous_coordinates_example_1.png"><img alt="../_images/homogeneous_coordinates_example_1.png" src="../_images/homogeneous_coordinates_example_1.png" style="width: 300px;" /></a>
-</div>
+</figure>
 <p class="sd-card-text">We want to rotate by an angle of <span class="math notranslate nohighlight">\(\frac{\pi}{4}\)</span> so the rotation matrix is</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
@@ -756,9 +759,9 @@ Solution<div class="sd-summary-down docutils">
         1 &amp; 1 &amp; 1 
     \end{pmatrix}.
 \end{align*}\]</div>
-<div class="figure align-default">
+<figure class="align-default">
 <a class="reference internal image-reference" href="../_images/homogeneous_coordinates_example_2.png"><img alt="../_images/homogeneous_coordinates_example_2.png" src="../_images/homogeneous_coordinates_example_2.png" style="width: 300px;" /></a>
-</div>
+</figure>
 <p class="sd-card-text">Finally we need to translate by the translation vector <span class="math notranslate nohighlight">\(\mathbf{t} = (6, 4)\)</span> so the translation matrix is</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
@@ -785,9 +788,9 @@ Solution<div class="sd-summary-down docutils">
         1 &amp; 1 &amp; 1
     \end{pmatrix}.
 \end{align*}\]</div>
-<div class="figure align-default">
+<figure class="align-default">
 <a class="reference internal image-reference" href="../_images/homogeneous_coordinates_example_3.png"><img alt="../_images/homogeneous_coordinates_example_3.png" src="../_images/homogeneous_coordinates_example_3.png" style="width: 500px;" /></a>
-</div>
+</figure>
 <p class="sd-card-text">The single transformation matrix that performs the three transformations at the same time is</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
@@ -836,8 +839,8 @@ Solution<div class="sd-summary-down docutils">
 \end{align*}\]</div>
 </div>
 </details></div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
