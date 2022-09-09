@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Determinants &#8212; Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -615,7 +616,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="determinants">
+  <section class="tex2jax_ignore mathjax_ignore" id="determinants">
 <span id="determinant-section"></span><h1>Determinants<a class="headerlink" href="#determinants" title="Permalink to this headline">#</a></h1>
 <p>Determinants of square matrices play a very important role in linear algebra. One of their uses is they enable us to determine if a system of equations has a unique solution. Consider the system of two linear equations</p>
 <div class="amsmath math notranslate nohighlight">
@@ -643,7 +644,7 @@ title="Print to PDF"
     \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}.
 \end{align*}\]</div>
 <p>The determinant of a square matrix <span class="math notranslate nohighlight">\(A\)</span> is denoted by <span class="math notranslate nohighlight">\(\det(A)\)</span> or <span class="math notranslate nohighlight">\(|A|\)</span> and is a scalar value that can be computed from the values of its elements.</p>
-<div class="section" id="calculating-the-determinant-of-a-2-times-2-matrix">
+<section id="calculating-the-determinant-of-a-2-times-2-matrix">
 <h2>Calculating the determinant of a <span class="math notranslate nohighlight">\(2\times 2\)</span> matrix<a class="headerlink" href="#calculating-the-determinant-of-a-2-times-2-matrix" title="Permalink to this headline">#</a></h2>
 <div class="note admonition" id="x2-determinant-definition">
 <p class="admonition-title">Definition: Determinant of a <span class="math notranslate nohighlight">\(2\times 2\)</span> matrix</p>
@@ -658,22 +659,9 @@ title="Print to PDF"
 <div class="seealso admonition" id="x2-determinant-example">
 <p class="admonition-title">Example 1.10</p>
 <p>Calculate the following determinants</p>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
-<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
-<p>(i)   <span class="math notranslate nohighlight">\(\begin{vmatrix} 5 &amp; 2 \\ 3 &amp; 4 \end{vmatrix}\)</span></p>
-</div>
-<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
-<p>(ii)   <span class="math notranslate nohighlight">\(\det \begin{pmatrix} a &amp; b \\ ka &amp; kb \end{pmatrix}\)</span></p>
-</div>
-<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
-<p>(iii)   <span class="math notranslate nohighlight">\(\begin{vmatrix} 5 &amp; 0 \\ 0 &amp; 2 \end{vmatrix}\)</span></p>
-</div>
-<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
-<p>(iv)   <span class="math notranslate nohighlight">\(\begin{vmatrix} 2-\alpha &amp; 3 \\ 5 &amp; 6 - \alpha \end{vmatrix}\)</span></p>
-</div>
-</div>
-</div>
+<p>  (i)   <span class="math notranslate nohighlight">\(\begin{vmatrix} 5 &amp; 2 \\ 3 &amp; 4 \end{vmatrix}\)</span></p>
+<p>  (ii)   <span class="math notranslate nohighlight">\(\det \begin{pmatrix} a &amp; b \\ ka &amp; kb \end{pmatrix}\)</span></p>
+<p>  (iii)   <span class="math notranslate nohighlight">\(\begin{vmatrix} 5 &amp; 0 \\ 0 &amp; 2 \end{vmatrix}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -681,14 +669,14 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">(i)   <span class="math notranslate nohighlight">\(\begin{vmatrix} 5 &amp; 2 \\ 3 &amp; 4 \end{vmatrix} = 5 \times 4 - 2 \times 3 = 20 - 6 = 14\)</span></p>
-<p class="sd-card-text">(ii)   <span class="math notranslate nohighlight">\(\det \begin{pmatrix} a &amp; b \\ ka &amp; kb \end{pmatrix} = akb - akb = 0\)</span></p>
-<p class="sd-card-text">(iii)   <span class="math notranslate nohighlight">\(\begin{vmatrix} 5 &amp; 0 \\ 0 &amp; 2 \end{vmatrix} = 5 \times 2 - 0 \times 0 = 10 - 0 = 10\)</span></p>
-<p class="sd-card-text">(iv)   <span class="math notranslate nohighlight">\(\begin{vmatrix} 2-\alpha &amp; 3 \\ 5 &amp; 6 - \alpha \end{vmatrix} = (2-\alpha)(6-\alpha) - 3 \times 5 = \alpha^2 - 8\alpha - 3\)</span></p>
+<p class="sd-card-text">  (i)   <span class="math notranslate nohighlight">\(\begin{vmatrix} 5 &amp; 2 \\ 3 &amp; 4 \end{vmatrix} = 5 \times 4 - 2 \times 3 = 20 - 6 = 14\)</span></p>
+<p class="sd-card-text">  (ii)   <span class="math notranslate nohighlight">\(\det \begin{pmatrix} a &amp; b \\ ka &amp; kb \end{pmatrix} = akb - akb = 0\)</span></p>
+<p class="sd-card-text">  (iii)   <span class="math notranslate nohighlight">\(\begin{vmatrix} 5 &amp; 0 \\ 0 &amp; 2 \end{vmatrix} = 5 \times 2 - 0 \times 0 = 10 - 0 = 10\)</span></p>
+<p class="sd-card-text">  (iv)   <span class="math notranslate nohighlight">\(\begin{vmatrix} 2-\alpha &amp; 3 \\ 5 &amp; 6 - \alpha \end{vmatrix} = (2-\alpha)(6-\alpha) - 3 \times 5 = \alpha^2 - 8\alpha - 3\)</span></p>
 </div>
 </details></div>
-</div>
-<div class="section" id="calculating-the-determinant-of-an-n-times-n-matrix">
+</section>
+<section id="calculating-the-determinant-of-an-n-times-n-matrix">
 <h2>Calculating the determinant of an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix<a class="headerlink" href="#calculating-the-determinant-of-an-n-times-n-matrix" title="Permalink to this headline">#</a></h2>
 <p>To compute the determinant of a matrix larger than <span class="math notranslate nohighlight">\(2\times 2\)</span> we need to split the matrix up into multiple <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices so we can use equation <a class="reference internal" href="#equation-2x2-determinant-equation">(2)</a>. This is done in a specific way explained below which using things called <strong>minors</strong> and <strong>cofactors</strong>.</p>
 <div class="note admonition" id="minor-definition">
@@ -718,19 +706,9 @@ then</p>
 <div class="seealso admonition" id="minor-example">
 <p class="admonition-title">Example 1.11</p>
 <p>Given the matrix <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \end{pmatrix},\)</span> calculate:</p>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row docutils">
-<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
-<p>(i)   <span class="math notranslate nohighlight">\(M_{11}\)</span></p>
-</div>
-<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
-<p>(ii)   <span class="math notranslate nohighlight">\(M_{12}\)</span></p>
-</div>
-<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
-<p>(iii)   <span class="math notranslate nohighlight">\(M_{13}\)</span></p>
-</div>
-</div>
-</div>
+<p>  (i)   <span class="math notranslate nohighlight">\(M_{11}\)</span></p>
+<p>  (ii)   <span class="math notranslate nohighlight">\(M_{12}\)</span></p>
+<p>  (iii)   <span class="math notranslate nohighlight">\(M_{13}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -738,9 +716,9 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">(i)   <span class="math notranslate nohighlight">\(M_{11} = \begin{vmatrix} 5 &amp; 6 \\ 8 &amp; 9 \end{vmatrix} = 5(9) - 6(8) = 45 - 48 = -3\)</span></p>
-<p class="sd-card-text">(ii)   <span class="math notranslate nohighlight">\(M_{12} = \begin{vmatrix} 4 &amp; 6 \\ 7 &amp; 9 \end{vmatrix} = 4(9) - 6(7) = 36 - 42 = -6\)</span></p>
-<p class="sd-card-text">(iii)   <span class="math notranslate nohighlight">\(M_{13} = \begin{vmatrix} 4 &amp; 5 \\ 7 &amp; 8 \end{vmatrix} = 4(8) - 5(7) = 32 - 35 = -3\)</span></p>
+<p class="sd-card-text">  (i)   <span class="math notranslate nohighlight">\(M_{11} = \begin{vmatrix} 5 &amp; 6 \\ 8 &amp; 9 \end{vmatrix} = 5(9) - 6(8) = 45 - 48 = -3\)</span></p>
+<p class="sd-card-text">  (ii)   <span class="math notranslate nohighlight">\(M_{12} = \begin{vmatrix} 4 &amp; 6 \\ 7 &amp; 9 \end{vmatrix} = 4(9) - 6(7) = 36 - 42 = -6\)</span></p>
+<p class="sd-card-text">  (iii)   <span class="math notranslate nohighlight">\(M_{13} = \begin{vmatrix} 4 &amp; 5 \\ 7 &amp; 8 \end{vmatrix} = 4(8) - 5(7) = 32 - 35 = -3\)</span></p>
 </div>
 </details></div>
 <div class="note admonition" id="cofactor-definition">
@@ -805,16 +783,8 @@ Solution<div class="sd-summary-down docutils">
     \begin{pmatrix} 1 &amp; 0 &amp; 4 \\ 2 &amp; 5 &amp; 6 \\ 4 &amp; 5 &amp; 2 \end{pmatrix},
 \end{align*}\]</div>
 <p>by expanding along:</p>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row docutils">
-<div class="sd-col sd-d-flex-column sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
-<p>(i)   row 1</p>
-</div>
-<div class="sd-col sd-d-flex-column sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
-<p>(ii)   column 3</p>
-</div>
-</div>
-</div>
+<p>  (i)   row 1</p>
+<p>  (ii)   column 3</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -822,7 +792,7 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">(i)</p>
+<p class="sd-card-text">  (i)</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     \begin{vmatrix}1 &amp; 0 &amp; 4 \\ 2 &amp; 5 &amp; 6 \\ 4 &amp; 5 &amp; 2 \end{vmatrix} 
@@ -830,7 +800,7 @@ Solution<div class="sd-summary-down docutils">
     &amp;= (10-30) + 4(10-20) \\
     &amp;= -60
 \end{align*}\]</div>
-<p class="sd-card-text">(ii)</p>
+<p class="sd-card-text">  (ii)</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*} 
     \begin{vmatrix}1 &amp; 0 &amp; 4 \\ 2 &amp; 5 &amp; 6 \\ 4 &amp; 5 &amp; 2 \end{vmatrix} 
@@ -884,7 +854,7 @@ Solution<div class="sd-summary-down docutils">
 <li><p>The value of a determinant is unchanged by adding a multiple of one row to another row.</p></li>
 </ul>
 </div>
-<div class="section" id="python">
+<section id="python">
 <h3>Python<a class="headerlink" href="#python" title="Permalink to this headline">#</a></h3>
 <p>The Sympy code for calculating the determinant of a square matrix <code class="docutils literal notranslate"><span class="pre">A</span></code> is <code class="docutils literal notranslate"><span class="pre">A.det()</span></code>. The code below calculates the determinant of the matrix from <a class="reference internal" href="#x4-determinant-example"><span class="std std-ref">example 1.13</span></a>.</p>
 <div class="cell docutils container">
@@ -903,9 +873,9 @@ Solution<div class="sd-summary-down docutils">
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

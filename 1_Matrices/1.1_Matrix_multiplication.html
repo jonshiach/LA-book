@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Matrix multiplication &#8212; Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -599,7 +600,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="matrix-multiplication">
+  <section class="tex2jax_ignore mathjax_ignore" id="matrix-multiplication">
 <h1>Matrix multiplication<a class="headerlink" href="#matrix-multiplication" title="Permalink to this headline">#</a></h1>
 <p>We can multiply any two real numbers together but multiplication of two or more matrices is a much more complicated idea. Similarly to addition, which is only defined for matrices of the same size, matrix multiplication has constrains on the sizes of the multipliers:</p>
 <div class="note admonition" id="matrix-multiplication-definition">
@@ -696,19 +697,9 @@ title="Print to PDF"
     D &amp;= \begin{pmatrix} 1 \\ 3 \end{pmatrix}.
 \end{align*}\]</div>
 <p>calculate the following (where possible):</p>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row docutils">
-<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
-<p>(i)   <span class="math notranslate nohighlight">\(AB\)</span></p>
-</div>
-<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
-<p>(ii)   <span class="math notranslate nohighlight">\(BC\)</span></p>
-</div>
-<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
-<p>(iii)   <span class="math notranslate nohighlight">\(CD\)</span></p>
-</div>
-</div>
-</div>
+<p>  (i)   <span class="math notranslate nohighlight">\(AB\)</span></p>
+<p>  (ii)   <span class="math notranslate nohighlight">\(BC\)</span></p>
+<p>  (iii)   <span class="math notranslate nohighlight">\(CD\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -716,24 +707,24 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">(i)</p>
+<p class="sd-card-text">  (i)</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     AB &amp;= \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix} \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix} \\
     &amp;= \begin{pmatrix} 2+0 &amp; 3 + 0 \\ -4+3 &amp; -6+15\end{pmatrix} \\
     &amp;= \begin{pmatrix} 2 &amp; 3 \\ -1 &amp; 9 \end{pmatrix}
 \end{align*}\]</div>
-<p class="sd-card-text">(ii)</p>
+<p class="sd-card-text">  (ii)</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     BC &amp;= \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix} \begin{pmatrix} 1 &amp; 1 &amp; 0 \\ 3 &amp; -2 &amp; 1 \end{pmatrix} \\
     &amp;= \begin{pmatrix} 2+9 &amp; 2-6 &amp; 0+3 \\ 1+15 &amp; 1-10 &amp; 0+5 \end{pmatrix} \\
     &amp;= \begin{pmatrix}11 &amp; -4 &amp; 3 \\ 16 &amp; -9 &amp; 5 \end{pmatrix}
 \end{align*}\]</div>
-<p class="sd-card-text">(iii)   <span class="math notranslate nohighlight">\(CD\)</span> is undefined since <span class="math notranslate nohighlight">\(C\)</span> is <span class="math notranslate nohighlight">\(2\times 3\)</span> and <span class="math notranslate nohighlight">\(D\)</span> is <span class="math notranslate nohighlight">\(2\times 1\)</span>.</p>
+<p class="sd-card-text">  (iii)   <span class="math notranslate nohighlight">\(CD\)</span> is undefined since <span class="math notranslate nohighlight">\(C\)</span> is <span class="math notranslate nohighlight">\(2\times 3\)</span> and <span class="math notranslate nohighlight">\(D\)</span> is <span class="math notranslate nohighlight">\(2\times 1\)</span>.</p>
 </div>
 </details></div>
-<div class="section" id="python-code">
+<section id="python-code">
 <h2>Python code<a class="headerlink" href="#python-code" title="Permalink to this headline">#</a></h2>
 <p>The Sympy command for calculating the product of two matrices <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> is <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">*</span> <span class="pre">B</span></code>. The Python code below calculates the solution to question (i) from <a class="reference internal" href="#matrix-multiplication-example"><span class="std std-ref">example 1.5</span></a>.</p>
 <div class="cell docutils container">
@@ -753,14 +744,14 @@ Solution<div class="sd-summary-down docutils">
 </div>
 </div>
 <p>Note that this will only work when using the Sympy library. If this has not been imported, <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">*</span> <span class="pre">B</span></code> will multiply the corresponding elements together which is known as <strong>element-wise multiplication</strong> and denoted mathematically as <span class="math notranslate nohighlight">\(A \odot B\)</span>. If you are using Sympy and wish to use element-wise multiplication then the command is <code class="docutils literal notranslate"><span class="pre">matrices.dense.matrix_multiply_elementwise(A,</span> <span class="pre">B)</span></code> (so it is probably better to not use Sympy in this case!).</p>
-</div>
-<div class="section" id="matrix-exponents">
+</section>
+<section id="matrix-exponents">
 <h2>Matrix exponents<a class="headerlink" href="#matrix-exponents" title="Permalink to this headline">#</a></h2>
 <div class="note admonition" id="matrix-exponents-definition">
 <p class="admonition-title">Definition: Matrix exponents</p>
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be a square <span class="math notranslate nohighlight">\(n \times n\)</span> matrix. Then we write <span class="math notranslate nohighlight">\(A^2=AA\)</span> and more generally:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5b754d17-4ee4-433d-b135-4433804ebd00">
-<span class="eqno">(1)<a class="headerlink" href="#equation-5b754d17-4ee4-433d-b135-4433804ebd00" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7d68d7ca-996d-476f-9cb9-fbbed532ef80">
+<span class="eqno">(1)<a class="headerlink" href="#equation-7d68d7ca-996d-476f-9cb9-fbbed532ef80" title="Permalink to this equation">#</a></span>\[\begin{align}
     A^n = \underbrace{A A \cdots A}_{n \text{ times}}.
 \end{align}\]</div>
 </div>
@@ -771,19 +762,9 @@ Solution<div class="sd-summary-down docutils">
     A = \begin{pmatrix} 1 &amp; 0 \\ 3 &amp; 2 \end{pmatrix},
 \)</span>
 evaluate:</p>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row docutils">
-<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
-<p>(i)   <span class="math notranslate nohighlight">\(A^2\)</span></p>
-</div>
-<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
-<p>(ii)   <span class="math notranslate nohighlight">\(A^3\)</span></p>
-</div>
-<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
-<p>(iii)   <span class="math notranslate nohighlight">\(A^5\)</span></p>
-</div>
-</div>
-</div>
+<p>  (i)   <span class="math notranslate nohighlight">\(A^2\)</span></p>
+<p>  (ii)   <span class="math notranslate nohighlight">\(A^3\)</span></p>
+<p>  (iii)   <span class="math notranslate nohighlight">\(A^5\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -791,7 +772,7 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">(i)</p>
+<p class="sd-card-text">  (i)</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     A^2 &amp;= AA = \begin{pmatrix} 1 &amp; 0 \\ 3 &amp; 2 \end{pmatrix}
@@ -799,7 +780,7 @@ Solution<div class="sd-summary-down docutils">
     &amp;= \begin{pmatrix} 1 + 0 &amp; 0 + 0 \\ 3 + 6 &amp; 0 + 4 \end{pmatrix} \\
     &amp;= \begin{pmatrix} 1 &amp; 0 \\ 9 &amp; 4 \end{pmatrix}
 \end{align*}\]</div>
-<p class="sd-card-text">(ii)</p>
+<p class="sd-card-text">  (ii)</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     A^3 &amp;= A^2A = \begin{pmatrix} 1 &amp; 0 \\ 9 &amp; 4 \end{pmatrix}
@@ -807,7 +788,7 @@ Solution<div class="sd-summary-down docutils">
     &amp;= \begin{pmatrix} 1 + 0 &amp; 0 + 0 \\ 9 + 12 &amp; 0 + 8 \end{pmatrix} \\
     &amp;= \begin{pmatrix} 1 &amp; 0 \\ 21 &amp; 8 \end{pmatrix}
 \end{align*}\]</div>
-<p class="sd-card-text">(iii)</p>
+<p class="sd-card-text">  (iii)</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     A^5 &amp;= A^3A^2 = \begin{pmatrix} 1 &amp; 0 \\ 21 &amp; 8 \end{pmatrix}
@@ -817,7 +798,7 @@ Solution<div class="sd-summary-down docutils">
 \end{align*}\]</div>
 </div>
 </details></div>
-<div class="section" id="id1">
+<section id="id1">
 <h3>Python code<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p>The SymPy command for calculating the <code class="docutils literal notranslate"><span class="pre">k</span></code>th exponent of the matrix <code class="docutils literal notranslate"><span class="pre">A</span></code> is <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">**</span> <span class="pre">k</span></code>. The following code calculates the solution to <a class="reference internal" href="#matrix-exponents-example"><span class="std std-ref">example 1.6</span></a>.</p>
 <div class="cell docutils container">
@@ -856,9 +837,9 @@ Solution<div class="sd-summary-down docutils">
 \[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0\\93 &amp; 32\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Linear Transformations &#8212; Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -605,7 +606,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="linear-transformations">
+  <section class="tex2jax_ignore mathjax_ignore" id="linear-transformations">
 <span id="linear-transformations-chapter"></span><h1>Linear Transformations<a class="headerlink" href="#linear-transformations" title="Permalink to this headline">#</a></h1>
 <p><strong>Learning outcomes</strong></p>
 <p>On successful completion of this chapters students will be able to:</p>
@@ -617,7 +618,7 @@ title="Print to PDF"
 <li><p>use <a class="reference internal" href="6.3_Translation.html#homogeneous-coordinates-definition"><span class="std std-ref">homogeneous co-ordinates</span></a> to describe points in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>.</p></li>
 </ul>
 <hr class="docutils" />
-<div class="section" id="definition">
+<section id="definition">
 <h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h2>
 <div class="note admonition" id="linear-transformation-definition">
 <p class="admonition-title">Definition: Linear transformation</p>
@@ -716,8 +717,8 @@ Solution<div class="sd-summary-down docutils">
 <p class="sd-card-text">so <span class="math notranslate nohighlight">\(T: f(x) \mapsto f(x) \dfrac{\mathrm{d}}{\mathrm{d}x} f(x)\)</span> is not a linear transformation.</p>
 </div>
 </details></div>
-</div>
-<div class="section" id="transformation-matrices">
+</section>
+<section id="transformation-matrices">
 <span id="transformation-matrix-section"></span><h2>Transformation matrices<a class="headerlink" href="#transformation-matrices" title="Permalink to this headline">#</a></h2>
 <p>For convenience we tend to use matrices to represent linear transformations. Let <span class="math notranslate nohighlight">\(T: V \to W\)</span> be a linear transformation from the vector spaces <span class="math notranslate nohighlight">\(V\)</span> to <span class="math notranslate nohighlight">\(W\)</span>. If <span class="math notranslate nohighlight">\(\{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\}\)</span> is a basis for <span class="math notranslate nohighlight">\(V\)</span> then for a vector <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span></p>
 <div class="amsmath math notranslate nohighlight">
@@ -800,12 +801,14 @@ Solution<div class="sd-summary-down docutils">
 </div>
 </details></div>
 <p>The affects of the linear transformation from <a class="reference internal" href="#linear-transformation-example"><span class="std std-ref">example 6.2</span></a> is illustrated in <a class="reference internal" href="#linear-transformation-figure"><span class="std std-numref">Fig. 25</span></a>. Note that the transformation <span class="math notranslate nohighlight">\(T\)</span> can be thought of as changing the basis of the vector space. The unit square with respect to the basis <span class="math notranslate nohighlight">\(\{\mathbf{e}_1, \mathbf{e}_1\}\)</span> has been transformed into a unit parallelogram with respect to the basis <span class="math notranslate nohighlight">\(\{ T(\mathbf{e}_1), T(\mathbf{e}_2)\}\)</span>.</p>
-<div class="figure align-default" id="linear-transformation-figure">
+<figure class="align-default" id="linear-transformation-figure">
 <img alt="../_images/linear_transformation.png" src="../_images/linear_transformation.png" />
-<p class="caption"><span class="caption-number">Fig. 25 </span><span class="caption-text">The affect of applying a linear transformation <span class="math notranslate nohighlight">\(T: (x,y) \mapsto (3x + y, x + 2y)\)</span> to the vector <span class="math notranslate nohighlight">\((1,1)\)</span>.</span><a class="headerlink" href="#linear-transformation-figure" title="Permalink to this image">#</a></p>
-</div>
-</div>
-<div class="section" id="finding-the-transformation-matrix-from-a-set-of-images">
+<figcaption>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">The affect of applying a linear transformation <span class="math notranslate nohighlight">\(T: (x,y) \mapsto (3x + y, x + 2y)\)</span> to the vector <span class="math notranslate nohighlight">\((1,1)\)</span>.</span><a class="headerlink" href="#linear-transformation-figure" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="finding-the-transformation-matrix-from-a-set-of-images">
 <h2>Finding the transformation matrix from a set of images<a class="headerlink" href="#finding-the-transformation-matrix-from-a-set-of-images" title="Permalink to this headline">#</a></h2>
 <p>The calculation of the transformation matrix in <a class="reference internal" href="#transformation-matrix-example"><span class="std std-ref">example 6.2</span></a> was straightforward as we knew what the transformation was. This will not always be a the case and we may know what the output (known as the image) of the transformation is but not the transformation itself. Consider a linear transformation <span class="math notranslate nohighlight">\(T: \mathbb{R}^n \to \mathbb{R}^m\)</span> applied to vectors <span class="math notranslate nohighlight">\(u_1, u_2, \ldots, u_n\)</span>. If <span class="math notranslate nohighlight">\(A\)</span> is the transformation matrix for <span class="math notranslate nohighlight">\(T\)</span> then</p>
 <div class="amsmath math notranslate nohighlight">
@@ -887,8 +890,8 @@ Solution<div class="sd-summary-down docutils">
 <p class="sd-card-text">This is the transformation matrix from <a class="reference internal" href="#transformation-matrix-example"><span class="std std-ref">example 6.2</span></a>.</p>
 </div>
 </details></div>
-</div>
-<div class="section" id="inverse-linear-transformation">
+</section>
+<section id="inverse-linear-transformation">
 <h2>Inverse linear transformation<a class="headerlink" href="#inverse-linear-transformation" title="Permalink to this headline">#</a></h2>
 <div class="note admonition" id="inverse-transformation-definition">
 <p class="admonition-title">Definition: Inverse linear transformation</p>
@@ -938,10 +941,10 @@ Solution<div class="sd-summary-down docutils">
 \end{align*}\]</div>
 </div>
 </details></div>
-</div>
+</section>
 <div class="toctree-wrapper compound">
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {

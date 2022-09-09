@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Consistent, inconsistent and indeterminate systems &#8212; Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -605,7 +606,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="consistent-inconsistent-and-indeterminate-systems">
+  <section class="tex2jax_ignore mathjax_ignore" id="consistent-inconsistent-and-indeterminate-systems">
 <span id="consistent-inconsistent-and-indeterminate-systems-section"></span><h1>Consistent, inconsistent and indeterminate systems<a class="headerlink" href="#consistent-inconsistent-and-indeterminate-systems" title="Permalink to this headline">#</a></h1>
 <p>So far all of the examples of solving systems of linear equations have had a single unique solution. This will not always be the case and it is important that we consider the different situations that can arise when dealing with systems of equations.</p>
 <p>A useful measure of a system that is used to determine the number of solutions to a system of linear equations is the rank of a matrix.</p>
@@ -618,7 +619,7 @@ title="Print to PDF"
 <p class="admonition-title">Definition: Consistent, inconsistent and indeterminate systems</p>
 <p>A system of equations is said to be <strong>consistent</strong> if it has a solution, otherwise it is said to be an <strong>inconsistent</strong>. If a system of equations has more than one solution then it is said to be <strong>indeterminate</strong>.</p>
 </div>
-<div class="section" id="consistent-systems">
+<section id="consistent-systems">
 <h2>Consistent systems<a class="headerlink" href="#consistent-systems" title="Permalink to this headline">#</a></h2>
 <p>We can visualise consistent systems by considering the plot of a system with two variables, <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span>. If the lines that represent each equation in a system intersect at a single point then the point of intersection is the solution to the system. Consider the following system of linear equations</p>
 <div class="amsmath math notranslate nohighlight">
@@ -627,12 +628,11 @@ title="Print to PDF"
     x_1 + x_2 &amp;= 3.
 \end{align*}\]</div>
 <p>The lines for these two equations have been plotted in <a class="reference internal" href="#consistent-system-plot"><span class="std std-numref">Fig. 1</span></a> below.</p>
-<div class="figure align-default" id="consistent-system-plot" style="width: 500px">
-<div class="cell_output docutils container">
-<img alt="../_images/2.6_Consistent_inconsistent_and_indeterminate_systems_2_1.png" src="../_images/2.6_Consistent_inconsistent_and_indeterminate_systems_2_1.png" />
-</div>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Plots of the lines <span class="math notranslate nohighlight">\(x_1 + x_2 = 3\)</span> and <span class="math notranslate nohighlight">\(x_1 - x_2 = .1\)</span></span><a class="headerlink" href="#consistent-system-plot" title="Permalink to this image">#</a></p>
-</div>
+<figure class="align-default" id="consistent-system-plot" style="width: 500px">
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Plots of the lines <span class="math notranslate nohighlight">\(x_1 + x_2 = 3\)</span> and <span class="math notranslate nohighlight">\(x_1 - x_2 = .1\)</span></span><a class="headerlink" href="#consistent-system-plot" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The two lines intersect at <span class="math notranslate nohighlight">\((2,1)\)</span> so this system is consistent and has a unique solution. This can easily be confirmed using Gaussian elimination.</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
@@ -652,8 +652,8 @@ title="Print to PDF"
 <p class="admonition-title">Theorem: Consistent systems</p>
 <p>A system of linear equations <span class="math notranslate nohighlight">\(A\mathbf{x} = \mathbf{b}\)</span> is consistent if <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = \operatorname{rank}(A \mid \mathbf{b})\)</span>.</p>
 </div>
-</div>
-<div class="section" id="inconsistent-systems">
+</section>
+<section id="inconsistent-systems">
 <h2>Inconsistent systems<a class="headerlink" href="#inconsistent-systems" title="Permalink to this headline">#</a></h2>
 <p>If the lines that represent each equation in a system with two variables do not intersect then they must be parallel and we have an inconsistent system. Consider the following system of linear equations</p>
 <div class="amsmath math notranslate nohighlight">
@@ -662,12 +662,11 @@ title="Print to PDF"
     x_1 - x_2 &amp; = -1.
 \end{align*}\]</div>
 <p>The lines for these two equations have been plotted in <a class="reference internal" href="#inconsistent-system-plot"><span class="std std-numref">Fig. 2</span></a> below.</p>
-<div class="figure align-default" id="inconsistent-system-plot" style="width: 500px">
-<div class="cell_output docutils container">
-<img alt="../_images/2.6_Consistent_inconsistent_and_indeterminate_systems_2_3.png" src="../_images/2.6_Consistent_inconsistent_and_indeterminate_systems_2_3.png" />
-</div>
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Plots of the lines <span class="math notranslate nohighlight">\(x_1 - x_2 = 1\)</span> and <span class="math notranslate nohighlight">\(x_1 - x_2 = -1\)</span>.</span><a class="headerlink" href="#inconsistent-system-plot" title="Permalink to this image">#</a></p>
-</div>
+<figure class="align-default" id="inconsistent-system-plot" style="width: 500px">
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Plots of the lines <span class="math notranslate nohighlight">\(x_1 - x_2 = 1\)</span> and <span class="math notranslate nohighlight">\(x_1 - x_2 = -1\)</span>.</span><a class="headerlink" href="#inconsistent-system-plot" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The two lines do not intersect so this system does not have a solution. If we attempt to solve this using Gaussian elimination</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
@@ -687,8 +686,8 @@ title="Print to PDF"
 <p class="admonition-title">Theorem: Inconsistent systems</p>
 <p>A system of linear equations is inconsistent if <span class="math notranslate nohighlight">\(A\mathbf{x} = \mathbf{b}\)</span> is inconsistent if <span class="math notranslate nohighlight">\(\operatorname{rank}(A \mid \mathbf{b}) &gt; \operatorname{rank}(A).\)</span></p>
 </div>
-</div>
-<div class="section" id="indeterminate-system">
+</section>
+<section id="indeterminate-system">
 <h2>Indeterminate system<a class="headerlink" href="#indeterminate-system" title="Permalink to this headline">#</a></h2>
 <p>If the lines that represent each equation in a system with two variables are equivalent to each other then we have an indeterminate system where we have an infinite number of solutions. Consider the following system of linear equations</p>
 <div class="amsmath math notranslate nohighlight">
@@ -697,12 +696,11 @@ title="Print to PDF"
     2x_1 - 2x_2 &amp;= 2.
 \end{align*}\]</div>
 <p>The lines for these two equations have been plotted in <a class="reference internal" href="#indeterminate-system-plot"><span class="std std-numref">Fig. 3</span></a> below.</p>
-<div class="figure align-default" id="indeterminate-system-plot" style="width: 500px">
-<div class="cell_output docutils container">
-<img alt="../_images/2.6_Consistent_inconsistent_and_indeterminate_systems_2_5.png" src="../_images/2.6_Consistent_inconsistent_and_indeterminate_systems_2_5.png" />
-</div>
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Plots of the lines <span class="math notranslate nohighlight">\(x_1 - x_2 = 1\)</span> and <span class="math notranslate nohighlight">\(2x_1 - 2x_2 = 2\)</span>.</span><a class="headerlink" href="#indeterminate-system-plot" title="Permalink to this image">#</a></p>
-</div>
+<figure class="align-default" id="indeterminate-system-plot" style="width: 500px">
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Plots of the lines <span class="math notranslate nohighlight">\(x_1 - x_2 = 1\)</span> and <span class="math notranslate nohighlight">\(2x_1 - 2x_2 = 2\)</span>.</span><a class="headerlink" href="#indeterminate-system-plot" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The two lines are the same so any point along either line represents a solution to the system. If we attempt to solve this using Gaussian elimination</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
@@ -731,7 +729,7 @@ title="Print to PDF"
 <div class="seealso admonition" id="rank-example">
 <p class="admonition-title">Example 2.8</p>
 <p>Determine the rank of the coefficient matrix and the augmented matrix for the following systems of linear equations and classify them as either consistent, inconsistent or indeterminate systems.</p>
-<p>(i)   <span class="math notranslate nohighlight">\(\begin{array}{rcl}
+<p>  (i)   <span class="math notranslate nohighlight">\(\begin{array}{rcl}
     3x_1 + x_2 - 2x_3 &amp;=&amp; 1, \\
     x_1 - x_2 + 2x_3 &amp;=&amp; 3, \\
     2x_1 - 3x_2 + 7x_3 &amp;=&amp; 4.
@@ -774,7 +772,7 @@ Solution<div class="sd-summary-down docutils">
 \end{align*}\]</div>
 <p class="sd-card-text">The augmented matrix is now in reduced row echelon form. Since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = \operatorname{rank}(A \mid \mathbf{b}) = 3\)</span> then this is a consistent system by the <a class="reference internal" href="#consistent-system-theorem"><span class="std std-ref">theorem for consistent systems</span></a>. Using back substitution the solution is <span class="math notranslate nohighlight">\(x_1 = 1\)</span>, <span class="math notranslate nohighlight">\(x_2 = -10\)</span> and <span class="math notranslate nohighlight">\(x_3 = -4\)</span>.</p>
 </div>
-</details><p>(ii)   <span class="math notranslate nohighlight">\(\begin{array}{rcl}
+</details><p>  (ii)   <span class="math notranslate nohighlight">\(\begin{array}{rcl}
     x_1 - x_2 + 2x_3 &amp;=&amp; 3, \\
     2x_1 - 3x_2 + 7x_3 &amp;=&amp; 4, \\
     -x_1 + 3x_2 - 8x_3 &amp;=&amp; 1.
@@ -810,7 +808,7 @@ Solution<div class="sd-summary-down docutils">
 \end{align*}\]</div>
 <p class="sd-card-text">The augmented matrix is now in reduced row echelon form. Since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = \operatorname{rank}(A \mid \mathbf{b}) = 2\)</span> then this is a consistent system by the <a class="reference internal" href="#consistent-system-theorem"><span class="std std-ref">theorem for consistent systems</span></a>. Furthermore, since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) \)</span> is less that the number of unknowns then this is an indeterminate system by the <a class="reference internal" href="#indeterminate-system-theorem"><span class="std std-ref">theorem for indeterminate systems</span></a>. Let <span class="math notranslate nohighlight">\(x_3 = r\)</span> then using back substitution we have <span class="math notranslate nohighlight">\(x_1 = 5 + r\)</span> and <span class="math notranslate nohighlight">\(x_2 = 2 + 3r\)</span>.</p>
 </div>
-</details><p>(iii)    <span class="math notranslate nohighlight">\(\begin{array}{rcl}
+</details><p>  (iii)    <span class="math notranslate nohighlight">\(\begin{array}{rcl}
     x_1 + x_2 - 2x_3 &amp;=&amp; 1, \\
     2x_1 - x_2 + x_3 &amp;=&amp; 9, \\
     x_1 + 4x_2 - 7x_3 &amp;=&amp; 2.
@@ -847,8 +845,8 @@ Solution<div class="sd-summary-down docutils">
 <p class="sd-card-text">The augmented matrix is now in reduced row echelon form and <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = 2\)</span> and <span class="math notranslate nohighlight">\(\operatorname{rank}(A \mid \mathbf{b}) = 3\)</span>. Since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) &lt; \operatorname{rank}(A \mid \mathbf{b})\)</span> then this is an inconsistent system by the <a class="reference internal" href="#inconsistent-system-theorem"><span class="std std-ref">theorem for inconsistent systems</span></a>  and does not have a solution.</p>
 </div>
 </details></div>
-</div>
-<div class="section" id="python-code">
+</section>
+<section id="python-code">
 <h2>Python code<a class="headerlink" href="#python-code" title="Permalink to this headline">#</a></h2>
 <p>The SymPy command for calculating the rank of a matrix <code class="docutils literal notranslate"><span class="pre">A</span></code> is <code class="docutils literal notranslate"><span class="pre">A.rank()</span></code>. The code below classifies the linear systems of equations from <a class="reference internal" href="#rank-example"><span class="std std-ref">example 2.8</span></a> as consistent, indeterminate or inconsistent.</p>
 <div class="cell docutils container">
@@ -886,8 +884,8 @@ Solution<div class="sd-summary-down docutils">
 </div>
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

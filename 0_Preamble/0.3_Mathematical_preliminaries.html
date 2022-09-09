@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Mathematical preliminaries &#8212; Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -594,10 +595,10 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="mathematical-preliminaries">
+  <section class="tex2jax_ignore mathjax_ignore" id="mathematical-preliminaries">
 <h1>Mathematical preliminaries<a class="headerlink" href="#mathematical-preliminaries" title="Permalink to this headline">#</a></h1>
 <p>It is assumed that readers are familiar with the following definitions.</p>
-<div class="section" id="sets-of-numbers">
+<section id="sets-of-numbers">
 <h2>Sets of numbers<a class="headerlink" href="#sets-of-numbers" title="Permalink to this headline">#</a></h2>
 <p>The following notation is used to denote the <a class="reference external" href="https://en.wikipedia.org/wiki/Set_(mathematics)#Special_sets_of_numbers_in_mathematics">sets of numbers</a></p>
 <ul class="simple">
@@ -607,8 +608,8 @@ title="Print to PDF"
 <li><p><span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is the set of real numbers: <span class="math notranslate nohighlight">\(\mathbb{R} = \{ -\infty, \ldots, \infty\}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\mathbb{C}\)</span> is the set of complex numbers: <span class="math notranslate nohighlight">\(\mathbb{C} = \{ a + bi : a, b \in \mathbb{R}, i = \sqrt{-1} \}\)</span></p></li>
 </ul>
-</div>
-<div class="section" id="axioms-of-addition-and-multiplication">
+</section>
+<section id="axioms-of-addition-and-multiplication">
 <h2>Axioms of addition and multiplication<a class="headerlink" href="#axioms-of-addition-and-multiplication" title="Permalink to this headline">#</a></h2>
 <p>The following nine axioms<a class="footnote-reference brackets" href="#id2" id="id1">1</a> apply to addition and multiplication, denoted by <span class="math notranslate nohighlight">\(+\)</span> and <span class="math notranslate nohighlight">\(\cdot\)</span> respectively, over a field <span class="math notranslate nohighlight">\(F\)</span> (e.g., <span class="math notranslate nohighlight">\(F\)</span> could be the set of all numbers). For every <span class="math notranslate nohighlight">\(x,y,z \in F\)</span>:</p>
 <ul class="simple">
@@ -623,12 +624,12 @@ title="Print to PDF"
 <li><p><strong>Distributive law</strong>: <span class="math notranslate nohighlight">\(x \cdot (y + z) = x \cdot y + x \cdot z\)</span></p></li>
 </ul>
 <p>Note that the multiplication operator <span class="math notranslate nohighlight">\(\cdot\)</span> is often omitted, i.e., <span class="math notranslate nohighlight">\(x \cdot y = xy\)</span>.</p>
-</div>
-<div class="section" id="imaginary-numbers">
+</section>
+<section id="imaginary-numbers">
 <h2>Imaginary numbers<a class="headerlink" href="#imaginary-numbers" title="Permalink to this headline">#</a></h2>
 <p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Imaginary_number"><strong>imaginary number</strong></a> is denoted by <span class="math notranslate nohighlight">\(i\)</span> (some disciplines use <span class="math notranslate nohighlight">\(j\)</span> to denote the imaginary number) and defined to be <span class="math notranslate nohighlight">\(i^2 = -1\)</span>. <a class="reference external" href="https://en.wikipedia.org/wiki/Complex_number"><strong>Complex numbers</strong></a> are numbers of the form <span class="math notranslate nohighlight">\(a + bi\)</span> where <span class="math notranslate nohighlight">\(a,b\in \mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(a\)</span> is called the <strong>real part</strong> and <span class="math notranslate nohighlight">\(b\)</span> is called the <strong>imaginary part</strong>.</p>
-</div>
-<div class="section" id="summation">
+</section>
+<section id="summation">
 <h2>Summation<a class="headerlink" href="#summation" title="Permalink to this headline">#</a></h2>
 <p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Summation">sum</a> of <span class="math notranslate nohighlight">\(a_1, a_2, \ldots, a_n\)</span> is denoted using</p>
 <div class="math notranslate nohighlight">
@@ -640,8 +641,8 @@ title="Print to PDF"
 <dd><p>An axiom is a rule that we assume is true for a starting point for further reasoning and arguments.</p>
 </dd>
 </dl>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {

@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Cramer’s rule &#8212; Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -36,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -538,7 +539,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="cramer-s-rule">
+  <section class="tex2jax_ignore mathjax_ignore" id="cramer-s-rule">
 <h1>Cramer’s rule<a class="headerlink" href="#cramer-s-rule" title="Permalink to this headline">#</a></h1>
 <p><strong>Cramer’s rule</strong> is an explicit rule for calculating the solution to a system of linear equations using determinants.</p>
 <div class="important admonition" id="cramers-rule-theorem">
@@ -574,23 +575,15 @@ title="Print to PDF"
 <div class="seealso admonition" id="cramers-rule-example">
 <p class="admonition-title">Example 2.3</p>
 <p>Solve the following systems of linear equations using Cramer’s rule</p>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row docutils">
-<div class="sd-col sd-d-flex-column docutils">
-<p>(i)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
+<p>  (i)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
     3x_1 - 2x_2 &amp;= -4, \\
     x_1 - 3x_2 &amp;= 1.
 \end{array}\)</span></p>
-</div>
-<div class="sd-col sd-d-flex-column docutils">
-<p>(ii)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
+<p>  (ii)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
     -2x_1 - 3x_2 - x_3 &amp;= -5, \\
     -4x_1 + 4x_2 + 3x_3 &amp;= -20, \\
     -3x_1 &amp;= -12.
 \end{array}\)</span></p>
-</div>
-</div>
-</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -598,7 +591,7 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">(i) <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 3 &amp; -2 \\ 1 &amp; -3 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b} = \begin{pmatrix} -4 \\ 1 \end{pmatrix}\)</span></p>
+<p class="sd-card-text">(i)   <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 3 &amp; -2 \\ 1 &amp; -3 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b} = \begin{pmatrix} -4 \\ 1 \end{pmatrix}\)</span></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     x_1 &amp;= \frac{
@@ -615,7 +608,7 @@ Solution<div class="sd-summary-down docutils">
     \begin{pmatrix} -2 \\ -1 \end{pmatrix} =
     \begin{pmatrix} -4 \\ 1 \end{pmatrix} = \mathbf{b}.
 \end{align*}\]</div>
-<p class="sd-card-text">(ii) <span class="math notranslate nohighlight">\(A = \begin{pmatrix} -2 &amp; -3 &amp; -1 \\ -4 &amp; 4 &amp; 3 \\ -3 &amp; 0 &amp; 0 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b} = \begin{pmatrix} -5 \\ -20 \\ -12 \end{pmatrix}\)</span></p>
+<p class="sd-card-text">(ii)   <span class="math notranslate nohighlight">\(A = \begin{pmatrix} -2 &amp; -3 &amp; -1 \\ -4 &amp; 4 &amp; 3 \\ -3 &amp; 0 &amp; 0 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b} = \begin{pmatrix} -5 \\ -20 \\ -12 \end{pmatrix}\)</span></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     x_1 &amp;= \frac{
@@ -646,7 +639,7 @@ Solution<div class="sd-summary-down docutils">
 \end{align*}\]</div>
 </div>
 </details></div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
