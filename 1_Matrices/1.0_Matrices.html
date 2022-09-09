@@ -21,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -37,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -50,8 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/1_Matrices/1.0_Matrices.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -716,19 +716,19 @@ title="Print to PDF"
 <p>  (ii)   <span class="math notranslate nohighlight">\(B = \begin{pmatrix} a &amp; b \\ c &amp; d \\ e &amp; f \end{pmatrix}\)</span></p>
 <p>  (iii)   <span class="math notranslate nohighlight">\(C = \begin{pmatrix} \sin(x) &amp; \ln(x) &amp; \cos(x+1) \end{pmatrix}\)</span></p>
 <p>  (iv)   <span class="math notranslate nohighlight">\(D = \begin{pmatrix} 0 \end{pmatrix}\)</span></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-````{dropdown} Solution
-
-&amp;emsp; (i) &amp;emsp; $2\times 2 $
-
-&amp;emsp; (ii) &amp;emsp; $3\times 2$
-
-&amp;emsp; (iii) &amp;emsp; $1 \times 3$
-
-&amp;emsp; (iv) &amp;emsp; $1 \times 1$
-</pre></div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">  (i)   <span class="math notranslate nohighlight">\(2\times 2 \)</span></p>
+<p class="sd-card-text">  (ii)   <span class="math notranslate nohighlight">\(3\times 2\)</span></p>
+<p class="sd-card-text">  (iii)   <span class="math notranslate nohighlight">\(1 \times 3\)</span></p>
+<p class="sd-card-text">  (iv)   <span class="math notranslate nohighlight">\(1 \times 1\)</span></p>
 </div>
-</div>
+</details></div>
 <section id="python-code">
 <h3>Python code<a class="headerlink" href="#python-code" title="Permalink to this headline">#</a></h3>
 <p>To define and perform operations on matrices in Python we can use the <strong>SymPy</strong> library (short for <em>symbolic Python</em>) library. A matrix can then be defined using the <code class="docutils literal notranslate"><span class="pre">Matrix</span></code> command, for example</p>
@@ -761,11 +761,10 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>  (indexing-a-matrix-section)=</p>
 </section>
 </section>
 <section id="indexing-a-matrix">
-<h2>Indexing a matrix<a class="headerlink" href="#indexing-a-matrix" title="Permalink to this headline">#</a></h2>
+<span id="indexing-a-matrix-section"></span><h2>Indexing a matrix<a class="headerlink" href="#indexing-a-matrix" title="Permalink to this headline">#</a></h2>
 <p>Matrices are typically labeled using uppercase characters (e.g. <span class="math notranslate nohighlight">\(A\)</span>) and the elements of a matrix are labeled with the corresponding lowercase character (e.g. <span class="math notranslate nohighlight">\(a\)</span>). Individual entries of a matrix are <strong>indexed</strong> using two subscript indices: <span class="math notranslate nohighlight">\(a_{ij}\)</span> where <span class="math notranslate nohighlight">\(i\)</span> corresponds to the row number reading from top to bottom and <span class="math notranslate nohighlight">\(j\)</span> is the column number reading from left to right.</p>
 <p>For example, let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\(m\times n\)</span> matrix then</p>
 <div class="math notranslate nohighlight">
@@ -797,10 +796,10 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">  (i)  <span class="math notranslate nohighlight">\(a_{11} = 2\)</span></p>
-<p class="sd-card-text">  (ii) <span class="math notranslate nohighlight">\(a_{13} = -3\)</span></p>
-<p class="sd-card-text">  (iii) <span class="math notranslate nohighlight">\([A]_{21} = 1\)</span></p>
-<p class="sd-card-text">  (iv) <span class="math notranslate nohighlight">\(A[2,2] = 7\)</span></p>
+<p class="sd-card-text">  (i)    <span class="math notranslate nohighlight">\(a_{11} = 2\)</span></p>
+<p class="sd-card-text">  (ii)   <span class="math notranslate nohighlight">\(a_{13} = -3\)</span></p>
+<p class="sd-card-text">  (iii)   <span class="math notranslate nohighlight">\([A]_{21} = 1\)</span></p>
+<p class="sd-card-text">  (iv)   <span class="math notranslate nohighlight">\(A[2,2] = 7\)</span></p>
 </div>
 </details></div>
 <section id="id1">
@@ -898,9 +897,9 @@ Solution<div class="sd-summary-down docutils">
 <div class="seealso admonition" id="matrix-addition-example">
 <p class="admonition-title">Example 1.3</p>
 <p>Evaluate the following:</p>
-<p>  (i) <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} + \begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}\)</span></p>
-<p>  (ii) <span class="math notranslate nohighlight">\(\begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix} - \begin{pmatrix} 7 \\ -11 \\ -13 \end{pmatrix}\)</span></p>
-<p>  (iii) <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 3 &amp; 5 \\ 7 &amp; 9 &amp; 11 \end{pmatrix} + \begin{pmatrix}2 &amp; 3 \\ 5 &amp; 7 \end{pmatrix}\)</span></p>
+<p>  (i)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} + \begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}\)</span></p>
+<p>  (ii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix} - \begin{pmatrix} 7 \\ -11 \\ -13 \end{pmatrix}\)</span></p>
+<p>  (iii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 3 &amp; 5 \\ 7 &amp; 9 &amp; 11 \end{pmatrix} + \begin{pmatrix}2 &amp; 3 \\ 5 &amp; 7 \end{pmatrix}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -908,9 +907,9 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">  (i) <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} + \begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix} = \begin{pmatrix} 1 + 5 &amp; 2 + 6 \\ 3 + 7 &amp; 4 + 8 \end{pmatrix}= \begin{pmatrix}6 &amp; 8 \\ 10 &amp; 12 \end{pmatrix}\)</span></p>
-<p class="sd-card-text">  (ii) <span class="math notranslate nohighlight">\(\begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix} - \begin{pmatrix} 7 \\ -11 \\ -13 \end{pmatrix} = \begin{pmatrix}2 - 7 \\ 3 + 11 \\ 5 + 13 \end{pmatrix} = \begin{pmatrix} -5 \\ 14 \\ 18\end{pmatrix}\)</span></p>
-<p class="sd-card-text">  (iii) undefined since the left matrix is <span class="math notranslate nohighlight">\(2\times 3\)</span> and the right matrix is <span class="math notranslate nohighlight">\(2\times 2\)</span></p>
+<p class="sd-card-text">  (i)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} + \begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix} = \begin{pmatrix} 1 + 5 &amp; 2 + 6 \\ 3 + 7 &amp; 4 + 8 \end{pmatrix}= \begin{pmatrix}6 &amp; 8 \\ 10 &amp; 12 \end{pmatrix}\)</span></p>
+<p class="sd-card-text">  (ii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix} - \begin{pmatrix} 7 \\ -11 \\ -13 \end{pmatrix} = \begin{pmatrix}2 - 7 \\ 3 + 11 \\ 5 + 13 \end{pmatrix} = \begin{pmatrix} -5 \\ 14 \\ 18\end{pmatrix}\)</span></p>
+<p class="sd-card-text">  (iii)   undefined since the left matrix is <span class="math notranslate nohighlight">\(2\times 3\)</span> and the right matrix is <span class="math notranslate nohighlight">\(2\times 2\)</span></p>
 </div>
 </details></div>
 <section id="id2">
@@ -972,10 +971,10 @@ Solution<div class="sd-summary-down docutils">
 <div class="seealso admonition" id="scalar-multiplication-of-matrices-example">
 <p class="admonition-title">Example 1.4</p>
 <p>Evaluate the following:</p>
-<p>  (i) <span class="math notranslate nohighlight">\(2 \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}\)</span></p>
-<p>  (ii) <span class="math notranslate nohighlight">\(\dfrac{1}{2} \begin{pmatrix} 0 &amp; -1 \\ 3 &amp; 2 \\ 4 &amp; -2 \end{pmatrix}\)</span></p>
-<p>  (iii) <span class="math notranslate nohighlight">\(\dfrac{1}{3} \begin{pmatrix}1 &amp; 6 &amp; 4 \\ 0 &amp; 3 &amp; -1 \end{pmatrix}\)</span></p>
-<p>  (iv) <span class="math notranslate nohighlight">\(101 \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix} - 99 \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix}\)</span></p>
+<p>  (i)   <span class="math notranslate nohighlight">\(2 \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}\)</span></p>
+<p>  (ii)   <span class="math notranslate nohighlight">\(\dfrac{1}{2} \begin{pmatrix} 0 &amp; -1 \\ 3 &amp; 2 \\ 4 &amp; -2 \end{pmatrix}\)</span></p>
+<p>  (iii)   <span class="math notranslate nohighlight">\(\dfrac{1}{3} \begin{pmatrix}1 &amp; 6 &amp; 4 \\ 0 &amp; 3 &amp; -1 \end{pmatrix}\)</span></p>
+<p>  (iv)   <span class="math notranslate nohighlight">\(101 \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix} - 99 \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -983,10 +982,10 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">  (i) <span class="math notranslate nohighlight">\(2 \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} = \begin{pmatrix}2 &amp; 4 \\ 6 &amp; 8 \end{pmatrix}\)</span></p>
-<p class="sd-card-text">  (ii) <span class="math notranslate nohighlight">\(\dfrac{1}{2} \begin{pmatrix} 0 &amp; -1 \\ 3 &amp; 2 \\ 4 &amp; -2 \end{pmatrix} =  \begin{pmatrix} 0 &amp; -\frac{1}{2} \\ \frac{3}{2} &amp; 1 \\ 2 &amp; -1 \end{pmatrix}\)</span></p>
-<p class="sd-card-text">  (iii) <span class="math notranslate nohighlight">\(\dfrac{1}{3} \begin{pmatrix}1 &amp; 6 &amp; 4 \\ 0 &amp; 3 &amp; -1 \end{pmatrix} = \begin{pmatrix} \frac{1}{3} &amp; 2 &amp; \frac{4}{3} \\ 0 &amp; 1 &amp; -\frac{1}{3} \end{pmatrix}\)</span></p>
-<p class="sd-card-text">  (iv) <span class="math notranslate nohighlight">\(101\begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix} - 99 \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix} = 2 \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix} =  \begin{pmatrix} 2 &amp; 4 \\ 0 &amp; 2 \end{pmatrix}\)</span></p>
+<p class="sd-card-text">  (i)   <span class="math notranslate nohighlight">\(2 \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} = \begin{pmatrix}2 &amp; 4 \\ 6 &amp; 8 \end{pmatrix}\)</span></p>
+<p class="sd-card-text">  (ii)   <span class="math notranslate nohighlight">\(\dfrac{1}{2} \begin{pmatrix} 0 &amp; -1 \\ 3 &amp; 2 \\ 4 &amp; -2 \end{pmatrix} =  \begin{pmatrix} 0 &amp; -\frac{1}{2} \\ \frac{3}{2} &amp; 1 \\ 2 &amp; -1 \end{pmatrix}\)</span></p>
+<p class="sd-card-text">  (iii)   <span class="math notranslate nohighlight">\(\dfrac{1}{3} \begin{pmatrix}1 &amp; 6 &amp; 4 \\ 0 &amp; 3 &amp; -1 \end{pmatrix} = \begin{pmatrix} \frac{1}{3} &amp; 2 &amp; \frac{4}{3} \\ 0 &amp; 1 &amp; -\frac{1}{3} \end{pmatrix}\)</span></p>
+<p class="sd-card-text">  (iv)   <span class="math notranslate nohighlight">\(101\begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix} - 99 \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix} = 2 \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix} =  \begin{pmatrix} 2 &amp; 4 \\ 0 &amp; 2 \end{pmatrix}\)</span></p>
 </div>
 </details></div>
 </section>
