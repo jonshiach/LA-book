@@ -25,19 +25,19 @@
 #     d = | \overrightarrow{RQ} |.
 # \end{align*}
 # 
-# :::{figure} ../Images/line_point_distance.png
+# ```{figure} ../Images/line_point_distance.png
 # :name: line-point-distance-figure
 # 
 # The shortest distance of a point $Q$ from the line $\ell$ is the length of the chord $R \to Q$ which is perpendicular to $\ell$.
-# :::
+# ```
 # 
 # Since $\overrightarrow{RQ}$ is perpendicular to $d$ then $\overrightarrow{RQ} \cdot \mathbf{d} = 0$ so we calculate the position of $R$ that satisfies
 # 
-# :::{math}
+# ```{math}
 # :label: point-line-distance-equation
 # 
 # (Q - R) \cdot \mathbf{d} = 0.
-# :::
+# ```
 # 
 # Substituting $R = P + t\mathbf{d}$ into equation {eq}`point-line-distance-equation` and rearranging to make $t$ the subject gives
 # 
@@ -49,26 +49,26 @@
 # 
 # This gives the value of the parameter $t$ that can be used to calculate the co-ordinates of the point $R$ and therefore the shortest distance between the point $Q$ and the line $\ell$ is $|Q - R|$.
 # 
-# ::::{admonition} Theorem: The shortest distance between a point and a line
+# ````{admonition} Theorem: The shortest distance between a point and a line
 # :class: important
 # :name: point-line-distance-theorem
 # 
 # The shortest distance between the point $Q$ and a line that passes through the point $P$ in the direction $\mathbf{d}$ is $|Q - R|$ where $R = P + t\mathbf{d}$ and 
 # 
-# :::{math}
+# ```{math}
 # :label: point-line-t-equation
 # 
 # t = \frac{(Q - P) \cdot \mathbf{d}}{ \mathbf{d} \cdot \mathbf{d}}.
-# :::
-# ::::
+# ```
+# ````
 # 
-# ::::{admonition} Example 4.8
+# ````{admonition} Example 4.8
 # :class: seealso
 # :name: point-line-distance-example
 # 
 # Find the shortest distance between the point $Q = (2,2,2)$ and the line $\ell : (t,t-2, t+1)$.
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # 
 # Writing $\ell$ as a vector equation 
 # 
@@ -103,13 +103,13 @@
 # and the shortest distance is $|Q - R|$ so
 # 
 # \begin{align*}
-#     Q - R = \begin{pmatrix} 2 \\ 2 \\ 2 \end{pmatrix} - 
+#     Q - R &= \begin{pmatrix} 2 \\ 2 \\ 2 \end{pmatrix} - 
 #     \begin{pmatrix} \frac{7}{3} \\ \frac{1}{3} \\ \frac{10}{3} \end{pmatrix} =
 #     \begin{pmatrix} -\frac{1}{3} \\ \frac{5}{3} \\ -4/ 3 \end{pmatrix}, \\
 #     \therefore |\overrightarrow{QR}| &= \sqrt{\left(-\frac{1}{3}\right)^2 + \left(\frac{5}{3}\right)^2 + \left( -\frac{4}{3}\right)^2} = \sqrt{\frac{14}{3}} \approx 2.16.
 # \end{align*}
-# :::
-# ::::
+# ```
+# ````
 # 
 # ## Shortest distance between two lines
 # 
@@ -119,19 +119,19 @@
 # - If the two lines are parallel then any point on $\ell_1$ can gives the shortest distance between $\ell_1$ and $\ell_2$. Hence we simply choose a point $R$ on $\ell_2$ and apply method for [finding the distance between a point and a line](point-line-distance-theorem).
 # - If the two lines are skew then the shortest distance is the distance of the chord that is perpendicular to both $\ell_1$ and $\ell_2$ ({numref}`line-line-distance-figure`). 
 # 
-# :::{figure} ../Images/line_line_distance.png
+# ```{figure} ../Images/line_line_distance.png
 # :name: line-line-distance-figure
 # 
 # The shortest distance between skew lines is the distance of the chord which is perpendicular to both lines.
-# :::
+# ```
 # 
 # If $Q_1$ and $Q_2$ are points on the lines $\ell_1$ and $\ell_2$ respectively then the chord $Q_2 - Q_1$ which is perpendicular to both lines has the direction vector $\mathbf{n} = \mathbf{d}_1 \times \mathbf{d}_2$. If $d$ is the distance between $Q_1$ and $Q_2$ then
 # 
-# :::{math}
+# ```{math}
 # :label: line-line-distance-equation-1
 # 
 # Q_2 - Q_1 = d (\mathbf{d}_1 \times \mathbf{d}_2),
-# :::
+# ```
 # 
 # Let $\hat{\mathbf{n}} = \dfrac{\mathbf{d}_1 \times \mathbf{d}_2}{|\mathbf{d}_1 \times \mathbf{d}_2|}$ and substituting the equations of $Q_1$ and $Q_2$ equation {eq}`line-line-distance-equation-1` gives
 # 
@@ -157,28 +157,28 @@
 #     d &= (P_2 - P_1) \cdot \hat{\mathbf{n}}.
 # \end{align*}
 # 
-# ::::{admonition} Theorem: The shortest distance between two skew lines
+# ````{admonition} Theorem: The shortest distance between two skew lines
 # :class: important
 # :name: line-line-distance-theorem
 # 
 # The shortest distance between two skew lines $Q_1 = P_1 + t \mathbf{d}_1$ and $Q_2 = P_2 + t \mathbf{d}_2$ is
 # 
-# :::{math}
+# ```{math}
 # :label: line-line-distance-equation
 # 
 # d = (P_2 - P_1) \cdot \hat{\mathbf{n}}.
-# :::
+# ```
 # 
 # where $\mathbf{n} = \dfrac{\mathbf{d}_1 \times \mathbf{d}_2}{|\mathbf{d}_1 \times \mathbf{d}_2|}$.
-# ::::
+# ````
 # 
-# ::::{admonition} Example 4.9
+# ````{admonition} Example 4.9
 # :class: seealso
 # :name: line-line-distance-example
 # 
 # Find the shortest distance between the two lines $\ell_1 = \{(t,1+4t,3 + 2t):t\in\mathbb{R}\}$ and $\ell_2 = \{(1,1+2t,3 + 4t):t\in\mathbb{R}\}$.
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # 
 # First, we need to identify the direction vectors $\mathbf{d}_1$ and $\mathbf{d}_2$. Writing $\ell_1$ and $\ell_2$ as vector equations gives
 # 
@@ -216,5 +216,5 @@
 #     \begin{pmatrix} \frac{6\sqrt{41}}{41} \\ -\frac{2\sqrt{41}}{41} \\ \frac{\sqrt{41}}{41} \end{pmatrix} \\
 #     &= \frac{6 \sqrt{41}}{41}.
 # \end{align*}
-# :::
-# ::::
+# ```
+# ````

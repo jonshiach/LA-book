@@ -18,7 +18,7 @@
 # 
 # ## Definition
 # 
-# :::{admonition} Definition: Linear transformation
+# ```{admonition} Definition: Linear transformation
 # :class: note
 # :name: linear-transformation-definition
 # 
@@ -28,7 +28,7 @@
 # - scalar multiplication: for all $x \in V$ and $\alpha \in F$, $T(\alpha x) = \alpha T(x)$.
 # 
 # The result of applying a linear transformation to an object is known as the **image**.
-# :::
+# ```
 # 
 # For example, let $V = \mathbb{R}^2$ and $W = \mathbb{R}^3$ then $T : V \to W$ defined by $T : (x, y) \mapsto (x, y, 0)$ is a linear transformation. Let $(x_1, y_1), (x_2, y_2) \in \mathbb{R}^2$ and $\alpha \in F$ then
 # 
@@ -52,20 +52,20 @@
 # 
 # To show whether a transformation is a linear transformation can combine both conditions from the [definition of a linear transformation](linear-transformation-definition) to show that
 # 
-# :::{math}
+# ```{math}
 # :label: linear-transformation-condition-equation
 # T(x + \alpha y) = T(x) + \alpha T(y).
-# :::
+# ```
 # 
-# ::::{admonition} Example 6.1
+# ````{admonition} Example 6.1
 # :class: seealso
 # :name: linear-transformation-example
 # 
 # Determine which of the following transformations are linear transformations
 # 
-# (a) &emsp; $T: \mathbb{R}^3 \to \mathbb{R}^2$ defined by $T: (x, y, z) \mapsto (x, y)$
+# &emsp; (i) &emsp; $T: \mathbb{R}^3 \to \mathbb{R}^2$ defined by $T: (x, y, z) \mapsto (x, y)$
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # Let $(x_1, y_1, z_1), (x_2, y_2, z_2) \in \mathbb{R}^3$ and $\alpha \in F$ then
 # 
 # \begin{align*}
@@ -78,11 +78,11 @@
 # \end{align*}
 # 
 # So $T: (x, y, z) \mapsto (x, y)$ is a linear transformation.
-# :::
+# ```
 # 
-# (b) &emsp; $T: \mathbb{R}^3 \to \mathbb{R}^2$ defined by $T: (x, y, z) \mapsto (x + 3, y)$
+# &emsp; (ii) &emsp; $T: \mathbb{R}^3 \to \mathbb{R}^2$ defined by $T: (x, y, z) \mapsto (x + 3, y)$
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # Let $(x_1, y_1, z_1)$, $(x_2, y_2, z_2) \in \mathbb{R}^3$ and $\alpha \in F$ then
 # 
 # \begin{align*}
@@ -103,11 +103,11 @@
 #     &= \begin{pmatrix} 4 \\ 0 \\ 0 \end{pmatrix} + \begin{pmatrix} 5 \\ 0 \\ 0 \end{pmatrix}
 #     = \begin{pmatrix} 9 \\ 0 \end{pmatrix}.
 # \end{align*}
-# :::
+# ```
 # 
-# (c) &emsp; $T: P(\mathbb{R}) \to P(\mathbb{R})$ defined by $T: f(x) \mapsto f(x) \dfrac{\mathrm{d}}{\mathrm{d}x} f(x)$
+# &emsp; (iii) &emsp; $T: P(\mathbb{R}) \to P(\mathbb{R})$ defined by $T: f(x) \mapsto f(x) \dfrac{\mathrm{d}}{\mathrm{d}x} f(x)$
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # 
 # Let $x^2 \in P(\mathbb{R})$ and $2 \in F$ then 
 # 
@@ -116,8 +116,8 @@
 # \end{align*}
 # 
 # so $T: f(x) \mapsto f(x) \dfrac{\mathrm{d}}{\mathrm{d}x} f(x)$ is not a linear transformation.
-# :::
-# ::::
+# ```
+# ````
 # 
 # 
 # (transformation-matrix-section)=
@@ -150,7 +150,7 @@
 # i.e., we can apply a linear transformation in $\mathbb{R}^n$ by multiplying a vector $\mathbf{u}$ by a matrix $A$.
 # 
 # 
-# :::{admonition} Definition: Transformation matrix
+# ```{admonition} Definition: Transformation matrix
 # :class: note
 # :name: transformation-matrix-definition
 # 
@@ -171,15 +171,15 @@
 # \end{align*}
 # 
 # $A$ is said to be the **matrix representation of the linear transformation** $T$ (also known as the **transformation matrix**).
-# :::
+# ```
 # 
-# ::::{admonition} Example 6.2
+# ````{admonition} Example 6.2
 # :class: seealso
 # :name: transformation-matrix-example
 # 
 # A linear transformation $T:\mathbb{R}^2 \to \mathbb{R}^2$ is defined by $T: (x, y) \mapsto (3x + y, x + 2y)$. Calculate the transformation matrix and use it to calculate $T(1, 1)$.
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # 
 # Since we are mapping from $\mathbb{R}^2$ the transformation matrix is
 # 
@@ -211,16 +211,16 @@
 #     \begin{pmatrix} 4 \\ 3 \end{pmatrix}.
 # \end{align*}
 # 
-# :::
-# ::::
+# ```
+# ````
 # 
 # The affects of the linear transformation from [example 6.2](linear-transformation-example) is illustrated in {numref}`linear-transformation-figure`. Note that the transformation $T$ can be thought of as changing the basis of the vector space. The unit square with respect to the basis $\{\mathbf{e}_1, \mathbf{e}_1\}$ has been transformed into a unit parallelogram with respect to the basis $\{ T(\mathbf{e}_1), T(\mathbf{e}_2)\}$.
 # 
-# :::{figure} ../Images/linear_transformation.png
+# ```{figure} ../Images/linear_transformation.png
 # :name: linear-transformation-figure
 # 
 # The affect of applying a linear transformation $T: (x,y) \mapsto (3x + y, x + 2y)$ to the vector $(1,1)$.
-# :::
+# ```
 # 
 # ## Finding the transformation matrix from a set of images
 # 
@@ -256,20 +256,20 @@
 #     \end{pmatrix}^{-1}
 # \end{align*}
 # 
-# ::::{admonition} Theorem: Determining the linear transformation given the inputs and image vectors
+# ````{admonition} Theorem: Determining the linear transformation given the inputs and image vectors
 # :class: important
 # :name: finding-transformation-matrix-theorem
 # 
 # Given a linear transformation $T: \mathbb{R}^n \to \mathbb{R}^m$ applied to a set of $n$ vectors $\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_n$ with known image vectors $T(\mathbf{u}_1), T(\mathbf{u}_2), \ldots, T(\mathbf{u}_n)$ then the transformation matrix $A$ for $T$ is 
 # 
-# :::{math}
+# ```{math}
 # :label: determining-the-transformation-matrix
 # 
 # A = (T(\mathbf{u}_1), T(\mathbf{u}_2), \ldots, T(\mathbf{u}_n)) \cdot (\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_n)^{-1}.
-# :::
-# ::::
+# ```
+# ````
 # 
-# ::::{admonition} Example 6.3
+# ````{admonition} Example 6.3
 # :class: seealso
 # :name: transformation-matrix-example-2
 # 
@@ -280,7 +280,7 @@
 #     T\begin{pmatrix} 1 \\ 2 \end{pmatrix} &= \begin{pmatrix} 5 \\ 5 \end{pmatrix}.
 # \end{align*}
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # 
 # Using Gauss-Jordan elimination to determine the inverse of $(\mathbf{u}_1, \mathbf{u}_2)$
 # 
@@ -312,11 +312,11 @@
 # 
 # This is the transformation matrix from [example 6.2](transformation-matrix-example).
 # 
-# ::::
+# ````
 # 
 # ## Inverse linear transformation
 # 
-# ::::{admonition} Definition: Inverse linear transformation
+# ````{admonition} Definition: Inverse linear transformation
 # :class: note
 # :name: inverse-transformation-definition
 # 
@@ -328,15 +328,15 @@
 # \end{align*}
 # 
 # where $A^{-1}$ is the transformation matrix for $T^{-1}$.
-# ::::
+# ````
 # 
-# ::::{admonition} Example 6.4
+# ````{admonition} Example 6.4
 # :class: seealso
 # :name: inverse-transformation-example
 #     
 # Determine the inverse of the transformation $T: \mathbb{R}^2 \to \mathbb{R}^2$ defined by $T(x, y) \mapsto (3 x + y, x + 2 y)$ and calculate $T^{-1}(4, 3)$.
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # We saw in [example 6.2](transformation-matrix-example) that the transformation matrix for $T$ is
 # 
 # \begin{align*}
@@ -366,5 +366,5 @@
 #     \begin{pmatrix} 4 \\ 3 \end{pmatrix} 
 #     = \begin{pmatrix} 1 \\ 1 \end{pmatrix}.
 # \end{align*}
-# :::
-# ::::
+# ```
+# ````

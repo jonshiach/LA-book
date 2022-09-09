@@ -164,7 +164,7 @@ display(adjA)
 # 
 # ```{dropdown} Solution
 # 
-# &emsp; (i)
+# (i)
 # \begin{align*}
 #     \det(A) &= 2, \\
 #     \operatorname{adj}(A) &= \begin{pmatrix} 2 & -3 \\ 0 & 1 \end{pmatrix}^\mathrm{T}  = \begin{pmatrix} 2 & 0 \\ -3 & 1\end{pmatrix} \\
@@ -175,7 +175,7 @@ display(adjA)
 #     A^{-1}A = \frac{1}{2}\begin{pmatrix} 2 & 0 \\ -3 & 1\end{pmatrix}\begin{pmatrix}1 & 0 \\ 3 & 2\end{pmatrix} = \frac{1}{2} \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} = I. 
 # \end{align*}
 # 
-# &emsp; (ii)
+# (ii)
 # \begin{align*}
 #     \det\begin{pmatrix} 1 & 2 & 0 \\ -2 & 1 & 1 \\ 1 & 0 & 3 \end{pmatrix} &= 
 #     \begin{vmatrix} 1 & 1 \\ 0 & 3 \end{vmatrix}  - 2 \begin{vmatrix}-2 & 1 \\ 1 & 3 \end{vmatrix} =
@@ -193,7 +193,7 @@ display(adjA)
 #     \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix} = I.
 # \end{align*}
 # 
-# &emsp; (iii)
+# (iii)
 # \begin{align*}
 #     \det\begin{pmatrix}1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{pmatrix} &= 
 #     \begin{vmatrix} 5 & 6 \\ 8 & 9 \end{vmatrix} - 2

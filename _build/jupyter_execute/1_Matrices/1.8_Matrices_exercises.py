@@ -549,8 +549,8 @@
 # So we have four possible solutions
 # 
 # \begin{align*}
-#     X &= \begin{pmatrix} \pm \sqrt{3} & 0 \\ - 1 / (\pm \sqrt{3} \pm \sqrt{5}) & \pm\sqrt{5} \end{pmatrix}, &
-#     X &\begin{pmatrix} \pm \sqrt{3} & 0 \\ - 1 / (\pm \sqrt{3} \mp \sqrt{5}) & \mp\sqrt{5} \end{pmatrix}.
+#     X &= \begin{pmatrix} \pm \sqrt{3} & 0 \\ - 1 / (\pm \sqrt{3} \pm \sqrt{5}) & \pm\sqrt{5} \end{pmatrix}, \text{ or }\\
+#     X &= \begin{pmatrix} \pm \sqrt{3} & 0 \\ - 1 / (\pm \sqrt{3} \mp \sqrt{5}) & \mp\sqrt{5} \end{pmatrix}.
 # \end{align*}
 # 
 # For the case when $a = -d$

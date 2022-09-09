@@ -38,7 +38,7 @@
 # The dimension or size of a matrix is defined to be **rows** $\times$ **columns**, where 'rows' is the number of horizontal rows and 'columns' the number of vertical columns of said matrix. If rows $=$ columns we say that the matrix is a square matrix.
 # ````
 # 
-# `````{admonition} Example 1.1
+# ````{admonition} Example 1.1
 # :class: seealso
 # :name: matrix-dimension-example
 # 
@@ -52,9 +52,7 @@
 # 
 # &emsp; (iv) &emsp; $D = \begin{pmatrix} 0 \end{pmatrix}$
 # 
-# ````
-# 
-# ````{dropdown} Solution
+# ```{dropdown} Solution
 # 
 # &emsp; (i) &emsp; $2\times 2 $
 # 
@@ -63,8 +61,8 @@
 # &emsp; (iii) &emsp; $1 \times 3$
 # 
 # &emsp; (iv) &emsp; $1 \times 1$
+# ```
 # ````
-# `````
 # 
 # ### Python code
 # 
@@ -90,7 +88,7 @@ nrows, ncols = A.shape
 print(f"The matrix A is an {nrows} x {ncols} matrix")
 
 
-# &emsp; (indexing-a-matrix-section)=
+# (indexing-a-matrix-section)=
 # ## Indexing a matrix
 # 
 # Matrices are typically labeled using uppercase characters (e.g. $A$) and the elements of a matrix are labeled with the corresponding lowercase character (e.g. $a$). Individual entries of a matrix are **indexed** using two subscript indices: $a_{ij}$ where $i$ corresponds to the row number reading from top to bottom and $j$ is the column number reading from left to right. 
@@ -130,13 +128,13 @@ print(f"The matrix A is an {nrows} x {ncols} matrix")
 # 
 # ````{dropdown} Solution
 # 
-# &emsp; (i)  $a_{11} = 2$
+# &emsp; (i)  &emsp; $a_{11} = 2$
 # 
-# &emsp; (ii) $a_{13} = -3$
+# &emsp; (ii) &emsp; $a_{13} = -3$
 # 
-# &emsp; (iii) $[A]_{21} = 1$
+# &emsp; (iii) &emsp; $[A]_{21} = 1$
 # 
-# &emsp; (iv) $A[2,2] = 7$
+# &emsp; (iv) &emsp; $A[2,2] = 7$
 #     
 # ````
 # `````
@@ -242,20 +240,20 @@ print(f"(iv)  A[2,2] = {A[1,1]}")
 # 
 # Evaluate the following:
 # 
-# &emsp; (i) $\begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} + \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix}$
+# &emsp; (i) &emsp; $\begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} + \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix}$
 # 
-# &emsp; (ii) $\begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix} - \begin{pmatrix} 7 \\ -11 \\ -13 \end{pmatrix}$
+# &emsp; (ii) &emsp; $\begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix} - \begin{pmatrix} 7 \\ -11 \\ -13 \end{pmatrix}$
 # 
-# &emsp; (iii) $\begin{pmatrix} 1 & 3 & 5 \\ 7 & 9 & 11 \end{pmatrix} + \begin{pmatrix}2 & 3 \\ 5 & 7 \end{pmatrix}$
+# &emsp; (iii) &emsp; $\begin{pmatrix} 1 & 3 & 5 \\ 7 & 9 & 11 \end{pmatrix} + \begin{pmatrix}2 & 3 \\ 5 & 7 \end{pmatrix}$
 # 
 # 
 # ````{dropdown} Solution
 # 
-# &emsp; (i) $\begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} + \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix} = \begin{pmatrix} 1 + 5 & 2 + 6 \\ 3 + 7 & 4 + 8 \end{pmatrix}= \begin{pmatrix}6 & 8 \\ 10 & 12 \end{pmatrix}$
+# &emsp; (i) &emsp; $\begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} + \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix} = \begin{pmatrix} 1 + 5 & 2 + 6 \\ 3 + 7 & 4 + 8 \end{pmatrix}= \begin{pmatrix}6 & 8 \\ 10 & 12 \end{pmatrix}$
 # 
-# &emsp; (ii) $\begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix} - \begin{pmatrix} 7 \\ -11 \\ -13 \end{pmatrix} = \begin{pmatrix}2 - 7 \\ 3 + 11 \\ 5 + 13 \end{pmatrix} = \begin{pmatrix} -5 \\ 14 \\ 18\end{pmatrix}$
+# &emsp; (ii) &emsp; $\begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix} - \begin{pmatrix} 7 \\ -11 \\ -13 \end{pmatrix} = \begin{pmatrix}2 - 7 \\ 3 + 11 \\ 5 + 13 \end{pmatrix} = \begin{pmatrix} -5 \\ 14 \\ 18\end{pmatrix}$
 # 
-# &emsp; (iii) undefined since the left matrix is $2\times 3$ and the right matrix is $2\times 2$
+# &emsp; (iii) &emsp; undefined since the left matrix is $2\times 3$ and the right matrix is $2\times 2$
 # ````
 # `````
 # 
@@ -323,23 +321,23 @@ display(AplusB)
 # Evaluate the following:
 # 
 # 
-# &emsp; (i) $2 \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}$
+# &emsp; (i) &emsp; $2 \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}$
 # 
-# &emsp; (ii) $\dfrac{1}{2} \begin{pmatrix} 0 & -1 \\ 3 & 2 \\ 4 & -2 \end{pmatrix}$
+# &emsp; (ii) &emsp; $\dfrac{1}{2} \begin{pmatrix} 0 & -1 \\ 3 & 2 \\ 4 & -2 \end{pmatrix}$
 # 
-# &emsp; (iii) $\dfrac{1}{3} \begin{pmatrix}1 & 6 & 4 \\ 0 & 3 & -1 \end{pmatrix}$
+# &emsp; (iii) &emsp; $\dfrac{1}{3} \begin{pmatrix}1 & 6 & 4 \\ 0 & 3 & -1 \end{pmatrix}$
 # 
-# &emsp; (iv) $101 \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} - 99 \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix}$
+# &emsp; (iv) &emsp; $101 \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} - 99 \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix}$
 # 
 # ````{dropdown} Solution
 # 
-# &emsp; (i) $2 \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} = \begin{pmatrix}2 & 4 \\ 6 & 8 \end{pmatrix}$
+# &emsp; (i) &emsp; $2 \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} = \begin{pmatrix}2 & 4 \\ 6 & 8 \end{pmatrix}$
 # 
-# &emsp; (ii) $\dfrac{1}{2} \begin{pmatrix} 0 & -1 \\ 3 & 2 \\ 4 & -2 \end{pmatrix} =  \begin{pmatrix} 0 & -\frac{1}{2} \\ \frac{3}{2} & 1 \\ 2 & -1 \end{pmatrix}$
+# &emsp; (ii) &emsp; $\dfrac{1}{2} \begin{pmatrix} 0 & -1 \\ 3 & 2 \\ 4 & -2 \end{pmatrix} =  \begin{pmatrix} 0 & -\frac{1}{2} \\ \frac{3}{2} & 1 \\ 2 & -1 \end{pmatrix}$
 # 
-# &emsp; (iii) $\dfrac{1}{3} \begin{pmatrix}1 & 6 & 4 \\ 0 & 3 & -1 \end{pmatrix} = \begin{pmatrix} \frac{1}{3} & 2 & \frac{4}{3} \\ 0 & 1 & -\frac{1}{3} \end{pmatrix}$
+# &emsp; (iii) &emsp; $\dfrac{1}{3} \begin{pmatrix}1 & 6 & 4 \\ 0 & 3 & -1 \end{pmatrix} = \begin{pmatrix} \frac{1}{3} & 2 & \frac{4}{3} \\ 0 & 1 & -\frac{1}{3} \end{pmatrix}$
 # 
-# &emsp; (iv) $101\begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} - 99 \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} = 2 \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} =  \begin{pmatrix} 2 & 4 \\ 0 & 2 \end{pmatrix}$
+# &emsp; (iv) &emsp; $101\begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} - 99 \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} = 2 \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} =  \begin{pmatrix} 2 & 4 \\ 0 & 2 \end{pmatrix}$
 # 
 # ````
 # `````
