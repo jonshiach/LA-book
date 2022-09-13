@@ -21,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -37,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -50,8 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/1_Matrices/1.1_Matrix_multiplication.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -610,7 +610,7 @@ title="Print to PDF"
 \[\begin{align*}
     [AB]_{ij} = \sum_{k=1}^p a_{ik}b_{kj}.
 \end{align*}\]</div>
-<p>I.e., if <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are two <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices</p>
+<p>i.e., if <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are two <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     \begin{pmatrix} 
@@ -638,7 +638,7 @@ title="Print to PDF"
     \underbrace{\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}}_{2\times \mathbf{\textcolor{red}{2}}}
     \underbrace{\begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}}_{\mathbf{\textcolor{red}{2}}\times 2}.
 \end{align*}\]</div>
-<p>Here the two inside numbers are the same so this matrix multiplication is defined. Also, the dimensions of the product of these two matrices is given by the two outside numbers. To calculate the value of the element in row 1 and column 1 of the product of <span class="math notranslate nohighlight">\([AB]_{11}\)</span>, we move across row 1 of the first matrix and down column 1 of the second matrix</p>
+<p>Here the two inside numbers are the same so this matrix multiplication is defined. Also, the dimensions of the product of these two matrices is given by the two outside numbers. To calculate the value of the element in row 1 and column 1 we move across row 1 of the first matrix and down column 1 of the second matrix</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     \begin{pmatrix} \textcolor{blue}{1} &amp; \textcolor{blue}{2} \\ 3 &amp; 4 \end{pmatrix}
@@ -650,7 +650,7 @@ title="Print to PDF"
     = \begin{pmatrix} 5 + 14 &amp; \square \\ \square &amp; \square \end{pmatrix}
     = \begin{pmatrix} 19 &amp; \square \\ \square &amp; \square \end{pmatrix}.
 \end{align*}\]</div>
-<p>For the element in the first row and second column, <span class="math notranslate nohighlight">\([AB]_{12}\)</span>, we move across row 1 of the first matrix and down column 2 of the second matrix</p>
+<p>For the element in the first row and second column we move across row 1 of the first matrix and down column 2 of the second matrix</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     \begin{pmatrix} \textcolor{blue}{1} &amp; \textcolor{blue}{2} \\ 3 &amp; 4 \end{pmatrix}
@@ -662,7 +662,7 @@ title="Print to PDF"
     = \begin{pmatrix} 19 &amp; 6 + 16 \\ \square &amp; \square \end{pmatrix}
     = \begin{pmatrix} 19 &amp; 22 \\ \square &amp; \square \end{pmatrix}.
 \end{align*}\]</div>
-<p>Now that we have finished the top row, to calculate the element in row 2 column 1, <span class="math notranslate nohighlight">\([AB]_{21}\)</span>, we move across row 2 of the first matrix and down column 1 of the second matrix</p>
+<p>Now that we have finished the top row, to calculate the element in row 2 column 1 we move across row 2 of the first matrix and down column 1 of the second matrix</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     \begin{pmatrix} 1 &amp; 2 \\ \textcolor{blue}{3} &amp; \textcolor{blue}{4} \end{pmatrix}
@@ -674,7 +674,7 @@ title="Print to PDF"
     = \begin{pmatrix} 19 &amp; 22 \\ 15 + 28 &amp; \square \end{pmatrix}
     = \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; \square \end{pmatrix}.
 \end{align*}\]</div>
-<p>Finally to calculate the elements in row 2 column 2, <span class="math notranslate nohighlight">\([AB]_{22}\)</span>, we move across row 2 of the first matrix and down column 2 of the second matrix</p>
+<p>Finally to calculate the elements in row 2 column 2 we move across row 2 of the first matrix and down column 2 of the second matrix</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     \begin{pmatrix} 1 &amp; 2 \\ \textcolor{blue}{3} &amp; \textcolor{blue}{4} \end{pmatrix}
@@ -729,10 +729,10 @@ Solution<div class="sd-summary-down docutils">
 <p>The Sympy command for calculating the product of two matrices <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> is <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">*</span> <span class="pre">B</span></code>. The Python code below calculates the solution to question (i) from <a class="reference internal" href="#matrix-multiplication-example"><span class="std std-ref">example 1.5</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 
-<span class="n">A</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
-<span class="n">B</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
 <span class="n">AB</span> <span class="o">=</span> <span class="n">A</span> <span class="o">*</span> <span class="n">B</span>
 <span class="n">display</span><span class="p">(</span><span class="n">AB</span><span class="p">)</span>
 </pre></div>
@@ -750,8 +750,8 @@ Solution<div class="sd-summary-down docutils">
 <div class="note admonition" id="matrix-exponents-definition">
 <p class="admonition-title">Definition: Matrix exponents</p>
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be a square <span class="math notranslate nohighlight">\(n \times n\)</span> matrix. Then we write <span class="math notranslate nohighlight">\(A^2=AA\)</span> and more generally:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4df9152c-43e4-4546-b3bc-1b8b0785359d">
-<span class="eqno">(1)<a class="headerlink" href="#equation-4df9152c-43e4-4546-b3bc-1b8b0785359d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7b356445-4ae7-4713-b1ab-05231df66ae5">
+<span class="eqno">(1)<a class="headerlink" href="#equation-7b356445-4ae7-4713-b1ab-05231df66ae5" title="Permalink to this equation">#</a></span>\[\begin{align}
     A^n = \underbrace{A A \cdots A}_{n \text{ times}}.
 \end{align}\]</div>
 </div>
@@ -803,7 +803,7 @@ Solution<div class="sd-summary-down docutils">
 <p>The SymPy command for calculating the <code class="docutils literal notranslate"><span class="pre">k</span></code>th exponent of the matrix <code class="docutils literal notranslate"><span class="pre">A</span></code> is <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">**</span> <span class="pre">k</span></code>. The following code calculates the solution to <a class="reference internal" href="#matrix-exponents-example"><span class="std std-ref">example 1.6</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
 
 <span class="c1"># (i)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(i) A^2 =&quot;</span><span class="p">)</span>
