@@ -120,20 +120,20 @@
 # In[1]:
 
 
-from sympy import *
+import sympy as sym
 from IPython.display import Math
 
 # (i)
-A = Matrix([[1, -2], [2, 4]])
-b = Matrix([[11], [-18]])
+A = sym.Matrix([[1, -2], [2, 4]])
+b = sym.Matrix([[11], [-18]])
 x = A.inv() * b
 
 print("(i) x =")
 display(x)
 
 # (ii)
-A = Matrix([[1, -2, 3], [0, 2, -4], [3, 1, -4]])
-b = Matrix([[-7], [8], [7]])
+A = sym.Matrix([[1, -2, 3], [0, 2, -4], [3, 1, -4]])
+b = sym.Matrix([[-7], [8], [7]])
 x = A.inv() * b
 
 print("(ii) x =")

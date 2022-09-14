@@ -102,25 +102,25 @@
 # In[1]:
 
 
-from sympy import *
+import sympy as sym
 
 # (i)
-a, b, c, d = symbols("a, b, c, d")
-A = Matrix([[a, b], [c, d]])
+a, b, c, d = sym.symbols("a, b, c, d")
+A = sym.Matrix([[a, b], [c, d]])
 adjA = A.adjugate()
 
 print("(i)")
 display(adjA)
 
 # (ii)
-A = Matrix([[5, 2], [3, 4]])
+A = sym.Matrix([[5, 2], [3, 4]])
 adjA = A.adjugate()
 
 print("(ii)")
 display(adjA)
 
 # (iii)
-A = Matrix([[1, 0, 3], [4, -2, 1], [2, 1, 3]])
+A = sym.Matrix([[1, 0, 3], [4, -2, 1], [2, 1, 3]])
 adjA = A.adjugate()
 
 print("(iii)")
@@ -229,18 +229,18 @@ display(adjA)
 # In[2]:
 
 
-from sympy import *
+import sympy as sym
 from IPython.display import Math
 
 # (i)
-A = Matrix([[1, 0], [3, 2]])
+A = sym.Matrix([[1, 0], [3, 2]])
 invA = A.inv()
 
 print("(i) A^{-1} =")
 display(invA)
 
 # (ii)
-B = Matrix([[1, 2, 0], [-2, 1, 1], [1, 0, 3]])
+B = sym.Matrix([[1, 2, 0], [-2, 1, 1], [1, 0, 3]])
 invB = B.inv()
 
 print("(ii) B^{-1} =")

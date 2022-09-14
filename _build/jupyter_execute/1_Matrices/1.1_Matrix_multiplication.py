@@ -14,7 +14,7 @@
 #     [AB]_{ij} = \sum_{k=1}^p a_{ik}b_{kj}.
 # \end{align*}
 # 
-# I.e., if $A$ and $B$ are two $2\times 2$ matrices
+# i.e., if $A$ and $B$ are two $2\times 2$ matrices
 # \begin{align*}
 #     \begin{pmatrix} 
 #         a_{11} & a_{12} \\
@@ -44,7 +44,7 @@
 #     \underbrace{\begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix}}_{\mathbf{\textcolor{red}{2}}\times 2}.
 # \end{align*}
 # 
-# Here the two inside numbers are the same so this matrix multiplication is defined. Also, the dimensions of the product of these two matrices is given by the two outside numbers. To calculate the value of the element in row 1 and column 1 of the product of $[AB]_{11}$, we move across row 1 of the first matrix and down column 1 of the second matrix
+# Here the two inside numbers are the same so this matrix multiplication is defined. Also, the dimensions of the product of these two matrices is given by the two outside numbers. To calculate the value of the element in row 1 and column 1 we move across row 1 of the first matrix and down column 1 of the second matrix
 # 
 # \begin{align*}
 #     \begin{pmatrix} \textcolor{blue}{1} & \textcolor{blue}{2} \\ 3 & 4 \end{pmatrix}
@@ -57,7 +57,7 @@
 #     = \begin{pmatrix} 19 & \square \\ \square & \square \end{pmatrix}.
 # \end{align*}
 # 
-# For the element in the first row and second column, $[AB]_{12}$, we move across row 1 of the first matrix and down column 2 of the second matrix
+# For the element in the first row and second column we move across row 1 of the first matrix and down column 2 of the second matrix
 # 
 # \begin{align*}
 #     \begin{pmatrix} \textcolor{blue}{1} & \textcolor{blue}{2} \\ 3 & 4 \end{pmatrix}
@@ -70,7 +70,7 @@
 #     = \begin{pmatrix} 19 & 22 \\ \square & \square \end{pmatrix}.
 # \end{align*}
 # 
-# Now that we have finished the top row, to calculate the element in row 2 column 1, $[AB]_{21}$, we move across row 2 of the first matrix and down column 1 of the second matrix
+# Now that we have finished the top row, to calculate the element in row 2 column 1 we move across row 2 of the first matrix and down column 1 of the second matrix
 # 
 # \begin{align*}
 #     \begin{pmatrix} 1 & 2 \\ \textcolor{blue}{3} & \textcolor{blue}{4} \end{pmatrix}
@@ -83,7 +83,7 @@
 #     = \begin{pmatrix} 19 & 22 \\ 43 & \square \end{pmatrix}.
 # \end{align*}
 # 
-# Finally to calculate the elements in row 2 column 2, $[AB]_{22}$, we move across row 2 of the first matrix and down column 2 of the second matrix 
+# Finally to calculate the elements in row 2 column 2 we move across row 2 of the first matrix and down column 2 of the second matrix 
 # 
 # \begin{align*}
 #     \begin{pmatrix} 1 & 2 \\ \textcolor{blue}{3} & \textcolor{blue}{4} \end{pmatrix}
@@ -144,10 +144,10 @@
 # In[1]:
 
 
-from sympy import *
+import sympy as sym
 
-A = Matrix([[1, 0], [-2, 3]])
-B = Matrix([[2, 3], [1, 5]])
+A = sym.Matrix([[1, 0], [-2, 3]])
+B = sym.Matrix([[2, 3], [1, 5]])
 AB = A * B
 display(AB)
 
@@ -219,7 +219,7 @@ display(AB)
 # In[2]:
 
 
-A = Matrix([[1, 0], [3, 2]])
+A = sym.Matrix([[1, 0], [3, 2]])
 
 # (i)
 print("(i) A^2 =")

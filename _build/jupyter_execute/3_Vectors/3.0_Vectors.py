@@ -108,8 +108,8 @@
 # In[1]:
 
 
-from sympy import *
+import sympy as sym
 
-a = Matrix([1, 2, 3])
+a = sym.Matrix([1, 2, 3])
 display(a)
 

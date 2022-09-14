@@ -8,7 +8,7 @@
 # In[1]:
 
 
-from sympy import *
+import sympy as sym
 
 
 # ## Matrices
@@ -18,14 +18,14 @@ from sympy import *
 # In[2]:
 
 
-A = Matrix([[1, 2], [3, 4]])
+A = sym.Matrix([[1, 2], [3, 4]])
 display(A)
 
 
 # In[3]:
 
 
-B = Matrix([[5, 6], [7, 8]])
+B = sym.Matrix([[5, 6], [7, 8]])
 display(B)
 
 
@@ -79,7 +79,7 @@ display(Atranspose)
 # In[9]:
 
 
-zero = zeros(2, 3)
+zero = sym.zeros(2, 3)
 display(zero)
 
 
@@ -88,7 +88,7 @@ display(zero)
 # In[10]:
 
 
-I = eye(3)
+I = sym.eye(3)
 display(I)
 
 
@@ -126,14 +126,14 @@ display(invA)
 # In[14]:
 
 
-A = Matrix([[1, 2], [3, 4]])
+A = sym.Matrix([[1, 2], [3, 4]])
 display(A)
 
 
 # In[15]:
 
 
-b = Matrix([5, 11])
+b = sym.Matrix([5, 11])
 display(b)
 
 
@@ -180,14 +180,14 @@ print(rankA)
 # In[20]:
 
 
-a = Matrix([1, 2, 3])
+a = sym.Matrix([1, 2, 3])
 display(a)
 
 
 # In[21]:
 
 
-b = Matrix([4, 5, 6])
+b = sym.Matrix([4, 5, 6])
 display(b)
 
 

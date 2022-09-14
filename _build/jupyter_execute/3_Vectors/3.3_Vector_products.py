@@ -92,12 +92,12 @@
 # In[1]:
 
 
-from sympy import * 
+import sympy as sym 
 
-u = Matrix([1, 2, 3])
-v = Matrix([3, -1, 0])
+u = sym.Matrix([1, 2, 3])
+v = sym.Matrix([3, -1, 0])
 udotv = u.dot(v)
-theta = acos(udotv / (u.norm() * v.norm()))
+theta = sym.acos(udotv / (u.norm() * v.norm()))
 
 print(f"(i) u . v = {udotv}")
 print(f"(ii) theta = {theta.evalf():0.4f}")
@@ -171,8 +171,8 @@ print(f"(ii) theta = {theta.evalf():0.4f}")
 # In[2]:
 
 
-u = Matrix([1, 2, 3])
-v = Matrix([4, 5, 6])
+u = sym.Matrix([1, 2, 3])
+v = sym.Matrix([4, 5, 6])
 
 ucrossv = u.cross(v)
 display(ucrossv)

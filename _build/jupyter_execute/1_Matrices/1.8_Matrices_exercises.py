@@ -590,16 +590,16 @@
 # [Exercise 1.4](ex1.4)
 # ````{dropdown} Solution
 # ```python
-# from sympy import *
+# import sympy as sym
 # 
-# A = Matrix([[1, -3], [4, 2]])
-# B = Matrix([[3, 0], [-1, 5]])
-# C = Matrix([[5], [9]])
-# D = Matrix([[1, 1, 3], [4, -2, 3]])
-# E = Matrix([[1, 2], [0, 6], [-2, 3]])
-# F = Matrix([[1, -2, 4]])
-# G = Matrix([[4, 2, 3], [-2, 6, 0], [0, 7, 1]])
-# H = Matrix([[1, 0, 1], [5, 2, -2], [2, -3, 4]])
+# A = sym.Matrix([[1, -3], [4, 2]])
+# B = sym.Matrix([[3, 0], [-1, 5]])
+# C = sym.Matrix([[5], [9]])
+# D = sym.Matrix([[1, 1, 3], [4, -2, 3]])
+# E = sym.Matrix([[1, 2], [0, 6], [-2, 3]])
+# F = sym.Matrix([[1, -2, 4]])
+# G = sym.Matrix([[4, 2, 3], [-2, 6, 0], [0, 7, 1]])
+# H = sym.Matrix([[1, 0, 1], [5, 2, -2], [2, -3, 4]])
 # 
 # # Exercise 1.4
 # # (a)
@@ -791,16 +791,16 @@
 # In[1]:
 
 
-from sympy import *
+import sympy as sym
 
-A = Matrix([[1, -3], [4, 2]])
-B = Matrix([[3, 0], [-1, 5]])
-C = Matrix([[5], [9]])
-D = Matrix([[1, 1, 3], [4, -2, 3]])
-E = Matrix([[1, 2], [0, 6], [-2, 3]])
-F = Matrix([[1, -2, 4]])
-G = Matrix([[4, 2, 3], [-2, 6, 0], [0, 7, 1]])
-H = Matrix([[1, 0, 1], [5, 2, -2], [2, -3, 4]])
+A = sym.Matrix([[1, -3], [4, 2]])
+B = sym.Matrix([[3, 0], [-1, 5]])
+C = sym.Matrix([[5], [9]])
+D = sym.Matrix([[1, 1, 3], [4, -2, 3]])
+E = sym.Matrix([[1, 2], [0, 6], [-2, 3]])
+F = sym.Matrix([[1, -2, 4]])
+G = sym.Matrix([[4, 2, 3], [-2, 6, 0], [0, 7, 1]])
+H = sym.Matrix([[1, 0, 1], [5, 2, -2], [2, -3, 4]])
 
 # Exercise 1.4
 # (a)

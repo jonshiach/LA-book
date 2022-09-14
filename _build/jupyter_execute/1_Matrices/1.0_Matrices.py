@@ -9,9 +9,9 @@
 # 
 # On successful completion of this chapter students will be able to:
 # 
-# -  define and [index]&emsp; (indexing-a-matrix-section) matrices;
+# -  define and [index](indexing-a-matrix-section) matrices;
 # -  perform the arithmetic operations of [addition](matrix-addition-section), [multiplication by a scalar](scalar-multiplication-of-matrices), [matrix multiplication](matrix-multiplication-definition), [matrix exponents](matrix-exponents-definition) and [matrix transpose](matrix-transpose-definition);  
-# -  recognise and define special matrices such as [diagonal matrices](diagonal-matrix-definition), the [zero matrix](zero-matrix-definition), the [identity matrix]&emsp; (identity-matrix-definition) and [symmetric matrices](symmetric-matrix-definition);
+# -  recognise and define special matrices such as [diagonal matrices](diagonal-matrix-definition), the [zero matrix](zero-matrix-definition), the [identity matrix](identity-matrix-definition) and [symmetric matrices](symmetric-matrix-definition);
 # -  calculate the determinant of a [$2\times 2$](2x2-determinant-definition) and [$n\times n$](nxn-determinant-definition) matrix, the [adjoint](adjoint-definition) and [inverse]&emsp; (inverse-matrix-definition) of a non-singular square matrix using the [adjoint-determinant formula](adjoint-determinant-formula-definition);
 # - perform [algebraic manipulation](matrix-algebra-section) of equations involving matrices. 
 # 
@@ -66,14 +66,14 @@
 # 
 # ### Python code
 # 
-# To define and perform operations on matrices in Python we can use the **SymPy** library (short for *symbolic Python*) library. A matrix can then be defined using the `Matrix` command, for example
+# To define and perform operations on matrices in Python we can use the **SymPy** library (short for *symbolic Python*) library. A matrix can then be defined using the `sym.Matrix` command, for example
 
 # In[1]:
 
 
-from sympy import *
+import sympy as sym
 
-A = Matrix([[1, 2], [3, 4]])
+A = sym.Matrix([[1, 2], [3, 4]])
 display(A)
 
 
@@ -152,7 +152,7 @@ print(f"The matrix A is an {nrows} x {ncols} matrix")
 # In[3]:
 
 
-A = Matrix([[2, 0, -3], [1, 7, 4]])
+A = sym.Matrix([[2, 0, -3], [1, 7, 4]])
 
 print(f"(i)   a_11 = {A[0,0]}")
 print(f"(ii)  a_13 = {A[0,2]}")
@@ -264,8 +264,8 @@ print(f"(iv)  A[2,2] = {A[1,1]}")
 # In[4]:
 
 
-A = Matrix([[1, 2], [3, 4]])
-B = Matrix([[5, 6], [7, 8]])
+A = sym.Matrix([[1, 2], [3, 4]])
+B = sym.Matrix([[5, 6], [7, 8]])
 
 AplusB = A + B
 display(AplusB)
@@ -350,23 +350,22 @@ display(AplusB)
 
 
 # (i)
-A = Matrix([[1, 2], [3, 4]])
-
+A = sym.Matrix([[1, 2], [3, 4]])
 print("(i)")
 display(2 * A)
 
 # (ii)
-B = Matrix([[0, -1], [3, 2], [4, -2]])
+B = sym.Matrix([[0, -1], [3, 2], [4, -2]])
 print("(ii)")
 display(B / 2)
 
 # (iii)
-C = Matrix([[1, 6, 4], [0, 3, -1]])
+C = sym.Matrix([[1, 6, 4], [0, 3, -1]])
 print("(iii)")
 display(C / 3)
 
 # (iv)
-D = Matrix([[1, 2], [0, 1]])
+D = sym.Matrix([[1, 2], [0, 1]])
 print("(iv)")
 display(101 * D - 99 * D)
 

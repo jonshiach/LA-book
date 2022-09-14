@@ -453,10 +453,15 @@
 #     
 #     $$T(\mathbf{t}) = \begin{pmatrix} & & & t_1 \\  & I & & \vdots \\ & & & t_n \\ 0 & \cdots & 0 & 1 \end{pmatrix}.$$
 # 
+# Rotation
+#     The transformation matrix to [rotate](rotation-theorem) a vector in $\mathbb{R}^2$ expressed in homogeneous co-ordinates anticlockwise about the axis by the angle $\theta$ is
+# 
+#     $${Rot}(\theta) = \begin{pmatrix} \cos(\theta) & -\sin(\theta) & 0 \\ \sin(\theta) & \cos(\theta) & 0 \\ 0 & 0 & 1 \end{pmatrix}.$$
+# 
 # Reflection
 #     The transformation matrix to [reflect](reflection-theorem) a vector  in $\mathbb{R}^2$ expressed in homogeneous co-ordinates about a line that passes through the origin and makes an angle $\theta$ with the $x$-axis is 
 # 
-#     $${Rot}(\theta) = \begin{pmatrix} \cos(\theta) & -\sin(\theta) & 0 \\ \sin(\theta) & \cos(\theta) & 0 \\ 0 & 0 & 1 \end{pmatrix}.$$
+#     $${Ref}(\theta) = \begin{pmatrix} \cos(2\theta) & \sin(2\theta) & 0 \\ \sin(2\theta) & -\cos(2\theta) & 0 \\ 0 & 0 & 1 \end{pmatrix}.$$
 #     
 # Scaling
 #     The transformation matrix to [scale](scaling-definition) a vector in $\mathbb{R}^n$ expressed in homogeneous co-ordinates by the scaling vector $\mathbf{s}$ is

@@ -34,10 +34,10 @@
 # In[1]:
 
 
-from sympy import *
+import sympy as sym
 
-u = Matrix([1, 2, 3])
-v = Matrix([2 ** 0, 4 / 2, sqrt(9)])
+u = sym.Matrix([1, 2, 3])
+v = sym.Matrix([2 ** 0, 4 / 2, sqrt(9)])
 
 print(u == v)
 

@@ -77,20 +77,20 @@
 # In[1]:
 
 
-from sympy import *
+import sympy as sym
 
 # (i)
-A = Matrix([[1, 2], [3, 4]])
+A = sym.Matrix([[1, 2], [3, 4]])
 print("(i)")
 display(A.T)
 
 # (ii)
-B = Matrix([[1, 0, -2], [3, -4, 1]])
+B = sym.Matrix([[1, 0, -2], [3, -4, 1]])
 print("(ii)")
 display(B.T)
 
 # (iii)
-C = Matrix([[2, 3, 5]])
+C = sym.Matrix([[2, 3, 5]])
 print("(iii)")
 display(C.T)
 

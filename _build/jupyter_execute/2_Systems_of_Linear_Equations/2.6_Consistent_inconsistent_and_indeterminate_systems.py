@@ -277,25 +277,25 @@
 # In[1]:
 
 
-from sympy import *
+import sympy as sym
 
 # (i)
-A = Matrix([[3, 1, -2], [1, -1, 2], [2, -3, 7]])
-b = Matrix([[1], [3], [4]])
+A = sym.Matrix([[3, 1, -2], [1, -1, 2], [2, -3, 7]])
+b = sym.Matrix([[1], [3], [4]])
 Ab = A.row_join(b)
 
 print(f"(i) n = {len(b)}, rank(A) = {A.rank()}, rank((A|b)) = {Ab.rank()}")
 
 # (ii)
-A = Matrix([[1, -1, 2], [2, -3, 7], [-1, 3, -8]])
-b = Matrix([[3], [4], [1]])
+A = sym.Matrix([[1, -1, 2], [2, -3, 7], [-1, 3, -8]])
+b = sym.Matrix([[3], [4], [1]])
 Ab = A.row_join(b)
 
 print(f"(ii) n = {len(b)}, rank(A) = {A.rank()}, rank((A|b)) = {Ab.rank()}")
 
 # (iii)
-A = Matrix([[1, 1, -2], [2, -1, 1], [1, 4, -7]])
-b = Matrix([[1], [9], [2]])
+A = sym.Matrix([[1, 1, -2], [2, -1, 1], [1, 4, -7]])
+b = sym.Matrix([[1], [9], [2]])
 Ab = A.row_join(b)
 
 print(f"(iii) n = {len(b)}, rank(A) = {A.rank()}, rank((A|b)) = {Ab.rank()}")

@@ -21,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -37,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -50,8 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/1_Matrices/1.0_Matrices.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -687,9 +687,9 @@ title="Print to PDF"
 <p><strong>Learning outcomes</strong></p>
 <p>On successful completion of this chapter students will be able to:</p>
 <ul class="simple">
-<li><p>define and [index]  (indexing-a-matrix-section) matrices;</p></li>
+<li><p>define and <a class="reference internal" href="#indexing-a-matrix-section"><span class="std std-ref">index</span></a> matrices;</p></li>
 <li><p>perform the arithmetic operations of <a class="reference internal" href="#matrix-addition-section"><span class="std std-ref">addition</span></a>, <a class="reference internal" href="#scalar-multiplication-of-matrices"><span class="std std-ref">multiplication by a scalar</span></a>, <a class="reference internal" href="1.1_Matrix_multiplication.html#matrix-multiplication-definition"><span class="std std-ref">matrix multiplication</span></a>, <a class="reference internal" href="1.1_Matrix_multiplication.html#matrix-exponents-definition"><span class="std std-ref">matrix exponents</span></a> and <a class="reference internal" href="1.2_Matrix_transpose.html#matrix-transpose-definition"><span class="std std-ref">matrix transpose</span></a>;</p></li>
-<li><p>recognise and define special matrices such as <a class="reference internal" href="1.3_Special_matrices.html#diagonal-matrix-definition"><span class="std std-ref">diagonal matrices</span></a>, the <a class="reference internal" href="1.3_Special_matrices.html#zero-matrix-definition"><span class="std std-ref">zero matrix</span></a>, the [identity matrix]  (identity-matrix-definition) and <a class="reference internal" href="1.3_Special_matrices.html#symmetric-matrix-definition"><span class="std std-ref">symmetric matrices</span></a>;</p></li>
+<li><p>recognise and define special matrices such as <a class="reference internal" href="1.3_Special_matrices.html#diagonal-matrix-definition"><span class="std std-ref">diagonal matrices</span></a>, the <a class="reference internal" href="1.3_Special_matrices.html#zero-matrix-definition"><span class="std std-ref">zero matrix</span></a>, the <a class="reference internal" href="1.3_Special_matrices.html#identity-matrix-definition"><span class="std std-ref">identity matrix</span></a> and <a class="reference internal" href="1.3_Special_matrices.html#symmetric-matrix-definition"><span class="std std-ref">symmetric matrices</span></a>;</p></li>
 <li><p>calculate the determinant of a <a class="reference internal" href="1.4_Determinants.html#x2-determinant-definition"><span class="std std-ref"><span class="math notranslate nohighlight">\(2\times 2\)</span></span></a> and <a class="reference internal" href="1.4_Determinants.html#nxn-determinant-definition"><span class="std std-ref"><span class="math notranslate nohighlight">\(n\times n\)</span></span></a> matrix, the <a class="reference internal" href="1.5_Inverse_matrix.html#adjoint-definition"><span class="std std-ref">adjoint</span></a> and [inverse]  (inverse-matrix-definition) of a non-singular square matrix using the <a class="reference internal" href="1.5_Inverse_matrix.html#adjoint-determinant-formula-definition"><span class="std std-ref">adjoint-determinant formula</span></a>;</p></li>
 <li><p>perform <a class="reference internal" href="1.6_Matrix_algebra.html#matrix-algebra-section"><span class="std std-ref">algebraic manipulation</span></a> of equations involving matrices.</p></li>
 </ul>
@@ -731,12 +731,12 @@ Solution<div class="sd-summary-down docutils">
 </details></div>
 <section id="python-code">
 <h3>Python code<a class="headerlink" href="#python-code" title="Permalink to this headline">#</a></h3>
-<p>To define and perform operations on matrices in Python we can use the <strong>SymPy</strong> library (short for <em>symbolic Python</em>) library. A matrix can then be defined using the <code class="docutils literal notranslate"><span class="pre">Matrix</span></code> command, for example</p>
+<p>To define and perform operations on matrices in Python we can use the <strong>SymPy</strong> library (short for <em>symbolic Python</em>) library. A matrix can then be defined using the <code class="docutils literal notranslate"><span class="pre">sym.Matrix</span></code> command, for example</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 
-<span class="n">A</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
 <span class="n">display</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -812,7 +812,7 @@ Solution<div class="sd-summary-down docutils">
 <p>The following code defines the matrix <span class="math notranslate nohighlight">\(A\)</span> from <a class="reference internal" href="#matrix-indexing-example"><span class="std std-ref">example 1.2</span></a> and outputs the values of the indexed elements.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;(i)   a_11 = </span><span class="si">{</span><span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;(ii)  a_13 = </span><span class="si">{</span><span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -917,8 +917,8 @@ Solution<div class="sd-summary-down docutils">
 <p>The Python command for calculating the sum of two matrices <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> is simply <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">+</span> <span class="pre">B</span></code>. The Python code below calculates the solution to question   (i) from <a class="reference internal" href="#matrix-addition-example"><span class="std std-ref">example 1.3</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
-<span class="n">B</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>
 
 <span class="n">AplusB</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="n">B</span>
 <span class="n">display</span><span class="p">(</span><span class="n">AplusB</span><span class="p">)</span>
@@ -995,23 +995,22 @@ Solution<div class="sd-summary-down docutils">
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># (i)</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
-
+<span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(i)&quot;</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">A</span><span class="p">)</span>
 
 <span class="c1"># (ii)</span>
-<span class="n">B</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]])</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]])</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(ii)&quot;</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">B</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
 
 <span class="c1"># (iii)</span>
-<span class="n">C</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(iii)&quot;</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">C</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span>
 
 <span class="c1"># (iv)</span>
-<span class="n">D</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="n">D</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(iv)&quot;</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="mi">101</span> <span class="o">*</span> <span class="n">D</span> <span class="o">-</span> <span class="mi">99</span> <span class="o">*</span> <span class="n">D</span><span class="p">)</span>
 </pre></div>

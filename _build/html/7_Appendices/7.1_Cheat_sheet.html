@@ -21,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -37,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -50,8 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/7_Appendices/7.1_Cheat_sheet.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -633,7 +633,7 @@ title="Print to PDF"
 <dl class="glossary">
 <dt id="term-Matrix">Matrix<a class="headerlink" href="#term-Matrix" title="Permalink to this term">#</a></dt><dd><p>A <a class="reference internal" href="../1_Matrices/1.0_Matrices.html#definition-of-a-matrix-section"><span class="std std-ref">matrix</span></a> is a rectangular array of elements.</p>
 </dd>
-<dt id="term-Matrix-indexing">Matrix indexing<a class="headerlink" href="#term-Matrix-indexing" title="Permalink to this term">#</a></dt><dd><p>If a matrix <span class="math notranslate nohighlight">\(A\)</span> has <span class="math notranslate nohighlight">\(m\)</span> rows and <span class="math notranslate nohighlight">\(n\)</span> columns then the elements of <span class="math notranslate nohighlight">\(A\)</span> are <span class="xref myst">indexed</span> by <span class="math notranslate nohighlight">\(a_{ij}\)</span> where <span class="math notranslate nohighlight">\(i\)</span> denotes the row and <span class="math notranslate nohighlight">\(j\)</span> denotes the column. For example</p>
+<dt id="term-Matrix-indexing">Matrix indexing<a class="headerlink" href="#term-Matrix-indexing" title="Permalink to this term">#</a></dt><dd><p>If a matrix <span class="math notranslate nohighlight">\(A\)</span> has <span class="math notranslate nohighlight">\(m\)</span> rows and <span class="math notranslate nohighlight">\(n\)</span> columns then the elements of <span class="math notranslate nohighlight">\(A\)</span> are <a class="reference internal" href="../1_Matrices/1.0_Matrices.html#indexing-a-matrix-section"><span class="std std-ref">indexed</span></a> by <span class="math notranslate nohighlight">\(a_{ij}\)</span> where <span class="math notranslate nohighlight">\(i\)</span> denotes the row and <span class="math notranslate nohighlight">\(j\)</span> denotes the column. For example</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*} 
     \begin{pmatrix} 
@@ -993,9 +993,13 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[\begin{split}T(\mathbf{t}) = \begin{pmatrix} &amp; &amp; &amp; t_1 \\  &amp; I &amp; &amp; \vdots \\ &amp; &amp; &amp; t_n \\ 0 &amp; \cdots &amp; 0 &amp; 1 \end{pmatrix}.\end{split}\]</div>
 </dd>
-<dt id="term-Reflection">Reflection<a class="headerlink" href="#term-Reflection" title="Permalink to this term">#</a></dt><dd><p>The transformation matrix to <a class="reference internal" href="../6_Linear_transformations/6.2_Rotation_reflection_and_scaling.html#reflection-theorem"><span class="std std-ref">reflect</span></a> a vector  in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> expressed in homogeneous co-ordinates about a line that passes through the origin and makes an angle <span class="math notranslate nohighlight">\(\theta\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis is</p>
+<dt id="term-Rotation">Rotation<a class="headerlink" href="#term-Rotation" title="Permalink to this term">#</a></dt><dd><p>The transformation matrix to <span class="xref myst">rotate</span> a vector in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> expressed in homogeneous co-ordinates anticlockwise about the axis by the angle <span class="math notranslate nohighlight">\(\theta\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}{Rot}(\theta) = \begin{pmatrix} \cos(\theta) &amp; -\sin(\theta) &amp; 0 \\ \sin(\theta) &amp; \cos(\theta) &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}.\end{split}\]</div>
+</dd>
+<dt id="term-Reflection">Reflection<a class="headerlink" href="#term-Reflection" title="Permalink to this term">#</a></dt><dd><p>The transformation matrix to <a class="reference internal" href="../6_Linear_transformations/6.2_Rotation_reflection_and_scaling.html#reflection-theorem"><span class="std std-ref">reflect</span></a> a vector  in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> expressed in homogeneous co-ordinates about a line that passes through the origin and makes an angle <span class="math notranslate nohighlight">\(\theta\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{Ref}(\theta) = \begin{pmatrix} \cos(2\theta) &amp; \sin(2\theta) &amp; 0 \\ \sin(2\theta) &amp; -\cos(2\theta) &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}.\end{split}\]</div>
 </dd>
 <dt id="term-Scaling">Scaling<a class="headerlink" href="#term-Scaling" title="Permalink to this term">#</a></dt><dd><p>The transformation matrix to <a class="reference internal" href="../6_Linear_transformations/6.2_Rotation_reflection_and_scaling.html#scaling-definition"><span class="std std-ref">scale</span></a> a vector in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> expressed in homogeneous co-ordinates by the scaling vector <span class="math notranslate nohighlight">\(\mathbf{s}\)</span> is</p>
 <div class="math notranslate nohighlight">

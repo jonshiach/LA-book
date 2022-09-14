@@ -107,11 +107,11 @@
 # In[1]:
 
 
-from sympy import *
+import sympy as sym
 
 # Define linear system
-A = Matrix([[3, 1, -2], [1, -1, 2], [2, -3, 7]])
-b = Matrix([[1], [3], [4]])
+A = sym.Matrix([[3, 1, -2], [1, -1, 2], [2, -3, 7]])
+b = sym.Matrix([[1], [3], [4]])
 
 # Form augmented matrix
 Ab = A.row_join(b)
@@ -280,8 +280,8 @@ display(x)
 
 
 # Form augmented matrix
-A = Matrix([[1, 0, 2], [2, -1, 3], [1, 4, 4]])
-AI = A.row_join(eye(3))
+A = sym.Matrix([[1, 0, 2], [2, -1, 3], [1, 4, 4]])
+AI = A.row_join(sym.eye(3))
 
 print("Augmented matrix")
 display(AI)

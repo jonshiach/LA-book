@@ -107,20 +107,20 @@
 # In[1]:
 
 
-from sympy import *
+import sympy as sym
 
 # (i)
-u = Matrix([1, 2, 3])
+u = sym.Matrix([1, 2, 3])
 print("(i)")
 display(u / u.norm())
 
 # (ii)
-v = Matrix([5, -12, 0])
+v = sym.Matrix([5, -12, 0])
 print("(ii)")
 display(v / v.norm())
 
 # (iii)
-w = Matrix([1, 0, 1])
+w = sym.Matrix([1, 0, 1])
 print("(iii)")
 display(w / w.norm())
 

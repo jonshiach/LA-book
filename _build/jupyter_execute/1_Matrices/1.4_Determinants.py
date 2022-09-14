@@ -293,9 +293,9 @@
 # In[1]:
 
 
-from sympy import *
+import sympy as sym
 
-A = Matrix([[1, -1, 4, 3], [2, 0, 5, -3], [1, 2, 4, 5], [2, 0, -2, 4]])
+A = sym.Matrix([[1, -1, 4, 3], [2, 0, 5, -3], [1, 2, 4, 5], [2, 0, -2, 4]])
 detA = A.det()
 print(f"det(A) = {detA}")
 

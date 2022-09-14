@@ -60,20 +60,20 @@
 # 
 # ### Python code
 # 
-# The SymPy code for generating an $m \times n$ zero matrix is `zeros(m, n)`. The Python code below generates the zero matrices given above
+# The SymPy code for generating an $m \times n$ zero matrix is `sym.zeros(m, n)`. The Python code below generates the zero matrices given above
 
 # In[1]:
 
 
-from sympy import *
+import sympy as sym
 
-zeros_2x2 = zeros(2)
+zeros_2x2 = sym.zeros(2)
 display(zeros_2x2)
 
-zeros_2x3 = zeros(2, 3)
+zeros_2x3 = sym.zeros(2, 3)
 display(zeros_2x3)
 
-zeros_3x1 = zeros(3, 1)
+zeros_3x1 = sym.zeros(3, 1)
 display(zeros_3x1)
 
 
@@ -149,28 +149,28 @@ display(zeros_3x1)
 # 
 # ### Python code
 # 
-# The Python code for generating an $n \times n$ identity matrix is `eye(n)`. The code below calculates the solution to [example 1.8](identity-matrix-example).
+# The Python code for generating an $n \times n$ identity matrix is `sym.eye(n)`. The code below calculates the solution to [example 1.8](identity-matrix-example).
 
 # In[2]:
 
 
-from sympy import *
+import sympy as sym
 
-A = Matrix([[1, 0], [-2, 3]])
-B = Matrix([[1, 2], [4, 3], [-2, 1]])
+A = sym.Matrix([[1, 0], [-2, 3]])
+B = sym.Matrix([[1, 2], [4, 3], [-2, 1]])
 
 # (i)
-IA = eye(2) * A
+IA = sym.eye(2) * A
 print("(i) IA =")
 display(IA)
 
 # (ii) 
-AI = A * eye(2)
+AI = A * sym.eye(2)
 print("(ii) AI =")
 display(AI)
 
 # (iii)
-IB = eye(3) * B
+IB = sym.eye(3) * B
 print("(iii) IB =")
 display(IB)
 
@@ -237,14 +237,14 @@ display(IB)
 
 
 # (i)
-A = Matrix([[1, 2], [2, 1]])
+A = sym.Matrix([[1, 2], [2, 1]])
 print(f"(i) Symmetric: {A == A.T}")
 
 # (ii)
-B = Matrix([[2, 0, -3], [0, 5, 7], [-3, 7, 1]])
+B = sym.Matrix([[2, 0, -3], [0, 5, 7], [-3, 7, 1]])
 print(f"(ii) Symmetric: {B == B.T}")
 
 # (iii)
-A = Matrix([[2, 4], [3, 2]])
+A = sym.Matrix([[2, 4], [3, 2]])
 print(f"(iii) Symmetric: {A == A.T}")
 
