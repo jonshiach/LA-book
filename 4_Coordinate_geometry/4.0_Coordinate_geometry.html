@@ -722,10 +722,10 @@ Solution<div class="sd-summary-down docutils">
 <span id="intersecting-lines-section"></span><h2>Intersecting lines<a class="headerlink" href="#intersecting-lines" title="Permalink to this headline">#</a></h2>
 <div class="note admonition" id="line-line-intersection-definition">
 <p class="admonition-title">Definition: Intersection between two lines</p>
-<p>Two lines <span class="math notranslate nohighlight">\(\ell_1: P_1 + t\mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2: P_2 + t\mathbf{d}_2\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> <strong>intersect</strong> if there exists a value <span class="math notranslate nohighlight">\(t\)</span> such that</p>
+<p>Two lines <span class="math notranslate nohighlight">\(\ell_1: P_1 + t_1\mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2: P_2 + t_2\mathbf{d}_2\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> <strong>intersect</strong> if there exists values of <span class="math notranslate nohighlight">\(t_1\)</span> and <span class="math notranslate nohighlight">\(t_2\)</span> such that</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    P_1 + t \mathbf{d}_1 = P_2 + t \mathbf{d}_2.
+    P_1 + t_1 \mathbf{d}_1 = P_2 + t_2 \mathbf{d}_2.
 \end{align*}\]</div>
 <figure class="align-default" id="line-line-intersection-figure">
 <img alt="../_images/line_line_intersection.png" src="../_images/line_line_intersection.png" />
@@ -734,10 +734,10 @@ Solution<div class="sd-summary-down docutils">
 </figcaption>
 </figure>
 </div>
-<p>To determine whether two lines intersect we simply equate the vector equations of the two lines and attempt to solve for <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p>To determine whether two lines intersect we simply equate the vector equations of the two lines and attempt to solve for <span class="math notranslate nohighlight">\(t_1\)</span> and <span class="math notranslate nohighlight">\(t_2\)</span>. Then we check whether the equations of the two lines give the same vector.</p>
 <div class="seealso admonition" id="line-line-intersection-example">
 <p class="admonition-title">Example 4.2</p>
-<p>Three lines in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> are defined as <span class="math notranslate nohighlight">\(\ell_1: (1, 2, 1) + t(2, 1 0)\)</span>, <span class="math notranslate nohighlight">\(\ell_2: (3, 4, -3) + t(1, 0, 2)\)</span> and <span class="math notranslate nohighlight">\(\ell_3: (1, 1, 2) + t (1, 0, -2)\)</span>. Determine the points of intersection between the three lines (if possible).</p>
+<p>Three lines in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> are defined as <span class="math notranslate nohighlight">\(\ell_1: (1 + t, -3 + 2t, t)\)</span>, <span class="math notranslate nohighlight">\(\ell_2: (6 - t, -5 - 2t, t - 1)\)</span> and <span class="math notranslate nohighlight">\(\ell_3: (6 + 2t, -11 + 2t, -2 - t)\)</span>. Determine the points of intersection between the three lines (if possible).</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -745,59 +745,48 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Equating <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span></p>
+<p class="sd-card-text">Equating <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> gives</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    \begin{pmatrix} 1 \\ 2 \\ 1 \end{pmatrix} + t \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} 
-    &amp;= \begin{pmatrix} 3 \\ 4 \\ -3 \end{pmatrix} + t \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix}
+    1 + t_1 &amp;= 6 - t_2, \\
+    -3 + 2t_1 &amp;= -5 + 2t_2, \\
+    t_1 &amp;= -1 + t_2.
 \end{align*}\]</div>
-<p class="sd-card-text">gives the system</p>
+<p class="sd-card-text">The third equation is <span class="math notranslate nohighlight">\(t_1 = t_2 - 1\)</span> and substituting into the first equation gives <span class="math notranslate nohighlight">\(t_2 = 3\)</span> so <span class="math notranslate nohighlight">\(t_1 = 2\)</span>. We need to check whether substituting these into the equations for <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> result in the same vector</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    1 + 2t &amp;= 3 + t, \\
-    2 + t &amp;= 4, \\
-    1  &amp;= -3 + 2 t.
+    \begin{pmatrix} 1 + 2 \\ -3 + 2(2) \\ 2 \end{pmatrix}  &amp;= \begin{pmatrix} 3 \\ 1 \\ 2 \end{pmatrix}, \\
+    \begin{pmatrix} 6 - 3 \\ -5 -2(3) \\ 3 - 1 \end{pmatrix} &amp;= \begin{pmatrix} 3 \\ 1 \\ 2 \end{pmatrix}, \\
 \end{align*}\]</div>
-<p class="sd-card-text">The second equation gives <span class="math notranslate nohighlight">\(t = 2\)</span> which substituted into the other two equations results in</p>
+<p class="sd-card-text">so <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> intersect at <span class="math notranslate nohighlight">\((3, 1, 2)\)</span>.</p>
+<p class="sd-card-text">Equating <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_3\)</span> gives</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    1 + 2(2) &amp;= 3 + 2, \\
-    1 &amp;= -3 + 2(2),
+    1 + t_1 &amp;= 6 + t_3, \\
+    -3 + 2t_1 &amp;= -11 + 2t_3, \\
+    t_1 &amp;= -2 - t_3.
 \end{align*}\]</div>
-<p class="sd-card-text">which are consistent so <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> intersect when <span class="math notranslate nohighlight">\(t=2\)</span> which is at</p>
+<p class="sd-card-text">Substituting the third equation into the first equation gives <span class="math notranslate nohighlight">\(1 - 2 - t_3 = 6 + t_3\)</span> so <span class="math notranslate nohighlight">\(t_2 = -\frac{7}{2}\)</span> and <span class="math notranslate nohighlight">\(t_1 = -\frac{21}{2}\)</span>. Checking whether substituting these into the equations for <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_3\)</span> result in the same vector</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    \begin{pmatrix} 1 \\ 2 \\ 1 \end{pmatrix} + 2 \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} 
-    = \begin{pmatrix} 5 \\ 4 \\ 1 \end{pmatrix}.
+    \begin{pmatrix} 1 - \frac{7}{2} \\ -3 + 2(\frac{7}{2}) \\ \frac{7}{2} \end{pmatrix} &amp;= \begin{pmatrix} -\frac{5}{2} \\ -10 \\ -\frac{7}{2} \end{pmatrix}, \\
+    \begin{pmatrix} 6 + 2(\frac{21}{2}) \\ -11 + 2(\frac{21}{2}) \\ -2 - \frac{21}{2} \end{pmatrix} &amp;= \begin{pmatrix} -15 \\ -32 \\ \frac{17}{2} \end{pmatrix}.
 \end{align*}\]</div>
-<p class="sd-card-text">Equating <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_3\)</span></p>
+<p class="sd-card-text">Since these vectors are different then <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_3\)</span> do not intersect.</p>
+<p class="sd-card-text">Equating <span class="math notranslate nohighlight">\(\ell_2\)</span> and <span class="math notranslate nohighlight">\(\ell_3\)</span> gives the system</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    \begin{pmatrix} 1 \\ 2 \\ 1 \end{pmatrix} + t \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} 
-    &amp;= \begin{pmatrix} 1 \\ 1 \\ 2 \end{pmatrix} + t \begin{pmatrix} 1 \\ 0 \\ -2 \end{pmatrix},
+    6 - t_2 &amp;= 6 + 2t_3, \\
+    -5 + 2t_2 &amp;= -11 + 2t_3, \\
+    -1 + t_2 &amp;= -2 - t_3.
 \end{align*}\]</div>
-<p class="sd-card-text">gives the system</p>
+<p class="sd-card-text">The third equation gives <span class="math notranslate nohighlight">\(t_2 = -1 - t_3\)</span> and substituing into the first equation gives <span class="math notranslate nohighlight">\(6 + 1 + t_3 = 6 + 2t_3\)</span> so <span class="math notranslate nohighlight">\(t_3 = 1\)</span> and <span class="math notranslate nohighlight">\(t_2 = -2\)</span>. Checking whether substituting these into the equations for <span class="math notranslate nohighlight">\(\ell_2\)</span> and <span class="math notranslate nohighlight">\(\ell_3\)</span> result in the same vector</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    1 + 2 t &amp;= 1 + t, \\
-    2 + t &amp;= 1, \\
-    1 &amp;= 2 - 2 t.
+    \begin{pmatrix} 6 - (-2) \\ -5 + 2(-2) \\ -1 + (-2) \end{pmatrix} &amp;= \begin{pmatrix} 8 \\ -9 \\ -3 \end{pmatrix}, \\
+    \begin{pmatrix} 6 + 2(1) \\ -11 + 2(1) \\ -2 - 1 \end{pmatrix} &amp;= \begin{pmatrix} 8 \\ -9 \\ -3 \end{pmatrix}.
 \end{align*}\]</div>
-<p class="sd-card-text">The second equation gives <span class="math notranslate nohighlight">\(t = -1\)</span> which substituted into the first equation results in <span class="math notranslate nohighlight">\(1 + 2(-1) = -1 \neq 1 +(-1) = 0\)</span> so the system is inconsistent and <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> do not intersect.</p>
-<p class="sd-card-text">Equating <span class="math notranslate nohighlight">\(\ell_2\)</span> and <span class="math notranslate nohighlight">\(\ell_3\)</span></p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    \begin{pmatrix} 3 \\ 4 \\ -3 \end{pmatrix} + t \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix}
-    &amp;= \begin{pmatrix} 1 \\ 1 \\ 2 \end{pmatrix} + t \begin{pmatrix} 1 \\ 0 \\ -2 \end{pmatrix},
-\end{align*}\]</div>
-<p class="sd-card-text">gives the system</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    3 + 2 t &amp;= 1 + t, \\
-    4 + t &amp;= 1, \\
-    -3 &amp;= 2 - 2 t.
-\end{align*}\]</div>
-<p class="sd-card-text">The second equation gives <span class="math notranslate nohighlight">\(t = -3\)</span> which substituted into the third equation results in <span class="math notranslate nohighlight">\(-3 \neq 2 - 2(-3) = 8\)</span> so the system is inconsistent and <span class="math notranslate nohighlight">\(\ell_2\)</span> and <span class="math notranslate nohighlight">\(\ell_3\)</span> do not intersect.</p>
+<p class="sd-card-text">So <span class="math notranslate nohighlight">\(\ell_2\)</span> and <span class="math notranslate nohighlight">\(\ell_3\)</span> intersect at <span class="math notranslate nohighlight">\((8, -9, -3)\)</span>.</p>
 </div>
 </details></div>
 </section>
