@@ -3,7 +3,7 @@
 
 # # Systems of linear equations exercises
 
-# :::::{admonition} Exercise 2.1
+# `````{admonition} Exercise 2.1
 # :class: note
 # :name: ex2.1
 # 
@@ -15,7 +15,7 @@
 #      3 x_{1} + 4 x_{2} &= 11.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 #     \det
 #     \left( \begin{array}{cc}
@@ -63,7 +63,7 @@
 #          -1 \\
 #     \end{array} \right)
 # \end{align*}
-# ::::
+# ````
 # 
 # (b)
 # \begin{align*}
@@ -71,7 +71,7 @@
 #      - x_{1} - 3 x_{2} &= -2.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 #     \det
 #     \left( \begin{array}{cc}
@@ -119,7 +119,7 @@
 #          1 \\
 #     \end{array} \right)
 # \end{align*}
-# ::::
+# ````
 # 
 # (c)
 # \begin{align*}
@@ -128,7 +128,7 @@
 #      x_{1} &= 0.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 #     \det
 #     \left( \begin{array}{ccc}
@@ -184,7 +184,7 @@
 #          -2 \\
 #     \end{array} \right)
 # \end{align*}
-# ::::
+# ````
 # 
 # (d)
 # \begin{align*}
@@ -193,7 +193,7 @@
 #      3 x_{1} +  x_{2} + 2 x_{3} &= -12.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 #     \det
 #     \left( \begin{array}{ccc}
@@ -249,8 +249,8 @@
 #          -3 \\
 #     \end{array} \right)
 # \end{align*}
-# ::::
-# :::::
+# ````
+# `````
 
 # In[1]:
 
@@ -307,7 +307,7 @@ def print_system(A, b):
     
 
 def matrix_inverse_solve(A, b):
-    print("::::{dropdown} Solution")
+    print("````{dropdown} Solution")
     print(r"\begin{align*}")
     print(r"    \det")
     print_matrix(A)
@@ -330,10 +330,10 @@ def matrix_inverse_solve(A, b):
     print("    =")
     print_matrix(A.inv() * b)
     print(r"\end{align*}")
-    print("::::")
+    print("````")
  
 
-print(":::::{admonition} Exercise 2.1")
+print("`````{admonition} Exercise 2.1")
 print(":class: note")
 print(":name: ex2.1")
 print()
@@ -363,10 +363,10 @@ b = Matrix([[8], [-4], [-12]])
 print_system(A, b)
 matrix_inverse_solve(A, b)
 
-print(":::::")
+print("`````")
 
 
-# :::::{admonition} Exercise 2.2
+# `````{admonition} Exercise 2.2
 # :class: note
 # :name: ex2.2
 # 
@@ -378,25 +378,25 @@ print(":::::")
 #      - 4 x_{1} +  x_{2} &= -5.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 #     x_{1} &= \frac{\det \left(\begin{matrix}-20 & 4\\-5 & 1\end{matrix}\right)}{\det \left(\begin{matrix}1 & 4\\-4 & 1\end{matrix}\right)} = \frac{0}{17} = 0, \\ \\
 #     x_{2} &= \frac{\det \left(\begin{matrix}1 & -20\\-4 & -5\end{matrix}\right)}{\det \left(\begin{matrix}1 & 4\\-4 & 1\end{matrix}\right)} = \frac{-85}{17} = -5, \\ \\
 # \end{align*}
-# ::::
+# ````
 # 
 # (b)
 # \begin{align*}
 #      x_{1} +  x_{2} &= 4, \\
-#      + 4 x_{2} &= 12.
+#      4 x_{2} &= 12.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 #     x_{1} &= \frac{\det \left(\begin{matrix}4 & 1\\12 & 4\end{matrix}\right)}{\det \left(\begin{matrix}1 & 1\\0 & 4\end{matrix}\right)} = \frac{4}{4} = 1, \\ \\
 #     x_{2} &= \frac{\det \left(\begin{matrix}1 & 4\\0 & 12\end{matrix}\right)}{\det \left(\begin{matrix}1 & 1\\0 & 4\end{matrix}\right)} = \frac{12}{4} = 3, \\ \\
 # \end{align*}
-# ::::
+# ````
 # 
 # (c)
 # \begin{align*}
@@ -405,13 +405,13 @@ print(":::::")
 #      4 x_{1} -  x_{2} + 3 x_{3} &= -14.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 #     x_{1} &= \frac{\det \left(\begin{matrix}21 & -4 & -4\\8 & -1 & -1\\-14 & -1 & 3\end{matrix}\right)}{\det \left(\begin{matrix}3 & -4 & -4\\-2 & -1 & -1\\4 & -1 & 3\end{matrix}\right)} = \frac{44}{-44} = -1, \\ \\
 #     x_{2} &= \frac{\det \left(\begin{matrix}3 & 21 & -4\\-2 & 8 & -1\\4 & -14 & 3\end{matrix}\right)}{\det \left(\begin{matrix}3 & -4 & -4\\-2 & -1 & -1\\4 & -1 & 3\end{matrix}\right)} = \frac{88}{-44} = -2, \\ \\
 #     x_{3} &= \frac{\det \left(\begin{matrix}3 & -4 & 21\\-2 & -1 & 8\\4 & -1 & -14\end{matrix}\right)}{\det \left(\begin{matrix}3 & -4 & -4\\-2 & -1 & -1\\4 & -1 & 3\end{matrix}\right)} = \frac{176}{-44} = -4, \\ \\
 # \end{align*}
-# ::::
+# ````
 # 
 # (d)
 # \begin{align*}
@@ -420,20 +420,20 @@ print(":::::")
 #      - 5 x_{1} - 4 x_{2} + 2 x_{3} &= -14.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 #     x_{1} &= \frac{\det \left(\begin{matrix}5 & 4 & 1\\-1 & 1 & 1\\-14 & -4 & 2\end{matrix}\right)}{\det \left(\begin{matrix}4 & 4 & 1\\-2 & 1 & 1\\-5 & -4 & 2\end{matrix}\right)} = \frac{0}{33} = 0, \\ \\
 #     x_{2} &= \frac{\det \left(\begin{matrix}4 & 5 & 1\\-2 & -1 & 1\\-5 & -14 & 2\end{matrix}\right)}{\det \left(\begin{matrix}4 & 4 & 1\\-2 & 1 & 1\\-5 & -4 & 2\end{matrix}\right)} = \frac{66}{33} = 2, \\ \\
 #     x_{3} &= \frac{\det \left(\begin{matrix}4 & 4 & 5\\-2 & 1 & -1\\-5 & -4 & -14\end{matrix}\right)}{\det \left(\begin{matrix}4 & 4 & 1\\-2 & 1 & 1\\-5 & -4 & 2\end{matrix}\right)} = \frac{-99}{33} = -3, \\ \\
 # \end{align*}
-# ::::
-# :::::
+# ````
+# `````
 
 # In[2]:
 
 
 def cramers_rule(A, b):
-    print(r"::::{dropdown} Solution")
+    print(r"````{dropdown} Solution")
     print(r"\begin{align*}")
     for i in range(len(b)):
         Ai = A.copy()
@@ -442,10 +442,10 @@ def cramers_rule(A, b):
         print(rf" = \frac{{{latex(Ai.det())}}}{{{latex(A.det())}}} = {latex(Ai.det() / A.det())}, \\ \\")
 
     print(r"\end{align*}")
-    print(r"::::")
+    print(r"````")
 
 
-print(":::::{admonition} Exercise 2.2")
+print("`````{admonition} Exercise 2.2")
 print(":class: note")
 print(":name: ex2.2")
 print()
@@ -475,10 +475,10 @@ b = Matrix([[5], [-1], [-14]])
 print_system(A, b)
 cramers_rule(A, b)
 
-print(":::::")
+print("`````")
 
 
-# :::::{admonition} Exercise 2.3
+# `````{admonition} Exercise 2.3
 # :class: note
 # :name: ex2.3
 # 
@@ -490,7 +490,7 @@ print(":::::")
 #      - 2 x_{1} +  x_{2} &= 1.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 # &    \left( \begin{array}{cc|c}
 #          -1 & 3 & -2 \\
@@ -509,7 +509,7 @@ print(":::::")
 #     x_{2} &= \frac{1}{-5} \left( 5\right) = -1, \\
 #     x_{1} &= \frac{1}{-1} \left( -2 - 3 \left( -1 \right)\right) = -1.
 # \end{align*}
-# ::::
+# ````
 # 
 # (b)
 # \begin{align*}
@@ -518,7 +518,7 @@ print(":::::")
 #      4 x_{1} - 2 x_{2} +  x_{3} &= 13.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 # &    \left( \begin{array}{ccc|c}
 #          3 & 1 & 2 & 11 \\
@@ -547,7 +547,7 @@ print(":::::")
 #     x_{2} &= \frac{1}{- \frac{4}{3}} \left( - \frac{56}{3} - \left( - \frac{20}{3} \right) \left( 3 \right)\right) = -1, \\
 #     x_{1} &= \frac{1}{3} \left( 11 - 1 \left( -1 \right) - 2 \left( 3 \right)\right) = 2.
 # \end{align*}
-# ::::
+# ````
 # 
 # (c)
 # \begin{align*}
@@ -556,7 +556,7 @@ print(":::::")
 #      3 x_{1} -  x_{2} + 4 x_{3} &= -13.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 # &    \left( \begin{array}{ccc|c}
 #          -1 & -5 & -2 & -17 \\
@@ -585,7 +585,7 @@ print(":::::")
 #     x_{2} &= \frac{1}{-12} \left( -48 - \left( -7 \right) \left( 0 \right)\right) = 4, \\
 #     x_{1} &= \frac{1}{-1} \left( -17 - \left( -5 \right) \left( 4 \right) - \left( -2 \right) \left( 0 \right)\right) = -3.
 # \end{align*}
-# ::::
+# ````
 # 
 # (d)
 # \begin{align*}
@@ -594,7 +594,7 @@ print(":::::")
 #      3 x_{1} -  x_{2} - 4 x_{3} &= -20.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 # &    \left( \begin{array}{ccc|c}
 #          -1 & -5 & -2 & -26 \\
@@ -623,7 +623,7 @@ print(":::::")
 #     x_{2} &= \frac{1}{-12} \left( -71 - \left( -7 \right) \left( 5 \right)\right) = 3, \\
 #     x_{1} &= \frac{1}{-1} \left( -26 - \left( -5 \right) \left( 3 \right) - \left( -2 \right) \left( 5 \right)\right) = 1.
 # \end{align*}
-# ::::
+# ````
 # 
 # (e)
 # \begin{align*}
@@ -633,7 +633,7 @@ print(":::::")
 #      - 2 x_{1} + 2 x_{2} - 5 x_{3} - 4 x_{4} &= -21.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 # &    \left( \begin{array}{cccc|c}
 #          3 & -5 & -4 & -1 & 28 \\
@@ -674,7 +674,7 @@ print(":::::")
 #     x_{2} &= \frac{1}{-4} \left( 41 - 3 \left( 3 \right) - \left( -4 \right) \left( -3 \right)\right) = -5, \\
 #     x_{1} &= \frac{1}{3} \left( 28 - \left( -5 \right) \left( -5 \right) - \left( -4 \right) \left( 3 \right) - \left( -1 \right) \left( -3 \right)\right) = 4.
 # \end{align*}
-# ::::
+# ````
 # 
 # (f)
 # \begin{align*}
@@ -684,7 +684,7 @@ print(":::::")
 #      x_{1} +  x_{3} + 3 x_{4} &= -4.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 # &    \left( \begin{array}{cccc|c}
 #          2 & -3 & -3 & 4 & -1 \\
@@ -725,8 +725,8 @@ print(":::::")
 #     x_{2} &= \frac{1}{1} \left( 44 - 7 \left( 1 \right) - \left( -13 \right) \left( -3 \right)\right) = -2, \\
 #     x_{1} &= \frac{1}{2} \left( -1 - \left( -3 \right) \left( -2 \right) - \left( -3 \right) \left( 1 \right) - 4 \left( -3 \right)\right) = 4.
 # \end{align*}
-# ::::
-# :::::
+# ````
+# `````
 # 
 
 # In[3]:
@@ -748,7 +748,7 @@ def print_augmented_matrix(A):
 def gelim(A):
     m, n = A.shape
     
-    print(r"::::{dropdown} Solution")
+    print(r"````{dropdown} Solution")
     print(r"\begin{align*}")
     print(r"&", end="")
     print_augmented_matrix(A)
@@ -815,7 +815,7 @@ def back_substitution(A):
     print(r"\end{align*}")
     
     
-print(":::::{admonition} Exercise 2.3")
+print("`````{admonition} Exercise 2.3")
 print(":class: note")
 print(":name: ex2.3")
 print()
@@ -830,7 +830,7 @@ Ab = gelim(Ab)
 print()
 print(rf"therefore ")
 back_substitution(A)
-print(r"::::")
+print(r"````")
     
 print("\n(b)")
 A = Matrix([[3, 1, 2], [4, 0, -4], [4, -2, 1]])
@@ -841,7 +841,7 @@ Ab = gelim(Ab)
 print()
 print(rf"therefore ")
 back_substitution(A)
-print(r"::::")
+print(r"````")
 
 print("\n(c)")
 A = Matrix([[-1, -5, -2], [2, -2, -3], [3, -1, 4]])
@@ -853,7 +853,7 @@ Ab = gelim(Ab)
 print()
 print(rf"therefore ")
 back_substitution(A)
-print(r"::::")
+print(r"````")
 
 print("\n(d)")
 A = Matrix([[-1, -5, -2], [2, -2, -3],  [3, -1, -4]])
@@ -864,7 +864,7 @@ Ab = gelim(Ab)
 print()
 print(rf"therefore ")
 back_substitution(A)
-print(r"::::")
+print(r"````")
 
 print("\n(e)")
 A = Matrix([[3, -5, -4, -1], [0, -4, 3, -4], [2, 3, 3, -3], [-2, 2, -5, -4]])
@@ -876,7 +876,7 @@ Ab = gelim(Ab)
 print()
 print(rf"therefore ")
 back_substitution(A)
-print(r"::::")
+print(r"````")
 
 print("\n(f)")
 A = Matrix([[2, -3, -3, 4], [4, -5, 1, -5], [3, 3, -1, -5], [1, 0, 1, 3]])
@@ -888,12 +888,12 @@ Ab = gelim(Ab)
 print()
 print(rf"therefore ")
 back_substitution(A)
-print(r"::::")
+print(r"````")
 
-print(":::::")
+print("`````")
 
 
-# :::::{admonition} Exercise 2.4
+# `````{admonition} Exercise 2.4
 # :class: note
 # :name: ex2.4
 # 
@@ -905,7 +905,7 @@ print(":::::")
 #      - 2 x_{1} +  x_{2} &= 1.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 # &    \left( \begin{array}{cc|cc}
 #          -1 & 3 & -2 \\
@@ -930,7 +930,7 @@ print(":::::")
 #     x_{2} &= \frac{1}{\frac{5}{2}} \left( - \frac{5}{2}\right) = -1, \\
 #     x_{1} &= \frac{1}{-2} \left( 1 - 1 \left( -1 \right)\right) = -1.
 # \end{align*}
-# ::::
+# ````
 # 
 # (b)
 # \begin{align*}
@@ -939,7 +939,7 @@ print(":::::")
 #      4 x_{1} - 2 x_{2} +  x_{3} &= 13.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 # &    \left( \begin{array}{ccc|ccc}
 #          3 & 1 & 2 & 11 \\
@@ -982,7 +982,7 @@ print(":::::")
 #     x_{2} &= \frac{1}{-2} \left( 17 - 5 \left( 3 \right)\right) = -1, \\
 #     x_{1} &= \frac{1}{4} \left( -4 - 0 \left( -1 \right) - \left( -4 \right) \left( 3 \right)\right) = 2.
 # \end{align*}
-# ::::
+# ````
 # 
 # (c)
 # \begin{align*}
@@ -991,7 +991,7 @@ print(":::::")
 #      3 x_{1} -  x_{2} + 4 x_{3} &= -13.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 # &    \left( \begin{array}{ccc|ccc}
 #          -1 & -5 & -2 & -17 \\
@@ -1034,7 +1034,7 @@ print(":::::")
 #     x_{2} &= \frac{1}{- \frac{16}{3}} \left( - \frac{64}{3} - \left( - \frac{2}{3} \right) \left( 0 \right)\right) = 4, \\
 #     x_{1} &= \frac{1}{3} \left( -13 - \left( -1 \right) \left( 4 \right) - 4 \left( 0 \right)\right) = -3.
 # \end{align*}
-# ::::
+# ````
 # 
 # (d)
 # \begin{align*}
@@ -1043,7 +1043,7 @@ print(":::::")
 #      3 x_{1} -  x_{2} - 4 x_{3} &= -20.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 # &    \left( \begin{array}{ccc|ccc}
 #          -1 & -5 & -2 & -26 \\
@@ -1086,7 +1086,7 @@ print(":::::")
 #     x_{2} &= \frac{1}{- \frac{16}{3}} \left( - \frac{98}{3} - \left( - \frac{10}{3} \right) \left( 5 \right)\right) = 3, \\
 #     x_{1} &= \frac{1}{3} \left( -20 - \left( -1 \right) \left( 3 \right) - \left( -4 \right) \left( 5 \right)\right) = 1.
 # \end{align*}
-# ::::
+# ````
 # 
 # (e)
 # \begin{align*}
@@ -1096,7 +1096,7 @@ print(":::::")
 #      - 2 x_{1} + 2 x_{2} - 5 x_{3} - 4 x_{4} &= -21.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 # &    \left( \begin{array}{cccc|cccc}
 #          3 & -5 & -4 & -1 & 28 \\
@@ -1145,7 +1145,7 @@ print(":::::")
 #     x_{2} &= \frac{1}{\frac{19}{3}} \left( - \frac{23}{3} - \frac{17}{3} \left( 3 \right) - \left( - \frac{7}{3} \right) \left( -3 \right)\right) = -5, \\
 #     x_{1} &= \frac{1}{3} \left( 28 - \left( -5 \right) \left( -5 \right) - \left( -4 \right) \left( 3 \right) - \left( -1 \right) \left( -3 \right)\right) = 4.
 # \end{align*}
-# ::::
+# ````
 # 
 # (f)
 # \begin{align*}
@@ -1155,7 +1155,7 @@ print(":::::")
 #      x_{1} +  x_{3} + 3 x_{4} &= -4.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 # &    \left( \begin{array}{cccc|cccc}
 #          2 & -3 & -3 & 4 & -1 \\
@@ -1212,8 +1212,8 @@ print(":::::")
 #     x_{2} &= \frac{1}{\frac{27}{4}} \left( - \frac{23}{2} - \left( - \frac{7}{4} \right) \left( 1 \right) - \left( - \frac{5}{4} \right) \left( -3 \right)\right) = -2, \\
 #     x_{1} &= \frac{1}{4} \left( 42 - \left( -5 \right) \left( -2 \right) - 1 \left( 1 \right) - \left( -5 \right) \left( -3 \right)\right) = 4.
 # \end{align*}
-# ::::
-# :::::
+# ````
+# `````
 
 # In[4]:
 
@@ -1221,7 +1221,7 @@ print(":::::")
 def gelimpp(A):
     m, n = A.shape
     
-    print(r"::::{dropdown} Solution")
+    print(r"````{dropdown} Solution")
     print(r"\begin{align*}")
     print(r"&", end="")
     print_augmented_matrix(A)
@@ -1283,12 +1283,12 @@ def gelimpp(A):
     print()
     print(rf"therefore ")
     back_substitution(A)
-    print(r"::::") 
+    print(r"````") 
     
     return A
 
 
-print(":::::{admonition} Exercise 2.5")
+print("`````{admonition} Exercise 2.5")
 print(":class: note")
 print(":name: ex2.5")
 print()
@@ -1335,10 +1335,10 @@ Ab = A.row_join(b)
 print_system(A, b)
 Ab = gelimpp(Ab)
 
-print(":::::")
+print("`````")
 
 
-# :::::{admonition} Exercise 2.5
+# `````{admonition} Exercise 2.5
 # :class: note
 # :name: ex2.5
 # 
@@ -1350,7 +1350,7 @@ print(":::::")
 #      - 2 x_{1} +  x_{2} &= 1.
 # \end{align*}
 # 
-# ::::{dropdown} Solution 
+# ````{dropdown} Solution 
 # \begin{align*}
 # &    \left( \begin{array}{cc|cc}
 #          -1 & 3 & -2 \\
@@ -1383,7 +1383,7 @@ print(":::::")
 # \end{align*}
 # 
 # therefore  $x_{1} = -1$ and $x_{2} = -1$.
-# ::::
+# ````
 # 
 # (b)
 # \begin{align*}
@@ -1392,7 +1392,7 @@ print(":::::")
 #      4 x_{1} - 2 x_{2} +  x_{3} &= 13.
 # \end{align*}
 # 
-# ::::{dropdown} Solution 
+# ````{dropdown} Solution 
 # \begin{align*}
 # &    \left( \begin{array}{ccc|ccc}
 #          3 & 1 & 2 & 11 \\
@@ -1444,7 +1444,7 @@ print(":::::")
 # \end{align*}
 # 
 # therefore  $x_{1} = 2$, $x_{2} = -1$ and $x_{3} = 3$.
-# ::::
+# ````
 # 
 # (c)
 # \begin{align*}
@@ -1453,7 +1453,7 @@ print(":::::")
 #      3 x_{1} -  x_{2} + 4 x_{3} &= -13.
 # \end{align*}
 # 
-# ::::{dropdown} Solution 
+# ````{dropdown} Solution 
 # \begin{align*}
 # &    \left( \begin{array}{ccc|ccc}
 #          -1 & -5 & -2 & -17 \\
@@ -1505,7 +1505,7 @@ print(":::::")
 # \end{align*}
 # 
 # therefore  $x_{1} = -3$, $x_{2} = 4$ and $x_{3} = 0$.
-# ::::
+# ````
 # 
 # (d)
 # \begin{align*}
@@ -1514,7 +1514,7 @@ print(":::::")
 #      3 x_{1} -  x_{2} - 4 x_{3} &= -20.
 # \end{align*}
 # 
-# ::::{dropdown} Solution 
+# ````{dropdown} Solution 
 # \begin{align*}
 # &    \left( \begin{array}{ccc|ccc}
 #          -1 & -5 & -2 & -26 \\
@@ -1566,7 +1566,7 @@ print(":::::")
 # \end{align*}
 # 
 # therefore  $x_{1} = 1$, $x_{2} = 3$ and $x_{3} = 5$.
-# ::::
+# ````
 # 
 # (e)
 # \begin{align*}
@@ -1576,7 +1576,7 @@ print(":::::")
 #      - 2 x_{1} + 2 x_{2} - 5 x_{3} - 4 x_{4} &= -21.
 # \end{align*}
 # 
-# ::::{dropdown} Solution 
+# ````{dropdown} Solution 
 # \begin{align*}
 # &    \left( \begin{array}{cccc|cccc}
 #          3 & -5 & -4 & -1 & 28 \\
@@ -1651,7 +1651,7 @@ print(":::::")
 # \end{align*}
 # 
 # therefore  $x_{1} = 4$, $x_{2} = -5$, $x_{3} = 3$ and $x_{4} = -3$.
-# ::::
+# ````
 # 
 # (f)
 # \begin{align*}
@@ -1661,7 +1661,7 @@ print(":::::")
 #      x_{1} +  x_{3} + 3 x_{4} &= -4.
 # \end{align*}
 # 
-# ::::{dropdown} Solution 
+# ````{dropdown} Solution 
 # \begin{align*}
 # &    \left( \begin{array}{cccc|cccc}
 #          2 & -3 & -3 & 4 & -1 \\
@@ -1728,8 +1728,8 @@ print(":::::")
 # \end{align*}
 # 
 # therefore  $x_{1} = 4$, $x_{2} = -2$, $x_{3} = 1$ and $x_{4} = -3$.
-# ::::
-# :::::
+# ````
+# `````
 
 # In[5]:
 
@@ -1737,7 +1737,7 @@ print(":::::")
 def gjelim(A):
     m, n = A.shape
     
-    print(r"::::{dropdown} Solution ")
+    print(r"````{dropdown} Solution ")
     print(r"\begin{align*}")
     print(r"&", end="")
     print_augmented_matrix(A)
@@ -1797,11 +1797,11 @@ def gjelim(A):
         if i < m - 2:
             print(",", end ="")
     print(rf" and $x_{{{m}}} = {latex(A[-1,-1])}$.")
-    print("::::")
+    print("````")
 
     return A
         
-print(":::::{admonition} Exercise 2.4")
+print("`````{admonition} Exercise 2.4")
 print(":class: note")
 print(":name: ex2.4")
 print()
@@ -1849,10 +1849,10 @@ Ab = A.row_join(b)
 print_system(A, b)
 Ab = gjelim(Ab)
 
-print(":::::")
+print("`````")
 
 
-# :::::{admonition} Exercise 2.6
+# `````{admonition} Exercise 2.6
 # :class: note
 # :name: ex2.6
 # 
@@ -1866,7 +1866,7 @@ print(":::::")
 #          3 & 4 \\
 #     \end{array} \right)
 # \end{align*}
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 # &    \left( \begin{array}{cc|cc}
 #          -4 & 2 & 1 & 0 \\
@@ -1906,7 +1906,7 @@ print(":::::")
 #          \frac{3}{22} & \frac{2}{11} \\
 #     \end{array} \right)
 # . \end{align*}
-# ::::
+# ````
 # 
 # (b)
 # \begin{align*}
@@ -1915,7 +1915,7 @@ print(":::::")
 #          -1 & -3 \\
 #     \end{array} \right)
 # \end{align*}
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 # &    \left( \begin{array}{cc|cc}
 #          -4 & 2 & 1 & 0 \\
@@ -1955,7 +1955,7 @@ print(":::::")
 #          \frac{1}{14} & - \frac{2}{7} \\
 #     \end{array} \right)
 # . \end{align*}
-# ::::
+# ````
 # 
 # (c)
 # \begin{align*}
@@ -1965,7 +1965,7 @@ print(":::::")
 #          1 & 0 & 0 \\
 #     \end{array} \right)
 # \end{align*}
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 # &    \left( \begin{array}{ccc|ccc}
 #          -4 & -4 & -2 & 1 & 0 & 0 \\
@@ -2025,7 +2025,7 @@ print(":::::")
 #          0 & \frac{1}{4} & - \frac{3}{4} \\
 #     \end{array} \right)
 # . \end{align*}
-# ::::
+# ````
 # 
 # (d)
 # \begin{align*}
@@ -2035,7 +2035,7 @@ print(":::::")
 #          3 & 1 & 2 \\
 #     \end{array} \right)
 # \end{align*}
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 # &    \left( \begin{array}{ccc|ccc}
 #          4 & 0 & -4 & 1 & 0 & 0 \\
@@ -2095,8 +2095,8 @@ print(":::::")
 #          - \frac{7}{40} & \frac{1}{10} & \frac{1}{10} \\
 #     \end{array} \right)
 # . \end{align*}
-# ::::
-# :::::
+# ````
+# `````
 
 # In[6]:
 
@@ -2131,7 +2131,7 @@ def gjelim_inverse(A):
     
     A = A.row_join(eye(A.shape[0]))
 
-    print(r"::::{dropdown} Solution")
+    print(r"````{dropdown} Solution")
     print(r"\begin{align*}")
     print(r"&", end="")
     print_augmented_matrix(A)
@@ -2190,12 +2190,12 @@ def gjelim_inverse(A):
     print(r"A^{{-1}} = ")
     print_matrix(A[:,n:])
     print(r". \end{align*}")
-    print("::::")
+    print("````")
 
     return A
 
 
-print(":::::{admonition} Exercise 2.6")
+print("`````{admonition} Exercise 2.6")
 print(":class: note")
 print(":name: ex2.6")
 print()
@@ -2221,10 +2221,10 @@ A = Matrix([[4, 0, -4], [4, -1, 1], [3, 1, 2]])
 print_standalone_matrix(A)
 AI = gjelim_inverse(A)
 
-print(":::::")
+print("`````")
 
 
-# :::::{admonition} Exercise 2.7
+# `````{admonition} Exercise 2.7
 # :class: note
 # :name: ex2.7
 # 
@@ -2238,7 +2238,7 @@ print(":::::")
 #      4 x_{1} +  x_{2} +  x_{3} &= 4.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 # &    \left( \begin{array}{ccc|ccc}
 #          1 & -1 & 2 & 2 \\
@@ -2268,7 +2268,7 @@ print(":::::")
 #     x_{2} &= \frac{1}{3} \left( 3 - 0 \left( \frac{9}{7} \right)\right) = 1, \\
 #     x_{1} &= \frac{1}{1} \left( 2 - \left( -1 \right) \left( 1 \right) - 2 \left( \frac{9}{7} \right)\right) = \frac{3}{7}.
 # \end{align*}
-# ::::
+# ````
 # 
 # (b)
 # \begin{align*}
@@ -2277,7 +2277,7 @@ print(":::::")
 #      - x_{1} + 3 x_{2} - 8 x_{3} &= 1.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 # &    \left( \begin{array}{ccc|ccc}
 #          1 & -1 & 2 & 3 \\
@@ -2306,7 +2306,7 @@ print(":::::")
 #     x_2 &= \frac{1}{-1}(-2 - 3r) = 2 + 3r, \\
 #     x_1 &= 3 + 2 + 3r - 2r = 5 + r.
 # \end{align*}
-# ::::
+# ````
 # 
 # (c)
 # \begin{align*}
@@ -2315,7 +2315,7 @@ print(":::::")
 #      x_{1} + 4 x_{2} - 7 x_{3} &= 2.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 # &    \left( \begin{array}{ccc|ccc}
 #          1 & 1 & -2 & 1 \\
@@ -2339,8 +2339,8 @@ print(":::::")
 # \end{align*}
 # 
 # therefore $\rho(A) = 2$ and $\rho((A|\mathbf{b})) = 3$. Since $\rho(A) < \rho((A|\mathbf{b}))$ then this is an inconsistent system and does not have a solution.
-# ::::
-# :::::
+# ````
+# `````
 
 # In[7]:
 
@@ -2348,7 +2348,7 @@ print(":::::")
 def rank(A):
     m, n = A.shape
     
-    print(r"::::{dropdown} Solution")
+    print(r"````{dropdown} Solution")
     print(r"\begin{align*}")
     print(r"&", end="")
     print_augmented_matrix(A)
@@ -2387,11 +2387,11 @@ def rank(A):
     print(r"\end{align*}")
     print()
     print(rf"therefore $\rho(A) = {latex(A[:,:m].rank())}$ and $\rho((A|\mathbf{{b}})) = {latex(A.rank())}$.")
-    print("::::")
+    print("````")
     
     return A
     
-print(":::::{admonition} Exercise 2.7")
+print("`````{admonition} Exercise 2.7")
 print(":class: note")
 print(":name: ex2.7")
 print()
@@ -2420,10 +2420,10 @@ Ab = A.row_join(b)
 print_system(A, b)
 rank(Ab)
 
-print(":::::")
+print("`````")
 
 
-# :::::{admonition} Exercise 2.8
+# `````{admonition} Exercise 2.8
 # :class: note
 # :name: ex2.8
 # 
@@ -2436,7 +2436,7 @@ print(":::::")
 #      5 x_{1} + 9 x_{2} + 23 x_{3} &= 0.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 # &    \left( \begin{array}{ccc|c}
 #          3 & 2 & 7 & 0 \\
@@ -2464,7 +2464,7 @@ print(":::::")
 #     x_2 &= \frac{1}{-\frac{17}{3}}\left( \frac{34}{3}r \right) = -2r, \\
 #     x_1 &= \frac{1}{3}(-2(-2r) - 7r) = -r.
 # \end{align*}
-# ::::
+# ````
 # 
 # (b)
 # \begin{align*}
@@ -2473,7 +2473,7 @@ print(":::::")
 #      3 x_{1} +  x_{2} + 3 x_{3} &= 0.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 # &    \left( \begin{array}{ccc|c}
 #          2 & 3 & -1 & 0 \\
@@ -2501,13 +2501,13 @@ print(":::::")
 #     x_2 &= \frac{1}{-\frac{5}{2}} \left(\frac{3}{2}r \right) = -\frac{3}{5}r, \\
 #     x_1 &= \frac{1}{2} \left( -3\left(-\frac{3}{5}r\right) + r \right) = \frac{7}{5}r.
 # \end{align*}
-# ::::
-# :::::
+# ````
+# `````
 
 # In[8]:
 
 
-print(":::::{admonition} Exercise 2.8")
+print("`````{admonition} Exercise 2.8")
 print(":class: note")
 print(":name: ex2.8")
 print()
@@ -2519,7 +2519,7 @@ b = zeros(3, 1)
 Ab = A.row_join(b)
 print_system(A, b)
 Ab = gelim(Ab)
-print("::::")
+print("````")
 
 print("\n(b)")
 A = Matrix([[2, 3, -1], [1, -1, -2], [3, 1, 3]])
@@ -2527,12 +2527,12 @@ b = zeros(3, 1)
 Ab = A.row_join(b)
 print_system(A, b)
 Ab = gelim(Ab)
-print("::::")
+print("````")
 
-print(":::::")
+print("`````")
 
 
-# :::::{admonition} Exercise 2.9
+# `````{admonition} Exercise 2.9
 # :class: note
 # :name: ex2.9 
 #     
@@ -2546,9 +2546,9 @@ print(":::::")
 # 
 # has:
 # 
-# (a) a unique solution.
+# (a) &emsp; a unique solution.
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # \begin{align*}
 #     & \left( \begin{array}{ccc|c} 
 #         1 & 1 & 3 & 1 \\
@@ -2579,11 +2579,11 @@ print(":::::")
 # \end{align*}
 # 
 # For a homogeneous system to have a unique solution, each column must have a pivot. Therefore this system has a solution when $k \neq 8$.
-# ::::
+# ````
 # 
-# (b) a non-trivial solution
+# (b) &emsp; a non-trivial solution
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # The row echelon form of the coefficient matrix is
 # \begin{align*}
 #     \begin{pmatrix}
@@ -2595,6 +2595,6 @@ print(":::::")
 # 
 # When $k=8$ the last row are all zeros so this system will have infinitely many solutions.
 # 
-# ::::
+# ````
 # 
-# :::::
+# `````

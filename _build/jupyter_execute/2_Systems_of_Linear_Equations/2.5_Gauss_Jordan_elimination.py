@@ -73,7 +73,7 @@
 #         0 & 4 & -8 & -8 \\
 #         0 & -1 & 3 & -2 
 #     \end{array} \right)
-#     \begin{array}{l} \\  \dfrac{1}{4} R_2 \\ \phantom{x} \end{array} \\ \\
+#     \begin{array}{l} \\  \frac{1}{4} R_2 \\ \phantom{x} \end{array} \\ \\
 #     \longrightarrow \quad & 
 #     \left( \begin{array}{ccc|c}
 #         1 & -1 & 2 & 3 \\

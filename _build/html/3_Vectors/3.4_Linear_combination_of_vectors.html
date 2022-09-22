@@ -580,14 +580,14 @@ title="Print to PDF"
 <span id="linear-combination-of-vectors-section"></span><h1>Linear combination of vectors<a class="headerlink" href="#linear-combination-of-vectors" title="Permalink to this headline">#</a></h1>
 <div class="note admonition" id="linear-combination-of-vectors-definition">
 <p class="admonition-title">Definition: Linear combination of vectors</p>
-<p>Let <span class="math notranslate nohighlight">\(\mathbf{u},\mathbf{u}_1,\dots,\mathbf{u}_m\in\mathbb{R}^n\)</span> such that</p>
+<p>Let <span class="math notranslate nohighlight">\(\mathbf{v},\mathbf{u}_1,\dots,\mathbf{u}_m\in\mathbb{R}^n\)</span> such that</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    \mathbf{u}=\alpha_1\mathbf{u}_1+\alpha_2\mathbf{u}_2+\dots+\alpha_m\mathbf{u}_m,
+    \mathbf{v}=\alpha_1\mathbf{u}_1+\alpha_2\mathbf{u}_2+\dots+\alpha_m\mathbf{u}_m,
 \end{align*}\]</div>
 <p>for some <span class="math notranslate nohighlight">\(\alpha_1,\alpha_2,\dots,\alpha_m\in \mathbb{R}\)</span> <a class="footnote-reference brackets" href="#id2" id="id1">1</a>. Such a sum is called a <strong>linear combination of vectors</strong>.</p>
 </div>
-<p>In other words <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> can be expressed as a linear combination of the vectors <span class="math notranslate nohighlight">\(\mathbf{u}_1, \mathbf{u}_2, \ldots\)</span>. For example</p>
+<p>In other words <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> can be expressed as a linear combination of the vectors <span class="math notranslate nohighlight">\(\mathbf{u}_1, \mathbf{u}_2, \ldots\)</span>. For example</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     \begin{pmatrix} 2 \\ 0 \\ 7 \end{pmatrix} = 
@@ -597,12 +597,12 @@ title="Print to PDF"
 <p>and so we have expressed <span class="math notranslate nohighlight">\((2,0,7)\)</span> as a linear combination of the vectors <span class="math notranslate nohighlight">\((1,5,-1)\)</span> and <span class="math notranslate nohighlight">\((0,-10,9)\)</span>.</p>
 <div class="seealso admonition" id="linear-combination-of-vectors-example">
 <p class="admonition-title">Example 3.6</p>
-<p>Express the vector <span class="math notranslate nohighlight">\(\mathbf{x} = (7, -2, -11)\)</span> as a linear combination of the vectors</p>
+<p>Express the vector <span class="math notranslate nohighlight">\(\mathbf{v} = (7, -2, -11)\)</span> as a linear combination of the vectors</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    \mathbf{u} &amp;= \begin{pmatrix} 1 \\ 0 \\ 7 \end{pmatrix}, &amp;
-    \mathbf{v} &amp;= \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix}, &amp;
-    \mathbf{w} &amp;= \begin{pmatrix} 5 \\ -2 \\ -6 \end{pmatrix}.
+    \mathbf{u}_1 &amp;= \begin{pmatrix} 1 \\ 0 \\ 7 \end{pmatrix}, &amp;
+    \mathbf{u}_2 &amp;= \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix}, &amp;
+    \mathbf{u}_3 &amp;= \begin{pmatrix} 5 \\ -2 \\ -6 \end{pmatrix}.
 \end{align*}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -614,7 +614,7 @@ Solution<div class="sd-summary-down docutils">
 <p class="sd-card-text">We need to find the values of <span class="math notranslate nohighlight">\(\alpha_1\)</span>, <span class="math notranslate nohighlight">\(\alpha_2\)</span> and <span class="math notranslate nohighlight">\(\alpha_3\)</span> in the following linear combination</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    \alpha_1 \mathbf{u} + \alpha_2 \mathbf{v} + \alpha_3 \mathbf{w} &amp;= \mathbf{x} \\
+    \alpha_1 \mathbf{u}_1 + \alpha_2 \mathbf{u}_2 + \alpha_3 \mathbf{u}_3 &amp;= \mathbf{v} \\
     \alpha_1 \begin{pmatrix} 1 \\ 0 \\ 7 \end{pmatrix} 
     + \alpha_2 \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix} 
     + \alpha_3 \begin{pmatrix} 5 \\ -2 \\ -6 \end{pmatrix}
@@ -653,7 +653,7 @@ Solution<div class="sd-summary-down docutils">
 <p class="sd-card-text">Solving by back substitution gives <span class="math notranslate nohighlight">\(\alpha_1 = 1\)</span>, <span class="math notranslate nohighlight">\(\alpha_2 = -2\)</span> and <span class="math notranslate nohighlight">\(\alpha_3 = 2\)</span> so</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    \mathbf{x} = \mathbf{u} - 2\mathbf{v} + 2\mathbf{w}
+    \mathbf{v} = \mathbf{u}_1 - 2\mathbf{u}_2 + 2\mathbf{u}_3
     =  \begin{pmatrix} 1 \\ 0 \\ 7 \end{pmatrix} 
     - 2 \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix} 
     + 2 \begin{pmatrix} 5 \\ -2 \\ -6 \end{pmatrix}
@@ -661,19 +661,9 @@ Solution<div class="sd-summary-down docutils">
 \end{align*}\]</div>
 </div>
 </details></div>
-<div class="important admonition" id="linear-combination-of-vectors-proposition">
-<p class="admonition-title">Proposition: Representing a vector as a linear combination of vectors</p>
-<p>If the vector <span class="math notranslate nohighlight">\(\mathbf{v} = (v_1, v_2, \ldots, v_n)\)</span> can be represented as the linear combination of vectors <span class="math notranslate nohighlight">\(\mathbf{v} = \alpha_1 \mathbf{u}_1 + \alpha_2 \mathbf{u}_2 + \cdots + \alpha_n \mathbf{u}_n\)</span> then the values of <span class="math notranslate nohighlight">\(\alpha_i\)</span> are the solutions to the system of linear equations</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    \begin{pmatrix} \mathbf{u}_1 &amp; \mathbf{u}_2 &amp; \cdots &amp; \mathbf{u}_n \end{pmatrix}
-    \begin{pmatrix} \alpha_1 \\ \alpha_2 \\ \vdots \\ \alpha_n \end{pmatrix} = 
-    \begin{pmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{pmatrix}.
-\end{align*}\]</div>
-</div>
 <section id="basis-vectors">
 <span id="basis-vectors-section"></span><h2>Basis vectors<a class="headerlink" href="#basis-vectors" title="Permalink to this headline">#</a></h2>
-<p>A special type of vector is a <strong>basis vector</strong> which all other vectors in the space can be represented as a linear combination of the basis vectors (we cover basis in more detail in \cref{sec:basis}). In a Cartesian space the simplest basis vectors are unit vectors that point in the co-ordinate directions. In <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> we use the basis vectors <span class="math notranslate nohighlight">\(\mathbf{i} = (1, 0, 0)\)</span>, <span class="math notranslate nohighlight">\(\mathbf{j} = (0, 1, 0)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{k} = (0, 0, 1)\)</span> (<a class="reference internal" href="#basis-vectors-figure"><span class="std std-numref">Fig. 13</span></a>).</p>
+<p>A special type of vector is a <strong>basis vector</strong> which all other vectors in the space can be represented as a linear combination of the basis vectors (we will cover basis in more detail <a class="reference internal" href="../5_Vector_spaces/5.3_Basis.html#basis-section"><span class="std std-ref">later</span></a>). In a Cartesian space the simplest basis vectors are unit vectors that point in the co-ordinate directions. In <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> we use the basis vectors <span class="math notranslate nohighlight">\(\mathbf{i} = (1, 0, 0)\)</span>, <span class="math notranslate nohighlight">\(\mathbf{j} = (0, 1, 0)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{k} = (0, 0, 1)\)</span> (<a class="reference internal" href="#basis-vectors-figure"><span class="std std-numref">Fig. 13</span></a>).</p>
 <figure class="align-default" id="basis-vectors-figure">
 <img alt="../_images/basis_vectors.png" src="../_images/basis_vectors.png" />
 <figcaption>

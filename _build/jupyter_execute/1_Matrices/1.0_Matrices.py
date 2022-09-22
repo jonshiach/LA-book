@@ -36,6 +36,16 @@
 # :name: dimension-of-a-matrix-definition
 # 
 # The dimension or size of a matrix is defined to be **rows** $\times$ **columns**, where 'rows' is the number of horizontal rows and 'columns' the number of vertical columns of said matrix. If rows $=$ columns we say that the matrix is a square matrix.
+# \begin{align*}
+#     &\,\,\,\begin{matrix} \leftarrow & \!\!\text{columns}\!\! & \rightarrow \end{matrix} \\
+#     \begin{matrix} \uparrow \\ \text{rows} \\ \downarrow \end{matrix}
+#     &\begin{pmatrix}
+#         \square & \square & \cdots & \square \\
+#         \square & \square & \cdots & \square \\
+#         \vdots & \vdots & \ddots & \vdots \\
+#         \square & \square & \cdots & \square
+#     \end{pmatrix}
+# \end{align*}
 # ````
 # 
 # ````{admonition} Example 1.1

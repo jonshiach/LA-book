@@ -95,10 +95,10 @@
 # :class: note
 # :name: line-line-intersection-definition
 # 
-# Two lines $\ell_1: P_1 + t\mathbf{d}_1$ and $\ell_2: P_2 + t\mathbf{d}_2$ in $\mathbb{R}^n$ **intersect** if there exists a value $t$ such that
+# Two lines $\ell_1: P_1 + t_1\mathbf{d}_1$ and $\ell_2: P_2 + t_2\mathbf{d}_2$ in $\mathbb{R}^n$ **intersect** if there exists values of $t_1$ and $t_2$ such that
 # 
 # \begin{align*}
-#     P_1 + t \mathbf{d}_1 = P_2 + t \mathbf{d}_2.
+#     P_1 + t_1 \mathbf{d}_1 = P_2 + t_2 \mathbf{d}_2.
 # \end{align*}
 # 
 # ```{figure} ../Images/line_line_intersection.png
@@ -108,79 +108,60 @@
 # ```
 # ````
 # 
-# To determine whether two lines intersect we simply equate the vector equations of the two lines and attempt to solve for $t$.
+# To determine whether two lines intersect we simply equate the vector equations of the two lines and attempt to solve for $t_1$ and $t_2$.
 # 
 # ````{admonition} Example 4.2
 # :class: seealso
 # :name: line-line-intersection-example
 # 
-# Three lines in $\mathbb{R}^3$ are defined as $\ell_1: (1, 2, 1) + t(2, 1 0)$, $\ell_2: (3, 4, -3) + t(1, 0, 2)$ and $\ell_3: (1, 1, 2) + t (1, 0, -2)$. Determine the points of intersection between the three lines (if possible).
+# Three lines in $\mathbb{R}^3$ are defined as $\ell_1: (1 + t, -3 + 2t, t)$, $\ell_2: (6 - t, -5 - 2t, t - 1)$ and $\ell_3: (6 + 2t, -11 + 2t, -2 - t)$. Determine the points of intersection between the three lines (if possible).
 # 
 # ```{dropdown} Solution
-# Equating $\ell_1$ and $\ell_2$
+# Equating $\ell_1$ and $\ell_2$ gives
 # 
 # \begin{align*}
-#     \begin{pmatrix} 1 \\ 2 \\ 1 \end{pmatrix} + t \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} 
-#     &= \begin{pmatrix} 3 \\ 4 \\ -3 \end{pmatrix} + t \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix}
+#     1 + t_1 &= 6 - t_2, \\
+#     -3 + 2t_1 &= -5 + 2t_2, \\
+#     t_1 &= -1 + t_2.
 # \end{align*}
 # 
-# gives the system
+# The third equation is $t_1 = t_2 - 1$ and substituting into the first equation gives $t_2 = 3$ so $t_1 = 2$. Substituting these into the second equation gives $-3 + 2(2) = -5 + 2(3)$ which is $1 = 1$ so $\ell_1$ and $\ell_2$ intersect. To find the point of intersection we substitute $t_1$ or $t_2$ into the equations for $\ell_1$ or $\ell_2$ respectively.
 # 
 # \begin{align*}
-#     1 + 2t &= 3 + t, \\
-#     2 + t &= 4, \\
-#     1  &= -3 + 2 t.
+#     \begin{pmatrix} 1 + 2 \\ -3 + 2(2) \\ 2 \end{pmatrix}  &= \begin{pmatrix} 3 \\ 1 \\ 2 \end{pmatrix}, \\
+#     \begin{pmatrix} 6 - 3 \\ -5 -2(3) \\ 3 - 1 \end{pmatrix} &= \begin{pmatrix} 3 \\ 1 \\ 2 \end{pmatrix}. \\
 # \end{align*}
 # 
-# The second equation gives $t = 2$ which substituted into the other two equations results in
+# So $\ell_1$ and $\ell_2$ intersect at $(3, 1, 2)$. 
+# 
+# Equating $\ell_1$ and $\ell_3$ gives
 # 
 # \begin{align*}
-#     1 + 2(2) &= 3 + 2, \\
-#     1 &= -3 + 2(2),
+#     1 + t_1 &= 6 + t_3, \\
+#     -3 + 2t_1 &= -11 + 2t_3, \\
+#     t_1 &= -2 - t_3.
 # \end{align*}
 # 
-# which are consistent so $\ell_1$ and $\ell_2$ intersect when $t=2$ which is at
+# Substituting the third equation into the first equation gives $1 - 2 - t_3 = 6 + t_3$ so $t_3 = -\frac{7}{2}$ and $t_1 = -\frac{21}{2}$. Substituting these into the second equation gives $-3 + 2(-\frac{21}{2}) = -11 + 2(-\frac{7}{2})$ which is $-24 = -18$ which is a contradiction so no values of $t_1$ or $t_3$ satisfy $\ell_1 = \ell_3$ and $\ell_1$ and $\ell_3$ do not intersect.
+# 
+# Equating $\ell_2$ and $\ell_3$ gives the system
 # 
 # \begin{align*}
-#     \begin{pmatrix} 1 \\ 2 \\ 1 \end{pmatrix} + 2 \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} 
-#     = \begin{pmatrix} 5 \\ 4 \\ 1 \end{pmatrix}.
+#     6 - t_2 &= 6 + 2t_3, \\
+#     -5 + 2t_2 &= -11 + 2t_3, \\
+#     -1 + t_2 &= -2 - t_3.
 # \end{align*}
 # 
-# Equating $\ell_1$ and $\ell_3$
+# The third equation gives $t_2 = -1 - t_3$ and substituting into the first equation gives $6 + 1 + t_3 = 6 + 2t_3$ so $t_3 = 1$ and $t_2 = -2$. Substituting these into the second equation gives $-5 + 2(-2) = -11 + 2(1)$ which is $-9 = -9$ so $\ell_2$ and $\ell_3$ intersect. Substituting $t_2$ and $t_3$ into the equations for $\ell_2$ and $\ell_3$
 # 
 # \begin{align*}
-#     \begin{pmatrix} 1 \\ 2 \\ 1 \end{pmatrix} + t \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} 
-#     &= \begin{pmatrix} 1 \\ 1 \\ 2 \end{pmatrix} + t \begin{pmatrix} 1 \\ 0 \\ -2 \end{pmatrix},
+#     \begin{pmatrix} 6 - (-2) \\ -5 + 2(-2) \\ -1 + (-2) \end{pmatrix} &= \begin{pmatrix} 8 \\ -9 \\ -3 \end{pmatrix}, \\
+#     \begin{pmatrix} 6 + 2(1) \\ -11 + 2(1) \\ -2 - 1 \end{pmatrix} &= \begin{pmatrix} 8 \\ -9 \\ -3 \end{pmatrix}.
 # \end{align*}
 # 
-# gives the system
+# So $\ell_2$ and $\ell_3$ intersect at $(8, -9, -3)$.
 # 
-# \begin{align*}
-#     1 + 2 t &= 1 + t, \\
-#     2 + t &= 1, \\
-#     1 &= 2 - 2 t.
-# \end{align*}
-# 
-# The second equation gives $t = -1$ which substituted into the first equation results in $1 + 2(-1) = -1 \neq 1 +(-1) = 0$ so the system is inconsistent and $\ell_1$ and $\ell_2$ do not intersect.
-# 
-# Equating $\ell_2$ and $\ell_3$
-# 
-# \begin{align*}
-#     \begin{pmatrix} 3 \\ 4 \\ -3 \end{pmatrix} + t \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix}
-#     &= \begin{pmatrix} 1 \\ 1 \\ 2 \end{pmatrix} + t \begin{pmatrix} 1 \\ 0 \\ -2 \end{pmatrix},
-# \end{align*}
-# 
-# gives the system
-# 
-# \begin{align*}
-#     3 + 2 t &= 1 + t, \\
-#     4 + t &= 1, \\
-#     -3 &= 2 - 2 t.
-# \end{align*}
-# 
-# The second equation gives $t = -3$ which substituted into the third equation results in $-3 \neq 2 - 2(-3) = 8$ so the system is inconsistent and $\ell_2$ and $\ell_3$ do not intersect.
 # ```
-# 
 # ````
 #  
 # ## Parallel lines
@@ -254,6 +235,8 @@
 # \end{align*}
 # 
 # Here we have a contradiction so no value of $k$ exists to satisfy $\mathbf{d}_1 = k\mathbf{d}_2$ so $\ell_1$ and $\ell_2$ are not parallel.
+# 
+# ````
 # `````
 # 
 # ## Skew lines
@@ -279,19 +262,12 @@
 # 
 # ```{dropdown} Solution
 # 
-# We have shown in [example 4.3](parallel-lines-example) that $\ell_1$ and $\ell_2$ are not parallel. Therefore to we need to show that they do not intersect. Equating $\ell_1$ and $\ell_2$.
+# We have shown in [example 4.3](parallel-lines-example) that $\ell_1$ and $\ell_2$ are not parallel. Therefore to we need to show that they do not intersect. Equating $\ell_1$ and $\ell_2$ gives
 # 
 # \begin{align*}
-#     \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} + t \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} =
-#     \begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix} + t \begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix},
-# \end{align*}
-# 
-# so we have the system
-# 
-# \begin{align*}
-#     t &= t, \\
+#     t_1 &= t_2, \\
 #     0 &= 3, \\
-#     -1 &= -1 - t.
+#     -1 &= -1 - t_2.
 # \end{align*}
 # 
 # Here the second equation is a contradiction so this system is inconsistent and the lines $\ell_1$ and $\ell_2$ do not intersect. Since $\ell_1$ and $\ell_2$ are not parallel and do not intersect then they must be skew.
@@ -320,8 +296,8 @@
 # (i) &emsp; The direction vectors were $\mathbf{d}_1 = (1, 0, 1)$ and $\mathbf{d}_2 = (1, 0, -1)$ 
 # 
 # \begin{align*}
-#     \mathbf{d}_1 \cdot \mathbf{d}_2 = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} +
-#     \begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix} = 1 + 0 + -1 = 0.
+#     \mathbf{d}_1 \cdot \mathbf{d}_2 = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} \cdot
+#     \begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix} = 1 + 0 + (-1) = 0.
 # \end{align*}
 # 
 # So $\ell_1 \perp \ell_2$.
@@ -341,7 +317,7 @@
 #     \begin{pmatrix} d_1 \\ d_2 \\ d_3 \end{pmatrix} = d_1 - d_2 + d_3 = 0.
 # \end{align*}
 # 
-# This equation has infinitely many solutions, to find a solution we need to choose values for any two from $d_1,d_2,d_3$ (where at least one is non-zero). Let $d_1 = 1$ and $d_2 = 0$ then $d_3 = -1$ so $\mathbf{d}_2 = (1, 0, -1)$. Since $\ell_2$ passes through $P = (-1, 1, 0)$ and the equation of $\ell_2$ is
+# This equation has infinitely many solutions, to find a solution we need to choose values for any two from $d_1$ ,$d_2$ and $d_3$ (where at least one is non-zero). Let $d_1 = 1$ and $d_2 = 0$ then $d_3 = -1$ so $\mathbf{d}_2 = (1, 0, -1)$. Since $\ell_2$ passes through $P = (-1, 1, 0)$ and the equation of $\ell_2$ is
 # 
 # \begin{align*}
 #     Q = \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix} + t

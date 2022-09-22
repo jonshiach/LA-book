@@ -6,7 +6,7 @@
 # 
 # **Learning outcomes**
 # 
-# On successful completion of this chapters students will be able to:
+# On successful completion of this chapter students will be able to:
 # 
 # - [define a linear system of equations](system-of-linear-equation-definition) and write them as a matrix equation;
 # - calculate the solution to a system of linear equations using the [inverse matrix](solution-using-inverse-matrix-theorem) and [Cramer's rule](cramers-rule-theorem);
@@ -20,7 +20,6 @@
 # ---
 # ## Definition
 # 
-# 
 # ```{admonition} Definition: System of linear equations
 # :class: note
 # :name: system-of-linear-equation-definition
@@ -33,7 +32,7 @@
 #     &\vdots \\
 #     a_{m1} x_1+a_{m2} x_2+\cdots+a_{mn}x_n &=b_m,
 # \end{align*}
-# where $x_1, x_2, \ldots, x_n$ are **variables**, $a_{11}, a_{12}, \ldots, a_{mn}$ are **coefficients** and $b_1, b_2, \ldots, b_n$ are **constant** terms.
+# where $x_1, x_2, \ldots, x_n$ are **variables**, $a_{11}, a_{12}, \ldots, a_{mn}$ are **coefficients** and $b_1, b_2, \ldots, b_n$ are **constants**.
 # ```
 # 
 # In general we would know the values of $a_{ij}$ and $b_i$ and we would like to find out what the values of $x_i$ are.

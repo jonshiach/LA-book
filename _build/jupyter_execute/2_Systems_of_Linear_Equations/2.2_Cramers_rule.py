@@ -85,7 +85,7 @@
 # \begin{align*}
 #     A\mathbf{x} = \begin{pmatrix} 3 & -2 \\ 1 & -3 \end{pmatrix}
 #     \begin{pmatrix} -2 \\ -1 \end{pmatrix} =
-#     \begin{pmatrix} -4 \\ 1 \end{pmatrix} = \mathbf{b}.
+#     \begin{pmatrix} -4 \\ 1 \end{pmatrix} = \mathbf{b} \qquad \checkmark
 # \end{align*}
 # 
 # (ii) &emsp; $A = \begin{pmatrix} -2 & -3 & -1 \\ -4 & 4 & 3 \\ -3 & 0 & 0 \end{pmatrix}$ and $\mathbf{b} = \begin{pmatrix} -5 \\ -20 \\ -12 \end{pmatrix}$
@@ -116,7 +116,7 @@
 #     A\mathbf{x} = 
 #     \begin{pmatrix} -2 & -3 & -1 \\ -4 & 4 & 3 \\ -3 & 0 & 0 \end{pmatrix}
 #     \begin{pmatrix} 4 \\ -1 \\ 0 \end{pmatrix} =
-#     \begin{pmatrix} -5 \\ -20 \\ -12 \end{pmatrix} = \mathbf{b}.
+#     \begin{pmatrix} -5 \\ -20 \\ -12 \end{pmatrix} = \mathbf{b} \qquad \checkmark
 # \end{align*}
 # 
 # ```

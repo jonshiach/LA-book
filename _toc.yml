@@ -39,3 +39,7 @@ parts:
 - caption: Appendices
   chapters:
   - glob: 7_Appendices/*
+
+# - caption: Lecture Handouts
+#   chapters:
+#   - glob: 8_Handouts/*

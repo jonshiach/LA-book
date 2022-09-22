@@ -330,7 +330,7 @@
 #     A point on the line $\ell$ can be calculated using the [vector equation of a line]((vector-equation-of-a-line-definition) $Q = P + t\mathbf{d}$ where $P$ is a point on the line, $t\in \mathbb{R}$ and $\mathbf{d}$ is a vector indicating the direction of the line.
 #     
 # Intersecting lines
-#     The two lines $\ell_1$ and $\ell_2$ [intersect](line-line-intersection-definition) if there exists a value of $t$ such that $P_1 + t\mathbf{d}_1 = P_2 + t\mathbf{d}_2$.
+#     The two lines $\ell_1: P_1 + t_1 \mathbf{d}_1$ and $\ell_2: P_2 + t_2 \mathbf{d}_2$ [intersect](line-line-intersection-definition) if there exists values of $t_1$ and $t_2$ such that $P_1 + t_1 \mathbf{d}_1 = P_2 + t_2 \mathbf{d}_2$.
 #     
 # Parallel lines
 #     The two lines $\ell_1: P_1 + t\mathbf{d}_1$ and $\ell_2: P_2 + t\mathbf{d}_2$ are [parallel](parallel-lines-definition) if there exists a value $k$ such that $\mathbf{d}_1 = k\mathbf{d}_2$.

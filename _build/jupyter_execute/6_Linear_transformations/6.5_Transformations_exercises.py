@@ -4,15 +4,15 @@
 # (transformations-exercises-section)=
 # # Transformations exercises
 # 
-# :::::{admonition} Exercise 6.1
+# `````{admonition} Exercise 6.1
 # :class: note
 # :name: ex6.1
 # 
 # Which of the following transformations are linear transformations?
 # 
-# (a) &emsp; $T: (x, y) \mapsto (0, y)$;
+# (a) &emsp; $T: (x, y) \mapsto (0, y)$
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # Let $(x_1, y_1), (x_2, y_2) \in \mathbb{R}^2$ and $\alpha \in \mathbb{R}$
 # 
 # \begin{align*}
@@ -24,22 +24,22 @@
 # \end{align*}
 # 
 # therefore $T$ is a linear transformation.
-# :::
+# ```
 #         
-# (b) &emsp; $T: (x, y) \mapsto (x, 5)$;
+# (b) &emsp; $T: (x, y) \mapsto (x, 5)$
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # $T$ is not a linear transformation since 
 # 
 # \begin{align*}
 #     T\left( \begin{pmatrix} 1 \\ 0 \end{pmatrix} + \begin{pmatrix} 1 \\ 1 \end{pmatrix} \right) = \begin{pmatrix} 2 \\ 5 \end{pmatrix}, \\
 #     T\begin{pmatrix} 1 \\ 0 \end{pmatrix} + T\begin{pmatrix} 1 \\ 1 \end{pmatrix} = \begin{pmatrix} 2 \\ 10 \end{pmatrix}.
 # \end{align*}
-# :::
+# ```
 # 
-# (c) &emsp; $T: (x, y) \mapsto (x, x - y)$;
+# (c) &emsp; $T: (x, y) \mapsto (x, x - y)$
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # Let $(x_1, y_1), (x_2, y_2) \in \mathbb{R}^2$ and $\alpha \in \mathbb{R}$
 # 
 # \begin{align*}
@@ -51,11 +51,11 @@
 # \end{align*}
 # 
 # therefore $T$ is a linear transformation.
-# :::
+# ```
 # 
-# (d) &emsp; $T: (x, y, z) \mapsto (x + y, z)$;
+# (d) &emsp; $T: (x, y, z) \mapsto (x + y, z)$
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # Let $(x_1, y_1, z_2) \in \mathbb{R}^3$, $(x_2, y_2) \in \mathbb{R}^2$ and $\alpha \in \mathbb{R}$
 # 
 # \begin{align*}
@@ -66,11 +66,11 @@
 # \end{align*}
 # 
 # therefore $T$ is a linear transformation.
-# :::
+# ```
 # 
-# (e) &emsp; $T: (x, y) \mapsto (3x + 1, y)$;
+# (e) &emsp; $T: (x, y) \mapsto (3x + 1, y)$
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # $T$ is not a linear transformation since
 # 
 # \begin{align*}
@@ -81,11 +81,11 @@
 #     &= \begin{pmatrix} 4 \\ 0 \end{pmatrix} + \begin{pmatrix} 4 \\ 1 \end{pmatrix} 
 #     = \begin{pmatrix} 8 \\ 1 \end{pmatrix},
 # \end{align*}
-# :::
+# ```
 # 
-# (f) &emsp; $T: f(x) \mapsto \dfrac{\mathrm{d}}{\mathrm{d}x} f(x)$;
+# (f) &emsp; $T: f(x) \mapsto \dfrac{\mathrm{d}}{\mathrm{d}x} f(x)$
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # Let $f(x),g(x) \in P(\mathbb{R})$ and $\alpha \in \mathbb{R}$:
 # 
 # \begin{align*}
@@ -95,10 +95,10 @@
 # \end{align*}
 # 
 # therefore $T$ is a linear transformation.
-# :::
+# ```
 # 
-# (g) &emsp; $T: f(x) \mapsto xf(x)$.
-# :::{dropdown} Solution
+# (g) &emsp; $T: f(x) \mapsto xf(x)$
+# ```{dropdown} Solution
 # Let $f(x),g(x) \in P(\mathbb{R})$ and $\alpha \in \mathbb{R}$:
 # 
 # \begin{align*}
@@ -107,11 +107,11 @@
 # \end{align*}
 # 
 # therefore $T$ is a linear transformation.
-# :::
+# ```
 # 
-# (h) &emsp; $T: \mathbb{C}^2 \to \mathbb{C}$ where $T: (x, y) \mapsto x + y$;
+# (h) &emsp; $T: \mathbb{C}^2 \to \mathbb{C}$ where $T: (x, y) \mapsto x + y$
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # Let $(x_1 + i y_1, x_2 + i y_2), (x_3 + i y_3, x_4 + i y_4) \in \mathbb{C}$ and $\alpha \in \mathbb{R}$
 # 
 # \begin{align*}
@@ -122,11 +122,11 @@
 # \end{align*}
 # 
 # therefore $T$ is a linear transformation.
-# :::
+# ```
 # 
-# (i) &emsp; $T: \mathbb{C}^2 \to \mathbb{C}$ where $T: (x, y) \mapsto x y$;
+# (i) &emsp; $T: \mathbb{C}^2 \to \mathbb{C}$ where $T: (x, y) \mapsto x y$
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # Let $(1, i) \in \mathbb{C}^2$ then 
 # 
 # \begin{align*}
@@ -135,13 +135,13 @@
 # \end{align*}
 # 
 # therefore $B$ is not a linear transformation.
-# :::
+# ```
 # 
-# (j) &emsp; $T: \mathbb{C}^2 \to \mathbb{C}$ where $T: (x, y) \mapsto \bar{y}$.
+# (j) &emsp; $T: \mathbb{C}^2 \to \mathbb{C}$ where $T: (x, y) \mapsto \bar{y}$
 # 
 # $\bar{x}$ is the complex conjugate of $x = a + bi$ defined by $\bar{x} = a - bi$.
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # Let $(x_1 + iy_1, x_2 + iy_2), (x_3 + iy_3, x_4 + iy_4) \in \mathbb{C}$ and $\alpha \in \mathbb{R}$
 # 
 # \begin{align*}
@@ -153,17 +153,17 @@
 # \end{align*}
 # 
 # therefore $C$ is a linear transformation.
-# :::
+# ```
 # 
-# :::::
+# `````
 # 
-# :::::{admonition} Exercise 6.2
+# `````{admonition} Exercise 6.2
 # :class: note
 # :name: ex6.2
 # 
 # A linear transformation $T: \mathbb{R}^2 \to \mathbb{R}^2$ is defined by $T: (x, y) \mapsto (-x + 3y, x - 4y)$. Determine the transformation matrix for $T$ and hence calculate $T \begin{pmatrix} 2 \\ 5 \end{pmatrix}$.
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # 
 # \begin{align*}
 #     A = \begin{pmatrix} -1 & 3 \\ 1 & -4 \end{pmatrix}
@@ -178,17 +178,17 @@
 # \end{align*}
 # 
 # therefore $T\begin{pmatrix} 2 \\ 5 \end{pmatrix} = (13, -18)$.
-# ::::
+# ````
 # 
-# :::::
+# `````
 # 
-# :::::{admonition} Exercise 6.3
+# `````{admonition} Exercise 6.3
 # :class: note
 # :name: ex6.3
 # 
 # A linear transformation $T: \mathbb{R}^2 \to \mathbb{R}^2$ is defined by $T: (x, y) \mapsto (x - 2y, 2x + 3y)$. Given $T(\mathbf{u}) = \begin{pmatrix} -1 \\ 5 \end{pmatrix}$ determine $\mathbf{u}$.
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # 
 # The transformation matrix is 
 # 
@@ -210,10 +210,10 @@
 #     \begin{pmatrix} -1 \\ 5 \end{pmatrix}
 #     = \begin{pmatrix} 1 \\ 1 \end{pmatrix}.
 # \end{align*}
-# ::::
-# :::::
+# ````
+# `````
 # 
-# :::::{admonition} Exercise 6.4
+# `````{admonition} Exercise 6.4
 # :class: note
 # :name: ex6.4
 # 
@@ -227,7 +227,7 @@
 # 
 # Find the transformation matrix for $T$.
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # 
 # The transformation matrix is determined using equation {eq}`determining-the-transformation-matrix` which is
 # 
@@ -292,18 +292,18 @@
 #     = \begin{pmatrix} 4 \\ 3 \\ 11 \end{pmatrix} \quad \checkmark
 # \end{align*}
 # 
-# ::::
+# ````
 # 
-# :::::
+# `````
 # 
-# :::::{admonition} Exercise 6.5
+# `````{admonition} Exercise 6.5
 # :class: note
 # :name: ex6.5
 # 
 # A rotate the point with co-ordinates $(2, 1)$ by $\frac{\pi}{6}$ anti-clockwise about the origin. 
 # 
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # 
 # The transformation matrix is
 # 
@@ -330,9 +330,9 @@
 #     &= \begin{pmatrix} \sqrt{3} - \frac{1}{2} \\ 1 + \frac{\sqrt{3}}{2} \end{pmatrix}
 #     \approx \begin{pmatrix} 1.2321 \\ 1.8660 \end{pmatrix}
 # \end{align*}
-# ::::
+# ````
 # 
-# :::::
+# `````
 
 # In[1]:
 

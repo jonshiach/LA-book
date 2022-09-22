@@ -4,60 +4,60 @@
 # (linear-dependence-section)=
 # # Linear dependence
 # 
-# ::::{admonition} Definition: Linear combination
+# ````{admonition} Definition: Linear combination
 # :class: note
 # :name: linear-combination-definition
 # 
 # Let $V$ be a vector space over a field $F$ and $W$ a non-empty subset of $V$. We say that $\mathbf{u} \in V$ is a **linear combination of elements in $W$** if there exist $\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n \in W$ and $\alpha_1, \alpha_2, \ldots, \alpha_n \in F$ such that
 # 
-# :::{math}
+# ```{math}
 # :label: linear-combination-equation
 # 
 # \mathbf{u} = \sum_{i = 1}^n \alpha_i \mathbf{v}_i = \alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 + \ldots + \alpha_n \mathbf{v}_n.
-# :::
-# ::::
+# ```
+# ````
 # 
 # We next introduce the notion of linear independence. 
 # 
-# ::::{admonition} Definition: Linear dependence
+# ````{admonition} Definition: Linear dependence
 # :class: note
 # :name: linear-dependence-definition
 # 
 # Let $\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n \in V$ and consider the equation
 # 
-# :::{math}
+# ```{math}
 # :label: linear-dependence-equation
 # 
 # \alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 + \cdots + \alpha_n \mathbf{v}_n = \mathbf{0},
-# :::
+# ```
 # 
 # where $\alpha \in F$. The vectors $\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n \in V$ are said to be **linearly independent over $F$** if the only solution to the above equation is when all of the $\alpha_i$ values are zero (this solution is called the trivial solution). If the above equation is satisfied where $\alpha_i \neq 0$ for $1 \leq i \leq n$, then the vectors $\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n \in V$ are said to be **linearly dependent over $F$**.
-# ::::
+# ````
 # 
 # Another way to think about linear independence is that a set of vectors is linearly independent if none of the vectors in the set can be represented as a linear combination of the other vectors in the same set. For example, are the matrices
 # 
 # \begin{align*}
 #     A &= \begin{pmatrix} 1 & 1 \\ 0 & 2 \end{pmatrix}, &
 #     B &= \begin{pmatrix} -1 & -1 \\ 0 & -2 \end{pmatrix}, &
-#     C &= \begin{pmatrix} -4 & 0 \\ 0 & -8 \end{pmatrix}
+#     C &= \begin{pmatrix} -4 & 0 \\ 0 & -8 \end{pmatrix},
 # \end{align*}
 # 
-# linearly independent over $\mathbb{R}$? We can see by inspection that $B = -A$ therefore $A$, $B$ and $C$ are linearly dependent as
+# linearly independent over $\mathbb{R}$? We can see by inspection that $B = -A$ therefore $A$, $B$ and $C$ are linearly dependent since
 # \begin{align*}
 #     1A + 1B + 0C = \mathbf{0}_{2\times 2}.
 # \end{align*} 
 # 
 # So if any two members of a set are scalar multiples of each other then they are linearly dependent because we can choose $\alpha_i$ values to satisfy equation {eq}`linear-dependence-equation`.
 # 
-# ::::{admonition} Example 5.5
+# ````{admonition} Example 5.5
 # :class: seealso
 # :name: linear-dependence-equation
 # 
 # Determine whether the following are linearly dependent
 # 
-# (i) &emsp; $(1, 0, 2), (2, 1, 3), (-3, -4, -2) \in \mathbb{R}^3$ over $\mathbb{R}$
+# &emsp; (i) &emsp; $(1, 0, 2), (2, 1, 3), (-3, -4, -2) \in \mathbb{R}^3$ over $\mathbb{R}$
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # 
 # Let $\alpha_1, \alpha_2, \alpha_3 \in \mathbb{R}$ then equation {eq}`linear-dependence-equation` becomes
 # 
@@ -114,11 +114,11 @@
 #     + \begin{pmatrix} -3 \\ -4 \\ -2 \end{pmatrix} =
 #     \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}.
 # \end{align*}
-# :::
+# ```
 #  
-# (ii) &emsp; $p(x) = x^2 + x + 1$, $r(x) = x - 1$ and $s(x) = x^2 - 1 \in P(\mathbb{R}_2)$ over $\mathbb{R}$
+# &emsp; (ii) &emsp; $p(x) = x^2 + x + 1$, $r(x) = x - 1$ and $s(x) = x^2 - 1 \in P(\mathbb{R}_2)$ over $\mathbb{R}$
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # 
 # Let $\alpha_1, \alpha_2, \alpha_3 \in \mathbb{R}$ then we need to ascertain when
 # 
@@ -179,6 +179,6 @@
 # \end{align*}
 # 
 # Therefore the only solution is $\alpha_1 = \alpha_2 = \alpha_3 = 0$ so the polynomials are linearly independent.
-# :::
-# ::::
+# ```
+# ````
 # 

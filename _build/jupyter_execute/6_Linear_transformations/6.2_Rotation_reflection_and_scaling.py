@@ -7,30 +7,30 @@
 # (rotation-section)=
 # ## Rotation
 # 
-# ::::{admonition} Definition: Rotation transformation
+# ````{admonition} Definition: Rotation transformation
 # :class: note
 # :name: rotation-definition
 # 
 # The linear transformation $Rot(\theta): \mathbb{R}^2 \to \mathbb{R}^2$ applied to the vector $\mathbf{u}$ rotates $\mathbf{u}$ by an angle $\theta$ *anti-clockwise* about the origin.
 # 
-# :::{figure} ../Images/rotation.png
+# ```{figure} ../Images/rotation.png
 # :name: rotation-figure
 # 
 # Rotation of the vector $\mathbf{u}$ anti-clockwise about the origin.
-# :::
-# ::::
+# ```
+# ````
 # 
 # 
 # Consider the diagram in {numref}`rotation-figure`. To determine the linear mapping $Rot(\theta): \mathbf{u} \mapsto \mathbf{v}$ we first consider the values of $\mathbf{u} = (x, y)$ as the vector which points along the $x$-axis with the same magnitude as $\mathbf{u}$ rotated by an angle $\phi$ anti-clockwise about the origin. Forming a right-angled triangle with the angle $\phi$ and hypotenuse of length $|\mathbf{u}|$ then
 # 
-# :::{math}
+# ```{math}
 # :label: rotation-equation-1
 # 
 # \begin{align*}
 #     \cos(\phi) &= \frac{x}{|\mathbf{u}|} & \therefore x &= |\mathbf{u}| \cos(\phi), \\
 #     \sin(\phi) &= \frac{y}{|\mathbf{u}|} & \therefore y &= |\mathbf{u}| \sin(\phi).
 # \end{align*}
-# :::
+# ```
 # 
 # Doing similar for $\mathbf{v} = (v_x, v_y)$ we have
 # 
@@ -48,14 +48,14 @@
 # 
 # then we have
 # 
-# :::{math}
+# ```{math}
 # :label: rotation-equation-2
 # 
 # \begin{align*}
 #     v_x &= |\mathbf{u}| \cos(\phi) \cos(\theta) - |\mathbf{u}|\sin(\phi) \sin(\theta) \\
 #     v_y &= |\mathbf{u}| \sin(\phi) \cos(\theta) + |\mathbf{u}|\cos(\phi) \sin(\theta).
 # \end{align*}
-# :::
+# ```
 # 
 # Substituting equation {eq}`rotation-equation-1` into equation {eq}`rotation-equation-2` 
 # 
@@ -73,7 +73,7 @@
 #     \end{pmatrix}
 # \end{align*}
 # 
-# ::::{admonition} Theorem: Rotation in $\mathbb{R}^2$
+# ````{admonition} Theorem: Rotation in $\mathbb{R}^2$
 # :class: important
 # :name: rotation-in-R2-theorem
 # 
@@ -86,7 +86,7 @@
 # 
 # The transformation matrix for rotation in $\mathbb{R}^2$ is
 # 
-# :::{math}
+# ```{math}
 # :label: rotation-matrix-equation
 # 
 # \begin{align*}
@@ -95,9 +95,9 @@
 #         \sin(\theta) & \cos(\theta)
 #     \end{pmatrix}.
 # \end{align*}
-# :::
+# ```
 # 
-# ::::
+# ````
 # 
 # ### Inverse rotation transformation
 # 
@@ -129,13 +129,13 @@
 #     \end{pmatrix}.
 # \end{align*}
 # 
-# :::::{admonition} Example 6.7
+# `````{admonition} Example 6.7
 # :class: seealso
 # :name: rotation-example
 # 
 # Rotate the vector $\mathbf{u} = (2, 1)$ by angle $\theta = \frac{\pi}{2}$ anti-clockwise about the origin.
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # 
 # The transformation matrix for this rotation is
 # 
@@ -165,27 +165,27 @@
 # 
 # This rotation is illustrated in the diagram below
 # 
-# :::{figure} ../Images/rotation-example.png
-# :::
+# ```{figure} ../Images/rotation-example.png
+# ```
 # 
-# ::::
-# :::::
+# ````
+# `````
 # 
 # (reflection-section)=
 # ## Reflection
 # 
-# ::::{admonition} Definition: Reflection about a line
+# ````{admonition} Definition: Reflection about a line
 # :class: note
 # :name: reflection-definition
 # 
 # The linear transformation $Ref(\theta): \mathbb{R}^2 \to \mathbb{R^2}$ is the reflection of a vector $\mathbf{u} \in \mathbf{R}^2$ about the line which passes through the origin and makes an angle of $\theta$ with the $x$-axis such that the distance of the head of the image vector $\mathbf{v}$ is the same as that of $\mathbf{u}$. 
 # 
-# :::{figure} ../Images/reflection.png
+# ```{figure} ../Images/reflection.png
 # :name: reflection-figure
 # 
 # The reflection of the vector $\mathbf{u}$ about a line.
-# :::
-# ::::
+# ```
+# ````
 # 
 # The simplest reflection we can perform is to reflect a vector $\mathbf{u} =(x, y)$ about the $x$-axis or $y$-axis. For example, to reflect about the $x$-axis we simply change the sign of the $y$ co-ordinate ({numref}`reflection-about-x-figure`), i.e.,
 # 
@@ -193,51 +193,51 @@
 # 
 # and the transformation matrix is
 # 
-# :::{math}
+# ```{math}
 # :label: reflection-about-x-equation
 # 
 # Ref(0) = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.
-# :::
+# ```
 # 
 # Note that here the line of reflection makes an angle of $\theta=0$ with the $x$-axis.
 # 
-# :::{figure} ../Images/reflection_about_x.png
+# ```{figure} ../Images/reflection_about_x.png
 # :scale: 75%
 # :name: reflection-about-x-figure
 # 
 # Reflection of the vector $\mathbf{u}$ about the $x$ axis.
-# :::
+# ```
 # 
 # The determine the reflection about a line that makes and arbitrary angle $\theta$ with the $x$-axis we first perform a rotation by $-\theta$ so that the line of reflection is on the $x$-axis ({numref}`reflection-about-line-1-figure`). This means we can then use equation {eq}`reflection-about-x-equation` to reflect the rotated $\mathbf{u}$ vector to give the vector $\mathbf{v}$ ({numref}`reflection-about-line-2-figure`) before rotating by $\theta$ so that the line of reflection is back to its original position ({numref}`reflection-about-line-3-figure`).
 # 
-# :::::{grid}
+# `````{grid}
 # 
-# ::::{grid-item}
-# :::{figure} ../Images/reflection_about_line_1.png
+# ````{grid-item}
+# ```{figure} ../Images/reflection_about_line_1.png
 # :name: reflection-about-line-1-figure
 # 
 # Rotate by $-\theta$.
-# :::
-# ::::
+# ```
+# ````
 # 
-# ::::{grid-item}
-# :::{figure} ../Images/reflection_about_line_2.png
+# ````{grid-item}
+# ```{figure} ../Images/reflection_about_line_2.png
 # :name: reflection-about-line-2-figure
 # 
 # Reflect about the $x$-axis.
-# :::
-# ::::
+# ```
+# ````
 # 
 # 
-# ::::{grid-item}
-# :::{figure} ../Images/reflection_about_line_3.png
+# ````{grid-item}
+# ```{figure} ../Images/reflection_about_line_3.png
 # :name: reflection-about-line-3-figure
 # 
 # Rotate by $\theta$.
-# :::
-# ::::
+# ```
+# ````
 # 
-# :::::
+# `````
 # 
 # Using composite transformations we can calculate the transformation matrix for reflection about a line
 # 
@@ -275,7 +275,7 @@
 #     \end{pmatrix}.
 # \end{align*}
 # 
-# ::::{admonition} Theorem: Reflection in $\mathbb{R}^2$
+# ````{admonition} Theorem: Reflection in $\mathbb{R}^2$
 # :class: important
 # :name: reflection-theorem
 # 
@@ -288,7 +288,7 @@
 # 
 # The transformation matrix for reflection in $\mathbb{R}^2$ is 
 # 
-# :::{math}
+# ```{math}
 # :label: reflection-matrix-equation
 # \begin{align*}
 #     Ref(\theta) = 
@@ -297,9 +297,9 @@
 #         \sin(2\theta) & -\cos(2\theta) 
 #     \end{pmatrix}.
 # \end{align*}
-# :::
+# ```
 # 
-# ::::
+# ````
 # 
 # ### Inverse reflection transformation
 # 
@@ -307,13 +307,13 @@
 # 
 # $$Ref^{-1}(\theta) = Ref(\theta).$$
 # 
-# :::::{admonition} Example 6.8
+# `````{admonition} Example 6.8
 # :class: seealso
 # :name: reflection-example
 # 
 # Reflect the vector $\mathbf{u} = (3, -1)$ about the line that passes through the origin and has gradient of 1. 
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # 
 # Since the line of reflection has gradient 1 then $\theta = \tan^{-1}(1) = \frac{\pi}{4}$ and the reflection matrix is
 # \begin{align*}
@@ -333,33 +333,33 @@
 #     \begin{pmatrix} -1 \\ 3 \end{pmatrix}.
 # \end{align*}
 # 
-# :::{figure} ../Images/reflection-example.png
-# :::
+# ```{figure} ../Images/reflection-example.png
+# ```
 # 
-# ::::
-# :::::
+# ````
+# `````
 # 
 # (scaling-section)=
 # ## Scaling
 # 
 # 
-# ::::{admonition} Definition: Scaling transformation
+# ````{admonition} Definition: Scaling transformation
 # :class: note
 # :name: scaling-definition
 # 
 # The linear transformation $S(\mathbf{s}) : \mathbf{R}^n \to \mathbf{R}^n$ where $\mathbf{s} \in \mathbb{R}^n$ applied to the position vector $\mathbf{u} \in \mathbb{R}^n$ scales $\mathbf{u}$ so that the head is moved closer or further away from the origin.
 # 
-# :::{figure} ../Images/scaling.png
+# ```{figure} ../Images/scaling.png
 # :name: scaling-figure
 # 
 # The scaling of the vector $\mathbf{u}$ by the scaling vector $\mathbf{s}$.
-# :::
-# ::::
+# ```
+# ````
 # 
 # 
 # The scaling of a vector $\mathbf{u} = (u_1, u_2, \ldots, u_n) \in \mathbb{R}^n$ by a scaling vector $\mathbf{s} = (v_1, v_2, \ldots, v_n)$ is achieved simply by multiplying the corresponding elements in $\mathbf{u}$ and $\mathbf{s}$.
 # 
-# ::::{admonition} Theorem: Scaling transformation
+# ````{admonition} Theorem: Scaling transformation
 # :class: important
 # :name: scaling-theorem
 # 
@@ -372,7 +372,7 @@
 # 
 # The transformation matrix for scaling is
 # 
-# :::{math}
+# ```{math}
 # :label: scaling-matrix-equation
 # \begin{align*}
 #     S(\mathbf{s}) = 
@@ -383,9 +383,9 @@
 #         0 & \cdots & 0 & s_n
 #         \end{pmatrix}.
 # \end{align*}
-# :::
+# ```
 # 
-# ::::
+# ````
 # 
 # ### Inverse scaling transformation
 # 
@@ -401,13 +401,13 @@
 #         \end{pmatrix}.
 # \end{align*}
 # 
-# :::::{admonition} Example 6.9
+# `````{admonition} Example 6.9
 # :class: seealso
 # :name: scaling-example
 # 
 # Scale the point with position vector $\mathbf{u} = (2,1)$ by scaling scaling vector $\mathbf{s} = (2, 3)$.
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # 
 # The transformation matrix is 
 # 
@@ -425,8 +425,8 @@
 #     = \begin{pmatrix} 4 \\ 3 \end{pmatrix}.
 # \end{align*}
 # 
-# :::{figure} ../Images/scaling_example.png
-# :::
+# ```{figure} ../Images/scaling_example.png
+# ```
 # 
-# ::::
-# :::::
+# ````
+# `````

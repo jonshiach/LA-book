@@ -8,7 +8,7 @@
 # 
 # ## Spanning sets
 # 
-# ::::{admonition} Definition: Spanning set
+# ````{admonition} Definition: Spanning set
 # :class: note
 # :name: spanning-set-definition
 # 
@@ -18,18 +18,18 @@
 #     \mathbf{u} = \alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 + \cdots + \alpha_n \mathbf{v}_n.
 # \end{align*}
 # then $W$ is a subspace of $V$ and $S$ is a **spanning set** for $W$. We write this as $\operatorname{span}(S)$.
-# ::::
+# ````
 # 
 # For example, $\mathbb{C} = \operatorname{span}(\{1, i\})$ over $\mathbb{R}$ since every element of $\mathbb{C}$ can be expressed as a linear combination of 1 and $i$.
 # 
-# ::::{admonition} Example 5.6
+# ````{admonition} Example 5.6
 # :class: seealso
 # :name: spanning-set-example
 # 
-# (i) &emsp; Show that  $\{ \mathbf{v}_1, \mathbf{v}_2 \}$ where $\mathbf{v}_1 = (2, 1)$ and $\mathbf{v}_2 = (4, 3)$ is a spanning set for $\mathbb{R}^2$.
+# &emsp; (i) &emsp; Show that  $\{ \mathbf{v}_1, \mathbf{v}_2 \}$ where $\mathbf{v}_1 = (2, 1)$ and $\mathbf{v}_2 = (4, 3)$ is a spanning set for $\mathbb{R}^2$.
 # 
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # 
 # We need to show that $\alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 = (a, b)$ for any $a, b \in \mathbb{R}$, i.e., so that the following system has a non-trivial solution.
 # 
@@ -45,11 +45,11 @@
 # \end{align*}
 # 
 # so $\{\mathbf{v}_1, \mathbf{v}_2\}$ is a spanning set for $\mathbb{R}^2$.
-# :::
+# ```
 # 
-# (ii) &emsp; Determine a spanning set for $\mathbb{R}^3$.
+# &emsp; (ii) &emsp; Determine a spanning set for $\mathbb{R}^3$.
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # 
 # Lets suggest $\{ (1, 0, 0), (0, 1, 0), (0, 0, 1) \}$ as a spanning set for $\mathbb{R}^3$
 # \begin{align*}
@@ -58,15 +58,15 @@
 # \end{align*}
 # 
 # therefore $\{ \mathbf{i}, \mathbf{j}, \mathbf{k} \}$ is a spanning set for $\mathbb{R}^3$. Note that this is just one of many examples of spanning sets for $\mathbb{R}^3$.
-# :::
+# ```
 # 
-# ::::
+# ````
 # 
 # The vectors $\mathbf{i}$, $\mathbf{j}$ and $\mathbf{j}$ were introduced in [basis vectors](basis-vectors-section). This leads to the definition of a basis of a vector space.
 # 
 # ## Basis of a vector space
 # 
-# ::::{admonition} Definition: Basis of a vector space
+# ````{admonition} Definition: Basis of a vector space
 # :class: note
 # :name: basis-definition
 #     
@@ -83,36 +83,36 @@
 # \begin{align*}
 #     \mathbf{u} = \alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 + \cdots + \alpha_n \mathbf{v}_n.
 # \end{align*}
-# ::::
+# ````
 # 
-# :::{admonition} Definition: Orthogonal basis
+# ```{admonition} Definition: Orthogonal basis
 # :class: note
 # :name: orthogonal-basis-definition
 # 
 # An **orthogonal basis** of a vector space is one in which each of the vectors are orthogonal (perpendicular) to one another.
-# :::
+# ```
 # 
-# :::{admonition} Definition: Orthonormal basis
+# ```{admonition} Definition: Orthonormal basis
 # :class: note
 # :name: orthonormal-basis-definition
 # 
 # An **orthonormal basis** of a vector space is one in which each of the vectors are orthogonal to one another and each vector is a unit vector.
-# :::
+# ```
 # 
-# :::{admonition} Definition: Dimension of a vector space
+# ```{admonition} Definition: Dimension of a vector space
 # :class: note
 # :name: vector-space-dimension-definition
 # 
 # The **dimension** of a vector space $V$ is denoted by $\dim(V)$ and is the number of elements in the basis for the vector space. 
-# :::
+# ```
 # 
-# ::::{admonition} Example 5.7
+# ````{admonition} Example 5.7
 # :class: seealso
 # :name: basis-example
 # 
 # Show that the vectors $\mathbf{v}_1 = (1, 1, 0)$, $\mathbf{v}_2 = (1, -1, 1)$ and $\mathbf{v}_3 = (1, -1, -2)$ is a basis for $\mathbb{R}^3$.
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # 
 # We need to show that the three vectors are linearly independent, i.e., show that the only solution to the following system is $\alpha_1 = \alpha_2 = \alpha_3 = 0$
 # 
@@ -181,8 +181,8 @@
 #     \begin{pmatrix} 1 \\ -1 \\ -2 \end{pmatrix} = 0,
 # \end{align*}
 # so $\{ \mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3 \}$ is an orthogonal basis. It is not an orthonormal basis since $|\mathbf{v}_1| = \sqrt{2} \neq 1$.
-# :::
-# ::::
+# ```
+# ````
 # 
 # (change-of-basis-section)=
 # ## Change of basis
@@ -197,7 +197,7 @@
 #         \right\},
 # \end{align*}
 # 
-# which is called the **standard basis**. Note that for $\mathbb{R}^3$ we have $\mathbf{i} = \mathbf{e}_1$, $\mathbf{j} = \mathbf{e}_2$ and $\mathbf{k} = \mathbf{e}_3$ and $\mathbf{e}_i$ is column $i$ of the identity matrix.
+# which is called the **standard basis**. Note that $\mathbf{e}_i$ is column $i$ of the identity matrix and for $\mathbb{R}^3$ we have $\mathbf{i} = \mathbf{e}_1$, $\mathbf{j} = \mathbf{e}_2$ and $\mathbf{k} = \mathbf{e}_3$.
 # 
 # We can represent a vector $\mathbf{u} = (u_1, u_2, \ldots, u_n) \in \mathbb{R}^n$ in the standard basis as a vector with respect to another basis $W = \{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\}$ which is denoted using $[\mathbf{u}]_W$. Using the standard basis we have
 # 
@@ -208,24 +208,24 @@
 # and to express $\mathbf{u}$ with respect to the basis $W$ we need to solve 
 # 
 # \begin{align*}
-#     [\mathbf{u}]_W &= w_1 \mathbf{v}_1 + w_2 \mathbf{v}_2 + \cdots + w_n \mathbf{v}_n = (w_1, w_2, \ldots, w_n),
+#     [\mathbf{u}]_W &= w_1 \mathbf{v}_1 + w_2 \mathbf{v}_2 + \cdots + w_n \mathbf{v}_n = (u_1, u_2, \ldots, u_n),
 # \end{align*}
 # 
 # for $w_1, w_2, \ldots, w_n$. This concept is illustrated for $\mathbb{R}^2$ in {numref}`change-of-basis-figure`.
 # 
-# :::{figure} ../Images/change_of_basis.png
+# ```{figure} ../Images/change_of_basis.png
 # :name: change-of-basis-figure
 # 
 # The vector $(u_1, u_2)$ in $\mathbb{R}^2$ expressed with respect to the basis $E = \{\mathbf{e}_1, \mathbf{e}_2 \}$ and $W = \{\mathbf{v}_1, \mathbf{v}_2\}$.
-# :::
+# ```
 # 
-# ::::{admonition} Example 5.8
+# ````{admonition} Example 5.8
 # :class: seealso
 # :name: change-of-basis-example
 # 
 # Represent the vector $\mathbf{u} = (4, 0, 5)$ with respect to the basis $W = \{(1, 1, 0), (1, -1, 1), (1, -1, -2)\}$.
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # 
 # We need to solve the system
 # 
@@ -288,16 +288,17 @@
 #     \begin{pmatrix} 4 \\ 0 \\ 5 \end{pmatrix} =
 #     \begin{pmatrix} 2 \\ 3 \\ -1 \end{pmatrix}.
 # \end{align*}
+# ```
 # 
-# ::::
+# ````
 # 
 # Note that in [example 5.8](change-of-basis-example) we can represent any vector $\mathbf{u}$ with respect to the basis $W$ by multiplying by the square matrix in the final equation. This matrix is known as the [**change of basis matrix**](https://en.wikipedia.org/wiki/Change_of_basis).
 # 
-# ::::{admonition} Definition: Change of basis matrix
+# ````{admonition} Definition: Change of basis matrix
 # :class: note
 # :name: change-of-basis-matrix-definition
 # 
 # Let $V$ be a vector space over the field $F$ and $\mathbf{u} \in V$. If $E$ and $W$ are two basis for $V$ then the change of basis matrix is the matrix $A_{E \to W}$ such that $[u]_{W} = A_{E \to W} [u]_E$.
-# ::::
+# ````
 # 
 # So to express the vector $\mathbf{u}$ to the basis $W$ we simply multiply $\mathbf{u}$ by the change of basis matrix. Changing from a non-standard basis is a slightly more complicated procedure and will be covered in the more advanced materials on linear algebra.

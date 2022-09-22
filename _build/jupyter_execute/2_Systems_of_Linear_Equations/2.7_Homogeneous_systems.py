@@ -4,7 +4,7 @@
 # (homogeneous-systems-section)=
 # # Homogeneous systems
 # 
-# ::::{admonition} Definition: Homogeneous systems
+# ````{admonition} Definition: Homogeneous systems
 # :class: note
 # :name: homogeneous-system-definition
 # 
@@ -20,13 +20,13 @@
 #     \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix} = 
 #     \begin{pmatrix} 0 \\ 0 \\ \vdots \\ 0 \end{pmatrix}.
 # \end{align*}
-# ::::
+# ````
 # 
 # A homogeneous system always as the **trivial** solution $\mathbf{x} = \mathbf{0}$ so a homogeneous system is always consistent. If $\mathbf{x} = \mathbf{0}$ is not the only solution then the system is indeterminate and there will be infinitely many non-trivial solutions. 
 # 
 # When a homogeneous system is solved by Gaussian elimination, the column of zeros on the right of the partition in the augmented matrix remains unchanged at each stage, since none of the three types of elementary row operations can introduce a non-zero entry in this column. Hence we can save time by omitting this column, instead we simply apply elementary row operations to the coefficient matrix until the row echelon form or reduced row echelon form is obtained, but then remember to restore the zeros to the right-hand sides of the simplified equations at the end.
 # 
-# :::::{admonition} Example 2.9
+# `````{admonition} Example 2.9
 # :class: seealso
 # :name: homogeneous-systems-example
 # 
@@ -38,7 +38,7 @@
 #     x_2 + x_3 +2x_4 &= 0.
 # \end{align*}
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # 
 # Applying elementary row operations to the coefficient matrix
 # 
@@ -95,5 +95,5 @@
 #     x_2 &= -6s - r, \\
 #     x_1 &= s - 2r.
 # \end{align*}
-# ::::
-# :::::
+# ````
+# `````

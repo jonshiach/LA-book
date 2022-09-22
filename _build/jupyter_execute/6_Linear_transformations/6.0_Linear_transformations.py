@@ -311,7 +311,7 @@
 # \end{align*}
 # 
 # This is the transformation matrix from [example 6.2](transformation-matrix-example).
-# 
+# ```
 # ````
 # 
 # ## Inverse linear transformation

@@ -70,10 +70,10 @@
 # 
 # ```{dropdown} Solution
 # 
-# Writing $\ell$ as a vector equation 
+# Writing $\ell$ in the form $P + t\mathbf{d}$ 
 # 
 # \begin{align*}
-#     \begin{pmatrix} 0 \\ -2 \\ 1 \end{pmatrix} + t
+#     \ell: \begin{pmatrix} 0 \\ -2 \\ 1 \end{pmatrix} + t
 #     \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix},
 # \end{align*}
 # 
@@ -105,7 +105,7 @@
 # \begin{align*}
 #     Q - R &= \begin{pmatrix} 2 \\ 2 \\ 2 \end{pmatrix} - 
 #     \begin{pmatrix} \frac{7}{3} \\ \frac{1}{3} \\ \frac{10}{3} \end{pmatrix} =
-#     \begin{pmatrix} -\frac{1}{3} \\ \frac{5}{3} \\ -4/ 3 \end{pmatrix}, \\
+#     \begin{pmatrix} -\frac{1}{3} \\ \frac{5}{3} \\ -\frac{4}{3} \end{pmatrix}, \\
 #     \therefore |\overrightarrow{QR}| &= \sqrt{\left(-\frac{1}{3}\right)^2 + \left(\frac{5}{3}\right)^2 + \left( -\frac{4}{3}\right)^2} = \sqrt{\frac{14}{3}} \approx 2.16.
 # \end{align*}
 # ```
@@ -180,12 +180,12 @@
 # 
 # ```{dropdown} Solution
 # 
-# First, we need to identify the direction vectors $\mathbf{d}_1$ and $\mathbf{d}_2$. Writing $\ell_1$ and $\ell_2$ as vector equations gives
+# First, we need to identify the direction vectors $\mathbf{d}_1$ and $\mathbf{d}_2$. Writing $\ell_1$ and $\ell_2$ in the form $P + t\mathbf{d}$ 
 # 
 # \begin{align*}
-#     Q_1 &= P_1 + t\mathbf{d}_1 = \begin{pmatrix} 0 \\ 1 \\ 3 \end{pmatrix} + t
+#     \ell_1: P_1 + t\mathbf{d}_1 = \begin{pmatrix} 0 \\ 1 \\ 3 \end{pmatrix} + t
 #     \begin{pmatrix} 1 \\ 4 \\ 2 \end{pmatrix} , \\
-#     Q_2 &= P_2 + t\mathbf{d}_2 = \begin{pmatrix} 1 \\ 1 \\ 3 \end{pmatrix} + t
+#     \ell_2: P_2 + t\mathbf{d}_2 = \begin{pmatrix} 1 \\ 1 \\ 3 \end{pmatrix} + t
 #     \begin{pmatrix} 0 \\ 2 \\ 4 \end{pmatrix},
 # \end{align*} 
 # 

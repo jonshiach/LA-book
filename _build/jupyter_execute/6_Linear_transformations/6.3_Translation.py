@@ -6,19 +6,19 @@
 # 
 # In the [previous section](rotation-reflection-and-scaling-section) we looked at how to rotate, reflect and scale a vector. To complete the movement of vectors in $\mathbb{R}^2$ we need to be able to **translate** vectors. 
 # 
-# ::::{admonition} Definition: Translation
+# ````{admonition} Definition: Translation
 # :class: note
 # :name: translation-definition
 # 
 # The translation of a position vector $\mathbf{u} \in \mathbb{R}^n$ by a translation vector $\mathbf{t} \in \mathbb{R}^n$ is the linear transformation $T(\mathbf{t}): \mathbf{u} \mapsto \mathbf{u} + \mathbf{t}$.
 # 
-# :::{figure} ../Images/translation.png
+# ```{figure} ../Images/translation.png
 # :name: translation-figure
 # 
 # The translation of the vector $\mathbf{u}$ by the vector $\mathbf{t}$ in $\mathbb{R}^2$.
-# :::
+# ```
 # 
-# ::::
+# ````
 # 
 # The problem we have here is what is the matrix representation of translation, i.e., in $\mathbb{R}^2$ what is the matrix $T$ that satisfies
 # 
@@ -28,14 +28,14 @@
 # 
 # A matrix $T(\mathbf{t})$ does not exist which is independent of $u_1$ and $u_2$ so we can use a trick which makes use of **homogeneous co-ordinates**.
 # 
-# :::{admonition} Definition: Homogeneous co-ordinates
+# ```{admonition} Definition: Homogeneous co-ordinates
 # :class: note
 # :name: homogeneous-coordinates-definition
 # 
 # The homogeneous co-ordinates of a point $\mathbf{u}$ in $\mathbb{R}^n$ expressed using the Cartesian co-ordinates is the $(n+1)$-tuple $(\lambda u_1, \lambda u_2, \ldots, \lambda u_n, \lambda)$ where $\lambda \in \mathbb{R}\backslash \{0\}$. 
 # 
 # Note that a point with homogeneous co-ordinates $(u_1, u_2, \ldots, u_n, \lambda)$ has the Cartesian co-ordinates $\left(\dfrac{u_1}{\lambda}, \dfrac{u_2}{\lambda}, \ldots, \dfrac{u_n}{\lambda}\right)$.
-# :::
+# ```
 # 
 # If we express a point in $\mathbb{R}^n$ with Cartesian co-ordinates $(u_1, u_2, \ldots, u_n)$ using the homogeneous co-ordinates $(u_1, u_2, \ldots, u_n, 1)$ then we can find a $(n+1) \times (n+1)$ translation matrix $T(\mathbf{t})$ that satisfies
 # 
@@ -44,9 +44,9 @@
 #     \begin{pmatrix} u_1 + t_1 \\ u_1 + t_2 \\ \vdots \\ u_n + t_n \\ 1 \end{pmatrix}.
 # \end{align*}
 # 
-# The transformation matrix for translating by the vector $\mathbf{t}$ is
+# The transformation matrix for translating by the vector $\mathbf{t} = (t_1, t_2, \ldots, t_n)$ is
 # \begin{align*}
-#     T(t_1, t_2, \ldots, t_n) = \begin{pmatrix} 
+#     T(\mathbf{t}) = \begin{pmatrix} 
 #         & & & t_1 \\
 #         & I_n & & \vdots \\
 #         & & & t_n \\
@@ -64,13 +64,13 @@
 #     \end{pmatrix}.
 # \end{align*}
 # 
-# :::::{admonition} Example 6.10
+# `````{admonition} Example 6.10
 # :class: seealso
 # :name: translation-example
 # 
 # Translate the point with position vector $\mathbf{u} = (1, 2)$ by the vector $\mathbf{t} = (3, 1)$.
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # 
 # Expressing $\mathbf{u} = (1, 2)$ using homogeneous co-ordinates we have $\mathbf{u} = (1, 2, 1)$. The translation matrix is
 # 
@@ -97,11 +97,11 @@
 # 
 # so expressed in Cartesian co-ordinates we have $T(3, 1)(\mathbf{u}) = (4, 3)$.
 # 
-# :::{figure} ../Images/translation_example.png
-# :::
+# ```{figure} ../Images/translation_example.png
+# ```
 # 
-# ::::
-# :::::
+# ````
+# `````
 # 
 # ## Combining rotation, reflection, scaling and translation
 # 
@@ -125,7 +125,7 @@
 #     \end{pmatrix}.
 # \end{align*}
 # 
-# :::::{admonition} Example 6.11
+# `````{admonition} Example 6.11
 # :class: seealso
 # :name: rotation-scaling-and-translating-example
 # 
@@ -137,7 +137,7 @@
 # 
 # Calculate the co-ordinates of the triangle after each of these transformations has been applied and determine a transformation matrix that performs all three transformations at the same time.
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # The homogeneous vertex co-ordinates are $(-1, -1, 1)$, $(1, -1, 1)$ and $(0, 2, 1)$ and can be written as the following matrix
 # 
 # \begin{align*}
@@ -160,9 +160,9 @@
 #     &= \begin{pmatrix} -2 & 2 & 0 \\ -2 & -2 & 4 \\ 1 & 1 & 1 \end{pmatrix}.
 # \end{align*}
 # 
-# :::{figure} ../Images/homogeneous_coordinates_example_1.png
+# ```{figure} ../Images/homogeneous_coordinates_example_1.png
 # :width: 300
-# :::
+# ```
 # 
 # We want to rotate by an angle of $\frac{\pi}{4}$ so the rotation matrix is
 # 
@@ -202,9 +202,9 @@
 #     \end{pmatrix}.
 # \end{align*}
 # 
-# :::{figure} ../Images/homogeneous_coordinates_example_2.png
+# ```{figure} ../Images/homogeneous_coordinates_example_2.png
 # :width: 300
-# :::
+# ```
 # 
 # Finally we need to translate by the translation vector $\mathbf{t} = (6, 4)$ so the translation matrix is
 # 
@@ -234,9 +234,9 @@
 #     \end{pmatrix}.
 # \end{align*}
 # 
-# :::{figure} ../Images/homogeneous_coordinates_example_3.png
+# ```{figure} ../Images/homogeneous_coordinates_example_3.png
 # :width: 500
-# :::
+# ```
 # 
 # The single transformation matrix that performs the three transformations at the same time is
 # 
@@ -286,6 +286,6 @@
 #     \end{pmatrix} \quad \checkmark
 # \end{align*}
 # 
-# ::::
+# ````
 # 
-# :::::
+# `````

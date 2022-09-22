@@ -4,13 +4,13 @@
 # (vector-spaces-exercises-section)=
 # # Vector spaces exercises
 # 
-# ::::{admonition} Exercise 5.1
+# ````{admonition} Exercise 5.1
 # :class: note
 # :name: ex5.1
 # 
 # Prove that the [axioms](vector-space-axioms-theorem) of the vector space $\mathbb{R}^3$ hold.
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # Let $\mathbf{u}, \mathbf{v}, \mathbf{w} \in \mathbb{R}^3$ and $\alpha, \beta \in \mathbb{R}$ then 
 # 
 # - A1: $\mathbf{u} + (\mathbf{v} + \mathbf{w}) = (\mathbf{u} + \mathbf{v}) + \mathbf{w} \quad \checkmark$
@@ -23,19 +23,19 @@
 # - M4: $(\alpha + \beta) \mathbf{u} = \alpha \mathbf{u} + \beta \mathbf{u} \quad \checkmark$
 # 
 # All of the axioms of vector spaces hold for $\mathbb{R}^3$.
-# :::
-# ::::
+# ```
+# ````
 # 
-# ::::{admonition} Exercise 5.2
+# ````{admonition} Exercise 5.2
 # :class: note
 # :name: ex5.2
 # 
 # Using [the subspace condition](subspace-condition-theorem), determine whether the following subsets of $\mathbb{R}^3$ are subspaces:
 # 
 # 
-# (a) &emsp; $U = \{ (x, y, 0) : x, y \in \mathbb{R} \}$
+# &emsp; (a) &emsp; $U = \{ (x, y, 0) : x, y \in \mathbb{R} \}$
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # $U$ is non-empty since $(0,0,0) \in U$. Let $\mathbf{u} = (x_1, y_1, 0), \mathbf{v} = (x_2, y_2, 0) \in U$ and $\alpha \in \mathbb{R}$ then
 # 
 # \begin{align*}
@@ -49,17 +49,17 @@
 #     \end{pmatrix} \in U,
 # \end{align*}
 # therefore $U$ is a subspace.
-# :::
+# ```
 # 
-# (b) &emsp; $V = \{ (1, 2, 0) \}$
+# &emsp; (b) &emsp; $V = \{ (1, 2, 0) \}$
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # $V$ is non-empty since $(1,2,0) \in V$. However $\alpha (1, 2, 0) = (\alpha , 2\alpha , 0) \notin V$ for $\alpha \in \mathbb{R}$ so $V$ is not a subspace.
-# :::
+# ```
 # 
-# (c) &emsp; $W = \{ (0, y, 0) : y \in \mathbb{R} \}$
+# &emsp; (c) &emsp; $W = \{ (0, y, 0) : y \in \mathbb{R} \}$
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # $W$ is non-empty since $(0, 0, 0) \in W$. Let $\mathbf{u} = (0, y_1, 0), \mathbf{v} = (0, y_2, 0) \in U$ and $\alpha \in \mathbb{R}$ then
 # 
 # \begin{align*}
@@ -70,26 +70,26 @@
 # \end{align*}
 # 
 # therefore $W$ is a subspace. Note that $W \subseteq U$ so since we showed $U$ is a subspace then $W$ must also be a subspace.
-# :::
+# ```
 # 
-# (d) &emsp; $X = \{ (x, y, z) : y = |x|, x, y, z \in \mathbb{R}\}$
+# &emsp; (d) &emsp; $X = \{ (x, y, z) : y = |x|, x, y, z \in \mathbb{R}\}$
 # 
-# :::{dropdown} Solution
-# $X$ is non a subspace since if $\mathbf{u} = (1, 1, 0), \mathbf{v} = (-1, 1, 0) \in X$ then $\mathbf{u} + \mathbf{v} = (0, 2, 0) \notin X$.
-# :::
+# ```{dropdown} Solution
+# $X$ is not a subspace since if $\mathbf{u} = (1, 1, 0), \mathbf{v} = (-1, 1, 0) \in X$ then $\mathbf{u} + \mathbf{v} = (0, 2, 0) \notin X$.
+# ```
 # 
 # 
-# ::::
+# ````
 # 
-# ::::{admonition} Exercise 5.3
+# ````{admonition} Exercise 5.3
 # :class: note
 # :name: ex5.3
 # 
 # Which of the following sets are subspaces of $M_{2\times 2}$?
 # 
-# (a) &emsp; $A = \left\{ \begin{pmatrix} a & b \\ c & d \end{pmatrix} : a, b, c, d \in \mathbb{R}, a + b = 1,  \right\}$
+# &emsp; (a) &emsp; $A = \left\{ \begin{pmatrix} a & b \\ c & d \end{pmatrix} : a, b, c, d \in \mathbb{R}, a + b = 1,  \right\}$
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # $A$ is non-empty since $\begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \in A$. Let $U = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \in A$ then 
 # 
 # \begin{align*}
@@ -97,11 +97,11 @@
 # \end{align*}
 # 
 # so $A$ is not a subspace.
-# :::
+# ```
 # 
-# (b) &emsp; $B = \left\{ \begin{pmatrix} a & b \\ c & d \end{pmatrix}: a, b, c, d \in \mathbb{R}, a = c = d \right\}$
+# &emsp; (b) &emsp; $B = \left\{ \begin{pmatrix} a & b \\ c & d \end{pmatrix}: a, b, c, d \in \mathbb{R}, a = c = d \right\}$
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # $B$ is non-empty since $0_{2\times 2} \in B$. Let $U = \begin{pmatrix} x_1 & 0 \\ x_1 & x_1 \end{pmatrix}, V = \begin{pmatrix} x_2 & 0 \\ x_2 & x_2 \end{pmatrix} \in B$ and $\alpha \in \mathbb{R}$ then
 # 
 # \begin{align*}
@@ -112,22 +112,22 @@
 # \end{align*}
 # 
 # so $B$ is a subspace.
-# :::
+# ```
 # 
-# (c) &emsp; $C = \{ A \in M_{2\times 2} : A^2 = A \}$
+# &emsp; (c) &emsp; $C = \{ A \in M_{2\times 2} : A^2 = A \}$
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # $C$ is not a subspace since $U = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \in C$ but $2U = \begin{pmatrix} 2 & 0 \\ 0 & 0 \end{pmatrix} \notin C$.
-# :::
-# ::::
+# ```
+# ````
 # 
-# ::::{admonition} Exercise 5.4
+# ````{admonition} Exercise 5.4
 # :class: note
 # :name: ex5.4
 # 
 # Prove that $\{ (1, 2, 0), (0, 5, 7), (-1, 1, 3) \}$ is a basis for $\mathbb{R}^3$ and find the co-ordinates of $(0, 13, 17)$ and $(2, 3, 1)$ relative to this basis.
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # 
 # We need to show that the vectors in the set are [linearly independent](linear-dependence-definition).
 # 
@@ -233,16 +233,16 @@
 #     \begin{pmatrix} 0 \\ 1 \\ -2  \end{pmatrix}.
 # \end{align*}
 # 
-# :::
-# ::::
+# ```
+# ````
 # 
-# ::::{admonition} Exercise 5.5
+# ````{admonition} Exercise 5.5
 # :class: note
 # :name: ex5.5
 # 
 # Extend $\{(1, 1, 2, 4), (2, -1, -5, 2)\}$ to a basis of $\mathbb{R}^4$.
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # 
 # We need to find two vectors in $\mathbb{R}^4$ that are linearly independent to $(1,1, 2, 4)$ and $(2, -1, -5, 2)$ and one another. Let's choose $(1, 0, 0, 0)$ and $(0, 1, 0, 0)$  and check for linear dependence
 # 
@@ -287,11 +287,11 @@
 #     \end{array} \right)
 # \end{align*}
 # Therefore $\{ (1, 1, 2, 5), (2, -1, -5, 2), (1, 0, 0, 0), (0, 1, 0, 0) \}$ is a basis for $\mathbb{R}^4$.
-# :::
+# ```
 # 
-# ::::
+# ````
 # 
-# ::::{admonition} Exercise 5.6
+# ````{admonition} Exercise 5.6
 # :class: note
 # :name: ex5.6
 # 
@@ -307,7 +307,7 @@
 # 
 # Find a basis for $W$ and determine $\dim(W)$.
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # We need to find which of the vectors $\mathbf{u}$, $\mathbf{v}$, $\mathbf{w}$, $\mathbf{x}$ and $\mathbf{y}$ are linearly dependent (and therefore remove them to form the basis).
 # 
 # \begin{align*}
@@ -392,5 +392,5 @@
 # \end{align*}
 # 
 # The fifth column does not have a pivot element so $\mathbf{y}$ is linearly dependent on the other vectors, therefore a basis for $W$ is $\{ \mathbf{u}, \mathbf{v}, \mathbf{w}, \mathbf{x}\}$ and $\dim(W) = 4$.
-# :::
-# ::::
+# ```
+# ````

@@ -8,34 +8,34 @@
 # (dot-product-section)=
 # ## Dot product
 # 
-# ::::{admonition} Definition: The dot product
+# ````{admonition} Definition: The dot product
 # :class: note
 # :name: dot-product-definition
 # 
 # The **dot product** (also known as the **scalar product**) of two vectors $\mathbf{a}$ and $\mathbf{b}$ in $\mathbb{R}^n$, is defined by
 # 
-# :::{math}
+# ```{math}
 # :label: arithmetic-dot-product-equation
 #   
 # \mathbf{a} \cdot \mathbf{b} = \sum_{i=1}^n a_ib_i = a_1b_1 + a_2b_2 + \cdots + a_nb_n.
-# :::
+# ```
 # 
 # In $\mathbb{R}^2$ and $\mathbb{R}^3$ the **dot product** of two vectors $\mathbf{a}$ and $\mathbf{b}$, can be defined in geometric terms by
 # 
-# :::{math}
+# ```{math}
 # :label: geometric-dot-product-equation
 # 
 # \mathbf{a} \cdot \mathbf{b} = |\mathbf{a}| |\mathbf{b}| \cos(\theta),
-# :::
+# ```
 # 
 # where $\theta$ is the angle between $\mathbf{a}$ and $\mathbf{b}$ ({numref}`dot-product-figure`).
-# ::::
+# ````
 # 
-# :::{figure} ../Images/dot_product.png
+# ```{figure} ../Images/dot_product.png
 # :name: dot-product-figure
 # 
 # The dot product $\mathbf{a} \cdot \mathbf{b}$ is a scalar that is related to the angle between $\mathbf{a}$ and $\mathbf{b}$.
-# :::
+# ```
 # 
 # From the [definition of the dot product](dot-product-definition), we can observe the following:
 # 
@@ -43,7 +43,7 @@
 # - the dot product of two perpendicular vectors is zero, we write $\mathbf{a}\perp\mathbf{b}$ if $\mathbf{a}\cdot\mathbf{b}=0$;
 # - the dot product of two co-directional (parallel) vectors $\mathbf{a}$ and $\mathbf{b}$ is equal to $|\mathbf{a}| |\mathbf{b}|$.
 # 
-# ::::{admonition} Theorem: Properties of the dot product
+# ````{admonition} Theorem: Properties of the dot product
 # :class: important
 # :name: dot-product-properties-theorem
 # 
@@ -53,19 +53,19 @@
 # - for any scalar $k$, $(k \mathbf{u})\cdot \mathbf{v} = \mathbf{u} \cdot (k \mathbf{v})= k (\mathbf{u} \cdot \mathbf{v})$;
 # - the dot product is commutative, i.e., $\mathbf{u} \cdot \mathbf{v} = \mathbf{v} \cdot \mathbf{u}$;
 # - $\mathbf{u} \cdot \mathbf{u} = |\mathbf{u}|^2 \geq 0 \text{ and } \mathbf{u} \cdot \mathbf{u} = 0 \iff \mathbf{u} = \mathbf{0}.$
-# ::::
+# ````
 # 
-# :::::{admonition} Example 3.4
+# `````{admonition} Example 3.4
 # :class: seealso
 # :name: dot-product-example
 # 
 # Given the vectors $\mathbf{u} = (1, 2, 3)$ and $\mathbf{v} = (3, -1, 0)$. Calculate:
 # 
-# (i) &emsp; $\mathbf{u} \cdot \mathbf{v}$;
+# &emsp; (i) &emsp; $\mathbf{u} \cdot \mathbf{v}$
 # 
-# (ii) &emsp; the angle between $\mathbf{u}$ and $\mathbf{v}$
+# &emsp; (ii) &emsp; the angle between $\mathbf{u}$ and $\mathbf{v}$
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # 
 # (i) &emsp; Using equation {eq}`arithmetic-dot-product-equation`
 # 
@@ -80,8 +80,8 @@
 #     &= \cos^{-1} \left( \frac{1}{\sqrt{14}\sqrt{10}}\right) = 1.4862.
 # \end{align*}
 # 
-# ::::
-# :::::
+# ````
+# `````
 # 
 # Note: angles should be expressed in radians at all times.
 # 
@@ -106,13 +106,13 @@ print(f"(ii) theta = {theta.evalf():0.4f}")
 # (cross-product-section)=
 # ## The cross product
 # 
-# ::::{admonition} Definition: The cross product
+# ````{admonition} Definition: The cross product
 # :class: note
 # :name: cross-product-definition
 # 
 # The **cross product** (also known as the **vector product) of two vectors in $\mathbb{R}^3$, $\mathbf{a}=(a_1,a_2,a_3)$ and $\mathbf{b}=(b_1,b_2,b_3)$ can be calculated using the formula
 # 
-# :::{math}
+# ```{math}
 # :label: cross-product-equation
 # 
 # \mathbf{a} \times \mathbf{b} = \det 
@@ -121,10 +121,10 @@ print(f"(ii) theta = {theta.evalf():0.4f}")
 #     a_1 & a_2 & a_3 \\ 
 #     b_1 & b_2 & b_3 
 # \end{pmatrix}.
-# :::
-# ::::
+# ```
+# ````
 # 
-# ::::{admonition} Theorem: Properties of the cross product
+# ````{admonition} Theorem: Properties of the cross product
 # :class: important
 # :name: cross-product-properties-theorem
 # 
@@ -138,31 +138,31 @@ print(f"(ii) theta = {theta.evalf():0.4f}")
 # - the cross product is not commutative, i.e., $\mathbf{a} \times \mathbf{b} \neq \mathbf{b} \times \mathbf{a}$;
 # - the cross product is distributive over addition, i.e., $\mathbf{a} \times (\mathbf{b} + \mathbf{c}) = (\mathbf{a} \times \mathbf{b}) + (\mathbf{a} \times \mathbf{c})$;
 # - the cross product is not associative, i.e., $\mathbf{a} \times (\mathbf{b} \times \mathbf{c}) \neq (\mathbf{a} \times \mathbf{b}) \times \mathbf{c}$.
-# ::::
+# ````
 # 
-# :::{figure} ../Images/cross_product.png
+# ```{figure} ../Images/cross_product.png
 # :name: cross-product-figure
 # 
 # The cross product $\mathbf{a} \times \mathbf{b}$ is another vector perpendicular to both $\mathbf{a}$ and $\mathbf{b}$.
-# :::
+# ```
 # 
-# :::::{admonition} Example 3.5
+# `````{admonition} Example 3.5
 # :class: seealso
 # :name: cross-product-example
 # 
 # Calculate the cross product between the vectors $\mathbf{u} = (1, 2, 3)$ and $\mathbf{v} = (4, 5, 6)$.
 # 
-# ::::{dropdown} Solution
+# ````{dropdown} Solution
 # 
 # \begin{align*}
 #     \mathbf{u} \times \mathbf{v} &= \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ 1 & 2 & 3 \\ 4 & 5 & 6 \end{vmatrix}
 #     = (12 - 15)\mathbf{i} - (6 - 12) \mathbf{j} + (5 - 8) \mathbf{k} \\
-#     &= -3\mathbf{i} + 6 \mathbf{j} + 3\mathbf{k}
+#     &= -3\mathbf{i} + 6 \mathbf{j} - 3\mathbf{k}
 #     = \begin{pmatrix} -3 \\ 6 \\ -3 \end{pmatrix}.
 # \end{align*}
 # 
-# ::::
-# :::::
+# ````
+# `````
 # 
 # ### Python code
 # 

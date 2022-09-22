@@ -90,7 +90,7 @@
 # 
 # Check solution:
 # 
-# $$A\mathbf{x} = \begin{pmatrix} 1 & -2 \\ 2 & 4 \end{pmatrix} \begin{pmatrix} 1 \\ -5 \end{pmatrix} = \begin{pmatrix}  11 \\  -18    \end{pmatrix}  = \mathbf{b}.$$
+# $$A\mathbf{x} = \begin{pmatrix} 1 & -2 \\ 2 & 4 \end{pmatrix} \begin{pmatrix} 1 \\ -5 \end{pmatrix} = \begin{pmatrix}  11 \\  -18    \end{pmatrix}  = \mathbf{b} \qquad \checkmark$$
 # 
 # (ii) &emsp; $A = \begin{pmatrix} 1 & -2 & 3 \\ 0 & 2 & -4 \\ 3 & 1 & -4 \end{pmatrix}$ and $\mathbf{b} = \begin{pmatrix}-7 \\ 8 \\ 7 \end{pmatrix}$
 # \begin{align*}
@@ -109,7 +109,7 @@
 # 
 # Check solution:
 # 
-# $$A \mathbf{x} = \begin{pmatrix} 1 & -2 &  3 \\ 0 & 2 & -4 \\ 3 & 1 & -4 \end{pmatrix} \begin{pmatrix} 1 \\ 4 \\ 0 \end{pmatrix} = \begin{pmatrix} -7 \\ 8 \\ 7 \end{pmatrix} = \mathbf{b}.$$
+# $$A \mathbf{x} = \begin{pmatrix} 1 & -2 &  3 \\ 0 & 2 & -4 \\ 3 & 1 & -4 \end{pmatrix} \begin{pmatrix} 1 \\ 4 \\ 0 \end{pmatrix} = \begin{pmatrix} -7 \\ 8 \\ 7 \end{pmatrix} = \mathbf{b} \qquad \checkmark$$
 # ```
 # ````
 # 

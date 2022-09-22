@@ -10,7 +10,7 @@
 # :class: note
 # :name: plane-vector-equation
 # 
-# Let $P = (p_1, \ldots ,p_n)$ be a point in $\mathbb{R}^n$ and $\mathbf{d}_1,\mathbf{d}_2$ are two non-zero vectors in $\mathbb{R}^n$ which are not parallel. The plane $p$, which passes through $P$ in the directions of $\mathbf{d}_1$ and $\mathbf{d}_2$ has the equation
+# Let $P = (p_1, \ldots ,p_n)$ be a point in $\mathbb{R}^n$ and $\mathbf{d}_1$ and $\mathbf{d}_2$ are two non-zero vectors in $\mathbb{R}^n$ which are not parallel. The plane $p$, which passes through $P$ in the directions of $\mathbf{d}_1$ and $\mathbf{d}_2$ has the equation
 # 
 # $$ Q = P + t_1 \mathbf{d}_1 + t_2 \mathbf{d}_2, $$
 # 

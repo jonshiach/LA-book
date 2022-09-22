@@ -106,7 +106,7 @@
 # :class: important
 # :name: inconsistent-system-theorem
 # 
-# A system of linear equations is inconsistent if $A\mathbf{x} = \mathbf{b}$ is inconsistent if $\operatorname{rank}(A \mid \mathbf{b}) > \operatorname{rank}(A).$
+# A system of linear equations is inconsistent if $A\mathbf{x} = \mathbf{b}$ is inconsistent if $\operatorname{rank}(A) < \operatorname{rank}(A \mid \mathbf{b})$.
 # ```
 # 
 # ## Indeterminate system

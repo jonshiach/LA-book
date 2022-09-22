@@ -6,35 +6,35 @@
 # 
 # We have seen that a [vector space](vector-space-definition) is a set, and hence we can consider studying its [subsets](https://en.wikipedia.org/wiki/Subset). Think of the Euclidean space $\mathbb{R}^3$ (which we think of with the usual $x,y,z$-coordinates). This is a vector space, and consider the plane $p = \{(x,y,z) : x + y + z = 0\} \subseteq \mathbb{R}^3$. In fact, we can view $p$ itself as a vector space, meaning it satisfies the [vector space axioms](vector-space-axioms-theorem) A1 -- A4 and M1 -- M4, where we define addition and scalar multiplication as coming from $\mathbb{R}^3$. We saw in [Co-ordinate geometry](coordinate-geometry-chapter) that this vector space $p$ actually closely resembles $\mathbb{R}^2$.
 # 
-# :::{admonition} Definition: Subspace
+# ```{admonition} Definition: Subspace
 # :class: note
 # :name: subspace-definition
 # 
 # A non-empty subset $W$ of a vector space $V$ is called a **subspace** (or a vector subspace) if it satisfies all the vector space properties A1 -- A4 and M1 -- M4.
-# :::
+# ```
 # 
 # Actually most of the [axioms](vector-space-axioms-theorem) A1 -- A4 and M1 -- M4 are automatically satisfied, simply because they're satisfied in $V$. The only things we really need to check are that addition and scalar multiplication are well-defined. In other words we need to check that when we 'add' or 'multiply' in $W$ we are not taken outside of $W$ ({numref}`vector-space-figure`). This idea is formalised in [the subspace condition](subspace-condition-theorem).
 # 
-# :::{figure} ../Images/vector_space.png
+# ```{figure} ../Images/vector_space.png
 # :name: vector-space-figure
 # 
 # Illustration of a subspace $W$ of a vector space $V$.
-# :::
+# ```
 # 
-# ::::{admonition} Theorem: Subspace condition
+# ````{admonition} Theorem: Subspace condition
 # :class: important
 # :name: subspace-condition-theorem
 # 
 # Let $V$ be a vector space over $F$ and $W$ be a non-empty subset of $V$ then $W$ is a subspace if and only if the following condition is satisfied
 # 
-# :::{math}
+# ```{math}
 # :label: subspace-condition-equation
 # 
 # \mathbf{u} + \alpha\mathbf{w} \in W,
-# :::
+# ```
 # 
 # where $\mathbf{u}, \mathbf{w} \in W$ and $\alpha \in F$.
-# ::::
+# ````
 # 
 # To demonstrate the use of [the subspace condition](subspace-condition-theorem) let's check whether $W = \{(x, y, z) : x + 2y - 3z = 0\}$ is a subspace of $\mathbb{R}^3$. First we need to verify that $W$ is non-empty. To do this we simply need to find an element of $W$, e.g., $(0, 0, 0) \in W$ so $W$ is non-empty.
 # 
@@ -59,11 +59,11 @@
 # 
 # By a proof similar to the above, you can show that any plane of the form $\{(x, y, z) : ax + by + cz = d\}$ is a subspace of $\mathbb{R}^3$ when $d=0$ and not a subspace otherwise.
 # 
-# ::::{admonition} Example 5.3
+# ````{admonition} Example 5.3
 # :class: seealso
 # :name: subspace-example
 # 
-# (i) &emsp; Let $W$ be the subset $M_{2\times 2}$ given by
+# &emsp; (i) &emsp; Let $W$ be the subset $M_{2\times 2}$ given by
 # 
 # \begin{align*}
 #     W = \left\{ \begin{pmatrix} a & b \\ c & d \end{pmatrix} : a + b + c + d = 0 \right\}.
@@ -71,7 +71,7 @@
 # 
 # Show that $W$ is a subspace of $M_{2\times 2}$.
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # 
 # Clearly $\mathbf{0}_{2\times 2} \in W$ so $W$ is non-empty. Let $U = \begin{pmatrix} x_1 & y_1 \\ z_1 & w_1 \end{pmatrix}, V = \begin{pmatrix} x_2 & y_2 \\ z_2 & w_2 \end{pmatrix} \in W$ and $\alpha \in \mathbb{R}$. Then 
 # 
@@ -91,11 +91,11 @@
 # \end{align*}
 # 
 # so $U + \alpha V \in W$ therefore $W$ is a subspace of $M_{2\times 2}$.
-# :::
+# ```
 # 
-# (ii) &emsp; Let $W = \{ p(x) \in P(\mathbb{R}_n) : p(x) = p(-x)\} \subseteq P(\mathbb{R}_n)$ be the set of all even functions. Show that $W$ is a subspace of $P(\mathbb{R}_n)$.
+# &emsp; (ii) &emsp; Let $W = \{ p(x) \in P(\mathbb{R}_n) : p(x) = p(-x)\} \subseteq P(\mathbb{R}_n)$ be the set of all even functions. Show that $W$ is a subspace of $P(\mathbb{R}_n)$.
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # The zero polynomial $0 \in W$ so $W$ is non-empty. Let $p, r \in W$ and $\alpha \in \mathbb{R}$, we need to show that $p + \alpha r \in W$. Now we know that $p(-x) = p(x)$ and $r(-x) = r(x)$
 # 
 # \begin{align*}
@@ -103,8 +103,8 @@
 # \end{align*}
 # 
 # so $(p + \alpha r)(x) \in W$ is an even function therefore $W$ is a subspace.
-# :::
-# ::::
+# ```
+# ````
 # 
 # ## Non-examples of Subspaces
 # 
@@ -134,19 +134,19 @@
 # 
 # If we try constructing a counterexample and but fail, then it might mean that (a) a counterexample is not easy to find or (b) the statement is actually true. With a lot of pure maths research, mathematicians are often in this situation, trying to find a counterexample or a proof, not knowing which one it should be.
 # 
-# ::::{admonition} Example 5.4
+# ````{admonition} Example 5.4
 # :class: seealso
 # :name: non-subspace-example
 # 
 # Show that the following are not subspaces:
 # 
-# (i) &emsp; $W = \{z = (a+bi) : a + b = 5\} \subseteq \mathbb{C}$;
+# &emsp; (i) &emsp; $W = \{z = (a+bi) : a + b = 5\} \subseteq \mathbb{C}$;
 # 
-# (i) &emsp; $W = \{z = (a + bi) : a^2 + b^2 < 0\} \subseteq \mathbb{C}$;
+# &emsp; (ii) &emsp; $W = \{z = (a + bi) : a^2 + b^2 < 0\} \subseteq \mathbb{C}$;
 # 
-# (i) &emsp; $W = \{(x,y,z) : x + y + z = 5\} \subseteq{\mathbb{R}^3}$.
+# &emsp; (iii) &emsp; $W = \{(x,y,z) : x + y + z = 5\} \subseteq{\mathbb{R}^3}$.
 # 
-# :::{dropdown} Solution
+# ```{dropdown} Solution
 # (i) &emsp;  Let $z = 1 + 4i \in W$ but $-1 \cdot z = -1 - 4i \notin W$. This shows that $W$ is not closed under taking scalar multiples, and hence not a subspace of $\mathbb{C}$ over $\mathbb{R}$. We could have also noted simply that $0\notin W$. 
 # 
 # The condition that there is a neutral element with respect to addition is one of the properties of a vector space (A3). So a subspace must also contain it.
@@ -154,5 +154,5 @@
 # (ii) &emsp; $W$ is the empty since $a^2 + b^2 \geq 0$ for all $a, b \in \mathbb{R}$. Hence $W$ is not a subspace.
 # 
 # (iii) &emsp;  Let $\mathbf{u} = (1, 2, 2) \in W$ and $\mathbf{v} = (2, 1, 2) \in W$, then $\mathbf{u} + \mathbf{v} = (3, 3, 4) \notin W$. We could've also just noted that $0 \notin W$. 
-# :::
-# ::::
+# ```
+# ````

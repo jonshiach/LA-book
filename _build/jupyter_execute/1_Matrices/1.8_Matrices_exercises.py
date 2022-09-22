@@ -17,7 +17,7 @@
 # \end{align*}
 # ````
 # `````
-
+# 
 # `````{admonition} Exercise 1.2
 # :class: note
 # :name: ex1.2
@@ -35,7 +35,7 @@
 # \end{align*}
 # ````
 # `````
-
+# 
 # `````{admonition} Exercise 1.3
 # :class: note
 # :name: ex1.3
@@ -61,8 +61,8 @@
 # \end{align*}
 # ````
 # `````
-
-# ````{admonition} Exercise 1.4
+# 
+# `````{admonition} Exercise 1.4
 # :class: note
 # :name: ex1.4
 # 
@@ -80,29 +80,68 @@
 # 
 # Calculate the following where possible:
 # 
-# &emsp; (a) &emsp; $A + B$
+# ````{grid}
 # 
-# &emsp; (b) &emsp; $B + C$
+# ```{grid-item}
+# :columns: 3
+# (a) &emsp; $A + B$
+# ```
 # 
-# &emsp; (c) &emsp; $A^\mathrm{T}$
+# ```{grid-item}
+# :columns: 3
+# (b) &emsp; $B + C$
+# ```
 # 
-# &emsp; (d) &emsp; $C^\mathrm{T}$
+# ```{grid-item}
+# :columns: 3
+# (c) &emsp; $A^\mathrm{T}$
+# ```
 # 
-# &emsp; (e) &emsp; $D + E^\mathrm{T}$
+# ```{grid-item}
+# :columns: 3
+# (d) &emsp; $C^\mathrm{T}$
+# ```
 # 
-# &emsp; (f) &emsp; $3B - A$
+# ```{grid-item}
+# :columns: 3
+# (e) &emsp; $D + E^\mathrm{T}$
+# ```
 # 
-# &emsp; (g) &emsp; $E + F^\mathrm{T}$
+# ```{grid-item}
+# :columns: 3
+# (f) &emsp; $3B - A$
+# ```
 # 
-# &emsp; (h) &emsp; $(F^\mathrm{T})^\mathrm{T}$
+# ```{grid-item}
+# :columns: 3
+# (g) &emsp; $E + F^\mathrm{T}$
+# ```
 # 
-# &emsp; (i) &emsp; $2(G + H)$
+# ```{grid-item}
+# :columns: 3
+# (h) &emsp; $(F^\mathrm{T})^\mathrm{T}$
+# ```
 # 
-# &emsp; (j) &emsp; $A^\mathrm{T} + B^\mathrm{T}$
+# ```{grid-item}
+# :columns: 3
+# (i) &emsp; $2(G + H)$
+# ```
 # 
-# &emsp; (k) &emsp; $(A + B)^\mathrm{T}$
+# ```{grid-item}
+# :columns: 3
+# (j) &emsp; $A^\mathrm{T} + B^\mathrm{T}$
+# ```
 # 
-# &emsp; (l) &emsp; $-G$
+# ```{grid-item}
+# :columns: 3
+# (k) &emsp; $(A + B)^\mathrm{T}$
+# ```
+# 
+# ```{grid-item}
+# :columns: 3
+# (l) &emsp; $-G$
+# ```
+# ````
 # 
 # ```{dropdown} Solutions
 # (a) &emsp; $A + B = \begin{pmatrix} 1 + 3 & -3 + 0 \\ 4 + (-1) & 2 + 5 \end{pmatrix} = \begin{pmatrix} 4 & -3 \\ 3 & 7 \end{pmatrix}$
@@ -130,37 +169,76 @@
 # (l) &emsp; $-G = \begin{pmatrix} -1 & 0 & -1 \\ -5 & -2 & 2 \\ -2 & 3 & -4 \end{pmatrix}$
 # 
 # ```
-# ````
-
-# ````{admonition} Exercise 1.5
+# `````
+# 
+# `````{admonition} Exercise 1.5
 # :class: note
 # :name: ex1.5
 # 
 # Using the matrices from [exercise 1.4](ex1.4) calculate the following where possible:
 # 
-# &emsp; (a) &emsp;  $AB$
+# ````{grid}
 # 
-# &emsp; (b) &emsp;  $BA$
+# ```{grid-item}
+# :columns: 3
+# (a) &emsp;  $AB$
+# ```
 # 
-# &emsp; (c) &emsp;  $AC$
+# ```{grid-item}
+# :columns: 3
+# (b) &emsp;  $BA$
+# ```
 # 
-# &emsp; (d) &emsp;  $CA$
+# ```{grid-item}
+# :columns: 3
+# (c) &emsp;  $AC$
+# ```
 # 
-# &emsp; (e) &emsp;  $C^\mathrm{T}C$
+# ```{grid-item}
+# :columns: 3
+# (d) &emsp;  $CA$
+# ```
 # 
-# &emsp; (f) &emsp;  $CC^\mathrm{T}$
+# ```{grid-item}
+# :columns: 3
+# (e) &emsp;  $C^\mathrm{T}C$
+# ```
 # 
-# &emsp; (g) &emsp;  $DE$
+# ```{grid-item}
+# :columns: 3
+# (f) &emsp;  $CC^\mathrm{T}$
+# ```
 # 
-# &emsp; (h) &emsp;  $GH$
+# ```{grid-item}
+# :columns: 3
+# (g) &emsp;  $DE$
+# ```
 # 
-# &emsp; (i) &emsp;  $A(DE)$
+# ```{grid-item}
+# :columns: 3
+# (h) &emsp;  $GH$
+# ```
 # 
-# &emsp; (j) &emsp;  $(AD)E$
+# ```{grid-item}
+# :columns: 3
+# (i) &emsp;  $A(DE)$
+# ```
 # 
-# &emsp; (k) &emsp;  $A^3$
+# ```{grid-item}
+# :columns: 3
+# (j) &emsp;  $(AD)E$
+# ```
 # 
-# &emsp; (l) &emsp;  $G^4$
+# ```{grid-item}
+# :columns: 3
+# (k) &emsp;  $A^3$
+# ```
+# 
+# ```{grid-item}
+# :columns: 3
+# (l) &emsp;  $G^4$
+# ```
+# ````
 # 
 # ```{dropdown} Solutions
 # (a) &emsp; $AB = \begin{pmatrix} 1 & -3 \\ 4 & 2 \end{pmatrix} \begin{pmatrix} 3 & 0 \\ -1 & 5 \end{pmatrix} = \begin{pmatrix} 3 + 3 & 0 - 15 \\ 7 - 2 & 0 + 10 \end{pmatrix} = \begin{pmatrix}6 & -15 \\ 10 & 10 \end{pmatrix}$
@@ -237,37 +315,76 @@
 #     \begin{pmatrix} -886 & 2539 & -51 \\ -796 & -90 & -498 \\ -1162 & 1043 & -503 \end{pmatrix}
 # \end{align*}
 # ```
-# ````
-
-# ````{admonition} Exercise 1.6
+# `````
+# 
+# `````{admonition} Exercise 1.6
 # :class: note
 # :name: ex1.6
 # 
 # Using the matrices from [exercise 1.4](ex1.4) calculate the following:
 # 
-# &emsp; (a) &emsp;  $\det(A)$
+# ````{grid}
 # 
-# &emsp; (b) &emsp;  $|B|$
+# ```{grid-item}
+# :columns: 3
+# (a) &emsp;  $\det(A)$
+# ```
 # 
-# &emsp; (c) &emsp;  $\det(3A)$
+# ```{grid-item}
+# :columns: 3
+# (b) &emsp;  $|B|$
+# ```
 # 
-# &emsp; (d) &emsp;  $\det(G)$
+# ```{grid-item}
+# :columns: 3
+# (c) &emsp;  $\det(3A)$
+# ```
 # 
-# &emsp; (e) &emsp;  $\operatorname{adj}(B)$
+# ```{grid-item}
+# :columns: 3
+# (d) &emsp;  $\det(G)$
+# ```
 # 
-# &emsp; (f) &emsp;  $\operatorname{adj}(H)$
+# ```{grid-item}
+# :columns: 3
+# (e) &emsp;  $\operatorname{adj}(B)$
+# ```
 # 
-# &emsp; (g) &emsp;  $A^{-1}$
+# ```{grid-item}
+# :columns: 3
+# (f) &emsp;  $\operatorname{adj}(H)$
+# ```
 # 
-# &emsp; (h) &emsp;  $B^{-1}$
+# ```{grid-item}
+# :columns: 3
+# (g) &emsp;  $A^{-1}$
+# ```
 # 
-# &emsp; (i) &emsp;  $G^{-1}$
+# ```{grid-item}
+# :columns: 3
+# (h) &emsp;  $B^{-1}$
+# ```
 # 
-# &emsp; (j) &emsp;  $(AB)^{-1}$
+# ```{grid-item}
+# :columns: 3
+# (i) &emsp;  $G^{-1}$
+# ```
 # 
-# &emsp; (k) &emsp;  $B^{-1}A^{-1}$
+# ```{grid-item}
+# :columns: 3
+# (j) &emsp;  $(AB)^{-1}$
+# ```
 # 
-# &emsp; (l) &emsp;  $(DE)^{-1}$
+# ```{grid-item}
+# :columns: 3
+# (k) &emsp;  $B^{-1}A^{-1}$
+# ```
+# 
+# ```{grid-item}
+# :columns: 3
+# (l) &emsp;  $(DE)^{-1}$
+# ```
+# ````
 # 
 # ```{dropdown} Solutions
 # 
@@ -385,30 +502,56 @@
 # Check: $(DE)(DE)^{-1} = \begin{pmatrix} -5 & 17 \\ -2 & 5 \end{pmatrix} \begin{pmatrix} \frac{5}{9} & -\frac{17}{9} \\ \frac{2}{9} & -\frac{5}{9} \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} \quad \checkmark$
 # 
 # ```
-#     
-# ````
-
-# ````{admonition} Exercise 1.7
+# `````
+# 
+# `````{admonition} Exercise 1.7
 # :class: note
 # :name: ex1.7
 # 
 # Using [the properties of determinants](properties-of-determinants-theorem) and solutions from [exercise 1.6](ex1.6) where necessary, find the determinants for the following matrices.
 # 
-# &emsp; (a) &emsp;  $\begin{pmatrix} 1 & 2 \\ 2 & 4 \end{pmatrix}$
+# ````{grid}
 # 
-# &emsp; (b) &emsp;  $\begin{pmatrix} 4 & 2 \\ 1 & -3 \end{pmatrix}$
+# ```{grid-item}
+# :columns: 4
+# (a) &emsp;  $\begin{pmatrix} 1 & 2 \\ 2 & 4 \end{pmatrix}$
+# ```
 # 
-# &emsp; (c) &emsp;  $\begin{pmatrix} 1 & 0 \\ -1 & 0 \end{pmatrix}$
+# ```{grid-item}
+# :columns: 4
+# (b) &emsp;  $\begin{pmatrix} 4 & 2 \\ 1 & -3 \end{pmatrix}$
+# ```
 # 
-# &emsp; (d) &emsp;  $\begin{pmatrix} 4 & 2 & 3 \\ -4 & 12 & 0 \\ 0 & 7 & 1 \end{pmatrix}$
+# ```{grid-item}
+# :columns: 4
+# (c) &emsp;  $\begin{pmatrix} 1 & 0 \\ -1 & 0 \end{pmatrix}$
+# ```
 # 
-# &emsp; (e) &emsp;  $\begin{pmatrix} 1 & 2 & 3 \\ -1 & -2 & -3 \\ 2 & 4 & 4 \end{pmatrix}$
+# ```{grid-item}
+# :columns: 4
+# (d) &emsp;  $\begin{pmatrix} 4 & 2 & 3 \\ -4 & 12 & 0 \\ 0 & 7 & 1 \end{pmatrix}$
+# ```
 # 
-# &emsp; (f) &emsp;  $\begin{pmatrix} 1 & 2 & 1 \\ -3 & -6 & 1 \\ 2 & 4 & 4 \end{pmatrix}$
+# ```{grid-item}
+# :columns: 4
+# (e) &emsp;  $\begin{pmatrix} 1 & 2 & 3 \\ -1 & -2 & -3 \\ 2 & 4 & 4 \end{pmatrix}$
+# ```
 # 
-# &emsp; (g) &emsp;  $\begin{pmatrix} 1 & 2 & 3 \\ -1 & -2 & 0 \\ 0 & 0 & 0 \end{pmatrix}$
+# ```{grid-item}
+# :columns: 4
+# (f) &emsp;  $\begin{pmatrix} 1 & 2 & 1 \\ -3 & -6 & 1 \\ 2 & 4 & 4 \end{pmatrix}$
+# ```
 # 
-# &emsp; (h) &emsp;  $\begin{pmatrix} 3 & 6 \\ -1 & 3 \end{pmatrix}$
+# ```{grid-item}
+# :columns: 4
+# (g) &emsp;  $\begin{pmatrix} 1 & 2 & 3 \\ -1 & -2 & 0 \\ 0 & 0 & 0 \end{pmatrix}$
+# ```
+# 
+# ```{grid-item}
+# :columns: 4
+# (h) &emsp;  $\begin{pmatrix} 3 & 6 \\ -1 & 3 \end{pmatrix}$
+# ```
+# ````
 # 
 # 
 # ```{dropdown} Solutions
@@ -430,9 +573,9 @@
 # (h) &emsp; This is the same as the matrix $B$ from above with 2 times column 1 added to column 2. Therefore the determinant of this matrix is $\det(B) = 15$.
 # 
 # ```
-# ````
+# `````
 # 
-# ````{admonition} Exercise 1.8
+# `````{admonition} Exercise 1.8
 # :class: note
 # :name: ex1.8
 # 
@@ -448,10 +591,9 @@
 # 
 # <div style="text-align: right"> &#9633; </div>
 # ```
+# `````
 # 
-# ````
-
-# ````{admonition} Exercise 1.9
+# `````{admonition} Exercise 1.9
 # Given the matrices
 # 
 # \begin{align*}
@@ -461,21 +603,48 @@
 # 
 # solve the following equations for $X$.
 # 
-# &emsp; (a) &emsp; $5X = A$
+# ````{grid}
 # 
-# &emsp; (b) &emsp; $X + A = I$
+# ```{grid-item}
+# :columns: 4
+# (a) &emsp; $5X = A$
+# ```
 # 
-# &emsp; (c) &emsp; $2X - B = A$
+# ```{grid-item}
+# :columns: 4
+# (b) &emsp; $X + A = I$
+# ```
 # 
-# &emsp; (d) &emsp; $XA = I$
+# ```{grid-item}
+# :columns: 4
+# (c) &emsp; $2X - B = A$
+# ```
 # 
-# &emsp; (e) &emsp; $BX = A$
+# ```{grid-item}
+# :columns: 4
+# (d) &emsp; $XA = I$
+# ```
 # 
-# &emsp; (f) &emsp; $A^2 = X$
+# ```{grid-item}
+# :columns: 4
+# (e) &emsp; $BX = A$
+# ```
 # 
-# &emsp; (g) &emsp; $X^2 = B$
+# ```{grid-item}
+# :columns: 4
+# (f) &emsp; $A^2 = X$
+# ```
 # 
-# &emsp; (h) &emsp; $(X + A)B = I$
+# ```{grid-item}
+# :columns: 4
+# (g) &emsp; $X^2 = B$
+# ```
+# 
+# ```{grid-item}
+# :columns: 4
+# (h) &emsp; $(X + A)B = I$
+# ```
+# ````
 # 
 # ```{dropdown} Solutions
 # (a) &emsp; 
@@ -579,8 +748,8 @@
 # \end{align*}
 # ```
 # 
-# ````
-
+# `````
+# 
 # `````{admonition} Exercise 1.10
 # :class: note
 # :name: ex1.10
