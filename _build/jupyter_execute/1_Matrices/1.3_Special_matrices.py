@@ -194,7 +194,7 @@ display(IB)
 #         \vdots & \vdots & \ddots & \vdots \\
 #         a_{1n} & a_{2n} & \cdots & a_{nn}
 #     \end{pmatrix}
-# \nd{align*}
+# \end{align*}
 # ````
 # 
 # ````{admonition} Example 1.9

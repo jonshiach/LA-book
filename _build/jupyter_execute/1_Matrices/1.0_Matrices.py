@@ -206,7 +206,7 @@ print(f"(iv)  A[2,2] = {A[1,1]}")
 # 
 # Let $A$ and $B$ be two $m \times n$ matrices. The addition or subtraction of two $m \times n$ matrices $A$ and $B$ is an $m \times n$ matrix $A \pm B$ defined by:
 # 
-# $$[A \pm B]_{ij} = a_{ij} \pm a_{ij},$$
+# $$[A \pm B]_{ij} = a_{ij} \pm b_{ij},$$
 #     
 # where $1 \leq i \leq m$ and $1 \leq j \leq n$.
 # \begin{align*}

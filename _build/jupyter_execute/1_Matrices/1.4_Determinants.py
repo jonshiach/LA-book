@@ -187,7 +187,7 @@
 #     \det(A) &= a C_{11} + b C_{12} + c C_{13} \\
 #     &= a (-1)^{(1+1)} \begin{vmatrix} e & f \\ h & i \end{vmatrix}
 #     + b (-1)^{(1+2)} \begin{vmatrix}d & f \\ g & i \end{vmatrix} 
-#     + c (-1)^{(2+2)} \begin{vmatrix}d & e \\ g & h \end{vmatrix} \\
+#     + c (-1)^{(1+3)} \begin{vmatrix}d & e \\ g & h \end{vmatrix} \\
 #     &= a(ei - fh) - b(di - fg) + c(dh - eg) \\
 #     &= aei - afh - bdi + bfg + cdh - ceg.
 # \end{align*}

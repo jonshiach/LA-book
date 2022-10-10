@@ -166,7 +166,7 @@
 # 
 # (k) &emsp; $(A + B)^\mathrm{T} = \begin{pmatrix} 4 & -3 \\ 3 & 7 \end{pmatrix}^\mathrm{T} = \begin{pmatrix} 4 & 3 \\ -3 & 7 \end{pmatrix}$
 # 
-# (l) &emsp; $-G = \begin{pmatrix} -1 & 0 & -1 \\ -5 & -2 & 2 \\ -2 & 3 & -4 \end{pmatrix}$
+# (l) &emsp; $-G = \begin{pmatrix} -4 & -2 & -3 \\ 2 & -6 & 0 \\ 0 & -7 & -1 \end{pmatrix}$
 # 
 # ```
 # `````

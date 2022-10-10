@@ -9,7 +9,7 @@
 # :class: note
 # :name: inverse-matrix-definition
 # 
-# Let $A$ be a non-zero $m \times n$ matrix. Then, if there exist an $n \times m$ matrix $A^{-1}$, such that $A^{-1}A = I_n,$ we say that $A^{-1}$ is the **inverse** of the matrix $A$.
+# Let $A$ be a non-zero $n \times n$ matrix. Then, if there exist an $n \times n$ matrix $A^{-1}$, such that $A^{-1}A = I_n,$ we say that $A^{-1}$ is the **inverse** of the matrix $A$.
 # ```
 # 
 # Note:
@@ -45,7 +45,7 @@
 # 
 # \begin{align*}
 #     \operatorname{adj}(A) &= C^\mathrm{T}, \\
-#     \therefore [\operatorname{adj}(A)]_{ij}&=(-1)^{i+j}M_{ij}.
+#     \therefore [\operatorname{adj}(A)]_{ij}&=(-1)^{i+j}M_{ji}.
 # \end{align*}
 # ````
 # 
@@ -172,7 +172,7 @@ display(adjA)
 # \end{align*}
 # Check answer:
 # \begin{align*}
-#     A^{-1}A = \frac{1}{2}\begin{pmatrix} 2 & 0 \\ -3 & 1\end{pmatrix}\begin{pmatrix}1 & 0 \\ 3 & 2\end{pmatrix} = \frac{1}{2} \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} = I. 
+#     A^{-1}A = \frac{1}{2}\begin{pmatrix} 2 & 0 \\ -3 & 1\end{pmatrix}\begin{pmatrix}1 & 0 \\ 3 & 2\end{pmatrix} = \frac{1}{2} \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} = I \qquad \checkmark
 # \end{align*}
 # 
 # (ii)
@@ -190,7 +190,7 @@ display(adjA)
 #     B^{-1}B &= \frac{1}{17}\begin{pmatrix} 3 & -6 & 2 \\ 7 & 3 & -1 \\ -1 & 2 & 5 \end{pmatrix}
 #     \begin{pmatrix} 1 & 2 & 0 \\ -2 & 1 & 1 \\ 1 & 0 & 3 \end{pmatrix} \\
 #     &= \frac{1}{17}\begin{pmatrix} 17 & 0 & 0 \\ 0 & 17 & 0 \\ 0 & 0 & 17 \end{pmatrix} =
-#     \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix} = I.
+#     \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix} = I \qquad \checkmark
 # \end{align*}
 # 
 # (iii)
