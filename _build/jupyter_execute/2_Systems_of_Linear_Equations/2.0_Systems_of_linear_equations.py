@@ -8,9 +8,9 @@
 # 
 # On successful completion of this chapter students will be able to:
 # 
-# - [define a linear system of equations](system-of-linear-equation-definition) and write them as a matrix equation;
+# - [define a system of linear equations](system-of-linear-equation-definition) and write them as a matrix equation;
 # - calculate the solution to a system of linear equations using the [inverse matrix](solution-using-inverse-matrix-theorem) and [Cramer's rule](cramers-rule-theorem);
-# - use [Gaussian elimination](ge-definition) to row reduce a matrix to [row echelon form](ref-definition) and calculate the solution to a linear system of equations using back substitution;
+# - use [Gaussian elimination](ge-definition) to row reduce a matrix to [row echelon form](ref-definition) and calculate the solution to a system of linear equations using back substitution;
 # - use [partial pivoting](ge-pp-definition) to reduce the risk of rounding errors whilst performing Gaussian elimination;
 # - use [Gauss-Jordan elimination](gje-definition) to row reduce a matrix to [reduced row echelon form](rref-definition) and use it to solver a system of linear equations
 # - use Gauss-Jordan elimination to calculate the [inverse of a matrix](gj-matrix-inverse-section);
@@ -37,7 +37,7 @@
 # 
 # In general we would know the values of $a_{ij}$ and $b_i$ and we would like to find out what the values of $x_i$ are.
 # 
-# Linear systems are often represented using the matrix notation $A \mathbf{x} = \mathbf{b}$, where $A$ is an $m \times n$ matrix containing the coefficient terms known as the **coefficient matrix**, $\mathbf{x}$ is a $m \times 1$ matrix containing the variables known as the **variable vector** and $\mathbf{b}$ is a $m \times 1$ matrix containing the constant terms known as the **constant vector** (vectors are introduced in [here](vectors-chapter) but for now simply consider them as matrices with a single column), i.e.,
+# Systems of linear equations are often represented using the matrix notation $A \mathbf{x} = \mathbf{b}$, where $A$ is an $m \times n$ matrix containing the coefficient terms known as the **coefficient matrix**, $\mathbf{x}$ is an $m \times 1$ matrix containing the variables known as the **variable vector** and $\mathbf{b}$ is an $m \times 1$ matrix containing the constant terms known as the **constant vector** (vectors are introduced in [here](vectors-chapter) but for now simply consider them as matrices with a single column), i.e.,
 # 
 # \begin{align*}
 #     \begin{array}{cccc}
@@ -61,7 +61,7 @@
 # :class: seealso
 # :name: system-of-linear-equations-matrix-form-example
 # 
-# Write the following linear system of equations as a matrix equation
+# Write the following system of linear equations as a matrix equation
 # \begin{align*}
 #     2x_1 + x_2 &= 4, \\
 #     4x_1 + 3x_2 &= 10.
@@ -83,10 +83,10 @@
 # ```
 # ````
 # 
-# (solving-linear-systems-using-algebra-section)=
-# ## Solving linear systems using algebra
+# (solving-systems-of-linear-equations-using-algebra-section)=
+# ## Solving systems of linear equations using algebra
 # 
-# One way which we can solve systems of linear equations is using simple algebra. The usual approach is to try to solve for each unknown in turn by eliminating all of the other unknowns. For example, consider the linear system of equations from [example 2.1](system-of-linear-equations-matrix-form-example)
+# One way which we can solve systems of linear equations is using simple algebra. The usual approach is to try to solve for each unknown in turn by eliminating all of the other unknowns. For example, consider the system of linear equations from [example 2.1](system-of-linear-equations-matrix-form-example)
 # 
 # \begin{align*}
 #     2x_1 + x_2 &= 4, \\

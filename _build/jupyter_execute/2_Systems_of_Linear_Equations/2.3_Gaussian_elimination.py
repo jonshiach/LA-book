@@ -174,7 +174,7 @@
 #     \end{array} \right) .
 # \end{align*}
 # 
-# The element in row 3 column 2 has a value of $-\frac{11}{3}$ and the pivot element has a value of $-\frac{4}{3}$ so we need to subtract row 2 multiplied by $-\frac{11}{3} / -\frac{4}{3} = \frac{11}{4}$ from row 3.
+# The element in row 3 column 2 has a value of $-\frac{11}{3}$ and the pivot element has a value of $-\frac{4}{3}$ so we need to subtract row 2 multiplied by $(-\frac{11}{3}) \div (-\frac{4}{3}) = \frac{11}{4}$ from row 3.
 # 
 # \begin{align*}
 #     \left( \begin{array}{ccc|c}
@@ -197,11 +197,11 @@
 #         0 & -\frac{4}{3} & \frac{8}{3} \\
 #         0 & 0 & 1
 #     \end{pmatrix}
-#     \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} &= \
-#     \begin{pmatrix} 1 \\ \frac{8}{3} \\ -4 \end{pmatrix}  
-#     \implies
+#     \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} 
+#     &= \begin{pmatrix} 1 \\ \frac{8}{3} \\ -4 \end{pmatrix}  
+#     && \implies &
 #     \begin{array}{rcl}
-#         3x_1 + x_2 - 2x_3 &=& 1, \\
+#         3 x_1 + x_2 - 2 x_2 &=& 1, \\
 #         -\frac{4}{3} x_2 - \frac{8}{3} x_3 &=& \frac{8}{3}, \\
 #         x_3 &=& -4.
 #     \end{array}

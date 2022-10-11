@@ -48,7 +48,7 @@
 #     \begin{pmatrix} 1 \\ 2 \end{pmatrix},
 # \end{align*}
 # 
-# so $x_1 = 1$ and $x_2 = 2$ (which we saw when we used [algebra to solve this system](solving-linear-systems-using-algebra-section)). We can check whether this is the correct solution by substituting $\mathbf{x}$ into $A\mathbf{x}= \mathbf{b}$
+# so $x_1 = 1$ and $x_2 = 2$ (which we saw when we used [algebra to solve this system](solving-systems-of-linear-equations-using-algebra-section)). We can check whether this is the correct solution by substituting $\mathbf{x}$ into $A\mathbf{x} = \mathbf{b}$
 # 
 # \begin{align*}
 #     A \mathbf{x} = \begin{pmatrix} 2 & 1 \\ 4 & 3 \end{pmatrix}

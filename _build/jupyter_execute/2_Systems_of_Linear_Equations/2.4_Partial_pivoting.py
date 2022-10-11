@@ -61,7 +61,7 @@
 # :class: note
 # :name: ge-pp-definition
 # 
-# To row reduce an $m \times n$ matrix $A$ to reduced row echelon form using Gauss-Jordan elimination with partial pivoting we do the following: 
+# To row reduce an $m \times n$ matrix $A$ to reduced row echelon form using Gaussian elimination with partial pivoting we do the following: 
 # 
 # 1. Initalise the pivot row to $i=1$ and pivot column to $k=1$
 # 2. Swap the pivot row $i$ with the row below which has the largest absolute value element in the pivot column $k$ which is greater than the absolute value of the pivot element $|a_{ik}|$. 

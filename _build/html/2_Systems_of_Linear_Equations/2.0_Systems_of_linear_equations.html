@@ -543,8 +543,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solving-linear-systems-using-algebra">
-   Solving linear systems using algebra
+  <a class="reference internal nav-link" href="#solving-systems-of-linear-equations-using-algebra">
+   Solving systems of linear equations using algebra
   </a>
  </li>
 </ul>
@@ -572,8 +572,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solving-linear-systems-using-algebra">
-   Solving linear systems using algebra
+  <a class="reference internal nav-link" href="#solving-systems-of-linear-equations-using-algebra">
+   Solving systems of linear equations using algebra
   </a>
  </li>
 </ul>
@@ -591,9 +591,9 @@ title="Print to PDF"
 <p><strong>Learning outcomes</strong></p>
 <p>On successful completion of this chapter students will be able to:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#system-of-linear-equation-definition"><span class="std std-ref">define a linear system of equations</span></a> and write them as a matrix equation;</p></li>
+<li><p><a class="reference internal" href="#system-of-linear-equation-definition"><span class="std std-ref">define a system of linear equations</span></a> and write them as a matrix equation;</p></li>
 <li><p>calculate the solution to a system of linear equations using the <a class="reference internal" href="2.1_Solving_using_inverse_matrix.html#solution-using-inverse-matrix-theorem"><span class="std std-ref">inverse matrix</span></a> and <a class="reference internal" href="2.2_Cramers_rule.html#cramers-rule-theorem"><span class="std std-ref">Cramer’s rule</span></a>;</p></li>
-<li><p>use <a class="reference internal" href="2.3_Gaussian_elimination.html#ge-definition"><span class="std std-ref">Gaussian elimination</span></a> to row reduce a matrix to <a class="reference internal" href="2.3_Gaussian_elimination.html#ref-definition"><span class="std std-ref">row echelon form</span></a> and calculate the solution to a linear system of equations using back substitution;</p></li>
+<li><p>use <a class="reference internal" href="2.3_Gaussian_elimination.html#ge-definition"><span class="std std-ref">Gaussian elimination</span></a> to row reduce a matrix to <a class="reference internal" href="2.3_Gaussian_elimination.html#ref-definition"><span class="std std-ref">row echelon form</span></a> and calculate the solution to a system of linear equations using back substitution;</p></li>
 <li><p>use <a class="reference internal" href="2.4_Partial_pivoting.html#ge-pp-definition"><span class="std std-ref">partial pivoting</span></a> to reduce the risk of rounding errors whilst performing Gaussian elimination;</p></li>
 <li><p>use <a class="reference internal" href="2.5_Gauss_Jordan_elimination.html#gje-definition"><span class="std std-ref">Gauss-Jordan elimination</span></a> to row reduce a matrix to <a class="reference internal" href="2.5_Gauss_Jordan_elimination.html#rref-definition"><span class="std std-ref">reduced row echelon form</span></a> and use it to solver a system of linear equations</p></li>
 <li><p>use Gauss-Jordan elimination to calculate the <a class="reference internal" href="2.5_Gauss_Jordan_elimination.html#gj-matrix-inverse-section"><span class="std std-ref">inverse of a matrix</span></a>;</p></li>
@@ -616,7 +616,7 @@ title="Print to PDF"
 <p>where <span class="math notranslate nohighlight">\(x_1, x_2, \ldots, x_n\)</span> are <strong>variables</strong>, <span class="math notranslate nohighlight">\(a_{11}, a_{12}, \ldots, a_{mn}\)</span> are <strong>coefficients</strong> and <span class="math notranslate nohighlight">\(b_1, b_2, \ldots, b_n\)</span> are <strong>constants</strong>.</p>
 </div>
 <p>In general we would know the values of <span class="math notranslate nohighlight">\(a_{ij}\)</span> and <span class="math notranslate nohighlight">\(b_i\)</span> and we would like to find out what the values of <span class="math notranslate nohighlight">\(x_i\)</span> are.</p>
-<p>Linear systems are often represented using the matrix notation <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span>, where <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix containing the coefficient terms known as the <strong>coefficient matrix</strong>, <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> is a <span class="math notranslate nohighlight">\(m \times 1\)</span> matrix containing the variables known as the <strong>variable vector</strong> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> is a <span class="math notranslate nohighlight">\(m \times 1\)</span> matrix containing the constant terms known as the <strong>constant vector</strong> (vectors are introduced in <a class="reference internal" href="../3_Vectors/3.0_Vectors.html#vectors-chapter"><span class="std std-ref">here</span></a> but for now simply consider them as matrices with a single column), i.e.,</p>
+<p>Systems of linear equations are often represented using the matrix notation <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span>, where <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix containing the coefficient terms known as the <strong>coefficient matrix</strong>, <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> is an <span class="math notranslate nohighlight">\(m \times 1\)</span> matrix containing the variables known as the <strong>variable vector</strong> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> is an <span class="math notranslate nohighlight">\(m \times 1\)</span> matrix containing the constant terms known as the <strong>constant vector</strong> (vectors are introduced in <a class="reference internal" href="../3_Vectors/3.0_Vectors.html#vectors-chapter"><span class="std std-ref">here</span></a> but for now simply consider them as matrices with a single column), i.e.,</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     \begin{array}{cccc}
@@ -637,7 +637,7 @@ title="Print to PDF"
 \end{align*}\]</div>
 <div class="seealso admonition" id="system-of-linear-equations-matrix-form-example">
 <p class="admonition-title">Example 2.1</p>
-<p>Write the following linear system of equations as a matrix equation</p>
+<p>Write the following system of linear equations as a matrix equation</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     2x_1 + x_2 &amp;= 4, \\
@@ -666,9 +666,9 @@ Solution<div class="sd-summary-down docutils">
 </div>
 </details></div>
 </section>
-<section id="solving-linear-systems-using-algebra">
-<span id="solving-linear-systems-using-algebra-section"></span><h2>Solving linear systems using algebra<a class="headerlink" href="#solving-linear-systems-using-algebra" title="Permalink to this headline">#</a></h2>
-<p>One way which we can solve systems of linear equations is using simple algebra. The usual approach is to try to solve for each unknown in turn by eliminating all of the other unknowns. For example, consider the linear system of equations from <a class="reference internal" href="#system-of-linear-equations-matrix-form-example"><span class="std std-ref">example 2.1</span></a></p>
+<section id="solving-systems-of-linear-equations-using-algebra">
+<span id="solving-systems-of-linear-equations-using-algebra-section"></span><h2>Solving systems of linear equations using algebra<a class="headerlink" href="#solving-systems-of-linear-equations-using-algebra" title="Permalink to this headline">#</a></h2>
+<p>One way which we can solve systems of linear equations is using simple algebra. The usual approach is to try to solve for each unknown in turn by eliminating all of the other unknowns. For example, consider the system of linear equations from <a class="reference internal" href="#system-of-linear-equations-matrix-form-example"><span class="std std-ref">example 2.1</span></a></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     2x_1 + x_2 &amp;= 4, \\
