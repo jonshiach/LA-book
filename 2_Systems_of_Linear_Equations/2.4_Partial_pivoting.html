@@ -542,8 +542,8 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="partial-pivoting">
 <span id="partial-pivoting-section"></span><h1>Partial pivoting<a class="headerlink" href="#partial-pivoting" title="Permalink to this headline">#</a></h1>
 <p>In most practical applications of row reduction to solve a linear system we use computers to perform the calculations. Computers use floating point numbers to compute arithmetic operations which are not exact and can be prone to rounding errors. Consider the following linear system of equations</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1b669cdf-5707-430b-909c-1b94512065f5">
-<span class="eqno">(7)<a class="headerlink" href="#equation-1b669cdf-5707-430b-909c-1b94512065f5" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fc9e1b41-092d-47f9-86df-a033d3453d1a">
+<span class="eqno">(7)<a class="headerlink" href="#equation-fc9e1b41-092d-47f9-86df-a033d3453d1a" title="Permalink to this equation">#</a></span>\[\begin{align}
   \begin{pmatrix}0.0001 &amp; 1 \\ 1 &amp; 1 \end{pmatrix}\begin{pmatrix} x_1 \\ x_2 \end{pmatrix}= 
   \begin{pmatrix}1 \\ 2 \end{pmatrix}.
 \end{align}\]</div>
@@ -591,7 +591,7 @@ title="Print to PDF"
 <p>So <span class="math notranslate nohighlight">\(x_2 = 1.000\)</span> as before but using back substitution we now have <span class="math notranslate nohighlight">\(x_1 = 1.000\)</span> which is consistent with the original system. This process is called <em>partial pivoting</em> and it’s where we perform a row swap to ensure that the pivot element has a larger absolute value from the elements in the column beneath the pivot.</p>
 <div class="note admonition" id="ge-pp-definition">
 <p class="admonition-title">Definition: Gaussian elimination with partial pivoting</p>
-<p>To row reduce an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> to reduced row echelon form using Gauss-Jordan elimination with partial pivoting we do the following:</p>
+<p>To row reduce an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> to reduced row echelon form using Gaussian elimination with partial pivoting we do the following:</p>
 <ol class="simple">
 <li><p>Initalise the pivot row to <span class="math notranslate nohighlight">\(i=1\)</span> and pivot column to <span class="math notranslate nohighlight">\(k=1\)</span></p></li>
 <li><p>Swap the pivot row <span class="math notranslate nohighlight">\(i\)</span> with the row below which has the largest absolute value element in the pivot column <span class="math notranslate nohighlight">\(k\)</span> which is greater than the absolute value of the pivot element <span class="math notranslate nohighlight">\(|a_{ik}|\)</span>.</p></li>
