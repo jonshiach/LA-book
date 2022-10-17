@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Systems of Linear Equations &#8212; Linear Algebra</title>
+    <title>Systems of Linear Equations Exercises &#8212; Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -408,7 +408,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Systems of Linear Equations
+   Systems of Linear Equations Exercises
   </a>
  </li>
  <li class="toctree-l1">
@@ -564,7 +564,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Systems of Linear Equations</h1>
+                <h1>Systems of Linear Equations Exercises</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -576,145 +576,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="systems-of-linear-equations">
-<h1>Systems of Linear Equations<a class="headerlink" href="#systems-of-linear-equations" title="Permalink to this headline">#</a></h1>
-<p><span style="font-size:20pt;">Examples</span></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="systems-of-linear-equations-exercises">
+<h1>Systems of Linear Equations Exercises<a class="headerlink" href="#systems-of-linear-equations-exercises" title="Permalink to this headline">#</a></h1>
 <div class="full-width docutils">
-<ul class="simple">
-<li><p><strong>Systems of linear equations</strong>: <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span></p></li>
-</ul>
-<div class="seealso admonition" id="system-of-linear-equations-matrix-form-example">
-<p class="admonition-title">Example 2.1</p>
-<p>Write the following linear system of equations as a matrix equation</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    2x_1 + x_2 &amp;= 4, \\
-    4x_1 + 3x_2 &amp;= 10.
-\end{align*}\]</div>
-</div>
-<ul class="simple">
-<li><p><strong>Solution using inverse matrix:</strong> <span class="math notranslate nohighlight">\(\mathbf{x} = A^{-1} \mathbf{b}\)</span></p></li>
-</ul>
-<div class="seealso admonition" id="solution-by-inverse-example">
-<p class="admonition-title">Example 2.2</p>
-<p>Solve the following systems of linear equations using the inverse of the coefficient matrix:</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
-        x_1 - 2x_2 &amp;= 11, \\
-        2x_1 + 4x_2 &amp;= -18.
-    \end{array}\)</span>
-    (ii)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
-        x_1 - 2x_2 + 3x_3 &amp;= -7, \\
-        2x_2 - 4x_3 &amp;= 8, \\
-        3x_1 + x_2 - 4x_3 &amp;= 7.
-    \end{array}\)</span></p>
-</div>
-<ul class="simple">
-<li><p><strong>Cramer’s rule:</strong> <span class="math notranslate nohighlight">\(x_i = \dfrac{\det(A_i)}{\det(A)}\)</span> where <span class="math notranslate nohighlight">\(A_i\)</span> is a matrix obtained by replacing column <span class="math notranslate nohighlight">\(i\)</span> of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\mathbf{b}\)</span></p></li>
-</ul>
-<div class="seealso admonition" id="cramers-rule-example">
-<p class="admonition-title">Example 2.3</p>
-<p>Solve the following systems of linear equations using Cramer’s rule</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
-    3x_1 - 2x_2 &amp;= -4, \\
-    x_1 - 3x_2 &amp;= 1.
-\end{array}\)</span>
-    (ii)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
-    -2x_1 - 3x_2 - x_3 &amp;= -5, \\
-    -4x_1 + 4x_2 + 3x_3 &amp;= -20, \\
-    -3x_1 &amp;= -12.
-\end{array}\)</span></p>
-</div>
-<ul class="simple">
-<li><p><strong>Gaussian elimination:</strong> use elementary row operations to reduce to row echelon form</p></li>
-</ul>
-<div class="seealso admonition" id="ge-example">
-<p class="admonition-title">Example 2.4</p>
-<p>Use Gaussian-elimination to solve the following systems of linear equations:</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
-    x_1 + 2x_2 &amp;= 7, \\ 
-    3x_1 - 4x_2 &amp;= 1.
-    \end{array}\)</span>
-    (ii)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
-    x_1 + x_3 &amp;= 3, \\ 
-    -2x_1 + x_2 + 3x_3 &amp;= 3, \\
-    -x_1 + 2x_2 + 4x_3 &amp;= 5.
-    \end{array}\)</span></p>
-</div>
-<ul class="simple">
-<li><p><strong>Partial pivoting:</strong> swap the pivot row to ensure the pivot element has the largest absolute value of the elements in the column beneath it</p></li>
-</ul>
-<div class="seealso admonition" id="partial-pivoting-example">
-<p class="admonition-title">Example 2.5</p>
-<p>Solve the system of linear equations using Gaussian elimination with partial pivoting.</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    \begin{array}{rcl}
-        x_1 - x_2 + 3x_3 &amp;=&amp; 13, \\
-        4x_1 - 2x_2 + x_3 &amp;=&amp; 15, \\
-        -3x_1 - x_2 + 4x_3 &amp;=&amp; 8.
-    \end{array}
-\end{align*}\]</div>
-</div>
-<ul class="simple">
-<li><p><strong>Gauss-Jordan elimination:</strong> use elementary row operations to row reduce to reduced row echelon form</p></li>
-</ul>
-<div class="seealso admonition" id="gje-example">
-<p class="admonition-title">Example 2.6</p>
-<p>Use Gauss-Jordan elimination to solve the following system of linear equations</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    3x_1 + x_2 - 2 x_3 &amp;= 1, \\
-    x_1 - x_2 + 2x_3 &amp;= 3, \\
-    2x_1 - 3x_2 + 7x_3 &amp;= 4.
-\end{align*}\]</div>
-</div>
-<ul class="simple">
-<li><p><strong>Calculating an inverse matrix using Gauss-Jordan elimination:</strong> row reduce <span class="math notranslate nohighlight">\([A\mid I]\)</span> to reduced row echelon form and extract the right-hand matrix</p></li>
-</ul>
-<div class="seealso admonition" id="gje-inverse-example">
-<p class="admonition-title">Example 2.7</p>
-<p>Use Gauss-Jordan elimination to calculate the inverse of</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    A = \begin{pmatrix}1 &amp; 0 &amp; 2 \\ 2 &amp; -1 &amp; 3 \\ 1 &amp; 4 &amp; 4 \end{pmatrix}.
-\end{align*}\]</div>
-</div>
-<ul class="simple">
-<li><p><strong>Consistent, inconsistent and indeterminate sytems:</strong> a system of consistent if <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = \operatorname{rank}([A \mid \mathbf{b}])\)</span>, inconsistent if <span class="math notranslate nohighlight">\(\operatorname{rank}(A) &lt; \operatorname{rank}(A \mid \mathbf{b})\)</span> and indeterminate if <span class="math notranslate nohighlight">\(\operatorname{rank}(A) &lt; \text{the number of unknowns}\)</span></p></li>
-</ul>
-<div class="seealso admonition" id="rank-example">
-<p class="admonition-title">Example 2.8</p>
-<p>Determine the rank of the coefficient matrix and the augmented matrix for the following systems of linear equations and classify them as either consistent, inconsistent or indeterminate systems.</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(\begin{array}{rcl}
-    3x_1 + x_2 - 2x_3 &amp;=&amp; 1, \\
-    x_1 - x_2 + 2x_3 &amp;=&amp; 3, \\
-    2x_1 - 3x_2 + 7x_3 &amp;=&amp; 4.
-\end{array}\)</span>
-    (ii)   <span class="math notranslate nohighlight">\(\begin{array}{rcl}
-    x_1 - x_2 + 2x_3 &amp;=&amp; 3, \\
-    2x_1 - 3x_2 + 7x_3 &amp;=&amp; 4, \\
-    -x_1 + 3x_2 - 8x_3 &amp;=&amp; 1.
-\end{array}\)</span>
-    (iii)    <span class="math notranslate nohighlight">\(\begin{array}{rcl}
-    x_1 + x_2 - 2x_3 &amp;=&amp; 1, \\
-    2x_1 - x_2 + x_3 &amp;=&amp; 9, \\
-    x_1 + 4x_2 - 7x_3 &amp;=&amp; 2.
-\end{array}\)</span></p>
-</div>
-<ul class="simple">
-<li><p><strong>Homogeneous systems:</strong> <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{0}\)</span></p></li>
-</ul>
-<div class="seealso admonition" id="homogeneous-systems-example">
-<p class="admonition-title">Example 2.9</p>
-<p>Solve the following homogeneous system of linear equations using Gauss-Jordan elimination</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    x_1 + 2x_3 - x_5 &amp;= 0, \\
-    2x_1 + 4x_3 - 2x_4 + 4x_5 &amp;= 0, \\
-    x_2 + x_3 +2x_4 &amp;= 0.
-\end{align*}\]</div>
-</div>
-<p><span style="font-size:20pt;">Exercises</span></p>
 <div class="note admonition" id="ex2-1">
 <p class="admonition-title">Exercise 2.1</p>
 <p>Solve the following linear system of equations using the inverse of the coefficient matrix.</p>
