@@ -2262,7 +2262,7 @@ Solution<div class="sd-summary-down docutils">
          0 &amp; 0 &amp; -7 &amp; -9 \\
     \end{array} \right)
 \end{align*}\]</div>
-<p class="sd-card-text">therefore <span class="math notranslate nohighlight">\(\rho(A) = 3\)</span> and <span class="math notranslate nohighlight">\(\rho((A|\mathbf{b})) = 3\)</span> so this system has a unique solution</p>
+<p class="sd-card-text">therefore <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = 3\)</span> and <span class="math notranslate nohighlight">\(\operatorname{rank}(A \mid \mathbf{b}) = 3\)</span> so this system has a unique solution</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     x_{3} &amp;= \frac{1}{-7} \left( -9\right) = \frac{9}{7}, \\
@@ -2306,7 +2306,7 @@ Solution<div class="sd-summary-down docutils">
          0 &amp; 0 &amp; 0 &amp; 0 \\
     \end{array} \right)
 \end{align*}\]</div>
-<p class="sd-card-text">therefore <span class="math notranslate nohighlight">\(\rho(A) = 2\)</span> and <span class="math notranslate nohighlight">\(\rho((A|\mathbf{b})) = 2\)</span>. Since <span class="math notranslate nohighlight">\(\rho(A) = \rho((A|\mathbf{b})) &lt; 3\)</span> then this system has infintely many solutons. Let <span class="math notranslate nohighlight">\(r = x_3\)</span></p>
+<p class="sd-card-text">therefore <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = 2\)</span> and <span class="math notranslate nohighlight">\(\operatorname{rank}(A \mid \mathbf{b}) = 2\)</span>. Since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = \operatorname{rank}(A \mid \mathbf{b}) &lt; 3\)</span> then this system has infintely many solutons. Let <span class="math notranslate nohighlight">\(r = x_3\)</span></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     x_2 &amp;= \frac{1}{-1}(-2 - 3r) = 2 + 3r, \\
@@ -2349,7 +2349,7 @@ Solution<div class="sd-summary-down docutils">
          0 &amp; 0 &amp; 0 &amp; 8 \\
     \end{array} \right)
 \end{align*}\]</div>
-<p class="sd-card-text">therefore <span class="math notranslate nohighlight">\(\rho(A) = 2\)</span> and <span class="math notranslate nohighlight">\(\rho((A|\mathbf{b})) = 3\)</span>. Since <span class="math notranslate nohighlight">\(\rho(A) &lt; \rho((A|\mathbf{b}))\)</span> then this is an inconsistent system and does not have a solution.</p>
+<p class="sd-card-text">therefore <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = 2\)</span> and <span class="math notranslate nohighlight">\(\operatorname{rank}(A \mid \mathbf{b}) = 3\)</span>. Since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) &lt; \operatorname{rank}(A \mid \mathbf{b})\)</span> then this is an inconsistent system and does not have a solution.</p>
 </div>
 </details></div>
 <div class="note admonition" id="ex2-8">
@@ -2444,15 +2444,13 @@ Solution<div class="sd-summary-down docutils">
 </details></div>
 <div class="note admonition" id="ex2-9">
 <p class="admonition-title">Exercise 2.9</p>
-<p>Determine the values of <span class="math notranslate nohighlight">\(k\)</span> for which the following system of linear equations</p>
+<p>Determine the values of <span class="math notranslate nohighlight">\(k\)</span> for which the following system of linear equations has a solution</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     x_1 + x_2 + 3x_3 &amp;= 1, \\
     4x_1 + 3x_2 + kx_3 &amp;= 2, \\
     2x_1 + x_2 + 2x_3 &amp;= 3,
 \end{align*}\]</div>
-<p>has:</p>
-<p>(a)   a unique solution.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -2489,26 +2487,7 @@ Solution<div class="sd-summary-down docutils">
         0 &amp; 0 &amp; k - 8 &amp; -3
     \end{array} \right).
 \end{align*}\]</div>
-<p class="sd-card-text">For a homogeneous system to have a unique solution, each column must have a pivot. Therefore this system has a solution when <span class="math notranslate nohighlight">\(k \neq 8\)</span>.</p>
-</div>
-</details><p>(b)   a non-trivial solution</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The row echelon form of the coefficient matrix is</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    \begin{pmatrix}
-        1 &amp; 1 &amp; 3 \\
-        0 &amp; -1 &amp; -4 \\
-        0 &amp; 0 &amp; k - 8
-    \end{pmatrix}.
-\end{align*}\]</div>
-<p class="sd-card-text">When <span class="math notranslate nohighlight">\(k=8\)</span> the last row are all zeros so this system will have infinitely many solutions.</p>
+<p class="sd-card-text">For a homogeneous system to have a solution each column must have a pivot. Therefore this system has a solution when <span class="math notranslate nohighlight">\(k \neq 8\)</span>.</p>
 </div>
 </details></div>
 </section>
