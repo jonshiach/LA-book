@@ -3,7 +3,45 @@
 
 # # Cramer's rule
 # 
-# **Cramer's rule** is an explicit rule for calculating the solution to a system of linear equations using determinants.
+# ```{figure} https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Gabriel_Cramer.jpg/220px-Gabriel_Cramer.jpg
+# ---
+# width: 200px
+# alt: Gabriel Cramer
+# figclass : margin
+# ---
+# [Gabriel Cramer (1704 - 1752)](https://en.wikipedia.org/wiki/Gabriel_Cramer)
+# ```
+#      
+# **Cramer's rule**, named after Swiss mathematician [Gabriel Cramer](https://en.wikipedia.org/wiki/Gabriel_Cramer), is an explicit rule for calculating the solution to a system of linear equations using determinants. We saw in the section on [determinants](determinant-section) that the solution to the system of linear equations
+# 
+# \begin{align*}
+#     \begin{pmatrix} a & b \\ c & d \end{pmatrix}
+#     \begin{pmatrix} x_1 \\ x_2 \end{pmatrix} =
+#     \begin{pmatrix} e \\ f \end{pmatrix}
+# \end{align*}
+# 
+# is 
+# 
+# \begin{align*}
+#     x_1 &= \frac{de - bf}{ad - bc}, &
+#     x_2 &= \frac{af - ce}{ad - bc}.
+# \end{align*}
+# 
+# We can recognise that the solution to both variables includes the determinant of the coefficient matrix, $ad - bc$, in the denomimator. But what about the numerator? If we consider the solution to $x_1$ then in $de - bf$ we can see that the constant values $e$ and $f$ are included and we have the subtraction of two products which is similar to the determinant of a $2 \times 2$ matrix, i.e.,
+# 
+# \begin{align*}
+#     de - bf = \begin{vmatrix} e & b \\ f & d \end{vmatrix}.
+# \end{align*}
+# 
+# Doing similar for the solution to $x_2$ we see that the numerator is
+# 
+# \begin{align*}
+#     af - ce = \begin{vmatrix} a & e \\ c & f \end{vmatrix}.
+# \end{align*}
+# 
+# These determinants are simply the coefficient matrix $\begin{pmatrix} a & b \\ c & d \end{pmatrix}$ with first and second columns replaced by the constant vector $\begin{pmatrix} e \\ f \end{pmatrix}$ for $x_1$ and $x_2$ respectively. This can be extended to larger systems to give us Cramer's rule.
+# 
+# 
 # 
 # ````{admonition} Theorem: Cramer's rule
 # :class: important
@@ -21,33 +59,55 @@
 # 
 # ````
 # 
-# **Proof**
+# **Proof** (from [Proof Wiki](https://proofwiki.org/wiki/Cramer%27s_Rule))
 # 
-# *Consider the solution to the linear system $A\mathbf{x} = \mathbf{b}$ where $A$ is non-singular then the solution for the first variable $x_1$ is*
+# *The solution to a system of linear equations $A \mathbf{x} = \mathbf{b}$ can be calculated using $\mathbf{x} = A^{-1} \mathbf{b}$ where $A^{-1}$ is the inverse of the coefficient matrix $A$. The [adjoint-determinant formula](adjoint-determinant-formula-definition) for calculating the inverse is*
 # 
 # \begin{align*}
-#     x_1 = \det 
-#     \begin{pmatrix} 
-#         x_1 & 0 & \cdots & 0 \\
-#         x_2 & 1 & \cdots & 0 \\
+#     A^{-1} = \frac{\operatorname{adj}(A)}{\det(A)},
+# \end{align*}
+# 
+# *so*
+# 
+# \begin{align*}
+#     \mathbf{x} =  \frac{1}{\det(A)} \operatorname{adj}(A) \mathbf{b}.
+# \end{align*}
+# 
+# *Since $\operatorname{adj}(A) = C^T$ where $C$ is the matrix of [co-factors](cofactor-definition)*
+# 
+# \begin{align*}
+#     C^T = \begin{pmatrix} 
+#         C_{11} & C_{21} & \cdots & C_{n1} \\
+#         C_{12} & C_{22} & \cdots & C_{n2} \\
 #         \vdots & \vdots & \ddots & \vdots \\
-#         x_n & 0 & \cdots & 1
-#     \end{pmatrix} = \det(X_1).
+#         C_{1n} & C_{2n} & \cdots & C_{nn}
+#     \end{pmatrix}.
 # \end{align*}
 # 
-# *Since $\mathbf{x} = A^{-1}\mathbf{b}$ and $I = A^{-1}A$ then the matrix $X_1$ can be written as*
+# *then for the $i$ element of $\mathbf{x}$ using the [definition of matrix multiplication](matrix-multiplication-definition) we have*
 # 
 # \begin{align*}
-#     X_1 = \begin{pmatrix} A^{-1}\mathbf{b} & A^{-1} \mathbf{a}_2 & \cdots & A^{-1} \mathbf{a}_n \end{pmatrix},
+#     x_i = \frac{1}{\det(A)} \sum_{j=1}^n C_{ji} b_j
 # \end{align*}
 # 
-# *where $\mathbf{a}_i$ is the $i$th column of $A$. Since $A_1$ in equation {eq}`cramers-rule-equation` is $A_1 = \begin{pmatrix} \mathbf{b} & \mathbf{a}_2 & \cdots & \mathbf{a}_n \end{pmatrix}$ then $X_1 = A^{-1}A_1$. Using the property of determinant where the determinant of a product of two matrices is equal to the product of the determinants  then*
+# *In Cramer's rule, $A_i$ is the matrix formed by replacing column $i$ of $A$ with $\mathbf{b}$*
 # 
 # \begin{align*}
-#     x_1 = \det(X_1) = \det(A^{-1}A_1) = \det(A^{-1})\det(A_1) = \frac{\det(A_1)}{\det(A)}.
+#     A_i = \begin{pmatrix}
+#         a_{11} & \cdots & a_{1,i-1} & b_1 & a_{1,i+1} & \cdots & a_{1n} \\
+#         a_{21} & \cdots & a_{2,i-1} & b_2 & a_{2,i+1} & \cdots & a_{2n} \\
+#         \vdots & \ddots & \vdots & \vdots & \vdots & \ddots & \vdots \\
+#         a_{n1} & \cdots & a_{n,i-1} & b_n & a_{n,i+1} & \cdots & a_{nn}
+#     \end{pmatrix}.
 # \end{align*}
 # 
-# *Doing similar for the other variables completes the proof.* <div style="text-align: right"> &#9633; </div>
+# *Since removing the $i$th column from both $A$ and $A_i$ (the one with the $b$ values) results in the same matrix then the cofactors of $A_i$ are the same as the cofactors of $A$. If we calculate $\det(A_i)$ by expanding along the $i$th column of $A_i$ then*
+# 
+# \begin{align*}
+#     \det(A_i) = b_1 C_{1i} + b_2 C_{2i} + \cdots + b_n C_{ni} = \sum_{j=1}^n C_{ji} b_j,
+# \end{align*}
+# 
+# *so $x_i = \dfrac{\det(A_i)}{\det(A)}$.*<div style="text-align: right"> &#9633; </div>
 # 
 # 
 # ````{admonition} Example 2.3

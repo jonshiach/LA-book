@@ -21,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -37,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -50,8 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/4_Coordinate_geometry/4.2_Shortest_distance_problems.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -610,7 +610,7 @@ title="Print to PDF"
 </section>
 <section id="shortest-distance-between-a-line-and-a-point">
 <h2>Shortest distance between a line and a point<a class="headerlink" href="#shortest-distance-between-a-line-and-a-point" title="Permalink to this headline">#</a></h2>
-<p>To find the shortest distance, <span class="math notranslate nohighlight">\(d\)</span>, between a line <span class="math notranslate nohighlight">\(\ell: P + \mathbf{d}t\)</span> and a point <span class="math notranslate nohighlight">\(Q\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> we look at a plane they both lie in. Let <span class="math notranslate nohighlight">\(R\)</span> be a point on the line such that the vector <span class="math notranslate nohighlight">\(\overrightarrow{RQ}\)</span> is perpendicular to <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> (<a class="reference internal" href="#line-point-distance-figure"><span class="std std-numref">Fig. 21</span></a>) then</p>
+<p>To find the shortest distance, <span class="math notranslate nohighlight">\(d\)</span>, between a line <span class="math notranslate nohighlight">\(\ell: P + \mathbf{d}t\)</span> and a point <span class="math notranslate nohighlight">\(Q\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> we look at a plane they both lie in. Let <span class="math notranslate nohighlight">\(R\)</span> be a point on the line such that the vector <span class="math notranslate nohighlight">\(\overrightarrow{RQ}\)</span> is perpendicular to <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> (<a class="reference internal" href="#line-point-distance-figure"><span class="std std-numref">Fig. 25</span></a>) then</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     d = | \overrightarrow{RQ} |.
@@ -618,7 +618,7 @@ title="Print to PDF"
 <figure class="align-default" id="line-point-distance-figure">
 <img alt="../_images/line_point_distance.png" src="../_images/line_point_distance.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 21 </span><span class="caption-text">The shortest distance of a point <span class="math notranslate nohighlight">\(Q\)</span> from the line <span class="math notranslate nohighlight">\(\ell\)</span> is the length of the chord <span class="math notranslate nohighlight">\(R \to Q\)</span> which is perpendicular to <span class="math notranslate nohighlight">\(\ell\)</span>.</span><a class="headerlink" href="#line-point-distance-figure" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">The shortest distance of a point <span class="math notranslate nohighlight">\(Q\)</span> from the line <span class="math notranslate nohighlight">\(\ell\)</span> is the length of the chord <span class="math notranslate nohighlight">\(R \to Q\)</span> which is perpendicular to <span class="math notranslate nohighlight">\(\ell\)</span>.</span><a class="headerlink" href="#line-point-distance-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Since <span class="math notranslate nohighlight">\(\overrightarrow{RQ}\)</span> is perpendicular to <span class="math notranslate nohighlight">\(d\)</span> then <span class="math notranslate nohighlight">\(\overrightarrow{RQ} \cdot \mathbf{d} = 0\)</span> so we calculate the position of <span class="math notranslate nohighlight">\(R\)</span> that satisfies</p>
@@ -692,12 +692,12 @@ Solution<div class="sd-summary-down docutils">
 <ul class="simple">
 <li><p>If the two lines intersect then obviously the shortest distance is obviously 0.</p></li>
 <li><p>If the two lines are parallel then any point on <span class="math notranslate nohighlight">\(\ell_1\)</span> can gives the shortest distance between <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span>. Hence we simply choose a point <span class="math notranslate nohighlight">\(R\)</span> on <span class="math notranslate nohighlight">\(\ell_2\)</span> and apply method for <a class="reference internal" href="#point-line-distance-theorem"><span class="std std-ref">finding the distance between a point and a line</span></a>.</p></li>
-<li><p>If the two lines are skew then the shortest distance is the distance of the chord that is perpendicular to both <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> (<a class="reference internal" href="#line-line-distance-figure"><span class="std std-numref">Fig. 22</span></a>).</p></li>
+<li><p>If the two lines are skew then the shortest distance is the distance of the chord that is perpendicular to both <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> (<a class="reference internal" href="#line-line-distance-figure"><span class="std std-numref">Fig. 26</span></a>).</p></li>
 </ul>
 <figure class="align-default" id="line-line-distance-figure">
 <img alt="../_images/line_line_distance.png" src="../_images/line_line_distance.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 22 </span><span class="caption-text">The shortest distance between skew lines is the distance of the chord which is perpendicular to both lines.</span><a class="headerlink" href="#line-line-distance-figure" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">The shortest distance between skew lines is the distance of the chord which is perpendicular to both lines.</span><a class="headerlink" href="#line-line-distance-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>If <span class="math notranslate nohighlight">\(Q_1\)</span> and <span class="math notranslate nohighlight">\(Q_2\)</span> are points on the lines <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> respectively then the chord <span class="math notranslate nohighlight">\(Q_2 - Q_1\)</span> which is perpendicular to both lines has the direction vector <span class="math notranslate nohighlight">\(\mathbf{n} = \mathbf{d}_1 \times \mathbf{d}_2\)</span>. If <span class="math notranslate nohighlight">\(d\)</span> is the distance between <span class="math notranslate nohighlight">\(Q_1\)</span> and <span class="math notranslate nohighlight">\(Q_2\)</span> then</p>

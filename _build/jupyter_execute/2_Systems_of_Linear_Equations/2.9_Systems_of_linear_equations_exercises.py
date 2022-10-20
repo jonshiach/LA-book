@@ -3,6 +3,7 @@
 
 # # Systems of linear equations exercises
 
+# 
 # `````{admonition} Exercise 2.1
 # :class: note
 # :name: ex2.1
@@ -251,121 +252,8 @@
 # \end{align*}
 # ````
 # `````
-
-# In[1]:
-
-
-from sympy import *
- 
-def print_matrix(A):
-    m, n = A.shape
-    cols = "c" * m
-    print(rf"    \left( \begin{{array}}{{{cols}}}")
-    for i in range(m):
-        print("        ", end="")
-        for j in range(n - 1):
-            print(rf" {latex(A[i,j])} &", end="")
-        print(rf" {latex(A[i,-1])} \\")
-    print(r"    \end{array} \right)")
-    
-    
-def print_system(A, b):
-    m, n = A.shape
-    print(r"\begin{align*}")
-    for i in range(m):
-        string = "    "
-        j = 0
-        if A[i,j] == 1:
-            string += rf" x_{{{j + 1}}}"
-        elif A[i,j] == -1:
-            string += rf" - x_{{{j + 1}}}"
-        elif A[i,j] > 0:
-            string += rf" {latex(A[i,j])} x_{{{j + 1}}}"
-        elif A[i,j] < 0:
-            string += rf" - {latex(-A[i,j])} x_{{{j + 1}}}"
-            
-        for j in range(1, n):
-            if A[i,j] == 0:
-                continue
-            elif A[i,j] == 1:
-                string += rf" +  x_{{{j + 1}}}"
-            elif A[i,j] == -1:
-                string += rf" -  x_{{{j + 1}}}"
-            elif A[i,j] > 0:
-                string += rf" + {latex(A[i,j])} x_{{{j + 1}}}"
-            elif A[i,j] < 0:
-                string += rf" - {latex(-A[i,j])} x_{{{j + 1}}}"
-                
-        string += rf" &= {latex(b[i])}"
-        if i < m - 1:
-            string += r", \\"
-        else:
-            string += "."
-        print(string)
-    print(r"\end{align*}")
-    print()
-    
-
-def matrix_inverse_solve(A, b):
-    print("````{dropdown} Solution")
-    print(r"\begin{align*}")
-    print(r"    \det")
-    print_matrix(A)
-    print(rf"    &= {latex(A.det())}, \\")
-    print(r"    \operatorname{adj}")
-    print_matrix(A)
-    print(rf"    &= ")
-    print_matrix(A.adjugate())
-    print(r", \\")
-    print(rf"    \therefore A^{{-1}} &= \frac{{1}}{{{latex(A.det())}}}")
-    print_matrix(A.adjugate())
-    print("\\ = ")
-    print_matrix(A.inv())
-    print(r",\end{align*}")
-    print("\ntherefore")
-    print(r"\begin{align*}")
-    print(r"    \mathbf{{x}} = ")
-    print_matrix(A.inv())
-    print_matrix(b)
-    print("    =")
-    print_matrix(A.inv() * b)
-    print(r"\end{align*}")
-    print("````")
- 
-
-print("`````{admonition} Exercise 2.1")
-print(":class: note")
-print(":name: ex2.1")
-print()
-print("Solve the following linear system of equations using the inverse of the coefficient matrix.")     
-
-print("\n(a)")
-A = Matrix([[-4, 2], [3, 4]])
-b = Matrix([[-22], [11]])
-print_system(A, b)
-matrix_inverse_solve(A, b)
-
-print("\n(b)")
-A = Matrix([[-4, 2], [-1, -3]])
-b = Matrix([[6], [-2]])
-print_system(A, b)
-matrix_inverse_solve(A, b)
-
-print("\n(c)")
-A = Matrix([[-4, -4, -2], [3, 0, 4], [1, 0, 0]])
-b = Matrix([[16], [-8], [0]])
-print_system(A, b)
-matrix_inverse_solve(A, b)
-
-print("\n(d)")
-A = Matrix([[4, 0, -4], [4, -1, 1], [3, 1, 2]])
-b = Matrix([[8], [-4], [-12]])
-print_system(A, b)
-matrix_inverse_solve(A, b)
-
-print("`````")
-
-
+# 
+# 
 # `````{admonition} Exercise 2.2
 # :class: note
 # :name: ex2.2
@@ -428,56 +316,7 @@ print("`````")
 # \end{align*}
 # ````
 # `````
-
-# In[2]:
-
-
-def cramers_rule(A, b):
-    print(r"````{dropdown} Solution")
-    print(r"\begin{align*}")
-    for i in range(len(b)):
-        Ai = A.copy()
-        Ai[:,i] = b
-        print(rf"    x_{{{i+1}}} &= \frac{{\det {latex(Ai, mat_delim='(')}}}{{\det {latex(A, mat_delim='(')}}}", end="")
-        print(rf" = \frac{{{latex(Ai.det())}}}{{{latex(A.det())}}} = {latex(Ai.det() / A.det())}, \\ \\")
-
-    print(r"\end{align*}")
-    print(r"````")
-
-
-print("`````{admonition} Exercise 2.2")
-print(":class: note")
-print(":name: ex2.2")
-print()
-print("Solve the following linear system of equations using Cramer's rule.")     
-
-print("\n(a)")
-A = Matrix([[1, 4], [-4, 1]])
-b = Matrix([[-20], [-5]])
-print_system(A, b)
-cramers_rule(A, b)
-
-print("\n(b)")
-A = Matrix([[1, 1], [0, 4]])
-b = Matrix([[4], [12]])
-print_system(A, b)
-cramers_rule(A, b)
-
-print("\n(c)")
-A = Matrix([[3, -4, -4], [-2, -1, -1], [4, -1, 3]])
-b = Matrix([[21], [8], [-14]])
-print_system(A, b)
-cramers_rule(A, b)
-
-print("\n(d)")
-A = Matrix([[4, 4, 1], [-2, 1, 1], [-5, -4, 2]])
-b = Matrix([[5], [-1], [-14]])
-print_system(A, b)
-cramers_rule(A, b)
-
-print("`````")
-
-
+# 
 # `````{admonition} Exercise 2.3
 # :class: note
 # :name: ex2.3
@@ -728,171 +567,7 @@ print("`````")
 # ````
 # `````
 # 
-
-# In[3]:
-
-
-def print_augmented_matrix(A):
-    m, n = A.shape
-    cols = "c" * (n - 1)
-    cols += "|c"
-    print(rf"    \left( \begin{{array}}{{{cols}}}")
-    for i in range(m):
-        print("        ", end="")
-        for j in range(n - 1):
-            print(rf" {latex(A[i,j])} &", end="")
-        print(rf" {latex(A[i,-1])} \\")
-    print(r"    \end{array} \right)")
-    
-        
-def gelim(A):
-    m, n = A.shape
-    
-    print(r"````{dropdown} Solution")
-    print(r"\begin{align*}")
-    print(r"&", end="")
-    print_augmented_matrix(A)
-    
-    for i in range(m - 1):
-        for j in range(i, n):
-            if A[i,j] != 0:
-                pivotcol = j
-                break         
-         
-        string = r"    \begin{matrix} \phantom{x} \\"
-        for j in range(i):
-            string += r" \phantom{x} \\"
-            
-        for j in range(i + 1, m):
-            if A[j,pivotcol] / A[i,pivotcol] > 0:
-                if A[j,pivotcol] / A[i,pivotcol] == 1:
-                    string += rf" R_{{{j+1}}} - R_{{{i + 1}}}"
-                else:
-                    string += rf" R_{{{j+1}}} - {latex(A[j,pivotcol] / A[i,pivotcol])} R_{{{i + 1}}}"    
-            elif A[j,pivotcol] / A[i,pivotcol] < 0:
-                if A[j,pivotcol] / A[i,pivotcol] == -1:
-                    string += rf" R_{{{j+1}}} + R_{{{i + 1}}}"
-                else:
-                    string += rf" R_{{{j+1}}} + {latex(-A[j,pivotcol] / A[i,pivotcol])} R_{{{i + 1}}}"
-            elif A[j,pivotcol] / A[i,pivotcol] == 0:
-                string += r" \phantom{x}"
-            A[j,:] -= A[j,pivotcol] / A[i,pivotcol] * A[i,:]
-            
-            if j < m - 1:
-                string += r" \\"
-        string += r" \end{matrix} \\[1em]"
-        print(string)
-        print(r"    \longrightarrow \quad &")
-        print_augmented_matrix(A)
-    print(r"\end{align*}")
-                
-    return A
-
-
-def back_substitution(A):
-    m, n = A.shape
-    x = A[:,-1]
-    print(r"\begin{align*}")
-    for i in range(m - 1, -1, -1):
-        string = rf"    x_{{{i+1}}} &= \frac{{1}}{{{latex(A[i,i])}}} \left( {latex(A[i,-1])}"
-            
-        for j in range(i + 1, n - 1):
-            if A[i,j] >= 0:
-                string += rf" - {latex(A[i,j])} \left( {latex(x[j])} \right)"
-            else:
-                string += rf" - \left( {latex(A[i,j])} \right) \left( {latex(x[j])} \right)"
-            x[i] -= A[i,j] * x[j]
-        
-        x[i] /= A[i,i]
-        
-        string += rf"\right) = {latex(x[i])}"
-            
-        if i > 0:
-            string += r", \\"
-        else:
-            string += "."
-        print(string)
-    print(r"\end{align*}")
-    
-    
-print("`````{admonition} Exercise 2.3")
-print(":class: note")
-print(":name: ex2.3")
-print()
-print("Solve the following linear system of equations using Gaussian elimination.")    
-print("\n(a)")
-A = Matrix([[-1, 3], [-2, 1]])
-b = Matrix([[-2], [1]])
-
-print_system(A, b)
-Ab = A.row_join(b)
-Ab = gelim(Ab)
-print()
-print(rf"therefore ")
-back_substitution(A)
-print(r"````")
-    
-print("\n(b)")
-A = Matrix([[3, 1, 2], [4, 0, -4], [4, -2, 1]])
-b = Matrix([[11], [-4], [13]])
-print_system(A, b)
-Ab = A.row_join(b)
-Ab = gelim(Ab)
-print()
-print(rf"therefore ")
-back_substitution(A)
-print(r"````")
-
-print("\n(c)")
-A = Matrix([[-1, -5, -2], [2, -2, -3], [3, -1, 4]])
-b = Matrix([[-17], [-14], [-13]])
-print_system(A, b)
-Ab = A.row_join(b)
-Ab = gelim(Ab)
-
-print()
-print(rf"therefore ")
-back_substitution(A)
-print(r"````")
-
-print("\n(d)")
-A = Matrix([[-1, -5, -2], [2, -2, -3],  [3, -1, -4]])
-b = Matrix([[-26], [-19], [-20]])
-print_system(A, b)
-Ab = A.row_join(b)
-Ab = gelim(Ab)
-print()
-print(rf"therefore ")
-back_substitution(A)
-print(r"````")
-
-print("\n(e)")
-A = Matrix([[3, -5, -4, -1], [0, -4, 3, -4], [2, 3, 3, -3], [-2, 2, -5, -4]])
-b = Matrix([[28], [41], [11], [-21]])
-print_system(A, b)
-Ab = A.row_join(b)
-Ab = gelim(Ab)
-
-print()
-print(rf"therefore ")
-back_substitution(A)
-print(r"````")
-
-print("\n(f)")
-A = Matrix([[2, -3, -3, 4], [4, -5, 1, -5], [3, 3, -1, -5], [1, 0, 1, 3]])
-b = Matrix([[-1], [42], [20], [-4]])
-print_system(A, b)
-Ab = A.row_join(b)
-Ab = gelim(Ab)
-
-print()
-print(rf"therefore ")
-back_substitution(A)
-print(r"````")
-
-print("`````")
-
-
+# 
 # `````{admonition} Exercise 2.4
 # :class: note
 # :name: ex2.4
@@ -1214,130 +889,7 @@ print("`````")
 # \end{align*}
 # ````
 # `````
-
-# In[4]:
-
-
-def gelimpp(A):
-    m, n = A.shape
-    
-    print(r"````{dropdown} Solution")
-    print(r"\begin{align*}")
-    print(r"&", end="")
-    print_augmented_matrix(A)
-    
-    for i in range(m - 1):
-        for j in range(i, n):
-            if A[i,j] != 0:
-                pivotcol = j
-                break
-                
-        maxpivot, pivotrow = abs(A[i, pivotcol]), i
-        for j in range(i + 1, m):
-            if abs(A[j,pivotcol]) > maxpivot:
-                maxpivot, pivotrow = abs(A[j,pivotcol]), j
-               
-        if pivotrow != i:
-            string = r"    \begin{matrix}"
-            for j in range(m):
-                if i == j:
-                    string += rf" R_{{{i+1}}} \leftrightarrow R_{{{pivotrow + 1}}}"
-                else:
-                    string += r" \phantom{x}"
-                if j < m - 1:
-                    string += r" \\"
-              
-            string += r" \end{matrix} \\[1em]"
-            print(string)
-            print(r"    \longrightarrow \quad &")  
-            A[i,:], A[pivotrow,:] = A[pivotrow,:], A[i,:]
-            print_augmented_matrix(A)
-                
-         
-        string = r"    \begin{matrix} \phantom{x} \\"
-        for j in range(i):
-            string += r" \phantom{x} \\"
-            
-        for j in range(i + 1, m):
-            if A[j,pivotcol] / A[i,pivotcol] > 0:
-                if A[j,pivotcol] / A[i,pivotcol] == 1:
-                    string += rf" R_{{{j+1}}} - R_{{{i + 1}}}"
-                else:
-                    string += rf" R_{{{j+1}}} - {latex(A[j,pivotcol] / A[i,pivotcol])} R_{{{i + 1}}}"    
-            elif A[j,pivotcol] / A[i,pivotcol] < 0:
-                if A[j,pivotcol] / A[i,pivotcol] == -1:
-                    string += rf" R_{{{j+1}}} + R_{{{i + 1}}}"
-                else:
-                    string += rf" R_{{{j+1}}} + {latex(-A[j,pivotcol] / A[i,pivotcol])} R_{{{i + 1}}}"
-            elif A[j,pivotcol] / A[i,pivotcol] == 0:
-                string += r" \phantom{x}"
-            A[j,:] -= A[j,pivotcol] / A[i,pivotcol] * A[i,:]
-            
-            if j < m - 1:
-                string += r" \\"
-        string += r" \end{matrix} \\[1em]"
-        print(string)
-        print(r"    \longrightarrow \quad &")
-        print_augmented_matrix(A)
-    print(r"\end{align*}")
-    print()
-    print(rf"therefore ")
-    back_substitution(A)
-    print(r"````") 
-    
-    return A
-
-
-print("`````{admonition} Exercise 2.5")
-print(":class: note")
-print(":name: ex2.5")
-print()
-print("Solve the linear system of equations from [exercise 2.3](ex2.3) using Gaussian elimination with partial pivoting.")    
-print("\n(a)")
-A = Matrix([[-1, 3], [-2, 1]])
-b = Matrix([[-2], [1]])
-Ab = A.row_join(b)
-print_system(A, b)
-Ab = gelimpp(Ab)
-
-print("\n(b)")
-A = Matrix([[3, 1, 2], [4, 0, -4], [4, -2, 1]])
-b = Matrix([[11], [-4], [13]])
-Ab = A.row_join(b)
-print_system(A, b)
-Ab = gelimpp(Ab)
-
-print("\n(c)")
-A = Matrix([[-1, -5, -2], [2, -2, -3], [3, -1, 4]])
-b = Matrix([[-17], [-14], [-13]])
-Ab = A.row_join(b)
-print_system(A, b)
-Ab = gelimpp(Ab)
-
-print("\n(d)")
-A = Matrix([[-1, -5, -2], [2, -2, -3],  [3, -1, -4]])
-b = Matrix([[-26], [-19], [-20]])
-Ab = A.row_join(b)
-print_system(A, b)
-Ab = gelimpp(Ab)
-
-print("\n(e)")
-A = Matrix([[3, -5, -4, -1], [0, -4, 3, -4], [2, 3, 3, -3], [-2, 2, -5, -4]])
-b = Matrix([[28], [41], [11], [-21]])
-Ab = A.row_join(b)
-print_system(A, b)
-Ab = gelimpp(Ab)
-
-print("\n(f)")
-A = Matrix([[2, -3, -3, 4], [4, -5, 1, -5], [3, 3, -1, -5], [1, 0, 1, 3]])
-b = Matrix([[-1], [42], [20], [-4]])
-Ab = A.row_join(b)
-print_system(A, b)
-Ab = gelimpp(Ab)
-
-print("`````")
-
-
+# 
 # `````{admonition} Exercise 2.5
 # :class: note
 # :name: ex2.5
@@ -1730,128 +1282,7 @@ print("`````")
 # therefore  $x_{1} = 4$, $x_{2} = -2$, $x_{3} = 1$ and $x_{4} = -3$.
 # ````
 # `````
-
-# In[5]:
-
-
-def gjelim(A):
-    m, n = A.shape
-    
-    print(r"````{dropdown} Solution ")
-    print(r"\begin{align*}")
-    print(r"&", end="")
-    print_augmented_matrix(A)
-    
-    for i in range(m):
-        for j in range(i, n):
-            if A[i,j] != 0:
-                pivot = j
-                break
-    
-        if A[i,pivot] != 1:
-            print(r"    \begin{matrix}", end="")
-            for j in range(m):
-                if j == i:
-                    if A[i,pivot] == -1:
-                        print(rf" - R_{{{j+1}}}", end="")
-                    elif A[i,pivot] != 1:
-                        print(rf" {latex(1 / A[i,pivot])} R_{{{j+1}}}", end="")
-                else:
-                    print(r" \phantom{x}", end="")
-                if j < m - 1:
-                    print(r" \\", end="")
-            print(r" \end{matrix} \\[1em]")
-            print(r"    \longrightarrow \quad &")
-            
-            A[i,:] /= A[i,pivot]
-            print_augmented_matrix(A)
-         
-        print(r"    \begin{matrix}", end="")
-        for j in range(m):
-            if i != j:
-                if A[j,pivot] > 0:
-                    if A[j,pivot] == 1:
-                        print(rf" R_{{{j+1}}} - R_{{{i + 1}}}", end="")
-                    else:
-                        print(rf" R_{{{j+1}}} - {latex(A[j,pivot])} R_{{{i + 1}}}", end="")    
-                elif A[j,pivot] < 0:
-                    if A[j,pivot] == -1:
-                        print(rf" R_{{{j+1}}} + R_{{{i + 1}}}", end="")
-                    else:
-                        print(rf" R_{{{j+1}}} + {latex(-A[j,pivot])} R_{{{i + 1}}}", end="")
-                elif A[j,pivot] == 0:
-                    print(r" \phantom{x}", end="")
-                A[j,:] -= A[j, pivot] * A[i,:]
-            if i == j:
-                print(r" \phantom{x}", end="")
-            if j < m - 1:
-                print(r" \\", end="")
-        print(r" \end{matrix} \\[1em]")
-        print(r"    \longrightarrow \quad &")
-        print_augmented_matrix(A)
-    print(r"\end{align*}")
-    print()
-    print(rf"therefore ", end="")
-    for i in range(m - 1):
-        print(rf" $x_{{{i+1}}} = {latex(A[i,-1])}$", end="")
-        if i < m - 2:
-            print(",", end ="")
-    print(rf" and $x_{{{m}}} = {latex(A[-1,-1])}$.")
-    print("````")
-
-    return A
-        
-print("`````{admonition} Exercise 2.4")
-print(":class: note")
-print(":name: ex2.4")
-print()
-print("Solve the linear system of equations from [exercise 2.3](ex2.3) using Gauss-Jordan elimination.")    
-print("\n(a)")
-
-A = Matrix([[-1, 3], [-2, 1]])
-b = Matrix([[-2], [1]])
-Ab = A.row_join(b)
-print_system(A, b)
-Ab = gjelim(Ab)
-
-print("\n(b)")
-A = Matrix([[3, 1, 2], [4, 0, -4], [4, -2, 1]])
-b = Matrix([[11], [-4], [13]])
-Ab = A.row_join(b)
-print_system(A, b)
-Ab = gjelim(Ab)
-
-print("\n(c)")
-A = Matrix([[-1, -5, -2], [2, -2, -3], [3, -1, 4]])
-b = Matrix([[-17], [-14], [-13]])
-Ab = A.row_join(b)
-print_system(A, b)
-Ab = gjelim(Ab)
-
-print("\n(d)")
-A = Matrix([[-1, -5, -2], [2, -2, -3],  [3, -1, -4]])
-b = Matrix([[-26], [-19], [-20]])
-Ab = A.row_join(b)
-print_system(A, b)
-Ab = gjelim(Ab)
-
-print("\n(e)")
-A = Matrix([[3, -5, -4, -1], [0, -4, 3, -4], [2, 3, 3, -3], [-2, 2, -5, -4]])
-b = Matrix([[28], [41], [11], [-21]])
-Ab = A.row_join(b)
-print_system(A, b)
-Ab = gjelim(Ab)
-
-print("\n(f)")
-A = Matrix([[2, -3, -3, 4], [4, -5, 1, -5], [3, 3, -1, -5], [1, 0, 1, 3]])
-b = Matrix([[-1], [42], [20], [-4]])
-Ab = A.row_join(b)
-print_system(A, b)
-Ab = gjelim(Ab)
-
-print("`````")
-
-
+# 
 # `````{admonition} Exercise 2.6
 # :class: note
 # :name: ex2.6
@@ -2097,6 +1528,824 @@ print("`````")
 # . \end{align*}
 # ````
 # `````
+# 
+# `````{admonition} Exercise 2.7
+# :class: note
+# :name: ex2.7
+# 
+# For the following linear systems of equations, determine the rank of the coefficient matrix and the augmented matrix and classify the system is consistent, inconsistent or indeterminate and calculate the solution (if possible).
+# 
+# 
+# (a)
+# \begin{align*}
+#      x_{1} -  x_{2} + 2 x_{3} &= 2, \\
+#      2 x_{1} +  x_{2} + 4 x_{3} &= 7, \\
+#      4 x_{1} +  x_{2} +  x_{3} &= 4.
+# \end{align*}
+# 
+# ````{dropdown} Solution
+# \begin{align*}
+# &    \left( \begin{array}{ccc|ccc}
+#          1 & -1 & 2 & 2 \\
+#          2 & 1 & 4 & 7 \\
+#          4 & 1 & 1 & 4 \\
+#     \end{array} \right)
+#     \begin{matrix} \phantom{x} \\ R_{2} - 2 R_{1} \\ R_{3} - 4 R_{1} \end{matrix} \\[1em]
+#     \longrightarrow \quad &
+#     \left( \begin{array}{ccc|ccc}
+#          1 & -1 & 2 & 2 \\
+#          0 & 3 & 0 & 3 \\
+#          0 & 5 & -7 & -4 \\
+#     \end{array} \right)
+#     \begin{matrix} \phantom{x} \\ \phantom{x} \\ R_{3} - \frac{5}{3} R_{2} \end{matrix} \\[1em]
+#     \longrightarrow \quad &
+#     \left( \begin{array}{ccc|ccc}
+#          1 & -1 & 2 & 2 \\
+#          0 & 3 & 0 & 3 \\
+#          0 & 0 & -7 & -9 \\
+#     \end{array} \right)
+# \end{align*}
+# 
+# therefore $\operatorname{rank}(A) = 3$ and $\operatorname{rank}(A \mid \mathbf{b}) = 3$ so this system has a unique solution
+# 
+# \begin{align*}
+#     x_{3} &= \frac{1}{-7} \left( -9\right) = \frac{9}{7}, \\
+#     x_{2} &= \frac{1}{3} \left( 3 - 0 \left( \frac{9}{7} \right)\right) = 1, \\
+#     x_{1} &= \frac{1}{1} \left( 2 - \left( -1 \right) \left( 1 \right) - 2 \left( \frac{9}{7} \right)\right) = \frac{3}{7}.
+# \end{align*}
+# ````
+# 
+# (b)
+# \begin{align*}
+#      x_{1} -  x_{2} + 2 x_{3} &= 3, \\
+#      2 x_{1} - 3 x_{2} + 7 x_{3} &= 4, \\
+#      - x_{1} + 3 x_{2} - 8 x_{3} &= 1.
+# \end{align*}
+# 
+# ````{dropdown} Solution
+# \begin{align*}
+# &    \left( \begin{array}{ccc|ccc}
+#          1 & -1 & 2 & 3 \\
+#          2 & -3 & 7 & 4 \\
+#          -1 & 3 & -8 & 1 \\
+#     \end{array} \right)
+#     \begin{matrix} \phantom{x} \\ R_{2} - 2 R_{1} \\ R_{3} + R_{1} \end{matrix} \\[1em]
+#     \longrightarrow \quad &
+#     \left( \begin{array}{ccc|ccc}
+#          1 & -1 & 2 & 3 \\
+#          0 & -1 & 3 & -2 \\
+#          0 & 2 & -6 & 4 \\
+#     \end{array} \right)
+#     \begin{matrix} \phantom{x} \\ \phantom{x} \\ R_{3} + 2 R_{2} \end{matrix} \\[1em]
+#     \longrightarrow \quad &
+#     \left( \begin{array}{ccc|ccc}
+#          1 & -1 & 2 & 3 \\
+#          0 & -1 & 3 & -2 \\
+#          0 & 0 & 0 & 0 \\
+#     \end{array} \right)
+# \end{align*}
+# 
+# therefore $\operatorname{rank}(A) = 2$ and $\operatorname{rank}(A \mid \mathbf{b}) = 2$. Since $\operatorname{rank}(A) = \operatorname{rank}(A \mid \mathbf{b}) < 3$ then this system has infintely many solutons. Let $r = x_3$
+# 
+# \begin{align*}
+#     x_2 &= \frac{1}{-1}(-2 - 3r) = 2 + 3r, \\
+#     x_1 &= 3 + 2 + 3r - 2r = 5 + r.
+# \end{align*}
+# ````
+# 
+# (c)
+# \begin{align*}
+#      x_{1} +  x_{2} - 2 x_{3} &= 1, \\
+#      2 x_{1} -  x_{2} +  x_{3} &= 9, \\
+#      x_{1} + 4 x_{2} - 7 x_{3} &= 2.
+# \end{align*}
+# 
+# ````{dropdown} Solution
+# \begin{align*}
+# &    \left( \begin{array}{ccc|ccc}
+#          1 & 1 & -2 & 1 \\
+#          2 & -1 & 1 & 9 \\
+#          1 & 4 & -7 & 2 \\
+#     \end{array} \right)
+#     \begin{matrix} \phantom{x} \\ R_{2} - 2 R_{1} \\ R_{3} - R_{1} \end{matrix} \\[1em]
+#     \longrightarrow \quad &
+#     \left( \begin{array}{ccc|ccc}
+#          1 & 1 & -2 & 1 \\
+#          0 & -3 & 5 & 7 \\
+#          0 & 3 & -5 & 1 \\
+#     \end{array} \right)
+#     \begin{matrix} \phantom{x} \\ \phantom{x} \\ R_{3} + R_{2} \end{matrix} \\[1em]
+#     \longrightarrow \quad &
+#     \left( \begin{array}{ccc|ccc}
+#          1 & 1 & -2 & 1 \\
+#          0 & -3 & 5 & 7 \\
+#          0 & 0 & 0 & 8 \\
+#     \end{array} \right)
+# \end{align*}
+# 
+# therefore $\operatorname{rank}(A) = 2$ and $\operatorname{rank}(A \mid \mathbf{b}) = 3$. Since $\operatorname{rank}(A) < \operatorname{rank}(A \mid \mathbf{b})$ then this is an inconsistent system and does not have a solution.
+# ````
+# `````
+# 
+# `````{admonition} Exercise 2.8
+# :class: note
+# :name: ex2.8
+# 
+# Solve the following systems of homogeneous linear equations.
+# 
+# (a)
+# \begin{align*}
+#      3 x_{1} + 2 x_{2} + 7 x_{3} &= 0, \\
+#      4 x_{1} - 3 x_{2} - 2 x_{3} &= 0, \\
+#      5 x_{1} + 9 x_{2} + 23 x_{3} &= 0.
+# \end{align*}
+# 
+# ````{dropdown} Solution
+# \begin{align*}
+# &    \left( \begin{array}{ccc|c}
+#          3 & 2 & 7 & 0 \\
+#          4 & -3 & -2 & 0 \\
+#          5 & 9 & 23 & 0 \\
+#     \end{array} \right)
+#     \begin{matrix} \phantom{x} \\ R_{2} - \frac{4}{3} R_{1} \\ R_{3} - \frac{5}{3} R_{1} \end{matrix} \\[1em]
+#     \longrightarrow \quad &
+#     \left( \begin{array}{ccc|c}
+#          3 & 2 & 7 & 0 \\
+#          0 & - \frac{17}{3} & - \frac{34}{3} & 0 \\
+#          0 & \frac{17}{3} & \frac{34}{3} & 0 \\
+#     \end{array} \right)
+#     \begin{matrix} \phantom{x} \\ \phantom{x} \\ R_{3} + R_{2} \end{matrix} \\[1em]
+#     \longrightarrow \quad &
+#     \left( \begin{array}{ccc|c}
+#          3 & 2 & 7 & 0 \\
+#          0 & - \frac{17}{3} & - \frac{34}{3} & 0 \\
+#          0 & 0 & 0 & 0 \\
+#     \end{array} \right)
+# \end{align*}
+# 
+# Let $x_3 =r$ then
+# \begin{align*}
+#     x_2 &= \frac{1}{-\frac{17}{3}}\left( \frac{34}{3}r \right) = -2r, \\
+#     x_1 &= \frac{1}{3}(-2(-2r) - 7r) = -r.
+# \end{align*}
+# ````
+# 
+# (b)
+# \begin{align*}
+#      2 x_{1} + 3 x_{2} -  x_{3} &= 0, \\
+#      x_{1} -  x_{2} - 2 x_{3} &= 0, \\
+#      3 x_{1} +  x_{2} + 3 x_{3} &= 0.
+# \end{align*}
+# 
+# ````{dropdown} Solution
+# \begin{align*}
+# &    \left( \begin{array}{ccc|c}
+#          2 & 3 & -1 & 0 \\
+#          1 & -1 & -2 & 0 \\
+#          3 & 1 & 3 & 0 \\
+#     \end{array} \right)
+#     \begin{matrix} \phantom{x} \\ R_{2} - \frac{1}{2} R_{1} \\ R_{3} - \frac{3}{2} R_{1} \end{matrix} \\[1em]
+#     \longrightarrow \quad &
+#     \left( \begin{array}{ccc|c}
+#          2 & 3 & -1 & 0 \\
+#          0 & - \frac{5}{2} & - \frac{3}{2} & 0 \\
+#          0 & - \frac{7}{2} & \frac{9}{2} & 0 \\
+#     \end{array} \right)
+#     \begin{matrix} \phantom{x} \\ \phantom{x} \\ R_{3} - \frac{7}{5} R_{2} \end{matrix} \\[1em]
+#     \longrightarrow \quad &
+#     \left( \begin{array}{ccc|c}
+#          2 & 3 & -1 & 0 \\
+#          0 & - \frac{5}{2} & - \frac{3}{2} & 0 \\
+#          0 & 0 & \frac{33}{5} & 0 \\
+#     \end{array} \right)
+# \end{align*}
+# 
+# Let $x_3 = r$ then
+# \begin{align*}
+#     x_2 &= \frac{1}{-\frac{5}{2}} \left(\frac{3}{2}r \right) = -\frac{3}{5}r, \\
+#     x_1 &= \frac{1}{2} \left( -3\left(-\frac{3}{5}r\right) + r \right) = \frac{7}{5}r.
+# \end{align*}
+# ````
+# `````
+# 
+# `````{admonition} Exercise 2.9
+# :class: note
+# :name: ex2.9 
+#     
+# Determine the values of $k$ for which the following system of linear equations has a solution
+# 
+# \begin{align*}
+#     x_1 + x_2 + 3x_3 &= 1, \\
+#     4x_1 + 3x_2 + kx_3 &= 2, \\
+#     2x_1 + x_2 + 2x_3 &= 3,
+# \end{align*}
+# 
+# ````{dropdown} Solution
+# \begin{align*}
+#     & \left( \begin{array}{ccc|c} 
+#         1 & 1 & 3 & 1 \\
+#         4 & 3 & k & 2 \\
+#         2 & 1 & 2 & 3 
+#     \end{array} \right)
+#     \begin{array}{l} \phantom{x} \\ R_2 - 4 R_1 \\ R_3 - 2 R_1 \end{array} \\[1em]
+#     \longrightarrow \quad &
+#     \left( \begin{array}{ccc|c} 
+#         1 & 1 & 3 & 1 \\
+#         0 & -1 & k - 12 & -2 \\
+#         0 & -1 & -4 & 1 
+#     \end{array} \right)
+#     \begin{array}{l} \phantom{x} \\ R_2 \leftrightarrow R_3 \\ \phantom{x} \end{array} \\[1em]
+#     \longrightarrow \quad &
+#     \left( \begin{array}{ccc|c} 
+#         1 & 1 & 3 & 1 \\
+#         0 & -1 & -4 & 1 \\
+#         0 & -1 & k - 12 & -2 
+#     \end{array} \right)
+#     \begin{array}{l} \phantom{x} \\ \phantom{x} \\ R_3 - R_2 \end{array} \\[1em]
+#     \longrightarrow \quad &
+#     \left( \begin{array}{ccc|c} 
+#         1 & 1 & 3 & 1 \\
+#         0 & -1 & -4 & 1 \\
+#         0 & 0 & k - 8 & -3
+#     \end{array} \right).
+# \end{align*}
+# 
+# For a homogeneous system to have a solution each column must have a pivot. Therefore this system has a solution when $k \neq 8$.
+# ````
+# 
+# 
+# `````
+
+# In[1]:
+
+
+from sympy import *
+ 
+def print_matrix(A):
+    m, n = A.shape
+    cols = "c" * m
+    print(rf"    \left( \begin{{array}}{{{cols}}}")
+    for i in range(m):
+        print("        ", end="")
+        for j in range(n - 1):
+            print(rf" {latex(A[i,j])} &", end="")
+        print(rf" {latex(A[i,-1])} \\")
+    print(r"    \end{array} \right)")
+    
+    
+def print_system(A, b):
+    m, n = A.shape
+    print(r"\begin{align*}")
+    for i in range(m):
+        string = "    "
+        j = 0
+        if A[i,j] == 1:
+            string += rf" x_{{{j + 1}}}"
+        elif A[i,j] == -1:
+            string += rf" - x_{{{j + 1}}}"
+        elif A[i,j] > 0:
+            string += rf" {latex(A[i,j])} x_{{{j + 1}}}"
+        elif A[i,j] < 0:
+            string += rf" - {latex(-A[i,j])} x_{{{j + 1}}}"
+            
+        for j in range(1, n):
+            if A[i,j] == 0:
+                continue
+            elif A[i,j] == 1:
+                string += rf" +  x_{{{j + 1}}}"
+            elif A[i,j] == -1:
+                string += rf" -  x_{{{j + 1}}}"
+            elif A[i,j] > 0:
+                string += rf" + {latex(A[i,j])} x_{{{j + 1}}}"
+            elif A[i,j] < 0:
+                string += rf" - {latex(-A[i,j])} x_{{{j + 1}}}"
+                
+        string += rf" &= {latex(b[i])}"
+        if i < m - 1:
+            string += r", \\"
+        else:
+            string += "."
+        print(string)
+    print(r"\end{align*}")
+    print()
+    
+
+def matrix_inverse_solve(A, b):
+    print("````{dropdown} Solution")
+    print(r"\begin{align*}")
+    print(r"    \det")
+    print_matrix(A)
+    print(rf"    &= {latex(A.det())}, \\")
+    print(r"    \operatorname{adj}")
+    print_matrix(A)
+    print(rf"    &= ")
+    print_matrix(A.adjugate())
+    print(r", \\")
+    print(rf"    \therefore A^{{-1}} &= \frac{{1}}{{{latex(A.det())}}}")
+    print_matrix(A.adjugate())
+    print("\\ = ")
+    print_matrix(A.inv())
+    print(r",\end{align*}")
+    print("\ntherefore")
+    print(r"\begin{align*}")
+    print(r"    \mathbf{{x}} = ")
+    print_matrix(A.inv())
+    print_matrix(b)
+    print("    =")
+    print_matrix(A.inv() * b)
+    print(r"\end{align*}")
+    print("````")
+ 
+
+print("`````{admonition} Exercise 2.1")
+print(":class: note")
+print(":name: ex2.1")
+print()
+print("Solve the following linear system of equations using the inverse of the coefficient matrix.")     
+
+print("\n(a)")
+A = Matrix([[-4, 2], [3, 4]])
+b = Matrix([[-22], [11]])
+print_system(A, b)
+matrix_inverse_solve(A, b)
+
+print("\n(b)")
+A = Matrix([[-4, 2], [-1, -3]])
+b = Matrix([[6], [-2]])
+print_system(A, b)
+matrix_inverse_solve(A, b)
+
+print("\n(c)")
+A = Matrix([[-4, -4, -2], [3, 0, 4], [1, 0, 0]])
+b = Matrix([[16], [-8], [0]])
+print_system(A, b)
+matrix_inverse_solve(A, b)
+
+print("\n(d)")
+A = Matrix([[4, 0, -4], [4, -1, 1], [3, 1, 2]])
+b = Matrix([[8], [-4], [-12]])
+print_system(A, b)
+matrix_inverse_solve(A, b)
+
+print("`````")
+
+
+# In[2]:
+
+
+def cramers_rule(A, b):
+    print(r"````{dropdown} Solution")
+    print(r"\begin{align*}")
+    for i in range(len(b)):
+        Ai = A.copy()
+        Ai[:,i] = b
+        print(rf"    x_{{{i+1}}} &= \frac{{\det {latex(Ai, mat_delim='(')}}}{{\det {latex(A, mat_delim='(')}}}", end="")
+        print(rf" = \frac{{{latex(Ai.det())}}}{{{latex(A.det())}}} = {latex(Ai.det() / A.det())}, \\ \\")
+
+    print(r"\end{align*}")
+    print(r"````")
+
+
+print("`````{admonition} Exercise 2.2")
+print(":class: note")
+print(":name: ex2.2")
+print()
+print("Solve the following linear system of equations using Cramer's rule.")     
+
+print("\n(a)")
+A = Matrix([[1, 4], [-4, 1]])
+b = Matrix([[-20], [-5]])
+print_system(A, b)
+cramers_rule(A, b)
+
+print("\n(b)")
+A = Matrix([[1, 1], [0, 4]])
+b = Matrix([[4], [12]])
+print_system(A, b)
+cramers_rule(A, b)
+
+print("\n(c)")
+A = Matrix([[3, -4, -4], [-2, -1, -1], [4, -1, 3]])
+b = Matrix([[21], [8], [-14]])
+print_system(A, b)
+cramers_rule(A, b)
+
+print("\n(d)")
+A = Matrix([[4, 4, 1], [-2, 1, 1], [-5, -4, 2]])
+b = Matrix([[5], [-1], [-14]])
+print_system(A, b)
+cramers_rule(A, b)
+
+print("`````")
+
+
+# In[3]:
+
+
+def print_augmented_matrix(A):
+    m, n = A.shape
+    cols = "c" * (n - 1)
+    cols += "|c"
+    print(rf"    \left( \begin{{array}}{{{cols}}}")
+    for i in range(m):
+        print("        ", end="")
+        for j in range(n - 1):
+            print(rf" {latex(A[i,j])} &", end="")
+        print(rf" {latex(A[i,-1])} \\")
+    print(r"    \end{array} \right)")
+    
+        
+def gelim(A):
+    m, n = A.shape
+    
+    print(r"````{dropdown} Solution")
+    print(r"\begin{align*}")
+    print(r"&", end="")
+    print_augmented_matrix(A)
+    
+    for i in range(m - 1):
+        for j in range(i, n):
+            if A[i,j] != 0:
+                pivotcol = j
+                break         
+         
+        string = r"    \begin{matrix} \phantom{x} \\"
+        for j in range(i):
+            string += r" \phantom{x} \\"
+            
+        for j in range(i + 1, m):
+            if A[j,pivotcol] / A[i,pivotcol] > 0:
+                if A[j,pivotcol] / A[i,pivotcol] == 1:
+                    string += rf" R_{{{j+1}}} - R_{{{i + 1}}}"
+                else:
+                    string += rf" R_{{{j+1}}} - {latex(A[j,pivotcol] / A[i,pivotcol])} R_{{{i + 1}}}"    
+            elif A[j,pivotcol] / A[i,pivotcol] < 0:
+                if A[j,pivotcol] / A[i,pivotcol] == -1:
+                    string += rf" R_{{{j+1}}} + R_{{{i + 1}}}"
+                else:
+                    string += rf" R_{{{j+1}}} + {latex(-A[j,pivotcol] / A[i,pivotcol])} R_{{{i + 1}}}"
+            elif A[j,pivotcol] / A[i,pivotcol] == 0:
+                string += r" \phantom{x}"
+            A[j,:] -= A[j,pivotcol] / A[i,pivotcol] * A[i,:]
+            
+            if j < m - 1:
+                string += r" \\"
+        string += r" \end{matrix} \\[1em]"
+        print(string)
+        print(r"    \longrightarrow \quad &")
+        print_augmented_matrix(A)
+    print(r"\end{align*}")
+                
+    return A
+
+
+def back_substitution(A):
+    m, n = A.shape
+    x = A[:,-1]
+    print(r"\begin{align*}")
+    for i in range(m - 1, -1, -1):
+        string = rf"    x_{{{i+1}}} &= \frac{{1}}{{{latex(A[i,i])}}} \left( {latex(A[i,-1])}"
+            
+        for j in range(i + 1, n - 1):
+            if A[i,j] >= 0:
+                string += rf" - {latex(A[i,j])} \left( {latex(x[j])} \right)"
+            else:
+                string += rf" - \left( {latex(A[i,j])} \right) \left( {latex(x[j])} \right)"
+            x[i] -= A[i,j] * x[j]
+        
+        x[i] /= A[i,i]
+        
+        string += rf"\right) = {latex(x[i])}"
+            
+        if i > 0:
+            string += r", \\"
+        else:
+            string += "."
+        print(string)
+    print(r"\end{align*}")
+    
+    
+print("`````{admonition} Exercise 2.3")
+print(":class: note")
+print(":name: ex2.3")
+print()
+print("Solve the following linear system of equations using Gaussian elimination.")    
+print("\n(a)")
+A = Matrix([[-1, 3], [-2, 1]])
+b = Matrix([[-2], [1]])
+
+print_system(A, b)
+Ab = A.row_join(b)
+Ab = gelim(Ab)
+print()
+print(rf"therefore ")
+back_substitution(A)
+print(r"````")
+    
+print("\n(b)")
+A = Matrix([[3, 1, 2], [4, 0, -4], [4, -2, 1]])
+b = Matrix([[11], [-4], [13]])
+print_system(A, b)
+Ab = A.row_join(b)
+Ab = gelim(Ab)
+print()
+print(rf"therefore ")
+back_substitution(A)
+print(r"````")
+
+print("\n(c)")
+A = Matrix([[-1, -5, -2], [2, -2, -3], [3, -1, 4]])
+b = Matrix([[-17], [-14], [-13]])
+print_system(A, b)
+Ab = A.row_join(b)
+Ab = gelim(Ab)
+
+print()
+print(rf"therefore ")
+back_substitution(A)
+print(r"````")
+
+print("\n(d)")
+A = Matrix([[-1, -5, -2], [2, -2, -3],  [3, -1, -4]])
+b = Matrix([[-26], [-19], [-20]])
+print_system(A, b)
+Ab = A.row_join(b)
+Ab = gelim(Ab)
+print()
+print(rf"therefore ")
+back_substitution(A)
+print(r"````")
+
+print("\n(e)")
+A = Matrix([[3, -5, -4, -1], [0, -4, 3, -4], [2, 3, 3, -3], [-2, 2, -5, -4]])
+b = Matrix([[28], [41], [11], [-21]])
+print_system(A, b)
+Ab = A.row_join(b)
+Ab = gelim(Ab)
+
+print()
+print(rf"therefore ")
+back_substitution(A)
+print(r"````")
+
+print("\n(f)")
+A = Matrix([[2, -3, -3, 4], [4, -5, 1, -5], [3, 3, -1, -5], [1, 0, 1, 3]])
+b = Matrix([[-1], [42], [20], [-4]])
+print_system(A, b)
+Ab = A.row_join(b)
+Ab = gelim(Ab)
+
+print()
+print(rf"therefore ")
+back_substitution(A)
+print(r"````")
+
+print("`````")
+
+
+# In[4]:
+
+
+def gelimpp(A):
+    m, n = A.shape
+    
+    print(r"````{dropdown} Solution")
+    print(r"\begin{align*}")
+    print(r"&", end="")
+    print_augmented_matrix(A)
+    
+    for i in range(m - 1):
+        for j in range(i, n):
+            if A[i,j] != 0:
+                pivotcol = j
+                break
+                
+        maxpivot, pivotrow = abs(A[i, pivotcol]), i
+        for j in range(i + 1, m):
+            if abs(A[j,pivotcol]) > maxpivot:
+                maxpivot, pivotrow = abs(A[j,pivotcol]), j
+               
+        if pivotrow != i:
+            string = r"    \begin{matrix}"
+            for j in range(m):
+                if i == j:
+                    string += rf" R_{{{i+1}}} \leftrightarrow R_{{{pivotrow + 1}}}"
+                else:
+                    string += r" \phantom{x}"
+                if j < m - 1:
+                    string += r" \\"
+              
+            string += r" \end{matrix} \\[1em]"
+            print(string)
+            print(r"    \longrightarrow \quad &")  
+            A[i,:], A[pivotrow,:] = A[pivotrow,:], A[i,:]
+            print_augmented_matrix(A)
+                
+         
+        string = r"    \begin{matrix} \phantom{x} \\"
+        for j in range(i):
+            string += r" \phantom{x} \\"
+            
+        for j in range(i + 1, m):
+            if A[j,pivotcol] / A[i,pivotcol] > 0:
+                if A[j,pivotcol] / A[i,pivotcol] == 1:
+                    string += rf" R_{{{j+1}}} - R_{{{i + 1}}}"
+                else:
+                    string += rf" R_{{{j+1}}} - {latex(A[j,pivotcol] / A[i,pivotcol])} R_{{{i + 1}}}"    
+            elif A[j,pivotcol] / A[i,pivotcol] < 0:
+                if A[j,pivotcol] / A[i,pivotcol] == -1:
+                    string += rf" R_{{{j+1}}} + R_{{{i + 1}}}"
+                else:
+                    string += rf" R_{{{j+1}}} + {latex(-A[j,pivotcol] / A[i,pivotcol])} R_{{{i + 1}}}"
+            elif A[j,pivotcol] / A[i,pivotcol] == 0:
+                string += r" \phantom{x}"
+            A[j,:] -= A[j,pivotcol] / A[i,pivotcol] * A[i,:]
+            
+            if j < m - 1:
+                string += r" \\"
+        string += r" \end{matrix} \\[1em]"
+        print(string)
+        print(r"    \longrightarrow \quad &")
+        print_augmented_matrix(A)
+    print(r"\end{align*}")
+    print()
+    print(rf"therefore ")
+    back_substitution(A)
+    print(r"````") 
+    
+    return A
+
+
+print("`````{admonition} Exercise 2.5")
+print(":class: note")
+print(":name: ex2.5")
+print()
+print("Solve the linear system of equations from [exercise 2.3](ex2.3) using Gaussian elimination with partial pivoting.")    
+print("\n(a)")
+A = Matrix([[-1, 3], [-2, 1]])
+b = Matrix([[-2], [1]])
+Ab = A.row_join(b)
+print_system(A, b)
+Ab = gelimpp(Ab)
+
+print("\n(b)")
+A = Matrix([[3, 1, 2], [4, 0, -4], [4, -2, 1]])
+b = Matrix([[11], [-4], [13]])
+Ab = A.row_join(b)
+print_system(A, b)
+Ab = gelimpp(Ab)
+
+print("\n(c)")
+A = Matrix([[-1, -5, -2], [2, -2, -3], [3, -1, 4]])
+b = Matrix([[-17], [-14], [-13]])
+Ab = A.row_join(b)
+print_system(A, b)
+Ab = gelimpp(Ab)
+
+print("\n(d)")
+A = Matrix([[-1, -5, -2], [2, -2, -3],  [3, -1, -4]])
+b = Matrix([[-26], [-19], [-20]])
+Ab = A.row_join(b)
+print_system(A, b)
+Ab = gelimpp(Ab)
+
+print("\n(e)")
+A = Matrix([[3, -5, -4, -1], [0, -4, 3, -4], [2, 3, 3, -3], [-2, 2, -5, -4]])
+b = Matrix([[28], [41], [11], [-21]])
+Ab = A.row_join(b)
+print_system(A, b)
+Ab = gelimpp(Ab)
+
+print("\n(f)")
+A = Matrix([[2, -3, -3, 4], [4, -5, 1, -5], [3, 3, -1, -5], [1, 0, 1, 3]])
+b = Matrix([[-1], [42], [20], [-4]])
+Ab = A.row_join(b)
+print_system(A, b)
+Ab = gelimpp(Ab)
+
+print("`````")
+
+
+# In[5]:
+
+
+def gjelim(A):
+    m, n = A.shape
+    
+    print(r"````{dropdown} Solution ")
+    print(r"\begin{align*}")
+    print(r"&", end="")
+    print_augmented_matrix(A)
+    
+    for i in range(m):
+        for j in range(i, n):
+            if A[i,j] != 0:
+                pivot = j
+                break
+    
+        if A[i,pivot] != 1:
+            print(r"    \begin{matrix}", end="")
+            for j in range(m):
+                if j == i:
+                    if A[i,pivot] == -1:
+                        print(rf" - R_{{{j+1}}}", end="")
+                    elif A[i,pivot] != 1:
+                        print(rf" {latex(1 / A[i,pivot])} R_{{{j+1}}}", end="")
+                else:
+                    print(r" \phantom{x}", end="")
+                if j < m - 1:
+                    print(r" \\", end="")
+            print(r" \end{matrix} \\[1em]")
+            print(r"    \longrightarrow \quad &")
+            
+            A[i,:] /= A[i,pivot]
+            print_augmented_matrix(A)
+         
+        print(r"    \begin{matrix}", end="")
+        for j in range(m):
+            if i != j:
+                if A[j,pivot] > 0:
+                    if A[j,pivot] == 1:
+                        print(rf" R_{{{j+1}}} - R_{{{i + 1}}}", end="")
+                    else:
+                        print(rf" R_{{{j+1}}} - {latex(A[j,pivot])} R_{{{i + 1}}}", end="")    
+                elif A[j,pivot] < 0:
+                    if A[j,pivot] == -1:
+                        print(rf" R_{{{j+1}}} + R_{{{i + 1}}}", end="")
+                    else:
+                        print(rf" R_{{{j+1}}} + {latex(-A[j,pivot])} R_{{{i + 1}}}", end="")
+                elif A[j,pivot] == 0:
+                    print(r" \phantom{x}", end="")
+                A[j,:] -= A[j, pivot] * A[i,:]
+            if i == j:
+                print(r" \phantom{x}", end="")
+            if j < m - 1:
+                print(r" \\", end="")
+        print(r" \end{matrix} \\[1em]")
+        print(r"    \longrightarrow \quad &")
+        print_augmented_matrix(A)
+    print(r"\end{align*}")
+    print()
+    print(rf"therefore ", end="")
+    for i in range(m - 1):
+        print(rf" $x_{{{i+1}}} = {latex(A[i,-1])}$", end="")
+        if i < m - 2:
+            print(",", end ="")
+    print(rf" and $x_{{{m}}} = {latex(A[-1,-1])}$.")
+    print("````")
+
+    return A
+        
+print("`````{admonition} Exercise 2.4")
+print(":class: note")
+print(":name: ex2.4")
+print()
+print("Solve the linear system of equations from [exercise 2.3](ex2.3) using Gauss-Jordan elimination.")    
+print("\n(a)")
+
+A = Matrix([[-1, 3], [-2, 1]])
+b = Matrix([[-2], [1]])
+Ab = A.row_join(b)
+print_system(A, b)
+Ab = gjelim(Ab)
+
+print("\n(b)")
+A = Matrix([[3, 1, 2], [4, 0, -4], [4, -2, 1]])
+b = Matrix([[11], [-4], [13]])
+Ab = A.row_join(b)
+print_system(A, b)
+Ab = gjelim(Ab)
+
+print("\n(c)")
+A = Matrix([[-1, -5, -2], [2, -2, -3], [3, -1, 4]])
+b = Matrix([[-17], [-14], [-13]])
+Ab = A.row_join(b)
+print_system(A, b)
+Ab = gjelim(Ab)
+
+print("\n(d)")
+A = Matrix([[-1, -5, -2], [2, -2, -3],  [3, -1, -4]])
+b = Matrix([[-26], [-19], [-20]])
+Ab = A.row_join(b)
+print_system(A, b)
+Ab = gjelim(Ab)
+
+print("\n(e)")
+A = Matrix([[3, -5, -4, -1], [0, -4, 3, -4], [2, 3, 3, -3], [-2, 2, -5, -4]])
+b = Matrix([[28], [41], [11], [-21]])
+Ab = A.row_join(b)
+print_system(A, b)
+Ab = gjelim(Ab)
+
+print("\n(f)")
+A = Matrix([[2, -3, -3, 4], [4, -5, 1, -5], [3, 3, -1, -5], [1, 0, 1, 3]])
+b = Matrix([[-1], [42], [20], [-4]])
+Ab = A.row_join(b)
+print_system(A, b)
+Ab = gjelim(Ab)
+
+print("`````")
+
 
 # In[6]:
 
@@ -2224,124 +2473,6 @@ AI = gjelim_inverse(A)
 print("`````")
 
 
-# `````{admonition} Exercise 2.7
-# :class: note
-# :name: ex2.7
-# 
-# For the following linear systems of equations, determine the rank of the coefficient matrix and the augmented matrix and classify the system is consistent, inconsistent or indeterminate and calculate the solution (if possible).
-# 
-# 
-# (a)
-# \begin{align*}
-#      x_{1} -  x_{2} + 2 x_{3} &= 2, \\
-#      2 x_{1} +  x_{2} + 4 x_{3} &= 7, \\
-#      4 x_{1} +  x_{2} +  x_{3} &= 4.
-# \end{align*}
-# 
-# ````{dropdown} Solution
-# \begin{align*}
-# &    \left( \begin{array}{ccc|ccc}
-#          1 & -1 & 2 & 2 \\
-#          2 & 1 & 4 & 7 \\
-#          4 & 1 & 1 & 4 \\
-#     \end{array} \right)
-#     \begin{matrix} \phantom{x} \\ R_{2} - 2 R_{1} \\ R_{3} - 4 R_{1} \end{matrix} \\[1em]
-#     \longrightarrow \quad &
-#     \left( \begin{array}{ccc|ccc}
-#          1 & -1 & 2 & 2 \\
-#          0 & 3 & 0 & 3 \\
-#          0 & 5 & -7 & -4 \\
-#     \end{array} \right)
-#     \begin{matrix} \phantom{x} \\ \phantom{x} \\ R_{3} - \frac{5}{3} R_{2} \end{matrix} \\[1em]
-#     \longrightarrow \quad &
-#     \left( \begin{array}{ccc|ccc}
-#          1 & -1 & 2 & 2 \\
-#          0 & 3 & 0 & 3 \\
-#          0 & 0 & -7 & -9 \\
-#     \end{array} \right)
-# \end{align*}
-# 
-# therefore $\rho(A) = 3$ and $\rho((A|\mathbf{b})) = 3$ so this system has a unique solution
-# 
-# \begin{align*}
-#     x_{3} &= \frac{1}{-7} \left( -9\right) = \frac{9}{7}, \\
-#     x_{2} &= \frac{1}{3} \left( 3 - 0 \left( \frac{9}{7} \right)\right) = 1, \\
-#     x_{1} &= \frac{1}{1} \left( 2 - \left( -1 \right) \left( 1 \right) - 2 \left( \frac{9}{7} \right)\right) = \frac{3}{7}.
-# \end{align*}
-# ````
-# 
-# (b)
-# \begin{align*}
-#      x_{1} -  x_{2} + 2 x_{3} &= 3, \\
-#      2 x_{1} - 3 x_{2} + 7 x_{3} &= 4, \\
-#      - x_{1} + 3 x_{2} - 8 x_{3} &= 1.
-# \end{align*}
-# 
-# ````{dropdown} Solution
-# \begin{align*}
-# &    \left( \begin{array}{ccc|ccc}
-#          1 & -1 & 2 & 3 \\
-#          2 & -3 & 7 & 4 \\
-#          -1 & 3 & -8 & 1 \\
-#     \end{array} \right)
-#     \begin{matrix} \phantom{x} \\ R_{2} - 2 R_{1} \\ R_{3} + R_{1} \end{matrix} \\[1em]
-#     \longrightarrow \quad &
-#     \left( \begin{array}{ccc|ccc}
-#          1 & -1 & 2 & 3 \\
-#          0 & -1 & 3 & -2 \\
-#          0 & 2 & -6 & 4 \\
-#     \end{array} \right)
-#     \begin{matrix} \phantom{x} \\ \phantom{x} \\ R_{3} + 2 R_{2} \end{matrix} \\[1em]
-#     \longrightarrow \quad &
-#     \left( \begin{array}{ccc|ccc}
-#          1 & -1 & 2 & 3 \\
-#          0 & -1 & 3 & -2 \\
-#          0 & 0 & 0 & 0 \\
-#     \end{array} \right)
-# \end{align*}
-# 
-# therefore $\rho(A) = 2$ and $\rho((A|\mathbf{b})) = 2$. Since $\rho(A) = \rho((A|\mathbf{b})) < 3$ then this system has infintely many solutons. Let $r = x_3$
-# 
-# \begin{align*}
-#     x_2 &= \frac{1}{-1}(-2 - 3r) = 2 + 3r, \\
-#     x_1 &= 3 + 2 + 3r - 2r = 5 + r.
-# \end{align*}
-# ````
-# 
-# (c)
-# \begin{align*}
-#      x_{1} +  x_{2} - 2 x_{3} &= 1, \\
-#      2 x_{1} -  x_{2} +  x_{3} &= 9, \\
-#      x_{1} + 4 x_{2} - 7 x_{3} &= 2.
-# \end{align*}
-# 
-# ````{dropdown} Solution
-# \begin{align*}
-# &    \left( \begin{array}{ccc|ccc}
-#          1 & 1 & -2 & 1 \\
-#          2 & -1 & 1 & 9 \\
-#          1 & 4 & -7 & 2 \\
-#     \end{array} \right)
-#     \begin{matrix} \phantom{x} \\ R_{2} - 2 R_{1} \\ R_{3} - R_{1} \end{matrix} \\[1em]
-#     \longrightarrow \quad &
-#     \left( \begin{array}{ccc|ccc}
-#          1 & 1 & -2 & 1 \\
-#          0 & -3 & 5 & 7 \\
-#          0 & 3 & -5 & 1 \\
-#     \end{array} \right)
-#     \begin{matrix} \phantom{x} \\ \phantom{x} \\ R_{3} + R_{2} \end{matrix} \\[1em]
-#     \longrightarrow \quad &
-#     \left( \begin{array}{ccc|ccc}
-#          1 & 1 & -2 & 1 \\
-#          0 & -3 & 5 & 7 \\
-#          0 & 0 & 0 & 8 \\
-#     \end{array} \right)
-# \end{align*}
-# 
-# therefore $\rho(A) = 2$ and $\rho((A|\mathbf{b})) = 3$. Since $\rho(A) < \rho((A|\mathbf{b}))$ then this is an inconsistent system and does not have a solution.
-# ````
-# `````
-
 # In[7]:
 
 
@@ -2386,7 +2517,7 @@ def rank(A):
         print_augmented_matrix(A)
     print(r"\end{align*}")
     print()
-    print(rf"therefore $\rho(A) = {latex(A[:,:m].rank())}$ and $\rho((A|\mathbf{{b}})) = {latex(A.rank())}$.")
+    print(rf"therefore $\operatorname{rank}(A) = {latex(A[:,:m].rank())}$ and $\operatorname{rank}((A|\mathbf{{b}})) = {latex(A.rank())}$.")
     print("````")
     
     return A
@@ -2423,87 +2554,6 @@ rank(Ab)
 print("`````")
 
 
-# `````{admonition} Exercise 2.8
-# :class: note
-# :name: ex2.8
-# 
-# Solve the following systems of homogeneous linear equations.
-# 
-# (a)
-# \begin{align*}
-#      3 x_{1} + 2 x_{2} + 7 x_{3} &= 0, \\
-#      4 x_{1} - 3 x_{2} - 2 x_{3} &= 0, \\
-#      5 x_{1} + 9 x_{2} + 23 x_{3} &= 0.
-# \end{align*}
-# 
-# ````{dropdown} Solution
-# \begin{align*}
-# &    \left( \begin{array}{ccc|c}
-#          3 & 2 & 7 & 0 \\
-#          4 & -3 & -2 & 0 \\
-#          5 & 9 & 23 & 0 \\
-#     \end{array} \right)
-#     \begin{matrix} \phantom{x} \\ R_{2} - \frac{4}{3} R_{1} \\ R_{3} - \frac{5}{3} R_{1} \end{matrix} \\[1em]
-#     \longrightarrow \quad &
-#     \left( \begin{array}{ccc|c}
-#          3 & 2 & 7 & 0 \\
-#          0 & - \frac{17}{3} & - \frac{34}{3} & 0 \\
-#          0 & \frac{17}{3} & \frac{34}{3} & 0 \\
-#     \end{array} \right)
-#     \begin{matrix} \phantom{x} \\ \phantom{x} \\ R_{3} + R_{2} \end{matrix} \\[1em]
-#     \longrightarrow \quad &
-#     \left( \begin{array}{ccc|c}
-#          3 & 2 & 7 & 0 \\
-#          0 & - \frac{17}{3} & - \frac{34}{3} & 0 \\
-#          0 & 0 & 0 & 0 \\
-#     \end{array} \right)
-# \end{align*}
-# 
-# Let $x_3 =r$ then
-# \begin{align*}
-#     x_2 &= \frac{1}{-\frac{17}{3}}\left( \frac{34}{3}r \right) = -2r, \\
-#     x_1 &= \frac{1}{3}(-2(-2r) - 7r) = -r.
-# \end{align*}
-# ````
-# 
-# (b)
-# \begin{align*}
-#      2 x_{1} + 3 x_{2} -  x_{3} &= 0, \\
-#      x_{1} -  x_{2} - 2 x_{3} &= 0, \\
-#      3 x_{1} +  x_{2} + 3 x_{3} &= 0.
-# \end{align*}
-# 
-# ````{dropdown} Solution
-# \begin{align*}
-# &    \left( \begin{array}{ccc|c}
-#          2 & 3 & -1 & 0 \\
-#          1 & -1 & -2 & 0 \\
-#          3 & 1 & 3 & 0 \\
-#     \end{array} \right)
-#     \begin{matrix} \phantom{x} \\ R_{2} - \frac{1}{2} R_{1} \\ R_{3} - \frac{3}{2} R_{1} \end{matrix} \\[1em]
-#     \longrightarrow \quad &
-#     \left( \begin{array}{ccc|c}
-#          2 & 3 & -1 & 0 \\
-#          0 & - \frac{5}{2} & - \frac{3}{2} & 0 \\
-#          0 & - \frac{7}{2} & \frac{9}{2} & 0 \\
-#     \end{array} \right)
-#     \begin{matrix} \phantom{x} \\ \phantom{x} \\ R_{3} - \frac{7}{5} R_{2} \end{matrix} \\[1em]
-#     \longrightarrow \quad &
-#     \left( \begin{array}{ccc|c}
-#          2 & 3 & -1 & 0 \\
-#          0 & - \frac{5}{2} & - \frac{3}{2} & 0 \\
-#          0 & 0 & \frac{33}{5} & 0 \\
-#     \end{array} \right)
-# \end{align*}
-# 
-# Let $x_3 = r$ then
-# \begin{align*}
-#     x_2 &= \frac{1}{-\frac{5}{2}} \left(\frac{3}{2}r \right) = -\frac{3}{5}r, \\
-#     x_1 &= \frac{1}{2} \left( -3\left(-\frac{3}{5}r\right) + r \right) = \frac{7}{5}r.
-# \end{align*}
-# ````
-# `````
-
 # In[8]:
 
 
@@ -2531,70 +2581,3 @@ print("````")
 
 print("`````")
 
-
-# `````{admonition} Exercise 2.9
-# :class: note
-# :name: ex2.9 
-#     
-# Determine the values of $k$ for which the following system of linear equations
-# 
-# \begin{align*}
-#     x_1 + x_2 + 3x_3 &= 1, \\
-#     4x_1 + 3x_2 + kx_3 &= 2, \\
-#     2x_1 + x_2 + 2x_3 &= 3,
-# \end{align*}
-# 
-# has:
-# 
-# (a) &emsp; a unique solution.
-# 
-# ````{dropdown} Solution
-# \begin{align*}
-#     & \left( \begin{array}{ccc|c} 
-#         1 & 1 & 3 & 1 \\
-#         4 & 3 & k & 2 \\
-#         2 & 1 & 2 & 3 
-#     \end{array} \right)
-#     \begin{array}{l} \phantom{x} \\ R_2 - 4 R_1 \\ R_3 - 2 R_1 \end{array} \\[1em]
-#     \longrightarrow \quad &
-#     \left( \begin{array}{ccc|c} 
-#         1 & 1 & 3 & 1 \\
-#         0 & -1 & k - 12 & -2 \\
-#         0 & -1 & -4 & 1 
-#     \end{array} \right)
-#     \begin{array}{l} \phantom{x} \\ R_2 \leftrightarrow R_3 \\ \phantom{x} \end{array} \\[1em]
-#     \longrightarrow \quad &
-#     \left( \begin{array}{ccc|c} 
-#         1 & 1 & 3 & 1 \\
-#         0 & -1 & -4 & 1 \\
-#         0 & -1 & k - 12 & -2 
-#     \end{array} \right)
-#     \begin{array}{l} \phantom{x} \\ \phantom{x} \\ R_3 - R_2 \end{array} \\[1em]
-#     \longrightarrow \quad &
-#     \left( \begin{array}{ccc|c} 
-#         1 & 1 & 3 & 1 \\
-#         0 & -1 & -4 & 1 \\
-#         0 & 0 & k - 8 & -3
-#     \end{array} \right).
-# \end{align*}
-# 
-# For a homogeneous system to have a unique solution, each column must have a pivot. Therefore this system has a solution when $k \neq 8$.
-# ````
-# 
-# (b) &emsp; a non-trivial solution
-# 
-# ````{dropdown} Solution
-# The row echelon form of the coefficient matrix is
-# \begin{align*}
-#     \begin{pmatrix}
-#         1 & 1 & 3 \\
-#         0 & -1 & -4 \\
-#         0 & 0 & k - 8
-#     \end{pmatrix}.
-# \end{align*}
-# 
-# When $k=8$ the last row are all zeros so this system will have infinitely many solutions.
-# 
-# ````
-# 
-# `````

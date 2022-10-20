@@ -4,7 +4,16 @@
 # (gaussian-elimination-section)=
 # # Gaussian elimination
 # 
-# **Gaussian elimination (GE)** is an algorithm for solving systems of linear equations. It is the most common method used in practice since it can by easily programmed into a computer and applied to larger systems. Consider the following method for solving a linear system of three equations in three unknowns:
+# ```{figure} https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Carl_Friedrich_Gauss_1840_by_Jensen.jpg/220px-Carl_Friedrich_Gauss_1840_by_Jensen.jpg
+# ---
+# width: 200px
+# alt: Carl Friedrich Gauss
+# figclass : margin
+# ---
+# [Carl Friedrich Gauss (1777 - 1855)](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss)
+# ```
+# 
+# **Gaussian elimination (GE)**, named after German mathematician [Carl Friedrich Gauss](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss), is an algorithm for solving systems of linear equations. It is the most common method used in practice since it can by easily programmed into a computer and applied to larger systems. Consider the following method for solving a linear system of three equations in three unknowns:
 # 
 # \begin{align*}
 #     3x_1 + x_2 - 2x_3 &= 1, \\
@@ -36,7 +45,7 @@
 #     - x_2 + 3x_3 &= -2.
 # \end{align*}
 # 
-# Add the first equation to the second
+# Add the second equation to the third
 # 
 # \begin{align*} 
 #     x_1 - x_2 + 2x_3 &= 3, \\

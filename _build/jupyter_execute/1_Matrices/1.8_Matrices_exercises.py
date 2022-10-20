@@ -430,7 +430,7 @@
 #     \operatorname{adj}(A) &= \begin{pmatrix} 2 & 3 \\ -4 & 1 \end{pmatrix}, \qquad
 #     \det(A) = 14, \\
 #     \therefore A^{-1} &= \frac{\operatorname{adj}(A)}{\det(A)} 
-#     = \frac{1}{14}\begin{pmatrix} 2 & -4 \\ 3 & 1 \end{pmatrix}
+#     = \frac{1}{14}\begin{pmatrix} 2 & 3 \\ -4 & 1 \end{pmatrix}
 #     = \begin{pmatrix} \frac{1}{7} & \frac{3}{14} \\ -\frac{2}{7} & \frac{1}{14} \end{pmatrix} 
 # \end{align*}
 # 
@@ -684,7 +684,7 @@
 # \begin{align*}
 #     BX &= A \\
 #     X &= B^{-1}A \\
-#     &= \dfrac{1}{15}\begin{pmatrix} 5 & -1 \\ 0 & 3 \end{pmatrix} \begin{pmatrix} 1 & -3 \\ 4 & 2 \end{pmatrix} \\
+#     &= \dfrac{1}{15}\begin{pmatrix} 5 & 0 \\ 1 & 3 \end{pmatrix} \begin{pmatrix} 1 & -3 \\ 4 & 2 \end{pmatrix} \\
 #     &= \dfrac{1}{15} \begin{pmatrix} 5 & -15 \\ 13 & 3\end{pmatrix} = \begin{pmatrix} \frac{1}{3} & -1 \\ \frac{13}{15} & \frac{1}{5} \end{pmatrix}
 # \end{align*}
 # 

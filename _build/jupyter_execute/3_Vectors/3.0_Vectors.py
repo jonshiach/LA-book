@@ -17,7 +17,16 @@
 # (euclidean-space-section)=
 # ## Euclidean space
 # 
-# Before we discuss vectors it is useful to first define [**Euclidean space**](https://en.wikipedia.org/wiki/Euclidean_space) which is the mathematical system which vectors are most commonly applied. Attributed to the Greek mathematician [Euclid](https://en.wikipedia.org/wiki/Euclid_of_Megara), Euclidean space is a representation of physical space where the position of a point in the space can be described by the signed distance along perpendicular real numbers lines called **axes** (singular: axis). 
+# 
+# ```{figure} https://cdn-dbfal.nitrocdn.com/ZlvclIhMnHVdvEWpFRpwOIHQoHXzSxWZ/assets/static/optimized/rev-2211104/wp-content/uploads/2011/08/Euclid.jpg
+# ---
+# width: 200px
+# alt: Euclid
+# figclass : margin
+# ---
+# [Euclid (fl 300 BCE)](https://en.wikipedia.org/wiki/Euclid)
+# ```
+# Before we discuss vectors it is useful to first define [**Euclidean space**](https://en.wikipedia.org/wiki/Euclidean_space) which is the mathematical system which vectors are most commonly applied. Attributed to the Greek mathematician [Euclid](https://en.wikipedia.org/wiki/Euclid), Euclidean space is a representation of physical space where the position of a point in the space can be described by the signed distance along perpendicular real numbers lines called **axes** (singular: axis). 
 # 
 # An $n$-dimensional Euclidean space is defined by $n$ perpendicular real axes and is referred to as $\mathbb{R}^n$. For example, consider the diagram of $\mathbb{R}^3$ in {numref}`R3-figure`. Here we have a representation of a 3-dimensional Euclidean space defined by the 3 axes labelled $x$, $y$ and $z$. This representation uses the [**right-hand rule**](https://en.wikipedia.org/wiki/Right-hand_rule) so-called because if we use the thumb on our right hand to represent the $x$ axis, the index finger for the $y$ axis and the middle finger for the $z$ axis then holding out the right hand palm up with the thumb and index finger at right-angles and the middle finger pointing up then we have the axis configuration shown in {numref}`R3-figure`. Doing similar with the left hand gives the **left-hand rule** where the $x$ axis is pointing in the opposite direction than in the right-hand rule. 
 # 

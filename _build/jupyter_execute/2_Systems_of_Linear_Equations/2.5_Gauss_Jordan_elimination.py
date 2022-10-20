@@ -4,7 +4,17 @@
 # (gauss-jordan-elimination-section)=
 # # Gauss-Jordan elimination
 # 
-# **Gauss-Jordan elimination (GJE)** is similar to [Gaussian elimination](gaussian-elimination-section) with the difference that the augmented matrix is row reduced so that the values of the pivot elements are 1 and are the only non-zero element in the column. This allows the solution to be read from the final augmented matrix without the need to perform back substitution. A matrix in this form is said to be in reduced row echelon form.
+# 
+# ```{figure} https://upload.wikimedia.org/wikipedia/commons/7/70/Wilhelm_Jordan.png
+# ---
+# width: 200px
+# alt: Wilhelm Jordan
+# figclass : margin
+# ---
+# [Carl Wilhelm Jordan (1842 - 1899)](https://en.wikipedia.org/wiki/Wilhelm_Jordan_(geodesist))
+# ```
+# 
+# **Gauss-Jordan elimination (GJE)**, named after [Carl Friedrich Gauss](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss) and German geodesist [Wilhelm Jordan](https://en.wikipedia.org/wiki/Wilhelm_Jordan_(geodesist)), is similar to [Gaussian elimination](gaussian-elimination-section) with the difference that the augmented matrix is row reduced so that the values of the pivot elements are 1 and are the only non-zero element in the column. This allows the solution to be read from the final augmented matrix without the need to perform back substitution. A matrix in this form is said to be in reduced row echelon form.
 # 
 # ```{admonition} Definition: Reduced Row Echelon Form (RREF)
 # :class: note

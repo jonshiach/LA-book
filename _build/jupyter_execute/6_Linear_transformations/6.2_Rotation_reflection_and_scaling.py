@@ -178,7 +178,7 @@
 # :class: note
 # :name: reflection-definition
 # 
-# The linear transformation $Ref(\theta): \mathbb{R}^2 \to \mathbb{R^2}$ is the reflection of a vector $\mathbf{u} \in \mathbf{R}^2$ about the line which passes through the origin and makes an angle of $\theta$ with the $x$-axis such that the distance of the head of the image vector $\mathbf{v}$ is the same as that of $\mathbf{u}$. 
+# The linear transformation $Ref(\theta): \mathbb{R}^2 \to \mathbb{R^2}$ is the reflection of a vector $\mathbf{u} \in \mathbb{R}^2$ about the line which passes through the origin and makes an angle of $\theta$ with the $x$-axis such that the distance of the head of the image vector $\mathbf{v}$ is the same as that of $\mathbf{u}$. 
 # 
 # ```{figure} ../Images/reflection.png
 # :name: reflection-figure
@@ -347,7 +347,7 @@
 # :class: note
 # :name: scaling-definition
 # 
-# The linear transformation $S(\mathbf{s}) : \mathbf{R}^n \to \mathbf{R}^n$ where $\mathbf{s} \in \mathbb{R}^n$ applied to the position vector $\mathbf{u} \in \mathbb{R}^n$ scales $\mathbf{u}$ so that the head is moved closer or further away from the origin.
+# The linear transformation $S(\mathbf{s}) : \mathbb{R}^n \to \mathbb{R}^n$ where $\mathbf{s} \in \mathbb{R}^n$ applied to the position vector $\mathbf{u} \in \mathbb{R}^n$ scales $\mathbf{u}$ so that the head is moved closer or further away from the origin.
 # 
 # ```{figure} ../Images/scaling.png
 # :name: scaling-figure
