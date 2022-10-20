@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Vector products &#8212; Linear Algebra</title>
+    <title>Matrix multiplication &#8212; Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,12 +52,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="canonical" href="https://jonshiach.github.io/LA-book/3_Vectors/3.3_Vector_products.html" />
+    <link rel="canonical" href="https://jonshiach.github.io/LA-book/1_Matrices/1.1_Matrix_multiplication-DESKTOP-33IGMFG.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Linear combination of vectors" href="3.4_Linear_combination_of_vectors.html" />
-    <link rel="prev" title="Vector magnitude" href="3.2_Vector_magnitude.html" />
+    <link rel="next" title="Matrix transpose" href="1.2_Matrix_transpose.html" />
+    <link rel="prev" title="Matrix multiplication" href="1.1_Matrix_multiplication.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -150,48 +150,53 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../1_Matrices/1.0_Matrices.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="1.0_Matrices.html">
    Matrices
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.1_Matrix_multiplication.html">
+    <a class="reference internal" href="1.1_Matrix_multiplication.html">
+     Matrix multiplication
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Matrix multiplication
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.2_Matrix_transpose.html">
+    <a class="reference internal" href="1.2_Matrix_transpose.html">
      Matrix transpose
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.3_Special_matrices.html">
+    <a class="reference internal" href="1.3_Special_matrices.html">
      Special matrices
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.4_Determinants.html">
+    <a class="reference internal" href="1.4_Determinants.html">
      Determinants
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.5_Inverse_matrix.html">
+    <a class="reference internal" href="1.5_Inverse_matrix.html">
      Inverse matrix
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.6_Matrix_algebra.html">
+    <a class="reference internal" href="1.6_Matrix_algebra.html">
      Matrix algebra
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.8_Matrices_exercises.html">
+    <a class="reference internal" href="1.8_Matrices_exercises.html">
      Matrices exercises
     </a>
    </li>
@@ -249,38 +254,38 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="3.0_Vectors.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../3_Vectors/3.0_Vectors.html">
    Vectors
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="3.1_Arithmetic_operations_on_vectors.html">
+    <a class="reference internal" href="../3_Vectors/3.1_Arithmetic_operations_on_vectors.html">
      Arithmetic operations on vectors
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3.2_Vector_magnitude.html">
+    <a class="reference internal" href="../3_Vectors/3.2_Vector_magnitude.html">
      Vector magnitude
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Vectors/3.3_Vector_products.html">
      Vector products
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3.4_Linear_combination_of_vectors.html">
+    <a class="reference internal" href="../3_Vectors/3.4_Linear_combination_of_vectors.html">
      Linear combination of vectors
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3.6_Vectors_exercises.html">
+    <a class="reference internal" href="../3_Vectors/3.6_Vectors_exercises.html">
      Vectors exercises
     </a>
    </li>
@@ -478,7 +483,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/3_Vectors/3.3_Vector_products.ipynb"
+        <a href="../_sources/1_Matrices/1.1_Matrix_multiplication-DESKTOP-33IGMFG.rst"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -489,7 +494,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="headerbtn__text-container">.rst</span>
 </a>
 
       </li>
@@ -538,20 +543,13 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dot-product">
-   Dot product
+  <a class="reference internal nav-link" href="#python-code">
+   Python code
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#python-code">
-     Python code
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-cross-product">
-   The cross product
+  <a class="reference internal nav-link" href="#matrix-exponents">
+   Matrix exponents
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -570,7 +568,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Vector products</h1>
+                <h1>Matrix multiplication</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -581,20 +579,13 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dot-product">
-   Dot product
+  <a class="reference internal nav-link" href="#python-code">
+   Python code
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#python-code">
-     Python code
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-cross-product">
-   The cross product
+  <a class="reference internal nav-link" href="#matrix-exponents">
+   Matrix exponents
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -614,48 +605,106 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="vector-products">
-<h1>Vector products<a class="headerlink" href="#vector-products" title="Permalink to this headline">#</a></h1>
-<p>There are two ways in which we calculate the product of two vectors, the dot product and the cross product.</p>
-<section id="dot-product">
-<span id="dot-product-section"></span><h2>Dot product<a class="headerlink" href="#dot-product" title="Permalink to this headline">#</a></h2>
-<div class="note admonition" id="dot-product-definition">
-<p class="admonition-title">Definition: The dot product</p>
-<p>The <strong>dot product</strong> (also known as the <strong>scalar product</strong>) of two vectors <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, is defined by</p>
-<div class="math notranslate nohighlight" id="equation-arithmetic-dot-product-equation">
-<span class="eqno">(10)<a class="headerlink" href="#equation-arithmetic-dot-product-equation" title="Permalink to this equation">#</a></span>\[\mathbf{a} \cdot \mathbf{b} = \sum_{i=1}^n a_ib_i = a_1b_1 + a_2b_2 + \cdots + a_nb_n.\]</div>
-<p>In <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> the <strong>dot product</strong> of two vectors <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>, can be defined in geometric terms by</p>
-<div class="math notranslate nohighlight" id="equation-geometric-dot-product-equation">
-<span class="eqno">(11)<a class="headerlink" href="#equation-geometric-dot-product-equation" title="Permalink to this equation">#</a></span>\[\mathbf{a} \cdot \mathbf{b} = |\mathbf{a}| |\mathbf{b}| \cos(\theta),\]</div>
-<p>where <span class="math notranslate nohighlight">\(\theta\)</span> is the angle between <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> (<a class="reference internal" href="#dot-product-figure"><span class="std std-numref">Fig. 15</span></a>).</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="matrix-multiplication">
+<h1>Matrix multiplication<a class="headerlink" href="#matrix-multiplication" title="Permalink to this headline">#</a></h1>
+<p>We can multiply any two real numbers together but multiplication of two or more matrices is a much more complicated idea. Similarly to addition, which is only defined for matrices of the same size, matrix multiplication has constrains on the sizes of the multipliers:</p>
+<div class="note admonition" id="matrix-multiplication-definition">
+<p class="admonition-title">Definition: Matrix multiplication</p>
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix and <span class="math notranslate nohighlight">\(B\)</span> a <span class="math notranslate nohighlight">\(p \times q\)</span> matrix. The product <span class="math notranslate nohighlight">\(AB\)</span> is only defined if <span class="math notranslate nohighlight">\(n = p\)</span> and the resulting matrix has dimension <span class="math notranslate nohighlight">\(m \times q\)</span> (i.e., the number of columns in <span class="math notranslate nohighlight">\(A\)</span> has to equal the number of rows in <span class="math notranslate nohighlight">\(B\)</span>). The product of an <span class="math notranslate nohighlight">\(m\times p\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> and a <span class="math notranslate nohighlight">\(p\times n\)</span> matrix <span class="math notranslate nohighlight">\(B\)</span> is defined as</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    [AB]_{ij} = \sum_{k=1}^p a_{ik}b_{kj}.
+\end{align*}\]</div>
+<p>i.e., if <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are two <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \begin{pmatrix} 
+        a_{11} &amp; a_{12} \\
+        a_{21} &amp; a_{22} 
+    \end{pmatrix}
+    \begin{pmatrix} 
+        b_{11} &amp; b_{12} \\
+        b_{21} &amp; b_{22}
+    \end{pmatrix} =
+    \begin{pmatrix}
+        a_{11} b_{11} + a_{12}b_{21} &amp; a_{11}b_{12} + a_{12} b_{22} \\
+        a_{21} b_{11} + a_{22}b_{21} &amp; a_{21}b_{12} + a_{22} b_{22}
+    \end{pmatrix}.
+\end{align*}\]</div>
 </div>
-<figure class="align-default" id="dot-product-figure">
-<img alt="../_images/dot_product.png" src="../_images/dot_product.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">The dot product <span class="math notranslate nohighlight">\(\mathbf{a} \cdot \mathbf{b}\)</span> is a scalar that is related to the angle between <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</span><a class="headerlink" href="#dot-product-figure" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>From the <a class="reference internal" href="#dot-product-definition"><span class="std std-ref">definition of the dot product</span></a>, we can observe the following:</p>
-<ul class="simple">
-<li><p>the dot product produces is a scalar quantity (an element of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>);</p></li>
-<li><p>the dot product of two perpendicular vectors is zero, we write <span class="math notranslate nohighlight">\(\mathbf{a}\perp\mathbf{b}\)</span> if <span class="math notranslate nohighlight">\(\mathbf{a}\cdot\mathbf{b}=0\)</span>;</p></li>
-<li><p>the dot product of two co-directional (parallel) vectors <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> is equal to <span class="math notranslate nohighlight">\(|\mathbf{a}| |\mathbf{b}|\)</span>.</p></li>
-</ul>
-<div class="important admonition" id="dot-product-properties-theorem">
-<p class="admonition-title">Theorem: Properties of the dot product</p>
-<p>For any vectors <span class="math notranslate nohighlight">\(\mathbf{u},\mathbf{v},\mathbf{w}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> and any scalar <span class="math notranslate nohighlight">\(k\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>:</p>
-<ul class="simple">
-<li><p>the dot product is associative, i.e., <span class="math notranslate nohighlight">\((\mathbf{u} + \mathbf{v})\cdot \mathbf{w} = \mathbf{u} \cdot \mathbf{w} + \mathbf{v} \cdot \mathbf{w}\)</span>;</p></li>
-<li><p>for any scalar <span class="math notranslate nohighlight">\(k\)</span>, <span class="math notranslate nohighlight">\((k \mathbf{u})\cdot \mathbf{v} = \mathbf{u} \cdot (k \mathbf{v})= k (\mathbf{u} \cdot \mathbf{v})\)</span>;</p></li>
-<li><p>the dot product is commutative, i.e., <span class="math notranslate nohighlight">\(\mathbf{u} \cdot \mathbf{v} = \mathbf{v} \cdot \mathbf{u}\)</span>;</p></li>
-<li><p><span class="math notranslate nohighlight">\(\mathbf{u} \cdot \mathbf{u} = |\mathbf{u}|^2 \geq 0 \text{ and } \mathbf{u} \cdot \mathbf{u} = 0 \iff \mathbf{u} = \mathbf{0}.\)</span></p></li>
-</ul>
-</div>
-<div class="seealso admonition" id="dot-product-example">
-<p class="admonition-title">Example 3.4</p>
-<p>Given the vectors <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 2, 3)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v} = (3, -1, 0)\)</span>. Calculate:</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(\mathbf{u} \cdot \mathbf{v}\)</span></p>
-<p>  (ii)   the angle between <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}\)</span></p>
+<p>The technique used to multiply two matrices together requires us to move across the horizontal rows of the first matrix (the <span class="math notranslate nohighlight">\(i\)</span> index) and down the vertical columns of the second matrix (the <span class="math notranslate nohighlight">\(j\)</span> index). We multiply corresponding elements together and sum the result. For example, consider the multiplication of the two <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices below</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} \begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}.
+\end{align*}\]</div>
+<p>The first thing we need to do is check whether matrix multiplication is defined for these matrices. An easy way to do this is to write the dimensions of the matrix underneath, e.g.,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \underbrace{\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}}_{2\times \mathbf{\textcolor{red}{2}}}
+    \underbrace{\begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}}_{\mathbf{\textcolor{red}{2}}\times 2}.
+\end{align*}\]</div>
+<p>Here the two inside numbers are the same so this matrix multiplication is defined. Also, the dimensions of the product of these two matrices is given by the two outside numbers. To calculate the value of the element in row 1 and column 1 we move across row 1 of the first matrix and down column 1 of the second matrix</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \begin{pmatrix} \textcolor{blue}{1} &amp; \textcolor{blue}{2} \\ 3 &amp; 4 \end{pmatrix}
+    \begin{pmatrix} \textcolor{red}{5} &amp; 6 \\ \textcolor{red}{7} &amp; 8 \end{pmatrix} = 
+    \begin{pmatrix} 
+        \textcolor{blue}{1} \times \textcolor{red}{5} + \textcolor{blue}{2} \times \textcolor{red}{7} &amp; \square \\
+        \square &amp; \square
+    \end{pmatrix} 
+    = \begin{pmatrix} 5 + 14 &amp; \square \\ \square &amp; \square \end{pmatrix}
+    = \begin{pmatrix} 19 &amp; \square \\ \square &amp; \square \end{pmatrix}.
+\end{align*}\]</div>
+<p>For the element in the first row and second column we move across row 1 of the first matrix and down column 2 of the second matrix</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \begin{pmatrix} \textcolor{blue}{1} &amp; \textcolor{blue}{2} \\ 3 &amp; 4 \end{pmatrix}
+    \begin{pmatrix} 5 &amp; \textcolor{red}{6} \\ 7 &amp; \textcolor{red}{8} \end{pmatrix} = 
+    \begin{pmatrix} 
+        19 &amp; \textcolor{blue}{1} \times \textcolor{red}{6} + \textcolor{blue}{2} \times \textcolor{red}{8} \\
+        \square &amp; \square
+    \end{pmatrix}
+    = \begin{pmatrix} 19 &amp; 6 + 16 \\ \square &amp; \square \end{pmatrix}
+    = \begin{pmatrix} 19 &amp; 22 \\ \square &amp; \square \end{pmatrix}.
+\end{align*}\]</div>
+<p>Now that we have finished the top row, to calculate the element in row 2 column 1 we move across row 2 of the first matrix and down column 1 of the second matrix</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \begin{pmatrix} 1 &amp; 2 \\ \textcolor{blue}{3} &amp; \textcolor{blue}{4} \end{pmatrix}
+    \begin{pmatrix} \textcolor{red}{5} &amp; 6 \\ \textcolor{red}{7} &amp; 8 \end{pmatrix} = 
+    \begin{pmatrix} 
+        19 &amp; 22 \\
+        \textcolor{blue}{3} \times \textcolor{red}{5} + \textcolor{blue}{4} \times \textcolor{red}{7} &amp; \square
+    \end{pmatrix}
+    = \begin{pmatrix} 19 &amp; 22 \\ 15 + 28 &amp; \square \end{pmatrix}
+    = \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; \square \end{pmatrix}.
+\end{align*}\]</div>
+<p>Finally to calculate the elements in row 2 column 2 we move across row 2 of the first matrix and down column 2 of the second matrix</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \begin{pmatrix} 1 &amp; 2 \\ \textcolor{blue}{3} &amp; \textcolor{blue}{4} \end{pmatrix}
+    \begin{pmatrix} 5 &amp; \textcolor{red}{6} \\ 7 &amp; \textcolor{red}{8} \end{pmatrix} = 
+    \begin{pmatrix} 
+        19 &amp; 22 \\
+        43 &amp; \textcolor{blue}{3} \times \textcolor{red}{6} + \textcolor{blue}{4} \times \textcolor{red}{8}
+    \end{pmatrix}
+    = \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; 18 + 32 \end{pmatrix}
+    = \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; 50 \end{pmatrix}.
+\end{align*}\]</div>
+<div class="seealso admonition" id="matrix-multiplication-example">
+<p class="admonition-title">Example 1.5</p>
+<p>Given the matrices</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    A &amp;= \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix}, &amp;
+    B &amp;= \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix}, \\
+    C &amp;= \begin{pmatrix} 1 &amp; 1 &amp; 0 \\ 3 &amp; -2 &amp; 1 \end{pmatrix}, &amp;
+    D &amp;= \begin{pmatrix} 1 \\ 3 \end{pmatrix}.
+\end{align*}\]</div>
+<p>calculate the following (where possible):</p>
+<p>  (i)   <span class="math notranslate nohighlight">\(AB\)</span></p>
+<p>  (ii)   <span class="math notranslate nohighlight">\(BC\)</span></p>
+<p>  (iii)   <span class="math notranslate nohighlight">\(CD\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -663,115 +712,134 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">(i)   Using equation <a class="reference internal" href="#equation-arithmetic-dot-product-equation">(10)</a></p>
+<p class="sd-card-text">  (i)</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    \mathbf{u} \cdot \mathbf{v} = \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix} \cdot \begin{pmatrix} 3 \\ -1 \\ 0 \end{pmatrix} = 1(3) + 2(-1) + 3(0) = 3 - 2 + 0 = 1
+    AB &amp;= \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix} \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 2+0 &amp; 3 + 0 \\ -4+3 &amp; -6+15\end{pmatrix} \\
+    &amp;= \begin{pmatrix} 2 &amp; 3 \\ -1 &amp; 9 \end{pmatrix}
 \end{align*}\]</div>
-<p class="sd-card-text">(ii)   Using equation <a class="reference internal" href="#equation-geometric-dot-product-equation">(11)</a></p>
+<p class="sd-card-text">  (ii)</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    \mathbf{u} \cdot \mathbf{v} &amp;= |\mathbf{u}| |\mathbf{v}| \cos(\theta) \\
-    \therefore \theta &amp;= \cos^{-1} \left( \frac{\mathbf{u} \cdot \mathbf{v}}{|\mathbf{u}||\mathbf{v}|}\right) \\
-    &amp;= \cos^{-1} \left( \frac{1}{\sqrt{14}\sqrt{10}}\right) = 1.4862.
+    BC &amp;= \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix} \begin{pmatrix} 1 &amp; 1 &amp; 0 \\ 3 &amp; -2 &amp; 1 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 2+9 &amp; 2-6 &amp; 0+3 \\ 1+15 &amp; 1-10 &amp; 0+5 \end{pmatrix} \\
+    &amp;= \begin{pmatrix}11 &amp; -4 &amp; 3 \\ 16 &amp; -9 &amp; 5 \end{pmatrix}
 \end{align*}\]</div>
+<p class="sd-card-text">  (iii)   <span class="math notranslate nohighlight">\(CD\)</span> is undefined since <span class="math notranslate nohighlight">\(C\)</span> is <span class="math notranslate nohighlight">\(2\times 3\)</span> and <span class="math notranslate nohighlight">\(D\)</span> is <span class="math notranslate nohighlight">\(2\times 1\)</span>.</p>
 </div>
 </details></div>
-<p>Note: angles should be expressed in radians at all times.</p>
 <section id="python-code">
-<h3>Python code<a class="headerlink" href="#python-code" title="Permalink to this headline">#</a></h3>
-<p>The SymPy command for calculating the dot product of two vectors <code class="docutils literal notranslate"><span class="pre">u</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code> is <code class="docutils literal notranslate"><span class="pre">u.dot(v)</span></code>. The code below calculates the solution to <a class="reference internal" href="#dot-product-example"><span class="std std-ref">example 3.4</span></a>.</p>
+<h2>Python code<a class="headerlink" href="#python-code" title="Permalink to this headline">#</a></h2>
+<p>The Sympy command for calculating the product of two matrices <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> is <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">*</span> <span class="pre">B</span></code>. The Python code below calculates the solution to question (i) from <a class="reference internal" href="#matrix-multiplication-example"><span class="std std-ref">example 1.5</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 
-<span class="n">u</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
-<span class="n">v</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
-<span class="n">udotv</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-<span class="n">theta</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">acos</span><span class="p">(</span><span class="n">udotv</span> <span class="o">/</span> <span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">norm</span><span class="p">()</span> <span class="o">*</span> <span class="n">v</span><span class="o">.</span><span class="n">norm</span><span class="p">()))</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;(i) u . v = </span><span class="si">{</span><span class="n">udotv</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;(ii) theta = </span><span class="si">{</span><span class="n">theta</span><span class="o">.</span><span class="n">evalf</span><span class="p">()</span><span class="si">:</span><span class="s2">0.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(i) u . v = 1
-(ii) theta = 1.4862
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="the-cross-product">
-<span id="cross-product-section"></span><h2>The cross product<a class="headerlink" href="#the-cross-product" title="Permalink to this headline">#</a></h2>
-<div class="note admonition" id="cross-product-definition">
-<p class="admonition-title">Definition: The cross product</p>
-<p>The <strong>cross product</strong> (also known as the **vector product) of two vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>, <span class="math notranslate nohighlight">\(\mathbf{a}=(a_1,a_2,a_3)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}=(b_1,b_2,b_3)\)</span> can be calculated using the formula</p>
-<div class="math notranslate nohighlight" id="equation-cross-product-equation">
-<span class="eqno">(12)<a class="headerlink" href="#equation-cross-product-equation" title="Permalink to this equation">#</a></span>\[\begin{split}\mathbf{a} \times \mathbf{b} = \det 
-\begin{pmatrix}
-    \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\ 
-    a_1 &amp; a_2 &amp; a_3 \\ 
-    b_1 &amp; b_2 &amp; b_3 
-\end{pmatrix}.\end{split}\]</div>
-</div>
-<div class="important admonition" id="cross-product-properties-theorem">
-<p class="admonition-title">Theorem: Properties of the cross product</p>
-<p>The cross product has the following properties:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\mathbf{a}\times \mathbf{b}\)</span> produces a vector in the same space as <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>;</p></li>
-<li><p><span class="math notranslate nohighlight">\(\mathbf{a}\times \mathbf{b}\)</span> produces a vector that is perpendicular to both <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>;</p></li>
-<li><p><span class="math notranslate nohighlight">\(\mathbf{a} \times \mathbf{b} = -(\mathbf{b} \times \mathbf{a})\)</span> (i.e., there are two vectors perpendicular to <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> pointing in opposite directions);</p></li>
-<li><p>if <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> are parallel vectors, then <span class="math notranslate nohighlight">\(\mathbf{a}\times \mathbf{b} = \mathbf{0}\)</span>;</p></li>
-<li><p>the self cross product of a vector is the zero vector, i.e., <span class="math notranslate nohighlight">\(\mathbf{a} \times \mathbf{a} = \mathbf{0}\)</span>;</p></li>
-<li><p>the cross product is not commutative, i.e., <span class="math notranslate nohighlight">\(\mathbf{a} \times \mathbf{b} \neq \mathbf{b} \times \mathbf{a}\)</span>;</p></li>
-<li><p>the cross product is distributive over addition, i.e., <span class="math notranslate nohighlight">\(\mathbf{a} \times (\mathbf{b} + \mathbf{c}) = (\mathbf{a} \times \mathbf{b}) + (\mathbf{a} \times \mathbf{c})\)</span>;</p></li>
-<li><p>the cross product is not associative, i.e., <span class="math notranslate nohighlight">\(\mathbf{a} \times (\mathbf{b} \times \mathbf{c}) \neq (\mathbf{a} \times \mathbf{b}) \times \mathbf{c}\)</span>.</p></li>
-</ul>
-</div>
-<figure class="align-default" id="cross-product-figure">
-<img alt="../_images/cross_product.png" src="../_images/cross_product.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">The cross product <span class="math notranslate nohighlight">\(\mathbf{a} \times \mathbf{b}\)</span> is another vector perpendicular to both <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</span><a class="headerlink" href="#cross-product-figure" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<div class="seealso admonition" id="cross-product-example">
-<p class="admonition-title">Example 3.5</p>
-<p>Calculate the cross product between the vectors <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 2, 3)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v} = (4, 5, 6)\)</span>.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    \mathbf{u} \times \mathbf{v} &amp;= \begin{vmatrix} \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\ 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \end{vmatrix}
-    = (12 - 15)\mathbf{i} - (6 - 12) \mathbf{j} + (5 - 8) \mathbf{k} \\
-    &amp;= -3\mathbf{i} + 6 \mathbf{j} - 3\mathbf{k}
-    = \begin{pmatrix} -3 \\ 6 \\ -3 \end{pmatrix}.
-\end{align*}\]</div>
-</div>
-</details></div>
-<section id="id1">
-<h3>Python code<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
-<p>The SymPy command for calculating the cross product of two vectors <code class="docutils literal notranslate"><span class="pre">u</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code> is <code class="docutils literal notranslate"><span class="pre">u.cross(v)</span></code>. The following code calculates the solution to <a class="reference internal" href="#cross-product-example"><span class="std std-ref">example 3.5</span></a>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
-<span class="n">v</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
-
-<span class="n">ucrossv</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">cross</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">ucrossv</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
+<span class="n">AB</span> <span class="o">=</span> <span class="n">A</span> <span class="o">*</span> <span class="n">B</span>
+<span class="n">display</span><span class="p">(</span><span class="n">AB</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\displaystyle \left[\begin{matrix}-3\\6\\-3\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}2 &amp; 3\\-1 &amp; 9\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<p>Note that this will only work when using the Sympy library. If this has not been imported, <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">*</span> <span class="pre">B</span></code> will multiply the corresponding elements together which is known as <strong>element-wise multiplication</strong> and denoted mathematically as <span class="math notranslate nohighlight">\(A \odot B\)</span>. If you are using Sympy and wish to use element-wise multiplication then the command is <code class="docutils literal notranslate"><span class="pre">matrices.dense.matrix_multiply_elementwise(A,</span> <span class="pre">B)</span></code> (so it is probably better to not use Sympy in this case!).</p>
+</section>
+<section id="matrix-exponents">
+<h2>Matrix exponents<a class="headerlink" href="#matrix-exponents" title="Permalink to this headline">#</a></h2>
+<div class="note admonition" id="matrix-exponents-definition">
+<p class="admonition-title">Definition: Matrix exponents</p>
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be a square <span class="math notranslate nohighlight">\(n \times n\)</span> matrix. Then we write <span class="math notranslate nohighlight">\(A^2=AA\)</span> and more generally:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-44d03750-8c38-422d-8c9a-38ca467ace26">
+<span class="eqno">(2)<a class="headerlink" href="#equation-44d03750-8c38-422d-8c9a-38ca467ace26" title="Permalink to this equation">#</a></span>\[\begin{align}
+    A^n = \underbrace{A A \cdots A}_{n \text{ times}}.
+\end{align}\]</div>
+</div>
+<div class="seealso admonition" id="matrix-exponents-example">
+<p class="admonition-title">Example 1.6</p>
+<p>Given the matrix
+<span class="math notranslate nohighlight">\(
+    A = \begin{pmatrix} 1 &amp; 0 \\ 3 &amp; 2 \end{pmatrix},
+\)</span>
+evaluate:</p>
+<p>  (i)   <span class="math notranslate nohighlight">\(A^2\)</span></p>
+<p>  (ii)   <span class="math notranslate nohighlight">\(A^3\)</span></p>
+<p>  (iii)   <span class="math notranslate nohighlight">\(A^5\)</span></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">  (i)</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    A^2 &amp;= AA = \begin{pmatrix} 1 &amp; 0 \\ 3 &amp; 2 \end{pmatrix}
+    \begin{pmatrix} 1 &amp; 0 \\ 3 &amp; 2 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 1 + 0 &amp; 0 + 0 \\ 3 + 6 &amp; 0 + 4 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 1 &amp; 0 \\ 9 &amp; 4 \end{pmatrix}
+\end{align*}\]</div>
+<p class="sd-card-text">  (ii)</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    A^3 &amp;= A^2A = \begin{pmatrix} 1 &amp; 0 \\ 9 &amp; 4 \end{pmatrix}
+    \begin{pmatrix} 1 &amp; 0 \\ 3 &amp; 2 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 1 + 0 &amp; 0 + 0 \\ 9 + 12 &amp; 0 + 8 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 1 &amp; 0 \\ 21 &amp; 8 \end{pmatrix}
+\end{align*}\]</div>
+<p class="sd-card-text">  (iii)</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    A^5 &amp;= A^3A^2 = \begin{pmatrix} 1 &amp; 0 \\ 21 &amp; 8 \end{pmatrix}
+    \begin{pmatrix} 1 &amp; 0 \\ 9 &amp; 4 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 1 + 0 &amp; 0 + 0 \\ 21 + 72 &amp; 0 + 32 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 1 &amp; 0 \\ 93 &amp; 32 \end{pmatrix}
+\end{align*}\]</div>
+</div>
+</details></div>
+<section id="id1">
+<h3>Python code<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p>The SymPy command for calculating the <code class="docutils literal notranslate"><span class="pre">k</span></code>th exponent of the matrix <code class="docutils literal notranslate"><span class="pre">A</span></code> is <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">**</span> <span class="pre">k</span></code>. The following code calculates the solution to <a class="reference internal" href="#matrix-exponents-example"><span class="std std-ref">example 1.6</span></a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
+
+<span class="c1"># (i)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(i) A^2 =&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">A</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># (ii)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(ii) A^3 =&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">A</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># (iii)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(iii) A^5 =&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">A</span> <span class="o">**</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(i) A^2 =
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0\\9 &amp; 4\end{matrix}\right]\end{split}\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(ii) A^3 =
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0\\21 &amp; 8\end{matrix}\right]\end{split}\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(iii) A^5 =
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0\\93 &amp; 32\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
 </section>
@@ -791,7 +859,7 @@ Solution<div class="sd-summary-down docutils">
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./3_Vectors"
+            path: "./1_Matrices"
         },
         predefinedOutput: true
     }
@@ -805,17 +873,17 @@ Solution<div class="sd-summary-down docutils">
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="3.2_Vector_magnitude.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="1.1_Matrix_multiplication.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Vector magnitude</p>
+            <p class="prev-next-title">Matrix multiplication</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="3.4_Linear_combination_of_vectors.html" title="next page">
+    <a class='right-next' id="next-link" href="1.2_Matrix_transpose.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Linear combination of vectors</p>
+        <p class="prev-next-title">Matrix transpose</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

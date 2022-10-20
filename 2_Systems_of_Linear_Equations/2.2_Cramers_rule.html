@@ -21,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -37,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -50,8 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/2_Systems_of_Linear_Equations/2.2_Cramers_rule.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -541,7 +541,13 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="cramer-s-rule">
 <h1>Cramer’s rule<a class="headerlink" href="#cramer-s-rule" title="Permalink to this headline">#</a></h1>
-<p><strong>Cramer’s rule</strong> is an explicit rule for calculating the solution to a system of linear equations using determinants. We saw in the section on <a class="reference internal" href="../1_Matrices/1.4_Determinants.html#determinant-section"><span class="std std-ref">determinants</span></a> that the solution to the system of linear equations</p>
+<figure class="margin align-default" id="id1">
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Gabriel_Cramer.jpg/220px-Gabriel_Cramer.jpg"><img alt="Gabriel Cramer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Gabriel_Cramer.jpg/220px-Gabriel_Cramer.jpg" style="width: 200px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text"><a class="reference external" href="https://en.wikipedia.org/wiki/Gabriel_Cramer">Gabriel Cramer (1704 - 1752)</a></span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong>Cramer’s rule</strong>, named after Swiss mathematician <a class="reference external" href="https://en.wikipedia.org/wiki/Gabriel_Cramer">Gabriel Cramer</a>, is an explicit rule for calculating the solution to a system of linear equations using determinants. We saw in the section on <a class="reference internal" href="../1_Matrices/1.4_Determinants.html#determinant-section"><span class="std std-ref">determinants</span></a> that the solution to the system of linear equations</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}
@@ -572,29 +578,48 @@ title="Print to PDF"
 <span class="eqno">(6)<a class="headerlink" href="#equation-cramers-rule-equation" title="Permalink to this equation">#</a></span>\[x_i = \frac{\det(A_i)}{\det(A)},\]</div>
 <p>where <span class="math notranslate nohighlight">\(A_i\)</span> is a matrix obtained by replacing column <span class="math notranslate nohighlight">\(i\)</span> of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</p>
 </div>
-<p><strong>Proof</strong></p>
-<p><em>Consider the solution to the linear system <span class="math notranslate nohighlight">\(A\mathbf{x} = \mathbf{b}\)</span> where <span class="math notranslate nohighlight">\(A\)</span> is non-singular then the solution for the first variable <span class="math notranslate nohighlight">\(x_1\)</span> is</em></p>
+<p><strong>Proof</strong> (from <a class="reference external" href="https://proofwiki.org/wiki/Cramer%27s_Rule">Proof Wiki</a>)</p>
+<p><em>The solution to a system of linear equations <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span> can be calculated using <span class="math notranslate nohighlight">\(\mathbf{x} = A^{-1} \mathbf{b}\)</span> where <span class="math notranslate nohighlight">\(A^{-1}\)</span> is the inverse of the coefficient matrix <span class="math notranslate nohighlight">\(A\)</span>. The <a class="reference internal" href="../1_Matrices/1.5_Inverse_matrix.html#adjoint-determinant-formula-definition"><span class="std std-ref">adjoint-determinant formula</span></a> for calculating the inverse is</em></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    x_1 = \det 
-    \begin{pmatrix} 
-        x_1 &amp; 0 &amp; \cdots &amp; 0 \\
-        x_2 &amp; 1 &amp; \cdots &amp; 0 \\
+    A^{-1} = \frac{\operatorname{adj}(A)}{\det(A)},
+\end{align*}\]</div>
+<p><em>so</em></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \mathbf{x} =  \frac{1}{\det(A)} \operatorname{adj}(A) \mathbf{b}.
+\end{align*}\]</div>
+<p><em>Since <span class="math notranslate nohighlight">\(\operatorname{adj}(A) = C^T\)</span> where <span class="math notranslate nohighlight">\(C\)</span> is the matrix of <a class="reference internal" href="../1_Matrices/1.4_Determinants.html#cofactor-definition"><span class="std std-ref">co-factors</span></a></em></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    C^T = \begin{pmatrix} 
+        C_{11} &amp; C_{21} &amp; \cdots &amp; C_{n1} \\
+        C_{12} &amp; C_{22} &amp; \cdots &amp; C_{n2} \\
         \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-        x_n &amp; 0 &amp; \cdots &amp; 1
-    \end{pmatrix} = \det(X_1).
+        C_{1n} &amp; C_{2n} &amp; \cdots &amp; C_{nn}
+    \end{pmatrix}.
 \end{align*}\]</div>
-<p><em>Since <span class="math notranslate nohighlight">\(\mathbf{x} = A^{-1}\mathbf{b}\)</span> and <span class="math notranslate nohighlight">\(I = A^{-1}A\)</span> then the matrix <span class="math notranslate nohighlight">\(X_1\)</span> can be written as</em></p>
+<p><em>then for the <span class="math notranslate nohighlight">\(i\)</span> element of <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> using the <a class="reference internal" href="../1_Matrices/1.1_Matrix_multiplication.html#matrix-multiplication-definition"><span class="std std-ref">definition of matrix multiplication</span></a> we have</em></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    X_1 = \begin{pmatrix} A^{-1}\mathbf{b} &amp; A^{-1} \mathbf{a}_2 &amp; \cdots &amp; A^{-1} \mathbf{a}_n \end{pmatrix},
+    x_i = \frac{1}{\det(A)} \sum_{j=1}^n C_{ji} b_j
 \end{align*}\]</div>
-<p><em>where <span class="math notranslate nohighlight">\(\mathbf{a}_i\)</span> is the <span class="math notranslate nohighlight">\(i\)</span>th column of <span class="math notranslate nohighlight">\(A\)</span>. Since <span class="math notranslate nohighlight">\(A_1\)</span> in equation <a class="reference internal" href="#equation-cramers-rule-equation">(6)</a> is <span class="math notranslate nohighlight">\(A_1 = \begin{pmatrix} \mathbf{b} &amp; \mathbf{a}_2 &amp; \cdots &amp; \mathbf{a}_n \end{pmatrix}\)</span> then <span class="math notranslate nohighlight">\(X_1 = A^{-1}A_1\)</span>. Using the property of determinant where the determinant of a product of two matrices is equal to the product of the determinants  then</em></p>
+<p><em>In Cramer’s rule, <span class="math notranslate nohighlight">\(A_i\)</span> is the matrix formed by replacing column <span class="math notranslate nohighlight">\(i\)</span> of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\mathbf{b}\)</span></em></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    x_1 = \det(X_1) = \det(A^{-1}A_1) = \det(A^{-1})\det(A_1) = \frac{\det(A_1)}{\det(A)}.
+    A_i = \begin{pmatrix}
+        a_{11} &amp; \cdots &amp; a_{1,i-1} &amp; b_1 &amp; a_{1,i+1} &amp; \cdots &amp; a_{1n} \\
+        a_{21} &amp; \cdots &amp; a_{2,i-1} &amp; b_2 &amp; a_{2,i+1} &amp; \cdots &amp; a_{2n} \\
+        \vdots &amp; \ddots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+        a_{n1} &amp; \cdots &amp; a_{n,i-1} &amp; b_n &amp; a_{n,i+1} &amp; \cdots &amp; a_{nn}
+    \end{pmatrix}.
 \end{align*}\]</div>
-<p><em>Doing similar for the other variables completes the proof.</em> <div style="text-align: right"> □ </div></p>
+<p><em>Since removing the <span class="math notranslate nohighlight">\(i\)</span>th column from both <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(A_i\)</span> (the one with the <span class="math notranslate nohighlight">\(b\)</span> values) results in the same matrix then the cofactors of <span class="math notranslate nohighlight">\(A_i\)</span> are the same as the cofactors of <span class="math notranslate nohighlight">\(A\)</span>. If we calculate <span class="math notranslate nohighlight">\(\det(A_i)\)</span> by expanding along the <span class="math notranslate nohighlight">\(i\)</span>th column of <span class="math notranslate nohighlight">\(A_i\)</span> then</em></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \det(A_i) = b_1 C_{1i} + b_2 C_{2i} + \cdots + b_n C_{ni} = \sum_{j=1}^n C_{ji} b_j,
+\end{align*}\]</div>
+<p><em>so <span class="math notranslate nohighlight">\(x_i = \dfrac{\det(A_i)}{\det(A)}\)</span>.</em><div style="text-align: right"> □ </div></p>
 <div class="seealso admonition" id="cramers-rule-example">
 <p class="admonition-title">Example 2.3</p>
 <p>Solve the following systems of linear equations using Cramer’s rule</p>

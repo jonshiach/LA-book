@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Partial pivoting &#8212; Linear Algebra</title>
+    <title>Cramer’s rule &#8212; Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,12 +52,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="canonical" href="https://jonshiach.github.io/LA-book/2_Systems_of_Linear_Equations/2.4_Partial_pivoting.html" />
+    <link rel="canonical" href="https://jonshiach.github.io/LA-book/2_Systems_of_Linear_Equations/2.2_Cramers_rule-DESKTOP-33IGMFG.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Gauss-Jordan elimination" href="2.5_Gauss_Jordan_elimination.html" />
-    <link rel="prev" title="Gaussian elimination" href="2.3_Gaussian_elimination.html" />
+    <link rel="next" title="Gaussian elimination" href="2.3_Gaussian_elimination.html" />
+    <link rel="prev" title="Cramer’s rule" href="2.2_Cramers_rule.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -166,6 +166,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../1_Matrices/1.1_Matrix_multiplication-DESKTOP-33IGMFG.html">
+     Matrix multiplication
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../1_Matrices/1.2_Matrix_transpose.html">
      Matrix transpose
     </a>
@@ -217,13 +222,18 @@ const thebe_selector_output = ".output, .cell_output"
      Cramer’s rule
     </a>
    </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Cramer’s rule
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2.3_Gaussian_elimination.html">
      Gaussian elimination
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.4_Partial_pivoting.html">
      Partial pivoting
     </a>
    </li>
@@ -478,7 +488,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/2_Systems_of_Linear_Equations/2.4_Partial_pivoting.ipynb"
+        <a href="../_sources/2_Systems_of_Linear_Equations/2.2_Cramers_rule-DESKTOP-33IGMFG.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -527,7 +537,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Partial pivoting</h1>
+                <h1>Cramer’s rule</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -539,78 +549,74 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="partial-pivoting">
-<span id="partial-pivoting-section"></span><h1>Partial pivoting<a class="headerlink" href="#partial-pivoting" title="Permalink to this headline">#</a></h1>
-<p>In most practical applications of row reduction to solve a linear system we use computers to perform the calculations. Computers use floating point numbers to compute arithmetic operations which are not exact and can be prone to rounding errors. Consider the following linear system of equations</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c7f44edd-fbe4-4ce4-ac5e-0c77ab5fef15">
-<span class="eqno">(7)<a class="headerlink" href="#equation-c7f44edd-fbe4-4ce4-ac5e-0c77ab5fef15" title="Permalink to this equation">#</a></span>\[\begin{align}
-  \begin{pmatrix}0.0001 &amp; 1 \\ 1 &amp; 1 \end{pmatrix}\begin{pmatrix} x_1 \\ x_2 \end{pmatrix}= 
-  \begin{pmatrix}1 \\ 2 \end{pmatrix}.
-\end{align}\]</div>
-<p>Using Gaussian elimination but rounding all calculations to 4 decimal place accuracy we have</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="cramer-s-rule">
+<h1>Cramer’s rule<a class="headerlink" href="#cramer-s-rule" title="Permalink to this headline">#</a></h1>
+<p><strong>Cramer’s rule</strong> is an explicit rule for calculating the solution to a system of linear equations using determinants. We saw in the section on <a class="reference internal" href="../1_Matrices/1.4_Determinants.html#determinant-section"><span class="std std-ref">determinants</span></a> that the solution to the system of linear equations</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    &amp; \left( \begin{array}{cc|c} 
-        0.0001 &amp; 1 &amp; 1 \\
-        1 &amp; 1 &amp; 2 
-    \end{array} \right)
-    \begin{array}{l} \\  R_2 - 1000R_1 \end{array} \\ \\
-    \longrightarrow \quad &amp;
-    \left( \begin{array}{cc|c} 
-        0.0001 &amp; 1 &amp; 1 \\
-        0 &amp; -9999 &amp; -9998 
-    \end{array} \right)
-    \begin{array}{l} \\  -\frac{1}{9999}R_2 \end{array} \\ \\
-    \longrightarrow \quad &amp;
-    \left( \begin{array}{cc|c} 
-        0.0001 &amp; 1 &amp; 1 \\
-        0 &amp; 1 &amp; 1.0000
-    \end{array} \right).
+    \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}
+    \begin{pmatrix} x_1 \\ x_2 \end{pmatrix} =
+    \begin{pmatrix} e \\ f \end{pmatrix}
 \end{align*}\]</div>
-<p>So <span class="math notranslate nohighlight">\(x_2= 1.000\)</span> and using back substitution we have <span class="math notranslate nohighlight">\(x_1 = 0\)</span>. However, checking our solution with the original system we see that this does not satisfy the second equation <span class="math notranslate nohighlight">\(x_1 + x_2 = 2\)</span>. The problem is that our first pivot element of 0.0001 was small compared with the value below which produced large values when adding multiples of the pivot row to the other rows.</p>
-<p>To overcome this we can perform a row swap so that the pivot element is larger than the value below</p>
+<p>is</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    &amp; \left(\begin{array}{cc|c} 
-        0.0001 &amp; 1 &amp; 1 \\
-        1 &amp; 1 &amp; 2 
-    \end{array} \right)
-    \begin{array}{l} R_1 \leftrightarrow R_2 \end{array} \\ \\
-    \longrightarrow \quad &amp;
-    \left( \begin{array}{cc|c} 
-        1 &amp; 1 &amp; 2 \\
-        0.0001 &amp; 1 &amp; 1 
-    \end{array} \right)
-    \begin{array}{l} \\  R_2 - 0.0001 R_1 \end{array} \\ \\
-    \longrightarrow \quad &amp;
-    \left( \begin{array}{cc|c} 
-        1 &amp; 1 &amp; 2 \\
-        0 &amp; 0.9999 &amp; 0.9998
-    \end{array} \right)
+    x_1 &amp;= \frac{de - bf}{ad - bc}, &amp;
+    x_2 &amp;= \frac{af - ce}{ad - bc}.
 \end{align*}\]</div>
-<p>So <span class="math notranslate nohighlight">\(x_2 = 1.000\)</span> as before but using back substitution we now have <span class="math notranslate nohighlight">\(x_1 = 1.000\)</span> which is consistent with the original system. This process is called <em>partial pivoting</em> and it’s where we perform a row swap to ensure that the pivot element has a larger absolute value from the elements in the column beneath the pivot.</p>
-<div class="note admonition" id="ge-pp-definition">
-<p class="admonition-title">Definition: Gaussian elimination with partial pivoting</p>
-<p>To row reduce an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> to reduced row echelon form using Gaussian elimination with partial pivoting we do the following:</p>
-<ol class="simple">
-<li><p>Initalise the pivot row to <span class="math notranslate nohighlight">\(i=1\)</span> and pivot column to <span class="math notranslate nohighlight">\(k=1\)</span></p></li>
-<li><p>Swap the pivot row <span class="math notranslate nohighlight">\(i\)</span> with the row below which has the largest absolute value element in the pivot column <span class="math notranslate nohighlight">\(k\)</span> which is greater than the absolute value of the pivot element <span class="math notranslate nohighlight">\(|a_{ik}|\)</span>.</p></li>
-<li><p>If <span class="math notranslate nohighlight">\(a_{ik} = 0\)</span> then set <span class="math notranslate nohighlight">\(k = k + 1\)</span> and repeat step 2.</p></li>
-<li><p>For each row <span class="math notranslate nohighlight">\(j = i+1 \ldots m\)</span> beneath the pivot row subtract the pivot row <span class="math notranslate nohighlight">\(i\)</span> multiplied by <span class="math notranslate nohighlight">\(\dfrac{a_{jk}}{a_{ik}}\)</span> from row <span class="math notranslate nohighlight">\(j\)</span>.</p></li>
-<li><p>Set <span class="math notranslate nohighlight">\(i = 1 + 1\)</span> and <span class="math notranslate nohighlight">\(k = k + 1\)</span> and repeat steps 2 to 4 until <span class="math notranslate nohighlight">\(i &gt; m\)</span> or <span class="math notranslate nohighlight">\(k &gt; n\)</span>.</p></li>
-</ol>
+<p>We can recognise that the solution to both variables includes the determinant of the coefficient matrix, <span class="math notranslate nohighlight">\(ad - bc\)</span>, in the denomimator. But what about the numerator? If we consider the solution to <span class="math notranslate nohighlight">\(x_1\)</span> then in <span class="math notranslate nohighlight">\(de - bf\)</span> we can see that the constant values <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(f\)</span> are included and we have the subtraction of two products which is similar to the determinant of a <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix, i.e.,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    de - bf = \begin{vmatrix} e &amp; b \\ f &amp; d \end{vmatrix}.
+\end{align*}\]</div>
+<p>Doing similar for the solution to <span class="math notranslate nohighlight">\(x_2\)</span> we see that the numerator is</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    af - ce = \begin{vmatrix} a &amp; e \\ c &amp; f \end{vmatrix}.
+\end{align*}\]</div>
+<p>These determinants are simply the coefficient matrix <span class="math notranslate nohighlight">\(\begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}\)</span> with first and second columns replaced by the constant vector <span class="math notranslate nohighlight">\(\begin{pmatrix} e \\ f \end{pmatrix}\)</span> for <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span> respectively. This can be extended to larger systems to give us Cramer’s rule.</p>
+<div class="important admonition" id="cramers-rule-theorem">
+<p class="admonition-title">Theorem: Cramer’s rule</p>
+<p>The solution to a non-singular linear system of equations of the form <span class="math notranslate nohighlight">\(A\mathbf{x}=\mathbf{b}\)</span> can be calculated using Cramer’s rule which is</p>
+<div class="math notranslate nohighlight" id="equation-cramers-rule-equation">
+<span class="eqno">(8)<a class="headerlink" href="#equation-cramers-rule-equation" title="Permalink to this equation">#</a></span>\[x_i = \frac{\det(A_i)}{\det(A)},\]</div>
+<p>where <span class="math notranslate nohighlight">\(A_i\)</span> is a matrix obtained by replacing column <span class="math notranslate nohighlight">\(i\)</span> of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</p>
 </div>
-<div class="seealso admonition" id="partial-pivoting-example">
-<p class="admonition-title">Example 2.5</p>
-<p>Solve the system of linear equations using Gaussian elimination with partial pivoting.</p>
+<p><strong>Proof</strong></p>
+<p><em>Consider the solution to the linear system <span class="math notranslate nohighlight">\(A\mathbf{x} = \mathbf{b}\)</span> where <span class="math notranslate nohighlight">\(A\)</span> is non-singular then the solution for the first variable <span class="math notranslate nohighlight">\(x_1\)</span> is</em></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    \begin{array}{rcl}
-        x_1 - x_2 + 3x_3 &amp;=&amp; 13, \\
-        4x_1 - 2x_2 + x_3 &amp;=&amp; 15, \\
-        -3x_1 - x_2 + 4x_3 &amp;=&amp; 8.
-    \end{array}
+    x_1 = \det 
+    \begin{pmatrix} 
+        x_1 &amp; 0 &amp; \cdots &amp; 0 \\
+        x_2 &amp; 1 &amp; \cdots &amp; 0 \\
+        \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+        x_n &amp; 0 &amp; \cdots &amp; 1
+    \end{pmatrix} = \det(X_1).
 \end{align*}\]</div>
+<p><em>Since <span class="math notranslate nohighlight">\(\mathbf{x} = A^{-1}\mathbf{b}\)</span> and <span class="math notranslate nohighlight">\(I = A^{-1}A\)</span> then the matrix <span class="math notranslate nohighlight">\(X_1\)</span> can be written as</em></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    X_1 = \begin{pmatrix} A^{-1}\mathbf{b} &amp; A^{-1} \mathbf{a}_2 &amp; \cdots &amp; A^{-1} \mathbf{a}_n \end{pmatrix},
+\end{align*}\]</div>
+<p><em>where <span class="math notranslate nohighlight">\(\mathbf{a}_i\)</span> is the <span class="math notranslate nohighlight">\(i\)</span>th column of <span class="math notranslate nohighlight">\(A\)</span>. Since <span class="math notranslate nohighlight">\(A_1\)</span> in equation <a class="reference internal" href="#equation-cramers-rule-equation">(8)</a> is <span class="math notranslate nohighlight">\(A_1 = \begin{pmatrix} \mathbf{b} &amp; \mathbf{a}_2 &amp; \cdots &amp; \mathbf{a}_n \end{pmatrix}\)</span> then <span class="math notranslate nohighlight">\(X_1 = A^{-1}A_1\)</span>. Using the property of determinant where the determinant of a product of two matrices is equal to the product of the determinants  then</em></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    x_1 = \det(X_1) = \det(A^{-1}A_1) = \det(A^{-1})\det(A_1) = \frac{\det(A_1)}{\det(A)}.
+\end{align*}\]</div>
+<p><em>Doing similar for the other variables completes the proof.</em> <div style="text-align: right"> □ </div></p>
+<div class="seealso admonition" id="cramers-rule-example">
+<p class="admonition-title">Example 2.3</p>
+<p>Solve the following systems of linear equations using Cramer’s rule</p>
+<p>  (i)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
+    3x_1 - 2x_2 &amp;= -4, \\
+    x_1 - 3x_2 &amp;= 1.
+\end{array}\)</span></p>
+<p>  (ii)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
+    -2x_1 - 3x_2 - x_3 &amp;= -5, \\
+    -4x_1 + 4x_2 + 3x_3 &amp;= -20, \\
+    -3x_1 &amp;= -12.
+\end{array}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -618,52 +624,71 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">(i)   <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 3 &amp; -2 \\ 1 &amp; -3 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b} = \begin{pmatrix} -4 \\ 1 \end{pmatrix}\)</span></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    &amp; \left(\begin{array}{ccc|c} 
-        1 &amp; -1 &amp; 3 &amp; 13 \\
-        4 &amp; -2 &amp; 1 &amp; 15\\
-        -3 &amp; -1 &amp; 4 &amp; 8
-    \end{array} \right) 
-    \begin{array}{l} R_1 \leftrightarrow R_2 \end{array} \\ \\
-    \longrightarrow \quad &amp;
-    \left( \begin{array}{ccc|c}
-        4 &amp; -2 &amp; 1 &amp; 15\\ 
-        1 &amp; -1 &amp; 3 &amp; 13 \\
-        -3 &amp; -1 &amp; 4 &amp; 8
-    \end{array} \right)
-    \begin{array}{l} \\  R_2 - \frac{1}{4}R_1 \\[1pt]  R_3 + \frac{3}{4}R_1 \end{array} \\ \\
-    \longrightarrow \quad &amp;
-    \left( \begin{array}{ccc|c}
-        4 &amp; -2 &amp; 1 &amp; 15\\ 
-        0 &amp; -\frac{1}{2} &amp; \frac{11}{4} &amp; \frac{37}{4} \\
-        0 &amp; -\frac{5}{2} &amp; \frac{19}{4} &amp; \frac{77}{4}
-    \end{array} \right)
-    \begin{array}{l} \\ R_2 \leftrightarrow R_3 \\ \phantom{x} \end{array} \\ \\
-    \longrightarrow \quad &amp;
-    \left( \begin{array}{ccc|c}
-        4 &amp; -2 &amp; 1 &amp; 15\\ 
-        0 &amp; -\frac{5}{2} &amp; \frac{19}{4} &amp; \frac{77}{4} \\
-        0 &amp; -\frac{1}{2} &amp; \frac{11}{4} &amp; \frac{37}{4}
-    \end{array} \right)
-    \begin{array}{l} \\ \\ R_3 - \frac{1}{5}R_2 \end{array} \\ \\
-    \longrightarrow \quad &amp;
-    \left( \begin{array}{ccc|c}
-        4 &amp; -2 &amp; 1 &amp; 15\\ 
-        0 &amp; -\frac{5}{2} &amp; \frac{19}{4} &amp; \frac{77}{4} \\
-        0 &amp; 0 &amp; \frac{9}{5} &amp; \frac{27}{5}
-    \end{array} \right)
-    \begin{array}{l} \\ \\ R_3 - \frac{1}{5}R_2 \end{array}
+    x_1 &amp;= \frac{
+    \begin{vmatrix} -4 &amp; -2 \\ 1 &amp; -3 \end{vmatrix}}
+    {\begin{vmatrix} 3 &amp; -2 \\ 1 &amp; -3 \end{vmatrix}} = \frac{14}{-7} = -2,  \\
+    \\
+    x_2 &amp;= \frac{\begin{vmatrix} 3 &amp; -4 \\ 1 &amp; 1 \end{vmatrix}}{-7} = 
+    \frac{7}{-7} = -1.
 \end{align*}\]</div>
-<p class="sd-card-text">Solving for <span class="math notranslate nohighlight">\(x_3\)</span>, <span class="math notranslate nohighlight">\(x_2\)</span> and <span class="math notranslate nohighlight">\(x_1\)</span> using back substitution</p>
+<p class="sd-card-text">Check solution:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    x_3 &amp;= \frac{5}{9}\left( \frac{27}{5} \right) = 3, \\
-    x_2 &amp;= -\frac{2}{5} \left( \frac{77}{4} - \frac{19}{4}(3)\right) = -2, \\
-    x_1 &amp;= \frac{1}{4}( 15 + 2(-2) - 3) = 2. 
+    A\mathbf{x} = \begin{pmatrix} 3 &amp; -2 \\ 1 &amp; -3 \end{pmatrix}
+    \begin{pmatrix} -2 \\ -1 \end{pmatrix} =
+    \begin{pmatrix} -4 \\ 1 \end{pmatrix} = \mathbf{b} \qquad \checkmark
+\end{align*}\]</div>
+<p class="sd-card-text">(ii)   <span class="math notranslate nohighlight">\(A = \begin{pmatrix} -2 &amp; -3 &amp; -1 \\ -4 &amp; 4 &amp; 3 \\ -3 &amp; 0 &amp; 0 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b} = \begin{pmatrix} -5 \\ -20 \\ -12 \end{pmatrix}\)</span></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    x_1 &amp;= \frac{
+    \begin{vmatrix}-5 &amp; -3 &amp; -1 \\ -20 &amp; 4 &amp; 3 \\ -12 &amp; 0 &amp; 0 \end{vmatrix}}
+    {\begin{vmatrix} -2 &amp; -3 &amp; -1 \\ -4 &amp; 4 &amp; 3 \\ -3 &amp; 0 &amp; 0 \end{vmatrix}}
+    = \frac{-12
+    \begin{vmatrix} -3 &amp; -1 \\ 4 &amp; 3 \end{vmatrix}}
+    {-3\begin{vmatrix} -3 &amp; -1 \\ 4 &amp; 3 \end{vmatrix}} \\
+    &amp;= \frac{-12(-5)}{-3(-5)} = \frac{60}{15} = 4,\\ \\
+    x_2 &amp;= \frac{
+    \begin{vmatrix} -2 &amp; -5 &amp; -1 \\ -4 &amp; -20 &amp; 3 \\ -3 &amp; -12 &amp; 0 \end{vmatrix}}{15} 
+    = \frac{-\begin{vmatrix} -4 &amp; -20 \\ -3 &amp; -12 \end{vmatrix} 
+    - 3\begin{vmatrix}-2 &amp; -5 \\ -3 &amp; -12 \end{vmatrix}}{15}  \\
+    &amp;= \frac{12 - 3(9)}{15} = \frac{-15}{15} = -1, \\ \\
+    x_3 &amp;= \frac{
+    \begin{vmatrix} -2 &amp; -3 &amp; - 5 \\ -4 &amp; 4 &amp; -20 \\ -3 &amp; 0 &amp; -12 \end{vmatrix}}{15}
+    =\frac{-3\begin{vmatrix} -3 &amp; -5 \\ 4 &amp; -20 \end{vmatrix} - 
+    12\begin{vmatrix} -2 &amp; -3 \\ -4 &amp; 4 \end{vmatrix}}{15} \\
+    &amp; = \frac{-3(80) - 12(-20)}{15} = \frac{0}{15} = 0.
+\end{align*}\]</div>
+<p class="sd-card-text">Check solution:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    A\mathbf{x} = 
+    \begin{pmatrix} -2 &amp; -3 &amp; -1 \\ -4 &amp; 4 &amp; 3 \\ -3 &amp; 0 &amp; 0 \end{pmatrix}
+    \begin{pmatrix} 4 \\ -1 \\ 0 \end{pmatrix} =
+    \begin{pmatrix} -5 \\ -20 \\ -12 \end{pmatrix} = \mathbf{b} \qquad \checkmark
 \end{align*}\]</div>
 </div>
 </details></div>
+<p><strong>Proof</strong></p>
+<p>*The solution to a system of linear equations <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span> can be calculated using <span class="math notranslate nohighlight">\(\mathbf{x} = A^{-1} \mathbf{b}\)</span> where <span class="math notranslate nohighlight">\(A^{-1}\)</span> is the inverse of the coefficient matrix <span class="math notranslate nohighlight">\(A\)</span>. The adjoint-determinant formula for calculating the inverse is</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    A^{-1} = \frac{\operatorname{adj}(A)}{\det(A)},
+\end{align*}\]</div>
+<p>so</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \mathbf{x} =  \frac{1}{\det(A)} \operatorname{adj}(A) \mathbf{b}.
+\end{align*}\]</div>
+<p>We need to show that <span class="math notranslate nohighlight">\(\operatorname{adj}(A) \mathbf{b} = \det(A_i)\)</span> where <span class="math notranslate nohighlight">\(A_i\)</span> is the matrix formed by replacing the <span class="math notranslate nohighlight">\(i\)</span> column of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>. Since <span class="math notranslate nohighlight">\(\operatorname{adj}(A) = C^T\)</span> where <span class="math notranslate nohighlight">\(C\)</span> is the matrix of co-factors. Let <span class="math notranslate nohighlight">\([C^T]_i\)</span> by the <span class="math notranslate nohighlight">\(i\)</span> row of <span class="math notranslate nohighlight">\(C^T\)</span> then for the <span class="math notranslate nohighlight">\(i\)</span> element of <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> we have</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    x_i = \frac{1}{\det(A)} [C^T]_i \mathbf{b} = \frac{1}{\det(A)} \sum_{j=1}^n
+\end{align*}\]</div>
+<p>*<div style="text-align: right"> □ </div></p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -693,17 +718,17 @@ Solution<div class="sd-summary-down docutils">
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="2.3_Gaussian_elimination.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="2.2_Cramers_rule.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Gaussian elimination</p>
+            <p class="prev-next-title">Cramer’s rule</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="2.5_Gauss_Jordan_elimination.html" title="next page">
+    <a class='right-next' id="next-link" href="2.3_Gaussian_elimination.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Gauss-Jordan elimination</p>
+        <p class="prev-next-title">Gaussian elimination</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
