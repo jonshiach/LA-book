@@ -21,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -37,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -50,8 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/2_Systems_of_Linear_Equations/2.2_Cramers_rule.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -587,7 +587,7 @@ title="Print to PDF"
 <p><em>so</em></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    \mathbf{x} =  \frac{1}{\det(A)} \operatorname{adj}(A) \mathbf{b}.
+    \mathbf{x} = \frac{1}{\det(A)} \operatorname{adj}(A) \mathbf{b}.
 \end{align*}\]</div>
 <p><em>Since <span class="math notranslate nohighlight">\(\operatorname{adj}(A) = C^T\)</span> where <span class="math notranslate nohighlight">\(C\)</span> is the matrix of <a class="reference internal" href="../1_Matrices/1.4_Determinants.html#cofactor-definition"><span class="std std-ref">co-factors</span></a></em></p>
 <div class="amsmath math notranslate nohighlight">
@@ -599,12 +599,12 @@ title="Print to PDF"
         C_{1n} &amp; C_{2n} &amp; \cdots &amp; C_{nn}
     \end{pmatrix}.
 \end{align*}\]</div>
-<p><em>then for the <span class="math notranslate nohighlight">\(i\)</span> element of <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> using the <a class="reference internal" href="../1_Matrices/1.1_Matrix_multiplication.html#matrix-multiplication-definition"><span class="std std-ref">definition of matrix multiplication</span></a> we have</em></p>
+<p><em>then for the <span class="math notranslate nohighlight">\(i\)</span>th element of <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> using the <a class="reference internal" href="../1_Matrices/1.1_Matrix_multiplication.html#matrix-multiplication-definition"><span class="std std-ref">definition of matrix multiplication</span></a> we have</em></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     x_i = \frac{1}{\det(A)} \sum_{j=1}^n C_{ji} b_j
 \end{align*}\]</div>
-<p><em>In Cramer’s rule, <span class="math notranslate nohighlight">\(A_i\)</span> is the matrix formed by replacing column <span class="math notranslate nohighlight">\(i\)</span> of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\mathbf{b}\)</span></em></p>
+<p><em>In Cramer’s rule, <span class="math notranslate nohighlight">\(A_i\)</span> is the matrix formed by replacing the <span class="math notranslate nohighlight">\(i\)</span>th column of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\mathbf{b}\)</span></em></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     A_i = \begin{pmatrix}

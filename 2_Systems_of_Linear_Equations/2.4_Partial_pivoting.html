@@ -21,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -37,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -50,8 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/2_Systems_of_Linear_Equations/2.4_Partial_pivoting.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -542,12 +542,12 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="partial-pivoting">
 <span id="partial-pivoting-section"></span><h1>Partial pivoting<a class="headerlink" href="#partial-pivoting" title="Permalink to this headline">#</a></h1>
 <p>In most practical applications of row reduction to solve a linear system we use computers to perform the calculations. Computers use floating point numbers to compute arithmetic operations which are not exact and can be prone to rounding errors. Consider the following linear system of equations</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c7f44edd-fbe4-4ce4-ac5e-0c77ab5fef15">
-<span class="eqno">(7)<a class="headerlink" href="#equation-c7f44edd-fbe4-4ce4-ac5e-0c77ab5fef15" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f3e0bc29-09fd-4bff-ba8e-4d24416b4a31">
+<span class="eqno">(7)<a class="headerlink" href="#equation-f3e0bc29-09fd-4bff-ba8e-4d24416b4a31" title="Permalink to this equation">#</a></span>\[\begin{align}
   \begin{pmatrix}0.0001 &amp; 1 \\ 1 &amp; 1 \end{pmatrix}\begin{pmatrix} x_1 \\ x_2 \end{pmatrix}= 
   \begin{pmatrix}1 \\ 2 \end{pmatrix}.
 \end{align}\]</div>
-<p>Using Gaussian elimination but rounding all calculations to 4 decimal place accuracy we have</p>
+<p>Using Gaussian elimination to solve this system</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     &amp; \left( \begin{array}{cc|c} 
@@ -564,10 +564,10 @@ title="Print to PDF"
     \longrightarrow \quad &amp;
     \left( \begin{array}{cc|c} 
         0.0001 &amp; 1 &amp; 1 \\
-        0 &amp; 1 &amp; 1.0000
+        0 &amp; 1 &amp; 0.9998\dot{9}
     \end{array} \right).
 \end{align*}\]</div>
-<p>So <span class="math notranslate nohighlight">\(x_2= 1.000\)</span> and using back substitution we have <span class="math notranslate nohighlight">\(x_1 = 0\)</span>. However, checking our solution with the original system we see that this does not satisfy the second equation <span class="math notranslate nohighlight">\(x_1 + x_2 = 2\)</span>. The problem is that our first pivot element of 0.0001 was small compared with the value below which produced large values when adding multiples of the pivot row to the other rows.</p>
+<p>So <span class="math notranslate nohighlight">\(x_2 = 0.9998\dot{9}\)</span>. However, if we were to round this to four decimal places then <span class="math notranslate nohighlight">\(x_2 = 1.000\)</span> and using back substitution we have <span class="math notranslate nohighlight">\(x_1 = \dfrac{1}{0.0001}(1 - 1) = 0\)</span>. However, checking our solution with the original system we see that this does not satisfy the second equation <span class="math notranslate nohighlight">\(x_1 + x_2 = 2\)</span>. The problem is that our first pivot element of 0.0001 was small compared with the value below which produced large values when adding multiples of the pivot row to the other rows.</p>
 <p>To overcome this we can perform a row swap so that the pivot element is larger than the value below</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
@@ -588,7 +588,7 @@ title="Print to PDF"
         0 &amp; 0.9999 &amp; 0.9998
     \end{array} \right)
 \end{align*}\]</div>
-<p>So <span class="math notranslate nohighlight">\(x_2 = 1.000\)</span> as before but using back substitution we now have <span class="math notranslate nohighlight">\(x_1 = 1.000\)</span> which is consistent with the original system. This process is called <em>partial pivoting</em> and it’s where we perform a row swap to ensure that the pivot element has a larger absolute value from the elements in the column beneath the pivot.</p>
+<p>Solving using back substitution we have <span class="math notranslate nohighlight">\(x_2 = \dfrac{0.9998}{0.9999} = 0.9998\dot{9}\)</span> which rounded to four decimal places is <span class="math notranslate nohighlight">\(x_2 = 1.0000\)</span> as before. However, this time using back substitution we now have <span class="math notranslate nohighlight">\(x_1 = 2 - 1.0000 = 1.0000\)</span> which is consistent with the original system. This process is called <em>partial pivoting</em> and it’s where we perform a row swap to ensure that the pivot element has a larger absolute value from the elements in the column beneath the pivot.</p>
 <div class="note admonition" id="ge-pp-definition">
 <p class="admonition-title">Definition: Gaussian elimination with partial pivoting</p>
 <p>To row reduce an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> to reduced row echelon form using Gaussian elimination with partial pivoting we do the following:</p>
