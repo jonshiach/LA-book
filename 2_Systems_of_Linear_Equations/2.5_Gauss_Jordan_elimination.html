@@ -695,9 +695,13 @@ Solution<div class="sd-summary-down docutils">
 <p class="sd-card-text">Therefore the solution is <span class="math notranslate nohighlight">\(x_1 = 1\)</span>, <span class="math notranslate nohighlight">\(x_2 = -10\)</span> and <span class="math notranslate nohighlight">\(x_3 = -4\)</span>.</p>
 </div>
 </details></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When using Gauss-Jordan elimination with partial pivoting the row operations for reducing the elements in the pivot column to zero are performed prior to dividing the pivot row by the pivot.</p>
+</div>
 <section id="python-code">
 <h2>Python code<a class="headerlink" href="#python-code" title="Permalink to this headline">#</a></h2>
-<p>The Python code below defines the function <code class="docutils literal notranslate"><span class="pre">reff()</span></code> that uses Gauss-Jordan elimination to calculate the reduced row echelon form of a matrix <code class="docutils literal notranslate"><span class="pre">A</span></code>.</p>
+<p>The Python code below defines the function <code class="docutils literal notranslate"><span class="pre">rref()</span></code> that uses Gauss-Jordan elimination to calculate the reduced row echelon form of a matrix <code class="docutils literal notranslate"><span class="pre">A</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rref</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>    
