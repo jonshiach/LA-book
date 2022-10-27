@@ -151,7 +151,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../1_Matrices/1.0_Matrices.html">
+  <a class="reference internal" href="../1_Matrices/01_Introduction.html">
    Matrices
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -161,37 +161,47 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.1_Matrix_multiplication.html">
+    <a class="reference internal" href="../1_Matrices/02_Definition.html">
+     Definition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_Matrices/03_Basic_arithmetic_operations.html">
+     Basic arithmetic operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_Matrices/04_Matrix_multiplication.html">
      Matrix multiplication
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.2_Matrix_transpose.html">
+    <a class="reference internal" href="../1_Matrices/05_Matrix_transpose.html">
      Matrix transpose
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.3_Special_matrices.html">
+    <a class="reference internal" href="../1_Matrices/06_Special_matrices.html">
      Special matrices
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.4_Determinants.html">
+    <a class="reference internal" href="../1_Matrices/07_Determinants.html">
      Determinants
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.5_Inverse_matrix.html">
+    <a class="reference internal" href="../1_Matrices/08_Matrix_inverse.html">
      Inverse matrix
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.6_Matrix_algebra.html">
+    <a class="reference internal" href="../1_Matrices/09_Matrix_algebra.html">
      Matrix algebra
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.8_Matrices_exercises.html">
+    <a class="reference internal" href="../1_Matrices/10_Exercises.html">
      Matrices exercises
     </a>
    </li>
@@ -631,9 +641,9 @@ title="Print to PDF"
 <section id="matrices">
 <h2>Matrices<a class="headerlink" href="#matrices" title="Permalink to this headline">#</a></h2>
 <dl class="glossary">
-<dt id="term-Matrix">Matrix<a class="headerlink" href="#term-Matrix" title="Permalink to this term">#</a></dt><dd><p>A <a class="reference internal" href="../1_Matrices/1.0_Matrices.html#definition-of-a-matrix-section"><span class="std std-ref">matrix</span></a> is a rectangular array of elements.</p>
+<dt id="term-Matrix">Matrix<a class="headerlink" href="#term-Matrix" title="Permalink to this term">#</a></dt><dd><p>A <a class="reference internal" href="../1_Matrices/02_Definition.html#definition-of-a-matrix-section"><span class="std std-ref">matrix</span></a> is a rectangular array of elements.</p>
 </dd>
-<dt id="term-Matrix-indexing">Matrix indexing<a class="headerlink" href="#term-Matrix-indexing" title="Permalink to this term">#</a></dt><dd><p>If a matrix <span class="math notranslate nohighlight">\(A\)</span> has <span class="math notranslate nohighlight">\(m\)</span> rows and <span class="math notranslate nohighlight">\(n\)</span> columns then the elements of <span class="math notranslate nohighlight">\(A\)</span> are <a class="reference internal" href="../1_Matrices/1.0_Matrices.html#indexing-a-matrix-section"><span class="std std-ref">indexed</span></a> by <span class="math notranslate nohighlight">\(a_{ij}\)</span> where <span class="math notranslate nohighlight">\(i\)</span> denotes the row and <span class="math notranslate nohighlight">\(j\)</span> denotes the column. For example</p>
+<dt id="term-Matrix-indexing">Matrix indexing<a class="headerlink" href="#term-Matrix-indexing" title="Permalink to this term">#</a></dt><dd><p>If a matrix <span class="math notranslate nohighlight">\(A\)</span> has <span class="math notranslate nohighlight">\(m\)</span> rows and <span class="math notranslate nohighlight">\(n\)</span> columns then the elements of <span class="math notranslate nohighlight">\(A\)</span> are <a class="reference internal" href="../1_Matrices/02_Definition.html#indexing-a-matrix-section"><span class="std std-ref">indexed</span></a> by <span class="math notranslate nohighlight">\(a_{ij}\)</span> where <span class="math notranslate nohighlight">\(i\)</span> denotes the row and <span class="math notranslate nohighlight">\(j\)</span> denotes the column. For example</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*} 
     \begin{pmatrix} 
@@ -644,9 +654,9 @@ title="Print to PDF"
     \end{pmatrix}.
 \end{align*}\]</div>
 </dd>
-<dt id="term-Matrix-equality">Matrix equality<a class="headerlink" href="#term-Matrix-equality" title="Permalink to this term">#</a></dt><dd><p>Two <span class="math notranslate nohighlight">\(m \times n\)</span> matrices are <a class="reference internal" href="../1_Matrices/1.0_Matrices.html#matrix-equality-definition"><span class="std std-ref">equal</span></a> if their corresponding elements have the same value.</p>
+<dt id="term-Matrix-equality">Matrix equality<a class="headerlink" href="#term-Matrix-equality" title="Permalink to this term">#</a></dt><dd><p>Two <span class="math notranslate nohighlight">\(m \times n\)</span> matrices are <a class="reference internal" href="../1_Matrices/03_Basic_arithmetic_operations.html#matrix-equality-definition"><span class="std std-ref">equal</span></a> if their corresponding elements have the same value.</p>
 </dd>
-<dt id="term-Addition-subtraction">Addition/subtraction<a class="headerlink" href="#term-Addition-subtraction" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference internal" href="../1_Matrices/1.0_Matrices.html#matrix-addition-definition"><span class="std std-ref">addition or subtraction</span></a> of two <span class="math notranslate nohighlight">\(n \times m\)</span> matrices is calculated by adding and subtracting corresponding elements. For example</p>
+<dt id="term-Addition-subtraction">Addition/subtraction<a class="headerlink" href="#term-Addition-subtraction" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference internal" href="../1_Matrices/03_Basic_arithmetic_operations.html#matrix-addition-definition"><span class="std std-ref">addition or subtraction</span></a> of two <span class="math notranslate nohighlight">\(n \times m\)</span> matrices is calculated by adding and subtracting corresponding elements. For example</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*} 
     A + B = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} + 
@@ -654,14 +664,14 @@ title="Print to PDF"
     = \begin{pmatrix} 6 &amp; 8 \\ 10 &amp; 12 \end{pmatrix}.
 \end{align*}\]</div>
 </dd>
-<dt id="term-Multiplication-by-a-scalar">Multiplication by a scalar<a class="headerlink" href="#term-Multiplication-by-a-scalar" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference internal" href="../1_Matrices/1.0_Matrices.html#scalar-multiplication-of-a-matrix-definition"><span class="std std-ref">scalar multiplication</span></a> of a matrix by a scalar is calculated by multiplying each element in the matrix by the scalar.</p>
+<dt id="term-Multiplication-by-a-scalar">Multiplication by a scalar<a class="headerlink" href="#term-Multiplication-by-a-scalar" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference internal" href="../1_Matrices/03_Basic_arithmetic_operations.html#scalar-multiplication-of-a-matrix-definition"><span class="std std-ref">scalar multiplication</span></a> of a matrix by a scalar is calculated by multiplying each element in the matrix by the scalar.</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*} 
     3 A = 3 \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} 
     = \begin{pmatrix} 3 &amp; 6 \\ 9 &amp; 12 \end{pmatrix}.
 \end{align*}\]</div>
 </dd>
-<dt id="term-Matrix-multiplication">Matrix multiplication<a class="headerlink" href="#term-Matrix-multiplication" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference internal" href="../1_Matrices/1.1_Matrix_multiplication.html#matrix-multiplication-definition"><span class="std std-ref">multiplication</span></a> of an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> and an <span class="math notranslate nohighlight">\(p \times q\)</span> matrix <span class="math notranslate nohighlight">\(B\)</span> where <span class="math notranslate nohighlight">\(n = p\)</span> results in an <span class="math notranslate nohighlight">\(m \times q\)</span> matrix calculated using <span class="math notranslate nohighlight">\([AB]_{ij} = \displaystyle\sum_{k=1}^n a_{ik}b_{kj}\)</span> for <span class="math notranslate nohighlight">\(i = 1, \ldots, m\)</span> and <span class="math notranslate nohighlight">\(j = 1, \ldots, q\)</span>. For example</p>
+<dt id="term-Matrix-multiplication">Matrix multiplication<a class="headerlink" href="#term-Matrix-multiplication" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference internal" href="../1_Matrices/04_Matrix_multiplication.html#matrix-multiplication-definition"><span class="std std-ref">multiplication</span></a> of an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> and an <span class="math notranslate nohighlight">\(p \times q\)</span> matrix <span class="math notranslate nohighlight">\(B\)</span> where <span class="math notranslate nohighlight">\(n = p\)</span> results in an <span class="math notranslate nohighlight">\(m \times q\)</span> matrix calculated using <span class="math notranslate nohighlight">\([AB]_{ij} = \displaystyle\sum_{k=1}^n a_{ik}b_{kj}\)</span> for <span class="math notranslate nohighlight">\(i = 1, \ldots, m\)</span> and <span class="math notranslate nohighlight">\(j = 1, \ldots, q\)</span>. For example</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     AB &amp;= \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} 
@@ -670,21 +680,21 @@ title="Print to PDF"
     &amp;= \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; 50 \end{pmatrix}.
 \end{align*}\]</div>
 </dd>
-<dt id="term-Matrix-exponent">Matrix exponent<a class="headerlink" href="#term-Matrix-exponent" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference internal" href="../1_Matrices/1.1_Matrix_multiplication.html#matrix-exponents-definition"><span class="std std-ref">exponent</span></a> of the matrix <span class="math notranslate nohighlight">\(A\)</span> is calculated using <span class="math notranslate nohighlight">\(A^k = \underbrace{AA \cdots A}_{k}\)</span>. For example</p>
+<dt id="term-Matrix-exponent">Matrix exponent<a class="headerlink" href="#term-Matrix-exponent" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference internal" href="../1_Matrices/04_Matrix_multiplication.html#matrix-exponents-definition"><span class="std std-ref">exponent</span></a> of the matrix <span class="math notranslate nohighlight">\(A\)</span> is calculated using <span class="math notranslate nohighlight">\(A^k = \underbrace{AA \cdots A}_{k}\)</span>. For example</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     A^2 = AA = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}
     = \begin{pmatrix} 7 &amp; 10 \\ 15 &amp; 22 \end{pmatrix}
 \end{align*}\]</div>
 </dd>
-<dt id="term-Matrix-transpose">Matrix transpose<a class="headerlink" href="#term-Matrix-transpose" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference internal" href="../1_Matrices/1.2_Matrix_transpose.html#matrix-transpose-definition"><span class="std std-ref">transpose</span></a> of an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\(n \times m\)</span> matrix <span class="math notranslate nohighlight">\(A^\mathrm{T}\)</span> defined by <span class="math notranslate nohighlight">\([A^\mathrm{T}]_{ij} = a_{ji}\)</span>. For example</p>
+<dt id="term-Matrix-transpose">Matrix transpose<a class="headerlink" href="#term-Matrix-transpose" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference internal" href="../1_Matrices/05_Matrix_transpose.html#matrix-transpose-definition"><span class="std std-ref">transpose</span></a> of an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\(n \times m\)</span> matrix <span class="math notranslate nohighlight">\(A^\mathrm{T}\)</span> defined by <span class="math notranslate nohighlight">\([A^\mathrm{T}]_{ij} = a_{ji}\)</span>. For example</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     A^\mathrm{T} = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}^\mathrm{T} = 
     \begin{pmatrix} 1 &amp; 3 \\ 2 &amp; 4 \end{pmatrix}.
 \end{align*}\]</div>
 </dd>
-<dt id="term-Diagonal-matrix">Diagonal matrix<a class="headerlink" href="#term-Diagonal-matrix" title="Permalink to this term">#</a></dt><dd><p>An <span class="math notranslate nohighlight">\(n \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> is said to be a <a class="reference internal" href="../1_Matrices/1.3_Special_matrices.html#diagonal-matrix-definition"><span class="std std-ref">diagonal matrix</span></a> if all of the elements have a value of zero except the elements on the main diagonal <span class="math notranslate nohighlight">\(a_{ii}\)</span> for <span class="math notranslate nohighlight">\(i = 1, \ldots, n\)</span>. For example</p>
+<dt id="term-Diagonal-matrix">Diagonal matrix<a class="headerlink" href="#term-Diagonal-matrix" title="Permalink to this term">#</a></dt><dd><p>An <span class="math notranslate nohighlight">\(n \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> is said to be a <a class="reference internal" href="../1_Matrices/06_Special_matrices.html#diagonal-matrix-definition"><span class="std std-ref">diagonal matrix</span></a> if all of the elements have a value of zero except the elements on the main diagonal <span class="math notranslate nohighlight">\(a_{ii}\)</span> for <span class="math notranslate nohighlight">\(i = 1, \ldots, n\)</span>. For example</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*} 
     \begin{pmatrix} 
@@ -694,7 +704,7 @@ title="Print to PDF"
     \end{pmatrix}
 \end{align*}\]</div>
 </dd>
-<dt id="term-Zero-matrix">Zero matrix<a class="headerlink" href="#term-Zero-matrix" title="Permalink to this term">#</a></dt><dd><p>A <a class="reference internal" href="../1_Matrices/1.3_Special_matrices.html#zero-matrix-definition"><span class="std std-ref">zero matrix</span></a> is a matrix where all of the elements have a value of zero. For example</p>
+<dt id="term-Zero-matrix">Zero matrix<a class="headerlink" href="#term-Zero-matrix" title="Permalink to this term">#</a></dt><dd><p>A <a class="reference internal" href="../1_Matrices/06_Special_matrices.html#zero-matrix-definition"><span class="std std-ref">zero matrix</span></a> is a matrix where all of the elements have a value of zero. For example</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*} 
     \mathbf{0}_{2\times 3} = \begin{pmatrix} 
@@ -703,35 +713,35 @@ title="Print to PDF"
     \end{pmatrix}
 \end{align*}\]</div>
 </dd>
-<dt id="term-Identity-matrix">Identity matrix<a class="headerlink" href="#term-Identity-matrix" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference internal" href="../1_Matrices/1.3_Special_matrices.html#identity-matrix-definition"><span class="std std-ref">identity matrix</span></a> is a diagonal matrix <span class="math notranslate nohighlight">\(I\)</span> such that <span class="math notranslate nohighlight">\(AI = IA = A\)</span> where the elements on the main diagonal all have a value of 1.</p>
+<dt id="term-Identity-matrix">Identity matrix<a class="headerlink" href="#term-Identity-matrix" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference internal" href="../1_Matrices/06_Special_matrices.html#identity-matrix-definition"><span class="std std-ref">identity matrix</span></a> is a diagonal matrix <span class="math notranslate nohighlight">\(I\)</span> such that <span class="math notranslate nohighlight">\(AI = IA = A\)</span> where the elements on the main diagonal all have a value of 1.</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     I_3 = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
 \end{align*}\]</div>
 </dd>
-<dt id="term-Symmetric-matrix">Symmetric matrix<a class="headerlink" href="#term-Symmetric-matrix" title="Permalink to this term">#</a></dt><dd><p>An <span class="math notranslate nohighlight">\(n \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> is said to be a <a class="reference internal" href="../1_Matrices/1.3_Special_matrices.html#symmetric-matrix-definition"><span class="std std-ref">symmetric matrix</span></a> if <span class="math notranslate nohighlight">\([A]_{ij} = [A]_{ji}\)</span></p>
+<dt id="term-Symmetric-matrix">Symmetric matrix<a class="headerlink" href="#term-Symmetric-matrix" title="Permalink to this term">#</a></dt><dd><p>An <span class="math notranslate nohighlight">\(n \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> is said to be a <a class="reference internal" href="../1_Matrices/06_Special_matrices.html#symmetric-matrix-definition"><span class="std std-ref">symmetric matrix</span></a> if <span class="math notranslate nohighlight">\([A]_{ij} = [A]_{ji}\)</span></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     \begin{pmatrix} a &amp; b &amp; c \\ b &amp; d &amp; e \\ c &amp; e &amp; f \end{pmatrix}
 \end{align*}\]</div>
 </dd>
-<dt id="term-Determinant-of-an-2-times-2-matrix">Determinant of an <span class="math notranslate nohighlight">\(2\times 2\)</span> matrix<a class="headerlink" href="#term-Determinant-of-an-2-times-2-matrix" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference internal" href="../1_Matrices/1.4_Determinants.html#x2-determinant-definition"><span class="std std-ref">determinant of an <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix</span></a> <span class="math notranslate nohighlight">\(A\)</span> is calculated using <span class="math notranslate nohighlight">\(\det \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} = \begin{vmatrix} a &amp; b \\ c &amp; d \end{vmatrix} = ad - bc\)</span>. For example</p>
+<dt id="term-Determinant-of-an-2-times-2-matrix">Determinant of an <span class="math notranslate nohighlight">\(2\times 2\)</span> matrix<a class="headerlink" href="#term-Determinant-of-an-2-times-2-matrix" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference internal" href="../1_Matrices/07_Determinants.html#x2-determinant-definition"><span class="std std-ref">determinant of an <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix</span></a> <span class="math notranslate nohighlight">\(A\)</span> is calculated using <span class="math notranslate nohighlight">\(\det \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} = \begin{vmatrix} a &amp; b \\ c &amp; d \end{vmatrix} = ad - bc\)</span>. For example</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     \det(A) = \begin{vmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{vmatrix} = 1(4) - 2(3) = -2
 \end{align*}\]</div>
 </dd>
-<dt id="term-Minor">Minor<a class="headerlink" href="#term-Minor" title="Permalink to this term">#</a></dt><dd><p>For an <span class="math notranslate nohighlight">\(n\times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span>, the value of the <a class="reference internal" href="../1_Matrices/1.4_Determinants.html#minor-definition"><span class="std std-ref">minor</span></a> for the element in row <span class="math notranslate nohighlight">\(i\)</span> and column <span class="math notranslate nohighlight">\(j\)</span>, <span class="math notranslate nohighlight">\(M_{ij}\)</span>, is the determinant of the matrix formed by omitting row <span class="math notranslate nohighlight">\(i\)</span> and column <span class="math notranslate nohighlight">\(j\)</span> from <span class="math notranslate nohighlight">\(A\)</span>. For example, for the matrix <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 0 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \end{pmatrix}\)</span></p>
+<dt id="term-Minor">Minor<a class="headerlink" href="#term-Minor" title="Permalink to this term">#</a></dt><dd><p>For an <span class="math notranslate nohighlight">\(n\times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span>, the value of the <a class="reference internal" href="../1_Matrices/07_Determinants.html#minor-definition"><span class="std std-ref">minor</span></a> for the element in row <span class="math notranslate nohighlight">\(i\)</span> and column <span class="math notranslate nohighlight">\(j\)</span>, <span class="math notranslate nohighlight">\(M_{ij}\)</span>, is the determinant of the matrix formed by omitting row <span class="math notranslate nohighlight">\(i\)</span> and column <span class="math notranslate nohighlight">\(j\)</span> from <span class="math notranslate nohighlight">\(A\)</span>. For example, for the matrix <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 0 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \end{pmatrix}\)</span></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     M_{21} = \begin{vmatrix} \square &amp; 0 &amp; 3 \\ \square &amp; \square &amp; \square \\ \square &amp; 8 &amp; 9 \end{vmatrix} = \begin{vmatrix} 0 &amp; 3 \\ 8 &amp; 9 \end{vmatrix} = -24.
 \end{align*}\]</div>
 </dd>
-<dt id="term-Co-factor">Co-factor<a class="headerlink" href="#term-Co-factor" title="Permalink to this term">#</a></dt><dd><p>For an <span class="math notranslate nohighlight">\(n\times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span>, the value of the <a class="reference internal" href="../1_Matrices/1.4_Determinants.html#cofactor-definition"><span class="std std-ref">cofactor</span></a> is <span class="math notranslate nohighlight">\(C_{ij} = (-1)^{i+j} M_{ij}\)</span>. For example, for the matrix <span class="math notranslate nohighlight">\(A\)</span> defined above</p>
+<dt id="term-Co-factor">Co-factor<a class="headerlink" href="#term-Co-factor" title="Permalink to this term">#</a></dt><dd><p>For an <span class="math notranslate nohighlight">\(n\times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span>, the value of the <a class="reference internal" href="../1_Matrices/07_Determinants.html#cofactor-definition"><span class="std std-ref">cofactor</span></a> is <span class="math notranslate nohighlight">\(C_{ij} = (-1)^{i+j} M_{ij}\)</span>. For example, for the matrix <span class="math notranslate nohighlight">\(A\)</span> defined above</p>
 <div class="math notranslate nohighlight">
 \[ C_{21} = (-1)^{2+1} M_{21} = (-1)^3 (-24) = 24. \]</div>
 </dd>
-<dt id="term-Determinant-of-an-n-times-n-matrix">Determinant of an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix<a class="headerlink" href="#term-Determinant-of-an-n-times-n-matrix" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference internal" href="../1_Matrices/1.4_Determinants.html#nxn-determinant-example"><span class="std std-ref">determinant of an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix</span></a> <span class="math notranslate nohighlight">\(A\)</span> is calculated using <span class="math notranslate nohighlight">\(\det(A) = \displaystyle\sum_{i = 1}^n a_{ij} C_{ij}\)</span> for <span class="math notranslate nohighlight">\(j \in \{1, \ldots, n\}\)</span> for <span class="math notranslate nohighlight">\(C_{ij}\)</span> is the co-factor for the element <span class="math notranslate nohighlight">\(a_{ij}\)</span>. For example, for the matrix <span class="math notranslate nohighlight">\(A\)</span> defined above</p>
+<dt id="term-Determinant-of-an-n-times-n-matrix">Determinant of an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix<a class="headerlink" href="#term-Determinant-of-an-n-times-n-matrix" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference internal" href="../1_Matrices/07_Determinants.html#nxn-determinant-example"><span class="std std-ref">determinant of an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix</span></a> <span class="math notranslate nohighlight">\(A\)</span> is calculated using <span class="math notranslate nohighlight">\(\det(A) = \displaystyle\sum_{i = 1}^n a_{ij} C_{ij}\)</span> for <span class="math notranslate nohighlight">\(j \in \{1, \ldots, n\}\)</span> for <span class="math notranslate nohighlight">\(C_{ij}\)</span> is the co-factor for the element <span class="math notranslate nohighlight">\(a_{ij}\)</span>. For example, for the matrix <span class="math notranslate nohighlight">\(A\)</span> defined above</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     \begin{vmatrix} 1 &amp; 0 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \end{vmatrix} 
@@ -742,16 +752,16 @@ title="Print to PDF"
     &amp;= -12
 \end{align*}\]</div>
 </dd>
-<dt id="term-Inverse-matrix">Inverse matrix<a class="headerlink" href="#term-Inverse-matrix" title="Permalink to this term">#</a></dt><dd><p>For an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> such that <span class="math notranslate nohighlight">\(\det(A) \neq 0\)</span> then the <a class="reference internal" href="../1_Matrices/1.5_Inverse_matrix.html#inverse-matrix-definition"><span class="std std-ref">inverse matrix</span></a> is an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix <span class="math notranslate nohighlight">\(A^{-1}\)</span> such that <span class="math notranslate nohighlight">\(AA^{-1} = A^{-1}A = I\)</span>.</p>
+<dt id="term-Inverse-matrix">Inverse matrix<a class="headerlink" href="#term-Inverse-matrix" title="Permalink to this term">#</a></dt><dd><p>For an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> such that <span class="math notranslate nohighlight">\(\det(A) \neq 0\)</span> then the <a class="reference internal" href="../1_Matrices/08_Matrix_inverse.html#inverse-matrix-definition"><span class="std std-ref">inverse matrix</span></a> is an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix <span class="math notranslate nohighlight">\(A^{-1}\)</span> such that <span class="math notranslate nohighlight">\(AA^{-1} = A^{-1}A = I\)</span>.</p>
 </dd>
-<dt id="term-Adjoint-matrix">Adjoint matrix<a class="headerlink" href="#term-Adjoint-matrix" title="Permalink to this term">#</a></dt><dd><p>For an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> the <a class="reference internal" href="../1_Matrices/1.5_Inverse_matrix.html#adjoint-definition"><span class="std std-ref">adjoint matrix</span></a> is calculated using <span class="math notranslate nohighlight">\(\operatorname{adj}(A) = C^T\)</span>. For example for the matrix <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}\)</span></p>
+<dt id="term-Adjoint-matrix">Adjoint matrix<a class="headerlink" href="#term-Adjoint-matrix" title="Permalink to this term">#</a></dt><dd><p>For an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> the <a class="reference internal" href="../1_Matrices/08_Matrix_inverse.html#adjoint-definition"><span class="std std-ref">adjoint matrix</span></a> is calculated using <span class="math notranslate nohighlight">\(\operatorname{adj}(A) = C^T\)</span>. For example for the matrix <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}\)</span></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     \operatorname{adj}(A) = \begin{pmatrix} 4 &amp; -3 \\ -2 &amp; 1 \end{pmatrix}^\mathrm{T} =
     \begin{pmatrix} 4 &amp; -3 \\ -2 &amp; 1 \end{pmatrix}.
 \end{align*}\]</div>
 </dd>
-<dt id="term-The-adjoint-determinant-formula">The adjoint-determinant formula<a class="headerlink" href="#term-The-adjoint-determinant-formula" title="Permalink to this term">#</a></dt><dd><p>The inverse of a non-singular square matrix <span class="math notranslate nohighlight">\(A\)</span> can be calculated using the <a class="reference internal" href="../1_Matrices/1.5_Inverse_matrix.html#adjoint-determinant-formula-definition"><span class="std std-ref">adjoint-determinant formula</span></a> <span class="math notranslate nohighlight">\(A^{-1} = \dfrac{\operatorname{adj}(A)}{\det(A)}\)</span>. For example, for the matrix <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}\)</span></p>
+<dt id="term-The-adjoint-determinant-formula">The adjoint-determinant formula<a class="headerlink" href="#term-The-adjoint-determinant-formula" title="Permalink to this term">#</a></dt><dd><p>The inverse of a non-singular square matrix <span class="math notranslate nohighlight">\(A\)</span> can be calculated using the <a class="reference internal" href="../1_Matrices/08_Matrix_inverse.html#adjoint-determinant-formula-definition"><span class="std std-ref">adjoint-determinant formula</span></a> <span class="math notranslate nohighlight">\(A^{-1} = \dfrac{\operatorname{adj}(A)}{\det(A)}\)</span>. For example, for the matrix <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}\)</span></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     A^{-1} = \dfrac{1}{-2} \begin{pmatrix} 4 &amp; -3 \\ -2 &amp; 1 \end{pmatrix}

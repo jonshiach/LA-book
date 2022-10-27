@@ -151,7 +151,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../1_Matrices/1.0_Matrices.html">
+  <a class="reference internal" href="../1_Matrices/01_Introduction.html">
    Matrices
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -161,37 +161,47 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.1_Matrix_multiplication.html">
+    <a class="reference internal" href="../1_Matrices/02_Definition.html">
+     Definition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_Matrices/03_Basic_arithmetic_operations.html">
+     Basic arithmetic operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_Matrices/04_Matrix_multiplication.html">
      Matrix multiplication
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.2_Matrix_transpose.html">
+    <a class="reference internal" href="../1_Matrices/05_Matrix_transpose.html">
      Matrix transpose
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.3_Special_matrices.html">
+    <a class="reference internal" href="../1_Matrices/06_Special_matrices.html">
      Special matrices
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.4_Determinants.html">
+    <a class="reference internal" href="../1_Matrices/07_Determinants.html">
      Determinants
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.5_Inverse_matrix.html">
+    <a class="reference internal" href="../1_Matrices/08_Matrix_inverse.html">
      Inverse matrix
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.6_Matrix_algebra.html">
+    <a class="reference internal" href="../1_Matrices/09_Matrix_algebra.html">
      Matrix algebra
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.8_Matrices_exercises.html">
+    <a class="reference internal" href="../1_Matrices/10_Exercises.html">
      Matrices exercises
     </a>
    </li>
@@ -547,7 +557,7 @@ title="Print to PDF"
 <p><span class="caption-number">Fig. 1 </span><span class="caption-text"><a class="reference external" href="https://en.wikipedia.org/wiki/Gabriel_Cramer">Gabriel Cramer (1704 - 1752)</a></span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p><strong>Cramer’s rule</strong>, named after Swiss mathematician <a class="reference external" href="https://en.wikipedia.org/wiki/Gabriel_Cramer">Gabriel Cramer</a>, is an explicit rule for calculating the solution to a system of linear equations using determinants. We saw in the section on <a class="reference internal" href="../1_Matrices/1.4_Determinants.html#determinant-section"><span class="std std-ref">determinants</span></a> that the solution to the system of linear equations</p>
+<p><strong>Cramer’s rule</strong>, named after Swiss mathematician <a class="reference external" href="https://en.wikipedia.org/wiki/Gabriel_Cramer">Gabriel Cramer</a>, is an explicit rule for calculating the solution to a system of linear equations using determinants. We saw in the section on <a class="reference internal" href="../1_Matrices/07_Determinants.html#determinant-section"><span class="std std-ref">determinants</span></a> that the solution to the system of linear equations</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}
@@ -579,7 +589,7 @@ title="Print to PDF"
 <p>where <span class="math notranslate nohighlight">\(A_i\)</span> is a matrix obtained by replacing column <span class="math notranslate nohighlight">\(i\)</span> of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</p>
 </div>
 <p><strong>Proof</strong> (from <a class="reference external" href="https://proofwiki.org/wiki/Cramer%27s_Rule">Proof Wiki</a>)</p>
-<p><em>The solution to a system of linear equations <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span> can be calculated using <span class="math notranslate nohighlight">\(\mathbf{x} = A^{-1} \mathbf{b}\)</span> where <span class="math notranslate nohighlight">\(A^{-1}\)</span> is the inverse of the coefficient matrix <span class="math notranslate nohighlight">\(A\)</span>. The <a class="reference internal" href="../1_Matrices/1.5_Inverse_matrix.html#adjoint-determinant-formula-definition"><span class="std std-ref">adjoint-determinant formula</span></a> for calculating the inverse is</em></p>
+<p><em>The solution to a system of linear equations <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span> can be calculated using <span class="math notranslate nohighlight">\(\mathbf{x} = A^{-1} \mathbf{b}\)</span> where <span class="math notranslate nohighlight">\(A^{-1}\)</span> is the inverse of the coefficient matrix <span class="math notranslate nohighlight">\(A\)</span>. The <a class="reference internal" href="../1_Matrices/08_Matrix_inverse.html#adjoint-determinant-formula-definition"><span class="std std-ref">adjoint-determinant formula</span></a> for calculating the inverse is</em></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     A^{-1} = \frac{\operatorname{adj}(A)}{\det(A)},
@@ -589,7 +599,7 @@ title="Print to PDF"
 \[\begin{align*}
     \mathbf{x} = \frac{1}{\det(A)} \operatorname{adj}(A) \mathbf{b}.
 \end{align*}\]</div>
-<p><em>Since <span class="math notranslate nohighlight">\(\operatorname{adj}(A) = C^T\)</span> where <span class="math notranslate nohighlight">\(C\)</span> is the matrix of <a class="reference internal" href="../1_Matrices/1.4_Determinants.html#cofactor-definition"><span class="std std-ref">co-factors</span></a></em></p>
+<p><em>Since <span class="math notranslate nohighlight">\(\operatorname{adj}(A) = C^T\)</span> where <span class="math notranslate nohighlight">\(C\)</span> is the matrix of <a class="reference internal" href="../1_Matrices/07_Determinants.html#cofactor-definition"><span class="std std-ref">co-factors</span></a></em></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     C^T = \begin{pmatrix} 
@@ -599,7 +609,7 @@ title="Print to PDF"
         C_{1n} &amp; C_{2n} &amp; \cdots &amp; C_{nn}
     \end{pmatrix}.
 \end{align*}\]</div>
-<p><em>then for the <span class="math notranslate nohighlight">\(i\)</span>th element of <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> using the <a class="reference internal" href="../1_Matrices/1.1_Matrix_multiplication.html#matrix-multiplication-definition"><span class="std std-ref">definition of matrix multiplication</span></a> we have</em></p>
+<p><em>then for the <span class="math notranslate nohighlight">\(i\)</span>th element of <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> using the <a class="reference internal" href="../1_Matrices/04_Matrix_multiplication.html#matrix-multiplication-definition"><span class="std std-ref">definition of matrix multiplication</span></a> we have</em></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     x_i = \frac{1}{\det(A)} \sum_{j=1}^n C_{ji} b_j

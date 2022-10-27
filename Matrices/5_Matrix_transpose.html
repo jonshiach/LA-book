@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Matrix multiplication &#8212; Linear Algebra</title>
+    <title>Matrix transpose &#8212; Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,12 +52,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="canonical" href="https://jonshiach.github.io/LA-book/1_Matrices/1.1_Matrix_multiplication-DESKTOP-33IGMFG.html" />
+    <link rel="canonical" href="https://jonshiach.github.io/LA-book/Matrices/5_Matrix_transpose.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Matrix transpose" href="1.2_Matrix_transpose.html" />
-    <link rel="prev" title="Matrix multiplication" href="1.1_Matrix_multiplication.html" />
+    <link rel="next" title="Special matrices" href="6_Special_matrices.html" />
+    <link rel="prev" title="Matrix multiplication" href="4_Matrix_multiplication.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -151,7 +151,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="1.0_Matrices.html">
+  <a class="reference internal" href="1_Introduction.html">
    Matrices
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -161,43 +161,48 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="1.1_Matrix_multiplication.html">
+    <a class="reference internal" href="10_Matrix_exercises.html">
+     Matrices exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2_Definition.html">
+     Definition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_Basic_arithmetic_operations.html">
+     Basic arithmetic operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4_Matrix_multiplication.html">
      Matrix multiplication
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Matrix multiplication
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="1.2_Matrix_transpose.html">
      Matrix transpose
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="1.3_Special_matrices.html">
+    <a class="reference internal" href="6_Special_matrices.html">
      Special matrices
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="1.4_Determinants.html">
+    <a class="reference internal" href="7_Determinants.html">
      Determinants
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="1.5_Inverse_matrix.html">
+    <a class="reference internal" href="8_Matrix_inverse.html">
      Inverse matrix
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="1.6_Matrix_algebra.html">
+    <a class="reference internal" href="9_Matrix_algebra.html">
      Matrix algebra
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="1.8_Matrices_exercises.html">
-     Matrices exercises
     </a>
    </li>
   </ul>
@@ -483,7 +488,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/1_Matrices/1.1_Matrix_multiplication-DESKTOP-33IGMFG.rst"
+        <a href="../_sources/Matrices/5_Matrix_transpose.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -494,7 +499,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.rst</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -547,18 +552,6 @@ title="Print to PDF"
    Python code
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#matrix-exponents">
-   Matrix exponents
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Python code
-    </a>
-   </li>
-  </ul>
- </li>
 </ul>
 
     </nav>
@@ -568,7 +561,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Matrix multiplication</h1>
+                <h1>Matrix transpose</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -583,18 +576,6 @@ title="Print to PDF"
    Python code
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#matrix-exponents">
-   Matrix exponents
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Python code
-    </a>
-   </li>
-  </ul>
- </li>
 </ul>
 
                         </nav>
@@ -605,106 +586,38 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="matrix-multiplication">
-<h1>Matrix multiplication<a class="headerlink" href="#matrix-multiplication" title="Permalink to this headline">#</a></h1>
-<p>We can multiply any two real numbers together but multiplication of two or more matrices is a much more complicated idea. Similarly to addition, which is only defined for matrices of the same size, matrix multiplication has constrains on the sizes of the multipliers:</p>
-<div class="note admonition" id="matrix-multiplication-definition">
-<p class="admonition-title">Definition: Matrix multiplication</p>
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix and <span class="math notranslate nohighlight">\(B\)</span> a <span class="math notranslate nohighlight">\(p \times q\)</span> matrix. The product <span class="math notranslate nohighlight">\(AB\)</span> is only defined if <span class="math notranslate nohighlight">\(n = p\)</span> and the resulting matrix has dimension <span class="math notranslate nohighlight">\(m \times q\)</span> (i.e., the number of columns in <span class="math notranslate nohighlight">\(A\)</span> has to equal the number of rows in <span class="math notranslate nohighlight">\(B\)</span>). The product of an <span class="math notranslate nohighlight">\(m\times p\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> and a <span class="math notranslate nohighlight">\(p\times n\)</span> matrix <span class="math notranslate nohighlight">\(B\)</span> is defined as</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="matrix-transpose">
+<h1>Matrix transpose<a class="headerlink" href="#matrix-transpose" title="Permalink to this headline">#</a></h1>
+<div class="note admonition" id="matrix-transpose-definition">
+<p class="admonition-title">Definition: Matrix transpose</p>
+<p>The <strong>transpose</strong> <span class="math notranslate nohighlight">\(A^\mathrm{T}\)</span> of a matrix <span class="math notranslate nohighlight">\(A\)</span> is given by</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    [AB]_{ij} = \sum_{k=1}^p a_{ik}b_{kj}.
-\end{align*}\]</div>
-<p>i.e., if <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are two <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    \begin{pmatrix} 
-        a_{11} &amp; a_{12} \\
-        a_{21} &amp; a_{22} 
-    \end{pmatrix}
-    \begin{pmatrix} 
-        b_{11} &amp; b_{12} \\
-        b_{21} &amp; b_{22}
-    \end{pmatrix} =
-    \begin{pmatrix}
-        a_{11} b_{11} + a_{12}b_{21} &amp; a_{11}b_{12} + a_{12} b_{22} \\
-        a_{21} b_{11} + a_{22}b_{21} &amp; a_{21}b_{12} + a_{22} b_{22}
-    \end{pmatrix}.
+    [A^\mathrm{T}]_{ij}=a_{ji}.
 \end{align*}\]</div>
 </div>
-<p>The technique used to multiply two matrices together requires us to move across the horizontal rows of the first matrix (the <span class="math notranslate nohighlight">\(i\)</span> index) and down the vertical columns of the second matrix (the <span class="math notranslate nohighlight">\(j\)</span> index). We multiply corresponding elements together and sum the result. For example, consider the multiplication of the two <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices below</p>
+<p>Transposing a matrix switches the rows and columns around so that row <span class="math notranslate nohighlight">\(i\)</span> becomes column <span class="math notranslate nohighlight">\(i\)</span> and column <span class="math notranslate nohighlight">\(j\)</span> becomes row <span class="math notranslate nohighlight">\(j\)</span>, i.e.,</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} \begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}.
+    \begin{pmatrix}
+        a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+        a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+        \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+        a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn} 
+    \end{pmatrix}^\mathrm{T} = 
+    \begin{pmatrix}
+        a_{11} &amp; a_{21} &amp; \cdots &amp; a_{m1} \\
+        a_{12} &amp; a_{22} &amp; \cdots &amp; a_{m2} \\
+        \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+        a_{1n} &amp; a_{2n} &amp; \cdots &amp; a_{mn}
+    \end{pmatrix}.
 \end{align*}\]</div>
-<p>The first thing we need to do is check whether matrix multiplication is defined for these matrices. An easy way to do this is to write the dimensions of the matrix underneath, e.g.,</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    \underbrace{\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}}_{2\times \mathbf{\textcolor{red}{2}}}
-    \underbrace{\begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}}_{\mathbf{\textcolor{red}{2}}\times 2}.
-\end{align*}\]</div>
-<p>Here the two inside numbers are the same so this matrix multiplication is defined. Also, the dimensions of the product of these two matrices is given by the two outside numbers. To calculate the value of the element in row 1 and column 1 we move across row 1 of the first matrix and down column 1 of the second matrix</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    \begin{pmatrix} \textcolor{blue}{1} &amp; \textcolor{blue}{2} \\ 3 &amp; 4 \end{pmatrix}
-    \begin{pmatrix} \textcolor{red}{5} &amp; 6 \\ \textcolor{red}{7} &amp; 8 \end{pmatrix} = 
-    \begin{pmatrix} 
-        \textcolor{blue}{1} \times \textcolor{red}{5} + \textcolor{blue}{2} \times \textcolor{red}{7} &amp; \square \\
-        \square &amp; \square
-    \end{pmatrix} 
-    = \begin{pmatrix} 5 + 14 &amp; \square \\ \square &amp; \square \end{pmatrix}
-    = \begin{pmatrix} 19 &amp; \square \\ \square &amp; \square \end{pmatrix}.
-\end{align*}\]</div>
-<p>For the element in the first row and second column we move across row 1 of the first matrix and down column 2 of the second matrix</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    \begin{pmatrix} \textcolor{blue}{1} &amp; \textcolor{blue}{2} \\ 3 &amp; 4 \end{pmatrix}
-    \begin{pmatrix} 5 &amp; \textcolor{red}{6} \\ 7 &amp; \textcolor{red}{8} \end{pmatrix} = 
-    \begin{pmatrix} 
-        19 &amp; \textcolor{blue}{1} \times \textcolor{red}{6} + \textcolor{blue}{2} \times \textcolor{red}{8} \\
-        \square &amp; \square
-    \end{pmatrix}
-    = \begin{pmatrix} 19 &amp; 6 + 16 \\ \square &amp; \square \end{pmatrix}
-    = \begin{pmatrix} 19 &amp; 22 \\ \square &amp; \square \end{pmatrix}.
-\end{align*}\]</div>
-<p>Now that we have finished the top row, to calculate the element in row 2 column 1 we move across row 2 of the first matrix and down column 1 of the second matrix</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    \begin{pmatrix} 1 &amp; 2 \\ \textcolor{blue}{3} &amp; \textcolor{blue}{4} \end{pmatrix}
-    \begin{pmatrix} \textcolor{red}{5} &amp; 6 \\ \textcolor{red}{7} &amp; 8 \end{pmatrix} = 
-    \begin{pmatrix} 
-        19 &amp; 22 \\
-        \textcolor{blue}{3} \times \textcolor{red}{5} + \textcolor{blue}{4} \times \textcolor{red}{7} &amp; \square
-    \end{pmatrix}
-    = \begin{pmatrix} 19 &amp; 22 \\ 15 + 28 &amp; \square \end{pmatrix}
-    = \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; \square \end{pmatrix}.
-\end{align*}\]</div>
-<p>Finally to calculate the elements in row 2 column 2 we move across row 2 of the first matrix and down column 2 of the second matrix</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    \begin{pmatrix} 1 &amp; 2 \\ \textcolor{blue}{3} &amp; \textcolor{blue}{4} \end{pmatrix}
-    \begin{pmatrix} 5 &amp; \textcolor{red}{6} \\ 7 &amp; \textcolor{red}{8} \end{pmatrix} = 
-    \begin{pmatrix} 
-        19 &amp; 22 \\
-        43 &amp; \textcolor{blue}{3} \times \textcolor{red}{6} + \textcolor{blue}{4} \times \textcolor{red}{8}
-    \end{pmatrix}
-    = \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; 18 + 32 \end{pmatrix}
-    = \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; 50 \end{pmatrix}.
-\end{align*}\]</div>
-<div class="seealso admonition" id="matrix-multiplication-example">
-<p class="admonition-title">Example 1.5</p>
-<p>Given the matrices</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    A &amp;= \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix}, &amp;
-    B &amp;= \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix}, \\
-    C &amp;= \begin{pmatrix} 1 &amp; 1 &amp; 0 \\ 3 &amp; -2 &amp; 1 \end{pmatrix}, &amp;
-    D &amp;= \begin{pmatrix} 1 \\ 3 \end{pmatrix}.
-\end{align*}\]</div>
-<p>calculate the following (where possible):</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(AB\)</span></p>
-<p>  (ii)   <span class="math notranslate nohighlight">\(BC\)</span></p>
-<p>  (iii)   <span class="math notranslate nohighlight">\(CD\)</span></p>
+<div class="seealso admonition" id="matrix-transpose-example">
+<p class="admonition-title">Example 1.7</p>
+<p>Evaluate the following:</p>
+<p>  (i)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 3 \\ 2 &amp; 4 \end{pmatrix}^\mathrm{T}\)</span></p>
+<p>  (ii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 0 &amp; -2 \\ 3 &amp; -4 &amp; 1 \end{pmatrix}^\mathrm{T}\)</span></p>
+<p>  (iii)   <span class="math notranslate nohighlight">\(\begin{pmatrix}2 &amp; 3 &amp; 5 \end{pmatrix}^\mathrm{T}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -712,137 +625,66 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">  (i)</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    AB &amp;= \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix} \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 2+0 &amp; 3 + 0 \\ -4+3 &amp; -6+15\end{pmatrix} \\
-    &amp;= \begin{pmatrix} 2 &amp; 3 \\ -1 &amp; 9 \end{pmatrix}
-\end{align*}\]</div>
-<p class="sd-card-text">  (ii)</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    BC &amp;= \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix} \begin{pmatrix} 1 &amp; 1 &amp; 0 \\ 3 &amp; -2 &amp; 1 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 2+9 &amp; 2-6 &amp; 0+3 \\ 1+15 &amp; 1-10 &amp; 0+5 \end{pmatrix} \\
-    &amp;= \begin{pmatrix}11 &amp; -4 &amp; 3 \\ 16 &amp; -9 &amp; 5 \end{pmatrix}
-\end{align*}\]</div>
-<p class="sd-card-text">  (iii)   <span class="math notranslate nohighlight">\(CD\)</span> is undefined since <span class="math notranslate nohighlight">\(C\)</span> is <span class="math notranslate nohighlight">\(2\times 3\)</span> and <span class="math notranslate nohighlight">\(D\)</span> is <span class="math notranslate nohighlight">\(2\times 1\)</span>.</p>
+<p class="sd-card-text">  (i)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 3 \\ 2 &amp; 4 \end{pmatrix}^\mathrm{T} = 
+    \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}\)</span></p>
+<p class="sd-card-text">  (ii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 0 &amp; -2 \\ 3 &amp; -4 &amp; 1 \end{pmatrix}^\mathrm{T} =
+    \begin{pmatrix} 1 &amp; 3 \\ 0 &amp; -4 \\ -2 &amp; 1 \end{pmatrix}\)</span></p>
+<p class="sd-card-text">  (iii)   <span class="math notranslate nohighlight">\(\begin{pmatrix}2 &amp; 3 &amp; 5 \end{pmatrix}^\mathrm{T} = 
+    \begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix}\)</span></p>
 </div>
 </details></div>
+<div class="important admonition" id="properties-of-matrix-transpose-theorem">
+<p class="admonition-title">Theorem: Properties of matrix transpose</p>
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> be two square <span class="math notranslate nohighlight">\(n \times n\)</span> matrices and <span class="math notranslate nohighlight">\(k\)</span> a scalar, then</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((A^\mathrm{T})^\mathrm{T} = A\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\((A + B)^\mathrm{T} = A^\mathrm{T} + B^\mathrm{T}\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\((k A)^\mathrm{T} = k (A^\mathrm{T})\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\((AB)^\mathrm{T} = B^\mathrm{T}A^\mathrm{T}\)</span></p></li>
+</ul>
+</div>
 <section id="python-code">
 <h2>Python code<a class="headerlink" href="#python-code" title="Permalink to this headline">#</a></h2>
-<p>The Sympy command for calculating the product of two matrices <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> is <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">*</span> <span class="pre">B</span></code>. The Python code below calculates the solution to question (i) from <a class="reference internal" href="#matrix-multiplication-example"><span class="std std-ref">example 1.5</span></a>.</p>
+<p>The Python command for calculating the transpose of a matrix <code class="docutils literal notranslate"><span class="pre">A</span></code> is <code class="docutils literal notranslate"><span class="pre">A.T</span></code>. The Python code below calculates the solution to question (ii) from <a class="reference internal" href="#matrix-transpose-example"><span class="std std-ref">example 1.7</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 
-<span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
-<span class="n">B</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
-<span class="n">AB</span> <span class="o">=</span> <span class="n">A</span> <span class="o">*</span> <span class="n">B</span>
-<span class="n">display</span><span class="p">(</span><span class="n">AB</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\displaystyle \left[\begin{matrix}2 &amp; 3\\-1 &amp; 9\end{matrix}\right]\end{split}\]</div>
-</div>
-</div>
-<p>Note that this will only work when using the Sympy library. If this has not been imported, <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">*</span> <span class="pre">B</span></code> will multiply the corresponding elements together which is known as <strong>element-wise multiplication</strong> and denoted mathematically as <span class="math notranslate nohighlight">\(A \odot B\)</span>. If you are using Sympy and wish to use element-wise multiplication then the command is <code class="docutils literal notranslate"><span class="pre">matrices.dense.matrix_multiply_elementwise(A,</span> <span class="pre">B)</span></code> (so it is probably better to not use Sympy in this case!).</p>
-</section>
-<section id="matrix-exponents">
-<h2>Matrix exponents<a class="headerlink" href="#matrix-exponents" title="Permalink to this headline">#</a></h2>
-<div class="note admonition" id="matrix-exponents-definition">
-<p class="admonition-title">Definition: Matrix exponents</p>
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be a square <span class="math notranslate nohighlight">\(n \times n\)</span> matrix. Then we write <span class="math notranslate nohighlight">\(A^2=AA\)</span> and more generally:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-44d03750-8c38-422d-8c9a-38ca467ace26">
-<span class="eqno">(2)<a class="headerlink" href="#equation-44d03750-8c38-422d-8c9a-38ca467ace26" title="Permalink to this equation">#</a></span>\[\begin{align}
-    A^n = \underbrace{A A \cdots A}_{n \text{ times}}.
-\end{align}\]</div>
-</div>
-<div class="seealso admonition" id="matrix-exponents-example">
-<p class="admonition-title">Example 1.6</p>
-<p>Given the matrix
-<span class="math notranslate nohighlight">\(
-    A = \begin{pmatrix} 1 &amp; 0 \\ 3 &amp; 2 \end{pmatrix},
-\)</span>
-evaluate:</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(A^2\)</span></p>
-<p>  (ii)   <span class="math notranslate nohighlight">\(A^3\)</span></p>
-<p>  (iii)   <span class="math notranslate nohighlight">\(A^5\)</span></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">  (i)</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    A^2 &amp;= AA = \begin{pmatrix} 1 &amp; 0 \\ 3 &amp; 2 \end{pmatrix}
-    \begin{pmatrix} 1 &amp; 0 \\ 3 &amp; 2 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 1 + 0 &amp; 0 + 0 \\ 3 + 6 &amp; 0 + 4 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 1 &amp; 0 \\ 9 &amp; 4 \end{pmatrix}
-\end{align*}\]</div>
-<p class="sd-card-text">  (ii)</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    A^3 &amp;= A^2A = \begin{pmatrix} 1 &amp; 0 \\ 9 &amp; 4 \end{pmatrix}
-    \begin{pmatrix} 1 &amp; 0 \\ 3 &amp; 2 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 1 + 0 &amp; 0 + 0 \\ 9 + 12 &amp; 0 + 8 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 1 &amp; 0 \\ 21 &amp; 8 \end{pmatrix}
-\end{align*}\]</div>
-<p class="sd-card-text">  (iii)</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    A^5 &amp;= A^3A^2 = \begin{pmatrix} 1 &amp; 0 \\ 21 &amp; 8 \end{pmatrix}
-    \begin{pmatrix} 1 &amp; 0 \\ 9 &amp; 4 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 1 + 0 &amp; 0 + 0 \\ 21 + 72 &amp; 0 + 32 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 1 &amp; 0 \\ 93 &amp; 32 \end{pmatrix}
-\end{align*}\]</div>
-</div>
-</details></div>
-<section id="id1">
-<h3>Python code<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
-<p>The SymPy command for calculating the <code class="docutils literal notranslate"><span class="pre">k</span></code>th exponent of the matrix <code class="docutils literal notranslate"><span class="pre">A</span></code> is <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">**</span> <span class="pre">k</span></code>. The following code calculates the solution to <a class="reference internal" href="#matrix-exponents-example"><span class="std std-ref">example 1.6</span></a>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
-
 <span class="c1"># (i)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(i) A^2 =&quot;</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">A</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(i)&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
 
 <span class="c1"># (ii)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(ii) A^3 =&quot;</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">A</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(ii)&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">B</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
 
 <span class="c1"># (iii)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(iii) A^5 =&quot;</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">A</span> <span class="o">**</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(iii)&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(i) A^2 =
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(i)
 </pre></div>
 </div>
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0\\9 &amp; 4\end{matrix}\right]\end{split}\]</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(ii) A^3 =
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 3\\2 &amp; 4\end{matrix}\right]\end{split}\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(ii)
 </pre></div>
 </div>
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0\\21 &amp; 8\end{matrix}\right]\end{split}\]</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(iii) A^5 =
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 3\\0 &amp; -4\\-2 &amp; 1\end{matrix}\right]\end{split}\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(iii)
 </pre></div>
 </div>
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0\\93 &amp; 32\end{matrix}\right]\end{split}\]</div>
+\[\begin{split}\displaystyle \left[\begin{matrix}2\\3\\5\end{matrix}\right]\end{split}\]</div>
 </div>
 </div>
-</section>
 </section>
 </section>
 
@@ -859,7 +701,7 @@ Solution<div class="sd-summary-down docutils">
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./1_Matrices"
+            path: "./Matrices"
         },
         predefinedOutput: true
     }
@@ -873,17 +715,17 @@ Solution<div class="sd-summary-down docutils">
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="1.1_Matrix_multiplication.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="4_Matrix_multiplication.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Matrix multiplication</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="1.2_Matrix_transpose.html" title="next page">
+    <a class='right-next' id="next-link" href="6_Special_matrices.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Matrix transpose</p>
+        <p class="prev-next-title">Special matrices</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
