@@ -21,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -37,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -50,13 +50,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/2_Systems_of_Linear_Equations/2.4_Partial_pivoting.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Gauss-Jordan elimination" href="2.5_Gauss_Jordan_elimination.html" />
+    <link rel="next" title="(gauss-jordan-elimination-section)=" href="2.5_Gauss_Jordan_elimination.html" />
     <link rel="prev" title="Gaussian elimination" href="2.3_Gaussian_elimination.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -229,7 +229,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">
-     Gauss-Jordan elimination
+     (gauss-jordan-elimination-section)=
     </a>
    </li>
    <li class="toctree-l2">
@@ -515,12 +515,36 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-code">
+   Python code
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -532,6 +556,19 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-code">
+   Python code
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -542,8 +579,8 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="partial-pivoting">
 <span id="partial-pivoting-section"></span><h1>Partial pivoting<a class="headerlink" href="#partial-pivoting" title="Permalink to this headline">#</a></h1>
 <p>In most practical applications of row reduction to solve a linear system we use computers to perform the calculations. Computers use floating point numbers to compute arithmetic operations which are not exact and can be prone to rounding errors. Consider the following linear system of equations</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f3e0bc29-09fd-4bff-ba8e-4d24416b4a31">
-<span class="eqno">(7)<a class="headerlink" href="#equation-f3e0bc29-09fd-4bff-ba8e-4d24416b4a31" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-af2ab4bf-9a16-4948-bda6-02267894f5a3">
+<span class="eqno">(7)<a class="headerlink" href="#equation-af2ab4bf-9a16-4948-bda6-02267894f5a3" title="Permalink to this equation">#</a></span>\[\begin{align}
   \begin{pmatrix}0.0001 &amp; 1 \\ 1 &amp; 1 \end{pmatrix}\begin{pmatrix} x_1 \\ x_2 \end{pmatrix}= 
   \begin{pmatrix}1 \\ 2 \end{pmatrix}.
 \end{align}\]</div>
@@ -567,7 +604,7 @@ title="Print to PDF"
         0 &amp; 1 &amp; 0.9998\dot{9}
     \end{array} \right).
 \end{align*}\]</div>
-<p>So <span class="math notranslate nohighlight">\(x_2 = 0.9998\dot{9}\)</span>. However, if we were to round this to four decimal places then <span class="math notranslate nohighlight">\(x_2 = 1.000\)</span> and using back substitution we have <span class="math notranslate nohighlight">\(x_1 = \dfrac{1}{0.0001}(1 - 1) = 0\)</span>. However, checking our solution with the original system we see that this does not satisfy the second equation <span class="math notranslate nohighlight">\(x_1 + x_2 = 2\)</span>. The problem is that our first pivot element of 0.0001 was small compared with the value below which produced large values when adding multiples of the pivot row to the other rows.</p>
+<p>So <span class="math notranslate nohighlight">\(x_2 = 0.9998\dot{9}\)</span>. If we were to round this to four decimal places then <span class="math notranslate nohighlight">\(x_2 = 1.0000\)</span> and using back substitution we have <span class="math notranslate nohighlight">\(x_1 = \dfrac{1}{0.0001}(1 - 1) = 0\)</span>. However, checking our solution with the original system we see that this does not satisfy the second equation <span class="math notranslate nohighlight">\(x_1 + x_2 = 2\)</span>. The problem is that our first pivot element of 0.0001 was small compared with the value below which produced large values when adding multiples of the pivot row to the other rows.</p>
 <p>To overcome this we can perform a row swap so that the pivot element is larger than the value below</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
@@ -664,6 +701,80 @@ Solution<div class="sd-summary-down docutils">
 \end{align*}\]</div>
 </div>
 </details></div>
+<section id="python-code">
+<h2>Python code<a class="headerlink" href="#python-code" title="Permalink to this headline">#</a></h2>
+<p>The Python code below defines the function <code class="docutils literal notranslate"><span class="pre">gelimpp()</span></code> that uses Gaussian elimination with partial pivoting to determine the row echelon form of a matrix <code class="docutils literal notranslate"><span class="pre">A</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">gelimpp</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>    
+    <span class="c1"># Loop through rows of A</span>
+    <span class="n">nrows</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nrows</span><span class="p">):</span>
+        
+        <span class="c1"># Swap pivot row if there is a larger value beneath the pivot</span>
+        <span class="n">pivot</span><span class="p">,</span> <span class="n">pivotrow</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">],</span> <span class="n">i</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nrows</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">,</span><span class="n">i</span><span class="p">])</span> <span class="o">&gt;</span> <span class="nb">abs</span><span class="p">(</span><span class="n">pivot</span><span class="p">):</span>
+                <span class="n">pivot</span><span class="p">,</span> <span class="n">pivotrow</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">,</span><span class="n">i</span><span class="p">],</span> <span class="n">j</span>
+        
+        <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,:],</span> <span class="n">A</span><span class="p">[</span><span class="n">pivotrow</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">pivotrow</span><span class="p">,:],</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span>
+
+        <span class="c1"># If pivot is zero end loop</span>
+        <span class="k">if</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+        
+        <span class="c1"># Perform row operations</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nrows</span><span class="p">):</span>
+                <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">,:]</span> <span class="o">-=</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span>
+                       
+    <span class="k">return</span> <span class="n">A</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This has been used to determine the row echelon form of the coefficient matrix from <a class="reference internal" href="#partial-pivoting-example"><span class="std std-ref">example 2.5</span></a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="c1"># Define coefficient matrix and constant vector</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> 
+                <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> 
+                <span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">13</span><span class="p">],</span> <span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="p">[</span><span class="mi">8</span><span class="p">]])</span>
+
+<span class="c1"># Form augmented matrix</span>
+<span class="n">Ab</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">row_join</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Ab</span><span class="p">)</span>
+
+<span class="c1"># Calculate row echelon form using Gaussian elimination with partial pivoting</span>
+<span class="n">Ab</span> <span class="o">=</span> <span class="n">gelimpp</span><span class="p">(</span><span class="n">Ab</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Ab</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; -1 &amp; 3 &amp; 13\\4 &amp; -2 &amp; 1 &amp; 15\\-3 &amp; -1 &amp; 4 &amp; 8\end{matrix}\right]\end{split}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}4 &amp; -2 &amp; 1 &amp; 15\\0 &amp; - \frac{5}{2} &amp; \frac{19}{4} &amp; \frac{77}{4}\\0 &amp; 0 &amp; \frac{9}{5} &amp; \frac{27}{5}\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<p>The solution of the system of linear equations is then calculated using the function <code class="docutils literal notranslate"><span class="pre">backsub()</span></code> (from <a class="reference internal" href="2.3_Gaussian_elimination.html#backsub-code"><span class="std std-ref">Gaussian elimination</span></a>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate solution using back substitution</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">backsub</span><span class="p">(</span><span class="n">Ab</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}2\\-2\\3\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -703,7 +814,7 @@ Solution<div class="sd-summary-down docutils">
     <a class='right-next' id="next-link" href="2.5_Gauss_Jordan_elimination.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Gauss-Jordan elimination</p>
+        <p class="prev-next-title">(gauss-jordan-elimination-section)=</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

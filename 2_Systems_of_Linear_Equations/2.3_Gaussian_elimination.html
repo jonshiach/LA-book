@@ -21,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -37,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -50,8 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/2_Systems_of_Linear_Equations/2.3_Gaussian_elimination.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -229,7 +229,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">
-     Gauss-Jordan elimination
+     (gauss-jordan-elimination-section)=
     </a>
    </li>
    <li class="toctree-l2">
@@ -542,6 +542,11 @@ title="Print to PDF"
    Row reduction
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-code">
+   Python code
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -564,6 +569,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#row-reduction">
    Row reduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-code">
+   Python code
   </a>
  </li>
 </ul>
@@ -735,7 +745,7 @@ title="Print to PDF"
     \left( \begin{array}{ccc|c}
         3 &amp; 1 &amp; -2 &amp; 1 \\
         0 &amp; \color{red}{-\frac{4}{3}} &amp; \frac{8}{3} &amp; \frac{8}{3} \\
-        0 &amp; \color{blue}{-\frac{11}{3} + \frac{11}{4}(-\frac{4}{3})} &amp; \frac{25}{3} + \frac{11}{4}(\frac{8}{3}) &amp; \frac{10}{3} +\frac{11}{4}(\frac{8}{3})
+        0 &amp; \color{blue}{-\frac{11}{3} - \frac{11}{4}(-\frac{4}{3})} &amp; \frac{25}{3} - \frac{11}{4}(\frac{8}{3}) &amp; \frac{10}{3} - \frac{11}{4}(\frac{8}{3})
     \end{array} \right) 
     \longrightarrow
     \left( \begin{array}{ccc|c}
@@ -895,6 +905,95 @@ Solution<div class="sd-summary-down docutils">
 \end{align*}\]</div>
 </div>
 </details></div>
+</section>
+<section id="python-code">
+<h2>Python code<a class="headerlink" href="#python-code" title="Permalink to this headline">#</a></h2>
+<p>The Python code below defines the function <code class="docutils literal notranslate"><span class="pre">gelim()</span></code> that uses Gaussian elimination to determine the row echelon form of a matrix <code class="docutils literal notranslate"><span class="pre">A</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">gelim</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+    <span class="c1"># Loop through the rows of A</span>
+    <span class="n">nrows</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nrows</span><span class="p">):</span>
+        
+        <span class="c1"># Swap pivot row if pivot is zero</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">while</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">+</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">nrows</span><span class="p">:</span>
+            <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,:],</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">,:],</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span>
+            <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+        <span class="c1"># If pivot is still zero end loop</span>
+        <span class="k">if</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+        
+        <span class="c1"># Perform row operations</span>
+        <span class="k">if</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>            
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nrows</span><span class="p">):</span>
+                <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">,:]</span> <span class="o">-=</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span>
+                       
+    <span class="k">return</span> <span class="n">A</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The following code defines the system of linear equations from part (ii) of <a class="reference internal" href="#ge-example"><span class="std std-ref">example 2.4</span></a>, forms the augmented matrix and uses the <code class="docutils literal notranslate"><span class="pre">gelim()</span></code> function to calculate the row echelon form of the augmented matrix.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="c1"># Define coefficient matrix and constant vector</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> 
+                <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> 
+                <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">]])</span>
+
+<span class="c1"># Form augmented matrix</span>
+<span class="n">Ab</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">row_join</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Ab</span><span class="p">)</span>
+
+<span class="c1"># Calculate row echelon form of the augmented matrix</span>
+<span class="n">Ab</span> <span class="o">=</span> <span class="n">gelim</span><span class="p">(</span><span class="n">Ab</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Ab</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0 &amp; 1 &amp; 3\\-2 &amp; 1 &amp; 3 &amp; 3\\-1 &amp; 2 &amp; 4 &amp; 5\end{matrix}\right]\end{split}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0 &amp; 1 &amp; 3\\0 &amp; 1 &amp; 5 &amp; 9\\0 &amp; 0 &amp; -5 &amp; -10\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<p>The following code defines a function called <code class="docutils literal notranslate"><span class="pre">backsub()</span></code> which performs back substitution on the matrix <code class="docutils literal notranslate"><span class="pre">A</span></code> which is in row echelon form.</p>
+<div class="cell docutils container" id="backsub-code">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">backsub</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+    <span class="n">nrows</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">A</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nrows</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nrows</span><span class="p">):</span>
+            <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+
+        <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">]</span>
+    
+    <span class="k">return</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is then used to calculate the solution to the linear system of equations.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate solution using back substitution</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">backsub</span><span class="p">(</span><span class="n">Ab</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}1\\-1\\2\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
 </section>
 </section>
 

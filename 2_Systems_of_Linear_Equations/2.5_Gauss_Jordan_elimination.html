@@ -21,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -37,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -50,8 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/2_Systems_of_Linear_Equations/2.5_Gauss_Jordan_elimination.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -697,49 +697,67 @@ Solution<div class="sd-summary-down docutils">
 </details></div>
 <section id="python-code">
 <h2>Python code<a class="headerlink" href="#python-code" title="Permalink to this headline">#</a></h2>
-<p>The SymPy command for calculating the reduced row echelon form of a matrix <code class="docutils literal notranslate"><span class="pre">A</span></code> is <code class="docutils literal notranslate"><span class="pre">A.rref()[0]</span></code>. The Python code below solves the linear system from <a class="reference internal" href="#gje-example"><span class="std std-ref">example 2.6</span></a>.</p>
+<p>The Python code below defines the function <code class="docutils literal notranslate"><span class="pre">reff()</span></code> that uses Gauss-Jordan elimination to calculate the reduced row echelon form of a matrix <code class="docutils literal notranslate"><span class="pre">A</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rref</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>    
+    <span class="c1"># Loop through rows of A</span>
+    <span class="n">nrows</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nrows</span><span class="p">):</span>
+        
+        <span class="c1"># Swap pivot row if there is a larger value beneath the pivot</span>
+        <span class="n">pivot</span><span class="p">,</span> <span class="n">pivotrow</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">],</span> <span class="n">i</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nrows</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">,</span><span class="n">i</span><span class="p">])</span> <span class="o">&gt;</span> <span class="nb">abs</span><span class="p">(</span><span class="n">pivot</span><span class="p">):</span>
+                <span class="n">pivot</span><span class="p">,</span> <span class="n">pivotrow</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">,</span><span class="n">i</span><span class="p">],</span> <span class="n">j</span>
+        
+        <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,:],</span> <span class="n">A</span><span class="p">[</span><span class="n">pivotrow</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">pivotrow</span><span class="p">,:],</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span>
+
+        <span class="c1"># If pivot is zero end loop</span>
+        <span class="k">if</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+            
+        <span class="c1"># Divide pivot row by the pivot</span>
+        <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span> <span class="o">/=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">]</span>
+        
+        <span class="c1"># Perform row operations</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nrows</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">j</span><span class="p">:</span>
+                <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">,:]</span> <span class="o">-=</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span>
+                       
+    <span class="k">return</span> <span class="n">A</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This has been used to calculate the solution to the system of linear equations from <a class="reference internal" href="#gje-example"><span class="std std-ref">example 2.6</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
 
-<span class="c1"># Define linear system</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">]])</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">]])</span>
+<span class="c1"># Define coefficient matrix and constant vector</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> 
+                <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> 
+                <span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">13</span><span class="p">],</span> <span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="p">[</span><span class="mi">8</span><span class="p">]])</span>
 
 <span class="c1"># Form augmented matrix</span>
 <span class="n">Ab</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">row_join</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Augmented matrix&quot;</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Ab</span><span class="p">)</span>
 
-<span class="c1"># Row reduce augmented matrix</span>
-<span class="n">Ab</span> <span class="o">=</span> <span class="n">Ab</span><span class="o">.</span><span class="n">rref</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reduced row echelon form&quot;</span><span class="p">)</span>
+<span class="c1"># Calculate row echelon form using Gaussian elimination with partial pivoting</span>
+<span class="n">Ab</span> <span class="o">=</span> <span class="n">rref</span><span class="p">(</span><span class="n">Ab</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">Ab</span><span class="p">)</span>
-
-<span class="c1"># Extract solution</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">Ab</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Solution&quot;</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Augmented matrix
-</pre></div>
-</div>
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\displaystyle \left[\begin{matrix}3 &amp; 1 &amp; -2 &amp; 1\\1 &amp; -1 &amp; 2 &amp; 3\\2 &amp; -3 &amp; 7 &amp; 4\end{matrix}\right]\end{split}\]</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reduced row echelon form
-</pre></div>
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0 &amp; 0 &amp; 2\\0 &amp; 1 &amp; 0 &amp; -2\\0 &amp; 0 &amp; 1 &amp; 3\end{matrix}\right]\end{split}\]</div>
 </div>
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0 &amp; 0 &amp; 1\\0 &amp; 1 &amp; 0 &amp; -10\\0 &amp; 0 &amp; 1 &amp; -4\end{matrix}\right]\end{split}\]</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Solution
-</pre></div>
 </div>
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\displaystyle \left[\begin{matrix}1\\-10\\-4\end{matrix}\right]\end{split}\]</div>
-</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The SymPy library has a command for calculating the reduced row echelon form of a matrix which is <code class="docutils literal notranslate"><span class="pre">A.rref()</span></code>.</p>
 </div>
 </section>
 <section id="calculating-a-matrix-inverse-using-gauss-jordan-elimination">
@@ -877,44 +895,33 @@ Solution<div class="sd-summary-down docutils">
 </section>
 <section id="id1">
 <h2>Python code<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
-<p>The Python code below calculates the inverse of the matrix from <a class="reference internal" href="#gje-inverse-example"><span class="std std-ref">example 2.6</span></a>.</p>
+<p>The Python code below uses Gauss-Jordan elimination to calculate the inverse of the matrix from <a class="reference internal" href="#gje-inverse-example"><span class="std std-ref">example 2.7</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Form augmented matrix</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
-<span class="n">AI</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">row_join</span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define matrix A</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> 
+                <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> 
+                <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Augmented matrix&quot;</span><span class="p">)</span>
+<span class="c1"># Form augmented matrix</span>
+<span class="n">AI</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">row_join</span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
 <span class="n">display</span><span class="p">(</span><span class="n">AI</span><span class="p">)</span>
 
 <span class="c1"># Row reduce augmented matrix</span>
-<span class="n">AI</span> <span class="o">=</span> <span class="n">AI</span><span class="o">.</span><span class="n">rref</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;RREF&quot;</span><span class="p">)</span>
+<span class="n">AI</span> <span class="o">=</span> <span class="n">rref</span><span class="p">(</span><span class="n">AI</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">AI</span><span class="p">)</span>
 
 <span class="c1"># Extract inverse matrix</span>
 <span class="n">invA</span> <span class="o">=</span> <span class="n">AI</span><span class="p">[:,</span><span class="mi">3</span><span class="p">:]</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Inverse matrix&quot;</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">invA</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Augmented matrix
-</pre></div>
-</div>
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0 &amp; 2 &amp; 1 &amp; 0 &amp; 0\\2 &amp; -1 &amp; 3 &amp; 0 &amp; 1 &amp; 0\\1 &amp; 4 &amp; 4 &amp; 0 &amp; 0 &amp; 1\end{matrix}\right]\end{split}\]</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RREF
-</pre></div>
-</div>
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0 &amp; 0 &amp; -8 &amp; 4 &amp; 1\\0 &amp; 1 &amp; 0 &amp; - \frac{5}{2} &amp; 1 &amp; \frac{1}{2}\\0 &amp; 0 &amp; 1 &amp; \frac{9}{2} &amp; -2 &amp; - \frac{1}{2}\end{matrix}\right]\end{split}\]</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Inverse matrix
-</pre></div>
-</div>
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}\displaystyle \left[\begin{matrix}-8 &amp; 4 &amp; 1\\- \frac{5}{2} &amp; 1 &amp; \frac{1}{2}\\\frac{9}{2} &amp; -2 &amp; - \frac{1}{2}\end{matrix}\right]\end{split}\]</div>
 </div>
