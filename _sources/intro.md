@@ -7,7 +7,7 @@ These are the lecture notes that accompany the teaching of linear algebra on the
 :gutter: 3
 
 ::::{grid-item-card}
-:link: 1_Matrices/1.0_Matrices
+:link: 1_Matrices/1.1_Introduction
 :link-type: doc
 :class-header: bg-light
 :columns: 4
@@ -20,7 +20,7 @@ Matrices
 ::::
 
 ::::{grid-item-card}
-:link: 2_Systems_of_Linear_Equations/2.0_Systems_of_linear_equations
+:link: 2_Systems_of_Linear_Equations/2.1_Introduction
 :link-type: doc
 :class-header: bg-light
 :columns: 4
@@ -33,7 +33,7 @@ Systems of Linear Equations
 ::::
 
 ::::{grid-item-card}
-:link: 3_Vectors/3.0_Vectors
+:link: 3_Vectors/3.1_Introduction
 :link-type: doc
 :class-header: bg-light
 :columns: 4
@@ -46,7 +46,7 @@ Vectors
 ::::
 
 ::::{grid-item-card}
-:link: 4_Coordinate_geometry/4.0_Coordinate_geometry
+:link: 4_Coordinate_geometry/4.1_Introduction
 :link-type: doc
 :class-header: bg-light
 :columns: 4
