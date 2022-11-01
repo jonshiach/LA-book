@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Matrix algebra &#8212; Linear Algebra</title>
+    <title>Vector spaces &#8212; Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,12 +52,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <link rel="canonical" href="https://jonshiach.github.io/LA-book/1_Matrices/1.9_Matrix_algebra.html" />
+    <link rel="canonical" href="https://jonshiach.github.io/LA-book/5_Vector_spaces/5.1_Introduction.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Matrices exercises" href="1.9a_Exercises.html" />
-    <link rel="prev" title="Inverse matrix" href="1.8_Matrix_inverse.html" />
+    <link rel="next" title="Definitions" href="5.2_Vector_spaces.html" />
+    <link rel="prev" title="Co-ordinate geometry exercises" href="../4_Coordinate_geometry/4.6_Coordinate_geometry_exercises.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -150,58 +150,58 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="1.1_Introduction.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../1_Matrices/1.1_Introduction.html">
    Matrices
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="1.2_Definition.html">
+    <a class="reference internal" href="../1_Matrices/1.2_Definition.html">
      Definition
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="1.3_Basic_arithmetic_operations.html">
+    <a class="reference internal" href="../1_Matrices/1.3_Basic_arithmetic_operations.html">
      Basic arithmetic operations
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="1.4_Matrix_multiplication.html">
+    <a class="reference internal" href="../1_Matrices/1.4_Matrix_multiplication.html">
      Matrix multiplication
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="1.5_Matrix_transpose.html">
+    <a class="reference internal" href="../1_Matrices/1.5_Matrix_transpose.html">
      Matrix transpose
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="1.6_Special_matrices.html">
+    <a class="reference internal" href="../1_Matrices/1.6_Special_matrices.html">
      Special matrices
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="1.7_Determinants.html">
+    <a class="reference internal" href="../1_Matrices/1.7_Determinants.html">
      Determinants
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="1.8_Matrix_inverse.html">
+    <a class="reference internal" href="../1_Matrices/1.8_Matrix_inverse.html">
      Inverse matrix
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_Matrices/1.9_Matrix_algebra.html">
      Matrix algebra
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="1.9a_Exercises.html">
+    <a class="reference internal" href="../1_Matrices/1.9a_Exercises.html">
      Matrices exercises
     </a>
    </li>
@@ -348,38 +348,38 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../5_Vector_spaces/5.1_Introduction.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
    Vector spaces
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../5_Vector_spaces/5.2_Vector_spaces.html">
+    <a class="reference internal" href="5.2_Vector_spaces.html">
      Definitions
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../5_Vector_spaces/5.3_Subspaces.html">
+    <a class="reference internal" href="5.3_Subspaces.html">
      Subspaces
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../5_Vector_spaces/5.4_Linear_dependence.html">
+    <a class="reference internal" href="5.4_Linear_dependence.html">
      Linear dependence
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../5_Vector_spaces/5.5_Basis.html">
+    <a class="reference internal" href="5.5_Basis.html">
      Basis
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../5_Vector_spaces/5.6_Vector_spaces_exercises.html">
+    <a class="reference internal" href="5.6_Vector_spaces_exercises.html">
      Vector spaces exercises
     </a>
    </li>
@@ -518,7 +518,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/1_Matrices/1.9_Matrix_algebra.ipynb"
+        <a href="../_sources/5_Vector_spaces/5.1_Introduction.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -555,23 +555,60 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#learning-outcomes">
+   Learning outcomes
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Matrix algebra</h1>
+                <h1>Vector spaces</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#learning-outcomes">
+   Learning outcomes
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -579,54 +616,53 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="matrix-algebra">
-<span id="matrix-algebra-section"></span><h1>Matrix algebra<a class="headerlink" href="#matrix-algebra" title="Permalink to this headline">#</a></h1>
-<p>Having defined the rules for addition, scalar multiplication and matrix multiplication, we can now consider solving equations involving matrices. Let <span class="math notranslate nohighlight">\(X\)</span> be an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix, whose value we want to find.</p>
-<p>Since matrix multiplication is not commutative then we say that in the expression <span class="math notranslate nohighlight">\(AB\)</span>, <span class="math notranslate nohighlight">\(B\)</span> is <em>“<strong>left multiplied</strong> by <span class="math notranslate nohighlight">\(A\)</span>”</em> or <span class="math notranslate nohighlight">\(A\)</span> is <em>“<strong>right multiplied</strong> by <span class="math notranslate nohighlight">\(B\)</span>”</em>. You cannot divide by a matrix but you can multiply by an inverse matrix, if one exists. For example, let <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> be invertible matrices (i.e. matrices which have inverses), then</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="vector-spaces">
+<span id="vector-spaces-chapter"></span><h1>Vector spaces<a class="headerlink" href="#vector-spaces" title="Permalink to this headline">#</a></h1>
+<p>A vector space is a set of objects called vectors that satisfy axioms of vector addition and scalar multiplication. As the name suggests, vectors in Euclidean space that we met in the last chapter form a vector space but so do lots of other types of mathematical objects. The use of the term <em>vector</em> when dealing with vector spaces could be matrices, polynomial functions, numbers etc.</p>
+<p>Vector spaces are abstract and their purpose may not be apparent upon first meeting them. Geoffrey Scott gives a good explanation of <a href="https://www.math.toronto.edu/gscott/WhatVS.pdf" target="_blank">why we need vector spaces</a> which is paraphrased below. Consider the following three problems</p>
+<ul class="simple">
+<li><p>Problem 1: Find <span class="math notranslate nohighlight">\(x_1, x_2, x_3 \in \mathbb{R}\)</span> that satisfy</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    x_1 \begin{pmatrix} 2 \\ -1 \\ 1 \end{pmatrix} + 
+    x_2 \begin{pmatrix} 1 \\ 2 \\ 0 \end{pmatrix} + 
+    x_3 \begin{pmatrix} 3 \\ 1 \\ -1 \end{pmatrix} = 
+    \begin{pmatrix} 6 \\ 2 \\ 0 \end{pmatrix}.
+\end{split}\]</div>
+<ul class="simple">
+<li><p>Problem 2: Find <span class="math notranslate nohighlight">\(x_1, x_2, x_3 \in \mathbb{R}\)</span> such that</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ x_1 (2t^2 - t + 1) + x_2 (t^2 + 2t -2) + x_3 (0t^2 + t) = 2t^2 + 5t + 1.\]</div>
+<ul class="simple">
+<li><p>Problem 3: Find <span class="math notranslate nohighlight">\(x_1, x_2, \ldots \in \mathbb{C}\)</span> such that</p></li>
+</ul>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    AX &amp;= B \\
-    A^{-1}AX &amp;= A^{-1}B &amp; &amp;\textsf{left-multiply both sides by }A^{-1} \\
-    IX &amp;= A^{-1}B &amp; &amp; \textsf{since $A^{-1}A = I$}\\
-    X &amp;= A^{-1}B &amp; &amp; \textsf{since $IX = X$}. 
+    \sum_{n=1}^\infty x_n cos(n \pi t) = e^{5nt}.
 \end{align*}\]</div>
-<div class="seealso admonition" id="matrix-algebra-example">
-<p class="admonition-title">Example 1.17</p>
-<p>Solve the following matrix equations for <span class="math notranslate nohighlight">\(X\)</span>:</p>
-<p>(i)   <span class="math notranslate nohighlight">\(2X = A\)</span></p>
-<p>(ii)   <span class="math notranslate nohighlight">\(kX + A = I\)</span></p>
-<p>(iii)   <span class="math notranslate nohighlight">\(A(X + B) = C\)</span></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">(i)</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-2X &amp;= A  \\
-X &amp;= \frac{1}{2}A.
-\end{align*}\]</div>
-<p class="sd-card-text">(ii)</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-kX + A &amp;= I \\
-kX &amp;= I - A \\
-X &amp;= \frac{1}{k}(I- A).
-\end{align*}\]</div>
-<p class="sd-card-text">(iii)</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-A(X+B) &amp;= C \\
-AX + AB &amp;= C \\
-AX &amp;= C - AB \\
-A^{-1}AX &amp;= A^{-1}(C - AB) \\
-X &amp;= A^{-1}(C - AB).
-\end{align*}\]</div>
+<p>Problems 1, 2 and 3 are described using three different mathematical objects. Problem 1 uses vectors, problem 2 uses polynomials and problem 3 uses trigonometric functions. On further inspection we can see that these three problems are all similar and involve solving a system of linear equations. We know how to solve problem 1 using the methods from the <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.1_Introduction.html#systems-of-linear-equations-chapter"><span class="std std-ref">chapter on systems of linear equations</span></a> so can we use these to solve problems 2 and 3 and other problems using different mathematical objects?</p>
+<p>To answer this we could state theorems for each type of mathematical object, e.g.,</p>
+<blockquote>
+<div><p>“Suppose you have a collection of columns vectors <em>or</em> polynomials <em>or</em> functions <em>or</em> any other type of mathematical object that can be multiplied by numbers and added together <span class="math notranslate nohighlight">\(\ldots\)</span>”</p>
+</div></blockquote>
+<p>So every time we encounter a similar problem to the ones above we would need to state a theorem and prove it. Mathematicians like to be concise so the term <em>vector space</em> was invented to mean any type of mathematical object that can be multiplied by numbers and added together. So instead of the rambling phrase above we could use</p>
+<blockquote>
+<div><p>“Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space <span class="math notranslate nohighlight">\(\ldots\)</span>”</p>
+</div></blockquote>
+<section id="learning-outcomes">
+<h2>Learning outcomes<a class="headerlink" href="#learning-outcomes" title="Permalink to this headline">#</a></h2>
+<p>On successful completion of this chapters students will be able to:</p>
+<ul class="simple">
+<li><p>identify when a set of objects is a <a class="reference internal" href="5.2_Vector_spaces.html#vector-space-definition"><span class="std std-ref">vector space</span></a>;</p></li>
+<li><p>identify when a subset of a vector space is a <a class="reference internal" href="5.3_Subspaces.html#subspace-definition"><span class="std std-ref">subspace</span></a>;</p></li>
+<li><p>determine whether elements of a vector space are <a class="reference internal" href="5.4_Linear_dependence.html#linear-dependence-definition"><span class="std std-ref">linearly dependent or linearly independent</span></a>;</p></li>
+<li><p>identify a <a class="reference internal" href="5.5_Basis.html#basis-definition"><span class="std std-ref">basis</span></a>, determine the <a class="reference internal" href="5.5_Basis.html#vector-space-dimension-definition"><span class="std std-ref">dimension</span></a> of a vector space and represent vectors with respect to a <a class="reference internal" href="5.5_Basis.html#change-of-basis-example"><span class="std std-ref">non-standard basis</span></a>.</p></li>
+</ul>
+</section>
+<div class="toctree-wrapper compound">
 </div>
-</details></div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -642,7 +678,7 @@ X &amp;= A^{-1}(C - AB).
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./1_Matrices"
+            path: "./5_Vector_spaces"
         },
         predefinedOutput: true
     }
@@ -656,17 +692,17 @@ X &amp;= A^{-1}(C - AB).
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="1.8_Matrix_inverse.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../4_Coordinate_geometry/4.6_Coordinate_geometry_exercises.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Inverse matrix</p>
+            <p class="prev-next-title">Co-ordinate geometry exercises</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="1.9a_Exercises.html" title="next page">
+    <a class='right-next' id="next-link" href="5.2_Vector_spaces.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Matrices exercises</p>
+        <p class="prev-next-title">Definitions</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

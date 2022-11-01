@@ -59,7 +59,7 @@ Co-ordinate Geometry
 ::::
 
 ::::{grid-item-card}
-:link: 5_Vector_spaces/5.0_Vector_spaces
+:link: 5_Vector_spaces/5.1_Introduction
 :link-type: doc
 :class-header: bg-light
 :columns: 4

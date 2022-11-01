@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Basis &#8212; Linear Algebra</title>
+    <title>Subspaces &#8212; Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,12 +52,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <link rel="canonical" href="https://jonshiach.github.io/LA-book/5_Vector_spaces/5.3_Basis.html" />
+    <link rel="canonical" href="https://jonshiach.github.io/LA-book/5_Vector_spaces/5.3_Subspaces.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Vector spaces exercises" href="5.5_Vector_spaces_exercises.html" />
-    <link rel="prev" title="Linear dependence" href="5.2_Linear_dependence.html" />
+    <link rel="next" title="Linear dependence" href="5.4_Linear_dependence.html" />
+    <link rel="prev" title="Definitions" href="5.2_Vector_spaces.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -349,7 +349,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="5.0_Vector_spaces.html">
+  <a class="reference internal" href="5.1_Introduction.html">
    Vector spaces
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
@@ -359,22 +359,27 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="5.1_Subspaces.html">
-     Subspaces
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="5.2_Linear_dependence.html">
-     Linear dependence
+    <a class="reference internal" href="5.2_Vector_spaces.html">
+     Definitions
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
+     Subspaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5.4_Linear_dependence.html">
+     Linear dependence
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5.5_Basis.html">
      Basis
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="5.5_Vector_spaces_exercises.html">
+    <a class="reference internal" href="5.6_Vector_spaces_exercises.html">
      Vector spaces exercises
     </a>
    </li>
@@ -513,7 +518,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/5_Vector_spaces/5.3_Basis.ipynb"
+        <a href="../_sources/5_Vector_spaces/5.3_Subspaces.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -573,18 +578,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#spanning-sets">
-   Spanning sets
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#basis-of-a-vector-space">
-   Basis of a vector space
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#change-of-basis">
-   Change of basis
+  <a class="reference internal nav-link" href="#non-examples-of-subspaces">
+   Non-examples of Subspaces
   </a>
  </li>
 </ul>
@@ -596,7 +591,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Basis</h1>
+                <h1>Subspaces</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -607,18 +602,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#spanning-sets">
-   Spanning sets
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#basis-of-a-vector-space">
-   Basis of a vector space
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#change-of-basis">
-   Change of basis
+  <a class="reference internal nav-link" href="#non-examples-of-subspaces">
+   Non-examples of Subspaces
   </a>
  </li>
 </ul>
@@ -631,208 +616,53 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="basis">
-<span id="basis-section"></span><h1>Basis<a class="headerlink" href="#basis" title="Permalink to this headline">#</a></h1>
-<p>We have already met the concept of a basis in the chapter on vectors where we saw that <a class="reference internal" href="../3_Vectors/3.7_Linear_combination_of_vectors.html#basis-vectors-section"><span class="std std-ref">the basis vectors for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span></span></a> are the vectors <span class="math notranslate nohighlight">\(\mathbf{i} = (1, 0, 0)\)</span>, <span class="math notranslate nohighlight">\(\mathbf{j} = (0, 1, 0)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{k} = (0, 0, 1)\)</span> and any vector in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> can be represented as a linear combination of these basis vectors. The concept of a basis is not limited to Euclidean geometry and we can define a basis for any vector space so that an element in the vector space can be expressed as a linear combination of the basis elements.</p>
-<section id="spanning-sets">
-<h2>Spanning sets<a class="headerlink" href="#spanning-sets" title="Permalink to this headline">#</a></h2>
-<div class="note admonition" id="spanning-set-definition">
-<p class="admonition-title">Definition: Spanning set</p>
-<p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over the field <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(S\)</span> is a subset of <span class="math notranslate nohighlight">\(V\)</span>. Let <span class="math notranslate nohighlight">\(W\)</span> be a subset of <span class="math notranslate nohighlight">\(V\)</span> that are expressible as a linear combination of vectors in <span class="math notranslate nohighlight">\(S\)</span>, i.e., for <span class="math notranslate nohighlight">\(\mathbf{u} \in W\)</span>, <span class="math notranslate nohighlight">\(\mathbf{v}_1, \ldots, \mathbf{v}_n \in S\)</span> and <span class="math notranslate nohighlight">\(\alpha_1, \ldots, \alpha_n \in F\)</span></p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    \mathbf{u} = \alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 + \cdots + \alpha_n \mathbf{v}_n.
-\end{align*}\]</div>
-<p>then <span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(S\)</span> is a <strong>spanning set</strong> for <span class="math notranslate nohighlight">\(W\)</span>. We write this as <span class="math notranslate nohighlight">\(\operatorname{span}(S)\)</span>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="subspaces">
+<span id="subspaces-section"></span><h1>Subspaces<a class="headerlink" href="#subspaces" title="Permalink to this headline">#</a></h1>
+<p>We have seen that a <a class="reference internal" href="5.2_Vector_spaces.html#vector-space-definition"><span class="std std-ref">vector space</span></a> is a set, and hence we can consider studying its <a class="reference external" href="https://en.wikipedia.org/wiki/Subset">subsets</a>. Think of the Euclidean space <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> (which we think of with the usual <span class="math notranslate nohighlight">\(x,y,z\)</span>-coordinates). This is a vector space, and consider the plane <span class="math notranslate nohighlight">\(p = \{(x,y,z) : x + y + z = 0\} \subseteq \mathbb{R}^3\)</span>. In fact, we can view <span class="math notranslate nohighlight">\(p\)</span> itself as a vector space, meaning it satisfies the <a class="reference internal" href="5.2_Vector_spaces.html#vector-space-axioms-theorem"><span class="std std-ref">vector space axioms</span></a> A1 – A4 and M1 – M4, where we define addition and scalar multiplication as coming from <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. We saw in the chapter on  <a class="reference internal" href="../4_Coordinate_geometry/4.1_Introduction.html#coordinate-geometry-chapter"><span class="std std-ref">co-ordinate geometry</span></a> that this vector space <span class="math notranslate nohighlight">\(p\)</span> actually closely resembles <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>.</p>
+<div class="note admonition" id="subspace-definition">
+<p class="admonition-title">Definition: Subspace</p>
+<p>A non-empty subset <span class="math notranslate nohighlight">\(W\)</span> of a vector space <span class="math notranslate nohighlight">\(V\)</span> is called a <strong>subspace</strong> (or a vector subspace) if it satisfies all the vector space properties A1 – A4 and M1 – M4.</p>
 </div>
-<p>For example, <span class="math notranslate nohighlight">\(\mathbb{C} = \operatorname{span}(\{1, i\})\)</span> over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> since every element of <span class="math notranslate nohighlight">\(\mathbb{C}\)</span> can be expressed as a linear combination of 1 and <span class="math notranslate nohighlight">\(i\)</span>.</p>
-<div class="seealso admonition" id="spanning-set-example">
-<p class="admonition-title">Example 5.6</p>
-<p>  (i)   Show that  <span class="math notranslate nohighlight">\(\{ \mathbf{v}_1, \mathbf{v}_2 \}\)</span> where <span class="math notranslate nohighlight">\(\mathbf{v}_1 = (2, 1)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}_2 = (4, 3)\)</span> is a spanning set for <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">We need to show that <span class="math notranslate nohighlight">\(\alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 = (a, b)\)</span> for any <span class="math notranslate nohighlight">\(a, b \in \mathbb{R}\)</span>, i.e., so that the following system has a non-trivial solution.</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    2 \alpha_1 + 4 \alpha_2 &amp;= a, \\
-    \alpha_1 + 3 \alpha_2 &amp;= b. 
-\end{align*}\]</div>
-<p class="sd-card-text">A system of linear equations has a solution if it is <a class="reference internal" href="../1_Matrices/1.8_Matrix_inverse.html#inverse-matrix-definition"><span class="std std-ref">non-singular</span></a> (the determinant of the coefficient matrix is non-zero), therefore</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    \det \begin{pmatrix} 2 &amp; 4 \\ 1 &amp; 3 \end{pmatrix} = 2 \neq 0, 
-\end{align*}\]</div>
-<p class="sd-card-text">so <span class="math notranslate nohighlight">\(\{\mathbf{v}_1, \mathbf{v}_2\}\)</span> is a spanning set for <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>.</p>
-</div>
-</details><p>  (ii)   Determine a spanning set for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Lets suggest <span class="math notranslate nohighlight">\(\{ (1, 0, 0), (0, 1, 0), (0, 0, 1) \}\)</span> as a spanning set for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span></p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    (x, y, z) &amp;= \{ \alpha_1 (1, 0, 0) + \alpha_2 (0, 1, 0) + \alpha_3(0, 0, 1) : \alpha_1, \alpha_2, \alpha_3 \in \mathbb{R}\} \\
-    &amp;= \{ \alpha_1 \mathbf{i} + \alpha_2 \mathbf{j} + \alpha_3 \mathbf{k} : \alpha_1, \alpha_2, \alpha_3 \in \mathbb{R} \},
-\end{align*}\]</div>
-<p class="sd-card-text">therefore <span class="math notranslate nohighlight">\(\{ \mathbf{i}, \mathbf{j}, \mathbf{k} \}\)</span> is a spanning set for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. Note that this is just one of many examples of spanning sets for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
-</div>
-</details></div>
-<p>The vectors <span class="math notranslate nohighlight">\(\mathbf{i}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{j}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{j}\)</span> were introduced in <a class="reference internal" href="../3_Vectors/3.7_Linear_combination_of_vectors.html#basis-vectors-section"><span class="std std-ref">basis vectors</span></a>. This leads to the definition of a basis of a vector space.</p>
-</section>
-<section id="basis-of-a-vector-space">
-<h2>Basis of a vector space<a class="headerlink" href="#basis-of-a-vector-space" title="Permalink to this headline">#</a></h2>
-<div class="note admonition" id="basis-definition">
-<p class="admonition-title">Definition: Basis of a vector space</p>
-<p>A <strong>basis</strong> of a vector space <span class="math notranslate nohighlight">\(V\)</span> of a field <span class="math notranslate nohighlight">\(F\)</span> is a linearly independent subset of <span class="math notranslate nohighlight">\(V\)</span> that spans <span class="math notranslate nohighlight">\(V\)</span>. A subset <span class="math notranslate nohighlight">\(W\)</span> is a basis if it satisfies the following</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="5.2_Linear_dependence.html#linear-dependence-definition"><span class="std std-ref">linear independence property</span></a>: for every subset <span class="math notranslate nohighlight">\(\{\mathbf{v}_1, \ldots , \mathbf{v}_n\}\)</span> of <span class="math notranslate nohighlight">\(W\)</span> the following equation only has the trivial soluion <span class="math notranslate nohighlight">\(\alpha_i = 0\)</span>.</p></li>
-</ul>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    \alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 + \cdots + \alpha_n \mathbf{v}_n &amp;= \mathbf{0};
-\end{align*}\]</div>
-<ul class="simple">
-<li><p><a class="reference internal" href="#spanning-set-definition"><span class="std std-ref">spanning property</span></a>: for all <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> we can write <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> as a linear combination of <span class="math notranslate nohighlight">\(\mathbf{v} \in W\)</span>, i.e.,</p></li>
-</ul>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    \mathbf{u} = \alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 + \cdots + \alpha_n \mathbf{v}_n.
-\end{align*}\]</div>
-</div>
-<div class="note admonition" id="orthogonal-basis-definition">
-<p class="admonition-title">Definition: Orthogonal basis</p>
-<p>An <strong>orthogonal basis</strong> of a vector space is one in which each of the vectors are orthogonal (perpendicular) to one another.</p>
-</div>
-<div class="note admonition" id="orthonormal-basis-definition">
-<p class="admonition-title">Definition: Orthonormal basis</p>
-<p>An <strong>orthonormal basis</strong> of a vector space is one in which each of the vectors are orthogonal to one another and each vector is a unit vector.</p>
-</div>
-<div class="note admonition" id="vector-space-dimension-definition">
-<p class="admonition-title">Definition: Dimension of a vector space</p>
-<p>The <strong>dimension</strong> of a vector space <span class="math notranslate nohighlight">\(V\)</span> is denoted by <span class="math notranslate nohighlight">\(\dim(V)\)</span> and is the number of elements in the basis for the vector space.</p>
-</div>
-<div class="seealso admonition" id="basis-example">
-<p class="admonition-title">Example 5.7</p>
-<p>Show that the vectors <span class="math notranslate nohighlight">\(\mathbf{v}_1 = (1, 1, 0)\)</span>, <span class="math notranslate nohighlight">\(\mathbf{v}_2 = (1, -1, 1)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}_3 = (1, -1, -2)\)</span> is a basis for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">We need to show that the three vectors are linearly independent, i.e., show that the only solution to the following system is <span class="math notranslate nohighlight">\(\alpha_1 = \alpha_2 = \alpha_3 = 0\)</span></p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    \alpha_1 \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} +
-    \alpha_2 \begin{pmatrix} 1 \\ -1 \\ 1 \end{pmatrix} +
-    \alpha_3 \begin{pmatrix} 1 \\ -1 \\ -2 \end{pmatrix}  = 
-    \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}.
-\end{align*}\]</div>
-<p class="sd-card-text">Using Gauss-Jordan elimination</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    &amp; \left( \begin{array}{ccc|c}
-        1 &amp; 1 &amp; 1 &amp; 0 \\
-        1 &amp; -1 &amp; 1 &amp; 0\\
-        1 &amp; -1 &amp; -2 &amp; 0
-    \end{array} \right)
-    \begin{matrix} \\ R_2 - R_1 \\ R_3 - R_1 \end{matrix} \\ \\
-    \longrightarrow \quad &amp;
-    \left( \begin{array}{ccc|c}
-        1 &amp; 1 &amp; 1 &amp; 0 \\
-        0 &amp; -2 &amp; 0 &amp; 0\\
-        0 &amp; -2 &amp; -3 &amp; 0
-    \end{array} \right)
-    \begin{matrix} \\ -\frac{1}{2}R_2 \\ \phantom{x} \end{matrix} \\ \\
-    \longrightarrow \quad &amp;
-    \left( \begin{array}{ccc|c}
-        1 &amp; 1 &amp; 1 &amp; 0 \\
-        0 &amp; 1 &amp; 0 &amp; 0\\
-        0 &amp; -2 &amp; -3 &amp; 0
-    \end{array} \right)
-    \begin{matrix} R_1 - R_2 \\ \\ R_3 + 2R_2 \end{matrix}  \\ \\
-    \longrightarrow \quad &amp;
-    \left( \begin{array}{ccc|c}
-        1 &amp; 0 &amp; 1 &amp; 0 \\
-        0 &amp; 1 &amp; 0 &amp; 0\\
-        0 &amp; 0 &amp; -3 &amp; 0
-    \end{array} \right)
-    \begin{matrix} \\ \phantom{x} \\ -\frac{1}{3}R_3 \end{matrix} \\ \\
-    \longrightarrow \quad &amp;
-    \left( \begin{array}{ccc|c}
-        1 &amp; 0 &amp; 1 &amp; 0 \\
-        0 &amp; 1 &amp; 0 &amp; 0\\
-        0 &amp; 0 &amp; 1 &amp; 0
-    \end{array} \right)
-    \begin{matrix} R_1 - R_3 \\ \phantom{x} \\ \phantom{x} \end{matrix} \\ \\
-    \longrightarrow \quad &amp;
-    \left( \begin{array}{ccc|c}
-        1 &amp; 0 &amp; 0 &amp; 0 \\
-        0 &amp; 1 &amp; 0 &amp; 0\\
-        0 &amp; 0 &amp; 1 &amp; 0
-    \end{array} \right)
-\end{align*}\]</div>
-<p class="sd-card-text">So <span class="math notranslate nohighlight">\(\mathbf{v}_1\)</span>, <span class="math notranslate nohighlight">\(\mathbf{v}_2\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}_3\)</span> are linearly independent. We also need to show that <span class="math notranslate nohighlight">\(\{ \mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3 \}\)</span> spans <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    \det \begin{pmatrix} 1 &amp; 1 &amp; 1 \\ 1 &amp; -1 &amp; -1 \\ 0 &amp; 1 &amp; -2 \end{pmatrix} = 3 + 3 = 6 \neq 0,
-\end{align*}\]</div>
-<p class="sd-card-text">so <span class="math notranslate nohighlight">\(\{ \mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3 \}\)</span> is a spanning set for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. Note that in showing that <span class="math notranslate nohighlight">\(\mathbf{v}_1\)</span>, <span class="math notranslate nohighlight">\(\mathbf{v}_2\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}_3\)</span> are linearly independent we have also shown that <span class="math notranslate nohighlight">\(\alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 + \alpha_3 \mathbf{v}_3 = (a, b, c)\)</span> has a solution and <span class="math notranslate nohighlight">\(\{ \mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3 \}\)</span> is a spanning set. Futhermore</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    \mathbf{v}_1 \cdot \mathbf{v}_2 &amp;= \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} \cdot
-    \begin{pmatrix} 1 \\ -1 \\ 1 \end{pmatrix} = 0, \\
-    \mathbf{v}_1 \cdot \mathbf{v}_3 &amp;= \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} \cdot
-    \begin{pmatrix} 1 \\ -1 \\ 2 \end{pmatrix} = 0, \\
-    \mathbf{v}_2 \cdot \mathbf{v}_3 &amp;= \begin{pmatrix} 1 \\ -1 \\ 1 \end{pmatrix} \cdot
-    \begin{pmatrix} 1 \\ -1 \\ -2 \end{pmatrix} = 0,
-\end{align*}\]</div>
-<p class="sd-card-text">so <span class="math notranslate nohighlight">\(\{ \mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3 \}\)</span> is an orthogonal basis. It is not an orthonormal basis since <span class="math notranslate nohighlight">\(|\mathbf{v}_1| = \sqrt{2} \neq 1\)</span>.</p>
-</div>
-</details></div>
-</section>
-<section id="change-of-basis">
-<span id="change-of-basis-section"></span><h2>Change of basis<a class="headerlink" href="#change-of-basis" title="Permalink to this headline">#</a></h2>
-<p><span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> has a particularly nice basis that is easy to write down</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    E = \left\{ 
-        \mathbf{e}_1 = \begin{pmatrix} 1 \\ 0 \\ 0 \\ \vdots \\ 0 \end{pmatrix}, 
-        \mathbf{e}_2 = \begin{pmatrix} 0 \\ 1 \\ 0 \\ \vdots \\ 0 \end{pmatrix}, \ldots,
-        \mathbf{e}_n = \begin{pmatrix} 0 \\ 0 \\ 0 \\ \vdots \\ 1 \end{pmatrix} 
-        \right\},
-\end{align*}\]</div>
-<p>which is called the <strong>standard basis</strong>. Note that <span class="math notranslate nohighlight">\(\mathbf{e}_i\)</span> is column <span class="math notranslate nohighlight">\(i\)</span> of the identity matrix and for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> we have <span class="math notranslate nohighlight">\(\mathbf{i} = \mathbf{e}_1\)</span>, <span class="math notranslate nohighlight">\(\mathbf{j} = \mathbf{e}_2\)</span> and <span class="math notranslate nohighlight">\(\mathbf{k} = \mathbf{e}_3\)</span>.</p>
-<p>We can represent a vector <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2, \ldots, u_n) \in \mathbb{R}^n\)</span> in the standard basis as a vector with respect to another basis <span class="math notranslate nohighlight">\(W = \{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\}\)</span> which is denoted using <span class="math notranslate nohighlight">\([\mathbf{u}]_W\)</span>. Using the standard basis we have</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    \mathbf{u} &amp;= u_1 \mathbf{e}_1 + u_2 \mathbf{e}_2 + \cdots + u_n \mathbf{e}_n = (u_1, u_2, \ldots, u_n),
-\end{align*}\]</div>
-<p>and to express <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> with respect to the basis <span class="math notranslate nohighlight">\(W\)</span> we need to solve</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    [\mathbf{u}]_W &amp;= w_1 \mathbf{v}_1 + w_2 \mathbf{v}_2 + \cdots + w_n \mathbf{v}_n = (u_1, u_2, \ldots, u_n),
-\end{align*}\]</div>
-<p>for <span class="math notranslate nohighlight">\(w_1, w_2, \ldots, w_n\)</span>. This concept is illustrated for <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> in <a class="reference internal" href="#change-of-basis-figure"><span class="std std-numref">Fig. 30</span></a>.</p>
-<figure class="align-default" id="change-of-basis-figure">
-<img alt="../_images/change_of_basis.png" src="../_images/change_of_basis.png" />
+<p>Most of the <a class="reference internal" href="5.2_Vector_spaces.html#vector-space-axioms-theorem"><span class="std std-ref">axioms</span></a> A1 – A4 and M1 – M4 are automatically satisfied, simply because they’re satisfied in <span class="math notranslate nohighlight">\(V\)</span>. The only things we really need to check are that addition and scalar multiplication are well-defined. In other words we need to check that when we ‘add’ or ‘multiply’ in <span class="math notranslate nohighlight">\(W\)</span> we are not taken outside of <span class="math notranslate nohighlight">\(W\)</span> (<a class="reference internal" href="#vector-space-figure"><span class="std std-numref">Fig. 29</span></a>). This idea is formalised in <a class="reference internal" href="#subspace-condition-theorem"><span class="std std-ref">the subspace condition</span></a>.</p>
+<figure class="align-default" id="vector-space-figure">
+<img alt="../_images/vector_space.png" src="../_images/vector_space.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 30 </span><span class="caption-text">The vector <span class="math notranslate nohighlight">\((u_1, u_2)\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> expressed with respect to the basis <span class="math notranslate nohighlight">\(E = \{\mathbf{e}_1, \mathbf{e}_2 \}\)</span> and <span class="math notranslate nohighlight">\(W = \{\mathbf{v}_1, \mathbf{v}_2\}\)</span>.</span><a class="headerlink" href="#change-of-basis-figure" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Illustration of a subspace <span class="math notranslate nohighlight">\(W\)</span> of a vector space <span class="math notranslate nohighlight">\(V\)</span>.</span><a class="headerlink" href="#vector-space-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="seealso admonition" id="change-of-basis-example">
-<p class="admonition-title">Example 5.8</p>
-<p>Represent the vector <span class="math notranslate nohighlight">\(\mathbf{u} = (4, 0, 5)\)</span> with respect to the basis <span class="math notranslate nohighlight">\(W = \{(1, 1, 0), (1, -1, 1), (1, -1, -2)\}\)</span>.</p>
+<div class="important admonition" id="subspace-condition-theorem">
+<p class="admonition-title">Theorem: Subspace condition</p>
+<p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(W\)</span> be a non-empty subset of <span class="math notranslate nohighlight">\(V\)</span> then <span class="math notranslate nohighlight">\(W\)</span> is a subspace if and only if the following condition is satisfied</p>
+<div class="math notranslate nohighlight" id="equation-subspace-condition-equation">
+<span class="eqno">(19)<a class="headerlink" href="#equation-subspace-condition-equation" title="Permalink to this equation">#</a></span>\[\mathbf{u} + \alpha\mathbf{w} \in W,\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{u}, \mathbf{w} \in W\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span>.</p>
+</div>
+<p>To demonstrate the use of <a class="reference internal" href="#subspace-condition-theorem"><span class="std std-ref">the subspace condition</span></a> let’s check whether <span class="math notranslate nohighlight">\(W = \{(x, y, z) : x + 2y - 3z = 0\}\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. First we need to verify that <span class="math notranslate nohighlight">\(W\)</span> is non-empty. To do this we simply need to find an element of <span class="math notranslate nohighlight">\(W\)</span>, e.g., <span class="math notranslate nohighlight">\((0, 0, 0) \in W\)</span> so <span class="math notranslate nohighlight">\(W\)</span> is non-empty.</p>
+<p>Next we need to take two arbitrary vectors in <span class="math notranslate nohighlight">\(W\)</span>, <span class="math notranslate nohighlight">\(\mathbf{u} = (x_1, y_1, z_1), \mathbf{v} = (x_2, y_2, z_2) \in W\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \mathbf{u} + \alpha \mathbf{v} = 
+    \begin{pmatrix} x_1 \\ y_1 \\ z_1 \end{pmatrix} + \alpha 
+    \begin{pmatrix} x_2 \\ y_2 \\ z_2 \end{pmatrix} 
+    = \begin{pmatrix} x_1 + \alpha x_2 \\ y_1 + \alpha y_2 \\ z_1 + \alpha z_2 \end{pmatrix}.
+\end{align*}\]</div>
+<p>We now need to show that <span class="math notranslate nohighlight">\((x_1 + \alpha x_2, y_1 + \alpha y_2, z_1 + \alpha z_2) = 0\)</span> (i.e., it is in <span class="math notranslate nohighlight">\(W\)</span>). To do this let <span class="math notranslate nohighlight">\(x = x_1 + \alpha x_2\)</span>, <span class="math notranslate nohighlight">\(y = y_1 + \alpha y_2\)</span> and <span class="math notranslate nohighlight">\(z = z_1 + \alpha z_2\)</span> then</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    x + 2y - 3z &amp;= (x_1 + \alpha x_2) + 2(y_1 + \alpha y_2) - 3(z_1 + \alpha z_2) \\
+    &amp;= (x_1 + 2y_1 - 3z_1) + \alpha (x_2 + 2y_2 - 3z_2) \\
+    &amp;= 0 + \alpha \cdot 0 = 0,
+\end{align*}\]</div>
+<p>therefore <span class="math notranslate nohighlight">\(\mathbf{u} + \alpha \mathbf{v} \in W\)</span> and <span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span></p>
+<p>By a proof similar to the above, you can show that any plane of the form <span class="math notranslate nohighlight">\(\{(x, y, z) : ax + by + cz = d\}\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> when <span class="math notranslate nohighlight">\(d=0\)</span> and not a subspace otherwise.</p>
+<div class="seealso admonition" id="subspace-example">
+<p class="admonition-title">Example 5.3</p>
+<p>  (i)   Let <span class="math notranslate nohighlight">\(W\)</span> be the subset <span class="math notranslate nohighlight">\(M_{2\times 2}\)</span> given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    W = \left\{ \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} : a + b + c + d = 0 \right\}.
+\end{align*}\]</div>
+<p>Show that <span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(M_{2\times 2}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -840,72 +670,79 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">We need to solve the system</p>
+<p class="sd-card-text">Clearly <span class="math notranslate nohighlight">\(\mathbf{0}_{2\times 2} \in W\)</span> so <span class="math notranslate nohighlight">\(W\)</span> is non-empty. Let <span class="math notranslate nohighlight">\(U = \begin{pmatrix} x_1 &amp; y_1 \\ z_1 &amp; w_1 \end{pmatrix}, V = \begin{pmatrix} x_2 &amp; y_2 \\ z_2 &amp; w_2 \end{pmatrix} \in W\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>. Then</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    w_1 \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} + 
-    w_2 \begin{pmatrix} 1 \\ -1 \\ 1 \end{pmatrix} +
-    w_3 \begin{pmatrix} 1 \\ -1 \\ 2 \end{pmatrix} =
-    \begin{pmatrix} 4 \\ 0 \\ 5 \end{pmatrix},
-\end{align*}\]</div>
-<p class="sd-card-text">which can be written as the matrix equation</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    \begin{pmatrix}
-        1 &amp; 1 &amp; 1 \\
-        1 &amp; -1 &amp; -1 \\
-        0 &amp; 1 &amp; 2 
-    \end{pmatrix}
-    \begin{pmatrix} w_1 \\ w_2 \\ w_3 \end{pmatrix} =
-    \begin{pmatrix} 4 \\ 0 \\ 5 \end{pmatrix},
-\end{align*}\]</div>
-<p class="sd-card-text">where <span class="math notranslate nohighlight">\([\mathbf{u}]_w = (w_1, w_2, w_3)\)</span>. Calculating the inverse of the coefficient matrix</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
+    U + \alpha V = 
     \begin{pmatrix} 
-        1 &amp; 1 &amp; 1 \\
-        1 &amp; -1 &amp; -1 \\
-        0 &amp; 1 &amp; -2 
-    \end{pmatrix}^{-1} &amp;=
-    \frac{1}{6}
-    \begin{pmatrix}
-        3 &amp; 2 &amp; 1 \\
-        3 &amp; -2 &amp; -1 \\
-        0 &amp; 2 &amp; -2
-    \end{pmatrix}^\mathrm{T} \\
-    &amp;= \frac{1}{6} 
-    \begin{pmatrix}
-        3 &amp; 3 &amp; 0 \\
-        2 &amp; -2 &amp; 2 \\
-        1 &amp; -1 &amp; -2
-    \end{pmatrix} \\
-    &amp;=
-    \begin{pmatrix} 
-        \frac{1}{2} &amp; \frac{1}{2} &amp; 0 \\
-        \frac{1}{3} &amp; -\frac{1}{3} &amp; \frac{1}{3} \\
-        \frac{1}{6} &amp; -\frac{1}{6} &amp; -\frac{1}{3}
-    \end{pmatrix},
+        x_1 + \alpha x_2 &amp; y_1 + \alpha y_2 \\ 
+        z_1 + \alpha z_2 &amp; w_1 + \alpha w_2 \end{pmatrix}.
 \end{align*}\]</div>
-<p class="sd-card-text">so</p>
+<p class="sd-card-text">Checking that <span class="math notranslate nohighlight">\(U + \alpha V \in W\)</span></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    [\mathbf{u}]_W = 
-    \begin{pmatrix} 
-        \frac{1}{2} &amp; \frac{1}{2} &amp; 0 \\
-        \frac{1}{3} &amp; -\frac{1}{3} &amp; \frac{1}{3} \\
-        \frac{1}{6} &amp; -\frac{1}{6} &amp; -\frac{1}{3}
-    \end{pmatrix}
-    \begin{pmatrix} 4 \\ 0 \\ 5 \end{pmatrix} =
-    \begin{pmatrix} 2 \\ 3 \\ -1 \end{pmatrix}.
+    a + b + c + d &amp;= (x_1 + \alpha x_2) + (y_1 + \alpha y_2) + (z_1 + \alpha z_2) + (w_1 + \alpha w_2) \\ 
+    &amp; = (x_1 + y_1 + z_1 + w_1) + \alpha (x_2 + y_2 + z_2 + w_2) \\
+    &amp; = 0 + \alpha \cdot 0 = 0,
 \end{align*}\]</div>
+<p class="sd-card-text">so <span class="math notranslate nohighlight">\(U + \alpha V \in W\)</span> therefore <span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(M_{2\times 2}\)</span>.</p>
+</div>
+</details><p>  (ii)   Let <span class="math notranslate nohighlight">\(W = \{ p(x) \in P_n(\mathbb{R}) : p(x) = p(-x)\} \subseteq P(\mathbb{R}_n)\)</span> be the set of all even functions. Show that <span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(P(\mathbb{R}_n)\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The zero polynomial <span class="math notranslate nohighlight">\(0 \in W\)</span> so <span class="math notranslate nohighlight">\(W\)</span> is non-empty. Let <span class="math notranslate nohighlight">\(p, r \in W\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>, we need to show that <span class="math notranslate nohighlight">\(p + \alpha r \in W\)</span>. Now we know that <span class="math notranslate nohighlight">\(p(-x) = p(x)\)</span> and <span class="math notranslate nohighlight">\(r(-x) = r(x)\)</span></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    (p + \alpha r)(-x) = p(-x) + \alpha r(-x) = p(x) + \alpha r(x) = (p + \alpha r)(x),
+\end{align*}\]</div>
+<p class="sd-card-text">so <span class="math notranslate nohighlight">\((p + \alpha r)(x) \in W\)</span> is an even function therefore <span class="math notranslate nohighlight">\(W\)</span> is a subspace.</p>
 </div>
 </details></div>
-<p>Note that in <a class="reference internal" href="#change-of-basis-example"><span class="std std-ref">example 5.8</span></a> we can represent any vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> with respect to the basis <span class="math notranslate nohighlight">\(W\)</span> by multiplying by the square matrix in the final equation. This matrix is known as the <a class="reference external" href="https://en.wikipedia.org/wiki/Change_of_basis"><strong>change of basis matrix</strong></a>.</p>
-<div class="note admonition" id="change-of-basis-matrix-definition">
-<p class="admonition-title">Definition: Change of basis matrix</p>
-<p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over the field <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span>. If <span class="math notranslate nohighlight">\(E\)</span> and <span class="math notranslate nohighlight">\(W\)</span> are two basis for <span class="math notranslate nohighlight">\(V\)</span> then the change of basis matrix is the matrix <span class="math notranslate nohighlight">\(A_{E \to W}\)</span> such that <span class="math notranslate nohighlight">\([u]_{W} = A_{E \to W} [u]_E\)</span>.</p>
+<section id="non-examples-of-subspaces">
+<h2>Non-examples of Subspaces<a class="headerlink" href="#non-examples-of-subspaces" title="Permalink to this headline">#</a></h2>
+<p>Not all subsets of a vector space will be a subspace. For example, define <span class="math notranslate nohighlight">\(p\)</span> as the polynomial</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    p(x)=a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n = \sum_{i = 0}^n a_ix^i ,
+\end{align*}\]</div>
+<p>with <span class="math notranslate nohighlight">\(a_n\neq 0\)</span>, we say <span class="math notranslate nohighlight">\(p\)</span> has degree <span class="math notranslate nohighlight">\(n\)</span> and write <span class="math notranslate nohighlight">\(\operatorname{deg}(p)=n\)</span>. Let</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    W = \{p \in P_n(\mathbb{R}) : \operatorname{deg}(p) \in \{0,2,4\}\}
+\end{align*}\]</div>
+<p>i.e, those polynomials of even degree at most five together with the zero polynomial. Is <span class="math notranslate nohighlight">\(W\)</span> a subspace of <span class="math notranslate nohighlight">\(P(\mathbb{R}_5)\)</span>?</p>
+<p>Let <span class="math notranslate nohighlight">\(p = x^2\)</span> and <span class="math notranslate nohighlight">\(r = -x ^ 2 + x\)</span> then <span class="math notranslate nohighlight">\(p, r \in W\)</span> but <span class="math notranslate nohighlight">\(p + r = x^2 - x^2 + x = x \notin W\)</span> since <span class="math notranslate nohighlight">\(\operatorname{deg}(x) = 1\)</span> is odd. Therefore <span class="math notranslate nohighlight">\(W\)</span> is not a subspace of <span class="math notranslate nohighlight">\(P(\mathbb{R}_5)\)</span>. Here we came up with a single counter example to show that the linear combination <span class="math notranslate nohighlight">\(p + r \notin W\)</span>.</p>
+<p>This counterexample is great but how does one come up with such a counterexample if you can’t immediately think of one? If you do not see an obvious counterexample, try and construct one: we are looking for two even-degree polynomials, whose sum is not an even polynomial. Let’s start at the lowest degree: <span class="math notranslate nohighlight">\(0\)</span>. The sum of two polynomials of degree <span class="math notranslate nohighlight">\(0\)</span> is just the sum of two real numbers, so there is no counterexample here. Let’s try degree <span class="math notranslate nohighlight">\(2\)</span>. Now we need to find: <span class="math notranslate nohighlight">\(p(x) = ax^2 + bx + c\)</span> and <span class="math notranslate nohighlight">\(r(x) = dx^2 + ex + f\)</span>, such that <span class="math notranslate nohighlight">\(p+r\)</span> has an add degree. Now</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    p+r = (a + d)x^2 + (b + e)x + (c + f)
+\end{align*}\]</div>
+<p>has degree one when <span class="math notranslate nohighlight">\((a + d) = 0\)</span> and <span class="math notranslate nohighlight">\((b + e) \neq 0\)</span>. So let’s take <span class="math notranslate nohighlight">\(a = 1\)</span>, <span class="math notranslate nohighlight">\(d = -1\)</span> and <span class="math notranslate nohighlight">\(b = 0\)</span>, <span class="math notranslate nohighlight">\(e = 1\)</span> (we don’t care about <span class="math notranslate nohighlight">\(c\)</span> or <span class="math notranslate nohighlight">\(f\)</span>, so let’s just set both to be 0). This yields <span class="math notranslate nohighlight">\(p = x^2\)</span> and <span class="math notranslate nohighlight">\(r = -x^2 + x\)</span>, which was our counterexample.</p>
+<p>If we try constructing a counterexample and but fail, then it might mean that (a) a counterexample is not easy to find or (b) the statement is actually true. With a lot of pure maths research, mathematicians are often in this situation, trying to find a counterexample or a proof, not knowing which one it should be.</p>
+<div class="seealso admonition" id="non-subspace-example">
+<p class="admonition-title">Example 5.4</p>
+<p>Show that the following are not subspaces:</p>
+<p>  (i)   <span class="math notranslate nohighlight">\(W = \{z = (a+bi) : a + b = 5\} \subseteq \mathbb{C}\)</span>;</p>
+<p>  (ii)   <span class="math notranslate nohighlight">\(W = \{z = (a + bi) : a^2 + b^2 &lt; 0\} \subseteq \mathbb{C}\)</span>;</p>
+<p>  (iii)   <span class="math notranslate nohighlight">\(W = \{(x,y,z) : x + y + z = 5\} \subseteq{\mathbb{R}^3}\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">(i)    Let <span class="math notranslate nohighlight">\(z = 1 + 4i \in W\)</span> but <span class="math notranslate nohighlight">\(-1 \cdot z = -1 - 4i \notin W\)</span>. This shows that <span class="math notranslate nohighlight">\(W\)</span> is not closed under taking scalar multiples, and hence not a subspace of <span class="math notranslate nohighlight">\(\mathbb{C}\)</span> over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. We could have also noted simply that <span class="math notranslate nohighlight">\(0\notin W\)</span>.</p>
+<p class="sd-card-text">The condition that there is a neutral element with respect to addition is one of the properties of a vector space (A3). So a subspace must also contain it.</p>
+<p class="sd-card-text">(ii)   <span class="math notranslate nohighlight">\(W\)</span> is the empty since <span class="math notranslate nohighlight">\(a^2 + b^2 \geq 0\)</span> for all <span class="math notranslate nohighlight">\(a, b \in \mathbb{R}\)</span>. Hence <span class="math notranslate nohighlight">\(W\)</span> is not a subspace.</p>
+<p class="sd-card-text">(iii)    Let <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 2, 2) \in W\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v} = (2, 1, 2) \in W\)</span>, then <span class="math notranslate nohighlight">\(\mathbf{u} + \mathbf{v} = (3, 3, 4) \notin W\)</span>. We could’ve also just noted that <span class="math notranslate nohighlight">\(0 \notin W\)</span>.</p>
 </div>
-<p>So to express the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> to the basis <span class="math notranslate nohighlight">\(W\)</span> we simply multiply <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> by the change of basis matrix. Changing from a non-standard basis is a slightly more complicated procedure and will be covered in the more advanced materials on linear algebra.</p>
+</details></div>
 </section>
 </section>
 
@@ -936,17 +773,17 @@ Solution<div class="sd-summary-down docutils">
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="5.2_Linear_dependence.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="5.2_Vector_spaces.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Linear dependence</p>
+            <p class="prev-next-title">Definitions</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="5.5_Vector_spaces_exercises.html" title="next page">
+    <a class='right-next' id="next-link" href="5.4_Linear_dependence.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Vector spaces exercises</p>
+        <p class="prev-next-title">Linear dependence</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

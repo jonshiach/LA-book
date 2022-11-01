@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Subspaces &#8212; Linear Algebra</title>
+    <title>Definitions &#8212; Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,12 +52,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <link rel="canonical" href="https://jonshiach.github.io/LA-book/5_Vector_spaces/5.1_Subspaces.html" />
+    <link rel="canonical" href="https://jonshiach.github.io/LA-book/5_Vector_spaces/5.2_Vector_spaces.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Linear dependence" href="5.2_Linear_dependence.html" />
-    <link rel="prev" title="Vector spaces" href="5.0_Vector_spaces.html" />
+    <link rel="next" title="Subspaces" href="5.3_Subspaces.html" />
+    <link rel="prev" title="Vector spaces" href="5.1_Introduction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -349,7 +349,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="5.0_Vector_spaces.html">
+  <a class="reference internal" href="5.1_Introduction.html">
    Vector spaces
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
@@ -360,21 +360,26 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
+     Definitions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5.3_Subspaces.html">
      Subspaces
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="5.2_Linear_dependence.html">
+    <a class="reference internal" href="5.4_Linear_dependence.html">
      Linear dependence
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="5.3_Basis.html">
+    <a class="reference internal" href="5.5_Basis.html">
      Basis
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="5.5_Vector_spaces_exercises.html">
+    <a class="reference internal" href="5.6_Vector_spaces_exercises.html">
      Vector spaces exercises
     </a>
    </li>
@@ -513,7 +518,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/5_Vector_spaces/5.1_Subspaces.ipynb"
+        <a href="../_sources/5_Vector_spaces/5.2_Vector_spaces.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -573,8 +578,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#non-examples-of-subspaces">
-   Non-examples of Subspaces
+  <a class="reference internal nav-link" href="#examples-of-non-vector-spaces">
+   Examples of non-vector spaces
   </a>
  </li>
 </ul>
@@ -586,7 +591,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Subspaces</h1>
+                <h1>Definitions</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -597,8 +602,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#non-examples-of-subspaces">
-   Non-examples of Subspaces
+  <a class="reference internal nav-link" href="#examples-of-non-vector-spaces">
+   Examples of non-vector spaces
   </a>
  </li>
 </ul>
@@ -611,53 +616,68 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="subspaces">
-<span id="subspaces-section"></span><h1>Subspaces<a class="headerlink" href="#subspaces" title="Permalink to this headline">#</a></h1>
-<p>We have seen that a <a class="reference internal" href="5.0_Vector_spaces.html#vector-space-definition"><span class="std std-ref">vector space</span></a> is a set, and hence we can consider studying its <a class="reference external" href="https://en.wikipedia.org/wiki/Subset">subsets</a>. Think of the Euclidean space <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> (which we think of with the usual <span class="math notranslate nohighlight">\(x,y,z\)</span>-coordinates). This is a vector space, and consider the plane <span class="math notranslate nohighlight">\(p = \{(x,y,z) : x + y + z = 0\} \subseteq \mathbb{R}^3\)</span>. In fact, we can view <span class="math notranslate nohighlight">\(p\)</span> itself as a vector space, meaning it satisfies the <a class="reference internal" href="5.0_Vector_spaces.html#vector-space-axioms-theorem"><span class="std std-ref">vector space axioms</span></a> A1 – A4 and M1 – M4, where we define addition and scalar multiplication as coming from <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. We saw in <a class="reference internal" href="../4_Coordinate_geometry/4.1_Introduction.html#coordinate-geometry-chapter"><span class="std std-ref">Co-ordinate geometry</span></a> that this vector space <span class="math notranslate nohighlight">\(p\)</span> actually closely resembles <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>.</p>
-<div class="note admonition" id="subspace-definition">
-<p class="admonition-title">Definition: Subspace</p>
-<p>A non-empty subset <span class="math notranslate nohighlight">\(W\)</span> of a vector space <span class="math notranslate nohighlight">\(V\)</span> is called a <strong>subspace</strong> (or a vector subspace) if it satisfies all the vector space properties A1 – A4 and M1 – M4.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="definitions">
+<h1>Definitions<a class="headerlink" href="#definitions" title="Permalink to this headline">#</a></h1>
+<div class="note admonition" id="binary-operation-definition">
+<p class="admonition-title">Binary operation</p>
+<p>A <strong>binary operation</strong> is a mapping of two elements of the same set <span class="math notranslate nohighlight">\(S\)</span> whose output is also an element of <span class="math notranslate nohighlight">\(S\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ f: S \times S \to S\]</div>
+<p>The symbol <span class="math notranslate nohighlight">\(\times\)</span> is used to denote the <a class="reference external" href="https://en.wikipedia.org/wiki/Cartesian_product">Cartesian product</a> and <span class="math notranslate nohighlight">\(\to\)</span> denotes a mapping from one set to another.</p>
 </div>
-<p>Actually most of the <a class="reference internal" href="5.0_Vector_spaces.html#vector-space-axioms-theorem"><span class="std std-ref">axioms</span></a> A1 – A4 and M1 – M4 are automatically satisfied, simply because they’re satisfied in <span class="math notranslate nohighlight">\(V\)</span>. The only things we really need to check are that addition and scalar multiplication are well-defined. In other words we need to check that when we ‘add’ or ‘multiply’ in <span class="math notranslate nohighlight">\(W\)</span> we are not taken outside of <span class="math notranslate nohighlight">\(W\)</span> (<a class="reference internal" href="#vector-space-figure"><span class="std std-numref">Fig. 29</span></a>). This idea is formalised in <a class="reference internal" href="#subspace-condition-theorem"><span class="std std-ref">the subspace condition</span></a>.</p>
-<figure class="align-default" id="vector-space-figure">
-<img alt="../_images/vector_space.png" src="../_images/vector_space.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Illustration of a subspace <span class="math notranslate nohighlight">\(W\)</span> of a vector space <span class="math notranslate nohighlight">\(V\)</span>.</span><a class="headerlink" href="#vector-space-figure" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<div class="important admonition" id="subspace-condition-theorem">
-<p class="admonition-title">Theorem: Subspace condition</p>
-<p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(W\)</span> be a non-empty subset of <span class="math notranslate nohighlight">\(V\)</span> then <span class="math notranslate nohighlight">\(W\)</span> is a subspace if and only if the following condition is satisfied</p>
-<div class="math notranslate nohighlight" id="equation-subspace-condition-equation">
-<span class="eqno">(19)<a class="headerlink" href="#equation-subspace-condition-equation" title="Permalink to this equation">#</a></span>\[\mathbf{u} + \alpha\mathbf{w} \in W,\]</div>
-<p>where <span class="math notranslate nohighlight">\(\mathbf{u}, \mathbf{w} \in W\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span>.</p>
+<p>We have already met examples of binary operations in addition, multiplication, subtraction and division of real numbers. For <span class="math notranslate nohighlight">\(a,b \in \mathbb{R}\)</span> then</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f(a,b) = a + b\)</span> is a real number.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(a,b) = a \cdot b\)</span> (<span class="math notranslate nohighlight">\(a\)</span> multiplied by <span class="math notranslate nohighlight">\(b\)</span>) is a real number <a class="footnote-reference brackets" href="#id2" id="id1">1</a>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(a,b) = a - b\)</span> is a real number.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(a,b) = a \div b\)</span> is a real number.</p></li>
+</ul>
+<p>Another example is for the set of all <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrices <span class="math notranslate nohighlight">\(M_2(\mathbb{R})\)</span>, <span class="math notranslate nohighlight">\(f(A, B) = AB\)</span> is a binary operation since <span class="math notranslate nohighlight">\(AB\)</span> is also a <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix.</p>
+<div class="note admonition" id="field-definition">
+<p class="admonition-title">Definition: Field</p>
+<p>A <strong>field</strong> is a set <span class="math notranslate nohighlight">\(F\)</span> together with two binary operations on elements of <span class="math notranslate nohighlight">\(F\)</span> called <em>addition</em> and <em>multiplication</em>. For <span class="math notranslate nohighlight">\(a,b \in F\)</span> addition is written as <span class="math notranslate nohighlight">\(a + b\)</span> and multiplication is written as <span class="math notranslate nohighlight">\(a \cdot b\)</span>.</p>
 </div>
-<p>To demonstrate the use of <a class="reference internal" href="#subspace-condition-theorem"><span class="std std-ref">the subspace condition</span></a> let’s check whether <span class="math notranslate nohighlight">\(W = \{(x, y, z) : x + 2y - 3z = 0\}\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. First we need to verify that <span class="math notranslate nohighlight">\(W\)</span> is non-empty. To do this we simply need to find an element of <span class="math notranslate nohighlight">\(W\)</span>, e.g., <span class="math notranslate nohighlight">\((0, 0, 0) \in W\)</span> so <span class="math notranslate nohighlight">\(W\)</span> is non-empty.</p>
-<p>Next we need to take two arbitrary vectors in <span class="math notranslate nohighlight">\(W\)</span>, <span class="math notranslate nohighlight">\(\mathbf{u} = (x_1, y_1, z_1), \mathbf{v} = (x_2, y_2, z_2) \in W\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    \mathbf{u} + \alpha \mathbf{v} = 
-    \begin{pmatrix} x_1 \\ y_1 \\ z_1 \end{pmatrix} + \alpha 
-    \begin{pmatrix} x_2 \\ y_2 \\ z_2 \end{pmatrix} 
-    = \begin{pmatrix} x_1 + \alpha x_2 \\ y_1 + \alpha y_2 \\ z_1 + \alpha z_2 \end{pmatrix}.
-\end{align*}\]</div>
-<p>We now need to show that <span class="math notranslate nohighlight">\((x_1 + \alpha x_2, y_1 + \alpha y_2, z_1 + \alpha z_2) = 0\)</span> (i.e., it is in <span class="math notranslate nohighlight">\(W\)</span>)</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    (x_1 + \alpha x_2) + 2(y_1 + \alpha y_2) - 3(z_1 + \alpha z_2) &amp;= (x_1 + 2y_1 - 3z_1) \\
-    &amp; \qquad + \alpha (x_2 + 2y_2 - 3z_2) \\
-    &amp;= 0 + \alpha \cdot 0 = 0,
-\end{align*}\]</div>
-<p>therefore <span class="math notranslate nohighlight">\(\mathbf{u} + \alpha \mathbf{v} \in W\)</span> and <span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span></p>
-<p>By a proof similar to the above, you can show that any plane of the form <span class="math notranslate nohighlight">\(\{(x, y, z) : ax + by + cz = d\}\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> when <span class="math notranslate nohighlight">\(d=0\)</span> and not a subspace otherwise.</p>
-<div class="seealso admonition" id="subspace-example">
-<p class="admonition-title">Example 5.3</p>
-<p>  (i)   Let <span class="math notranslate nohighlight">\(W\)</span> be the subset <span class="math notranslate nohighlight">\(M_{2\times 2}\)</span> given by</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    W = \left\{ \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} : a + b + c + d = 0 \right\}.
-\end{align*}\]</div>
-<p>Show that <span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(M_{2\times 2}\)</span>.</p>
+<p>The classic example of a field is a set of numbers which will suffice for what we will be doing here. However, a field can be any set of objects for which the above definition is satisfied and you may meet other examples of fields in your studies in the future.</p>
+<div class="note admonition" id="vector-space-definition">
+<p class="admonition-title">Definition: Vector space</p>
+<p>A <strong>vector space</strong> over a field <span class="math notranslate nohighlight">\(F\)</span> is a non-empty set <span class="math notranslate nohighlight">\(V\)</span> of objects called vectors on which the binary operations below are defined</p>
+<ul class="simple">
+<li><p><strong>addition</strong> <span class="math notranslate nohighlight">\((+)\)</span>: <span class="math notranslate nohighlight">\(V \times V \to V\)</span>. For example, given two elements <span class="math notranslate nohighlight">\(\mathbf{u}, \mathbf{v} \in V\)</span> we can ‘add’ them together to obtain another element <span class="math notranslate nohighlight">\(\mathbf{u} + \mathbf{v} \in V\)</span>.</p></li>
+<li><p><strong>scalar multiplication</strong> <span class="math notranslate nohighlight">\((\cdot )\)</span>: <span class="math notranslate nohighlight">\(F \times V \to V\)</span>. For example given <span class="math notranslate nohighlight">\(\alpha \in F\)</span> and <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> we can ‘multiply’ <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> by <span class="math notranslate nohighlight">\(\alpha\)</span> to obtain another element <span class="math notranslate nohighlight">\(\alpha \cdot \mathbf{u} \in V\)</span></p></li>
+</ul>
+</div>
+<p>For example, a field could be the set of all real numbers <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> and a vector space be the set of all vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> since we can add two vectors and multiply a vector by a scalar. Not all subsets of a field can be classified as a vector space, to do so the set <span class="math notranslate nohighlight">\(V\)</span> must satisfy the following axioms.</p>
+<div class="important admonition" id="vector-space-axioms-theorem">
+<p class="admonition-title">Theorem: Axioms of a vector space</p>
+<p>Let <span class="math notranslate nohighlight">\(\mathbf{u}, \mathbf{v}, \mathbf{w} \in V\)</span> and <span class="math notranslate nohighlight">\(\alpha, \beta \in F\)</span>, <span class="math notranslate nohighlight">\(V\)</span> is a vector space if all of the following axioms are satisfied</p>
+<ul class="simple">
+<li><p><strong>A1</strong>: Associativity of vector addition: <span class="math notranslate nohighlight">\(\mathbf{u} + (\mathbf{v} + \mathbf{w}) = (\mathbf{u} + \mathbf{v}) + \mathbf{w}\)</span>;</p></li>
+<li><p><strong>A2</strong>: Commutativity of vector addition: <span class="math notranslate nohighlight">\(\mathbf{u} + \mathbf{v} = \mathbf{v} + \mathbf{u}\)</span>;</p></li>
+<li><p><strong>A3</strong>: Identity element of vector addition: there exists an element <span class="math notranslate nohighlight">\(\mathbf{0} \in V\)</span> such that <span class="math notranslate nohighlight">\(\mathbf{u} + \mathbf{0} = \mathbf{u}\)</span> for all <span class="math notranslate nohighlight">\(\mathbf{v} \in V\)</span>;</p></li>
+<li><p><strong>A4</strong>: Additive inverse: For every <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> there exists an element <span class="math notranslate nohighlight">\(- \mathbf{v} \in V\)</span>, called the <strong>additive inverse</strong>, such that <span class="math notranslate nohighlight">\(\mathbf{u} + (- \mathbf{u}) = \mathbf{0}\)</span>;</p></li>
+<li><p><strong>M1</strong>: Associativity of scalar multiplication: <span class="math notranslate nohighlight">\(\alpha(\beta \mathbf{u}) = (\alpha \beta) \mathbf{u}\)</span>;</p></li>
+<li><p><strong>M2</strong>: Identity element of scalar multiplication: there exists an element <span class="math notranslate nohighlight">\(1\)</span> called the <strong>multiplicative identity</strong> such that <span class="math notranslate nohighlight">\(1 \mathbf{u} = \mathbf{u}\)</span>;</p></li>
+<li><p><strong>M3</strong>: Distributivity of scalar multiplication with respect to vector addition: <span class="math notranslate nohighlight">\(\alpha(\mathbf{u} + \mathbf{v}) = \alpha \mathbf{u} + \alpha \mathbf{v}\)</span>;</p></li>
+<li><p><strong>M4</strong>: Distributivity of scalar multiplication with respect to addition: <span class="math notranslate nohighlight">\((\alpha + \beta)\mathbf{u} = \alpha \mathbf{u} + \beta \mathbf{u}\)</span>.</p></li>
+</ul>
+</div>
+<p>The first group of four axioms are concerned with addition and the second group of four axioms are concerned with scalar multiplication. When the scalars are real numbers, e.g., <span class="math notranslate nohighlight">\(F = \mathbb{R}\)</span>, we call <span class="math notranslate nohighlight">\(V\)</span> a <em>‘real vector space’</em> which is short for a <em>‘vector space over the field of real numbers’</em>. When the scalars are complex numbers, e.g., <span class="math notranslate nohighlight">\(F=\mathbb{C}\)</span>, we talk of a <em>‘complex vector space’</em>.</p>
+<p>We now list some basic properties for multiplication by scalars in a vector space.</p>
+<div class="important admonition" id="properties-of-vector-spaces-theorem">
+<p class="admonition-title">Theorem: Properties of vector spaces</p>
+<p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(\mathbf{u} \in V,\alpha\in F\)</span>. Then the following hold:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\alpha \cdot \mathbf{0} = \mathbf{0}\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(0 \cdot \mathbf{u} = \mathbf{0}\)</span>;</p></li>
+<li><p>if <span class="math notranslate nohighlight">\(\alpha \cdot \mathbf{u} = \mathbf{0}\)</span> then either <span class="math notranslate nohighlight">\(\alpha = 0\)</span> or <span class="math notranslate nohighlight">\(\mathbf{u} = \mathbf{0}\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(-(\alpha \cdot \mathbf{u}) = (-\alpha)\cdot \mathbf{u} = \alpha\cdot(-\mathbf{u})\)</span>.</p></li>
+</ul>
+</div>
+<p>The name <em>‘vector space’</em> indicates a connection with the study of vectors. Indeed our Euclidean spaces <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, as introduced in <a class="reference internal" href="../3_Vectors/3.1_Introduction.html#vectors-chapter"><span class="std std-ref">Vectors</span></a>, are vector spaces over <span class="math notranslate nohighlight">\(F=\mathbb{R}\)</span>. Addition and scalar multiplication, in the sense of a vector space, for <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> are as given in <a class="reference internal" href="../3_Vectors/3.5_Arithmetic_operations_on_vectors.html#vector-addition-definition"><span class="std std-ref">vector addition</span></a> and <a class="reference internal" href="../3_Vectors/3.5_Arithmetic_operations_on_vectors.html#scalar-multiplication-of-a-vector-definition"><span class="std std-ref">scalar multiplication</span></a> respectively. Euclidean vector spaces are often the first examples of vector spaces that a student meets. However, maybe they do not quite demonstrate the power behind this construction. The real motivation of the study of the vector spaces comes from the fact that a lot of more abstract sets, such as differentiable functions or matrices, can be viewed as vector spaces. Everything that we learn about vector spaces can be then applied to any set which satisfies the definition of a vector space. This means that the set of <span class="math notranslate nohighlight">\(m\times n\)</span> matrices with matrix addition and scalar multiplication or the set of all polynomials of degree at most <span class="math notranslate nohighlight">\(n\)</span>, in some sense, behave in a very similar fashion to Euclidean space.</p>
+<div class="seealso admonition" id="real-numbers-vector-space-example">
+<p class="admonition-title">Example 5.1</p>
+<p>Show that the following are vector spaces:</p>
+<p>  (i)   The set of real numbers over itself;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -665,24 +685,24 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Clearly <span class="math notranslate nohighlight">\(\mathbf{0}_{2\times 2} \in W\)</span> so <span class="math notranslate nohighlight">\(W\)</span> is non-empty. Let <span class="math notranslate nohighlight">\(U = \begin{pmatrix} x_1 &amp; y_1 \\ z_1 &amp; w_1 \end{pmatrix}, V = \begin{pmatrix} x_2 &amp; y_2 \\ z_2 &amp; w_2 \end{pmatrix} \in W\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>. Then</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    U + \alpha V = 
-    \begin{pmatrix} 
-        x_1 + \alpha x_2 &amp; y_1 + \alpha y_2 \\ 
-        z_1 + \alpha z_2 &amp; w_1 + \alpha w_2 \end{pmatrix}.
-\end{align*}\]</div>
-<p class="sd-card-text">Checking that <span class="math notranslate nohighlight">\(U + \alpha V \in W\)</span></p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    &amp; x_1 + \alpha x_2 + y_1 + \alpha y_2 + z_1 + \alpha z_2 + w_1 + \alpha w_2 \\ 
-    &amp; \qquad = (x_1 + y_1 + z_1 + w_1) + \alpha (x_2 + y_2 + z_2 + w_2) \\
-    &amp; \qquad = 0 + \alpha \cdot 0 = 0,
-\end{align*}\]</div>
-<p class="sd-card-text">so <span class="math notranslate nohighlight">\(U + \alpha V \in W\)</span> therefore <span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(M_{2\times 2}\)</span>.</p>
+<p class="sd-card-text">We need to check that all of the axioms of vector spaces are satisfied. Here <span class="math notranslate nohighlight">\(V = \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(F = \mathbb{R}\)</span> and let <span class="math notranslate nohighlight">\(u, v, w \in V\)</span> and <span class="math notranslate nohighlight">\(\alpha, \beta \in \mathbb{R}\)</span></p>
+<ul class="simple">
+<li><p class="sd-card-text">A1: <span class="math notranslate nohighlight">\(u + (v + w) = (u + v) + w \quad \checkmark\)</span></p></li>
+<li><p class="sd-card-text">A2: <span class="math notranslate nohighlight">\(u + v = v + u \quad \checkmark\)</span></p></li>
+<li><p class="sd-card-text">A3: <span class="math notranslate nohighlight">\(u + 0 = u \quad \checkmark\)</span> (i.e., 0 is the identity element of addition)</p></li>
+<li><p class="sd-card-text">A4: <span class="math notranslate nohighlight">\(u + (-u) = 0 \quad \checkmark\)</span> (i.e., the negative of any number is the additive inverse)</p></li>
+<li><p class="sd-card-text">M1: <span class="math notranslate nohighlight">\(\alpha(\beta u) = (\alpha \beta) u \quad \checkmark\)</span></p></li>
+<li><p class="sd-card-text">M2: <span class="math notranslate nohighlight">\(1 u = u \quad \checkmark\)</span> (i.e., 1 is the multiplicative identity of all numbers)</p></li>
+<li><p class="sd-card-text">M3: <span class="math notranslate nohighlight">\(\alpha(u + v) = \alpha u + \alpha v \quad \checkmark\)</span></p></li>
+<li><p class="sd-card-text">M4: <span class="math notranslate nohighlight">\((\alpha + \beta) u = \alpha u + \beta u \quad \checkmark\)</span></p></li>
+</ul>
 </div>
-</details><p>  (ii)   Let <span class="math notranslate nohighlight">\(W = \{ p(x) \in P(\mathbb{R}_n) : p(x) = p(-x)\} \subseteq P(\mathbb{R}_n)\)</span> be the set of all even functions. Show that <span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(P(\mathbb{R}_n)\)</span>.</p>
+</details><p>  (ii)   The set of all polynomials of degree at most <span class="math notranslate nohighlight">\(n\)</span> with real coefficients <span class="math notranslate nohighlight">\(P_n(\mathbb{R})\)</span></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    p = p(x) := a_0x^0 + a_1x^1 + a_2x^2 + \cdots + a_nx^n = \sum_{i=0}^n a_ix^i,
+\end{align*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(a_i \in \mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(x\)</span> is some variable. Show that <span class="math notranslate nohighlight">\(P(\mathbb{R}_n)\)</span> is a vector space.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -690,41 +710,121 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The zero polynomial <span class="math notranslate nohighlight">\(0 \in W\)</span> so <span class="math notranslate nohighlight">\(W\)</span> is non-empty. Let <span class="math notranslate nohighlight">\(p, r \in W\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>, we need to show that <span class="math notranslate nohighlight">\(p + \alpha r \in W\)</span>. Now we know that <span class="math notranslate nohighlight">\(p(-x) = p(x)\)</span> and <span class="math notranslate nohighlight">\(r(-x) = r(x)\)</span></p>
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(p, r, q \in P_n(\mathbb{R})\)</span> where <span class="math notranslate nohighlight">\(a_i, b_i, c_i \in \mathbb{R}\)</span> are the coefficients for <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(q\)</span> and <span class="math notranslate nohighlight">\(r\)</span> respectively and <span class="math notranslate nohighlight">\(k\in \mathbb{R}\)</span> is some scalar then we define</p>
+<ul class="simple">
+<li><p class="sd-card-text">Vector addition:</p></li>
+</ul>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    (p + \alpha r)(-x) = p(-x) + \alpha r(-x) = p(x) + \alpha r(x) = (p + \alpha r)(x),
+    p + r &amp;= (a_0 + b_0)x^0 + (a_1 + b_1)x^1 + \cdots + (a_n + b_n)x^n \\
+    &amp;= \sum_{i=0}^n (a_i + b_i)x^i.
 \end{align*}\]</div>
-<p class="sd-card-text">so <span class="math notranslate nohighlight">\((p + \alpha r)(x) \in W\)</span> is an even function therefore <span class="math notranslate nohighlight">\(W\)</span> is a subspace.</p>
+<ul class="simple">
+<li><p class="sd-card-text">Scalar multiplication:</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    k \cdot p &amp;= ka_0x^0 + ka_1x^1 + \cdots + ka_nx^n \\
+    &amp;= \sum_{i=0}^n ka_ix^i.
+\end{align*}\]</div>
+<ul class="simple">
+<li><p class="sd-card-text">Additive identity element is the zero polynomial</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \mathbf{0} = 0x^0 + 0x^1 + \cdots + 0x^n.
+\end{align*}\]</div>
+<ul class="simple">
+<li><p class="sd-card-text">The additive inverse to the polynomial <span class="math notranslate nohighlight">\(p\)</span> is</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    -p &amp;= (-a_0)x^0 + (-a_1)x^2 + \cdots + (-a_n)x^n \\
+    &amp;= \sum_{i=0}^n (-a_i)x^i \\
+    &amp;= -\sum_{i=0}^n a_ix^i.
+\end{align*}\]</div>
+<p class="sd-card-text">Checking the that axioms of vector spaces are satisfied</p>
+<ul class="simple">
+<li><p class="sd-card-text">A1:</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    p + (q + r) &amp;= \displaystyle \sum_{i=0}^n (a_i + (b_i + c_i))x^i \\
+    &amp;= \displaystyle \sum_{i=0}^n ((a_i + b_i) + c_i)x^i \\
+    &amp;= (p + q) + r \quad \checkmark
+\end{align*}\]</div>
+<ul class="simple">
+<li><p class="sd-card-text">A2:</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    p + q &amp;= \displaystyle \sum_{i=0}^n (a_i + b_i)x^i \\
+    &amp;= \displaystyle \sum_{i=0}^n (b_i + a_i)x^i \\
+    &amp;= q + p \quad \checkmark
+\end{align*}\]</div>
+<ul class="simple">
+<li><p class="sd-card-text">A3:</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    p + 0 &amp;= \displaystyle \sum_{i=0}^n (a_i + 0)x^i \\
+    &amp;= \displaystyle \sum_{i=0}^n a_ix^i \\
+    &amp;= p \quad \checkmark
+\end{align*}\]</div>
+<ul class="simple">
+<li><p class="sd-card-text">A4:</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    p + (-p) &amp;= \displaystyle \sum_{i=0}^n(a_i + (-a_i)) x^i \\
+    &amp;= 0 \quad \checkmark
+\end{align*}\]</div>
+<ul class="simple">
+<li><p class="sd-card-text">M1:</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \alpha(\beta p) &amp;= \alpha \displaystyle \sum_{i=0}^n \beta a_i x^i \\
+    &amp;= \alpha \beta \displaystyle \sum_{i=0}^n a_i x^i \\
+    &amp;= (\alpha \beta) p \quad \checkmark
+\end{align*}\]</div>
+<ul class="simple">
+<li><p class="sd-card-text">M2:</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    1p &amp;= \displaystyle \sum_{i=0}^n 1 a_i x^i \\
+    &amp;= \displaystyle \sum_{i=0}^n a_i x^i \\
+    &amp;= p \quad \checkmark
+\end{align*}\]</div>
+<ul class="simple">
+<li><p class="sd-card-text">M3:</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \alpha (p + q) &amp;= \alpha \sum (a_i + b_i) x^i \\
+    &amp;= \alpha \sum a_i x^i + \alpha b_i x^i \\
+    &amp;= \alpha p + \alpha q \quad \checkmark
+\end{align*}\]</div>
+<ul class="simple">
+<li><p class="sd-card-text">M4:</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    (\alpha + \beta) p &amp;= (\alpha + \beta) \displaystyle \sum_{i=0}^n a_i x^i \\
+    &amp;= \alpha \displaystyle \sum_{i=0}^n a_i x^i + \beta \displaystyle \sum_{i=0}^n a_i x^i \\
+    &amp;= \alpha p + \beta p \quad \checkmark
+\end{align*}\]</div>
 </div>
 </details></div>
-<section id="non-examples-of-subspaces">
-<h2>Non-examples of Subspaces<a class="headerlink" href="#non-examples-of-subspaces" title="Permalink to this headline">#</a></h2>
-<p>Not all subsets of a vector space will be a subspace. For example, define <span class="math notranslate nohighlight">\(p\)</span> as the polynomial</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    p(x)=a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n = \sum_{i = 0}^n a_ix^i \in P(\mathbb{R}),
-\end{align*}\]</div>
-<p>with <span class="math notranslate nohighlight">\(a_n\neq 0\)</span>, we say <span class="math notranslate nohighlight">\(p\)</span> has degree <span class="math notranslate nohighlight">\(n\)</span> and write <span class="math notranslate nohighlight">\(\operatorname{deg}(p)=n\)</span>. The zero polynomial will say has degree <span class="math notranslate nohighlight">\(-\infty\)</span>. Let</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    W = \{p \in P(\mathbb{R}_5) : \operatorname{deg}(p) \in \{-\infty,0,2,4\}\}
-\end{align*}\]</div>
-<p>i.e, those polynomials of even degree at most five together with the zero polynomial. Is <span class="math notranslate nohighlight">\(W\)</span> a subspace of <span class="math notranslate nohighlight">\(P(\mathbb{R}_5)\)</span>?</p>
-<p>Let <span class="math notranslate nohighlight">\(p = x^2\)</span> and <span class="math notranslate nohighlight">\(r = -x ^ 2 + x\)</span> then <span class="math notranslate nohighlight">\(p, r \in W\)</span> but <span class="math notranslate nohighlight">\(p + r = x^2 - x^2 + x = x \notin W\)</span> since <span class="math notranslate nohighlight">\(\operatorname{deg}(x) = 1\)</span> is odd. Therefore <span class="math notranslate nohighlight">\(W\)</span> is not a subspace of <span class="math notranslate nohighlight">\(P(\mathbb{R}_5)\)</span>. Here we came up with a single counter example to show that the linear combination <span class="math notranslate nohighlight">\(p + r \notin W\)</span>.</p>
-<p>This counterexample is great but how does one come up with such a counterexample if you can’t immediately think of one? If you do not see an obvious counterexample, try and construct one: we are looking for two even-degree polynomials, whose sum is not an even polynomial. Let’s start at the lowest degree: <span class="math notranslate nohighlight">\(0\)</span>. The sum of two polynomials of degree <span class="math notranslate nohighlight">\(0\)</span> is always <span class="math notranslate nohighlight">\(0\)</span> or <span class="math notranslate nohighlight">\(\infty\)</span>, so there is no counterexample here. Let’s try degree <span class="math notranslate nohighlight">\(2\)</span>. Now we need to find: <span class="math notranslate nohighlight">\(p(x) = ax^2 + bx + c\)</span> and <span class="math notranslate nohighlight">\(r(x) = dx^2 + ex + f\)</span>, such that <span class="math notranslate nohighlight">\(p+r\)</span> has degree one. Now</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    p+r = (a + d)x^2 + (b + e)x + (c + f)
-\end{align*}\]</div>
-<p>has degree one when <span class="math notranslate nohighlight">\((a + d) = 0\)</span> and <span class="math notranslate nohighlight">\((b + e) \neq 0\)</span>. So let’s take <span class="math notranslate nohighlight">\(a = 1\)</span>, <span class="math notranslate nohighlight">\(d = -1\)</span> and <span class="math notranslate nohighlight">\(b = 0\)</span>, <span class="math notranslate nohighlight">\(e = 1\)</span> (we don’t care about <span class="math notranslate nohighlight">\(c\)</span> or <span class="math notranslate nohighlight">\(f\)</span>, so let’s just set both to be 0). This yields <span class="math notranslate nohighlight">\(p = x^2\)</span> and <span class="math notranslate nohighlight">\(r = -x^2 + x\)</span>, which was our counterexample.</p>
-<p>If we try constructing a counterexample and but fail, then it might mean that (a) a counterexample is not easy to find or (b) the statement is actually true. With a lot of pure maths research, mathematicians are often in this situation, trying to find a counterexample or a proof, not knowing which one it should be.</p>
-<div class="seealso admonition" id="non-subspace-example">
-<p class="admonition-title">Example 5.4</p>
-<p>Show that the following are not subspaces:</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(W = \{z = (a+bi) : a + b = 5\} \subseteq \mathbb{C}\)</span>;</p>
-<p>  (ii)   <span class="math notranslate nohighlight">\(W = \{z = (a + bi) : a^2 + b^2 &lt; 0\} \subseteq \mathbb{C}\)</span>;</p>
-<p>  (iii)   <span class="math notranslate nohighlight">\(W = \{(x,y,z) : x + y + z = 5\} \subseteq{\mathbb{R}^3}\)</span>.</p>
+<section id="examples-of-non-vector-spaces">
+<h2>Examples of non-vector spaces<a class="headerlink" href="#examples-of-non-vector-spaces" title="Permalink to this headline">#</a></h2>
+<p>Of course not all sets are vector spaces. For example, consider the set of integers <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> over the field <span class="math notranslate nohighlight">\(F=\mathbb{R}\)</span>. It is easy to show that the <a class="reference internal" href="#vector-space-axioms-theorem"><span class="std std-ref">axioms A1 to A4</span></a> are satisfied for the set of integers. The problem comes when one tries to define scalar multiplication. From the <a class="reference internal" href="#vector-space-definition"><span class="std std-ref">definition of scalar multiplication</span></a>, <span class="math notranslate nohighlight">\(\mathbb{R} \times \mathbb{Z} \to \mathbb{Z}\)</span> so for <span class="math notranslate nohighlight">\(u \in \mathbb{Z}\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(\alpha \cdot x\in \mathbb{Z}\)</span>. However, this is not always the case, for example, when <span class="math notranslate nohighlight">\(u=1\)</span> and <span class="math notranslate nohighlight">\(\alpha = \frac{1}{2}\)</span> we have <span class="math notranslate nohighlight">\(\frac{1}{2} \cdot 1 = \frac{1}{2} \notin \mathbb{Z}\)</span>. This was an example of a proof by counterexample where we just need to show 1 instance where the axioms are not satisfied to prove that we do not have a vector space.</p>
+<div class="seealso admonition" id="non-vector-space-example">
+<p class="admonition-title">Example 5.2</p>
+<p>Show that the following a not vector spaces:</p>
+<p>  (i)   The set of all positive real numbers, <span class="math notranslate nohighlight">\(\mathbb{R}_+\)</span> over itself</p>
+<p>  (ii)   <span class="math notranslate nohighlight">\(V\)</span> is defined to be a parabola <span class="math notranslate nohighlight">\(y=x^2\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>, i.e., all the points in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(V = {(x, x^2)}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -732,12 +832,16 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">(i)    Let <span class="math notranslate nohighlight">\(z = 1 + 4i \in W\)</span> but <span class="math notranslate nohighlight">\(-1 \cdot z = -1 - 4i \notin W\)</span>. This shows that <span class="math notranslate nohighlight">\(W\)</span> is not closed under taking scalar multiples, and hence not a subspace of <span class="math notranslate nohighlight">\(\mathbb{C}\)</span> over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. We could have also noted simply that <span class="math notranslate nohighlight">\(0\notin W\)</span>.</p>
-<p class="sd-card-text">The condition that there is a neutral element with respect to addition is one of the properties of a vector space (A3). So a subspace must also contain it.</p>
-<p class="sd-card-text">(ii)   <span class="math notranslate nohighlight">\(W\)</span> is the empty since <span class="math notranslate nohighlight">\(a^2 + b^2 \geq 0\)</span> for all <span class="math notranslate nohighlight">\(a, b \in \mathbb{R}\)</span>. Hence <span class="math notranslate nohighlight">\(W\)</span> is not a subspace.</p>
-<p class="sd-card-text">(iii)    Let <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 2, 2) \in W\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v} = (2, 1, 2) \in W\)</span>, then <span class="math notranslate nohighlight">\(\mathbf{u} + \mathbf{v} = (3, 3, 4) \notin W\)</span>. We could’ve also just noted that <span class="math notranslate nohighlight">\(0 \notin W\)</span>.</p>
+<p class="sd-card-text">  (i)   We do not have an identity element for addition since <span class="math notranslate nohighlight">\(0 \notin \mathbb{R}_+\)</span> so axiom A3 is not satisfied. Also, by axiom A4, if <span class="math notranslate nohighlight">\(u, v \in \mathbb{R}_+\)</span> are two positive real numbers then <span class="math notranslate nohighlight">\(x + y &gt; 0\)</span> so no additive inverse exists.</p>
+<p class="sd-card-text">  (ii) If we take the example <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> such that <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 1)\)</span> then the additive inverse <span class="math notranslate nohighlight">\(-\mathbf{u} = (-1, -1) \notin V\)</span> so <span class="math notranslate nohighlight">\(V\)</span> is not a vector space.</p>
 </div>
 </details></div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>The symbol <span class="math notranslate nohighlight">\(\times\)</span> is often used to denote multiplication which strictly speaking should be denoted using <span class="math notranslate nohighlight">\(\cdot\)</span> (which is often omitted).</p>
+</dd>
+</dl>
 </section>
 </section>
 
@@ -768,17 +872,17 @@ Solution<div class="sd-summary-down docutils">
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="5.0_Vector_spaces.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="5.1_Introduction.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Vector spaces</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="5.2_Linear_dependence.html" title="next page">
+    <a class='right-next' id="next-link" href="5.3_Subspaces.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Linear dependence</p>
+        <p class="prev-next-title">Subspaces</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

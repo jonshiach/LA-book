@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Vector spaces &#8212; Linear Algebra</title>
+    <title>Basis &#8212; Linear Algebra</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,12 +52,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <link rel="canonical" href="https://jonshiach.github.io/LA-book/5_Vector_spaces/5.0_Vector_spaces.html" />
+    <link rel="canonical" href="https://jonshiach.github.io/LA-book/5_Vector_spaces/5.5_Basis.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Subspaces" href="5.1_Subspaces.html" />
-    <link rel="prev" title="Co-ordinate geometry exercises" href="../4_Coordinate_geometry/4.6_Coordinate_geometry_exercises.html" />
+    <link rel="next" title="Vector spaces exercises" href="5.6_Vector_spaces_exercises.html" />
+    <link rel="prev" title="Linear dependence" href="5.4_Linear_dependence.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -349,7 +349,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="5.1_Introduction.html">
    Vector spaces
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
@@ -357,24 +357,29 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="5.1_Subspaces.html">
+    <a class="reference internal" href="5.2_Vector_spaces.html">
+     Definitions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="5.3_Subspaces.html">
      Subspaces
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="5.2_Linear_dependence.html">
+    <a class="reference internal" href="5.4_Linear_dependence.html">
      Linear dependence
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="5.3_Basis.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Basis
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="5.5_Vector_spaces_exercises.html">
+    <a class="reference internal" href="5.6_Vector_spaces_exercises.html">
      Vector spaces exercises
     </a>
    </li>
@@ -513,7 +518,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/5_Vector_spaces/5.0_Vector_spaces.ipynb"
+        <a href="../_sources/5_Vector_spaces/5.5_Basis.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -573,13 +578,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definition">
-   Definition
+  <a class="reference internal nav-link" href="#spanning-sets">
+   Spanning sets
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#examples-of-non-vector-spaces">
-   Examples of non-vector spaces
+  <a class="reference internal nav-link" href="#basis-of-a-vector-space">
+   Basis of a vector space
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#change-of-basis">
+   Change of basis
   </a>
  </li>
 </ul>
@@ -591,7 +601,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Vector spaces</h1>
+                <h1>Basis</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -602,13 +612,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definition">
-   Definition
+  <a class="reference internal nav-link" href="#spanning-sets">
+   Spanning sets
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#examples-of-non-vector-spaces">
-   Examples of non-vector spaces
+  <a class="reference internal nav-link" href="#basis-of-a-vector-space">
+   Basis of a vector space
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#change-of-basis">
+   Change of basis
   </a>
  </li>
 </ul>
@@ -621,59 +636,24 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="vector-spaces">
-<span id="vector-spaces-chapter"></span><h1>Vector spaces<a class="headerlink" href="#vector-spaces" title="Permalink to this headline">#</a></h1>
-<p><strong>Learning outcomes</strong></p>
-<p>On successful completion of this chapters students will be able to:</p>
-<ul class="simple">
-<li><p>identify when a set of objects is a <a class="reference internal" href="#vector-space-definition"><span class="std std-ref">vector space</span></a>;</p></li>
-<li><p>identify when a subset of a vector space is a <a class="reference internal" href="5.1_Subspaces.html#subspace-definition"><span class="std std-ref">subspace</span></a>;</p></li>
-<li><p>determine whether elements of a vector space are <a class="reference internal" href="5.2_Linear_dependence.html#linear-dependence-definition"><span class="std std-ref">linearly dependent or linearly independent</span></a>;</p></li>
-<li><p>identify a <a class="reference internal" href="5.3_Basis.html#basis-definition"><span class="std std-ref">basis</span></a>, determine the <a class="reference internal" href="5.3_Basis.html#vector-space-dimension-definition"><span class="std std-ref">dimension</span></a> of a vector space and represent vectors with respect to a <a class="reference internal" href="5.3_Basis.html#change-of-basis-example"><span class="std std-ref">non-standard basis</span></a>.</p></li>
-</ul>
-<hr class="docutils" />
-<section id="definition">
-<h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h2>
-<div class="note admonition" id="vector-space-definition">
-<p class="admonition-title">Definition: Vector space</p>
-<p>A <a class="reference external" href="https://en.wikipedia.org/wiki/Vector_space"><strong>vector space</strong></a> over a field <span class="math notranslate nohighlight">\(F\)</span> is a non-empty set <span class="math notranslate nohighlight">\(V\)</span> of objects called vectors on which the operations below are defined. The notation <span class="math notranslate nohighlight">\(V \times V\)</span> denotes the Cartesian product of <span class="math notranslate nohighlight">\(V\)</span> with itself and <span class="math notranslate nohighlight">\(\to\)</span> denotes a mapping from one set to another.</p>
-<ul class="simple">
-<li><p><strong>addition</strong> <span class="math notranslate nohighlight">\((+)\)</span>: <span class="math notranslate nohighlight">\(V \times V \to V\)</span>. For example, given two elements <span class="math notranslate nohighlight">\(\mathbf{u}, \mathbf{v} \in V\)</span> we can `add’ them together to obtain another element <span class="math notranslate nohighlight">\(\mathbf{u} + \mathbf{v} \in V\)</span>.</p></li>
-<li><p><strong>scalar multiplication</strong> <span class="math notranslate nohighlight">\((\cdot )\)</span>: <span class="math notranslate nohighlight">\(F \times V \to V\)</span>. For example given <span class="math notranslate nohighlight">\(\alpha \in F\)</span> and <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> we can `multiply’ <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> by <span class="math notranslate nohighlight">\(\alpha\)</span> to obtain another element <span class="math notranslate nohighlight">\(\alpha \cdot \mathbf{u} \in V\)</span></p></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="basis">
+<span id="basis-section"></span><h1>Basis<a class="headerlink" href="#basis" title="Permalink to this headline">#</a></h1>
+<p>We have already met the concept of a basis in the chapter on vectors where we saw that <a class="reference internal" href="../3_Vectors/3.7_Linear_combination_of_vectors.html#basis-vectors-section"><span class="std std-ref">the basis vectors for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span></span></a> are the vectors <span class="math notranslate nohighlight">\(\mathbf{i} = (1, 0, 0)\)</span>, <span class="math notranslate nohighlight">\(\mathbf{j} = (0, 1, 0)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{k} = (0, 0, 1)\)</span> and any vector in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> can be represented as a linear combination of these basis vectors. The concept of a basis is not limited to Euclidean geometry and we can define a basis for any vector space so that an element in the vector space can be expressed as a linear combination of the basis elements.</p>
+<section id="spanning-sets">
+<h2>Spanning sets<a class="headerlink" href="#spanning-sets" title="Permalink to this headline">#</a></h2>
+<div class="note admonition" id="spanning-set-definition">
+<p class="admonition-title">Definition: Spanning set</p>
+<p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over the field <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(S\)</span> is a subset of <span class="math notranslate nohighlight">\(V\)</span>. Let <span class="math notranslate nohighlight">\(W\)</span> be a subset of <span class="math notranslate nohighlight">\(V\)</span> that are expressible as a linear combination of vectors in <span class="math notranslate nohighlight">\(S\)</span>, i.e., for <span class="math notranslate nohighlight">\(\mathbf{u} \in W\)</span>, <span class="math notranslate nohighlight">\(\mathbf{v}_1, \ldots, \mathbf{v}_n \in S\)</span> and <span class="math notranslate nohighlight">\(\alpha_1, \ldots, \alpha_n \in F\)</span></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \mathbf{u} = \alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 + \cdots + \alpha_n \mathbf{v}_n.
+\end{align*}\]</div>
+<p>then <span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(S\)</span> is a <strong>spanning set</strong> for <span class="math notranslate nohighlight">\(W\)</span>. We write this as <span class="math notranslate nohighlight">\(\operatorname{span}(S)\)</span>.</p>
 </div>
-<p>For example, a field could be the set of all real numbers <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> and a vector space be the set of all co-ordinates in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. Not all subsets of a field can be classified as a vector space, to do so the set <span class="math notranslate nohighlight">\(V\)</span> must satisfy the following axioms.</p>
-<div class="important admonition" id="vector-space-axioms-theorem">
-<p class="admonition-title">Theorem: Axioms of a vector space</p>
-<p>Let <span class="math notranslate nohighlight">\(\mathbf{u}, \mathbf{v}, \mathbf{w} \in V\)</span> and <span class="math notranslate nohighlight">\(\beta, \alpha \in F\)</span>, <span class="math notranslate nohighlight">\(V\)</span> is a vector space if all of the following axioms are satisfied</p>
-<ul class="simple">
-<li><p>A1: Associativity of vector addition: <span class="math notranslate nohighlight">\(\mathbf{u} + (\mathbf{v} + \mathbf{w}) = (\mathbf{u} + \mathbf{v}) + \mathbf{w}\)</span>;</p></li>
-<li><p>A2: Commutativity of vector addition: <span class="math notranslate nohighlight">\(\mathbf{u} + \mathbf{v} = \mathbf{v} + \mathbf{u}\)</span>;</p></li>
-<li><p>A3: Identity element of vector addition: there exists an element <span class="math notranslate nohighlight">\(\mathbf{0} \in V\)</span> such that <span class="math notranslate nohighlight">\(\mathbf{u} + \mathbf{0} = \mathbf{u}\)</span> for all <span class="math notranslate nohighlight">\(\mathbf{v} \in V\)</span>;</p></li>
-<li><p>A4: Additive inverse: For every <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> there exists an element <span class="math notranslate nohighlight">\(- \mathbf{v} \in V\)</span>, called the <strong>additive inverse</strong>, such that <span class="math notranslate nohighlight">\(\mathbf{u} + (- \mathbf{u}) = \mathbf{0}\)</span>;</p></li>
-<li><p>M1: Associativity of scalar multiplication: <span class="math notranslate nohighlight">\(\alpha(\beta \mathbf{u}) = (\alpha \beta) \mathbf{u}\)</span>;</p></li>
-<li><p>M2: Identity element of scalar multiplication: there exists an element <span class="math notranslate nohighlight">\(1\)</span> called the <strong>multiplicative identity</strong> such that <span class="math notranslate nohighlight">\(1 \mathbf{u} = \mathbf{u}\)</span>;</p></li>
-<li><p>M3: Distributivity of scalar multiplication with respect to vector addition: <span class="math notranslate nohighlight">\(\alpha(\mathbf{u} + \mathbf{v}) = \alpha \mathbf{u} + \alpha \mathbf{v}\)</span>;</p></li>
-<li><p>M4: Distributivity of scalar multiplication with respect to addition: <span class="math notranslate nohighlight">\((\alpha + \beta)\mathbf{u} = \alpha \mathbf{u} + \beta \mathbf{u}\)</span>.</p></li>
-</ul>
-</div>
-<p>The first four axioms are concerned with addition and the latter four axioms are concerned with scalar multiplication. When the scalars are real numbers, i.e. <span class="math notranslate nohighlight">\(F = \mathbb{R}\)</span>, we call <span class="math notranslate nohighlight">\(V\)</span> a <strong>‘real vector space’</strong> which is short for a <em>‘vector space over the field of real numbers’}</em>. When the scalars are complex numbers, i.e., <span class="math notranslate nohighlight">\(F=\mathbb{C}\)</span>, we talk of a <strong>‘complex vector space’</strong>. More generally, the scalars can be elements of any field (denoted <span class="math notranslate nohighlight">\(F\)</span>).</p>
-<p>We now list some basic properties for multiplication by scalars in a vector space.</p>
-<div class="important admonition" id="properties-of-vector-spaces-theorem">
-<p class="admonition-title">Theorem: Properties of vector spaces</p>
-<p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(\mathbf{u} \in V,\alpha\in F\)</span>. Then the following hold:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\alpha \cdot \mathbf{0} = \mathbf{0}\)</span>;</p></li>
-<li><p><span class="math notranslate nohighlight">\(0 \cdot \mathbf{u} = \mathbf{0}\)</span>;</p></li>
-<li><p>if <span class="math notranslate nohighlight">\(\alpha \cdot \mathbf{u} = \mathbf{0}\)</span> then either <span class="math notranslate nohighlight">\(\alpha = 0\)</span> or <span class="math notranslate nohighlight">\(\mathbf{u} = \mathbf{0}\)</span>;</p></li>
-<li><p><span class="math notranslate nohighlight">\(-(\alpha \cdot \mathbf{u}) = (-\alpha)\cdot \mathbf{u} = \alpha\cdot(-\mathbf{u})\)</span>.</p></li>
-</ul>
-</div>
-<p>The name <em>‘vector space’</em> indicates a connection with the study of vectors. Indeed our Euclidean spaces <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, as introduced in <a class="reference internal" href="../3_Vectors/3.1_Introduction.html#vectors-chapter"><span class="std std-ref">Vectors</span></a>, are vector spaces over <span class="math notranslate nohighlight">\(F=\mathbb{R}^n\)</span>. Addition and scalar multiplication, in the sense of a vector space, for <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> are as given in <a class="reference internal" href="../3_Vectors/3.5_Arithmetic_operations_on_vectors.html#vector-addition-definition"><span class="std std-ref">vector addition</span></a> and <a class="reference internal" href="../3_Vectors/3.5_Arithmetic_operations_on_vectors.html#scalar-multiplication-of-a-vector-definition"><span class="std std-ref">scalar multiplication</span></a> respectively. Euclidean vector spaces are often the first examples of vector spaces that a student meets. However, maybe they do not quite demonstrate the power behind this construction. The real motivation of the study of the vector spaces comes from the fact that a lot of more abstract sets, such as differentiable functions or matrices, can be viewed as vector spaces. Everything that we learn about vector spaces can be then applied to any set which satisfies the definition of a vector space. This means that the set of <span class="math notranslate nohighlight">\(m\times n\)</span> matrices with matrix addition and scalar multiplication or the set of all polynomials of degree at most <span class="math notranslate nohighlight">\(n\)</span>, in some sense, behave in a very similar fashion to Euclidean space.</p>
-<div class="seealso admonition" id="real-numbers-vector-space-example">
-<p class="admonition-title">Example 5.1</p>
-<p>Show that the following are vector spaces:</p>
-<p>  (i)   The set of real numbers over itself;</p>
+<p>For example, <span class="math notranslate nohighlight">\(\mathbb{C} = \operatorname{span}(\{1, i\})\)</span> over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> since every element of <span class="math notranslate nohighlight">\(\mathbb{C}\)</span> can be expressed as a linear combination of 1 and <span class="math notranslate nohighlight">\(i\)</span>.</p>
+<div class="seealso admonition" id="spanning-set-example">
+<p class="admonition-title">Example 5.6</p>
+<p>  (i)   Show that  <span class="math notranslate nohighlight">\(\{ \mathbf{v}_1, \mathbf{v}_2 \}\)</span> where <span class="math notranslate nohighlight">\(\mathbf{v}_1 = (2, 1)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}_2 = (4, 3)\)</span> is a spanning set for <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -681,24 +661,20 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">We need to check that all of the axioms of vector spaces are satisfied. Here <span class="math notranslate nohighlight">\(V \in \mathbb{R}\)</span> and let <span class="math notranslate nohighlight">\(u, v, w \in V\)</span> and <span class="math notranslate nohighlight">\(\alpha, \beta \in \mathbb{R}\)</span></p>
-<ul class="simple">
-<li><p class="sd-card-text">A1: <span class="math notranslate nohighlight">\(u + (v + w) = (u + v) + w \quad \checkmark\)</span></p></li>
-<li><p class="sd-card-text">A2: <span class="math notranslate nohighlight">\(u + v = v + u \quad \checkmark\)</span></p></li>
-<li><p class="sd-card-text">A3: <span class="math notranslate nohighlight">\(u + 0 = u \quad \checkmark\)</span> (i.e., 0 is the identity element of addition)</p></li>
-<li><p class="sd-card-text">A4: <span class="math notranslate nohighlight">\(u + (-u) = 0 \quad \checkmark\)</span> (i.e., the negative of any number is the additive inverse)</p></li>
-<li><p class="sd-card-text">M1: <span class="math notranslate nohighlight">\(\alpha(\beta u) = (\alpha \beta) u \quad \checkmark\)</span></p></li>
-<li><p class="sd-card-text">M2: <span class="math notranslate nohighlight">\(1 u = u \quad \checkmark\)</span> (i.e., 1 is the multiplicative identity of all numbers)</p></li>
-<li><p class="sd-card-text">M3: <span class="math notranslate nohighlight">\(\alpha(u + v) = \alpha u + \alpha v \quad \checkmark\)</span></p></li>
-<li><p class="sd-card-text">M4: <span class="math notranslate nohighlight">\((\alpha + \beta) u = \alpha u + \beta u \quad \checkmark\)</span></p></li>
-</ul>
-</div>
-</details><p>  (ii)   The set of all polynomials of degree at most <span class="math notranslate nohighlight">\(n\)</span> with real coefficients <span class="math notranslate nohighlight">\(P(\mathbb{R}_n)\)</span></p>
+<p class="sd-card-text">We need to show that <span class="math notranslate nohighlight">\(\alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 = (a, b)\)</span> for any <span class="math notranslate nohighlight">\(a, b \in \mathbb{R}\)</span>, i.e., so that the following system has a non-trivial solution.</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    p = p(x) := a_0x^0 + a_1x^1 + a_2x^2 + \cdots + a_nx^n = \sum_{i=0}^n a_ix^i,
+    2 \alpha_1 + 4 \alpha_2 &amp;= a, \\
+    \alpha_1 + 3 \alpha_2 &amp;= b. 
 \end{align*}\]</div>
-<p>where <span class="math notranslate nohighlight">\(a_i \in \mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(x\)</span> is some variable. Show that <span class="math notranslate nohighlight">\(P(\mathbb{R}_n)\)</span> is a vector space.</p>
+<p class="sd-card-text">A system of linear equations has a solution if it is <a class="reference internal" href="../1_Matrices/1.8_Matrix_inverse.html#inverse-matrix-definition"><span class="std std-ref">non-singular</span></a> (the determinant of the coefficient matrix is non-zero), therefore</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \det \begin{pmatrix} 2 &amp; 4 \\ 1 &amp; 3 \end{pmatrix} = 2 \neq 0, 
+\end{align*}\]</div>
+<p class="sd-card-text">so <span class="math notranslate nohighlight">\(\{\mathbf{v}_1, \mathbf{v}_2\}\)</span> is a spanning set for <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>.</p>
+</div>
+</details><p>  (ii)   Determine a spanning set for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -706,122 +682,162 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(p, r, q \in P(\mathbb{R}_{n})\)</span> where <span class="math notranslate nohighlight">\(a_i, b_i, c_i \in \mathbb{R}\)</span> are the coefficients for <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(q\)</span> and <span class="math notranslate nohighlight">\(r\)</span> respectively and <span class="math notranslate nohighlight">\(k\in \mathbb{R}\)</span> is some scalar then we define</p>
+<p class="sd-card-text">Lets suggest <span class="math notranslate nohighlight">\(\{ (1, 0, 0), (0, 1, 0), (0, 0, 1) \}\)</span> as a spanning set for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    (x, y, z) &amp;= \{ \alpha_1 (1, 0, 0) + \alpha_2 (0, 1, 0) + \alpha_3(0, 0, 1) : \alpha_1, \alpha_2, \alpha_3 \in \mathbb{R}\} \\
+    &amp;= \{ \alpha_1 \mathbf{i} + \alpha_2 \mathbf{j} + \alpha_3 \mathbf{k} : \alpha_1, \alpha_2, \alpha_3 \in \mathbb{R} \},
+\end{align*}\]</div>
+<p class="sd-card-text">therefore <span class="math notranslate nohighlight">\(\{ \mathbf{i}, \mathbf{j}, \mathbf{k} \}\)</span> is a spanning set for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. Note that this is just one of many examples of spanning sets for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
+</div>
+</details></div>
+<p>The vectors <span class="math notranslate nohighlight">\(\mathbf{i}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{j}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{j}\)</span> were introduced in <a class="reference internal" href="../3_Vectors/3.7_Linear_combination_of_vectors.html#basis-vectors-section"><span class="std std-ref">basis vectors</span></a>. This leads to the definition of a basis of a vector space.</p>
+</section>
+<section id="basis-of-a-vector-space">
+<h2>Basis of a vector space<a class="headerlink" href="#basis-of-a-vector-space" title="Permalink to this headline">#</a></h2>
+<div class="note admonition" id="basis-definition">
+<p class="admonition-title">Definition: Basis of a vector space</p>
+<p>A <strong>basis</strong> of a vector space <span class="math notranslate nohighlight">\(V\)</span> of a field <span class="math notranslate nohighlight">\(F\)</span> is a linearly independent subset of <span class="math notranslate nohighlight">\(V\)</span> that spans <span class="math notranslate nohighlight">\(V\)</span>. A subset <span class="math notranslate nohighlight">\(W\)</span> is a basis if it satisfies the following</p>
 <ul class="simple">
-<li><p class="sd-card-text">Vector addition:</p></li>
+<li><p><a class="reference internal" href="5.4_Linear_dependence.html#linear-dependence-definition"><span class="std std-ref">linear independence property</span></a>: for every subset <span class="math notranslate nohighlight">\(\{\mathbf{v}_1, \ldots , \mathbf{v}_n\}\)</span> of <span class="math notranslate nohighlight">\(W\)</span> the following equation only has the trivial soluion <span class="math notranslate nohighlight">\(\alpha_i = 0\)</span>.</p></li>
 </ul>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    p + r &amp;= (a_0 + b_0)x^0 + (a_1 + b_1)x^1 + \cdots + (a_n + b_n)x^n \\
-    &amp;= \sum_{i=0}^n (a_i + b_i)x^i.
+    \alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 + \cdots + \alpha_n \mathbf{v}_n &amp;= \mathbf{0};
 \end{align*}\]</div>
 <ul class="simple">
-<li><p class="sd-card-text">Scalar multiplication:</p></li>
+<li><p><a class="reference internal" href="#spanning-set-definition"><span class="std std-ref">spanning property</span></a>: for all <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> we can write <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> as a linear combination of <span class="math notranslate nohighlight">\(\mathbf{v} \in W\)</span>, i.e.,</p></li>
 </ul>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    k \cdot p &amp;= ka_0x^0 + ka_1x^1 + \cdots + ka_nx^n \\
-    &amp;= \sum_{i=0}^n ka_ix^i.
+    \mathbf{u} = \alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 + \cdots + \alpha_n \mathbf{v}_n.
 \end{align*}\]</div>
-<ul class="simple">
-<li><p class="sd-card-text">Additive identity element is the zero polynomial</p></li>
-</ul>
+</div>
+<div class="note admonition" id="orthogonal-basis-definition">
+<p class="admonition-title">Definition: Orthogonal basis</p>
+<p>An <strong>orthogonal basis</strong> of a vector space is one in which each of the vectors are orthogonal (perpendicular) to one another.</p>
+</div>
+<div class="note admonition" id="orthonormal-basis-definition">
+<p class="admonition-title">Definition: Orthonormal basis</p>
+<p>An <strong>orthonormal basis</strong> of a vector space is one in which each of the vectors are orthogonal to one another and each vector is a unit vector.</p>
+</div>
+<div class="note admonition" id="vector-space-dimension-definition">
+<p class="admonition-title">Definition: Dimension of a vector space</p>
+<p>The <strong>dimension</strong> of a vector space <span class="math notranslate nohighlight">\(V\)</span> is denoted by <span class="math notranslate nohighlight">\(\dim(V)\)</span> and is the number of elements in the basis for the vector space.</p>
+</div>
+<div class="seealso admonition" id="basis-example">
+<p class="admonition-title">Example 5.7</p>
+<p>Show that the vectors <span class="math notranslate nohighlight">\(\mathbf{v}_1 = (1, 1, 0)\)</span>, <span class="math notranslate nohighlight">\(\mathbf{v}_2 = (1, -1, 1)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}_3 = (1, -1, -2)\)</span> is a basis for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">We need to show that the three vectors are linearly independent, i.e., show that the only solution to the following system is <span class="math notranslate nohighlight">\(\alpha_1 = \alpha_2 = \alpha_3 = 0\)</span></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    \mathbf{0} = 0x^0 + 0x^1 + \cdots + 0x^n.
+    \alpha_1 \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} +
+    \alpha_2 \begin{pmatrix} 1 \\ -1 \\ 1 \end{pmatrix} +
+    \alpha_3 \begin{pmatrix} 1 \\ -1 \\ -2 \end{pmatrix}  = 
+    \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}.
 \end{align*}\]</div>
-<ul class="simple">
-<li><p class="sd-card-text">The additive inverse to the polynomial <span class="math notranslate nohighlight">\(p\)</span> is</p></li>
-</ul>
+<p class="sd-card-text">Using Gauss-Jordan elimination</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    -p &amp;= (-a_0)x^0 + (-a_1)x^2 + \cdots + (-a_n)x^n \\
-    &amp;= \sum_{i=0}^n (-a_i)x^i \\
-    &amp;= -\sum_{i=0}^n a_ix^i.
+    &amp; \left( \begin{array}{ccc|c}
+        1 &amp; 1 &amp; 1 &amp; 0 \\
+        1 &amp; -1 &amp; 1 &amp; 0\\
+        1 &amp; -1 &amp; -2 &amp; 0
+    \end{array} \right)
+    \begin{matrix} \\ R_2 - R_1 \\ R_3 - R_1 \end{matrix} \\ \\
+    \longrightarrow \quad &amp;
+    \left( \begin{array}{ccc|c}
+        1 &amp; 1 &amp; 1 &amp; 0 \\
+        0 &amp; -2 &amp; 0 &amp; 0\\
+        0 &amp; -2 &amp; -3 &amp; 0
+    \end{array} \right)
+    \begin{matrix} \\ -\frac{1}{2}R_2 \\ \phantom{x} \end{matrix} \\ \\
+    \longrightarrow \quad &amp;
+    \left( \begin{array}{ccc|c}
+        1 &amp; 1 &amp; 1 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0\\
+        0 &amp; -2 &amp; -3 &amp; 0
+    \end{array} \right)
+    \begin{matrix} R_1 - R_2 \\ \\ R_3 + 2R_2 \end{matrix}  \\ \\
+    \longrightarrow \quad &amp;
+    \left( \begin{array}{ccc|c}
+        1 &amp; 0 &amp; 1 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0\\
+        0 &amp; 0 &amp; -3 &amp; 0
+    \end{array} \right)
+    \begin{matrix} \\ \phantom{x} \\ -\frac{1}{3}R_3 \end{matrix} \\ \\
+    \longrightarrow \quad &amp;
+    \left( \begin{array}{ccc|c}
+        1 &amp; 0 &amp; 1 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0\\
+        0 &amp; 0 &amp; 1 &amp; 0
+    \end{array} \right)
+    \begin{matrix} R_1 - R_3 \\ \phantom{x} \\ \phantom{x} \end{matrix} \\ \\
+    \longrightarrow \quad &amp;
+    \left( \begin{array}{ccc|c}
+        1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0\\
+        0 &amp; 0 &amp; 1 &amp; 0
+    \end{array} \right)
 \end{align*}\]</div>
-<p class="sd-card-text">Checking the that axioms of vector spaces are satisfied</p>
-<ul class="simple">
-<li><p class="sd-card-text">A1:</p></li>
-</ul>
+<p class="sd-card-text">So <span class="math notranslate nohighlight">\(\mathbf{v}_1\)</span>, <span class="math notranslate nohighlight">\(\mathbf{v}_2\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}_3\)</span> are linearly independent. We also need to show that <span class="math notranslate nohighlight">\(\{ \mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3 \}\)</span> spans <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    p + (q + r) &amp;= \displaystyle \sum_{i=0}^n (a_i + (b_i + c_i))x^i \\
-    &amp;= \displaystyle \sum_{i=0}^n ((a_i + b_i) + c_i)x^i \\
-    &amp;= (p + q) + r \quad \checkmark
+    \det \begin{pmatrix} 1 &amp; 1 &amp; 1 \\ 1 &amp; -1 &amp; -1 \\ 0 &amp; 1 &amp; -2 \end{pmatrix} = 3 + 3 = 6 \neq 0,
 \end{align*}\]</div>
-<ul class="simple">
-<li><p class="sd-card-text">A2:</p></li>
-</ul>
+<p class="sd-card-text">so <span class="math notranslate nohighlight">\(\{ \mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3 \}\)</span> is a spanning set for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. Note that in showing that <span class="math notranslate nohighlight">\(\mathbf{v}_1\)</span>, <span class="math notranslate nohighlight">\(\mathbf{v}_2\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}_3\)</span> are linearly independent we have also shown that <span class="math notranslate nohighlight">\(\alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 + \alpha_3 \mathbf{v}_3 = (a, b, c)\)</span> has a solution and <span class="math notranslate nohighlight">\(\{ \mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3 \}\)</span> is a spanning set. Futhermore</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    p + q &amp;= \displaystyle \sum_{i=0}^n (a_i + b_i)x^i \\
-    &amp;= \displaystyle \sum_{i=0}^n (b_i + a_i)x^i \\
-    &amp;= q + p \quad \checkmark
+    \mathbf{v}_1 \cdot \mathbf{v}_2 &amp;= \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} \cdot
+    \begin{pmatrix} 1 \\ -1 \\ 1 \end{pmatrix} = 0, \\
+    \mathbf{v}_1 \cdot \mathbf{v}_3 &amp;= \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} \cdot
+    \begin{pmatrix} 1 \\ -1 \\ 2 \end{pmatrix} = 0, \\
+    \mathbf{v}_2 \cdot \mathbf{v}_3 &amp;= \begin{pmatrix} 1 \\ -1 \\ 1 \end{pmatrix} \cdot
+    \begin{pmatrix} 1 \\ -1 \\ -2 \end{pmatrix} = 0,
 \end{align*}\]</div>
-<ul class="simple">
-<li><p class="sd-card-text">A3:</p></li>
-</ul>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    p + 0 &amp;= \displaystyle \sum_{i=0}^n (a_i + 0)x^i \\
-    &amp;= \displaystyle \sum_{i=0}^n a_ix^i \\
-    &amp;= p \quad \checkmark
-\end{align*}\]</div>
-<ul class="simple">
-<li><p class="sd-card-text">A4:</p></li>
-</ul>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    p + (-p) &amp;= \displaystyle \sum_{i=0}^n(a_i + (-a_i)) x^i \\
-    &amp;= 0 \quad \checkmark
-\end{align*}\]</div>
-<ul class="simple">
-<li><p class="sd-card-text">M1:</p></li>
-</ul>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    \alpha(\beta p) &amp;= \alpha \displaystyle \sum_{i=0}^n \beta a_i x^i \\
-    &amp;= \alpha \beta \displaystyle \sum_{i=0}^n a_i x^i \\
-    &amp;= (\alpha \beta) p \quad \checkmark
-\end{align*}\]</div>
-<ul class="simple">
-<li><p class="sd-card-text">M2:</p></li>
-</ul>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    1p &amp;= \displaystyle \sum_{i=0}^n 1 a_i x^i \\
-    &amp;= \displaystyle \sum_{i=0}^n a_i x^i \\
-    &amp;= p \quad \checkmark
-\end{align*}\]</div>
-<ul class="simple">
-<li><p class="sd-card-text">M3:</p></li>
-</ul>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    \alpha (p + q) &amp;= \alpha \sum (a_i + b_i) x^i \\
-    &amp;= \alpha \sum a_i x^i + \alpha b_i x^i \\
-    &amp;= \alpha p + \alpha q \quad \checkmark
-\end{align*}\]</div>
-<ul class="simple">
-<li><p class="sd-card-text">M4:</p></li>
-</ul>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    (\alpha + \beta) p &amp;= (\alpha + \beta) \displaystyle \sum_{i=0}^n a_i x^i \\
-    &amp;= \alpha \displaystyle \sum_{i=0}^n a_i x^i + \beta \displaystyle \sum_{i=0}^n a_i x^i \\
-    &amp;= \alpha p + \beta p \quad \checkmark
-\end{align*}\]</div>
+<p class="sd-card-text">so <span class="math notranslate nohighlight">\(\{ \mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3 \}\)</span> is an orthogonal basis. It is not an orthonormal basis since <span class="math notranslate nohighlight">\(|\mathbf{v}_1| = \sqrt{2} \neq 1\)</span>.</p>
 </div>
 </details></div>
 </section>
-<section id="examples-of-non-vector-spaces">
-<h2>Examples of non-vector spaces<a class="headerlink" href="#examples-of-non-vector-spaces" title="Permalink to this headline">#</a></h2>
-<p>Of course not all sets are vector spaces. For example, consider the set of integers <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. It is easy to show that the axioms A1 to A4 are satisfied for the set of integers. The problem comes when one tries to define scalar multiplication. From the <a class="reference internal" href="#vector-space-definition"><span class="std std-ref">definition of scalar multiplication</span></a>, <span class="math notranslate nohighlight">\(\mathbb{R} \times \mathbb{Z} \to \mathbb{Z}\)</span> so for <span class="math notranslate nohighlight">\(u \in \mathbb{Z}\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(\alpha x\)</span> must be in <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>. However, this is not always the case, for example, when <span class="math notranslate nohighlight">\(u=1\)</span> and <span class="math notranslate nohighlight">\(\alpha = \frac{1}{2}\)</span> we have <span class="math notranslate nohighlight">\(\frac{1}{2} \cdot 1 = \frac{1}{2} \notin \mathbb{Z}\)</span>. This was an example of a proof by counterexample where we just need to show 1 instance where the axioms are not satisfied to prove that we do not have a vector space.</p>
-<div class="seealso admonition" id="non-vector-space-example">
-<p class="admonition-title">Example 5.2</p>
-<p>Show that the following a not vector spaces:</p>
-<p>  (i)   The set of all positive real numbers, <span class="math notranslate nohighlight">\(\mathbb{R}_+\)</span> over itself</p>
-<p>  (ii)   <span class="math notranslate nohighlight">\(V\)</span> is defined to be a parabola <span class="math notranslate nohighlight">\(y=x^2\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>, i.e., all the points in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(V = {(x, x^2)}\)</span></p>
+<section id="change-of-basis">
+<span id="change-of-basis-section"></span><h2>Change of basis<a class="headerlink" href="#change-of-basis" title="Permalink to this headline">#</a></h2>
+<p><span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> has a particularly nice basis that is easy to write down</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    E = \left\{ 
+        \mathbf{e}_1 = \begin{pmatrix} 1 \\ 0 \\ 0 \\ \vdots \\ 0 \end{pmatrix}, 
+        \mathbf{e}_2 = \begin{pmatrix} 0 \\ 1 \\ 0 \\ \vdots \\ 0 \end{pmatrix}, \ldots,
+        \mathbf{e}_n = \begin{pmatrix} 0 \\ 0 \\ 0 \\ \vdots \\ 1 \end{pmatrix} 
+        \right\},
+\end{align*}\]</div>
+<p>which is called the <strong>standard basis</strong>. Note that <span class="math notranslate nohighlight">\(\mathbf{e}_i\)</span> is column <span class="math notranslate nohighlight">\(i\)</span> of the identity matrix and for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> we have <span class="math notranslate nohighlight">\(\mathbf{i} = \mathbf{e}_1\)</span>, <span class="math notranslate nohighlight">\(\mathbf{j} = \mathbf{e}_2\)</span> and <span class="math notranslate nohighlight">\(\mathbf{k} = \mathbf{e}_3\)</span>.</p>
+<p>We can represent a vector <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2, \ldots, u_n) \in \mathbb{R}^n\)</span> in the standard basis as a vector with respect to another basis <span class="math notranslate nohighlight">\(W = \{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\}\)</span> which is denoted using <span class="math notranslate nohighlight">\([\mathbf{u}]_W\)</span>. Using the standard basis we have</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \mathbf{u} &amp;= u_1 \mathbf{e}_1 + u_2 \mathbf{e}_2 + \cdots + u_n \mathbf{e}_n = (u_1, u_2, \ldots, u_n),
+\end{align*}\]</div>
+<p>and to express <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> with respect to the basis <span class="math notranslate nohighlight">\(W\)</span> we need to solve</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    [\mathbf{u}]_W &amp;= w_1 \mathbf{v}_1 + w_2 \mathbf{v}_2 + \cdots + w_n \mathbf{v}_n = (u_1, u_2, \ldots, u_n),
+\end{align*}\]</div>
+<p>for <span class="math notranslate nohighlight">\(w_1, w_2, \ldots, w_n\)</span>. This concept is illustrated for <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> in <a class="reference internal" href="#change-of-basis-figure"><span class="std std-numref">Fig. 30</span></a>.</p>
+<figure class="align-default" id="change-of-basis-figure">
+<img alt="../_images/change_of_basis.png" src="../_images/change_of_basis.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">The vector <span class="math notranslate nohighlight">\((u_1, u_2)\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> expressed with respect to the basis <span class="math notranslate nohighlight">\(E = \{\mathbf{e}_1, \mathbf{e}_2 \}\)</span> and <span class="math notranslate nohighlight">\(W = \{\mathbf{v}_1, \mathbf{v}_2\}\)</span>.</span><a class="headerlink" href="#change-of-basis-figure" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="seealso admonition" id="change-of-basis-example">
+<p class="admonition-title">Example 5.8</p>
+<p>Represent the vector <span class="math notranslate nohighlight">\(\mathbf{u} = (4, 0, 5)\)</span> with respect to the basis <span class="math notranslate nohighlight">\(W = \{(1, 1, 0), (1, -1, 1), (1, -1, -2)\}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -829,13 +845,73 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">  (i)   We do not have an identity element for addition since <span class="math notranslate nohighlight">\(0 \notin \mathbb{R}_+\)</span> so axiom A3 is not satisfied. Also, by axiom A4, if <span class="math notranslate nohighlight">\(u, v \in \mathbb{R}_+\)</span> are two positive real numbers then <span class="math notranslate nohighlight">\(x + y &gt; 0\)</span> so no additive inverse exists.</p>
-<p class="sd-card-text">  (ii) If we take the example <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> such that <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 1)\)</span> then the additive inverse <span class="math notranslate nohighlight">\(-\mathbf{u} = (-1, -1) \notin V\)</span> so <span class="math notranslate nohighlight">\(V\)</span> is not a vector space.</p>
+<p class="sd-card-text">We need to solve the system</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    w_1 \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} + 
+    w_2 \begin{pmatrix} 1 \\ -1 \\ 1 \end{pmatrix} +
+    w_3 \begin{pmatrix} 1 \\ -1 \\ 2 \end{pmatrix} =
+    \begin{pmatrix} 4 \\ 0 \\ 5 \end{pmatrix},
+\end{align*}\]</div>
+<p class="sd-card-text">which can be written as the matrix equation</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \begin{pmatrix}
+        1 &amp; 1 &amp; 1 \\
+        1 &amp; -1 &amp; -1 \\
+        0 &amp; 1 &amp; 2 
+    \end{pmatrix}
+    \begin{pmatrix} w_1 \\ w_2 \\ w_3 \end{pmatrix} =
+    \begin{pmatrix} 4 \\ 0 \\ 5 \end{pmatrix},
+\end{align*}\]</div>
+<p class="sd-card-text">where <span class="math notranslate nohighlight">\([\mathbf{u}]_w = (w_1, w_2, w_3)\)</span>. Calculating the inverse of the coefficient matrix</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \begin{pmatrix} 
+        1 &amp; 1 &amp; 1 \\
+        1 &amp; -1 &amp; -1 \\
+        0 &amp; 1 &amp; -2 
+    \end{pmatrix}^{-1} &amp;=
+    \frac{1}{6}
+    \begin{pmatrix}
+        3 &amp; 2 &amp; 1 \\
+        3 &amp; -2 &amp; -1 \\
+        0 &amp; 2 &amp; -2
+    \end{pmatrix}^\mathrm{T} \\
+    &amp;= \frac{1}{6} 
+    \begin{pmatrix}
+        3 &amp; 3 &amp; 0 \\
+        2 &amp; -2 &amp; 2 \\
+        1 &amp; -1 &amp; -2
+    \end{pmatrix} \\
+    &amp;=
+    \begin{pmatrix} 
+        \frac{1}{2} &amp; \frac{1}{2} &amp; 0 \\
+        \frac{1}{3} &amp; -\frac{1}{3} &amp; \frac{1}{3} \\
+        \frac{1}{6} &amp; -\frac{1}{6} &amp; -\frac{1}{3}
+    \end{pmatrix},
+\end{align*}\]</div>
+<p class="sd-card-text">so</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    [\mathbf{u}]_W = 
+    \begin{pmatrix} 
+        \frac{1}{2} &amp; \frac{1}{2} &amp; 0 \\
+        \frac{1}{3} &amp; -\frac{1}{3} &amp; \frac{1}{3} \\
+        \frac{1}{6} &amp; -\frac{1}{6} &amp; -\frac{1}{3}
+    \end{pmatrix}
+    \begin{pmatrix} 4 \\ 0 \\ 5 \end{pmatrix} =
+    \begin{pmatrix} 2 \\ 3 \\ -1 \end{pmatrix}.
+\end{align*}\]</div>
 </div>
 </details></div>
-</section>
-<div class="toctree-wrapper compound">
+<p>Note that in <a class="reference internal" href="#change-of-basis-example"><span class="std std-ref">example 5.8</span></a> we can represent any vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> with respect to the basis <span class="math notranslate nohighlight">\(W\)</span> by multiplying by the square matrix in the final equation. This matrix is known as the <a class="reference external" href="https://en.wikipedia.org/wiki/Change_of_basis"><strong>change of basis matrix</strong></a>.</p>
+<div class="note admonition" id="change-of-basis-matrix-definition">
+<p class="admonition-title">Definition: Change of basis matrix</p>
+<p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over the field <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span>. If <span class="math notranslate nohighlight">\(E\)</span> and <span class="math notranslate nohighlight">\(W\)</span> are two basis for <span class="math notranslate nohighlight">\(V\)</span> then the change of basis matrix is the matrix <span class="math notranslate nohighlight">\(A_{E \to W}\)</span> such that <span class="math notranslate nohighlight">\([u]_{W} = A_{E \to W} [u]_E\)</span>.</p>
 </div>
+<p>So to express the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> to the basis <span class="math notranslate nohighlight">\(W\)</span> we simply multiply <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> by the change of basis matrix. Changing from a non-standard basis is a slightly more complicated procedure and will be covered in the more advanced materials on linear algebra.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -865,17 +941,17 @@ Solution<div class="sd-summary-down docutils">
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../4_Coordinate_geometry/4.6_Coordinate_geometry_exercises.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="5.4_Linear_dependence.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Co-ordinate geometry exercises</p>
+            <p class="prev-next-title">Linear dependence</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="5.1_Subspaces.html" title="next page">
+    <a class='right-next' id="next-link" href="5.6_Vector_spaces_exercises.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Subspaces</p>
+        <p class="prev-next-title">Vector spaces exercises</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
