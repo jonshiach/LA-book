@@ -21,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -37,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -50,8 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/5_Vector_spaces/5.5_Basis.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -218,7 +218,7 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.2_Systems_of_linear_equations.html">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.2_Definition.html">
      Definition
     </a>
    </li>
@@ -280,7 +280,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../3_Vectors/3.3_Vectors.html">
+    <a class="reference internal" href="../3_Vectors/3.3_Definition.html">
      Definition
     </a>
    </li>
@@ -359,7 +359,7 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="5.2_Vector_spaces.html">
+    <a class="reference internal" href="5.2_Defintions.html">
      Definitions
     </a>
    </li>
@@ -643,10 +643,10 @@ title="Print to PDF"
 <h2>Spanning sets<a class="headerlink" href="#spanning-sets" title="Permalink to this headline">#</a></h2>
 <div class="note admonition" id="spanning-set-definition">
 <p class="admonition-title">Definition: Spanning set</p>
-<p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over the field <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(S\)</span> is a subset of <span class="math notranslate nohighlight">\(V\)</span>. Let <span class="math notranslate nohighlight">\(W\)</span> be a subset of <span class="math notranslate nohighlight">\(V\)</span> that are expressible as a linear combination of vectors in <span class="math notranslate nohighlight">\(S\)</span>, i.e., for <span class="math notranslate nohighlight">\(\mathbf{u} \in W\)</span>, <span class="math notranslate nohighlight">\(\mathbf{v}_1, \ldots, \mathbf{v}_n \in S\)</span> and <span class="math notranslate nohighlight">\(\alpha_1, \ldots, \alpha_n \in F\)</span></p>
+<p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over the field <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(S\)</span> is a subset of <span class="math notranslate nohighlight">\(V\)</span>. Let <span class="math notranslate nohighlight">\(W\)</span> be a subset of <span class="math notranslate nohighlight">\(V\)</span> that are expressible as a linear combination of vectors in <span class="math notranslate nohighlight">\(S\)</span>, i.e., for <span class="math notranslate nohighlight">\(u \in W\)</span>, <span class="math notranslate nohighlight">\(v_1, \ldots, v_n \in S\)</span> and <span class="math notranslate nohighlight">\(\alpha_1, \ldots, \alpha_n \in F\)</span></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    \mathbf{u} = \alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 + \cdots + \alpha_n \mathbf{v}_n.
+    u = \alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n v_n.
 \end{align*}\]</div>
 <p>then <span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(S\)</span> is a <strong>spanning set</strong> for <span class="math notranslate nohighlight">\(W\)</span>. We write this as <span class="math notranslate nohighlight">\(\operatorname{span}(S)\)</span>.</p>
 </div>
@@ -697,20 +697,20 @@ Solution<div class="sd-summary-down docutils">
 <h2>Basis of a vector space<a class="headerlink" href="#basis-of-a-vector-space" title="Permalink to this headline">#</a></h2>
 <div class="note admonition" id="basis-definition">
 <p class="admonition-title">Definition: Basis of a vector space</p>
-<p>A <strong>basis</strong> of a vector space <span class="math notranslate nohighlight">\(V\)</span> of a field <span class="math notranslate nohighlight">\(F\)</span> is a linearly independent subset of <span class="math notranslate nohighlight">\(V\)</span> that spans <span class="math notranslate nohighlight">\(V\)</span>. A subset <span class="math notranslate nohighlight">\(W\)</span> is a basis if it satisfies the following</p>
+<p>A <strong>basis</strong> of a vector space <span class="math notranslate nohighlight">\(V\)</span> of a field <span class="math notranslate nohighlight">\(F\)</span> is a linearly independent subset of <span class="math notranslate nohighlight">\(V\)</span> that spans <span class="math notranslate nohighlight">\(V\)</span>. A subset <span class="math notranslate nohighlight">\(W\)</span> is a basis if it satisfies the following:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="5.4_Linear_dependence.html#linear-dependence-definition"><span class="std std-ref">linear independence property</span></a>: for every subset <span class="math notranslate nohighlight">\(\{\mathbf{v}_1, \ldots , \mathbf{v}_n\}\)</span> of <span class="math notranslate nohighlight">\(W\)</span> the following equation only has the trivial soluion <span class="math notranslate nohighlight">\(\alpha_i = 0\)</span>.</p></li>
+<li><p><a class="reference internal" href="5.4_Linear_dependence.html#linear-dependence-definition"><span class="std std-ref">linear independence property</span></a>: for every subset <span class="math notranslate nohighlight">\(\{v_1, \ldots , v_n\}\)</span> of <span class="math notranslate nohighlight">\(W\)</span> the following equation only has the trivial solution <span class="math notranslate nohighlight">\(\alpha_i = 0\)</span>.</p></li>
 </ul>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    \alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 + \cdots + \alpha_n \mathbf{v}_n &amp;= \mathbf{0};
+    \alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n v_n &amp;= 0;
 \end{align*}\]</div>
 <ul class="simple">
-<li><p><a class="reference internal" href="#spanning-set-definition"><span class="std std-ref">spanning property</span></a>: for all <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> we can write <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> as a linear combination of <span class="math notranslate nohighlight">\(\mathbf{v} \in W\)</span>, i.e.,</p></li>
+<li><p><a class="reference internal" href="#spanning-set-definition"><span class="std std-ref">spanning property</span></a>: for all <span class="math notranslate nohighlight">\(u \in V\)</span> we can write <span class="math notranslate nohighlight">\(u\)</span> as a linear combination of <span class="math notranslate nohighlight">\(v \in W\)</span>, i.e.,</p></li>
 </ul>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    \mathbf{u} = \alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 + \cdots + \alpha_n \mathbf{v}_n.
+    u = \alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n v_n.
 \end{align*}\]</div>
 </div>
 <div class="note admonition" id="orthogonal-basis-definition">
@@ -908,9 +908,9 @@ Solution<div class="sd-summary-down docutils">
 <p>Note that in <a class="reference internal" href="#change-of-basis-example"><span class="std std-ref">example 5.8</span></a> we can represent any vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> with respect to the basis <span class="math notranslate nohighlight">\(W\)</span> by multiplying by the square matrix in the final equation. This matrix is known as the <a class="reference external" href="https://en.wikipedia.org/wiki/Change_of_basis"><strong>change of basis matrix</strong></a>.</p>
 <div class="note admonition" id="change-of-basis-matrix-definition">
 <p class="admonition-title">Definition: Change of basis matrix</p>
-<p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over the field <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span>. If <span class="math notranslate nohighlight">\(E\)</span> and <span class="math notranslate nohighlight">\(W\)</span> are two basis for <span class="math notranslate nohighlight">\(V\)</span> then the change of basis matrix is the matrix <span class="math notranslate nohighlight">\(A_{E \to W}\)</span> such that <span class="math notranslate nohighlight">\([u]_{W} = A_{E \to W} [u]_E\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over the field <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(u \in V\)</span>. If <span class="math notranslate nohighlight">\(E\)</span> and <span class="math notranslate nohighlight">\(W\)</span> are two basis for <span class="math notranslate nohighlight">\(V\)</span> then the change of basis matrix is the matrix <span class="math notranslate nohighlight">\(A_{E \to W}\)</span> such that <span class="math notranslate nohighlight">\([u]_{W} = A_{E \to W} [u]_E\)</span>.</p>
 </div>
-<p>So to express the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> to the basis <span class="math notranslate nohighlight">\(W\)</span> we simply multiply <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> by the change of basis matrix. Changing from a non-standard basis is a slightly more complicated procedure and will be covered in the more advanced materials on linear algebra.</p>
+<p>So to express the vector <span class="math notranslate nohighlight">\(\mathbf{u} \in \mathbb{R}^3\)</span> with respect to the basis <span class="math notranslate nohighlight">\(W\)</span> we simply multiply <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> by the change of basis matrix. Changing from a non-standard basis is a slightly more complicated procedure and will be covered in the more advanced units on linear algebra.</p>
 </section>
 </section>
 
