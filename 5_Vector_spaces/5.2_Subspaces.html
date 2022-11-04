@@ -21,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -37,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -50,8 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/5_Vector_spaces/5.2_Subspaces.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -113,7 +113,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../title.html">
-                    Linear Algebra Lecture Notes
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -644,13 +644,13 @@ title="Print to PDF"
 </div>
 <p>To demonstrate the use of <a class="reference internal" href="#subspace-condition-theorem"><span class="std std-ref">the subspace condition</span></a> let’s check whether <span class="math notranslate nohighlight">\(W = \{(x, y, z) : x + 2y - 3z = 0\}\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. First we need to verify that <span class="math notranslate nohighlight">\(W\)</span> is non-empty. To do this we simply need to find an element of <span class="math notranslate nohighlight">\(W\)</span>, e.g., <span class="math notranslate nohighlight">\((0, 0, 0) \in W\)</span> so <span class="math notranslate nohighlight">\(W\)</span> is non-empty.</p>
 <p>Next we need to take two arbitrary vectors in <span class="math notranslate nohighlight">\(W\)</span>, <span class="math notranslate nohighlight">\(u = (x_1, y_1, z_1), v = (x_2, y_2, z_2) \in W\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    u + \alpha v = 
+<div class="math notranslate nohighlight">
+\[\begin{split} 
+u + \alpha v = 
     \begin{pmatrix} x_1 \\ y_1 \\ z_1 \end{pmatrix} + \alpha 
     \begin{pmatrix} x_2 \\ y_2 \\ z_2 \end{pmatrix} 
     = \begin{pmatrix} x_1 + \alpha x_2 \\ y_1 + \alpha y_2 \\ z_1 + \alpha z_2 \end{pmatrix}.
-\end{align*}\]</div>
+\end{split}\]</div>
 <p>We now need to show that <span class="math notranslate nohighlight">\((x_1 + \alpha x_2, y_1 + \alpha y_2, z_1 + \alpha z_2) = 0\)</span> (i.e., it is in <span class="math notranslate nohighlight">\(W\)</span>). To do this let <span class="math notranslate nohighlight">\(x = x_1 + \alpha x_2\)</span>, <span class="math notranslate nohighlight">\(y = y_1 + \alpha y_2\)</span> and <span class="math notranslate nohighlight">\(z = z_1 + \alpha z_2\)</span> then</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
@@ -722,7 +722,7 @@ Solution<div class="sd-summary-down docutils">
 \end{align*}\]</div>
 <p>i.e, those polynomials of even degree at most five together with the zero polynomial. Is <span class="math notranslate nohighlight">\(W\)</span> a subspace of <span class="math notranslate nohighlight">\(P(\mathbb{R}_5)\)</span>?</p>
 <p>Let <span class="math notranslate nohighlight">\(p = x^2\)</span> and <span class="math notranslate nohighlight">\(r = -x ^ 2 + x\)</span> then <span class="math notranslate nohighlight">\(p, r \in W\)</span> but <span class="math notranslate nohighlight">\(p + r = x^2 - x^2 + x = x \notin W\)</span> since <span class="math notranslate nohighlight">\(\operatorname{deg}(x) = 1\)</span> is odd. Therefore <span class="math notranslate nohighlight">\(W\)</span> is not a subspace of <span class="math notranslate nohighlight">\(P(\mathbb{R}_5)\)</span>. Here we came up with a single counter example to show that the linear combination <span class="math notranslate nohighlight">\(p + r \notin W\)</span>.</p>
-<p>This counterexample is great but how does one come up with such a counterexample if you can’t immediately think of one? If you do not see an obvious counterexample, try and construct one: we are looking for two even-degree polynomials, whose sum is not an even polynomial. Let’s start at the lowest degree: <span class="math notranslate nohighlight">\(0\)</span>. The sum of two polynomials of degree <span class="math notranslate nohighlight">\(0\)</span> is just the sum of two real numbers, so there is no counterexample here. Let’s try degree <span class="math notranslate nohighlight">\(2\)</span>. Now we need to find: <span class="math notranslate nohighlight">\(p(x) = ax^2 + bx + c\)</span> and <span class="math notranslate nohighlight">\(r(x) = dx^2 + ex + f\)</span>, such that <span class="math notranslate nohighlight">\(p+r\)</span> has an add degree. Now</p>
+<p>This counterexample is great but how does one come up with such a counterexample if you can’t immediately think of one? If you do not see an obvious counterexample, try and construct one: we are looking for two even-degree polynomials, whose sum is not an even polynomial. Let’s start at the lowest degree: <span class="math notranslate nohighlight">\(0\)</span>. The sum of two polynomials of degree <span class="math notranslate nohighlight">\(0\)</span> is just the sum of two real numbers, so there is no counterexample here. Let’s try degree <span class="math notranslate nohighlight">\(2\)</span>. Now we need to find: <span class="math notranslate nohighlight">\(p(x) = ax^2 + bx + c\)</span> and <span class="math notranslate nohighlight">\(r(x) = dx^2 + ex + f\)</span>, such that <span class="math notranslate nohighlight">\(p+r\)</span> has an odd degree. Now</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     p+r = (a + d)x^2 + (b + e)x + (c + f)

@@ -21,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -37,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -50,8 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/6_Linear_transformations/6.3_Rotation_reflection_and_scaling.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -113,7 +113,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../title.html">
-                    Linear Algebra Lecture Notes
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -690,13 +690,13 @@ title="Print to PDF"
 <div class="note admonition" id="rotation-definition">
 <p class="admonition-title">Definition: Rotation transformation</p>
 <p>The linear transformation <span class="math notranslate nohighlight">\(Rot(\theta): \mathbb{R}^2 \to \mathbb{R}^2\)</span> applied to the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> rotates <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> by an angle <span class="math notranslate nohighlight">\(\theta\)</span> <em>anti-clockwise</em> about the origin.</p>
+</div>
 <figure class="align-default" id="rotation-figure">
 <img alt="../_images/rotation.png" src="../_images/rotation.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 32 </span><span class="caption-text">Rotation of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> anti-clockwise about the origin.</span><a class="headerlink" href="#rotation-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-</div>
 <p>Consider the diagram in <a class="reference internal" href="#rotation-figure"><span class="std std-numref">Fig. 32</span></a>. To determine the linear mapping <span class="math notranslate nohighlight">\(Rot(\theta): \mathbf{u} \mapsto \mathbf{v}\)</span> we first consider the values of <span class="math notranslate nohighlight">\(\mathbf{u} = (x, y)\)</span> as the vector which points along the <span class="math notranslate nohighlight">\(x\)</span>-axis with the same magnitude as <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> rotated by an angle <span class="math notranslate nohighlight">\(\phi\)</span> anti-clockwise about the origin. Forming a right-angled triangle with the angle <span class="math notranslate nohighlight">\(\phi\)</span> and hypotenuse of length <span class="math notranslate nohighlight">\(|\mathbf{u}|\)</span> then</p>
 <div class="math notranslate nohighlight" id="equation-rotation-equation-1">
 <span class="eqno">(27)<a class="headerlink" href="#equation-rotation-equation-1" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align*}
@@ -827,13 +827,13 @@ Solution<div class="sd-summary-down docutils">
 <div class="note admonition" id="reflection-definition">
 <p class="admonition-title">Definition: Reflection about a line</p>
 <p>The linear transformation <span class="math notranslate nohighlight">\(Ref(\theta): \mathbb{R}^2 \to \mathbb{R^2}\)</span> is the reflection of a vector <span class="math notranslate nohighlight">\(\mathbf{u} \in \mathbb{R}^2\)</span> about the line which passes through the origin and makes an angle of <span class="math notranslate nohighlight">\(\theta\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis such that the distance of the head of the image vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> is the same as that of <span class="math notranslate nohighlight">\(\mathbf{u}\)</span>.</p>
+</div>
 <figure class="align-default" id="reflection-figure">
 <img alt="../_images/reflection.png" src="../_images/reflection.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 33 </span><span class="caption-text">The reflection of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> about a line.</span><a class="headerlink" href="#reflection-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-</div>
 <p>The simplest reflection we can perform is to reflect a vector <span class="math notranslate nohighlight">\(\mathbf{u} =(x, y)\)</span> about the <span class="math notranslate nohighlight">\(x\)</span>-axis or <span class="math notranslate nohighlight">\(y\)</span>-axis. For example, to reflect about the <span class="math notranslate nohighlight">\(x\)</span>-axis we simply change the sign of the <span class="math notranslate nohighlight">\(y\)</span> co-ordinate (<a class="reference internal" href="#reflection-about-x-figure"><span class="std std-numref">Fig. 34</span></a>), i.e.,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}Ref(0) \begin{pmatrix} x \\ y \end{pmatrix} &amp;= \begin{pmatrix} x \\ -y \end{pmatrix},\end{split}\]</div>
@@ -972,14 +972,14 @@ Solution<div class="sd-summary-down docutils">
 <div class="note admonition" id="scaling-definition">
 <p class="admonition-title">Definition: Scaling transformation</p>
 <p>The linear transformation <span class="math notranslate nohighlight">\(S(\mathbf{s}) : \mathbb{R}^n \to \mathbb{R}^n\)</span> where <span class="math notranslate nohighlight">\(\mathbf{s} \in \mathbb{R}^n\)</span> applied to the position vector <span class="math notranslate nohighlight">\(\mathbf{u} \in \mathbb{R}^n\)</span> scales <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> so that the head is moved closer or further away from the origin.</p>
+</div>
 <figure class="align-default" id="scaling-figure">
 <img alt="../_images/scaling.png" src="../_images/scaling.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 38 </span><span class="caption-text">The scaling of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> by the scaling vector <span class="math notranslate nohighlight">\(\mathbf{s}\)</span>.</span><a class="headerlink" href="#scaling-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-</div>
-<p>The scaling of a vector <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2, \ldots, u_n) \in \mathbb{R}^n\)</span> by a scaling vector <span class="math notranslate nohighlight">\(\mathbf{s} = (v_1, v_2, \ldots, v_n)\)</span> is achieved simply by multiplying the corresponding elements in <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{s}\)</span>.</p>
+<p>The scaling of a vector <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2, \ldots, u_n) \in \mathbb{R}^n\)</span> by a scaling vector <span class="math notranslate nohighlight">\(\mathbf{s} = (s_1, s_2, \ldots, s_n)\)</span> is achieved simply by multiplying the corresponding elements in <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{s}\)</span>.</p>
 <div class="important admonition" id="scaling-theorem">
 <p class="admonition-title">Theorem: Scaling transformation</p>
 <p>The scaling of a vector <span class="math notranslate nohighlight">\(\mathbf{u} \in \mathbb{R}^n\)</span> by the scaling vector <span class="math notranslate nohighlight">\(\mathbf{s}\)</span> is the linear transformation <span class="math notranslate nohighlight">\(S(\mathbf{s}): \mathbf(u) \mapsto \mathbf{v}\)</span> calculated using</p>

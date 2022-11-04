@@ -21,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -37,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -50,8 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/6_Linear_transformations/6.0_Introduction.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -113,7 +113,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../title.html">
-                    Linear Algebra Lecture Notes
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -586,6 +586,9 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="linear-transformations">
 <span id="linear-transformations-chapter"></span><h1>Linear Transformations<a class="headerlink" href="#linear-transformations" title="Permalink to this headline">#</a></h1>
+<p>You will already be familiar with the use of <a href="https://en.wikipedia.org/wiki/Function_(mathematics)" target="_blank">functions</a> in mathematics to study sets and the <strong>mapping</strong> from a set of inputs set to another set of outputs. The notation used to denote functions is of the form <span class="math notranslate nohighlight">\(f: X \to Y\)</span> where <span class="math notranslate nohighlight">\(f\)</span> is the name of the function, <span class="math notranslate nohighlight">\(X\)</span> is the set of inputs known as the <strong>domain</strong> and <span class="math notranslate nohighlight">\(Y\)</span> is a member of the set of outputs known as the <strong>codomain</strong>. The mapping which defines the relationship between the domain and codmain is defined using <span class="math notranslate nohighlight">\(y = f(x)\)</span> where <span class="math notranslate nohighlight">\(x\)</span> is a member of the domain and <span class="math notranslate nohighlight">\(y\)</span> is a member of the codomain.</p>
+<p>In linear algebra we study the linear mapping of a set of vectors to another set of vectors so we define <span class="math notranslate nohighlight">\(T: V \to W\)</span> where <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(W\)</span> are vector spaces and the mapping from an input vector <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> to an output vector <span class="math notranslate nohighlight">\(\mathbf{w} \in W\)</span> is given by <span class="math notranslate nohighlight">\(\mathbf{w} = T(\mathbf{u})\)</span>.</p>
+<p>Linear transformations have lots of uses in mathematics and computing. A good example is in the field of computer graphics and computer games where they are fundamental to the manipulation and visualisation of three-dimensional objects.</p>
 <p><strong>Learning outcomes</strong></p>
 <p>On successful completion of this chapters students will be able to:</p>
 <ul class="simple">

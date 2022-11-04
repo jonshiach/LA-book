@@ -21,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -37,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -50,8 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/6_Linear_transformations/6.1_Definition.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -113,7 +113,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../title.html">
-                    Linear Algebra Lecture Notes
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -643,36 +643,37 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="definition">
 <span id="linear-transformations-definition-section"></span><h1>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h1>
+<p>We begin with the formal definition of a linear transformation.</p>
 <div class="note admonition" id="linear-transformation-definition">
 <p class="admonition-title">Definition: Linear transformation</p>
-<p>If <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(W\)</span> are two vector spaces over the same field <span class="math notranslate nohighlight">\(F\)</span> then by a <strong>linear transformation</strong> (or <strong>linear mapping</strong>) is a mapping <span class="math notranslate nohighlight">\(T: V \to W,\)</span> such that the following conditions hold</p>
+<p>If <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(W\)</span> are two vector spaces over the same field <span class="math notranslate nohighlight">\(F\)</span> then by a <strong>linear transformation</strong> (or <strong>linear mapping</strong>) is a mapping <span class="math notranslate nohighlight">\(T: V \to W\)</span> that for any two vectors <span class="math notranslate nohighlight">\(\mathbf{u}, \mathbf{v} \in V\)</span> and any scalar <span class="math notranslate nohighlight">\(\alpha \in F\)</span> the following conditions hold</p>
 <ul class="simple">
-<li><p>addition operation: for all <span class="math notranslate nohighlight">\(x,y \in V\)</span>, <span class="math notranslate nohighlight">\(T(x + y) = T(x) + T(y)\)</span>;</p></li>
-<li><p>scalar multiplication: for all <span class="math notranslate nohighlight">\(x \in V\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span>, <span class="math notranslate nohighlight">\(T(\alpha x) = \alpha T(x)\)</span>.</p></li>
+<li><p>addition operation: <span class="math notranslate nohighlight">\(T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})\)</span>;</p></li>
+<li><p>scalar multiplication:  <span class="math notranslate nohighlight">\(T(\alpha \mathbf{u}) = \alpha T(\mathbf{u})\)</span>.</p></li>
 </ul>
 <p>The result of applying a linear transformation to an object is known as the <strong>image</strong>.</p>
 </div>
-<p>For example, let <span class="math notranslate nohighlight">\(V = \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(W = \mathbb{R}^3\)</span> then <span class="math notranslate nohighlight">\(T : V \to W\)</span> defined by <span class="math notranslate nohighlight">\(T : (x, y) \mapsto (x, y, 0)\)</span> is a linear transformation. Let <span class="math notranslate nohighlight">\((x_1, y_1), (x_2, y_2) \in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span> then</p>
+<p>For example, let <span class="math notranslate nohighlight">\(V = \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(W = \mathbb{R}^3\)</span> then <span class="math notranslate nohighlight">\(T : V \to W\)</span> defined by <span class="math notranslate nohighlight">\(T : (x, y) \mapsto (x, y, 0)\)</span> is a linear transformation. Let <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2), \mathbf{v} = (v_1, v_2) \in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span> then</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    T \left( \begin{pmatrix} x_1 \\ y_1 \end{pmatrix} + \begin{pmatrix} x_2 \\ y_2 \end{pmatrix} \right)
-    &amp;= T\begin{pmatrix} x_1 + x_2 \\ y_1 + y_2 \end{pmatrix}
-    = \begin{pmatrix} x_1 + x_2 \\ y_1 + y_2 \\ 0 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} x_1 \\ y_1 \\ 0 \end{pmatrix} + \begin{pmatrix} x_2 \\ y_2 \\ 0 \end{pmatrix}
-    = T\begin{pmatrix} x_1 \\ y_1 \end{pmatrix} + T\begin{pmatrix} x_2 \\ y_2 \end{pmatrix}.
+    T \left( \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} + \begin{pmatrix} v_1 \\ v_2 \end{pmatrix} \right)
+    &amp;= T \begin{pmatrix} u_1 + v_1 \\ u_2 + v_2 \end{pmatrix}
+    = \begin{pmatrix} u_1 + v_1 \\ u_2 + v_2 \\ 0 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} u_1 \\ v_1 \\ 0 \end{pmatrix} + \begin{pmatrix} u_2 \\ v_2 \\ 0 \end{pmatrix}
+    = T \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} + T \begin{pmatrix} v_1 \\ v_2 \end{pmatrix}.
 \end{align*}\]</div>
 <p>Similarly</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    T\left( \alpha \begin{pmatrix} x_1 \\ y_1 \end{pmatrix} \right)
-    &amp;= T \begin{pmatrix} \alpha x_1 \\ \alpha y_1 \end{pmatrix} 
-    = \begin{pmatrix} \alpha x_1 \\ \alpha y_1 \\ 0 \end{pmatrix}
-    = \alpha \begin{pmatrix} x_1 \\ y_1 \\ 0 \end{pmatrix}
-    = \alpha T\begin{pmatrix} x_1 \\ y_1 \end{pmatrix}.
+    T \left( \alpha \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} \right)
+    &amp;= T \begin{pmatrix} \alpha u_1 \\ \alpha u_2 \end{pmatrix} 
+    = \begin{pmatrix} \alpha u_1 \\ \alpha u_2 \\ 0 \end{pmatrix}
+    = \alpha \begin{pmatrix} u_1 \\ u_2 \\ 0 \end{pmatrix}
+    = \alpha T \begin{pmatrix} u_1 \\ u_2 \end{pmatrix}.
 \end{align*}\]</div>
 <p>To show whether a transformation is a linear transformation can combine both conditions from the <a class="reference internal" href="#linear-transformation-definition"><span class="std std-ref">definition of a linear transformation</span></a> to show that</p>
 <div class="math notranslate nohighlight" id="equation-linear-transformation-condition-equation">
-<span class="eqno">(22)<a class="headerlink" href="#equation-linear-transformation-condition-equation" title="Permalink to this equation">#</a></span>\[T(x + \alpha y) = T(x) + \alpha T(y).\]</div>
+<span class="eqno">(22)<a class="headerlink" href="#equation-linear-transformation-condition-equation" title="Permalink to this equation">#</a></span>\[T(\mathbf{u} + \alpha \mathbf{v}) = T(\mathbf{u}) + \alpha T(\mathbf{v}).\]</div>
 <div class="seealso admonition" id="linear-transformation-example">
 <p class="admonition-title">Example 6.1</p>
 <p>Determine which of the following transformations are linear transformations</p>
@@ -724,7 +725,7 @@ Solution<div class="sd-summary-down docutils">
     = \begin{pmatrix} 9 \\ 0 \end{pmatrix}.
 \end{align*}\]</div>
 </div>
-</details><p>  (iii)   <span class="math notranslate nohighlight">\(T: P(\mathbb{R}) \to P(\mathbb{R})\)</span> defined by <span class="math notranslate nohighlight">\(T: f(x) \mapsto f(x) \dfrac{\mathrm{d}}{\mathrm{d}x} f(x)\)</span></p>
+</details><p>  (iii)   <span class="math notranslate nohighlight">\(T: P(\mathbb{R}) \to P(\mathbb{R})\)</span> defined by <span class="math notranslate nohighlight">\(T: T(x) \mapsto T(x) \dfrac{\mathrm{d}}{\mathrm{d}x} T(x)\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -737,7 +738,7 @@ Solution<div class="sd-summary-down docutils">
 \[\begin{align*}
     T(2x^2) = 2x^2(4x) = 8x^3 \neq 2T(x^2) = 2(x^2)(2x) = 4x^3,
 \end{align*}\]</div>
-<p class="sd-card-text">so <span class="math notranslate nohighlight">\(T: f(x) \mapsto f(x) \dfrac{\mathrm{d}}{\mathrm{d}x} f(x)\)</span> is not a linear transformation.</p>
+<p class="sd-card-text">so <span class="math notranslate nohighlight">\(T: T(x) \mapsto T(x) \dfrac{\mathrm{d}}{\mathrm{d}x} T(x)\)</span> is not a linear transformation.</p>
 </div>
 </details></div>
 <section id="transformation-matrices">
@@ -752,7 +753,7 @@ Solution<div class="sd-summary-down docutils">
 \[\begin{align*}
     T(\mathbf{u}) = u_1 T(\mathbf{v}_1) + u_2 T(\mathbf{v}_2) + \cdots + u_n T(\mathbf{v}_n),
 \end{align*}\]</div>
-<p>so <span class="math notranslate nohighlight">\(T(\mathbf{u})\)</span> depends on the vectors <span class="math notranslate nohighlight">\(T(\mathbf{v}_1)\)</span> and <span class="math notranslate nohighlight">\(T(\mathbf{v}_2)\)</span>. We can write this as the matrix equation</p>
+<p>so <span class="math notranslate nohighlight">\(T(\mathbf{u})\)</span> depends on the vectors <span class="math notranslate nohighlight">\(T(\mathbf{v}_1), T(\mathbf{v}_2), \ldots, T(\mathbf{v}_n)\)</span>. We can write this as the matrix equation</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     T(\mathbf{u}) &amp;= \begin{pmatrix} 
@@ -763,7 +764,7 @@ Solution<div class="sd-summary-down docutils">
     \begin{pmatrix} u_1 \\ u_2 \\ \vdots \\ u_n \end{pmatrix} \\
     &amp;= A \mathbf{u}.
 \end{align*}\]</div>
-<p>i.e., we can apply a linear transformation in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> by multiplying a vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> by a matrix <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>In other words we can apply a linear transformation simply by multiplying <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> by a matrix <span class="math notranslate nohighlight">\(A\)</span>.</p>
 <div class="note admonition" id="transformation-matrix-definition">
 <p class="admonition-title">Definition: Transformation matrix</p>
 <p>Let <span class="math notranslate nohighlight">\(T : V \to W\)</span> be a linear transformation and <span class="math notranslate nohighlight">\(A\)</span> be a matrix such that</p>
