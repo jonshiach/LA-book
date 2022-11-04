@@ -4,39 +4,39 @@
 # To publish online: ghp-import -n -p -f _build/html
 
 format: jb-book
-root: intro
+root: title
 parts:
 - caption: ""
   chapters:  
-  - glob: 0_Preamble/0*
+  - glob: 0_Preamble/*
 
 - caption: Chapters
   chapters:
-  - file: 1_Matrices/1.0_Matrices
+  - file: 1_Matrices/1.0_Introduction
     sections:
-    - glob: 1_Matrices/1.*
+    - glob: 1_Matrices/*
 
-  - file: 2_Systems_of_Linear_Equations/2.0_Systems_of_linear_equations
+  - file: 2_Systems_of_Linear_Equations/2.0_Introduction
     sections:
-    - glob: 2_Systems_of_Linear_Equations/2.*
+    - glob: 2_Systems_of_Linear_Equations/*
 
-  - file: 3_Vectors/3.0_Vectors
+  - file: 3_Vectors/3.0_Introduction
     sections:
-    - glob: 3_Vectors/3.*
+    - glob: 3_Vectors/*
 
-  - file: 4_Coordinate_geometry/4.0_Coordinate_geometry
+  - file: 4_Coordinate_geometry/4.0_Introduction
     sections:
-    - glob: 4_Coordinate_geometry/4.*
+    - glob: 4_Coordinate_geometry/*
 
-  - file: 5_Vector_spaces/5.0_Vector_spaces
+  - file: 5_Vector_spaces/5.0_Introduction
     sections:
-    - glob: 5_Vector_spaces/5.*
+    - glob: 5_Vector_spaces/*
 
-  - file: 6_Linear_transformations/6.0_Linear_transformations
+  - file: 6_Linear_transformations/6.0_Introduction
     sections:
     - glob: 6_Linear_transformations/6.*
 
-- caption: Appendices
+- caption: 7_Appendices
   chapters:
   - glob: 7_Appendices/*
 

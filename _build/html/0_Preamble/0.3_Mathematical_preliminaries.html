@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Mathematical preliminaries &#8212; Linear Algebra</title>
+    <title>Mathematical preliminaries &#8212; Linear Algebra Lecture Notes</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -21,7 +21,7 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -37,7 +37,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -50,8 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/0_Preamble/0.3_Mathematical_preliminaries.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -101,7 +101,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="../_static/MMU_logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">Linear Algebra</h1>
+      <h1 class="site-logo" id="site-title">Linear Algebra Lecture Notes</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -112,7 +112,7 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../intro.html">
+                <a class="reference internal" href="../title.html">
                     Introduction
                 </a>
             </li>
@@ -151,7 +151,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../1_Matrices/1.0_Matrices.html">
+  <a class="reference internal" href="../1_Matrices/1.0_Introduction.html">
    Matrices
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -161,44 +161,54 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.1_Matrix_multiplication.html">
+    <a class="reference internal" href="../1_Matrices/1.1_Definition.html">
+     Definition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_Matrices/1.2_Basic_arithmetic_operations.html">
+     Basic arithmetic operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_Matrices/1.3_Matrix_multiplication.html">
      Matrix multiplication
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.2_Matrix_transpose.html">
+    <a class="reference internal" href="../1_Matrices/1.4_Matrix_transpose.html">
      Matrix transpose
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.3_Special_matrices.html">
+    <a class="reference internal" href="../1_Matrices/1.5_Special_matrices.html">
      Special matrices
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.4_Determinants.html">
+    <a class="reference internal" href="../1_Matrices/1.6_Determinants.html">
      Determinants
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.5_Inverse_matrix.html">
+    <a class="reference internal" href="../1_Matrices/1.7_Matrix_inverse.html">
      Inverse matrix
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.6_Matrix_algebra.html">
+    <a class="reference internal" href="../1_Matrices/1.8_Matrix_algebra.html">
      Matrix algebra
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../1_Matrices/1.8_Matrices_exercises.html">
+    <a class="reference internal" href="../1_Matrices/1.9_Exercises.html">
      Matrices exercises
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.0_Systems_of_linear_equations.html">
+  <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.0_Introduction.html">
    Systems of Linear Equations
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -208,49 +218,54 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.1_Solving_using_inverse_matrix.html">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.1_Definition.html">
+     Definition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.2_Solution_using_inverse_matrix.html">
      Solving systems of linear equations using the inverse matrix
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.2_Cramers_rule.html">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.3_Cramers_rule.html">
      Cramer’s rule
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.3_Gaussian_elimination.html">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.4_Gaussian_elimination.html">
      Gaussian elimination
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.4_Partial_pivoting.html">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.5_Partial_pivoting.html">
      Partial pivoting
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.5_Gauss_Jordan_elimination.html">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.6_Gauss_Jordan_elimination.html">
      Gauss-Jordan elimination
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.6_Consistent_inconsistent_and_indeterminate_systems.html">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.7_Consistent_and_inconsistent_systems.html">
      Consistent, inconsistent and indeterminate systems
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.7_Homogeneous_systems.html">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.8_Homogeneous_systems.html">
      Homogeneous systems
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.9_Systems_of_linear_equations_exercises.html">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.9_Exercises.html">
      Systems of linear equations exercises
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../3_Vectors/3.0_Vectors.html">
+  <a class="reference internal" href="../3_Vectors/3.0_Introduction.html">
    Vectors
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -260,34 +275,44 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../3_Vectors/3.1_Arithmetic_operations_on_vectors.html">
-     Arithmetic operations on vectors
+    <a class="reference internal" href="../3_Vectors/3.1_Euclidean_space.html">
+     Euclidean space
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../3_Vectors/3.2_Vector_magnitude.html">
+    <a class="reference internal" href="../3_Vectors/3.2_Definition.html">
+     Definition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Vectors/3.3_Vector_magnitude.html">
      Vector magnitude
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../3_Vectors/3.3_Vector_products.html">
+    <a class="reference internal" href="../3_Vectors/3.4_Arithmetic_operations.html">
+     Arithmetic operations on vectors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Vectors/3.5_Vector_products.html">
      Vector products
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../3_Vectors/3.4_Linear_combination_of_vectors.html">
+    <a class="reference internal" href="../3_Vectors/3.6_Linear_combination_of_vectors.html">
      Linear combination of vectors
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../3_Vectors/3.6_Vectors_exercises.html">
+    <a class="reference internal" href="../3_Vectors/3.7_Exercises.html">
      Vectors exercises
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../4_Coordinate_geometry/4.0_Coordinate_geometry.html">
+  <a class="reference internal" href="../4_Coordinate_geometry/4.0_Introduction.html">
    Co-ordinate Geometry
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
@@ -297,24 +322,34 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../4_Coordinate_geometry/4.1_Planes.html">
+    <a class="reference internal" href="../4_Coordinate_geometry/4.1_Points.html">
+     Points
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Coordinate_geometry/4.2_Lines.html">
+     Lines
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Coordinate_geometry/4.3_Planes.html">
      Planes
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../4_Coordinate_geometry/4.2_Shortest_distance_problems.html">
+    <a class="reference internal" href="../4_Coordinate_geometry/4.4_Shortest_distance_problems.html">
      Shortest distance problems
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../4_Coordinate_geometry/4.4_Coordinate_geometry_exercises.html">
+    <a class="reference internal" href="../4_Coordinate_geometry/4.5_Coordinate_geometry_exercises.html">
      Co-ordinate geometry exercises
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../5_Vector_spaces/5.0_Vector_spaces.html">
+  <a class="reference internal" href="../5_Vector_spaces/5.0_Introduction.html">
    Vector spaces
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
@@ -324,17 +359,22 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../5_Vector_spaces/5.1_Subspaces.html">
+    <a class="reference internal" href="../5_Vector_spaces/5.1_Defintions.html">
+     Definitions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5_Vector_spaces/5.2_Subspaces.html">
      Subspaces
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../5_Vector_spaces/5.2_Linear_dependence.html">
+    <a class="reference internal" href="../5_Vector_spaces/5.3_Linear_dependence.html">
      Linear dependence
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../5_Vector_spaces/5.3_Basis.html">
+    <a class="reference internal" href="../5_Vector_spaces/5.4_Basis.html">
      Basis
     </a>
    </li>
@@ -346,7 +386,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../6_Linear_transformations/6.0_Linear_transformations.html">
+  <a class="reference internal" href="../6_Linear_transformations/6.0_Introduction.html">
    Linear Transformations
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
@@ -356,22 +396,27 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../6_Linear_transformations/6.1_Composite_linear_transformations.html">
+    <a class="reference internal" href="../6_Linear_transformations/6.1_Definition.html">
+     Definition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Linear_transformations/6.2_Composite_transformations.html">
      Composite linear transformations
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../6_Linear_transformations/6.2_Rotation_reflection_and_scaling.html">
+    <a class="reference internal" href="../6_Linear_transformations/6.3_Rotation_reflection_and_scaling.html">
      Rotation, reflection and scaling
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../6_Linear_transformations/6.3_Translation.html">
+    <a class="reference internal" href="../6_Linear_transformations/6.4_Translation.html">
      Translation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../6_Linear_transformations/6.5_Transformations_exercises.html">
+    <a class="reference internal" href="../6_Linear_transformations/6.5_Exercises.html">
      Transformations exercises
     </a>
    </li>
@@ -380,7 +425,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Appendices
+  7_Appendices
  </span>
 </p>
 <ul class="nav bd-sidenav">

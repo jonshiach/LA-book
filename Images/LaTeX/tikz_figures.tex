@@ -46,7 +46,7 @@
 %     \draw [latex'-latex'] ($(a)+(330:2)+(30:2)+(0:0.2)$) -- node [right] {$a_3$} ++(90:1);
 % \end{tikzpicture}
 
-% Position vector
+% % Position vector
 % \begin{tikzpicture}
 %     \draw [-stealth] (0, 0) -- ++(330:2) node [right] {$x$};
 %     \draw [-stealth] (0, 0) -- ++(30:2) node [right] {$y$};
@@ -56,7 +56,7 @@
 %     \draw [vector]  (0, 0) -- node [below right] {$\mathbf{p}$} (P);
 % \end{tikzpicture}
 
-% Vector equality
+% % Vector equality
 % \begin{tikzpicture}
 %     \draw [-stealth] (0, 0) -- ++(0:7) node [below] {$x$};
 %     \draw [-stealth] (0, 0) -- ++(90:4) node [left] {$y$};
@@ -90,7 +90,7 @@
 %     \draw [latex'-latex',help lines,green!75!black] (-0.8, 1) -- node [above,rotate=90] {$a_2+b_2$} ++(0, 3);
 % \end{tikzpicture}
 
-% Scalar multipliction of a vector
+% Scalar multiplication of a vector
 % \begin{tikzpicture}
 %     \draw [vector] (0, 0) -- node [above left] {$\mathbf{a}$} ++(45:2);
 %     \draw [vector,red] ($(2, 0)+(45:2)$) -- node [above left] {$-\mathbf{a}$} ++(225:2);
@@ -127,6 +127,7 @@
 %     \draw (90:0.25) -- ++(330:0.25) -- ++(270:0.5) -- ++(150:0.25);
 %     \draw (30:0.25) -- ++(90:0.25) -- ++(210:0.25);
 % \end{tikzpicture}
+
 
 % Vector equation of a line
 % \begin{tikzpicture}
@@ -368,17 +369,17 @@
 % \end{tikzpicture}
 
 % Subspaces
-% \begin{tikzpicture}
-%     \draw [fill=blue!10] (0, 0) ellipse (3 and 2);
-%     \draw [fill=red!10] (-1, 0) circle (1.5 and 1);
-%     \node at (2, 2) {$V$};
-%     \node at (0.75, 0.75) {$W$};
-%     \node at (-1,0) {$\mathbf{0}$};
-%     \node at (0,0) {$\mathbf{v}$};
-%     \node at (-1,0.5) {$\mathbf{u}$};
-%     \node at (-2,0) {$\alpha \mathbf{u}$};
-%     \node at (-1,-0.5) {$\mathbf{u} + \mathbf{v}$};
-% \end{tikzpicture}
+\begin{tikzpicture}
+    \draw [fill=blue!10] (0, 0) ellipse (3 and 2);
+    \draw [fill=red!10] (-1, 0) circle (1.5 and 1);
+    \node at (2, 2) {$V$};
+    \node at (0.75, 0.75) {$W$};
+    \node at (-1,0) {${0}$};
+    \node at (0,0) {${v}$};
+    \node at (-1,0.5) {${u}$};
+    \node at (-2,0) {$\alpha {u}$};
+    \node at (-1,-0.5) {${u} + {v}$};
+\end{tikzpicture}
 
 % Change of basis
 % \begin{tikzpicture}
@@ -500,24 +501,24 @@
 %     \draw [-latex'] (1) -- (2);
 % \end{tikzpicture}
 
-\begin{tikzpicture}
-    \draw [-stealth] (-1, 0) -- (4, 0) node [below] {$x$};
-    \draw [-stealth] (0, -2) -- (0, 3) node [left] {$y$};
-    \node [point, blue] at (\a2:\l1) (1) {};
-    \node [point, red] at (90-\a2:\l1) (2) {};
-    \draw [vector] (0, 0) -- (1) node [pos=0.75,above left] {$\mathbf{u}$};
-    \draw [vector, red] (0, 0) -- (2) node [pos=0.75,above left] {$\mathbf{v}$};
-    \node [point, blue!20] at (\a2-\a1:\l1) (1) {};
-    \node [point, red!20] at (90-\a2-\a1:\l1) (2) {};
-    \draw [vector, blue!20] (0, 0) -- (1) node [pos=0.75,above left] {$\mathbf{u}$};
-    \draw [vector, red!20] (0, 0) -- (2) node [pos=0.75,below left] {$\mathbf{v}$};
-    % \draw [dashed, line width=2pt, black!10] ({180}:\l2) -- (0:\l1);
-    \draw [dashed, line width=2pt] (\a1+180:\l2) -- (\a1:{1.25*\l1});
-    % \draw [latex'-] (90-\a2:0.75*\l2) arc (90-\a2:90-\a2-\a1:0.75*\l2);
-    \draw [latex'-] (\a1:\l2) arc (\a1:0:\l2);
-    % \draw [latex'-] (\a2:1.25*\l2) arc (\a2:\a2-\a1:1.25*\l2);
-    \draw [dashed, line width=2pt, black!20] ({180}:\l2) -- (0:{\l1+0.4});
-\end{tikzpicture}
+% \begin{tikzpicture}
+%     \draw [-stealth] (-1, 0) -- (4, 0) node [below] {$x$};
+%     \draw [-stealth] (0, -2) -- (0, 3) node [left] {$y$};
+%     \node [point, blue] at (\a2:\l1) (1) {};
+%     \node [point, red] at (90-\a2:\l1) (2) {};
+%     \draw [vector] (0, 0) -- (1) node [pos=0.75,above left] {$\mathbf{u}$};
+%     \draw [vector, red] (0, 0) -- (2) node [pos=0.75,above left] {$\mathbf{v}$};
+%     \node [point, blue!20] at (\a2-\a1:\l1) (1) {};
+%     \node [point, red!20] at (90-\a2-\a1:\l1) (2) {};
+%     \draw [vector, blue!20] (0, 0) -- (1) node [pos=0.75,above left] {$\mathbf{u}$};
+%     \draw [vector, red!20] (0, 0) -- (2) node [pos=0.75,below left] {$\mathbf{v}$};
+%     % \draw [dashed, line width=2pt, black!10] ({180}:\l2) -- (0:\l1);
+%     \draw [dashed, line width=2pt] (\a1+180:\l2) -- (\a1:{1.25*\l1});
+%     % \draw [latex'-] (90-\a2:0.75*\l2) arc (90-\a2:90-\a2-\a1:0.75*\l2);
+%     \draw [latex'-] (\a1:\l2) arc (\a1:0:\l2);
+%     % \draw [latex'-] (\a2:1.25*\l2) arc (\a2:\a2-\a1:1.25*\l2);
+%     \draw [dashed, line width=2pt, black!20] ({180}:\l2) -- (0:{\l1+0.4});
+% \end{tikzpicture}
 
 % \begin{tikzpicture}
 %     \draw [-stealth'] (0, 0) -- (5, 0) node [below] {$x$};

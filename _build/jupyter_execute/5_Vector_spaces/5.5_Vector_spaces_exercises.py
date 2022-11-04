@@ -85,7 +85,7 @@
 # :class: note
 # :name: ex5.3
 # 
-# Which of the following sets are subspaces of $M_{2\times 2}$?
+# Which of the following sets are subspaces of $M_2(\mathbb{R})$?
 # 
 # &emsp; (a) &emsp; $A = \left\{ \begin{pmatrix} a & b \\ c & d \end{pmatrix} : a, b, c, d \in \mathbb{R}, a + b = 1,  \right\}$
 # 

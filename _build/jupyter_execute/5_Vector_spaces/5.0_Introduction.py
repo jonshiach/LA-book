@@ -1,0 +1,47 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# (vector-spaces-chapter)=
+# # Vector spaces
+# 
+# A vector space is a set of objects called vectors that satisfy axioms of vector addition and scalar multiplication. As the name suggests, vectors in [Euclidean space](euclidean-space-section) that we met in the chapter on vectors form a vector space but so do lots of other types of mathematical objects. The use of the term *vector* when dealing with vector spaces could be matrices, polynomial functions, numbers etc. 
+# 
+# Vector spaces are abstract and their purpose may not be apparent upon first meeting them. Geoffrey Scott gives a good explanation of <a href="https://www.math.toronto.edu/gscott/WhatVS.pdf" target="_blank">why we need vector spaces</a> which is paraphrased here. Consider the following three problems
+# 
+# - Problem 1: Find $x_1, x_2, x_3 \in \mathbb{R}$ that satisfy
+# 
+# $$
+#     x_1 \begin{pmatrix} 2 \\ -1 \\ 1 \end{pmatrix} + 
+#     x_2 \begin{pmatrix} 1 \\ 2 \\ 0 \end{pmatrix} + 
+#     x_3 \begin{pmatrix} 3 \\ 1 \\ -1 \end{pmatrix} = 
+#     \begin{pmatrix} 6 \\ 2 \\ 0 \end{pmatrix}.
+# $$
+# 
+# - Problem 2: Find $x_1, x_2, x_3 \in \mathbb{R}$ such that
+# 
+# $$ x_1 (2t^2 - t + 1) + x_2 (t^2 + 2t -2) + x_3 (0t^2 + t) = 2t^2 + 5t + 1.$$
+# 
+# - Problem 3: Find $x_1, x_2, \ldots \in \mathbb{C}$ such that
+# 
+# \begin{align*}
+#     \sum_{n=1}^\infty x_n cos(n \pi t) = e^{5nt}.
+# \end{align*}
+# 
+# Problems 1, 2 and 3 are described using three different mathematical objects. Problem 1 uses vectors, problem 2 uses polynomials and problem 3 uses trigonometric functions. On further inspection we can see that these three problems are all similar and involve solving a system of linear equations. We know how to solve problem 1 using the methods from the [chapter on systems of linear equations](systems-of-linear-equations-chapter) so can we use these to solve problems 2 and 3 and other problems using different mathematical objects?
+# 
+# To answer this we could state theorems for each type of mathematical object, e.g.,
+# 
+# > "Suppose you have a collection of columns vectors *or* polynomials *or* functions *or* any other type of mathematical object that can be multiplied by numbers and added together $\ldots$"
+# 
+# So every time we encounter a similar problem to the ones above we would need to state a theorem and prove it. Mathematicians like to be concise so the term *vector space* was invented to mean any type of mathematical object that can be multiplied by numbers and added together. So instead of the rambling phrase above we could use
+# 
+# > "Let $V$ be a vector space $\ldots$"
+# 
+# ## Learning outcomes
+# 
+# On successful completion of this chapters students will be able to:
+# 
+# - identify when a set of objects is a [vector space](vector-space-definition);
+# - identify when a subset of a vector space is a [subspace](subspace-definition);
+# - determine whether elements of a vector space are [linearly dependent or linearly independent](linear-dependence-definition);
+# - identify a [basis](basis-definition), determine the [dimension](vector-space-dimension-definition) of a vector space and represent vectors with respect to a [non-standard basis](change-of-basis-example).

@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Linear Algebra
+title: Linear Algebra Lecture Notes
 author: Dr Jon Shiach
 logo: Images/MMU_logo.png
 
@@ -16,8 +16,8 @@ latex:
     targetname: book.tex
 
 # Add a bibtex file so that we can create citations
-bibtex_bibfiles:
-  - references.bib
+# bibtex_bibfiles:
+#   - references.bib
 
 # Information about where the book exists on the web
 repository:
@@ -58,7 +58,7 @@ parse:
 sphinx:
   config:
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-    bibtex_reference_style: author_year
+    # bibtex_reference_style: author_year
     html_favicon: "Images/favicon.ico"
 
 exclude_patterns: [README.md]
