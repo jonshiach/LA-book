@@ -1,0 +1,1126 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Matrices &#8212; Linear Algebra Lecture Notes</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <link rel="canonical" href="https://jonshiach.github.io/LA-book/8_Handouts/8.1_Matrices_handout.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Systems of Linear Equations Exercises" href="8.2_Systems_handout.html" />
+    <link rel="prev" title="SymPy commands" href="../7_Appendices/7.2_Sympy.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/MMU_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Linear Algebra Lecture Notes</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../title.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../0_Preamble/0.1_Teaching_schedule.html">
+   Teaching schedule
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../0_Preamble/0.2_Assessment.html">
+   Assessment
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../0_Preamble/0.3_Mathematical_preliminaries.html">
+   Mathematical preliminaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../0_Preamble/0.4_Python.html">
+   Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../0_Preamble/0.5_How_to_pass.html">
+   How to pass the unit
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Chapters
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../1_Matrices/1.0_Introduction.html">
+   Matrices
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_Matrices/1.1_Definition.html">
+     Definition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_Matrices/1.2_Basic_arithmetic_operations.html">
+     Basic arithmetic operations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_Matrices/1.3_Matrix_multiplication.html">
+     Matrix multiplication
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_Matrices/1.4_Matrix_transpose.html">
+     Matrix transpose
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_Matrices/1.5_Special_matrices.html">
+     Special matrices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_Matrices/1.6_Determinants.html">
+     Determinants
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_Matrices/1.7_Matrix_inverse.html">
+     Inverse matrix
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_Matrices/1.8_Matrix_algebra.html">
+     Matrix algebra
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1_Matrices/1.9_Exercises.html">
+     Matrices exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.0_Introduction.html">
+   Systems of Linear Equations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.1_Definition.html">
+     Definition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.2_Solution_using_inverse_matrix.html">
+     Solving systems of linear equations using the inverse matrix
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.3_Cramers_rule.html">
+     Cramer’s rule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.4_Gaussian_elimination.html">
+     Gaussian elimination
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.5_Partial_pivoting.html">
+     Partial pivoting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.6_Gauss_Jordan_elimination.html">
+     Gauss-Jordan elimination
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.7_Consistent_and_inconsistent_systems.html">
+     Consistent, inconsistent and indeterminate systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.8_Homogeneous_systems.html">
+     Homogeneous systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../2_Systems_of_Linear_Equations/2.9_Exercises.html">
+     Systems of linear equations exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../3_Vectors/3.0_Introduction.html">
+   Vectors
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Vectors/3.1_Euclidean_space.html">
+     Euclidean space
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Vectors/3.2_Definition.html">
+     Definition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Vectors/3.3_Vector_magnitude.html">
+     Vector magnitude
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Vectors/3.4_Arithmetic_operations.html">
+     Arithmetic operations on vectors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Vectors/3.5_Vector_products.html">
+     Vector products
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Vectors/3.6_Linear_combination_of_vectors.html">
+     Linear combination of vectors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../3_Vectors/3.7_Exercises.html">
+     Vectors exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../4_Coordinate_geometry/4.0_Introduction.html">
+   Co-ordinate Geometry
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Coordinate_geometry/4.1_Points.html">
+     Points
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Coordinate_geometry/4.2_Lines.html">
+     Lines
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Coordinate_geometry/4.3_Planes.html">
+     Planes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Coordinate_geometry/4.4_Shortest_distance_problems.html">
+     Shortest distance problems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4_Coordinate_geometry/4.5_Coordinate_geometry_exercises.html">
+     Co-ordinate geometry exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../5_Vector_spaces/5.0_Introduction.html">
+   Vector spaces
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5_Vector_spaces/5.1_Defintions.html">
+     Definitions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5_Vector_spaces/5.2_Subspaces.html">
+     Subspaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5_Vector_spaces/5.3_Linear_dependence.html">
+     Linear dependence
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5_Vector_spaces/5.4_Basis.html">
+     Basis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5_Vector_spaces/5.5_Vector_spaces_exercises.html">
+     Vector spaces exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../6_Linear_transformations/6.0_Introduction.html">
+   Linear Transformations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Linear_transformations/6.1_Definition.html">
+     Definition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Linear_transformations/6.2_Composite_transformations.html">
+     Composite linear transformations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Linear_transformations/6.3_Rotation_reflection_and_scaling.html">
+     Rotation, reflection and scaling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Linear_transformations/6.4_Translation.html">
+     Translation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Linear_transformations/6.5_Exercises.html">
+     Transformations exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  7_Appendices
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_Appendices/7.1_Cheat_sheet.html">
+   Linear Algebra Cheat Sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_Appendices/7.2_Sympy.html">
+   SymPy commands
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lecture Handouts
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Matrices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8.2_Systems_handout.html">
+   Systems of Linear Equations Exercises
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8.3_Vectors_handout.html">
+   Vectors Exercises
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8.4_Co-ordinate_geometry_handout.html">
+   Co-ordinate Geometry
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8.5_Vector_spaces_handout.html">
+   Vector Spaces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8.6_Linear_transformations_handout.html">
+   Linear Transformations
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/8_Handouts/8.1_Matrices_handout.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Matrices</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="matrices">
+<h1>Matrices<a class="headerlink" href="#matrices" title="Permalink to this headline">#</a></h1>
+<p><span style="font-size:20pt;">Examples</span></p>
+<div class="full-width docutils">
+<ul class="simple">
+<li><p><strong>Dimension of a matrix: <span class="math notranslate nohighlight">\(\text{no. rows} \times \text{no. columns}\)</span></strong></p></li>
+</ul>
+<div class="seealso admonition" id="matrix-dimension-example">
+<p class="admonition-title">Example 1.1</p>
+<p>Determine the dimensions of the following matrices:</p>
+<p>  (i)   <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}\)</span>
+  (ii)   <span class="math notranslate nohighlight">\(B = \begin{pmatrix} a &amp; b \\ c &amp; d \\ e &amp; f \end{pmatrix}\)</span>
+  (iii)   <span class="math notranslate nohighlight">\(C = \begin{pmatrix} \sin(x) &amp; \ln(x) &amp; \cos(x+1) \end{pmatrix}\)</span>
+  (iv)   <span class="math notranslate nohighlight">\(D = \begin{pmatrix} 0 \end{pmatrix}\)</span></p>
+</div>
+<ul class="simple">
+<li><p><strong>Matrix indexing:</strong> <span class="math notranslate nohighlight">\(a_{ij} = \text{element in row }i\text{ and column }j\)</span></p></li>
+</ul>
+<div class="seealso admonition" id="matrix-indexing-example">
+<p class="admonition-title">Example 1.2</p>
+<p>Given the matrix
+<span class="math notranslate nohighlight">\(A = \begin{pmatrix}
+    2 &amp; 0 &amp; -3 \\
+    1 &amp; 7 &amp; 4 
+\end{pmatrix},\)</span></p>
+<p>write down the following elements:</p>
+<p>  (i)   <span class="math notranslate nohighlight">\(a_{11}\)</span>
+  (ii)   <span class="math notranslate nohighlight">\(a_{13}\)</span>
+  (iii)   <span class="math notranslate nohighlight">\([A]_{21}\)</span>
+  (iv)   <span class="math notranslate nohighlight">\(A[2,2]\)</span></p>
+</div>
+<ul class="simple">
+<li><p><strong>Matrix addition/subtraction:</strong> <span class="math notranslate nohighlight">\([A \pm B]_{ij} = a_{ij} \pm b_{ij}\)</span></p></li>
+</ul>
+<div class="seealso admonition" id="matrix-addition-example">
+<p class="admonition-title">Example 1.3</p>
+<p>Evaluate the following:</p>
+<p>  (i)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} + \begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}\)</span>
+  (ii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix} - \begin{pmatrix} 7 \\ -11 \\ -13 \end{pmatrix}\)</span>
+  (iii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 3 &amp; 5 \\ 7 &amp; 9 &amp; 11 \end{pmatrix} + \begin{pmatrix}2 &amp; 3 \\ 5 &amp; 7 \end{pmatrix}\)</span></p>
+</div>
+<ul class="simple">
+<li><p><strong>Scalar multiplication of a matrix:</strong> <span class="math notranslate nohighlight">\([kA]_{ij} = ka_{ij}\)</span></p></li>
+</ul>
+<div class="seealso admonition" id="scalar-multiplication-of-matrices-example">
+<p class="admonition-title">Example 1.4</p>
+<p>Evaluate the following:</p>
+<p>  (i)   <span class="math notranslate nohighlight">\(2 \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}\)</span>
+  (ii)   <span class="math notranslate nohighlight">\(\dfrac{1}{2} \begin{pmatrix} 0 &amp; -1 \\ 3 &amp; 2 \\ 4 &amp; -2 \end{pmatrix}\)</span>
+  (iii)   <span class="math notranslate nohighlight">\(\dfrac{1}{3} \begin{pmatrix}1 &amp; 6 &amp; 4 \\ 0 &amp; 3 &amp; -1 \end{pmatrix}\)</span>
+  (iv)   <span class="math notranslate nohighlight">\(101 \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix} - 99 \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix}\)</span></p>
+</div>
+<ul class="simple">
+<li><p><strong>Matrix multiplication:</strong> <span class="math notranslate nohighlight">\([AB]_{ij} = \displaystyle\sum_{k=1}^p a_{ik}b_{kj}\)</span> where <span class="math notranslate nohighlight">\(p\)</span> is the number of columns in <span class="math notranslate nohighlight">\(A\)</span> and the number of rows in <span class="math notranslate nohighlight">\(B\)</span></p></li>
+</ul>
+<div class="seealso admonition" id="matrix-multiplication-example">
+<p class="admonition-title">Example 1.5</p>
+<p>Given the matrices</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    A &amp;= \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix}, &amp;
+    B &amp;= \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix}, &amp;
+    C &amp;= \begin{pmatrix} 1 &amp; 1 &amp; 0 \\ 3 &amp; -2 &amp; 1 \end{pmatrix}, &amp;
+    D &amp;= \begin{pmatrix} 1 \\ 3 \end{pmatrix}.
+\end{align*}\]</div>
+<p>calculate the following (where possible):</p>
+<p>  (i)   <span class="math notranslate nohighlight">\(AB\)</span>
+  (ii)   <span class="math notranslate nohighlight">\(BC\)</span>
+  (iii)   <span class="math notranslate nohighlight">\(CD\)</span></p>
+</div>
+<div class="seealso admonition" id="matrix-exponents-example">
+<p class="admonition-title">Example 1.6</p>
+<p>Given the matrix
+<span class="math notranslate nohighlight">\(
+    A = \begin{pmatrix} 1 &amp; 0 \\ 3 &amp; 2 \end{pmatrix},
+\)</span>
+evaluate:</p>
+<p>  (i)   <span class="math notranslate nohighlight">\(A^2\)</span>
+  (ii)   <span class="math notranslate nohighlight">\(A^3\)</span>
+  (iii)   <span class="math notranslate nohighlight">\(A^5\)</span></p>
+</div>
+<ul class="simple">
+<li><p><strong>Transpose of a matrix:</strong> <span class="math notranslate nohighlight">\([A^\mathrm{T}]_{ij}=a_{ji}\)</span></p></li>
+</ul>
+<div class="seealso admonition" id="matrix-transpose-example">
+<p class="admonition-title">Example 1.7</p>
+<p>Evaluate the following:</p>
+<p>  (i)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 3 \\ 2 &amp; 4 \end{pmatrix}^\mathrm{T}\)</span>
+  (ii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 0 &amp; -2 \\ 3 &amp; -4 &amp; 1 \end{pmatrix}^\mathrm{T}\)</span>
+  (iii)   <span class="math notranslate nohighlight">\(\begin{pmatrix}2 &amp; 3 &amp; 5 \end{pmatrix}^\mathrm{T}\)</span></p>
+</div>
+<ul class="simple">
+<li><p><strong>Identity matrix:</strong> <span class="math notranslate nohighlight">\([I]_{ij} = \begin{cases} 1 &amp; i = j, \\ 0 &amp; \text{elsewhere} \end{cases}\)</span></p></li>
+</ul>
+<div class="seealso admonition" id="identity-matrix-example">
+<p class="admonition-title">Example 1.8</p>
+<p>Given the matrices <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(B = \begin{pmatrix} 1 &amp; 2 \\ 4 &amp; 3 \\ -2 &amp; 1 \end{pmatrix}\)</span> evaluate:</p>
+<p>  (i)   <span class="math notranslate nohighlight">\(IA\)</span>
+  (ii)   <span class="math notranslate nohighlight">\(AI\)</span>
+  (iii)   <span class="math notranslate nohighlight">\(IB\)</span></p>
+</div>
+<ul class="simple">
+<li><p><strong>Symmetric matrix:</strong> <span class="math notranslate nohighlight">\([A]_{ij} = [A]_{ji}\)</span></p></li>
+</ul>
+<div class="seealso admonition" id="symmetric-matrix-example">
+<p class="admonition-title">Example 1.9</p>
+<p>Which of the following matrices are symmetric matrices?</p>
+<p>  (i)   <span class="math notranslate nohighlight">\(A=\begin{pmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{pmatrix}\)</span>
+  (ii)   <span class="math notranslate nohighlight">\(B=\begin{pmatrix} 2 &amp; 0 &amp; -3 \\ 0 &amp; 5 &amp; 7 \\ -3 &amp; 7 &amp; 1 \end{pmatrix}\)</span>
+  (iii)   <span class="math notranslate nohighlight">\(C=\begin{pmatrix} 2 &amp; 4 \\ 3 &amp; 2 \end{pmatrix}\)</span></p>
+</div>
+<ul class="simple">
+<li><p><strong>Determinant of a <span class="math notranslate nohighlight">\(2\times 2\)</span> matrix:</strong> <span class="math notranslate nohighlight">\(\det\begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} = \begin{vmatrix} a &amp; b \\ c &amp; d \end{vmatrix} = ad - bc\)</span></p></li>
+</ul>
+<div class="seealso admonition" id="x2-determinant-example">
+<p class="admonition-title">Example 1.10</p>
+<p>Calculate the following determinants</p>
+<p>  (i)   <span class="math notranslate nohighlight">\(\begin{vmatrix} 5 &amp; 2 \\ 3 &amp; 4 \end{vmatrix}\)</span>
+  (ii)   <span class="math notranslate nohighlight">\(\det \begin{pmatrix} a &amp; b \\ ka &amp; kb \end{pmatrix}\)</span>
+  (iii)   <span class="math notranslate nohighlight">\(\begin{vmatrix} 5 &amp; 0 \\ 0 &amp; 2 \end{vmatrix}\)</span></p>
+</div>
+<ul class="simple">
+<li><p><strong>Minor:</strong> <span class="math notranslate nohighlight">\(M_{ij} = \)</span> the determinant of the matrix formed by omitting row <span class="math notranslate nohighlight">\(i\)</span> and column <span class="math notranslate nohighlight">\(j\)</span></p></li>
+</ul>
+<div class="seealso admonition" id="minor-example">
+<p class="admonition-title">Example 1.11</p>
+<p>Given the matrix <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \end{pmatrix},\)</span> calculate:</p>
+<p>  (i)   <span class="math notranslate nohighlight">\(M_{11}\)</span>
+  (ii)   <span class="math notranslate nohighlight">\(M_{12}\)</span>
+  (iii)   <span class="math notranslate nohighlight">\(M_{13}\)</span></p>
+</div>
+<ul class="simple">
+<li><p><strong>Cofactor:</strong> <span class="math notranslate nohighlight">\(C_{ij} = (-1)^{i+j}M_{ij}\)</span></p></li>
+<li><p><strong>Determinant of an <span class="math notranslate nohighlight">\(n\times n\)</span> matrix:</strong> <span class="math notranslate nohighlight">\(\det(A) = \displaystyle\sum_{i=1}^n a_{ik} C_{ik} = \displaystyle\sum_{j=1}^n a_{kj} C_{kj}\)</span></p></li>
+</ul>
+<div class="seealso admonition" id="nxn-determinant-example">
+<p class="admonition-title">Example 1.12</p>
+<p>Calculate the determinant of the matrix</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \begin{pmatrix} 1 &amp; 0 &amp; 4 \\ 2 &amp; 5 &amp; 6 \\ 4 &amp; 5 &amp; 2 \end{pmatrix},
+\end{align*}\]</div>
+<p>by expanding along:</p>
+<p>  (i)   row 1
+  (ii)   column 3</p>
+</div>
+<div class="seealso admonition" id="x4-determinant-example">
+<p class="admonition-title">Example 1.13</p>
+<p>Calculate the determinant of the <span class="math notranslate nohighlight">\(4\times 4\)</span> matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix} 1 &amp; -1 &amp; 4 &amp; 3 \\ 2 &amp; 0 &amp; 5 &amp; -3 \\ 1 &amp; 2 &amp; 4 &amp; 5 \\ 2 &amp; 0 &amp; -2 &amp; 4 \end{pmatrix}.\end{split}\]</div>
+</div>
+<ul class="simple">
+<li><p><strong>Inverse matrix:</strong> <span class="math notranslate nohighlight">\(A^{-1}\)</span> such that <span class="math notranslate nohighlight">\(A^{-1}A = AA^{-1} = I\)</span></p></li>
+</ul>
+<div class="seealso admonition" id="inverse-matrix-example-1">
+<p class="admonition-title">Example 1.14</p>
+<p>Given the two matrices
+<span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; 2 \end{pmatrix}\)</span> and
+<span class="math notranslate nohighlight">\(B = \begin{pmatrix} 2 &amp; -1 \\ -1 &amp; 1 \end{pmatrix},\)</span>
+show that <span class="math notranslate nohighlight">\(B\)</span> is the inverse of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</div>
+<ul class="simple">
+<li><p><strong>Adjoint of a matrix:</strong> <span class="math notranslate nohighlight">\([\operatorname{adj}(A)]_{ij} = (-1)^{i+j}M_{ij}\)</span></p></li>
+</ul>
+<div class="seealso admonition" id="adjoint-example">
+<p class="admonition-title">Example 1.15</p>
+<p>Calculate the adjoint of the following matrices:</p>
+<p>  (i)   <span class="math notranslate nohighlight">\(\begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}\)</span>
+  (ii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 5 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}\)</span>
+  (iii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 0 &amp; 3 \\ 4 &amp; -2 &amp; 1 \\ 2 &amp; 1 &amp; 3 \end{pmatrix}\)</span></p>
+</div>
+<ul class="simple">
+<li><p><strong>Adjoint-determinant formula:</strong> <span class="math notranslate nohighlight">\(A^{-1} = \dfrac{\operatorname{adj}(A)}{\det(A)}\)</span></p></li>
+</ul>
+<div class="seealso admonition" id="matrix-inverse-example-2">
+<p class="admonition-title">Example 1.16</p>
+<p>Calculate the inverses of the following matrices if they exist:</p>
+<p>  (i)   <span class="math notranslate nohighlight">\(A = \begin{pmatrix}1 &amp; 0 \\ 3 &amp; 2\end{pmatrix}\)</span>
+  (ii)   <span class="math notranslate nohighlight">\(B = \begin{pmatrix} 1 &amp; 2 &amp; 0 \\ -2 &amp; 1 &amp; 1 \\ 1 &amp; 0 &amp; 3 \end{pmatrix}\)</span>
+  (iii)   <span class="math notranslate nohighlight">\(C = \begin{pmatrix}1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \end{pmatrix}\)</span></p>
+</div>
+<div class="seealso admonition" id="matrix-algebra-example">
+<p class="admonition-title">Example 1.17</p>
+<p>Solve the following matrix equations for <span class="math notranslate nohighlight">\(X\)</span>:</p>
+<p>  (i)   <span class="math notranslate nohighlight">\(2X = A\)</span>
+  (ii)   <span class="math notranslate nohighlight">\(kX + A = I\)</span>
+  (iii)   <span class="math notranslate nohighlight">\(A(X + B) = C\)</span></p>
+</div>
+<p><span style="font-size:20pt;">Exercises</span></p>
+<div class="note admonition" id="ex1-1">
+<p class="admonition-title">Exercise 1.1</p>
+<p>Write down the <span class="math notranslate nohighlight">\(3 \times 3\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> whose entries are given by <span class="math notranslate nohighlight">\(a_{ij} = i+j.\)</span></p>
+</div>
+<div class="note admonition" id="ex1-2">
+<p class="admonition-title">Exercise 1.2</p>
+<p>Write down the <span class="math notranslate nohighlight">\(4 \times 4\)</span> matrix <span class="math notranslate nohighlight">\(B\)</span> whose entries are given by <span class="math notranslate nohighlight">\(b_{ij} = (-1)^{i+j}.\)</span></p>
+</div>
+<div class="note admonition" id="ex1-3">
+<p class="admonition-title">Exercise 1.3</p>
+<p>Write down the <span class="math notranslate nohighlight">\(4 \times 4\)</span> matrix <span class="math notranslate nohighlight">\(C\)</span> whose entries are given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    c_{ij} = 
+    \begin{cases}
+    -1, &amp; i&gt;j, \\
+    0, &amp; i=j, \\
+    1, &amp; i&lt;j. \\
+    \end{cases}
+\end{align*}\]</div>
+</div>
+<div class="note admonition" id="ex1-4">
+<p class="admonition-title">Exercise 1.4</p>
+<p>Given the matrices</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    A &amp;= \begin{pmatrix} 1 &amp; -3 \\ 4 &amp; 2 \end{pmatrix}, &amp;
+    B &amp;= \begin{pmatrix} 3 &amp; 0 \\ -1 &amp; 5 \end{pmatrix}, &amp;
+    C &amp;= \begin{pmatrix} 5 \\ 9 \end{pmatrix}, &amp;
+    D &amp;= \begin{pmatrix} 1 &amp; 1 &amp; 3 \\ 4 &amp; -2 &amp; 3 \end{pmatrix}, \\
+    E &amp;= \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 6 \\ -2 &amp; 3 \end{pmatrix} &amp;
+    F &amp;= \begin{pmatrix} 1 &amp; -2 &amp; 4 \end{pmatrix}, &amp;
+    G &amp;= \begin{pmatrix} 4 &amp; 2 &amp; 3 \\ -2 &amp; 6 &amp; 0 \\ 0 &amp; 7 &amp; 1 \end{pmatrix}, &amp;
+    H &amp;= \begin{pmatrix} 1 &amp; 0 &amp; 1 \\ 5 &amp; 2 &amp; -2 \\ 2 &amp; -3 &amp; 4 \end{pmatrix}.
+\end{align*}\]</div>
+<p>Calculate the following where possible:</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(a)   <span class="math notranslate nohighlight">\(A + B\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(b)   <span class="math notranslate nohighlight">\(B + C\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(c)   <span class="math notranslate nohighlight">\(A^\mathrm{T}\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(d)   <span class="math notranslate nohighlight">\(C^\mathrm{T}\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(e)   <span class="math notranslate nohighlight">\(D + E^\mathrm{T}\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(f)   <span class="math notranslate nohighlight">\(3B - A\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(g)   <span class="math notranslate nohighlight">\(E + F^\mathrm{T}\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(h)   <span class="math notranslate nohighlight">\((F^\mathrm{T})^\mathrm{T}\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(i)   <span class="math notranslate nohighlight">\(2(G + H)\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(j)   <span class="math notranslate nohighlight">\(A^\mathrm{T} + B^\mathrm{T}\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(k)   <span class="math notranslate nohighlight">\((A + B)^\mathrm{T}\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(l)   <span class="math notranslate nohighlight">\(-G\)</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="note admonition" id="ex1-5">
+<p class="admonition-title">Exercise 1.5</p>
+<p>Using the matrices from <a class="reference internal" href="#ex1-4"><span class="std std-ref">exercise 1.4</span></a> calculate the following where possible:</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(a)    <span class="math notranslate nohighlight">\(AB\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(b)    <span class="math notranslate nohighlight">\(BA\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(c)    <span class="math notranslate nohighlight">\(AC\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(d)    <span class="math notranslate nohighlight">\(CA\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(e)    <span class="math notranslate nohighlight">\(C^\mathrm{T}C\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(f)    <span class="math notranslate nohighlight">\(CC^\mathrm{T}\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(g)    <span class="math notranslate nohighlight">\(DE\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(h)    <span class="math notranslate nohighlight">\(GH\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(i)    <span class="math notranslate nohighlight">\(A(DE)\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(j)    <span class="math notranslate nohighlight">\((AD)E\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(k)    <span class="math notranslate nohighlight">\(A^3\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(l)    <span class="math notranslate nohighlight">\(G^4\)</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="note admonition" id="ex1-6">
+<p class="admonition-title">Exercise 1.6</p>
+<p>Using the matrices from <a class="reference internal" href="#ex1-4"><span class="std std-ref">exercise 1.4</span></a> calculate the following:</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(a)    <span class="math notranslate nohighlight">\(\det(A)\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(b)    <span class="math notranslate nohighlight">\(|B|\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(c)    <span class="math notranslate nohighlight">\(\det(3A)\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(d)    <span class="math notranslate nohighlight">\(\det(G)\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(e)    <span class="math notranslate nohighlight">\(\operatorname{adj}(B)\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(f)    <span class="math notranslate nohighlight">\(\operatorname{adj}(H)\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(g)    <span class="math notranslate nohighlight">\(A^{-1}\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(h)    <span class="math notranslate nohighlight">\(B^{-1}\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(i)    <span class="math notranslate nohighlight">\(G^{-1}\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(j)    <span class="math notranslate nohighlight">\((AB)^{-1}\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(k)    <span class="math notranslate nohighlight">\(B^{-1}A^{-1}\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-2 sd-col-xs-2 sd-col-sm-2 sd-col-md-2 sd-col-lg-2 docutils">
+<p>(l)    <span class="math notranslate nohighlight">\((DE)^{-1}\)</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="note admonition" id="ex1-7">
+<p class="admonition-title">Exercise 1.7</p>
+<p>Using <a class="reference internal" href="../1_Matrices/1.6_Determinants.html#properties-of-determinants-theorem"><span class="std std-ref">the properties of determinants</span></a> and solutions from <a class="reference internal" href="#ex1-6"><span class="std std-ref">exercise 1.6</span></a> where necessary, find the determinants for the following matrices.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-column sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<p>(a)    <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 2 \\ 2 &amp; 4 \end{pmatrix}\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<p>(b)    <span class="math notranslate nohighlight">\(\begin{pmatrix} 4 &amp; 2 \\ 1 &amp; -3 \end{pmatrix}\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<p>(c)    <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 0 \\ -1 &amp; 0 \end{pmatrix}\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<p>(d)    <span class="math notranslate nohighlight">\(\begin{pmatrix} 4 &amp; 2 &amp; 3 \\ -4 &amp; 12 &amp; 0 \\ 0 &amp; 7 &amp; 1 \end{pmatrix}\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<p>(e)    <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 2 &amp; 3 \\ -1 &amp; -2 &amp; -3 \\ 2 &amp; 4 &amp; 4 \end{pmatrix}\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<p>(f)    <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 2 &amp; 1 \\ -3 &amp; -6 &amp; 1 \\ 2 &amp; 4 &amp; 4 \end{pmatrix}\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<p>(g)    <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 2 &amp; 3 \\ -1 &amp; -2 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{pmatrix}\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<p>(h)    <span class="math notranslate nohighlight">\(\begin{pmatrix} 3 &amp; 6 \\ -1 &amp; 3 \end{pmatrix}\)</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="note admonition" id="ex1-8">
+<p class="admonition-title">Exercise 1.8</p>
+<p>Prove that adding a multiple of a row or column to another row or column does not change the value of the determinant for a <span class="math notranslate nohighlight">\(2\times 2\)</span> matrix.</p>
+</div>
+<div class="admonition-exercise-1-9 admonition">
+<p class="admonition-title">Exercise 1.9</p>
+<p>Given the matrices</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    A &amp;= \begin{pmatrix} 1 &amp; -3 \\ 4 &amp; 2 \end{pmatrix}, &amp;
+    B &amp;= \begin{pmatrix} 3 &amp; 0 \\ -1 &amp; 5 \end{pmatrix},
+\end{align*}\]</div>
+<p>solve the following equations for <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-column sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<p>(a)   <span class="math notranslate nohighlight">\(5X = A\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<p>(b)   <span class="math notranslate nohighlight">\(X + A = I\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<p>(c)   <span class="math notranslate nohighlight">\(2X - B = A\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<p>(d)   <span class="math notranslate nohighlight">\(XA = I\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<p>(e)   <span class="math notranslate nohighlight">\(BX = A\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<p>(f)   <span class="math notranslate nohighlight">\(A^2 = X\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<p>(g)   <span class="math notranslate nohighlight">\(X^2 = B\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
+<p>(h)   <span class="math notranslate nohighlight">\((X + A)B = I\)</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="note admonition" id="ex1-10">
+<p class="admonition-title">Exercise 1.10</p>
+<p>Use Python and SymPy to calculate the solutions to exercises <a class="reference internal" href="#ex1-4"><span class="std std-ref">1.4</span></a> to <a class="reference internal" href="#ex1-6"><span class="std std-ref">1.6</span></a>.</p>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./8_Handouts"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../7_Appendices/7.2_Sympy.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">SymPy commands</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="8.2_Systems_handout.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Systems of Linear Equations Exercises</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Dr Jon Shiach<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
