@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Co-ordinate Geometry &#8212; Linear Algebra Lecture Notes</title>
+    <title>Co-ordinate Geometry Exercises &#8212; Linear Algebra Lecture Notes</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -425,7 +425,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  7_Appendices
+  Appendices
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -463,7 +463,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Co-ordinate Geometry
+   Co-ordinate Geometry Exercises
   </a>
  </li>
  <li class="toctree-l1">
@@ -609,7 +609,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Co-ordinate Geometry</h1>
+                <h1>Co-ordinate Geometry Exercises</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -621,80 +621,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="co-ordinate-geometry">
-<h1>Co-ordinate Geometry<a class="headerlink" href="#co-ordinate-geometry" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="co-ordinate-geometry-exercises">
+<h1>Co-ordinate Geometry Exercises<a class="headerlink" href="#co-ordinate-geometry-exercises" title="Permalink to this headline">#</a></h1>
 <div class="full-width docutils">
-<p><span style="font-size:20pt;">Examples</span></p>
-<ul class="simple">
-<li><p><strong>Vector equation of a line:</strong> <span class="math notranslate nohighlight">\(Q = P + t\mathbf{d}\)</span> where <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> are points on the line, <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> is the direction of the line and <span class="math notranslate nohighlight">\(t\in \mathbb{R}\)</span> is a parameter</p></li>
-</ul>
-<div class="seealso admonition" id="line-vector-equation-example">
-<p class="admonition-title">Example 4.1</p>
-<p>Given a point <span class="math notranslate nohighlight">\(P=(1,0,2,1,4)\)</span> and a direction vector <span class="math notranslate nohighlight">\(\mathbf{d} = (1,-1,0,-1,1)\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^5,\)</span> find the equation of the line <span class="math notranslate nohighlight">\(\ell\)</span> which goes through <span class="math notranslate nohighlight">\(P\)</span> in the direction of <span class="math notranslate nohighlight">\(\mathbf{d}\)</span>.</p>
-</div>
-<ul class="simple">
-<li><p><strong>Intersection of two lines:</strong> the two lines <span class="math notranslate nohighlight">\(\ell_1: P_1 + t_1\mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2: P_2 + t_2\mathbf{d}_2\)</span> intersect  if there exists values of <span class="math notranslate nohighlight">\(t_1\)</span> and <span class="math notranslate nohighlight">\(t_2\)</span> such that <span class="math notranslate nohighlight">\(P_1 + t_1 \mathbf{d}_1 = P_2 + t_2 \mathbf{d}_2\)</span>.</p></li>
-</ul>
-<div class="seealso admonition" id="line-line-intersection-example">
-<p class="admonition-title">Example 4.2</p>
-<p>Three lines in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> are defined as <span class="math notranslate nohighlight">\(\ell_1: (1 + t, -3 + 2t, t)\)</span>, <span class="math notranslate nohighlight">\(\ell_2: (6 - t, -5 - 2t, t - 1)\)</span> and <span class="math notranslate nohighlight">\(\ell_3: (6 + 2t, -11 + 2t, -2 - t)\)</span>. Determine the points of intersection between the three lines (if possible).</p>
-</div>
-<ul class="simple">
-<li><p><strong>Parallel lines:</strong> the two lines <span class="math notranslate nohighlight">\(\ell_1: P_1 + t\mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2: P_2 + t\mathbf{d}_2\)</span> are parallel if there exsists a value <span class="math notranslate nohighlight">\(k\)</span> such that <span class="math notranslate nohighlight">\(\mathbf{d}_1 = k\mathbf{d}_2\)</span></p></li>
-</ul>
-<div class="seealso admonition" id="parallel-lines-example">
-<p class="admonition-title">Example 4.3</p>
-<p>Let <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> be two lines in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> be defined by <span class="math notranslate nohighlight">\(\ell_1 = \{(x,y,z) : z = x+1, y=0\}\)</span> and <span class="math notranslate nohighlight">\(\ell_2 = \{(x,y,z) : z = -x-1, y=3\}\)</span>.</p>
-<p>  (i)   Write equations for <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> in vector form;</p>
-<p>  (ii)   show that these lines are not parallel in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
-</div>
-<ul class="simple">
-<li><p><strong>Skew lines:</strong> if two lines do not intersect and are not parallel then they are skew.</p></li>
-</ul>
-<div class="seealso admonition" id="skew-lines-example">
-<p class="admonition-title">Example 4.4</p>
-<p>Show that the lines <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> from <a class="reference internal" href="#parallel-lines-example"><span class="std std-ref">example 4.3</span></a> are skew lines.</p>
-</div>
-<ul class="simple">
-<li><p><strong>Perpendicular lines:</strong> two lines <span class="math notranslate nohighlight">\(\ell_1: P_1 + t\mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2: P_2 + t\mathbf{d}_2\)</span> are perpendicular if the angle between <span class="math notranslate nohighlight">\(\mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}_2\)</span> is a right-angle.</p></li>
-</ul>
-<div class="seealso admonition" id="perpendicular-lines-example">
-<p class="admonition-title">Example 4.5</p>
-<p>  (i)   Determine whether the two lines from <a class="reference internal" href="#parallel-lines-example"><span class="std std-ref">example 4.3</span></a> are perpendicular.</p>
-<p>  (ii)   Find the equation of a line <span class="math notranslate nohighlight">\(\ell_2\)</span> which is perpendicular to <span class="math notranslate nohighlight">\(\ell_1 = \{(t,-t,1+t) : t \in \mathbb{R} \}\)</span> at the point <span class="math notranslate nohighlight">\(P = (-1,1,0).\)</span></p>
-</div>
-<ul class="simple">
-<li><p><strong>Normal vector to a plane:</strong> a vector perpendicular to the plane</p></li>
-<li><p><strong>Point normal equation of a plane:</strong> the equation of a plane which passes through the point <span class="math notranslate nohighlight">\((x_0, y_0, z_0)\)</span> with a normal vector <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> is <span class="math notranslate nohighlight">\(\mathbf{n} \cdot (x - x_0, y - y_0, z - z_0)\)</span></p></li>
-</ul>
-<div class="seealso admonition">
-<p class="admonition-title">Example 4.6</p>
-<p>A plane <span class="math notranslate nohighlight">\(p\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> passes the three points <span class="math notranslate nohighlight">\(P_1 = (1, 0, 0)\)</span>, <span class="math notranslate nohighlight">\(P_2 = (1, 0, -1)\)</span> and <span class="math notranslate nohighlight">\(P_3 = (2, 1, 3)\)</span></p>
-<p>  (i)   Find the point normal definition of the plane;</p>
-<p>  (ii)   Do the points <span class="math notranslate nohighlight">\(P_4 = (2, 3, 1)\)</span> and <span class="math notranslate nohighlight">\(P_5 = (3, 2, 4)\)</span> lie on <span class="math notranslate nohighlight">\(p\)</span>?</p>
-</div>
-<ul class="simple">
-<li><p><strong>Intersection of planes:</strong> Two or more planes in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> can intersect at a single point, as an infinite number of points on a line, an infinite number of points on a plane or not intersect at all.</p></li>
-</ul>
-<div class="seealso admonition" id="intersecting-planes-example">
-<p class="admonition-title">Example 4.7</p>
-<p>Two non-parallel planes in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> are given by <span class="math notranslate nohighlight">\(p:3x-4y+z-5 = 0\)</span> and <span class="math notranslate nohighlight">\(r:x+ y - z -2 = 0\)</span> respectively. Find the intersection of these two planes</p>
-</div>
-<ul class="simple">
-<li><p><strong>Shortest distance between a point and a line:</strong> the shortest distance between the point <span class="math notranslate nohighlight">\(Q\)</span> and a line that passes through the point <span class="math notranslate nohighlight">\(P\)</span> in the direction <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> is <span class="math notranslate nohighlight">\(|Q - R|\)</span> where <span class="math notranslate nohighlight">\(R = P + t\mathbf{d}\)</span> and <span class="math notranslate nohighlight">\(t = \frac{(Q - P) \cdot \mathbf{d}}{ \mathbf{d} \cdot \mathbf{d}}\)</span></p></li>
-</ul>
-<div class="seealso admonition" id="point-line-distance-example">
-<p class="admonition-title">Example 4.8</p>
-<p>Find the shortest distance between the point <span class="math notranslate nohighlight">\(Q = (2,2,2)\)</span> and the line <span class="math notranslate nohighlight">\(\ell : (t,t-2, t+1)\)</span>.</p>
-</div>
-<ul class="simple">
-<li><p><strong>Shortest distance between two skew lines:</strong> the shortest distance between two skew lines <span class="math notranslate nohighlight">\(\ell_1: P_1 + t\mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2: P_2 + t\mathbf{d}_2\)</span> is <span class="math notranslate nohighlight">\(d = (P_2 - P_1) \cdot \hat{\mathbf{n}}\)</span> where <span class="math notranslate nohighlight">\(\mathbf{n} = \mathbf{d}_1 \times \mathbf{d}_2\)</span>.</p></li>
-</ul>
-<div class="seealso admonition" id="line-line-distance-example">
-<p class="admonition-title">Example 4.9</p>
-<p>Find the shortest distance between the two lines <span class="math notranslate nohighlight">\(\ell_1 = \{(t,1+4t,3 + 2t):t\in\mathbb{R}\}\)</span> and <span class="math notranslate nohighlight">\(\ell_2 = \{(1,1+2t,3 + 4t):t\in\mathbb{R}\}\)</span>.</p>
-</div>
-<p><span style="font-size:20pt;">Exercises</span></p>
 <div class="admonition-exercise-4-1 admonition">
 <p class="admonition-title">Exercise 4.1</p>
 <p>The points <span class="math notranslate nohighlight">\(A, B, C, D\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> have the following position vectors</p>
