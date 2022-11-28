@@ -1890,7 +1890,7 @@ matrix_inverse_solve(A, b)
 print("`````")
 
 
-# In[2]:
+# In[ ]:
 
 
 def cramers_rule(A, b):
@@ -1939,7 +1939,7 @@ cramers_rule(A, b)
 print("`````")
 
 
-# In[3]:
+# In[ ]:
 
 
 def print_augmented_matrix(A):
@@ -2103,7 +2103,7 @@ print(r"````")
 print("`````")
 
 
-# In[4]:
+# In[ ]:
 
 
 def gelimpp(A):
@@ -2226,7 +2226,7 @@ Ab = gelimpp(Ab)
 print("`````")
 
 
-# In[5]:
+# In[ ]:
 
 
 def gjelim(A):
@@ -2347,7 +2347,7 @@ Ab = gjelim(Ab)
 print("`````")
 
 
-# In[6]:
+# In[ ]:
 
 
 def print_augmented_matrix(A):
@@ -2473,7 +2473,7 @@ AI = gjelim_inverse(A)
 print("`````")
 
 
-# In[7]:
+# In[ ]:
 
 
 def rank(A):
@@ -2554,7 +2554,7 @@ rank(Ab)
 print("`````")
 
 
-# In[8]:
+# In[ ]:
 
 
 print("`````{admonition} Exercise 2.8")

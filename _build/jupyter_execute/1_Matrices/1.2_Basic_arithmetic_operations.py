@@ -123,7 +123,7 @@ print(f"B = C: {BequalC}")
 # 
 # The Python command for calculating the sum of two matrices `A` and `B` is simply `A + B`. The Python code below calculates the solution to question &emsp; (i) from [example 1.3](matrix-addition-example).
 
-# In[2]:
+# In[4]:
 
 
 A = sym.Matrix([[1, 2], [3, 4]])
@@ -208,7 +208,7 @@ display(AplusB)
 # 
 # The command for multiplying a SymPy matrix `A` by a scalar `k` is simply `k * A`. The following code calculates the solutions [example 1.4](scalar-multiplication-of-matrices-example).
 
-# In[3]:
+# In[6]:
 
 
 # (i)

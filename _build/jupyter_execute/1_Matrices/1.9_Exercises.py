@@ -1027,7 +1027,7 @@ print("(l)")
 display(minusG)
 
 
-# In[2]:
+# In[4]:
 
 
 # Exercise 1.5
@@ -1089,7 +1089,7 @@ print("(l)")
 display(G4)
 
 
-# In[3]:
+# In[5]:
 
 
 # Exercise 1.6

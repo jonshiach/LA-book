@@ -1,70 +1,70 @@
 {
   "2_Systems_of_Linear_Equations/2.7_Consistent_and_inconsistent_systems": {
-    "inconsistent_system_plot": {
-      "output_type": "display_data",
-      "metadata": {
-        "scrapbook": {
-          "name": "inconsistent_system_plot",
-          "mime_prefix": "application/papermill.record/"
-        },
-        "filenames": {
-          "image/png": "/Users/55093290/Library/CloudStorage/OneDrive-MMU/Documents/2022_2023/Linear Algebra and Programming Skills/LA-book/_build/jupyter_execute/2_Systems_of_Linear_Equations/2.7_Consistent_and_inconsistent_systems_2_3.png"
-        }
-      },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 576x432 with 1 Axes>",
-        "application/papermill.record/image/png": null
-      }
-    },
     "indeterminate_system_plot": {
-      "output_type": "display_data",
+      "data": {
+        "application/papermill.record/image/png": null,
+        "application/papermill.record/text/plain": "<Figure size 576x432 with 1 Axes>"
+      },
       "metadata": {
         "scrapbook": {
-          "name": "indeterminate_system_plot",
-          "mime_prefix": "application/papermill.record/"
+          "mime_prefix": "application/papermill.record/",
+          "name": "indeterminate_system_plot"
         },
         "filenames": {
           "image/png": "/Users/55093290/Library/CloudStorage/OneDrive-MMU/Documents/2022_2023/Linear Algebra and Programming Skills/LA-book/_build/jupyter_execute/2_Systems_of_Linear_Equations/2.7_Consistent_and_inconsistent_systems_2_5.png"
         }
       },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 576x432 with 1 Axes>",
-        "application/papermill.record/image/png": null
-      }
+      "output_type": "display_data"
     },
     "consistent_system_plot": {
-      "output_type": "display_data",
+      "data": {
+        "application/papermill.record/image/png": null,
+        "application/papermill.record/text/plain": "<Figure size 576x432 with 1 Axes>"
+      },
       "metadata": {
         "scrapbook": {
-          "name": "consistent_system_plot",
-          "mime_prefix": "application/papermill.record/"
+          "mime_prefix": "application/papermill.record/",
+          "name": "consistent_system_plot"
         },
         "filenames": {
           "image/png": "/Users/55093290/Library/CloudStorage/OneDrive-MMU/Documents/2022_2023/Linear Algebra and Programming Skills/LA-book/_build/jupyter_execute/2_Systems_of_Linear_Equations/2.7_Consistent_and_inconsistent_systems_2_1.png"
         }
       },
+      "output_type": "display_data"
+    },
+    "inconsistent_system_plot": {
       "data": {
-        "application/papermill.record/text/plain": "<Figure size 576x432 with 1 Axes>",
-        "application/papermill.record/image/png": null
-      }
+        "application/papermill.record/image/png": null,
+        "application/papermill.record/text/plain": "<Figure size 576x432 with 1 Axes>"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "application/papermill.record/",
+          "name": "inconsistent_system_plot"
+        },
+        "filenames": {
+          "image/png": "/Users/55093290/Library/CloudStorage/OneDrive-MMU/Documents/2022_2023/Linear Algebra and Programming Skills/LA-book/_build/jupyter_execute/2_Systems_of_Linear_Equations/2.7_Consistent_and_inconsistent_systems_2_3.png"
+        }
+      },
+      "output_type": "display_data"
     }
   },
   "6_Linear_transformations/6.5_Exercises": {
     "ex6.7_plot": {
-      "output_type": "display_data",
+      "data": {
+        "application/papermill.record/image/png": null,
+        "application/papermill.record/text/plain": "<Figure size 576x432 with 1 Axes>"
+      },
       "metadata": {
         "scrapbook": {
-          "name": "ex6.7_plot",
-          "mime_prefix": "application/papermill.record/"
+          "mime_prefix": "application/papermill.record/",
+          "name": "ex6.7_plot"
         },
         "filenames": {
           "image/png": "/Users/55093290/Library/CloudStorage/OneDrive-MMU/Documents/2022_2023/Linear Algebra and Programming Skills/LA-book/_build/jupyter_execute/6_Linear_transformations/6.5_Exercises_6_1.png"
         }
       },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 576x432 with 1 Axes>",
-        "application/papermill.record/image/png": null
-      }
+      "output_type": "display_data"
     }
   }
 }

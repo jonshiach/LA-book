@@ -356,7 +356,7 @@
 # The scaling of the vector $\mathbf{u}$ by the scaling vector $\mathbf{s}$.
 # ```
 # 
-# The scaling of a vector $\mathbf{u} = (u_1, u_2, \ldots, u_n) \in \mathbb{R}^n$ by a scaling vector $\mathbf{s} = (s_1, s_2, \ldots, s_n)$ is achieved simply by multiplying the corresponding elements in $\mathbf{u}$ and $\mathbf{s}$.
+# The scaling of a vector $\mathbf{u} = (u_1, u_2, \ldots, u_n) \in \mathbb{R}^n$ by a scaling vector $\mathbf{s} = (s_1, s_2, \ldots, s_n)$ is achieved by multiplying the corresponding elements in $\mathbf{u}$ and $\mathbf{s}$.
 # 
 # ````{admonition} Theorem: Scaling transformation
 # :class: important

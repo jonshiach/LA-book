@@ -151,7 +151,7 @@ display(zeros_3x1)
 # 
 # The Python code for generating an $n \times n$ identity matrix is `sym.eye(n)`. The code below calculates the solution to [example 1.8](identity-matrix-example).
 
-# In[2]:
+# In[4]:
 
 
 import sympy as sym
@@ -233,7 +233,7 @@ display(IB)
 # 
 # The code below calculates the solution to [example 1.9](symmetric-matrix-example).
 
-# In[3]:
+# In[6]:
 
 
 # (i)

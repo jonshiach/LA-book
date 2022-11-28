@@ -76,7 +76,7 @@ display(Atranspose)
 
 # ### Zero matrix
 
-# In[9]:
+# In[10]:
 
 
 zero = sym.zeros(2, 3)
@@ -85,7 +85,7 @@ display(zero)
 
 # ### Identity matrix
 
-# In[10]:
+# In[11]:
 
 
 I = sym.eye(3)
@@ -94,7 +94,7 @@ display(I)
 
 # ### Determinant of a matrix
 
-# In[11]:
+# In[12]:
 
 
 detA = A.det()
@@ -103,7 +103,7 @@ print(detA)
 
 # ### Adjoint matrix
 
-# In[12]:
+# In[13]:
 
 
 adjA = A.adjugate()
@@ -112,7 +112,7 @@ display(adjA)
 
 # ### Inverse matrix
 
-# In[13]:
+# In[14]:
 
 
 invA = A.inv()
@@ -123,14 +123,14 @@ display(invA)
 # 
 # ## Systems of linear equations
 
-# In[14]:
+# In[15]:
 
 
 A = sym.Matrix([[1, 2], [3, 4]])
 display(A)
 
 
-# In[15]:
+# In[16]:
 
 
 b = sym.Matrix([5, 11])
@@ -139,7 +139,7 @@ display(b)
 
 # ### Solution using matrix inverse
 
-# In[16]:
+# In[17]:
 
 
 x = A.inv() * b
@@ -148,7 +148,7 @@ display(x)
 
 # ### Forming an augmented matrix
 
-# In[17]:
+# In[18]:
 
 
 Ab = A.row_join(b)
@@ -157,7 +157,7 @@ display(Ab)
 
 # ### Row reduction
 
-# In[18]:
+# In[19]:
 
 
 Abrref = Ab.rref()[0]
@@ -166,7 +166,7 @@ display(Abrref)
 
 # ### Rank of a matrix
 
-# In[19]:
+# In[20]:
 
 
 rankA = A.rank()
@@ -177,14 +177,14 @@ print(rankA)
 # 
 # ## Vectors
 
-# In[20]:
+# In[21]:
 
 
 a = sym.Matrix([1, 2, 3])
 display(a)
 
 
-# In[21]:
+# In[22]:
 
 
 b = sym.Matrix([4, 5, 6])
@@ -193,7 +193,7 @@ display(b)
 
 # ### Vector magnitude
 
-# In[22]:
+# In[23]:
 
 
 anorm = a.norm()
@@ -202,7 +202,7 @@ display(anorm)
 
 # ### Unit vector
 
-# In[23]:
+# In[24]:
 
 
 ahat = a / a.norm()
@@ -211,7 +211,7 @@ display(ahat)
 
 # ### Dot product
 
-# In[24]:
+# In[25]:
 
 
 adotb = a.dot(b)
@@ -220,7 +220,7 @@ print(adotb)
 
 # ### Cross product
 
-# In[25]:
+# In[26]:
 
 
 acrossb = a.cross(b)

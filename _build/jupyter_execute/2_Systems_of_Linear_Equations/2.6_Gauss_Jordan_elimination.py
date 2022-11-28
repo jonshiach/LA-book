@@ -330,7 +330,7 @@ display(Ab)
 # 
 # The Python code below uses Gauss-Jordan elimination to calculate the inverse of the matrix from [example 2.7](gje-inverse-example).
 
-# In[3]:
+# In[5]:
 
 
 # Define matrix A

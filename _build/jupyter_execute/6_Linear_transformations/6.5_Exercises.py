@@ -220,9 +220,9 @@
 # $T: \mathbb{R}^3 \to \mathbb{R}^3$ is a linear transformation such that
 # 
 # \begin{align*}
-#     T\begin{pmatrix} 1 \\ 2 \\ 1 \end{pmatrix} &= \begin{pmatrix} 4 \\ 3 \\ 11 \end{pmatrix}, &
-#     T\begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} &= \begin{pmatrix} 1 \\ 0 \\ 4 \end{pmatrix}, &
-#     T\begin{pmatrix} -2 \\ -1 \\ 1 \end{pmatrix} &= \begin{pmatrix} 1 \\ 3 \\-1 \end{pmatrix}.
+#     T\begin{pmatrix} 1 \\ -1 \\ 0 \end{pmatrix} &= \begin{pmatrix} 1 \\ -2 \\ -4 \end{pmatrix}, &
+#     T\begin{pmatrix} 0 \\ 1 \\ 2 \end{pmatrix} &= \begin{pmatrix} 6 \\ 5 \\ 10 \end{pmatrix}, &
+#     T\begin{pmatrix} -1 \\ 1 \\ 1 \end{pmatrix} &= \begin{pmatrix} 2 \\ 4 \\ 7 \end{pmatrix}.
 # \end{align*}
 # 
 # Find the transformation matrix for $T$.
@@ -237,48 +237,41 @@
 # 
 # \begin{align*}
 #     & \left( \begin{array}{rrr|rrr}
-#         1 & 0 & 3 & 1 & 0 & 0 \\
-#         -1 & 1 & 2 & 0 & 1 & 0 \\
-#         0 & 4 & 3 & 0 & 0 & 1 
+#        1 & 0 & -1 & 1 & 0 & 0 \\
+#        -1 & 1 & 1 & 0 & 1 & 0 \\
+#        0 & 2 & 1 & 0 & 0 & 1
 #     \end{array} \right)
-#     \begin{array}{l} \\ R_2 + R_1 \\ \phantom{x} \end{array} \\ \\
-#     \longrightarrow \quad &
-#     \left( \begin{array}{rrr|rrr}
-#         1 & 0 & 3 & 1 & 0 & 0 \\
-#         0 & 1 & 5 & 1 & 1 & 0 \\
-#         0 & 4 & 3 & 0 & 0 & 1 
+#     \begin{array}{l} \\ R_2 + R_1 \\ \phantom{x} \end{array} \\ \\ 
+#     \longrightarrow \qquad 
+#     & \left( \begin{array}{rrr|rrr}
+#        1 & 0 & -1 & 1 & 0 & 0 \\
+#        0 & 1 & 0 & 1 & 1 & 0 \\
+#        0 & 2 & 1 & 0 & 0 & 1
 #     \end{array} \right)
-#     \begin{array}{l} \\ \\ R_3 - 4R_2 \end{array} \\ \\
-#     \longrightarrow \quad &
-#     \left( \begin{array}{rrr|rrr}
-#         1 & 0 & 3 & 1 & 0 & 0 \\
-#         0 & 1 & 5 & 1 & 1 & 0 \\
-#         0 & 0 & -17 & -4 & -4 & 1 
+#     \begin{array}{l} \\ \\ R_3 - 2 R_2 \end{array} \\ \\ 
+#     \longrightarrow \qquad  
+#     & \left( \begin{array}{rrr|rrr}
+#        1 & 0 & -1 & 1 & 0 & 0 \\
+#        0 & 1 & 0 & 1 & 1 & 0 \\
+#        0 & 0 & 1 & -2 & -2 & 1
 #     \end{array} \right)
-#     \begin{array}{l} \\ \\ -\frac{1}{17}R_3 \end{array} \\ \\
-#     \longrightarrow \quad &
-#     \left( \begin{array}{rrr|rrr}
-#         1 & 0 & 3 & 1 & 0 & 0 \\
-#         0 & 1 & 5 & 1 & 1 & 0 \\
-#         0 & 0 & 1 & \frac{4}{17} & \frac{4}{17} & -\frac{1}{17} 
-#     \end{array} \right)
-#     \begin{array}{l} R_1 - 3 R_3 \\ R_2 - 5 R_3 \\ \phantom{x} \end{array} \\ \\
-#     \longrightarrow \quad &
-#     \left( \begin{array}{rrr|rrr}
-#         1 & 0 & 0 & \frac{5}{17} & -\frac{12}{17} & \frac{3}{17} \\
-#         0 & 1 & 0 & -\frac{3}{17} & -\frac{3}{17} & \frac{5}{17} \\
-#         0 & 0 & 1 & \frac{4}{17} & \frac{4}{17} & -\frac{1}{17} 
+#     \begin{array}{l} R_1 + R_3 \\ \phantom{x} \\ \phantom{x} \end{array} \\ \\ 
+#     \longrightarrow \qquad
+#     & \left( \begin{array}{rrr|rrr}
+#        1 & 0 & 0 & -1 & -2 & 1 \\
+#        0 & 1 & 0 & 1 & 1 & 0 \\
+#        0 & 0 & 1 & -2 & -2 & 1
 #     \end{array} \right)
 # \end{align*}
 # 
-# So $(\mathbf{u}_1, \mathbf{u}_2, \mathbf{u}_3)^{-1} = \begin{pmatrix} \frac{5}{17} & -\frac{12}{17} & \frac{3}{17} \\ -\frac{3}{17} & -\frac{3}{17} & \frac{5}{17} \\ \frac{4}{17} & \frac{4}{17} & -\frac{1}{17} \end{pmatrix}$ and
+# So $(\mathbf{u}_1, \mathbf{u}_2, \mathbf{u}_3)^{-1} = \begin{pmatrix}  -1 & -2 & 1 \\ 1 & 1 & 0 \\ -2 & -2 & 1 \end{pmatrix}$ and
 # 
 # \begin{align*}
-#     A &= \begin{pmatrix} 4 & 1 & 1 \\ 3 & 0 & 3 \\ 11 & 4 & -1 \end{pmatrix}
+#     A &= \begin{pmatrix} 1 & 6 & 2 \\ -2 & 5 & 4 \\ -4 & 10 & 7 \end{pmatrix}
 #     \begin{pmatrix} 
-#         \frac{5}{17} & -\frac{12}{17} & \frac{3}{17} \\
-#         -\frac{3}{17} & -\frac{3}{17} & \frac{5}{17} \\
-#         \frac{4}{17} & \frac{4}{17} & -\frac{1}{17} 
+#         -1 & -2 & 1 \\
+#         1 & 1 & 0 \\
+#         -2 & -2 & 1
 #     \end{pmatrix}
 #     = \begin{pmatrix} 1 & 0 & 3 \\ -1 & 1 & 2 \\ 0 & 4 & 3 \end{pmatrix}.
 # \end{align*}
@@ -288,8 +281,8 @@
 # \begin{align*}
 #     T\begin{pmatrix} 1 \\ 2 \\ 1 \end{pmatrix} &=
 #     \begin{pmatrix} 1 & 0 & 3 \\ -1 & 1 & 2 \\ 0 & 4 & 3 \end{pmatrix}
-#     \begin{pmatrix}1 \\ 2 \\ 1 \end{pmatrix} 
-#     = \begin{pmatrix} 4 \\ 3 \\ 11 \end{pmatrix} \quad \checkmark
+#     \begin{pmatrix}1 \\ -1 \\ 0 \end{pmatrix} 
+#     = \begin{pmatrix} 1 \\ -2 \\ - 4 \end{pmatrix} \quad \checkmark
 # \end{align*}
 # 
 # ````
@@ -538,7 +531,7 @@ P1 = A * P
 pprint(P1.evalf(5))
 
 
-# In[4]:
+# In[6]:
 
 
 import numpy as np
