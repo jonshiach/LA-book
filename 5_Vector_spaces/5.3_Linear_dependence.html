@@ -425,7 +425,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Appendices
+  7_Appendices
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -588,17 +588,17 @@ title="Print to PDF"
 <span id="linear-dependence-section"></span><h1>Linear dependence<a class="headerlink" href="#linear-dependence" title="Permalink to this headline">#</a></h1>
 <div class="note admonition" id="linear-combination-definition">
 <p class="admonition-title">Definition: Linear combination</p>
-<p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over a field <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(W\)</span> a non-empty subset of <span class="math notranslate nohighlight">\(V\)</span>. We say that <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> is a <strong>linear combination of elements in <span class="math notranslate nohighlight">\(W\)</span></strong> if there exist <span class="math notranslate nohighlight">\(\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n \in W\)</span> and <span class="math notranslate nohighlight">\(\alpha_1, \alpha_2, \ldots, \alpha_n \in F\)</span> such that</p>
+<p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over a field <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(W\)</span> a non-empty subset of <span class="math notranslate nohighlight">\(V\)</span>. We say that <span class="math notranslate nohighlight">\(u \in V\)</span> is a <strong>linear combination of elements in <span class="math notranslate nohighlight">\(W\)</span></strong> if there exist <span class="math notranslate nohighlight">\(v_1, v_2, \ldots, v_n \in W\)</span> and <span class="math notranslate nohighlight">\(\alpha_1, \alpha_2, \ldots, \alpha_n \in F\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-linear-combination-equation">
-<span class="eqno">(20)<a class="headerlink" href="#equation-linear-combination-equation" title="Permalink to this equation">#</a></span>\[\mathbf{u} = \sum_{i = 1}^n \alpha_i \mathbf{v}_i = \alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 + \cdots + \alpha_n \mathbf{v}_n.\]</div>
+<span class="eqno">(20)<a class="headerlink" href="#equation-linear-combination-equation" title="Permalink to this equation">#</a></span>\[u = \sum_{i = 1}^n \alpha_i v_i = \alpha_1 v_1 + \alpha_2 v_2 + \ldots + \alpha_n v_n.\]</div>
 </div>
 <p>We next introduce the notion of linear independence.</p>
 <div class="note admonition" id="linear-dependence-definition">
 <p class="admonition-title">Definition: Linear dependence</p>
-<p>Let <span class="math notranslate nohighlight">\(\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n \in V\)</span> and consider the equation</p>
+<p>Let <span class="math notranslate nohighlight">\(v_1, v_2, \ldots, v_n \in V\)</span> and consider the equation</p>
 <div class="math notranslate nohighlight" id="equation-linear-dependence-equation">
-<span class="eqno">(21)<a class="headerlink" href="#equation-linear-dependence-equation" title="Permalink to this equation">#</a></span>\[\alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 + \cdots + \alpha_n \mathbf{v}_n = \mathbf{0},\]</div>
-<p>where <span class="math notranslate nohighlight">\(\alpha \in F\)</span>. The vectors <span class="math notranslate nohighlight">\(\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n \in V\)</span> are said to be <strong>linearly independent over <span class="math notranslate nohighlight">\(F\)</span></strong> if the only solution to the above equation is when all of the <span class="math notranslate nohighlight">\(\alpha_i\)</span> values are zero (this solution is called the trivial solution). If the above equation is satisfied where <span class="math notranslate nohighlight">\(\alpha_i \neq 0\)</span> for <span class="math notranslate nohighlight">\(1 \leq i \leq n\)</span>, then the vectors <span class="math notranslate nohighlight">\(\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n \in V\)</span> are said to be <strong>linearly dependent over <span class="math notranslate nohighlight">\(F\)</span></strong>.</p>
+<span class="eqno">(21)<a class="headerlink" href="#equation-linear-dependence-equation" title="Permalink to this equation">#</a></span>\[\alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n v_n = \mathbf{0},\]</div>
+<p>where <span class="math notranslate nohighlight">\(\alpha \in F\)</span>. The vectors <span class="math notranslate nohighlight">\(v_1, v_2, \ldots, v_n \in V\)</span> are said to be <strong>linearly independent over <span class="math notranslate nohighlight">\(F\)</span></strong> if the only solution to the above equation is when all of the <span class="math notranslate nohighlight">\(\alpha_i\)</span> values are zero (this solution is called the trivial solution). If the above equation is satisfied where <span class="math notranslate nohighlight">\(\alpha_i \neq 0\)</span> for <span class="math notranslate nohighlight">\(1 \leq i \leq n\)</span>, then the vectors <span class="math notranslate nohighlight">\(v_1, v_2, \ldots, v_n \in V\)</span> are said to be <strong>linearly dependent over <span class="math notranslate nohighlight">\(F\)</span></strong>.</p>
 </div>
 <p>Another way to think about linear independence is that a set of vectors is linearly independent if none of the vectors in the set can be represented as a linear combination of the other vectors in the same set. For example, are the matrices</p>
 <div class="amsmath math notranslate nohighlight">
@@ -697,7 +697,7 @@ Solution<div class="sd-summary-down docutils">
     \alpha_1 (x^2 + x + 1) + \alpha_2 (x - 1) + \alpha_3 (x^2 - 1) &amp;= 0 \\
     (\alpha_1 + \alpha_3)x^2 + (\alpha_1 + \alpha_2)x + (\alpha_1 - \alpha_2 - \alpha_3)x^0 &amp;= 0.
 \end{align*}\]</div>
-<p class="sd-card-text">For a polynomial to be equal to zero, the coefficients of <span class="math notranslate nohighlight">\(x^2\)</span>, <span class="math notranslate nohighlight">\(x^1\)</span> and <span class="math notranslate nohighlight">\(x^0\)</span>must all be equal to zero, therefore</p>
+<p class="sd-card-text">For a polynomial to be equal to zero, the coefficients of <span class="math notranslate nohighlight">\(x^i\)</span> must all be equal to zero, therefore</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     \alpha_1 + \alpha_3 &amp;= 0, \\

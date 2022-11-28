@@ -425,7 +425,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Appendices
+  7_Appendices
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -826,9 +826,9 @@ Solution<div class="sd-summary-down docutils">
 <p><span class="math notranslate nohighlight">\(T: \mathbb{R}^3 \to \mathbb{R}^3\)</span> is a linear transformation such that</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    T\begin{pmatrix} 1 \\ 2 \\ 1 \end{pmatrix} &amp;= \begin{pmatrix} 4 \\ 3 \\ 11 \end{pmatrix}, &amp;
-    T\begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} &amp;= \begin{pmatrix} 1 \\ 0 \\ 4 \end{pmatrix}, &amp;
-    T\begin{pmatrix} -2 \\ -1 \\ 1 \end{pmatrix} &amp;= \begin{pmatrix} 1 \\ 3 \\-1 \end{pmatrix}.
+    T\begin{pmatrix} 1 \\ -1 \\ 0 \end{pmatrix} &amp;= \begin{pmatrix} 1 \\ -2 \\ -4 \end{pmatrix}, &amp;
+    T\begin{pmatrix} 0 \\ 1 \\ 2 \end{pmatrix} &amp;= \begin{pmatrix} 6 \\ 5 \\ 10 \end{pmatrix}, &amp;
+    T\begin{pmatrix} -1 \\ 1 \\ 1 \end{pmatrix} &amp;= \begin{pmatrix} 2 \\ 4 \\ 7 \end{pmatrix}.
 \end{align*}\]</div>
 <p>Find the transformation matrix for <span class="math notranslate nohighlight">\(T\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -845,47 +845,40 @@ Solution<div class="sd-summary-down docutils">
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     &amp; \left( \begin{array}{rrr|rrr}
-        1 &amp; 0 &amp; 3 &amp; 1 &amp; 0 &amp; 0 \\
-        -1 &amp; 1 &amp; 2 &amp; 0 &amp; 1 &amp; 0 \\
-        0 &amp; 4 &amp; 3 &amp; 0 &amp; 0 &amp; 1 
+       1 &amp; 0 &amp; -1 &amp; 1 &amp; 0 &amp; 0 \\
+       -1 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 0 \\
+       0 &amp; 2 &amp; 1 &amp; 0 &amp; 0 &amp; 1
     \end{array} \right)
-    \begin{array}{l} \\ R_2 + R_1 \\ \phantom{x} \end{array} \\ \\
-    \longrightarrow \quad &amp;
-    \left( \begin{array}{rrr|rrr}
-        1 &amp; 0 &amp; 3 &amp; 1 &amp; 0 &amp; 0 \\
-        0 &amp; 1 &amp; 5 &amp; 1 &amp; 1 &amp; 0 \\
-        0 &amp; 4 &amp; 3 &amp; 0 &amp; 0 &amp; 1 
+    \begin{array}{l} \\ R_2 + R_1 \\ \phantom{x} \end{array} \\ \\ 
+    \longrightarrow \qquad 
+    &amp; \left( \begin{array}{rrr|rrr}
+       1 &amp; 0 &amp; -1 &amp; 1 &amp; 0 &amp; 0 \\
+       0 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 \\
+       0 &amp; 2 &amp; 1 &amp; 0 &amp; 0 &amp; 1
     \end{array} \right)
-    \begin{array}{l} \\ \\ R_3 - 4R_2 \end{array} \\ \\
-    \longrightarrow \quad &amp;
-    \left( \begin{array}{rrr|rrr}
-        1 &amp; 0 &amp; 3 &amp; 1 &amp; 0 &amp; 0 \\
-        0 &amp; 1 &amp; 5 &amp; 1 &amp; 1 &amp; 0 \\
-        0 &amp; 0 &amp; -17 &amp; -4 &amp; -4 &amp; 1 
+    \begin{array}{l} \\ \\ R_3 - 2 R_2 \end{array} \\ \\ 
+    \longrightarrow \qquad  
+    &amp; \left( \begin{array}{rrr|rrr}
+       1 &amp; 0 &amp; -1 &amp; 1 &amp; 0 &amp; 0 \\
+       0 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 \\
+       0 &amp; 0 &amp; 1 &amp; -2 &amp; -2 &amp; 1
     \end{array} \right)
-    \begin{array}{l} \\ \\ -\frac{1}{17}R_3 \end{array} \\ \\
-    \longrightarrow \quad &amp;
-    \left( \begin{array}{rrr|rrr}
-        1 &amp; 0 &amp; 3 &amp; 1 &amp; 0 &amp; 0 \\
-        0 &amp; 1 &amp; 5 &amp; 1 &amp; 1 &amp; 0 \\
-        0 &amp; 0 &amp; 1 &amp; \frac{4}{17} &amp; \frac{4}{17} &amp; -\frac{1}{17} 
-    \end{array} \right)
-    \begin{array}{l} R_1 - 3 R_3 \\ R_2 - 5 R_3 \\ \phantom{x} \end{array} \\ \\
-    \longrightarrow \quad &amp;
-    \left( \begin{array}{rrr|rrr}
-        1 &amp; 0 &amp; 0 &amp; \frac{5}{17} &amp; -\frac{12}{17} &amp; \frac{3}{17} \\
-        0 &amp; 1 &amp; 0 &amp; -\frac{3}{17} &amp; -\frac{3}{17} &amp; \frac{5}{17} \\
-        0 &amp; 0 &amp; 1 &amp; \frac{4}{17} &amp; \frac{4}{17} &amp; -\frac{1}{17} 
+    \begin{array}{l} R_1 + R_3 \\ \phantom{x} \\ \phantom{x} \end{array} \\ \\ 
+    \longrightarrow \qquad
+    &amp; \left( \begin{array}{rrr|rrr}
+       1 &amp; 0 &amp; 0 &amp; -1 &amp; -2 &amp; 1 \\
+       0 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 \\
+       0 &amp; 0 &amp; 1 &amp; -2 &amp; -2 &amp; 1
     \end{array} \right)
 \end{align*}\]</div>
-<p class="sd-card-text">So <span class="math notranslate nohighlight">\((\mathbf{u}_1, \mathbf{u}_2, \mathbf{u}_3)^{-1} = \begin{pmatrix} \frac{5}{17} &amp; -\frac{12}{17} &amp; \frac{3}{17} \\ -\frac{3}{17} &amp; -\frac{3}{17} &amp; \frac{5}{17} \\ \frac{4}{17} &amp; \frac{4}{17} &amp; -\frac{1}{17} \end{pmatrix}\)</span> and</p>
+<p class="sd-card-text">So <span class="math notranslate nohighlight">\((\mathbf{u}_1, \mathbf{u}_2, \mathbf{u}_3)^{-1} = \begin{pmatrix}  -1 &amp; -2 &amp; 1 \\ 1 &amp; 1 &amp; 0 \\ -2 &amp; -2 &amp; 1 \end{pmatrix}\)</span> and</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    A &amp;= \begin{pmatrix} 4 &amp; 1 &amp; 1 \\ 3 &amp; 0 &amp; 3 \\ 11 &amp; 4 &amp; -1 \end{pmatrix}
+    A &amp;= \begin{pmatrix} 1 &amp; 6 &amp; 2 \\ -2 &amp; 5 &amp; 4 \\ -4 &amp; 10 &amp; 7 \end{pmatrix}
     \begin{pmatrix} 
-        \frac{5}{17} &amp; -\frac{12}{17} &amp; \frac{3}{17} \\
-        -\frac{3}{17} &amp; -\frac{3}{17} &amp; \frac{5}{17} \\
-        \frac{4}{17} &amp; \frac{4}{17} &amp; -\frac{1}{17} 
+        -1 &amp; -2 &amp; 1 \\
+        1 &amp; 1 &amp; 0 \\
+        -2 &amp; -2 &amp; 1
     \end{pmatrix}
     = \begin{pmatrix} 1 &amp; 0 &amp; 3 \\ -1 &amp; 1 &amp; 2 \\ 0 &amp; 4 &amp; 3 \end{pmatrix}.
 \end{align*}\]</div>
@@ -894,8 +887,8 @@ Solution<div class="sd-summary-down docutils">
 \[\begin{align*}
     T\begin{pmatrix} 1 \\ 2 \\ 1 \end{pmatrix} &amp;=
     \begin{pmatrix} 1 &amp; 0 &amp; 3 \\ -1 &amp; 1 &amp; 2 \\ 0 &amp; 4 &amp; 3 \end{pmatrix}
-    \begin{pmatrix}1 \\ 2 \\ 1 \end{pmatrix} 
-    = \begin{pmatrix} 4 \\ 3 \\ 11 \end{pmatrix} \quad \checkmark
+    \begin{pmatrix}1 \\ -1 \\ 0 \end{pmatrix} 
+    = \begin{pmatrix} 1 \\ -2 \\ - 4 \end{pmatrix} \quad \checkmark
 \end{align*}\]</div>
 </div>
 </details></div>

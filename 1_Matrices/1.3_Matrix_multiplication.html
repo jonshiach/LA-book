@@ -425,7 +425,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Appendices
+  7_Appendices
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -784,8 +784,16 @@ Solution<div class="sd-summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\displaystyle \left[\begin{matrix}2 &amp; 3\\-1 &amp; 9\end{matrix}\right]\end{split}\]</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">B</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sympy&#39;
+</pre></div>
+</div>
 </div>
 </div>
 <p>Note that this will only work when using the Sympy library. If this has not been imported, <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">*</span> <span class="pre">B</span></code> will multiply the corresponding elements together which is known as <strong>element-wise multiplication</strong> and denoted mathematically as <span class="math notranslate nohighlight">\(A \odot B\)</span>. If you are using Sympy and wish to use element-wise multiplication then the command is <code class="docutils literal notranslate"><span class="pre">matrices.dense.matrix_multiply_elementwise(A,</span> <span class="pre">B)</span></code> (so it is probably better to not use Sympy in this case!).</p>
@@ -795,8 +803,8 @@ Solution<div class="sd-summary-down docutils">
 <div class="note admonition" id="matrix-exponents-definition">
 <p class="admonition-title">Definition: Matrix exponents</p>
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be a square <span class="math notranslate nohighlight">\(n \times n\)</span> matrix. Then we write <span class="math notranslate nohighlight">\(A^2=AA\)</span> and more generally:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cfb7f737-c133-4a84-a8b9-581232cbf7e9">
-<span class="eqno">(1)<a class="headerlink" href="#equation-cfb7f737-c133-4a84-a8b9-581232cbf7e9" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-532c2d77-ef12-4d80-a071-0a76ef127339">
+<span class="eqno">(1)<a class="headerlink" href="#equation-532c2d77-ef12-4d80-a071-0a76ef127339" title="Permalink to this equation">#</a></span>\[\begin{align}
     A^n = \underbrace{A A \cdots A}_{n \text{ times}}.
 \end{align}\]</div>
 </div>

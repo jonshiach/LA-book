@@ -425,7 +425,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Appendices
+  7_Appendices
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -643,7 +643,7 @@ title="Print to PDF"
 <p>Vectors in mathematical notation are usually denoted by a single lowercase character. To distinguish vectors from other mathematical objects such as scalars and variables, the character representing a vector is written in boldface when typeset or underlined when written by hand.  Some authors also represent a vector using a small right arrow over the vector name. For example, the following are all valid representations of vectors:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    \mathbf{a}, \qquad \underline{a}, \qquad \vec{a}, \qquad \overrightarrow{AB}.
+    \mathbf{a}, \qquad \underline{a}, \qquad \vec{a}.
 \end{align*}\]</div>
 <p>A vector in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> can be represented by an <span class="math notranslate nohighlight">\(n\)</span>-tuple or a single column matrix</p>
 <div class="amsmath math notranslate nohighlight">
@@ -709,8 +709,16 @@ Solution<div class="sd-summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\displaystyle \left[\begin{matrix}1\\2\\3\end{matrix}\right]\end{split}\]</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">a</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">display</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sympy&#39;
+</pre></div>
+</div>
 </div>
 </div>
 </section>

@@ -425,7 +425,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Appendices
+  7_Appendices
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -624,8 +624,8 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="partial-pivoting">
 <span id="partial-pivoting-section"></span><h1>Partial pivoting<a class="headerlink" href="#partial-pivoting" title="Permalink to this headline">#</a></h1>
 <p>In most practical applications of row reduction to solve a linear system we use computers to perform the calculations. Computers use floating point numbers to compute arithmetic operations which are not exact and can be prone to rounding errors. Consider the following linear system of equations</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0349f6a1-f46d-4643-9a7e-b95505f2ad96">
-<span class="eqno">(7)<a class="headerlink" href="#equation-0349f6a1-f46d-4643-9a7e-b95505f2ad96" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e2098442-316c-4824-8dbd-950275c7977d">
+<span class="eqno">(7)<a class="headerlink" href="#equation-e2098442-316c-4824-8dbd-950275c7977d" title="Permalink to this equation">#</a></span>\[\begin{align}
   \begin{pmatrix}0.0001 &amp; 1 \\ 1 &amp; 1 \end{pmatrix}\begin{pmatrix} x_1 \\ x_2 \end{pmatrix}= 
   \begin{pmatrix}1 \\ 2 \end{pmatrix}.
 \end{align}\]</div>
@@ -809,10 +809,18 @@ Solution<div class="sd-summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; -1 &amp; 3 &amp; 13\\4 &amp; -2 &amp; 1 &amp; 15\\-3 &amp; -1 &amp; 4 &amp; 8\end{matrix}\right]\end{split}\]</div>
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\displaystyle \left[\begin{matrix}4 &amp; -2 &amp; 1 &amp; 15\\0 &amp; - \frac{5}{2} &amp; \frac{19}{4} &amp; \frac{77}{4}\\0 &amp; 0 &amp; \frac{9}{5} &amp; \frac{27}{5}\end{matrix}\right]\end{split}\]</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Define coefficient matrix and constant vector</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span>                 <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> 
+<span class="g g-Whitespace">      </span><span class="mi">6</span>                 <span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sympy&#39;
+</pre></div>
+</div>
 </div>
 </div>
 <p>The solution of the system of linear equations is then calculated using the function <code class="docutils literal notranslate"><span class="pre">backsub()</span></code> (from <a class="reference internal" href="2.4_Gaussian_elimination.html#backsub-code"><span class="std std-ref">Gaussian elimination</span></a>).</p>

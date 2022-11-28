@@ -425,7 +425,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Appendices
+  7_Appendices
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -647,23 +647,23 @@ title="Print to PDF"
 <p class="admonition-title">Definition: Vector space</p>
 <p>A <strong>vector space</strong> over a field <span class="math notranslate nohighlight">\(F\)</span> is a non-empty set <span class="math notranslate nohighlight">\(V\)</span> of objects called vectors on which the binary operations below are defined</p>
 <ul class="simple">
-<li><p><strong>addition</strong> <span class="math notranslate nohighlight">\((+)\)</span>: <span class="math notranslate nohighlight">\(V \times V \to V\)</span>. For example, given two elements <span class="math notranslate nohighlight">\(\mathbf{u}, \mathbf{v} \in V\)</span> we can ‘add’ them together to obtain another element <span class="math notranslate nohighlight">\(\mathbf{u} + \mathbf{v} \in V\)</span>.</p></li>
-<li><p><strong>scalar multiplication</strong> <span class="math notranslate nohighlight">\((\cdot )\)</span>: <span class="math notranslate nohighlight">\(F \times V \to V\)</span>. For example given <span class="math notranslate nohighlight">\(\alpha \in F\)</span> and <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> we can ‘multiply’ <span class="math notranslate nohighlight">\(u\)</span> by <span class="math notranslate nohighlight">\(\alpha\)</span> to obtain another element <span class="math notranslate nohighlight">\(\alpha \cdot \mathbf{u} \in V\)</span></p></li>
+<li><p><strong>addition</strong> <span class="math notranslate nohighlight">\((+)\)</span>: <span class="math notranslate nohighlight">\(V \times V \to V\)</span>. For example, given two elements <span class="math notranslate nohighlight">\(u, v \in V\)</span> we can ‘add’ them together to obtain another element <span class="math notranslate nohighlight">\(u + v \in V\)</span>.</p></li>
+<li><p><strong>scalar multiplication</strong> <span class="math notranslate nohighlight">\((\cdot )\)</span>: <span class="math notranslate nohighlight">\(F \times V \to V\)</span>. For example given <span class="math notranslate nohighlight">\(\alpha \in F\)</span> and <span class="math notranslate nohighlight">\(u \in V\)</span> we can ‘multiply’ <span class="math notranslate nohighlight">\(u\)</span> by <span class="math notranslate nohighlight">\(\alpha\)</span> to obtain another element <span class="math notranslate nohighlight">\(\alpha \cdot u \in V\)</span></p></li>
 </ul>
 </div>
 <p>For example, a field could be the set of all real numbers <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> and a vector space be the set of all vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> since we can add two vectors and multiply a vector by a scalar. Not all subsets of a field can be classified as a vector space, to do so the set <span class="math notranslate nohighlight">\(V\)</span> must satisfy the following axioms.</p>
 <div class="important admonition" id="vector-space-axioms-theorem">
 <p class="admonition-title">Theorem: Axioms of a vector space</p>
-<p>Let <span class="math notranslate nohighlight">\(\mathbf{u}, \mathbf{v}, \mathbf{w} \in V\)</span> and <span class="math notranslate nohighlight">\(\alpha, \beta \in F\)</span>, <span class="math notranslate nohighlight">\(V\)</span> is a vector space if all of the following axioms are satisfied</p>
+<p>Let <span class="math notranslate nohighlight">\(u, v, w \in V\)</span> and <span class="math notranslate nohighlight">\(\alpha, \beta \in F\)</span>, <span class="math notranslate nohighlight">\(V\)</span> is a vector space if all of the following axioms are satisfied</p>
 <ul class="simple">
-<li><p><strong>A1</strong>: Associativity of vector addition: <span class="math notranslate nohighlight">\(\mathbf{u} + (\mathbf{v} + \mathbf{w}) = (\mathbf{u} + \mathbf{v}) + \mathbf{w}\)</span>;</p></li>
-<li><p><strong>A2</strong>: Commutativity of vector addition: <span class="math notranslate nohighlight">\(\mathbf{u} + \mathbf{v} = \mathbf{v} + \mathbf{u}\)</span>;</p></li>
-<li><p><strong>A3</strong>: Identity element of vector addition: there exists an element <span class="math notranslate nohighlight">\(0 \in V\)</span> such that <span class="math notranslate nohighlight">\(\mathbf{u} + \mathbf{0} = \mathbf{u}\)</span> for all <span class="math notranslate nohighlight">\(\mathbf{v} \in V\)</span>;</p></li>
-<li><p><strong>A4</strong>: Additive inverse: For every <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> there exists an element <span class="math notranslate nohighlight">\(- \mathbf{v} \in V\)</span>, called the <strong>additive inverse</strong>, such that <span class="math notranslate nohighlight">\(\mathbf{u} + (- \mathbf{u}) = 0\)</span>;</p></li>
-<li><p><strong>M1</strong>: Associativity of scalar multiplication: <span class="math notranslate nohighlight">\(\alpha(\beta \mathbf{u}) = (\alpha \beta) \mathbf{u}\)</span>;</p></li>
-<li><p><strong>M2</strong>: Identity element of scalar multiplication: there exists an element <span class="math notranslate nohighlight">\(1\)</span> called the <strong>multiplicative identity</strong> such that <span class="math notranslate nohighlight">\(1 \mathbf{u} = \mathbf{u}\)</span>;</p></li>
-<li><p><strong>M3</strong>: Distributivity of scalar multiplication with respect to vector addition: <span class="math notranslate nohighlight">\(\alpha(\mathbf{u} + \mathbf{v}) = \alpha \mathbf{u} + \alpha \mathbf{v}\)</span>;</p></li>
-<li><p><strong>M4</strong>: Distributivity of scalar multiplication with respect to addition: <span class="math notranslate nohighlight">\((\alpha + \beta)\mathbf{u} = \alpha \mathbf{u} + \beta \mathbf{u}\)</span>.</p></li>
+<li><p><strong>A1</strong>: Associativity of vector addition: <span class="math notranslate nohighlight">\(u + (v + w) = (u + v) + w\)</span>;</p></li>
+<li><p><strong>A2</strong>: Commutativity of vector addition: <span class="math notranslate nohighlight">\(u + v = v + u\)</span>;</p></li>
+<li><p><strong>A3</strong>: Identity element of vector addition: there exists an element <span class="math notranslate nohighlight">\(0 \in V\)</span> such that <span class="math notranslate nohighlight">\(u + 0 = u\)</span> for all <span class="math notranslate nohighlight">\(v \in V\)</span>;</p></li>
+<li><p><strong>A4</strong>: Additive inverse: For every <span class="math notranslate nohighlight">\(u \in V\)</span> there exists an element <span class="math notranslate nohighlight">\(- v \in V\)</span>, called the <strong>additive inverse</strong>, such that <span class="math notranslate nohighlight">\(u + (- u) = 0\)</span>;</p></li>
+<li><p><strong>M1</strong>: Associativity of scalar multiplication: <span class="math notranslate nohighlight">\(\alpha(\beta u) = (\alpha \beta) u\)</span>;</p></li>
+<li><p><strong>M2</strong>: Identity element of scalar multiplication: there exists an element <span class="math notranslate nohighlight">\(1\)</span> called the <strong>multiplicative identity</strong> such that <span class="math notranslate nohighlight">\(1 u = u\)</span>;</p></li>
+<li><p><strong>M3</strong>: Distributivity of scalar multiplication with respect to vector addition: <span class="math notranslate nohighlight">\(\alpha(u + v) = \alpha u + \alpha v\)</span>;</p></li>
+<li><p><strong>M4</strong>: Distributivity of scalar multiplication with respect to addition: <span class="math notranslate nohighlight">\((\alpha + \beta)u = \alpha u + \beta u\)</span>.</p></li>
 </ul>
 </div>
 <p>The first group of four axioms are concerned with addition and the second group of four axioms are concerned with scalar multiplication. When the scalars are real numbers, e.g., <span class="math notranslate nohighlight">\(F = \mathbb{R}\)</span>, we call <span class="math notranslate nohighlight">\(V\)</span> a <em>‘real vector space’</em> which is short for a <em>‘vector space over the field of real numbers’</em>. When the scalars are complex numbers, e.g., <span class="math notranslate nohighlight">\(F=\mathbb{C}\)</span>, we talk of a <em>‘complex vector space’</em>.</p>
@@ -673,9 +673,9 @@ title="Print to PDF"
 <p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(u \in V,\alpha\in F\)</span>. Then the following hold:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\alpha \cdot 0 = 0\)</span>;</p></li>
-<li><p><span class="math notranslate nohighlight">\(0 \cdot \mathbf{u} = 0\)</span>;</p></li>
-<li><p>if <span class="math notranslate nohighlight">\(\alpha \cdot \mathbf{u} = 0\)</span> then either <span class="math notranslate nohighlight">\(\alpha = 0\)</span> or <span class="math notranslate nohighlight">\(\mathbf{u} = 0\)</span>;</p></li>
-<li><p><span class="math notranslate nohighlight">\(-(\alpha \cdot \mathbf{u}) = (-\alpha)\cdot \mathbf{u} = \alpha\cdot(-\mathbf{u})\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(0 \cdot u = 0\)</span>;</p></li>
+<li><p>if <span class="math notranslate nohighlight">\(\alpha \cdot u = 0\)</span> then either <span class="math notranslate nohighlight">\(\alpha = 0\)</span> or <span class="math notranslate nohighlight">\(u = 0\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(-(\alpha \cdot u) = (-\alpha)\cdot u = \alpha\cdot(-u)\)</span>.</p></li>
 </ul>
 </div>
 <p>The name <em>‘vector space’</em> indicates a connection with the study of vectors. Indeed our Euclidean spaces <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, as introduced in <a class="reference internal" href="../3_Vectors/3.0_Introduction.html#vectors-chapter"><span class="std std-ref">Vectors</span></a>, are vector spaces over <span class="math notranslate nohighlight">\(F=\mathbb{R}\)</span>. Addition and scalar multiplication, in the sense of a vector space, for <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> are as given in <a class="reference internal" href="../3_Vectors/3.4_Arithmetic_operations.html#vector-addition-definition"><span class="std std-ref">vector addition</span></a> and <a class="reference internal" href="../3_Vectors/3.4_Arithmetic_operations.html#scalar-multiplication-of-a-vector-definition"><span class="std std-ref">scalar multiplication</span></a> respectively. Euclidean vector spaces are often the first examples of vector spaces that a student meets. However, maybe they do not quite demonstrate the power behind this construction. The real motivation of the study of the vector spaces comes from the fact that a lot of more abstract sets, such as differentiable functions or matrices, can be viewed as vector spaces. Everything that we learn about vector spaces can be then applied to any set which satisfies the definition of a vector space. This means that the set of <span class="math notranslate nohighlight">\(m\times n\)</span> matrices with matrix addition and scalar multiplication or the set of all polynomials of degree at most <span class="math notranslate nohighlight">\(n\)</span>, in some sense, behave in a very similar fashion to Euclidean space.</p>
@@ -690,16 +690,16 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">We need to check that all of the axioms of vector spaces are satisfied. Here <span class="math notranslate nohighlight">\(V = \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(F = \mathbb{R}\)</span> and let <span class="math notranslate nohighlight">\(\mathbf{u}, \mathbf{v}, \mathbf{w} \in V\)</span> and <span class="math notranslate nohighlight">\(\alpha, \beta \in \mathbb{R}\)</span></p>
+<p class="sd-card-text">We need to check that all of the axioms of vector spaces are satisfied. Here <span class="math notranslate nohighlight">\(V = \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(F = \mathbb{R}\)</span> and let <span class="math notranslate nohighlight">\(u, v, w \in V\)</span> and <span class="math notranslate nohighlight">\(\alpha, \beta \in \mathbb{R}\)</span></p>
 <ul class="simple">
-<li><p class="sd-card-text">A1: <span class="math notranslate nohighlight">\(\mathbf{u} + (\mathbf{v} + \mathbf{w}) = (\mathbf{u} + \mathbf{v}) + \mathbf{w} \quad \checkmark\)</span></p></li>
-<li><p class="sd-card-text">A2: <span class="math notranslate nohighlight">\(\mathbf{u} + \mathbf{v} = \mathbf{v} + \mathbf{u} \quad \checkmark\)</span></p></li>
-<li><p class="sd-card-text">A3: <span class="math notranslate nohighlight">\(\mathbf{u} + 0 = \mathbf{u} \quad \checkmark\)</span> (i.e., 0 is the identity element of addition)</p></li>
-<li><p class="sd-card-text">A4: <span class="math notranslate nohighlight">\(\mathbf{u} + (-\mathbf{u}) = 0 \quad \checkmark\)</span> (i.e., the negative of any number is the additive inverse)</p></li>
-<li><p class="sd-card-text">M1: <span class="math notranslate nohighlight">\(\alpha(\beta \mathbf{u}) = (\alpha \beta) \mathbf{u} \quad \checkmark\)</span></p></li>
-<li><p class="sd-card-text">M2: <span class="math notranslate nohighlight">\(1 \mathbf{u} = \mathbf{u} \quad \checkmark\)</span> (i.e., 1 is the multiplicative identity of all numbers)</p></li>
-<li><p class="sd-card-text">M3: <span class="math notranslate nohighlight">\(\alpha(\mathbf{u} + \mathbf{v}) = \alpha \mathbf{u} + \alpha \mathbf{v} \quad \checkmark\)</span></p></li>
-<li><p class="sd-card-text">M4: <span class="math notranslate nohighlight">\((\alpha + \beta) \mathbf{u} = \alpha \mathbf{u} + \beta \mathbf{u} \quad \checkmark\)</span></p></li>
+<li><p class="sd-card-text">A1: <span class="math notranslate nohighlight">\(u + (v + w) = (u + v) + w \quad \checkmark\)</span></p></li>
+<li><p class="sd-card-text">A2: <span class="math notranslate nohighlight">\(u + v = v + u \quad \checkmark\)</span></p></li>
+<li><p class="sd-card-text">A3: <span class="math notranslate nohighlight">\(u + 0 = u \quad \checkmark\)</span> (i.e., 0 is the identity element of addition)</p></li>
+<li><p class="sd-card-text">A4: <span class="math notranslate nohighlight">\(u + (-u) = 0 \quad \checkmark\)</span> (i.e., the negative of any number is the additive inverse)</p></li>
+<li><p class="sd-card-text">M1: <span class="math notranslate nohighlight">\(\alpha(\beta u) = (\alpha \beta) u \quad \checkmark\)</span></p></li>
+<li><p class="sd-card-text">M2: <span class="math notranslate nohighlight">\(1 u = u \quad \checkmark\)</span> (i.e., 1 is the multiplicative identity of all numbers)</p></li>
+<li><p class="sd-card-text">M3: <span class="math notranslate nohighlight">\(\alpha(u + v) = \alpha u + \alpha v \quad \checkmark\)</span></p></li>
+<li><p class="sd-card-text">M4: <span class="math notranslate nohighlight">\((\alpha + \beta) u = \alpha u + \beta u \quad \checkmark\)</span></p></li>
 </ul>
 </div>
 </details><p>  (ii)   The set of all polynomials of degree at most <span class="math notranslate nohighlight">\(n\)</span> with real coefficients <span class="math notranslate nohighlight">\(P_n(\mathbb{R})\)</span></p>
@@ -715,13 +715,13 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(p(x), r(x), q(x) \in P_n(\mathbb{R})\)</span> where <span class="math notranslate nohighlight">\(a_i, b_i, c_i \in \mathbb{R}\)</span> are the coefficients for <span class="math notranslate nohighlight">\(p(x)\)</span>, <span class="math notranslate nohighlight">\(q(x)\)</span> and <span class="math notranslate nohighlight">\(r(x)\)</span> respectively and <span class="math notranslate nohighlight">\(k\in \mathbb{R}\)</span> is some scalar then we define</p>
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(p, r, q \in P_n(\mathbb{R})\)</span> where <span class="math notranslate nohighlight">\(a_i, b_i, c_i \in \mathbb{R}\)</span> are the coefficients for <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(q\)</span> and <span class="math notranslate nohighlight">\(r\)</span> respectively and <span class="math notranslate nohighlight">\(k\in \mathbb{R}\)</span> is some scalar then we define</p>
 <ul class="simple">
 <li><p class="sd-card-text">Vector addition:</p></li>
 </ul>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    p(x) + r(x) &amp;= (a_0 + b_0)x^0 + (a_1 + b_1)x^1 + \cdots + (a_n + b_n)x^n \\
+    p + r &amp;= (a_0 + b_0)x^0 + (a_1 + b_1)x^1 + \cdots + (a_n + b_n)x^n \\
     &amp;= \sum_{i=0}^n (a_i + b_i)x^i.
 \end{align*}\]</div>
 <ul class="simple">
@@ -729,7 +729,7 @@ Solution<div class="sd-summary-down docutils">
 </ul>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    k \cdot p(x) &amp;= ka_0x^0 + ka_1x^1 + \cdots + ka_nx^n \\
+    k \cdot p &amp;= ka_0x^0 + ka_1x^1 + \cdots + ka_nx^n \\
     &amp;= \sum_{i=0}^n ka_ix^i.
 \end{align*}\]</div>
 <ul class="simple">
@@ -744,7 +744,7 @@ Solution<div class="sd-summary-down docutils">
 </ul>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    -p(x) &amp;= (-a_0)x^0 + (-a_1)x^2 + \cdots + (-a_n)x^n \\
+    -p &amp;= (-a_0)x^0 + (-a_1)x^2 + \cdots + (-a_n)x^n \\
     &amp;= \sum_{i=0}^n (-a_i)x^i \\
     &amp;= -\sum_{i=0}^n a_ix^i.
 \end{align*}\]</div>
@@ -754,34 +754,34 @@ Solution<div class="sd-summary-down docutils">
 </ul>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    p(x) + (q(x) + r(x)) &amp;= \displaystyle \sum_{i=0}^n (a_i + (b_i + c_i))x^i \\
+    p + (q + r) &amp;= \displaystyle \sum_{i=0}^n (a_i + (b_i + c_i))x^i \\
     &amp;= \displaystyle \sum_{i=0}^n ((a_i + b_i) + c_i)x^i \\
-    &amp;= (p(x) + q(x)) + r(x) \quad \checkmark
+    &amp;= (p + q) + r \quad \checkmark
 \end{align*}\]</div>
 <ul class="simple">
 <li><p class="sd-card-text">A2:</p></li>
 </ul>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    p(x) + q(x) &amp;= \displaystyle \sum_{i=0}^n (a_i + b_i)x^i \\
+    p + q &amp;= \displaystyle \sum_{i=0}^n (a_i + b_i)x^i \\
     &amp;= \displaystyle \sum_{i=0}^n (b_i + a_i)x^i \\
-    &amp;= q(x) + p(x) \quad \checkmark
+    &amp;= q + p \quad \checkmark
 \end{align*}\]</div>
 <ul class="simple">
 <li><p class="sd-card-text">A3:</p></li>
 </ul>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    p(x) + 0 &amp;= \displaystyle \sum_{i=0}^n (a_i + 0)x^i \\
+    p + 0 &amp;= \displaystyle \sum_{i=0}^n (a_i + 0)x^i \\
     &amp;= \displaystyle \sum_{i=0}^n a_ix^i \\
-    &amp;= p(x) \quad \checkmark
+    &amp;= p \quad \checkmark
 \end{align*}\]</div>
 <ul class="simple">
 <li><p class="sd-card-text">A4:</p></li>
 </ul>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    p(x) + (-p(x)) &amp;= \displaystyle \sum_{i=0}^n(a_i + (-a_i)) x^i \\
+    p + (-p) &amp;= \displaystyle \sum_{i=0}^n(a_i + (-a_i)) x^i \\
     &amp;= 0 \quad \checkmark
 \end{align*}\]</div>
 <ul class="simple">
@@ -789,36 +789,36 @@ Solution<div class="sd-summary-down docutils">
 </ul>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    \alpha(\beta p(x)) &amp;= \alpha \displaystyle \sum_{i=0}^n \beta a_i x^i \\
+    \alpha(\beta p) &amp;= \alpha \displaystyle \sum_{i=0}^n \beta a_i x^i \\
     &amp;= \alpha \beta \displaystyle \sum_{i=0}^n a_i x^i \\
-    &amp;= (\alpha \beta) p(x) \quad \checkmark
+    &amp;= (\alpha \beta) p \quad \checkmark
 \end{align*}\]</div>
 <ul class="simple">
 <li><p class="sd-card-text">M2:</p></li>
 </ul>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    1p(x) &amp;= \displaystyle \sum_{i=0}^n 1 a_i x^i \\
+    1p &amp;= \displaystyle \sum_{i=0}^n 1 a_i x^i \\
     &amp;= \displaystyle \sum_{i=0}^n a_i x^i \\
-    &amp;= p(x) \quad \checkmark
+    &amp;= p \quad \checkmark
 \end{align*}\]</div>
 <ul class="simple">
 <li><p class="sd-card-text">M3:</p></li>
 </ul>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    \alpha (p(x) + q(x)) &amp;= \alpha \sum (a_i + b_i) x^i \\
+    \alpha (p + q) &amp;= \alpha \sum (a_i + b_i) x^i \\
     &amp;= \alpha \sum a_i x^i + \alpha b_i x^i \\
-    &amp;= \alpha p(x) + \alpha q(x) \quad \checkmark
+    &amp;= \alpha p + \alpha q \quad \checkmark
 \end{align*}\]</div>
 <ul class="simple">
 <li><p class="sd-card-text">M4:</p></li>
 </ul>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-    (\alpha + \beta) p(x) &amp;= (\alpha + \beta) \displaystyle \sum_{i=0}^n a_i x^i \\
+    (\alpha + \beta) p &amp;= (\alpha + \beta) \displaystyle \sum_{i=0}^n a_i x^i \\
     &amp;= \alpha \displaystyle \sum_{i=0}^n a_i x^i + \beta \displaystyle \sum_{i=0}^n a_i x^i \\
-    &amp;= \alpha p(x) + \beta p(x) \quad \checkmark
+    &amp;= \alpha p + \beta p \quad \checkmark
 \end{align*}\]</div>
 </div>
 </details></div>
@@ -837,8 +837,8 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">  (i)   We do not have an identity element for addition since <span class="math notranslate nohighlight">\(0 \notin \mathbb{R}_+\)</span> so axiom A3 is not satisfied. Also, by axiom A4, if <span class="math notranslate nohighlight">\(u, v \in \mathbb{R}_+\)</span> are two positive real numbers then <span class="math notranslate nohighlight">\(u + v &gt; 0\)</span> so no additive inverse exists.</p>
-<p class="sd-card-text">  (ii) If we take the example <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> such that <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 1)\)</span> then the additive inverse <span class="math notranslate nohighlight">\(-\mathbf{u} = (-1, -1) \notin V\)</span> so <span class="math notranslate nohighlight">\(V\)</span> is not a vector space.</p>
+<p class="sd-card-text">  (i)   We do not have an identity element for addition since <span class="math notranslate nohighlight">\(0 \notin \mathbb{R}_+\)</span> so axiom A3 is not satisfied. Also, by axiom A4, if <span class="math notranslate nohighlight">\(u, v \in \mathbb{R}_+\)</span> are two positive real numbers then <span class="math notranslate nohighlight">\(x + y &gt; 0\)</span> so no additive inverse exists.</p>
+<p class="sd-card-text">  (ii) If we take the example <span class="math notranslate nohighlight">\(u \in V\)</span> such that <span class="math notranslate nohighlight">\(u = (1, 1)\)</span> then the additive inverse <span class="math notranslate nohighlight">\(-u = (-1, -1) \notin V\)</span> so <span class="math notranslate nohighlight">\(V\)</span> is not a vector space.</p>
 </div>
 </details></div>
 <hr class="footnotes docutils" />

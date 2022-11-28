@@ -425,7 +425,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Appendices
+  7_Appendices
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -741,8 +741,14 @@ Solution<div class="sd-summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(i)  u . v = 1
-(ii) theta = 1.4862
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span> 
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">u</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">v</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sympy&#39;
 </pre></div>
 </div>
 </div>
@@ -753,7 +759,7 @@ Solution<div class="sd-summary-down docutils">
 <span id="cross-product-section"></span><h2>The cross product<a class="headerlink" href="#the-cross-product" title="Permalink to this headline">#</a></h2>
 <div class="note admonition" id="cross-product-definition">
 <p class="admonition-title">Definition: The cross product</p>
-<p>The <strong>cross product</strong> (also known as the <strong>vector product</strong>) of two vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>, <span class="math notranslate nohighlight">\(\mathbf{a}=(a_1,a_2,a_3)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}=(b_1,b_2,b_3)\)</span> can be calculated using the formula</p>
+<p>The <strong>cross product</strong> (also known as the **vector product) of two vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>, <span class="math notranslate nohighlight">\(\mathbf{a}=(a_1,a_2,a_3)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}=(b_1,b_2,b_3)\)</span> can be calculated using the formula</p>
 <div class="math notranslate nohighlight" id="equation-cross-product-equation">
 <span class="eqno">(12)<a class="headerlink" href="#equation-cross-product-equation" title="Permalink to this equation">#</a></span>\[\begin{split}\mathbf{a} \times \mathbf{b} = \det 
 \begin{pmatrix}
