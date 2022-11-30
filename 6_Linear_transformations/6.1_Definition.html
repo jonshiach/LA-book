@@ -369,6 +369,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../5_Vector_spaces/5.2_Subspaces-ASN-ACA-M-1107.html">
+     Subspaces
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../5_Vector_spaces/5.3_Linear_dependence.html">
      Linear dependence
     </a>
@@ -407,6 +412,11 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="6.3_Rotation_reflection_and_scaling.html">
+     Rotation, reflection and scaling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="6.3_Rotation_reflection_and_scaling-ASN-ACA-M-1107.html">
      Rotation, reflection and scaling
     </a>
    </li>
@@ -673,7 +683,7 @@ title="Print to PDF"
 \end{align*}\]</div>
 <p>To show whether a transformation is a linear transformation can combine both conditions from the <a class="reference internal" href="#linear-transformation-definition"><span class="std std-ref">definition of a linear transformation</span></a> to show that</p>
 <div class="math notranslate nohighlight" id="equation-linear-transformation-condition-equation">
-<span class="eqno">(22)<a class="headerlink" href="#equation-linear-transformation-condition-equation" title="Permalink to this equation">#</a></span>\[T(\mathbf{u} + \alpha \mathbf{v}) = T(\mathbf{u}) + \alpha T(\mathbf{v}).\]</div>
+<span class="eqno">(23)<a class="headerlink" href="#equation-linear-transformation-condition-equation" title="Permalink to this equation">#</a></span>\[T(\mathbf{u} + \alpha \mathbf{v}) = T(\mathbf{u}) + \alpha T(\mathbf{v}).\]</div>
 <div class="seealso admonition" id="linear-transformation-example">
 <p class="admonition-title">Example 6.1</p>
 <p>Determine which of the following transformations are linear transformations</p>
@@ -823,11 +833,11 @@ Solution<div class="sd-summary-down docutils">
 \end{align*}\]</div>
 </div>
 </details></div>
-<p>The affects of the linear transformation from <a class="reference internal" href="#linear-transformation-example"><span class="std std-ref">example 6.2</span></a> is illustrated in <a class="reference internal" href="#linear-transformation-figure"><span class="std std-numref">Fig. 31</span></a>. Note that the transformation <span class="math notranslate nohighlight">\(T\)</span> can be thought of as changing the basis of the vector space. The unit square with respect to the basis <span class="math notranslate nohighlight">\(\{\mathbf{e}_1, \mathbf{e}_1\}\)</span> has been transformed into a unit parallelogram with respect to the basis <span class="math notranslate nohighlight">\(\{ T(\mathbf{e}_1), T(\mathbf{e}_2)\}\)</span>.</p>
+<p>The affects of the linear transformation from <a class="reference internal" href="#linear-transformation-example"><span class="std std-ref">example 6.2</span></a> is illustrated in <a class="reference internal" href="#linear-transformation-figure"><span class="std std-numref">Fig. 32</span></a>. Note that the transformation <span class="math notranslate nohighlight">\(T\)</span> can be thought of as changing the basis of the vector space. The unit square with respect to the basis <span class="math notranslate nohighlight">\(\{\mathbf{e}_1, \mathbf{e}_1\}\)</span> has been transformed into a unit parallelogram with respect to the basis <span class="math notranslate nohighlight">\(\{ T(\mathbf{e}_1), T(\mathbf{e}_2)\}\)</span>.</p>
 <figure class="align-default" id="linear-transformation-figure">
 <img alt="../_images/linear_transformation.png" src="../_images/linear_transformation.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 31 </span><span class="caption-text">The affect of applying a linear transformation <span class="math notranslate nohighlight">\(T: (x,y) \mapsto (3x + y, x + 2y)\)</span> to the vector <span class="math notranslate nohighlight">\((1,1)\)</span>.</span><a class="headerlink" href="#linear-transformation-figure" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 32 </span><span class="caption-text">The affect of applying a linear transformation <span class="math notranslate nohighlight">\(T: (x,y) \mapsto (3x + y, x + 2y)\)</span> to the vector <span class="math notranslate nohighlight">\((1,1)\)</span>.</span><a class="headerlink" href="#linear-transformation-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -867,7 +877,7 @@ Solution<div class="sd-summary-down docutils">
 <p class="admonition-title">Theorem: Determining the linear transformation given the inputs and image vectors</p>
 <p>Given a linear transformation <span class="math notranslate nohighlight">\(T: \mathbb{R}^n \to \mathbb{R}^m\)</span> applied to a set of <span class="math notranslate nohighlight">\(n\)</span> vectors <span class="math notranslate nohighlight">\(\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_n\)</span> with known image vectors <span class="math notranslate nohighlight">\(T(\mathbf{u}_1), T(\mathbf{u}_2), \ldots, T(\mathbf{u}_n)\)</span> then the transformation matrix <span class="math notranslate nohighlight">\(A\)</span> for <span class="math notranslate nohighlight">\(T\)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-determining-the-transformation-matrix">
-<span class="eqno">(23)<a class="headerlink" href="#equation-determining-the-transformation-matrix" title="Permalink to this equation">#</a></span>\[A = (T(\mathbf{u}_1), T(\mathbf{u}_2), \ldots, T(\mathbf{u}_n)) \cdot (\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_n)^{-1}.\]</div>
+<span class="eqno">(24)<a class="headerlink" href="#equation-determining-the-transformation-matrix" title="Permalink to this equation">#</a></span>\[A = (T(\mathbf{u}_1), T(\mathbf{u}_2), \ldots, T(\mathbf{u}_n)) \cdot (\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_n)^{-1}.\]</div>
 </div>
 <div class="seealso admonition" id="transformation-matrix-example-2">
 <p class="admonition-title">Example 6.3</p>
