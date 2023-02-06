@@ -57,7 +57,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Basis" href="5.4_Basis.html" />
-    <link rel="prev" title="Subspaces" href="5.2_Subspaces-ASN-ACA-M-1107.html" />
+    <link rel="prev" title="Subspaces" href="5.2_Subspaces.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -368,11 +368,6 @@ const thebe_selector_output = ".output, .cell_output"
      Subspaces
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="5.2_Subspaces-ASN-ACA-M-1107.html">
-     Subspaces
-    </a>
-   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Linear dependence
@@ -406,6 +401,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../6_Linear_transformations/6.1_Definition-Drogon.html">
+     Definition
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../6_Linear_transformations/6.2_Composite_transformations.html">
      Composite linear transformations
     </a>
@@ -421,7 +421,17 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../6_Linear_transformations/6.3_Rotation_reflection_and_scaling-Drogon.html">
+     Rotation, reflection and scaling
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../6_Linear_transformations/6.4_Translation.html">
+     Translation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6_Linear_transformations/6.4_Translation-Drogon.html">
      Translation
     </a>
    </li>
@@ -600,14 +610,14 @@ title="Print to PDF"
 <p class="admonition-title">Definition: Linear combination</p>
 <p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over a field <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(W\)</span> a non-empty subset of <span class="math notranslate nohighlight">\(V\)</span>. We say that <span class="math notranslate nohighlight">\(u \in V\)</span> is a <strong>linear combination of elements in <span class="math notranslate nohighlight">\(W\)</span></strong> if there exist <span class="math notranslate nohighlight">\(v_1, v_2, \ldots, v_n \in W\)</span> and <span class="math notranslate nohighlight">\(\alpha_1, \alpha_2, \ldots, \alpha_n \in F\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-linear-combination-equation">
-<span class="eqno">(21)<a class="headerlink" href="#equation-linear-combination-equation" title="Permalink to this equation">#</a></span>\[u = \sum_{i = 1}^n \alpha_i v_i = \alpha_1 v_1 + \alpha_2 v_2 + \ldots + \alpha_n v_n.\]</div>
+<span class="eqno">(20)<a class="headerlink" href="#equation-linear-combination-equation" title="Permalink to this equation">#</a></span>\[u = \sum_{i = 1}^n \alpha_i v_i = \alpha_1 v_1 + \alpha_2 v_2 + \ldots + \alpha_n v_n.\]</div>
 </div>
 <p>We next introduce the notion of linear independence.</p>
 <div class="note admonition" id="linear-dependence-definition">
 <p class="admonition-title">Definition: Linear dependence</p>
 <p>Let <span class="math notranslate nohighlight">\(v_1, v_2, \ldots, v_n \in V\)</span> and consider the equation</p>
 <div class="math notranslate nohighlight" id="equation-linear-dependence-equation">
-<span class="eqno">(22)<a class="headerlink" href="#equation-linear-dependence-equation" title="Permalink to this equation">#</a></span>\[\alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n v_n = \mathbf{0},\]</div>
+<span class="eqno">(21)<a class="headerlink" href="#equation-linear-dependence-equation" title="Permalink to this equation">#</a></span>\[\alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n v_n = \mathbf{0},\]</div>
 <p>where <span class="math notranslate nohighlight">\(\alpha \in F\)</span>. The vectors <span class="math notranslate nohighlight">\(v_1, v_2, \ldots, v_n \in V\)</span> are said to be <strong>linearly independent over <span class="math notranslate nohighlight">\(F\)</span></strong> if the only solution to the above equation is when all of the <span class="math notranslate nohighlight">\(\alpha_i\)</span> values are zero (this solution is called the trivial solution). If the above equation is satisfied where <span class="math notranslate nohighlight">\(\alpha_i \neq 0\)</span> for <span class="math notranslate nohighlight">\(1 \leq i \leq n\)</span>, then the vectors <span class="math notranslate nohighlight">\(v_1, v_2, \ldots, v_n \in V\)</span> are said to be <strong>linearly dependent over <span class="math notranslate nohighlight">\(F\)</span></strong>.</p>
 </div>
 <p>Another way to think about linear independence is that a set of vectors is linearly independent if none of the vectors in the set can be represented as a linear combination of the other vectors in the same set. For example, are the matrices</p>
@@ -622,7 +632,7 @@ title="Print to PDF"
 \[\begin{align*}
     1A + 1B + 0C = \mathbf{0}_{2\times 2}.
 \end{align*}\]</div>
-<p>So if any two members of a set are scalar multiples of each other then they are linearly dependent because we can choose <span class="math notranslate nohighlight">\(\alpha_i\)</span> values to satisfy equation <a class="reference internal" href="#equation-linear-dependence-equation">(22)</a>.</p>
+<p>So if any two members of a set are scalar multiples of each other then they are linearly dependent because we can choose <span class="math notranslate nohighlight">\(\alpha_i\)</span> values to satisfy equation <a class="reference internal" href="#equation-linear-dependence-equation">(21)</a>.</p>
 <div class="seealso admonition" id="linear-dependence-equation">
 <p class="admonition-title">Example 5.5</p>
 <p>Determine whether the following are linearly dependent</p>
@@ -634,7 +644,7 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(\alpha_1, \alpha_2, \alpha_3 \in \mathbb{R}\)</span> then equation <a class="reference internal" href="#equation-linear-dependence-equation">(22)</a> becomes</p>
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(\alpha_1, \alpha_2, \alpha_3 \in \mathbb{R}\)</span> then equation <a class="reference internal" href="#equation-linear-dependence-equation">(21)</a> becomes</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     \alpha_1 \begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix} + 
@@ -783,7 +793,7 @@ Solution<div class="sd-summary-down docutils">
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="5.2_Subspaces-ASN-ACA-M-1107.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="5.2_Subspaces.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>

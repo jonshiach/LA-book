@@ -369,11 +369,6 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../5_Vector_spaces/5.2_Subspaces-ASN-ACA-M-1107.html">
-     Subspaces
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../5_Vector_spaces/5.3_Linear_dependence.html">
      Linear dependence
     </a>
@@ -406,6 +401,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="6.1_Definition-Drogon.html">
+     Definition
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="6.2_Composite_transformations.html">
      Composite linear transformations
     </a>
@@ -421,7 +421,17 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="6.3_Rotation_reflection_and_scaling-Drogon.html">
+     Rotation, reflection and scaling
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="6.4_Translation.html">
+     Translation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="6.4_Translation-Drogon.html">
      Translation
     </a>
    </li>
@@ -707,9 +717,9 @@ title="Print to PDF"
 <p><span class="caption-number">Fig. 33 </span><span class="caption-text">Rotation of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> anti-clockwise about the origin.</span><a class="headerlink" href="#rotation-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Consider the diagram in <a class="reference internal" href="6.3_Rotation_reflection_and_scaling-ASN-ACA-M-1107.html#rotation-figure"><span class="std std-numref">Fig. 40</span></a>. To determine the linear mapping <span class="math notranslate nohighlight">\(Rot(\theta): \mathbf{u} \mapsto \mathbf{v}\)</span> we first consider the values of <span class="math notranslate nohighlight">\(\mathbf{u} = (x, y)\)</span> as the vector which points along the <span class="math notranslate nohighlight">\(x\)</span>-axis with the same magnitude as <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> rotated by an angle <span class="math notranslate nohighlight">\(\phi\)</span> anti-clockwise about the origin. Forming a right-angled triangle with the angle <span class="math notranslate nohighlight">\(\phi\)</span> and hypotenuse of length <span class="math notranslate nohighlight">\(|\mathbf{u}|\)</span> then</p>
+<p>Consider the diagram in <a class="reference internal" href="6.3_Rotation_reflection_and_scaling-Drogon.html#rotation-figure"><span class="std std-numref">Fig. 47</span></a>. To determine the linear mapping <span class="math notranslate nohighlight">\(Rot(\theta): \mathbf{u} \mapsto \mathbf{v}\)</span> we first consider the values of <span class="math notranslate nohighlight">\(\mathbf{u} = (x, y)\)</span> as the vector which points along the <span class="math notranslate nohighlight">\(x\)</span>-axis with the same magnitude as <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> rotated by an angle <span class="math notranslate nohighlight">\(\phi\)</span> anti-clockwise about the origin. Forming a right-angled triangle with the angle <span class="math notranslate nohighlight">\(\phi\)</span> and hypotenuse of length <span class="math notranslate nohighlight">\(|\mathbf{u}|\)</span> then</p>
 <div class="math notranslate nohighlight" id="equation-rotation-equation-1">
-<span class="eqno">(28)<a class="headerlink" href="#equation-rotation-equation-1" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align*}
+<span class="eqno">(29)<a class="headerlink" href="#equation-rotation-equation-1" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align*}
     \cos(\phi) &amp;= \frac{x}{|\mathbf{u}|} &amp; \therefore x &amp;= |\mathbf{u}| \cos(\phi), \\
     \sin(\phi) &amp;= \frac{y}{|\mathbf{u}|} &amp; \therefore y &amp;= |\mathbf{u}| \sin(\phi).
 \end{align*}\end{split}\]</div>
@@ -727,11 +737,11 @@ title="Print to PDF"
 \end{align*}\]</div>
 <p>then we have</p>
 <div class="math notranslate nohighlight" id="equation-rotation-equation-2">
-<span class="eqno">(29)<a class="headerlink" href="#equation-rotation-equation-2" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align*}
+<span class="eqno">(30)<a class="headerlink" href="#equation-rotation-equation-2" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align*}
     v_x &amp;= |\mathbf{u}| \cos(\phi) \cos(\theta) - |\mathbf{u}|\sin(\phi) \sin(\theta) \\
     v_y &amp;= |\mathbf{u}| \sin(\phi) \cos(\theta) + |\mathbf{u}|\cos(\phi) \sin(\theta).
 \end{align*}\end{split}\]</div>
-<p>Substituting equation <a class="reference internal" href="6.3_Rotation_reflection_and_scaling-ASN-ACA-M-1107.html#equation-rotation-equation-1">(34)</a> into equation <a class="reference internal" href="6.3_Rotation_reflection_and_scaling-ASN-ACA-M-1107.html#equation-rotation-equation-2">(35)</a></p>
+<p>Substituting equation <a class="reference internal" href="6.3_Rotation_reflection_and_scaling-Drogon.html#equation-rotation-equation-1">(41)</a> into equation <a class="reference internal" href="6.3_Rotation_reflection_and_scaling-Drogon.html#equation-rotation-equation-2">(42)</a></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
     v_x &amp;= x \cos(\theta) - y \sin(\theta), \\
@@ -755,7 +765,7 @@ title="Print to PDF"
 \end{align*}\]</div>
 <p>The transformation matrix for rotation in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-rotation-matrix-equation">
-<span class="eqno">(30)<a class="headerlink" href="#equation-rotation-matrix-equation" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align*}
+<span class="eqno">(31)<a class="headerlink" href="#equation-rotation-matrix-equation" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align*}
     Rot(\theta) = \begin{pmatrix} 
         \cos(\theta) &amp; -\sin(\theta) \\
         \sin(\theta) &amp; \cos(\theta)
@@ -844,12 +854,12 @@ Solution<div class="sd-summary-down docutils">
 <p><span class="caption-number">Fig. 34 </span><span class="caption-text">The reflection of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> about a line.</span><a class="headerlink" href="#reflection-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The simplest reflection we can perform is to reflect a vector <span class="math notranslate nohighlight">\(\mathbf{u} =(x, y)\)</span> about the <span class="math notranslate nohighlight">\(x\)</span>-axis or <span class="math notranslate nohighlight">\(y\)</span>-axis. For example, to reflect about the <span class="math notranslate nohighlight">\(x\)</span>-axis we simply change the sign of the <span class="math notranslate nohighlight">\(y\)</span> co-ordinate (<a class="reference internal" href="6.3_Rotation_reflection_and_scaling-ASN-ACA-M-1107.html#reflection-about-x-figure"><span class="std std-numref">Fig. 42</span></a>), i.e.,</p>
+<p>The simplest reflection we can perform is to reflect a vector <span class="math notranslate nohighlight">\(\mathbf{u} =(x, y)\)</span> about the <span class="math notranslate nohighlight">\(x\)</span>-axis or <span class="math notranslate nohighlight">\(y\)</span>-axis. For example, to reflect about the <span class="math notranslate nohighlight">\(x\)</span>-axis we simply change the sign of the <span class="math notranslate nohighlight">\(y\)</span> co-ordinate (<a class="reference internal" href="6.3_Rotation_reflection_and_scaling-Drogon.html#reflection-about-x-figure"><span class="std std-numref">Fig. 49</span></a>), i.e.,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}Ref(0) \begin{pmatrix} x \\ y \end{pmatrix} &amp;= \begin{pmatrix} x \\ -y \end{pmatrix},\end{split}\]</div>
 <p>and the transformation matrix is</p>
 <div class="math notranslate nohighlight" id="equation-reflection-about-x-equation">
-<span class="eqno">(31)<a class="headerlink" href="#equation-reflection-about-x-equation" title="Permalink to this equation">#</a></span>\[\begin{split}Ref(0) = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}.\end{split}\]</div>
+<span class="eqno">(32)<a class="headerlink" href="#equation-reflection-about-x-equation" title="Permalink to this equation">#</a></span>\[\begin{split}Ref(0) = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}.\end{split}\]</div>
 <p>Note that here the line of reflection makes an angle of <span class="math notranslate nohighlight">\(\theta=0\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis.</p>
 <figure class="align-default" id="reflection-about-x-figure">
 <a class="reference internal image-reference" href="../_images/reflection_about_x.png"><img alt="../_images/reflection_about_x.png" src="../_images/reflection_about_x.png" style="width: 258.0px; height: 240.75px;" /></a>
@@ -857,7 +867,7 @@ Solution<div class="sd-summary-down docutils">
 <p><span class="caption-number">Fig. 35 </span><span class="caption-text">Reflection of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> about the <span class="math notranslate nohighlight">\(x\)</span> axis.</span><a class="headerlink" href="#reflection-about-x-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The determine the reflection about a line that makes and arbitrary angle <span class="math notranslate nohighlight">\(\theta\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis we first perform a rotation by <span class="math notranslate nohighlight">\(-\theta\)</span> so that the line of reflection is on the <span class="math notranslate nohighlight">\(x\)</span>-axis (<a class="reference internal" href="6.3_Rotation_reflection_and_scaling-ASN-ACA-M-1107.html#reflection-about-line-1-figure"><span class="std std-numref">Fig. 43</span></a>). This means we can then use equation <a class="reference internal" href="6.3_Rotation_reflection_and_scaling-ASN-ACA-M-1107.html#equation-reflection-about-x-equation">(37)</a> to reflect the rotated <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> vector to give the vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> (<a class="reference internal" href="6.3_Rotation_reflection_and_scaling-ASN-ACA-M-1107.html#reflection-about-line-2-figure"><span class="std std-numref">Fig. 44</span></a>) before rotating by <span class="math notranslate nohighlight">\(\theta\)</span> so that the line of reflection is back to its original position (<a class="reference internal" href="6.3_Rotation_reflection_and_scaling-ASN-ACA-M-1107.html#reflection-about-line-3-figure"><span class="std std-numref">Fig. 45</span></a>).</p>
+<p>The determine the reflection about a line that makes and arbitrary angle <span class="math notranslate nohighlight">\(\theta\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis we first perform a rotation by <span class="math notranslate nohighlight">\(-\theta\)</span> so that the line of reflection is on the <span class="math notranslate nohighlight">\(x\)</span>-axis (<a class="reference internal" href="6.3_Rotation_reflection_and_scaling-Drogon.html#reflection-about-line-1-figure"><span class="std std-numref">Fig. 50</span></a>). This means we can then use equation <a class="reference internal" href="6.3_Rotation_reflection_and_scaling-Drogon.html#equation-reflection-about-x-equation">(44)</a> to reflect the rotated <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> vector to give the vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> (<a class="reference internal" href="6.3_Rotation_reflection_and_scaling-Drogon.html#reflection-about-line-2-figure"><span class="std std-numref">Fig. 51</span></a>) before rotating by <span class="math notranslate nohighlight">\(\theta\)</span> so that the line of reflection is back to its original position (<a class="reference internal" href="6.3_Rotation_reflection_and_scaling-Drogon.html#reflection-about-line-3-figure"><span class="std std-numref">Fig. 52</span></a>).</p>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row docutils">
 <div class="sd-col sd-d-flex-column docutils">
@@ -928,7 +938,7 @@ Solution<div class="sd-summary-down docutils">
 \end{align*}\]</div>
 <p>The transformation matrix for reflection in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-reflection-matrix-equation">
-<span class="eqno">(32)<a class="headerlink" href="#equation-reflection-matrix-equation" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align*}
+<span class="eqno">(33)<a class="headerlink" href="#equation-reflection-matrix-equation" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align*}
     Ref(\theta) = 
     \begin{pmatrix} 
         \cos(2\theta) &amp; \sin(2 \theta) \\ 
@@ -1000,7 +1010,7 @@ Solution<div class="sd-summary-down docutils">
 \end{align*}\]</div>
 <p>The transformation matrix for scaling is</p>
 <div class="math notranslate nohighlight" id="equation-scaling-matrix-equation">
-<span class="eqno">(33)<a class="headerlink" href="#equation-scaling-matrix-equation" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align*}
+<span class="eqno">(34)<a class="headerlink" href="#equation-scaling-matrix-equation" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align*}
     S(\mathbf{s}) = 
     \begin{pmatrix} 
         s_1 &amp; 0 &amp; \cdots &amp; 0 \\ 
