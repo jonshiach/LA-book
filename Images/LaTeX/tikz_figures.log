@@ -1,16 +1,16 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.27)  3 NOV 2022 10:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.27)  31 JAN 2023 14:34
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/jonsh/OneDrive - MMU/Documents/2022_2023/Linear Algebra and Programming Skills/LA-book/Images/LaTeX/tikz_figures.tex"
+**"c:/Users/jonsh/OneDrive - MMU/Documents/2022_2023/Linear Algebra and Programming Skills/LA-book/Images/LaTeX/tikz_figures"
 (c:/Users/jonsh/OneDrive - MMU/Documents/2022_2023/Linear Algebra and Programming Skills/LA-book/Images/LaTeX/tikz_figures.tex
 LaTeX2e <2021-06-01> patch level 1
 L3 programming layer <2021-10-18> (c:/texlive/2021/texmf-dist/tex/latex/standalone/standalone.cls
 Document Class: standalone 2018/03/26 v1.3a Class to compile TeX sub-files standalone
 (c:/texlive/2021/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
-Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+Package shellesc Info: Restricted shell escape enabled on input line 77.
 ) (c:/texlive/2021/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
  (c:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
@@ -447,20 +447,20 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) [1
 
-{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tikz_figures.aux) ) 
+] (./tikz_figures.aux) ) 
 Here is how much of TeX's memory you used:
- 17086 strings out of 478579
- 372168 string characters out of 5857457
- 663871 words of memory out of 5000000
- 34656 multiletter control sequences out of 15000+600000
- 404645 words of font info for 30 fonts, out of 8000000 for 9000
+ 17116 strings out of 478579
+ 372843 string characters out of 5857457
+ 659871 words of memory out of 5000000
+ 34688 multiletter control sequences out of 15000+600000
+ 404191 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,7n,122p,508b,564s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on tikz_figures.pdf (1 page, 18973 bytes).
+ 117i,5n,122p,504b,462s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on tikz_figures.pdf (1 page, 1235 bytes).
 PDF statistics:
- 21 PDF objects out of 1000 (max. 8388607)
- 13 compressed objects within 1 object stream
+ 11 PDF objects out of 1000 (max. 8388607)
+ 7 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

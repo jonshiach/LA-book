@@ -150,7 +150,7 @@ display(w.norm())
 # 
 # The code below calculates the solutions to [example 3.3](normalising-a-vector-example).
 
-# In[14]:
+# In[2]:
 
 
 # (i)

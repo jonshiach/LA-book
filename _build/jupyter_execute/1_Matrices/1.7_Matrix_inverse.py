@@ -226,7 +226,7 @@ display(adjA)
 # 
 # The Sympy code for calculating the inverse of a square matrix `A` is `A.inv()`. The code below calculates the adjoint of the matrices $A$ and $B$ from [example 1.16](matrix-inverse-example-2).
 
-# In[3]:
+# In[2]:
 
 
 import sympy as sym

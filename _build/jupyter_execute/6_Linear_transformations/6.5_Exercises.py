@@ -314,7 +314,7 @@
 # therefore
 # 
 # \begin{align*}
-#     R(\left(\frac{\pi}{6}\right) \begin{pmatrix} 2 \\ 1 \end{pmatrix}
+#     R\left(\frac{\pi}{6}\right) \begin{pmatrix} 2 \\ 1 \end{pmatrix}
 #     &= \begin{pmatrix}
 #         \frac{\sqrt{3}}{2} & -\frac{1}{2} \\
 #         \frac{1}{2} & \frac{\sqrt{3}}{2}
@@ -531,7 +531,7 @@ P1 = A * P
 pprint(P1.evalf(5))
 
 
-# In[6]:
+# In[4]:
 
 
 import numpy as np

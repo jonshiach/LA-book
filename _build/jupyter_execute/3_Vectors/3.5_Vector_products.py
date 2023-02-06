@@ -168,7 +168,7 @@ print(f"(ii) theta = {theta.evalf():0.4f}")
 # 
 # The SymPy command for calculating the cross product of two vectors `u` and `v` is `u.cross(v)`. The following code calculates the solution to [example 3.5](cross-product-example).
 
-# In[3]:
+# In[2]:
 
 
 u = sym.Matrix([1, 2, 3])

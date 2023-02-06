@@ -272,23 +272,23 @@
 %     \draw [red,fill=red!20,opacity=0.5] (0,1.33) -- ++(345:3) -- ++(30:2) -- ++(165:3) -- ++(210:2);
 % \end{tikzpicture}
 
-% \begin{tikzpicture}
-%     \draw [blue,fill=blue!20,opacity=0.5] 
-%         ({2.4*cos(30)},{sin(30)}) -- 
-%         ({2.4*cos(120)},{sin(120)}) --
-%         ({2.4*cos(210)},{sin(210)}) -- 
-%         ({2.4*cos(300)},{sin(300)}) -- cycle;
-%     \draw [red,fill=red!20,opacity=0.5] 
-%         ({2.4*cos(60)},{sin(60)}) -- 
-%         ({2.4*cos(160)},{sin(150)}) --
-%         ({2.4*cos(240)},{sin(240)}) -- 
-%         ({2.4*cos(330)},{sin(330)}) -- cycle;
-%     \draw [green,fill=green!20,opacity=0.5] 
-%         ({2.4*cos(30)},{sin(30)+2}) -- 
-%         ({2.4*cos(120)},{sin(120)+2}) --
-%         ({2.4*cos(210)},{sin(210)+2}) -- 
-%         ({2.4*cos(300)},{sin(300)+2}) -- cycle;
-% \end{tikzpicture}
+\begin{tikzpicture}
+    \draw [blue,fill=blue!20,opacity=0.5] 
+        ({2.4*cos(30)},{sin(30)}) -- 
+        ({2.4*cos(120)},{sin(120)}) --
+        ({2.4*cos(210)},{sin(210)}) -- 
+        ({2.4*cos(300)},{sin(300)}) -- cycle;
+    \draw [red,fill=red!20,opacity=0.5] 
+        ({2.4*cos(60)},{sin(60)}) -- 
+        ({2.4*cos(160)},{sin(150)}) --
+        ({2.4*cos(240)},{sin(240)}) -- 
+        ({2.4*cos(330)},{sin(330)}) -- cycle;
+    \draw [green,fill=green!20,opacity=0.5] 
+        ({2.4*cos(30)},{sin(30)+2}) -- 
+        ({2.4*cos(120)},{sin(120)+2}) --
+        ({2.4*cos(210)},{sin(210)+2}) -- 
+        ({2.4*cos(300)},{sin(300)+2}) -- cycle;
+\end{tikzpicture}
 
 % \begin{tikzpicture}
 %     \draw [green,fill=green!20,opacity=0.5] 
@@ -369,17 +369,17 @@
 % \end{tikzpicture}
 
 % Subspaces
-\begin{tikzpicture}
-    \draw [fill=blue!10] (0, 0) ellipse (3 and 2);
-    \draw [fill=red!10] (-1, 0) circle (1.5 and 1);
-    \node at (2, 2) {$V$};
-    \node at (0.75, 0.75) {$W$};
-    \node at (-1,0) {${0}$};
-    \node at (0,0) {${v}$};
-    \node at (-1,0.5) {${u}$};
-    \node at (-2,0) {$\alpha {u}$};
-    \node at (-1,-0.5) {${u} + {v}$};
-\end{tikzpicture}
+% \begin{tikzpicture}
+%     \draw [fill=blue!10] (0, 0) ellipse (3 and 2);
+%     \draw [fill=red!10] (-1, 0) circle (1.5 and 1);
+%     \node at (2, 2) {$V$};
+%     \node at (0.75, 0.75) {$W$};
+%     \node at (-1,0) {$\mathbf{0}$};
+%     \node at (0,0) {$\mathbf{v}$};
+%     \node at (-1,0.5) {$\mathbf{u}$};
+%     \node at (-2,0) {$\alpha \mathbf{u}$};
+%     \node at (-1,-0.5) {$\mathbf{u} + \mathbf{v}$};
+% \end{tikzpicture}
 
 % Change of basis
 % \begin{tikzpicture}

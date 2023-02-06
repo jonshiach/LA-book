@@ -420,7 +420,7 @@ display(Ab)
 # The following code defines a function called `backsub()` which performs back substitution on the matrix `A` which is in row echelon form. 
 # (backsub-code)=
 
-# In[5]:
+# In[3]:
 
 
 def backsub(A):
@@ -436,7 +436,7 @@ def backsub(A):
 
 # This is then used to calculate the solution to the linear system of equations.
 
-# In[6]:
+# In[4]:
 
 
 # Calculate solution using back substitution
