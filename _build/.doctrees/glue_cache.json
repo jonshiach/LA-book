@@ -1,21 +1,5 @@
 {
   "2_Systems_of_Linear_Equations\\2.7_Consistent_and_inconsistent_systems": {
-    "consistent_system_plot": {
-      "output_type": "display_data",
-      "metadata": {
-        "scrapbook": {
-          "name": "consistent_system_plot",
-          "mime_prefix": "application/papermill.record/"
-        },
-        "filenames": {
-          "image/png": "C:\\Users\\jonsh\\OneDrive - MMU\\Documents\\2022_2023\\Linear Algebra and Programming Skills\\LA-book\\_build\\jupyter_execute\\2_Systems_of_Linear_Equations\\2.7_Consistent_and_inconsistent_systems_2_1.png"
-        }
-      },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 800x600 with 1 Axes>",
-        "application/papermill.record/image/png": null
-      }
-    },
     "inconsistent_system_plot": {
       "output_type": "display_data",
       "metadata": {
@@ -41,6 +25,22 @@
         },
         "filenames": {
           "image/png": "C:\\Users\\jonsh\\OneDrive - MMU\\Documents\\2022_2023\\Linear Algebra and Programming Skills\\LA-book\\_build\\jupyter_execute\\2_Systems_of_Linear_Equations\\2.7_Consistent_and_inconsistent_systems_2_5.png"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "<Figure size 800x600 with 1 Axes>",
+        "application/papermill.record/image/png": null
+      }
+    },
+    "consistent_system_plot": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "consistent_system_plot",
+          "mime_prefix": "application/papermill.record/"
+        },
+        "filenames": {
+          "image/png": "C:\\Users\\jonsh\\OneDrive - MMU\\Documents\\2022_2023\\Linear Algebra and Programming Skills\\LA-book\\_build\\jupyter_execute\\2_Systems_of_Linear_Equations\\2.7_Consistent_and_inconsistent_systems_2_1.png"
         }
       },
       "data": {
