@@ -1,0 +1,825 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>6. Linear Transformations &#8212; Linear Algebra Lecture Notes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/6.0_Linear_transformations';</script>
+    <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/6.0_Linear_transformations.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6.4. Composite linear transformations" href="6.1_Composite_transformations.html" />
+    <link rel="prev" title="5.6. Vector spaces exercises" href="5.5_Vector_spaces_exercises.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Linear Algebra Lecture Notes
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preliminaries</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0.1_Teaching_schedule.html">Teaching schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0.3_Mathematical_preliminaries.html">Mathematical preliminaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0.5_How_to_pass.html">How to pass the unit</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="1.0_Matrices.html">1. Matrices</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="1.1_Matrix_multiplication.html">1.3. Matrix multiplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.2_Special_matrices.html">1.4. Special matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.3_Determinants.html">1.5. Determinants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.4_Inverse_matrix.html">1.6. Inverse matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.5_Matrix_algebra.html">1.7. Matrix algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.9_Matrices_exercises.html">1.8. Matrices exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="2.1_Solving_using_inverse_matrix.html">2.2. Solving systems of linear equations using the inverse matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_Cramers_rule.html">2.3. Cramer’s rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_Gaussian_elimination.html">2.4. Gaussian elimination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4_Partial_pivoting.html">2.5. Partial pivoting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.6. Gauss-Jordan elimination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.7. Consistent, inconsistent and indeterminate systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.8. Homogeneous systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.9. Systems of linear equations exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Vector products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="4.0_Coordinate_geometry.html">4. Co-ordinate Geometry</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="4.1_Lines.html">4.2. Lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.2_Planes.html">4.3. Planes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.3_Shortest_distance_problems.html">4.4. Shortest distance problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate geometry exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="5.1_Subspaces.html">5.3. Subspaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.2_Linear_dependence.html">5.4. Linear dependence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.3_Basis.html">5.5. Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.5_Vector_spaces_exercises.html">5.6. Vector spaces exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">6. Linear Transformations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="6.1_Composite_transformations.html">6.4. Composite linear transformations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.2_Rotation_reflection_and_translation.html">6.5. Rotation, reflection and scaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.3_Translation.html">6.6. Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.7. Transformations exercises</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/pages/6.0_Linear_transformations.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Linear Transformations</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformation-matrices">6.1. Transformation matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-the-transformation-matrix-from-a-set-of-images">6.2. Finding the transformation matrix from a set of images</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inverse-linear-transformation">6.3. Inverse linear transformation</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <span class="target" id="linear-transformations-chapter"></span><section class="tex2jax_ignore mathjax_ignore" id="linear-transformations">
+<span id="index-0"></span><h1><span class="section-number">6. </span>Linear Transformations<a class="headerlink" href="#linear-transformations" title="Permalink to this heading">#</a></h1>
+<p>You will already be familiar with the use of <a href="https://en.wikipedia.org/wiki/Function_(mathematics)" target="_blank">functions</a> in mathematics to study sets and the <strong>mapping</strong> from a set of inputs set to another set of outputs. The notation used to denote functions is of the form <span class="math notranslate nohighlight">\(f: X \to Y\)</span> where <span class="math notranslate nohighlight">\(f\)</span> is the name of the function, <span class="math notranslate nohighlight">\(X\)</span> is the set of inputs known as the <strong>domain</strong> and <span class="math notranslate nohighlight">\(Y\)</span> is a member of the set of outputs known as the <strong>codomain</strong>. The mapping which defines the relationship between the domain and codmain is defined using <span class="math notranslate nohighlight">\(y = f(x)\)</span> where <span class="math notranslate nohighlight">\(x\)</span> is a member of the domain and <span class="math notranslate nohighlight">\(y\)</span> is a member of the codomain.</p>
+<p>In linear algebra we study the linear mapping of a set of vectors to another set of vectors so we define <span class="math notranslate nohighlight">\(T: V \to W\)</span> where <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(W\)</span> are vector spaces and the mapping from an input vector <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> to an output vector <span class="math notranslate nohighlight">\(\mathbf{w} \in W\)</span> is given by <span class="math notranslate nohighlight">\(\mathbf{w} = T(\mathbf{u})\)</span>.</p>
+<p>Linear transformations have lots of uses in mathematics and computing. A good example is in the field of computer graphics and computer games where they are fundamental to the manipulation and visualisation of three-dimensional objects.</p>
+<p>We begin with the formal definition of a linear transformation.</p>
+<div class="proof definition admonition" id="linear-transformation-definition">
+<p class="admonition-title"><span class="caption-number">Definition 6.1 </span> (Linear transformation)</p>
+<section class="definition-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(W\)</span> are two vector spaces over the same field <span class="math notranslate nohighlight">\(F\)</span> then by a <strong>linear transformation</strong> (or <strong>linear mapping</strong>) is a mapping <span class="math notranslate nohighlight">\(T: V \to W\)</span> that for any two vectors <span class="math notranslate nohighlight">\(\mathbf{u}, \mathbf{v} \in V\)</span> and any scalar <span class="math notranslate nohighlight">\(\alpha \in F\)</span> the following conditions hold</p>
+<ul class="simple">
+<li><p>addition operation: <span class="math notranslate nohighlight">\(T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})\)</span>;</p></li>
+<li><p>scalar multiplication:  <span class="math notranslate nohighlight">\(T(\alpha \mathbf{u}) = \alpha T(\mathbf{u})\)</span>.</p></li>
+</ul>
+<p>The result of applying a linear transformation to an object is known as the <strong>image</strong>.</p>
+</section>
+</div><p>For example, let <span class="math notranslate nohighlight">\(V = \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(W = \mathbb{R}^3\)</span> then <span class="math notranslate nohighlight">\(T : V \to W\)</span> defined by <span class="math notranslate nohighlight">\(T : (x, y) \mapsto (x, y, 0)\)</span> is a linear transformation. Let <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2), \mathbf{v} = (v_1, v_2) \in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span> then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    T \left( \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} + \begin{pmatrix} v_1 \\ v_2 \end{pmatrix} \right)
+    &amp;= T \begin{pmatrix} u_1 + v_1 \\ u_2 + v_2 \end{pmatrix}
+    = \begin{pmatrix} u_1 + v_1 \\ u_2 + v_2 \\ 0 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} u_1 \\ v_1 \\ 0 \end{pmatrix} + \begin{pmatrix} u_2 \\ v_2 \\ 0 \end{pmatrix}
+    = T \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} + T \begin{pmatrix} v_1 \\ v_2 \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+<p>Similarly</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} T \left( \alpha \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} \right)
+    = T \begin{pmatrix} \alpha u_1 \\ \alpha u_2 \end{pmatrix} 
+    = \begin{pmatrix} \alpha u_1 \\ \alpha u_2 \\ 0 \end{pmatrix}
+    = \alpha \begin{pmatrix} u_1 \\ u_2 \\ 0 \end{pmatrix}
+    = \alpha T \begin{pmatrix} u_1 \\ u_2 \end{pmatrix}. \end{split}\]</div>
+<p>To show whether a transformation is a linear transformation can combine both conditions from the <a class="reference internal" href="#linear-transformation-definition">definition of a linear transformation</a> to show that</p>
+<div class="math notranslate nohighlight" id="equation-linear-transformation-condition-equation">
+<span class="eqno">(6.1)<a class="headerlink" href="#equation-linear-transformation-condition-equation" title="Permalink to this equation">#</a></span>\[ T(\mathbf{u} + \alpha \mathbf{v}) = T(\mathbf{u}) + \alpha T(\mathbf{v}). \]</div>
+<div class="proof example admonition" id="linear-transformation-example">
+<p class="admonition-title"><span class="caption-number">Example 6.1 </span></p>
+<section class="example-content" id="proof-content">
+<p>Determine which of the following transformations are linear transformations</p>
+<p>(i)   <span class="math notranslate nohighlight">\(T: \mathbb{R}^3 \to \mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(T: (x, y, z) \mapsto (x, y)\)</span></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\((x_1, y_1, z_1), (x_2, y_2, z_2) \in \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span> then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    &amp;T \left( \begin{pmatrix} x_1 \\ y_1 \\ z_1 \end{pmatrix} + \alpha \begin{pmatrix} x_2 \\ y_2 \\ z_2 \end{pmatrix}
+    \right) \\
+    &amp;= T \begin{pmatrix} x_1 + \alpha x_2 \\ y_1 + \alpha y_2 \\ z_1 + \alpha z_2 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} x_1 + \alpha x_2 \\  y_1 + \alpha y_2 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} x_1 \\ y_1 \end{pmatrix} + \alpha \begin{pmatrix}  x_2 \\ y_2 \end{pmatrix} \\
+    &amp;= T\begin{pmatrix} x_1 \\ y_1 \\ z_1 \end{pmatrix} + \alpha T\begin{pmatrix} x_2 \\ y_2 \\ z_2 \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+<p class="sd-card-text">So <span class="math notranslate nohighlight">\(T: (x, y, z) \mapsto (x, y)\)</span> is a linear transformation.</p>
+</div>
+</details><p>(ii)   <span class="math notranslate nohighlight">\(T: \mathbb{R}^3 \to \mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(T: (x, y, z) \mapsto (x + 3, y)\)</span></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\((x_1, y_1, z_1)\)</span>, <span class="math notranslate nohighlight">\((x_2, y_2, z_2) \in \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span> then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    T \left( \begin{pmatrix} x_1 \\ y_1 \\ z_1 \end{pmatrix} + \alpha \begin{pmatrix} x_2 \\ y_2 \\ z_2 \end{pmatrix} \right)
+    &amp;= T \begin{pmatrix} x_1 + \alpha x_2 \\ y_1 + \alpha y_2 \\ z_1 + \alpha z_2 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} x_1 + \alpha x_2 + 3 \\ y_1 + \alpha y_2 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} x_1 + 3 \\ y_1 \end{pmatrix} + \begin{pmatrix} \alpha x_2 \\ \alpha y_2 \end{pmatrix} \\
+    &amp;\neq T\begin{pmatrix} x_1 \\ y_1 \\ z_1 \end{pmatrix} + \alpha T \begin{pmatrix} x_2 \\ y_2 \\ z_2 \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+<p class="sd-card-text">So <span class="math notranslate nohighlight">\(T: (x, y, z) \mapsto (x + 3, y)\)</span> is not a linear transformation. Note that we could have shown this by a counterexample, e.g., let <span class="math notranslate nohighlight">\((1, 0, 0), (2, 0, 0) \in \mathbb{R}^3\)</span> then by the first condition the <a class="reference internal" href="#linear-transformation-definition">definition of a linear transformation</a></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    T\left( \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} + \begin{pmatrix} 2 \\ 0 \\ 0 \end{pmatrix} \right)
+    &amp;= T\begin{pmatrix} 3 \\ 0 \\ 0 \end{pmatrix} 
+    = \begin{pmatrix} 6 \\ 0 \end{pmatrix}, \\
+    T \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} + T \begin{pmatrix} 2 \\ 0 \\ 0 \end{pmatrix}
+    &amp;= \begin{pmatrix} 4 \\ 0 \\ 0 \end{pmatrix} + \begin{pmatrix} 5 \\ 0 \\ 0 \end{pmatrix}
+    = \begin{pmatrix} 9 \\ 0 \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+</div>
+</details><p>(iii)   <span class="math notranslate nohighlight">\(T: P(\mathbb{R}) \to P(\mathbb{R})\)</span> defined by <span class="math notranslate nohighlight">\(T: T(x) \mapsto T(x) \dfrac{\mathrm{d}}{\mathrm{d}x} T(x)\)</span></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(x^2 \in P(\mathbb{R})\)</span> and <span class="math notranslate nohighlight">\(2 \in F\)</span> then</p>
+<div class="math notranslate nohighlight">
+\[ T(2x^2) = 2x^2(4x) = 8x^3 \neq 2T(x^2) = 2(x^2)(2x) = 4x^3, \]</div>
+<p class="sd-card-text">so <span class="math notranslate nohighlight">\(T: T(x) \mapsto T(x) \dfrac{\mathrm{d}}{\mathrm{d}x} T(x)\)</span> is not a linear transformation.</p>
+</div>
+</details></section>
+</div><span class="target" id="transformation-matrix-section"></span><section id="transformation-matrices">
+<span id="index-1"></span><h2><span class="section-number">6.1. </span>Transformation matrices<a class="headerlink" href="#transformation-matrices" title="Permalink to this heading">#</a></h2>
+<p>For convenience we tend to use matrices to represent linear transformations. Let <span class="math notranslate nohighlight">\(T: V \to W\)</span> be a linear transformation from the vector spaces <span class="math notranslate nohighlight">\(V\)</span> to <span class="math notranslate nohighlight">\(W\)</span>. If <span class="math notranslate nohighlight">\(\{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\}\)</span> is a basis for <span class="math notranslate nohighlight">\(V\)</span> then for a vector <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span></p>
+<div class="math notranslate nohighlight">
+\[ \mathbf{u} = u_1 \mathbf{v}_1 + u_2 \mathbf{v}_2 + \cdots + u_n \mathbf{v}_n, \]</div>
+<p>and by the <a class="reference internal" href="#linear-transformation-definition">definition of a linear transformation</a></p>
+<div class="math notranslate nohighlight">
+\[ T(\mathbf{u}) = u_1 T(\mathbf{v}_1) + u_2 T(\mathbf{v}_2) + \cdots + u_n T(\mathbf{v}_n), \]</div>
+<p>so <span class="math notranslate nohighlight">\(T(\mathbf{u})\)</span> depends on the vectors <span class="math notranslate nohighlight">\(T(\mathbf{v}_1), T(\mathbf{v}_2), \ldots, T(\mathbf{v}_n)\)</span>. We can write this as the matrix equation</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    T(\mathbf{u}) &amp;= \begin{pmatrix} 
+        \uparrow &amp; \uparrow &amp; &amp; \uparrow \\
+        T(\mathbf{v}_1) &amp; T(\mathbf{v}_2) &amp; \cdots &amp; T(\mathbf{v}_n) \\
+        \downarrow &amp; \downarrow &amp; &amp; \downarrow
+    \end{pmatrix}
+    \begin{pmatrix} u_1 \\ u_2 \\ \vdots \\ u_n \end{pmatrix} \\
+    &amp;= A \mathbf{u}.
+\end{align*} \end{split}\]</div>
+<p>In other words we can apply a linear transformation simply by multiplying <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> by a matrix <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<div class="proof definition admonition" id="transformation-matrix-definition">
+<p class="admonition-title"><span class="caption-number">Definition 6.2 </span> (Transformation matrix)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(T : V \to W\)</span> be a linear transformation and <span class="math notranslate nohighlight">\(A\)</span> be a matrix such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} A = \begin{pmatrix} 
+    \uparrow &amp; \uparrow &amp; &amp; \uparrow \\
+    T(\mathbf{v}_1) &amp; T(\mathbf{v}_2) &amp; \cdots &amp; T(\mathbf{v}_n) \\
+    \downarrow &amp; \downarrow &amp; &amp; \downarrow
+\end{pmatrix} \end{split}\]</div>
+<p>then</p>
+<div class="math notranslate nohighlight">
+\[ T(\mathbf{u}) = A\mathbf{u}. \]</div>
+<p><span class="math notranslate nohighlight">\(A\)</span> is said to be the <strong>matrix representation of the linear transformation</strong> <span class="math notranslate nohighlight">\(T\)</span> (also known as the <strong>transformation matrix</strong>).</p>
+</section>
+</div><div class="proof example admonition" id="transformation-matrix-example">
+<p class="admonition-title"><span class="caption-number">Example 6.2 </span></p>
+<section class="example-content" id="proof-content">
+<p>A linear transformation <span class="math notranslate nohighlight">\(T:\mathbb{R}^2 \to \mathbb{R}^2\)</span> is defined by <span class="math notranslate nohighlight">\(T: (x, y) \mapsto (3x + y, x + 2y)\)</span>. Calculate the transformation matrix and use it to calculate <span class="math notranslate nohighlight">\(T(1, 1)\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Since we are mapping from <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> the transformation matrix is</p>
+<div class="math notranslate nohighlight">
+\[ A = \begin{pmatrix} T(\mathbf{e}_1) &amp; T(\mathbf{e}_2) \end{pmatrix} \]</div>
+<p class="sd-card-text">Applying the transformation to the standard basis vectors</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    T(\mathbf{e}_1) = T\begin{pmatrix} 1 \\ 0 \end{pmatrix} 
+    = \begin{pmatrix} 3(1) + 0 \\ 1 + 2(0) \end{pmatrix} 
+    =  \begin{pmatrix} 3 \\ 1 \end{pmatrix}, \\
+    T(\mathbf{e}_2) = T\begin{pmatrix} 0 \\ 1 \end{pmatrix} 
+    = \begin{pmatrix} 3(0) + 1 \\ 0 + 2(1) \end{pmatrix} 
+    = \begin{pmatrix} 1 \\ 2 \end{pmatrix},
+\end{align*} \end{split}\]</div>
+<p class="sd-card-text">so the transformation matrix is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} A &amp;= \begin{pmatrix} 3 &amp; 1 \\ 1 &amp; 2 \end{pmatrix}. \end{split}\]</div>
+<p class="sd-card-text">Applying the transformation matrix to <span class="math notranslate nohighlight">\((1, 1)\)</span>
+$<span class="math notranslate nohighlight">\( T\begin{pmatrix} 1 \\ 1 \end{pmatrix} = A \cdot \begin{pmatrix} 1 \\ 1 \end{pmatrix} =  
+    \begin{pmatrix} 3 &amp; 1 \\ 1 &amp; 2 \end{pmatrix} 
+    \begin{pmatrix} 1 \\ 1 \end{pmatrix} = 
+    \begin{pmatrix} 4 \\ 3 \end{pmatrix}. \)</span>$</p>
+</div>
+</details></section>
+</div><p>The affects of the linear transformation from <a class="reference internal" href="#linear-transformation-example">Example 6.1</a> is illustrated in <a class="reference internal" href="#linear-transformation-figure"><span class="std std-numref">Fig. 6.1</span></a>. Note that the transformation <span class="math notranslate nohighlight">\(T\)</span> can be thought of as changing the basis of the vector space. The unit square with respect to the basis <span class="math notranslate nohighlight">\(\{\mathbf{e}_1, \mathbf{e}_1\}\)</span> has been transformed into a unit parallelogram with respect to the basis <span class="math notranslate nohighlight">\(\{ T(\mathbf{e}_1), T(\mathbf{e}_2)\}\)</span>.</p>
+<figure class="align-default" id="linear-transformation-figure">
+<a class="reference internal image-reference" href="../_images/linear_transformation.svg"><img alt="../_images/linear_transformation.svg" src="../_images/linear_transformation.svg" width="400" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.1 </span><span class="caption-text">The affect of applying a linear transformation <span class="math notranslate nohighlight">\(T: (x,y) \mapsto (3x + y, x + 2y)\)</span> to the vector <span class="math notranslate nohighlight">\((1,1)\)</span>.</span><a class="headerlink" href="#linear-transformation-figure" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="finding-the-transformation-matrix-from-a-set-of-images">
+<h2><span class="section-number">6.2. </span>Finding the transformation matrix from a set of images<a class="headerlink" href="#finding-the-transformation-matrix-from-a-set-of-images" title="Permalink to this heading">#</a></h2>
+<p>The calculation of the transformation matrix in <a class="reference internal" href="#transformation-matrix-example">Example 6.2</a> was straightforward as we knew what the transformation was. This will not always be a the case and we may know what the output (known as the image) of the transformation is but not the transformation itself. Consider a linear transformation <span class="math notranslate nohighlight">\(T: \mathbb{R}^n \to \mathbb{R}^m\)</span> applied to vectors <span class="math notranslate nohighlight">\(u_1, u_2, \ldots, u_n\)</span>. If <span class="math notranslate nohighlight">\(A\)</span> is the transformation matrix for <span class="math notranslate nohighlight">\(T\)</span> then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    A
+    \begin{pmatrix}
+        \uparrow &amp; \uparrow &amp; &amp; \uparrow \\
+        \mathbf{u}_1 &amp; \mathbf{u}_2 &amp; \cdots &amp; \mathbf{u}_n \\
+        \downarrow &amp; \downarrow &amp; &amp; \downarrow
+    \end{pmatrix} = 
+    \begin{pmatrix}
+        \uparrow &amp; \uparrow &amp; &amp; \uparrow \\
+        T(\mathbf{u}_1) &amp; T(\mathbf{u}_2) &amp; \cdots &amp; T(\mathbf{u}_n) \\
+        \downarrow &amp; \downarrow &amp; &amp; \downarrow
+    \end{pmatrix}
+\end{align*} \end{split}\]</div>
+<p>therefore</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    A &amp;=  
+    \begin{pmatrix}
+        \uparrow &amp; \uparrow &amp; &amp; \uparrow \\
+        T(\mathbf{u}_1) &amp; T(\mathbf{u}_2) &amp; \cdots &amp; T(\mathbf{u}_n) \\
+        \downarrow &amp; \downarrow &amp; &amp; \downarrow
+    \end{pmatrix}
+    \begin{pmatrix}
+        \uparrow &amp; \uparrow &amp; &amp; \uparrow \\
+        \mathbf{u}_1 &amp; \mathbf{u}_2 &amp; \cdots &amp; \mathbf{u}_n \\
+        \downarrow &amp; \downarrow &amp; &amp; \downarrow
+    \end{pmatrix}^{-1}
+\end{align*} \end{split}\]</div>
+<div class="proof theorem admonition" id="finding-transformation-matrix-theorem">
+<p class="admonition-title"><span class="caption-number">Theorem 6.1 </span> (Determining the linear transformation given the inputs and image vectors)</p>
+<section class="theorem-content" id="proof-content">
+<p>Given a linear transformation <span class="math notranslate nohighlight">\(T: \mathbb{R}^n \to \mathbb{R}^m\)</span> applied to a set of <span class="math notranslate nohighlight">\(n\)</span> vectors <span class="math notranslate nohighlight">\(\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_n\)</span> with known image vectors <span class="math notranslate nohighlight">\(T(\mathbf{u}_1), T(\mathbf{u}_2), \ldots, T(\mathbf{u}_n)\)</span> then the transformation matrix <span class="math notranslate nohighlight">\(A\)</span> for <span class="math notranslate nohighlight">\(T\)</span> is</p>
+<div class="math notranslate nohighlight" id="equation-determining-the-transformation-matrix">
+<span class="eqno">(6.2)<a class="headerlink" href="#equation-determining-the-transformation-matrix" title="Permalink to this equation">#</a></span>\[ A = (T(\mathbf{u}_1), T(\mathbf{u}_2), \ldots, T(\mathbf{u}_n)) \cdot (\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_n)^{-1}. \]</div>
+</section>
+</div><div class="proof example admonition" id="transformation-matrix-example-2">
+<p class="admonition-title"><span class="caption-number">Example 6.3 </span></p>
+<section class="example-content" id="proof-content">
+<p>Determine the transformation matrix <span class="math notranslate nohighlight">\(A\)</span> for the linear transformation <span class="math notranslate nohighlight">\(T\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    T\begin{pmatrix} 1 \\ 1 \end{pmatrix} &amp;= \begin{pmatrix} 4 \\ 3 \end{pmatrix}, &amp;
+    T\begin{pmatrix} 1 \\ 2 \end{pmatrix} &amp;= \begin{pmatrix} 5 \\ 5 \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Using Gauss-Jordan elimination to determine the inverse of <span class="math notranslate nohighlight">\((\mathbf{u}_1, \mathbf{u}_2)\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    &amp; \left( \begin{array}{rr|rr} 
+        1 &amp; 1 &amp; 1 &amp; 0 \\
+        1 &amp; 2 &amp; 0 &amp; 1
+    \end{array} \right)
+    \begin{array}{l} \\ R_2 - R_1 \end{array}  \\ \\ 
+    \longrightarrow \quad &amp;
+    \left( \begin{array}{rr|rr} 
+        1 &amp; 1 &amp; 1 &amp; 0 \\
+        0 &amp; 1 &amp; -1 &amp; 1
+    \end{array} \right)
+    \begin{array}{l} R_1 - R_2 \\ \phantom{x} \end{array}  \\ \\
+    \longrightarrow \quad &amp;
+    \left( \begin{array}{rr|rr} 
+        1 &amp; 0 &amp; 2 &amp; -1 \\
+        0 &amp; 1 &amp; -1 &amp; 1
+    \end{array} \right)
+\end{align*} \end{split}\]</div>
+<p class="sd-card-text">so <span class="math notranslate nohighlight">\((\mathbf{u}_1, \mathbf{u}_2)^{-1} = \begin{pmatrix} 2 &amp; -1 \\ -1 &amp; 1 \end{pmatrix}\)</span>. Right multiplying the image matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    A &amp;= \begin{pmatrix} 4 &amp; 5 \\ 3 &amp; 5 \end{pmatrix} \begin{pmatrix} 2 &amp; -1 \\ -1 &amp; 1 \end{pmatrix}
+    = \begin{pmatrix} 3 &amp; 1 \\ 1 &amp; 2 \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+<p class="sd-card-text">This is the transformation matrix from <a class="reference internal" href="#transformation-matrix-example">Example 6.2</a>.</p>
+</div>
+</details></section>
+</div></section>
+<section id="inverse-linear-transformation">
+<span id="index-2"></span><h2><span class="section-number">6.3. </span>Inverse linear transformation<a class="headerlink" href="#inverse-linear-transformation" title="Permalink to this heading">#</a></h2>
+<div class="proof definition admonition" id="inverse-transformation-definition">
+<p class="admonition-title"><span class="caption-number">Definition 6.3 </span> (Inverse linear transformation)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(T: V \to W\)</span> be a linear transformation with the transformation matrix <span class="math notranslate nohighlight">\(A\)</span> then <span class="math notranslate nohighlight">\(T\)</span> has an inverse transformation denoted by <span class="math notranslate nohighlight">\(T^{-1}: W \to V\)</span> which reverses the affects of <span class="math notranslate nohighlight">\(T\)</span>. If <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v} \in W\)</span> then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \mathbf{v} &amp;= A \mathbf{u} \\
+    \therefore \mathbf{u} &amp; = A^{-1}\mathbf{v},
+\end{align*} \end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(A^{-1}\)</span> is the transformation matrix for <span class="math notranslate nohighlight">\(T^{-1}\)</span>.</p>
+</section>
+</div><div class="proof example admonition" id="inverse-transformation-example">
+<p class="admonition-title"><span class="caption-number">Example 6.4 </span></p>
+<section class="example-content" id="proof-content">
+<p>Determine the inverse of the transformation <span class="math notranslate nohighlight">\(T: \mathbb{R}^2 \to \mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(T(x, y) \mapsto (3 x + y, x + 2 y)\)</span> and calculate <span class="math notranslate nohighlight">\(T^{-1}(4, 3)\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">We saw in <a class="reference internal" href="#transformation-matrix-example">Example 6.2</a> that the transformation matrix for <span class="math notranslate nohighlight">\(T\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} A = \begin{pmatrix} 3 &amp; 1 \\ 1 &amp; 2 \end{pmatrix}, \end{split}\]</div>
+<p class="sd-card-text">which has the inverse</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} A^{-1} = \begin{pmatrix} \frac{2}{5} &amp; -\frac{1}{5} \\ -\frac{1}{5} &amp; \frac{3}{5} \end{pmatrix}. \end{split}\]</div>
+<p class="sd-card-text">Determining the inverse transformation</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    T^{-1}\begin{pmatrix} x \\ y \end{pmatrix} &amp;= A^{-1} \cdot \begin{pmatrix} x \\ y \end{pmatrix} =
+    \begin{pmatrix} \frac{2}{5} &amp; -\frac{1}{5} \\ -\frac{1}{5} &amp; \frac{3}{5} \end{pmatrix}
+    \begin{pmatrix} x \\ y \end{pmatrix} \\
+    &amp;= \begin{pmatrix} \frac{2}{5}x - \frac{1}{5}y \\ -\frac{1}{5}x + \frac{3}{5}y \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+<p class="sd-card-text">Calculating <span class="math notranslate nohighlight">\(T^{-1}(4, 3)\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    A^{-1} \begin{pmatrix} 4 \\ 3 \end{pmatrix} &amp;=
+    \begin{pmatrix} \frac{2}{5} &amp; -\frac{1}{5} \\ -\frac{1}{5} &amp; \frac{3}{5} \end{pmatrix}
+    \begin{pmatrix} 4 \\ 3 \end{pmatrix} 
+    = \begin{pmatrix} 1 \\ 1 \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+</div>
+</details></section>
+</div></section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./pages"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="5.5_Vector_spaces_exercises.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">5.6. </span>Vector spaces exercises</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="6.1_Composite_transformations.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6.4. </span>Composite linear transformations</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformation-matrices">6.1. Transformation matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-the-transformation-matrix-from-a-set-of-images">6.2. Finding the transformation matrix from a set of images</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inverse-linear-transformation">6.3. Inverse linear transformation</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Jon Shiach
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
