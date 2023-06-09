@@ -3,7 +3,7 @@
 
 title: Linear Algebra Lecture Notes
 author: Dr Jon Shiach
-logo: Images/MMU_logo.png
+logo: images/logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -21,14 +21,14 @@ latex:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/drjonshiach/Linear_algebra_book  # Online location of your book
+  url: https://github.com/jonshiach/Linear_algebra_book  # Online location of your book
   path_to_book: /  # Optional path to your book, relative to the repository root
   branch: main  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
-  favicon                   : "/Images/favicon.ico"  # A path to a favicon image
+  favicon                   : "/images/favicon.ico"  # A path to a favicon image
   use_edit_page_button      : false  # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
   use_repository_button     : false  # Whether to add a link to your repository button
   use_issues_button         : false  # Whether to add an "open an issue" button
@@ -59,7 +59,12 @@ sphinx:
   config:
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     # bibtex_reference_style: author_year
-    html_favicon: "Images/favicon.ico"
+    html_favicon: "images/favicon.ico"
+  extra_extensions:
+    - sphinx_proof
+    - sphinx_exercise
+
+only_build_toc_files: true
 
 exclude_patterns: [README.md]
 

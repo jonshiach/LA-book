@@ -1,0 +1,1793 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proof Index &#8212; Linear Algebra Lecture Notes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'prf-prf';</script>
+    <link rel="canonical" href="https://jonshiach.github.io/LA-book/prf-prf.html" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+
+    <script>
+      DOCUMENTATION_OPTIONS.COLLAPSE_INDEX = true;
+    </script>
+
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Linear Algebra Lecture Notes
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preliminaries</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="pages/0.1_Teaching_schedule.html">Teaching schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/0.3_Mathematical_preliminaries.html">Mathematical preliminaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/0.5_How_to_pass.html">How to pass the unit</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="pages/1.0_Matrices.html">1. Matrices</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="pages/1.1_Matrix_multiplication.html">1.3. Matrix multiplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/1.2_Special_matrices.html">1.4. Special matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/1.3_Determinants.html">1.5. Determinants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/1.4_Inverse_matrix.html">1.6. Inverse matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/1.5_Matrix_algebra.html">1.7. Matrix algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/1.9_Matrices_exercises.html">1.8. Matrices exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="pages/2.0_Linear_systems.html">2. Systems of Linear Equations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="pages/2.1_Solving_using_inverse_matrix.html">2.2. Solving systems of linear equations using the inverse matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/2.2_Cramers_rule.html">2.3. Cramer’s rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/2.3_Gaussian_elimination.html">2.4. Gaussian elimination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/2.4_Partial_pivoting.html">2.5. Partial pivoting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/2.5_Gauss_Jordan_elimination.html">2.6. Gauss-Jordan elimination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/2.6_Consistent_systems.html">2.7. Consistent, inconsistent and indeterminate systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/2.7_Homogeneous_systems.html">2.8. Homogeneous systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/2.9_Linear_systems_exercises.html">2.9. Systems of linear equations exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="pages/3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="pages/3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/3.3_Vector_products.html">3.6. Vector products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="pages/4.0_Coordinate_geometry.html">4. Co-ordinate Geometry</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="pages/4.1_Lines.html">4.2. Lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/4.2_Planes.html">4.3. Planes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/4.3_Shortest_distance_problems.html">4.4. Shortest distance problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate geometry exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="pages/5.0_Vector_spaces.html">5. Vector spaces</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="pages/5.1_Subspaces.html">5.3. Subspaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/5.2_Linear_dependence.html">5.4. Linear dependence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/5.3_Basis.html">5.5. Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/5.5_Vector_spaces_exercises.html">5.6. Vector spaces exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="pages/6.0_Linear_transformations.html">6. Linear Transformations</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="pages/6.1_Composite_transformations.html">6.4. Composite linear transformations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/6.2_Rotation_reflection_and_translation.html">6.5. Rotation, reflection and scaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/6.3_Translation.html">6.6. Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pages/6.5_Linear_transformations_exercises.html">6.7. Transformations exercises</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="genindex.html">Index</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+
+   <h1>Proof Index</h1>
+
+   <div class="modindex-jumpbox">
+   <a href="#cap-2x2-determinant-definition"><strong>2x2-determinant-definition</strong></a> | 
+   <a href="#cap-2x2-determinant-example"><strong>2x2-determinant-example</strong></a> | 
+   <a href="#cap-4x4-determinant-example"><strong>4x4-determinant-example</strong></a> | 
+   <a href="#cap-adjoint-definition"><strong>adjoint-definition</strong></a> | 
+   <a href="#cap-adjoint-determinant-formula-theorem"><strong>adjoint-determinant-formula-theorem</strong></a> | 
+   <a href="#cap-adjoint-example"><strong>adjoint-example</strong></a> | 
+   <a href="#cap-augmented-matrix-definition"><strong>augmented-matrix-definition</strong></a> | 
+   <a href="#cap-basis-definition"><strong>basis-definition</strong></a> | 
+   <a href="#cap-basis-example"><strong>basis-example</strong></a> | 
+   <a href="#cap-basis-vectors-example"><strong>basis-vectors-example</strong></a> | 
+   <a href="#cap-binary-operation-definition"><strong>binary-operation-definition</strong></a> | 
+   <a href="#cap-change-of-basis-example"><strong>change-of-basis-example</strong></a> | 
+   <a href="#cap-change-of-basis-matrix-definition"><strong>change-of-basis-matrix-definition</strong></a> | 
+   <a href="#cap-cofactor-definition"><strong>cofactor-definition</strong></a> | 
+   <a href="#cap-composite-transformation-definition"><strong>composite-transformation-definition</strong></a> | 
+   <a href="#cap-composite-transformation-example"><strong>composite-transformation-example</strong></a> | 
+   <a href="#cap-composite-transformation-matrices-theorem"><strong>composite-transformation-matrices-theorem</strong></a> | 
+   <a href="#cap-composite-transformation-matrix-example"><strong>composite-transformation-matrix-example</strong></a> | 
+   <a href="#cap-consistent-inconsistent-and-indeterminate-systems-definition"><strong>consistent-inconsistent-and-indeterminate-systems-definition</strong></a> | 
+   <a href="#cap-consistent-system-theorem"><strong>consistent-system-theorem</strong></a> | 
+   <a href="#cap-cramers-rule-example"><strong>cramers-rule-example</strong></a> | 
+   <a href="#cap-cramers-rule-theorem"><strong>cramers-rule-theorem</strong></a> | 
+   <a href="#cap-cross-product-definition"><strong>cross-product-definition</strong></a> | 
+   <a href="#cap-cross-product-example"><strong>cross-product-example</strong></a> | 
+   <a href="#cap-cross-product-properties-theorem"><strong>cross-product-properties-theorem</strong></a> | 
+   <a href="#cap-definition-0"><strong>definition-0</strong></a> | 
+   <a href="#cap-diagonal-matrix-definition"><strong>diagonal-matrix-definition</strong></a> | 
+   <a href="#cap-dot-product-definition"><strong>dot-product-definition</strong></a> | 
+   <a href="#cap-dot-product-example"><strong>dot-product-example</strong></a> | 
+   <a href="#cap-dot-product-properties-theorem"><strong>dot-product-properties-theorem</strong></a> | 
+   <a href="#cap-ero-definition"><strong>ero-definition</strong></a> | 
+   <a href="#cap-example-2"><strong>example-2</strong></a> | 
+   <a href="#cap-field-definition"><strong>field-definition</strong></a> | 
+   <a href="#cap-finding-transformation-matrix-theorem"><strong>finding-transformation-matrix-theorem</strong></a> | 
+   <a href="#cap-ge-algorithm"><strong>ge-algorithm</strong></a> | 
+   <a href="#cap-ge-example"><strong>ge-example</strong></a> | 
+   <a href="#cap-ge-pp-algorithm"><strong>ge-pp-algorithm</strong></a> | 
+   <a href="#cap-gje-algorithm"><strong>gje-algorithm</strong></a> | 
+   <a href="#cap-gje-example"><strong>gje-example</strong></a> | 
+   <a href="#cap-homogeneous-coordinates-definition"><strong>homogeneous-coordinates-definition</strong></a> | 
+   <a href="#cap-homogeneous-system-definition"><strong>homogeneous-system-definition</strong></a> | 
+   <a href="#cap-homogeneous-systems-example"><strong>homogeneous-systems-example</strong></a> | 
+   <a href="#cap-identity-matrix-definition"><strong>identity-matrix-definition</strong></a> | 
+   <a href="#cap-identity-matrix-example"><strong>identity-matrix-example</strong></a> | 
+   <a href="#cap-inconsistent-system-theorem"><strong>inconsistent-system-theorem</strong></a> | 
+   <a href="#cap-indeterminate-system-theorem"><strong>indeterminate-system-theorem</strong></a> | 
+   <a href="#cap-intersecting-planes-example"><strong>intersecting-planes-example</strong></a> | 
+   <a href="#cap-inverse-matrix-definition"><strong>inverse-matrix-definition</strong></a> | 
+   <a href="#cap-inverse-matrix-example-1"><strong>inverse-matrix-example-1</strong></a> | 
+   <a href="#cap-inverse-matrix-properties-theorem"><strong>inverse-matrix-properties-theorem</strong></a> | 
+   <a href="#cap-inverse-transformation-definition"><strong>inverse-transformation-definition</strong></a> | 
+   <a href="#cap-inverse-transformation-example"><strong>inverse-transformation-example</strong></a> | 
+   <a href="#cap-line-line-distance-example"><strong>line-line-distance-example</strong></a> | 
+   <a href="#cap-line-line-distance-theorem"><strong>line-line-distance-theorem</strong></a> | 
+   <a href="#cap-line-line-intersection-definition"><strong>line-line-intersection-definition</strong></a> | 
+   <a href="#cap-line-line-intersection-example"><strong>line-line-intersection-example</strong></a> | 
+   <a href="#cap-line-vector-equation-example"><strong>line-vector-equation-example</strong></a> | 
+   <a href="#cap-linear-combination-of-vectors-definition"><strong>linear-combination-of-vectors-definition</strong></a> | 
+   <a href="#cap-linear-combination-of-vectors-example"><strong>linear-combination-of-vectors-example</strong></a> | 
+   <a href="#cap-linear-dependence-definition"><strong>linear-dependence-definition</strong></a> | 
+   <a href="#cap-linear-dependence-equation"><strong>linear-dependence-equation</strong></a> | 
+   <a href="#cap-linear-transformation-definition"><strong>linear-transformation-definition</strong></a> | 
+   <a href="#cap-linear-transformation-example"><strong>linear-transformation-example</strong></a> | 
+   <a href="#cap-magnitude-definition"><strong>magnitude-definition</strong></a> | 
+   <a href="#cap-magnitude-example"><strong>magnitude-example</strong></a> | 
+   <a href="#cap-matrix-addition-definition"><strong>matrix-addition-definition</strong></a> | 
+   <a href="#cap-matrix-addition-example"><strong>matrix-addition-example</strong></a> | 
+   <a href="#cap-matrix-algebra-example"><strong>matrix-algebra-example</strong></a> | 
+   <a href="#cap-matrix-dimension-definition"><strong>matrix-dimension-definition</strong></a> | 
+   <a href="#cap-matrix-dimension-example"><strong>matrix-dimension-example</strong></a> | 
+   <a href="#cap-matrix-equality-definition"><strong>matrix-equality-definition</strong></a> | 
+   <a href="#cap-matrix-exponents-definition"><strong>matrix-exponents-definition</strong></a> | 
+   <a href="#cap-matrix-exponents-example"><strong>matrix-exponents-example</strong></a> | 
+   <a href="#cap-matrix-indexing-example"><strong>matrix-indexing-example</strong></a> | 
+   <a href="#cap-matrix-inverse-example-2"><strong>matrix-inverse-example-2</strong></a> | 
+   <a href="#cap-matrix-multiplication-definition"><strong>matrix-multiplication-definition</strong></a> | 
+   <a href="#cap-matrix-multiplication-example"><strong>matrix-multiplication-example</strong></a> | 
+   <a href="#cap-matrix-transpose-definition"><strong>matrix-transpose-definition</strong></a> | 
+   <a href="#cap-matrix-transpose-example"><strong>matrix-transpose-example</strong></a> | 
+   <a href="#cap-minor-definition"><strong>minor-definition</strong></a> | 
+   <a href="#cap-minor-example"><strong>minor-example</strong></a> | 
+   <a href="#cap-non-subspace-example"><strong>non-subspace-example</strong></a> | 
+   <a href="#cap-non-vector-space-example"><strong>non-vector-space-example</strong></a> | 
+   <a href="#cap-normal-vector-definition"><strong>normal-vector-definition</strong></a> | 
+   <a href="#cap-normalising-a-vector-example"><strong>normalising-a-vector-example</strong></a> | 
+   <a href="#cap-normalising-a-vector-proposition"><strong>normalising-a-vector-proposition</strong></a> | 
+   <a href="#cap-nxn-determinant-definition"><strong>nxn-determinant-definition</strong></a> | 
+   <a href="#cap-nxn-determinant-example"><strong>nxn-determinant-example</strong></a> | 
+   <a href="#cap-orthogonal-basis-definition"><strong>orthogonal-basis-definition</strong></a> | 
+   <a href="#cap-orthonormal-basis-definition"><strong>orthonormal-basis-definition</strong></a> | 
+   <a href="#cap-parallel-lines-definition"><strong>parallel-lines-definition</strong></a> | 
+   <a href="#cap-parallel-lines-example"><strong>parallel-lines-example</strong></a> | 
+   <a href="#cap-partial-pivoting-example"><strong>partial-pivoting-example</strong></a> | 
+   <a href="#cap-perpendicular-lines-definition"><strong>perpendicular-lines-definition</strong></a> | 
+   <a href="#cap-perpendicular-lines-example"><strong>perpendicular-lines-example</strong></a> | 
+   <a href="#cap-plane-vector-equation"><strong>plane-vector-equation</strong></a> | 
+   <a href="#cap-point-line-distance-example"><strong>point-line-distance-example</strong></a> | 
+   <a href="#cap-point-line-distance-theorem"><strong>point-line-distance-theorem</strong></a> | 
+   <a href="#cap-point-normal-definition"><strong>point-normal-definition</strong></a> | 
+   <a href="#cap-point-normal-example"><strong>point-normal-example</strong></a> | 
+   <a href="#cap-properties-of-determinants-theorem"><strong>properties-of-determinants-theorem</strong></a> | 
+   <a href="#cap-properties-of-matrix-addition-theorem"><strong>properties-of-matrix-addition-theorem</strong></a> | 
+   <a href="#cap-properties-of-matrix-transpose-theorem"><strong>properties-of-matrix-transpose-theorem</strong></a> | 
+   <a href="#cap-properties-of-scalar-multiplication-of-vectors"><strong>properties-of-scalar-multiplication-of-vectors</strong></a> | 
+   <a href="#cap-properties-of-the-identity-matrix"><strong>properties-of-the-identity-matrix</strong></a> | 
+   <a href="#cap-properties-of-vector-spaces-theorem"><strong>properties-of-vector-spaces-theorem</strong></a> | 
+   <a href="#cap-rank-definition"><strong>rank-definition</strong></a> | 
+   <a href="#cap-rank-example"><strong>rank-example</strong></a> | 
+   <a href="#cap-real-numbers-vector-space-example"><strong>real-numbers-vector-space-example</strong></a> | 
+   <a href="#cap-ref-definition"><strong>ref-definition</strong></a> | 
+   <a href="#cap-reflection-definition"><strong>reflection-definition</strong></a> | 
+   <a href="#cap-reflection-example"><strong>reflection-example</strong></a> | 
+   <a href="#cap-reflection-theorem"><strong>reflection-theorem</strong></a> | 
+   <a href="#cap-rotation-definition"><strong>rotation-definition</strong></a> | 
+   <a href="#cap-rotation-example"><strong>rotation-example</strong></a> | 
+   <a href="#cap-rotation-in-R2-theorem"><strong>rotation-in-R2-theorem</strong></a> | 
+   <a href="#cap-rotation-scaling-and-translating-example"><strong>rotation-scaling-and-translating-example</strong></a> | 
+   <a href="#cap-rref-definition"><strong>rref-definition</strong></a> | 
+   <a href="#cap-scalar-multiplication-definition"><strong>scalar-multiplication-definition</strong></a> | 
+   <a href="#cap-scalar-multiplication-example"><strong>scalar-multiplication-example</strong></a> | 
+   <a href="#cap-scalar-multiplication-of-a-vector-definition"><strong>scalar-multiplication-of-a-vector-definition</strong></a> | 
+   <a href="#cap-scaling-definition"><strong>scaling-definition</strong></a> | 
+   <a href="#cap-scaling-example"><strong>scaling-example</strong></a> | 
+   <a href="#cap-scaling-theorem"><strong>scaling-theorem</strong></a> | 
+   <a href="#cap-skew-lines-definition"><strong>skew-lines-definition</strong></a> | 
+   <a href="#cap-skew-lines-example"><strong>skew-lines-example</strong></a> | 
+   <a href="#cap-solution-by-inverse-example"><strong>solution-by-inverse-example</strong></a> | 
+   <a href="#cap-solution-using-inverse-matrix-theorem"><strong>solution-using-inverse-matrix-theorem</strong></a> | 
+   <a href="#cap-spanning-set-definition"><strong>spanning-set-definition</strong></a> | 
+   <a href="#cap-spanning-set-example"><strong>spanning-set-example</strong></a> | 
+   <a href="#cap-square-matrix-definition"><strong>square-matrix-definition</strong></a> | 
+   <a href="#cap-subspace-condition-theorem"><strong>subspace-condition-theorem</strong></a> | 
+   <a href="#cap-subspace-definition"><strong>subspace-definition</strong></a> | 
+   <a href="#cap-subspace-example"><strong>subspace-example</strong></a> | 
+   <a href="#cap-system-of-linear-equation-definition"><strong>system-of-linear-equation-definition</strong></a> | 
+   <a href="#cap-system-of-linear-equations-matrix-form-example"><strong>system-of-linear-equations-matrix-form-example</strong></a> | 
+   <a href="#cap-theorem-1"><strong>theorem-1</strong></a> | 
+   <a href="#cap-theorem-8"><strong>theorem-8</strong></a> | 
+   <a href="#cap-transformation-matrix-definition"><strong>transformation-matrix-definition</strong></a> | 
+   <a href="#cap-transformation-matrix-example"><strong>transformation-matrix-example</strong></a> | 
+   <a href="#cap-transformation-matrix-example-2"><strong>transformation-matrix-example-2</strong></a> | 
+   <a href="#cap-translation-definition"><strong>translation-definition</strong></a> | 
+   <a href="#cap-translation-example"><strong>translation-example</strong></a> | 
+   <a href="#cap-translation-theorem"><strong>translation-theorem</strong></a> | 
+   <a href="#cap-unit-vector-definition"><strong>unit-vector-definition</strong></a> | 
+   <a href="#cap-vector-addition-definition"><strong>vector-addition-definition</strong></a> | 
+   <a href="#cap-vector-equality-definition"><strong>vector-equality-definition</strong></a> | 
+   <a href="#cap-vector-equation-of-a-line-definition"><strong>vector-equation-of-a-line-definition</strong></a> | 
+   <a href="#cap-vector-example"><strong>vector-example</strong></a> | 
+   <a href="#cap-vector-space-axioms"><strong>vector-space-axioms</strong></a> | 
+   <a href="#cap-vector-space-definition"><strong>vector-space-definition</strong></a> | 
+   <a href="#cap-vector-space-dimension-definition"><strong>vector-space-dimension-definition</strong></a> | 
+   <a href="#cap-zero-matrix-definition"><strong>zero-matrix-definition</strong></a> | 
+   <a href="#cap-zero-matrix-theorem"><strong>zero-matrix-theorem</strong></a>
+   </div>
+
+   <table class="indextable modindextable">
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-2x2-determinant-definition"><td></td><td>
+       <strong>2x2-determinant-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.3_Determinants.html#2x2-determinant-definition"><code class="xref">2x2-determinant-definition</code></a> <em>(pages/1.3_Determinants)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-2x2-determinant-example"><td></td><td>
+       <strong>2x2-determinant-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.3_Determinants.html#2x2-determinant-example"><code class="xref">2x2-determinant-example</code></a> <em>(pages/1.3_Determinants)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-4x4-determinant-example"><td></td><td>
+       <strong>4x4-determinant-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.3_Determinants.html#4x4-determinant-example"><code class="xref">4x4-determinant-example</code></a> <em>(pages/1.3_Determinants)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-adjoint-definition"><td></td><td>
+       <strong>adjoint-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.4_Inverse_matrix.html#adjoint-definition"><code class="xref">adjoint-definition</code></a> <em>(pages/1.4_Inverse_matrix)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-adjoint-determinant-formula-theorem"><td></td><td>
+       <strong>adjoint-determinant-formula-theorem</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.4_Inverse_matrix.html#adjoint-determinant-formula-theorem"><code class="xref">adjoint-determinant-formula-theorem</code></a> <em>(pages/1.4_Inverse_matrix)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-adjoint-example"><td></td><td>
+       <strong>adjoint-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.4_Inverse_matrix.html#adjoint-example"><code class="xref">adjoint-example</code></a> <em>(pages/1.4_Inverse_matrix)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-augmented-matrix-definition"><td></td><td>
+       <strong>augmented-matrix-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/2.3_Gaussian_elimination.html#augmented-matrix-definition"><code class="xref">augmented-matrix-definition</code></a> <em>(pages/2.3_Gaussian_elimination)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-basis-definition"><td></td><td>
+       <strong>basis-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/5.3_Basis.html#basis-definition"><code class="xref">basis-definition</code></a> <em>(pages/5.3_Basis)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-basis-example"><td></td><td>
+       <strong>basis-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/5.3_Basis.html#basis-example"><code class="xref">basis-example</code></a> <em>(pages/5.3_Basis)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-basis-vectors-example"><td></td><td>
+       <strong>basis-vectors-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/3.4_Linear_combinations.html#basis-vectors-example"><code class="xref">basis-vectors-example</code></a> <em>(pages/3.4_Linear_combinations)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-binary-operation-definition"><td></td><td>
+       <strong>binary-operation-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/5.0_Vector_spaces.html#binary-operation-definition"><code class="xref">binary-operation-definition</code></a> <em>(pages/5.0_Vector_spaces)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-change-of-basis-example"><td></td><td>
+       <strong>change-of-basis-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/5.3_Basis.html#change-of-basis-example"><code class="xref">change-of-basis-example</code></a> <em>(pages/5.3_Basis)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-change-of-basis-matrix-definition"><td></td><td>
+       <strong>change-of-basis-matrix-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/5.3_Basis.html#change-of-basis-matrix-definition"><code class="xref">change-of-basis-matrix-definition</code></a> <em>(pages/5.3_Basis)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cofactor-definition"><td></td><td>
+       <strong>cofactor-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.3_Determinants.html#cofactor-definition"><code class="xref">cofactor-definition</code></a> <em>(pages/1.3_Determinants)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-composite-transformation-definition"><td></td><td>
+       <strong>composite-transformation-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.1_Composite_transformations.html#composite-transformation-definition"><code class="xref">composite-transformation-definition</code></a> <em>(pages/6.1_Composite_transformations)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-composite-transformation-example"><td></td><td>
+       <strong>composite-transformation-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.1_Composite_transformations.html#composite-transformation-example"><code class="xref">composite-transformation-example</code></a> <em>(pages/6.1_Composite_transformations)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-composite-transformation-matrices-theorem"><td></td><td>
+       <strong>composite-transformation-matrices-theorem</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.1_Composite_transformations.html#composite-transformation-matrices-theorem"><code class="xref">composite-transformation-matrices-theorem</code></a> <em>(pages/6.1_Composite_transformations)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-composite-transformation-matrix-example"><td></td><td>
+       <strong>composite-transformation-matrix-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.1_Composite_transformations.html#composite-transformation-matrix-example"><code class="xref">composite-transformation-matrix-example</code></a> <em>(pages/6.1_Composite_transformations)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-consistent-inconsistent-and-indeterminate-systems-definition"><td></td><td>
+       <strong>consistent-inconsistent-and-indeterminate-systems-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/2.6_Consistent_systems.html#consistent-inconsistent-and-indeterminate-systems-definition"><code class="xref">consistent-inconsistent-and-indeterminate-systems-definition</code></a> <em>(pages/2.6_Consistent_systems)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-consistent-system-theorem"><td></td><td>
+       <strong>consistent-system-theorem</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/2.6_Consistent_systems.html#consistent-system-theorem"><code class="xref">consistent-system-theorem</code></a> <em>(pages/2.6_Consistent_systems)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cramers-rule-example"><td></td><td>
+       <strong>cramers-rule-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/2.2_Cramers_rule.html#cramers-rule-example"><code class="xref">cramers-rule-example</code></a> <em>(pages/2.2_Cramers_rule)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cramers-rule-theorem"><td></td><td>
+       <strong>cramers-rule-theorem</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/2.2_Cramers_rule.html#cramers-rule-theorem"><code class="xref">cramers-rule-theorem</code></a> <em>(pages/2.2_Cramers_rule)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cross-product-definition"><td></td><td>
+       <strong>cross-product-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/3.3_Vector_products.html#cross-product-definition"><code class="xref">cross-product-definition</code></a> <em>(pages/3.3_Vector_products)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cross-product-example"><td></td><td>
+       <strong>cross-product-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/3.3_Vector_products.html#cross-product-example"><code class="xref">cross-product-example</code></a> <em>(pages/3.3_Vector_products)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-cross-product-properties-theorem"><td></td><td>
+       <strong>cross-product-properties-theorem</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/3.3_Vector_products.html#cross-product-properties-theorem"><code class="xref">cross-product-properties-theorem</code></a> <em>(pages/3.3_Vector_products)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-definition-0"><td></td><td>
+       <strong>definition-0</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/0.3_Mathematical_preliminaries.html#definition-0"><code class="xref">definition-0</code></a> <em>(pages/0.3_Mathematical_preliminaries)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-diagonal-matrix-definition"><td></td><td>
+       <strong>diagonal-matrix-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.2_Special_matrices.html#diagonal-matrix-definition"><code class="xref">diagonal-matrix-definition</code></a> <em>(pages/1.2_Special_matrices)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-dot-product-definition"><td></td><td>
+       <strong>dot-product-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/3.3_Vector_products.html#dot-product-definition"><code class="xref">dot-product-definition</code></a> <em>(pages/3.3_Vector_products)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-dot-product-example"><td></td><td>
+       <strong>dot-product-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/3.3_Vector_products.html#dot-product-example"><code class="xref">dot-product-example</code></a> <em>(pages/3.3_Vector_products)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-dot-product-properties-theorem"><td></td><td>
+       <strong>dot-product-properties-theorem</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/3.3_Vector_products.html#dot-product-properties-theorem"><code class="xref">dot-product-properties-theorem</code></a> <em>(pages/3.3_Vector_products)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-ero-definition"><td></td><td>
+       <strong>ero-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/2.3_Gaussian_elimination.html#ero-definition"><code class="xref">ero-definition</code></a> <em>(pages/2.3_Gaussian_elimination)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-example-2"><td></td><td>
+       <strong>example-2</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/0.3_Mathematical_preliminaries.html#example-2"><code class="xref">example-2</code></a> <em>(pages/0.3_Mathematical_preliminaries)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-field-definition"><td></td><td>
+       <strong>field-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/5.0_Vector_spaces.html#field-definition"><code class="xref">field-definition</code></a> <em>(pages/5.0_Vector_spaces)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-finding-transformation-matrix-theorem"><td></td><td>
+       <strong>finding-transformation-matrix-theorem</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.0_Linear_transformations.html#finding-transformation-matrix-theorem"><code class="xref">finding-transformation-matrix-theorem</code></a> <em>(pages/6.0_Linear_transformations)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-ge-algorithm"><td></td><td>
+       <strong>ge-algorithm</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/2.3_Gaussian_elimination.html#ge-algorithm"><code class="xref">ge-algorithm</code></a> <em>(pages/2.3_Gaussian_elimination)</em></td><td>
+       <em>algorithm</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-ge-example"><td></td><td>
+       <strong>ge-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/2.3_Gaussian_elimination.html#ge-example"><code class="xref">ge-example</code></a> <em>(pages/2.3_Gaussian_elimination)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-ge-pp-algorithm"><td></td><td>
+       <strong>ge-pp-algorithm</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/2.4_Partial_pivoting.html#ge-pp-algorithm"><code class="xref">ge-pp-algorithm</code></a> <em>(pages/2.4_Partial_pivoting)</em></td><td>
+       <em>algorithm</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-gje-algorithm"><td></td><td>
+       <strong>gje-algorithm</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/2.5_Gauss_Jordan_elimination.html#gje-algorithm"><code class="xref">gje-algorithm</code></a> <em>(pages/2.5_Gauss_Jordan_elimination)</em></td><td>
+       <em>algorithm</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-gje-example"><td></td><td>
+       <strong>gje-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/2.5_Gauss_Jordan_elimination.html#gje-example"><code class="xref">gje-example</code></a> <em>(pages/2.5_Gauss_Jordan_elimination)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-homogeneous-coordinates-definition"><td></td><td>
+       <strong>homogeneous-coordinates-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.3_Translation.html#homogeneous-coordinates-definition"><code class="xref">homogeneous-coordinates-definition</code></a> <em>(pages/6.3_Translation)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-homogeneous-system-definition"><td></td><td>
+       <strong>homogeneous-system-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/2.7_Homogeneous_systems.html#homogeneous-system-definition"><code class="xref">homogeneous-system-definition</code></a> <em>(pages/2.7_Homogeneous_systems)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-homogeneous-systems-example"><td></td><td>
+       <strong>homogeneous-systems-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/2.7_Homogeneous_systems.html#homogeneous-systems-example"><code class="xref">homogeneous-systems-example</code></a> <em>(pages/2.7_Homogeneous_systems)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-identity-matrix-definition"><td></td><td>
+       <strong>identity-matrix-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.2_Special_matrices.html#identity-matrix-definition"><code class="xref">identity-matrix-definition</code></a> <em>(pages/1.2_Special_matrices)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-identity-matrix-example"><td></td><td>
+       <strong>identity-matrix-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.2_Special_matrices.html#identity-matrix-example"><code class="xref">identity-matrix-example</code></a> <em>(pages/1.2_Special_matrices)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-inconsistent-system-theorem"><td></td><td>
+       <strong>inconsistent-system-theorem</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/2.6_Consistent_systems.html#inconsistent-system-theorem"><code class="xref">inconsistent-system-theorem</code></a> <em>(pages/2.6_Consistent_systems)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-indeterminate-system-theorem"><td></td><td>
+       <strong>indeterminate-system-theorem</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/2.6_Consistent_systems.html#indeterminate-system-theorem"><code class="xref">indeterminate-system-theorem</code></a> <em>(pages/2.6_Consistent_systems)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-intersecting-planes-example"><td></td><td>
+       <strong>intersecting-planes-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/4.2_Planes.html#intersecting-planes-example"><code class="xref">intersecting-planes-example</code></a> <em>(pages/4.2_Planes)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-inverse-matrix-definition"><td></td><td>
+       <strong>inverse-matrix-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.4_Inverse_matrix.html#inverse-matrix-definition"><code class="xref">inverse-matrix-definition</code></a> <em>(pages/1.4_Inverse_matrix)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-inverse-matrix-example-1"><td></td><td>
+       <strong>inverse-matrix-example-1</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.4_Inverse_matrix.html#inverse-matrix-example-1"><code class="xref">inverse-matrix-example-1</code></a> <em>(pages/1.4_Inverse_matrix)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-inverse-matrix-properties-theorem"><td></td><td>
+       <strong>inverse-matrix-properties-theorem</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.4_Inverse_matrix.html#inverse-matrix-properties-theorem"><code class="xref">inverse-matrix-properties-theorem</code></a> <em>(pages/1.4_Inverse_matrix)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-inverse-transformation-definition"><td></td><td>
+       <strong>inverse-transformation-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.0_Linear_transformations.html#inverse-transformation-definition"><code class="xref">inverse-transformation-definition</code></a> <em>(pages/6.0_Linear_transformations)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-inverse-transformation-example"><td></td><td>
+       <strong>inverse-transformation-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.0_Linear_transformations.html#inverse-transformation-example"><code class="xref">inverse-transformation-example</code></a> <em>(pages/6.0_Linear_transformations)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-line-line-distance-example"><td></td><td>
+       <strong>line-line-distance-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/4.3_Shortest_distance_problems.html#line-line-distance-example"><code class="xref">line-line-distance-example</code></a> <em>(pages/4.3_Shortest_distance_problems)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-line-line-distance-theorem"><td></td><td>
+       <strong>line-line-distance-theorem</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/4.3_Shortest_distance_problems.html#line-line-distance-theorem"><code class="xref">line-line-distance-theorem</code></a> <em>(pages/4.3_Shortest_distance_problems)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-line-line-intersection-definition"><td></td><td>
+       <strong>line-line-intersection-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/4.1_Lines.html#line-line-intersection-definition"><code class="xref">line-line-intersection-definition</code></a> <em>(pages/4.1_Lines)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-line-line-intersection-example"><td></td><td>
+       <strong>line-line-intersection-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/4.1_Lines.html#line-line-intersection-example"><code class="xref">line-line-intersection-example</code></a> <em>(pages/4.1_Lines)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-line-vector-equation-example"><td></td><td>
+       <strong>line-vector-equation-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/4.1_Lines.html#line-vector-equation-example"><code class="xref">line-vector-equation-example</code></a> <em>(pages/4.1_Lines)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-linear-combination-of-vectors-definition"><td></td><td>
+       <strong>linear-combination-of-vectors-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/3.4_Linear_combinations.html#linear-combination-of-vectors-definition"><code class="xref">linear-combination-of-vectors-definition</code></a> <em>(pages/3.4_Linear_combinations)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-linear-combination-of-vectors-example"><td></td><td>
+       <strong>linear-combination-of-vectors-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/3.4_Linear_combinations.html#linear-combination-of-vectors-example"><code class="xref">linear-combination-of-vectors-example</code></a> <em>(pages/3.4_Linear_combinations)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-linear-dependence-definition"><td></td><td>
+       <strong>linear-dependence-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/5.2_Linear_dependence.html#linear-dependence-definition"><code class="xref">linear-dependence-definition</code></a> <em>(pages/5.2_Linear_dependence)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-linear-dependence-equation"><td></td><td>
+       <strong>linear-dependence-equation</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/5.2_Linear_dependence.html#linear-dependence-equation"><code class="xref">linear-dependence-equation</code></a> <em>(pages/5.2_Linear_dependence)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-linear-transformation-definition"><td></td><td>
+       <strong>linear-transformation-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.0_Linear_transformations.html#linear-transformation-definition"><code class="xref">linear-transformation-definition</code></a> <em>(pages/6.0_Linear_transformations)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-linear-transformation-example"><td></td><td>
+       <strong>linear-transformation-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.0_Linear_transformations.html#linear-transformation-example"><code class="xref">linear-transformation-example</code></a> <em>(pages/6.0_Linear_transformations)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-magnitude-definition"><td></td><td>
+       <strong>magnitude-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/3.2_Vector_magnitude.html#magnitude-definition"><code class="xref">magnitude-definition</code></a> <em>(pages/3.2_Vector_magnitude)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-magnitude-example"><td></td><td>
+       <strong>magnitude-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/3.2_Vector_magnitude.html#magnitude-example"><code class="xref">magnitude-example</code></a> <em>(pages/3.2_Vector_magnitude)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-matrix-addition-definition"><td></td><td>
+       <strong>matrix-addition-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.0_Matrices.html#matrix-addition-definition"><code class="xref">matrix-addition-definition</code></a> <em>(pages/1.0_Matrices)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-matrix-addition-example"><td></td><td>
+       <strong>matrix-addition-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.0_Matrices.html#matrix-addition-example"><code class="xref">matrix-addition-example</code></a> <em>(pages/1.0_Matrices)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-matrix-algebra-example"><td></td><td>
+       <strong>matrix-algebra-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.5_Matrix_algebra.html#matrix-algebra-example"><code class="xref">matrix-algebra-example</code></a> <em>(pages/1.5_Matrix_algebra)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-matrix-dimension-definition"><td></td><td>
+       <strong>matrix-dimension-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.0_Matrices.html#matrix-dimension-definition"><code class="xref">matrix-dimension-definition</code></a> <em>(pages/1.0_Matrices)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-matrix-dimension-example"><td></td><td>
+       <strong>matrix-dimension-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.0_Matrices.html#matrix-dimension-example"><code class="xref">matrix-dimension-example</code></a> <em>(pages/1.0_Matrices)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-matrix-equality-definition"><td></td><td>
+       <strong>matrix-equality-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.0_Matrices.html#matrix-equality-definition"><code class="xref">matrix-equality-definition</code></a> <em>(pages/1.0_Matrices)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-matrix-exponents-definition"><td></td><td>
+       <strong>matrix-exponents-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.1_Matrix_multiplication.html#matrix-exponents-definition"><code class="xref">matrix-exponents-definition</code></a> <em>(pages/1.1_Matrix_multiplication)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-matrix-exponents-example"><td></td><td>
+       <strong>matrix-exponents-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.1_Matrix_multiplication.html#matrix-exponents-example"><code class="xref">matrix-exponents-example</code></a> <em>(pages/1.1_Matrix_multiplication)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-matrix-indexing-example"><td></td><td>
+       <strong>matrix-indexing-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.0_Matrices.html#matrix-indexing-example"><code class="xref">matrix-indexing-example</code></a> <em>(pages/1.0_Matrices)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-matrix-inverse-example-2"><td></td><td>
+       <strong>matrix-inverse-example-2</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.4_Inverse_matrix.html#matrix-inverse-example-2"><code class="xref">matrix-inverse-example-2</code></a> <em>(pages/1.4_Inverse_matrix)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-matrix-multiplication-definition"><td></td><td>
+       <strong>matrix-multiplication-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.1_Matrix_multiplication.html#matrix-multiplication-definition"><code class="xref">matrix-multiplication-definition</code></a> <em>(pages/1.1_Matrix_multiplication)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-matrix-multiplication-example"><td></td><td>
+       <strong>matrix-multiplication-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.1_Matrix_multiplication.html#matrix-multiplication-example"><code class="xref">matrix-multiplication-example</code></a> <em>(pages/1.1_Matrix_multiplication)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-matrix-transpose-definition"><td></td><td>
+       <strong>matrix-transpose-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.2_Special_matrices.html#matrix-transpose-definition"><code class="xref">matrix-transpose-definition</code></a> <em>(pages/1.2_Special_matrices)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-matrix-transpose-example"><td></td><td>
+       <strong>matrix-transpose-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.2_Special_matrices.html#matrix-transpose-example"><code class="xref">matrix-transpose-example</code></a> <em>(pages/1.2_Special_matrices)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-minor-definition"><td></td><td>
+       <strong>minor-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.3_Determinants.html#minor-definition"><code class="xref">minor-definition</code></a> <em>(pages/1.3_Determinants)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-minor-example"><td></td><td>
+       <strong>minor-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.3_Determinants.html#minor-example"><code class="xref">minor-example</code></a> <em>(pages/1.3_Determinants)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-non-subspace-example"><td></td><td>
+       <strong>non-subspace-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/5.1_Subspaces.html#non-subspace-example"><code class="xref">non-subspace-example</code></a> <em>(pages/5.1_Subspaces)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-non-vector-space-example"><td></td><td>
+       <strong>non-vector-space-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/5.0_Vector_spaces.html#non-vector-space-example"><code class="xref">non-vector-space-example</code></a> <em>(pages/5.0_Vector_spaces)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-normal-vector-definition"><td></td><td>
+       <strong>normal-vector-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/4.2_Planes.html#normal-vector-definition"><code class="xref">normal-vector-definition</code></a> <em>(pages/4.2_Planes)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-normalising-a-vector-example"><td></td><td>
+       <strong>normalising-a-vector-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/3.2_Vector_magnitude.html#normalising-a-vector-example"><code class="xref">normalising-a-vector-example</code></a> <em>(pages/3.2_Vector_magnitude)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-normalising-a-vector-proposition"><td></td><td>
+       <strong>normalising-a-vector-proposition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/3.2_Vector_magnitude.html#normalising-a-vector-proposition"><code class="xref">normalising-a-vector-proposition</code></a> <em>(pages/3.2_Vector_magnitude)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-nxn-determinant-definition"><td></td><td>
+       <strong>nxn-determinant-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.3_Determinants.html#nxn-determinant-definition"><code class="xref">nxn-determinant-definition</code></a> <em>(pages/1.3_Determinants)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-nxn-determinant-example"><td></td><td>
+       <strong>nxn-determinant-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.3_Determinants.html#nxn-determinant-example"><code class="xref">nxn-determinant-example</code></a> <em>(pages/1.3_Determinants)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-orthogonal-basis-definition"><td></td><td>
+       <strong>orthogonal-basis-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/5.3_Basis.html#orthogonal-basis-definition"><code class="xref">orthogonal-basis-definition</code></a> <em>(pages/5.3_Basis)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-orthonormal-basis-definition"><td></td><td>
+       <strong>orthonormal-basis-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/5.3_Basis.html#orthonormal-basis-definition"><code class="xref">orthonormal-basis-definition</code></a> <em>(pages/5.3_Basis)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-parallel-lines-definition"><td></td><td>
+       <strong>parallel-lines-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/4.1_Lines.html#parallel-lines-definition"><code class="xref">parallel-lines-definition</code></a> <em>(pages/4.1_Lines)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-parallel-lines-example"><td></td><td>
+       <strong>parallel-lines-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/4.1_Lines.html#parallel-lines-example"><code class="xref">parallel-lines-example</code></a> <em>(pages/4.1_Lines)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-partial-pivoting-example"><td></td><td>
+       <strong>partial-pivoting-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/2.4_Partial_pivoting.html#partial-pivoting-example"><code class="xref">partial-pivoting-example</code></a> <em>(pages/2.4_Partial_pivoting)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-perpendicular-lines-definition"><td></td><td>
+       <strong>perpendicular-lines-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/4.1_Lines.html#perpendicular-lines-definition"><code class="xref">perpendicular-lines-definition</code></a> <em>(pages/4.1_Lines)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-perpendicular-lines-example"><td></td><td>
+       <strong>perpendicular-lines-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/4.1_Lines.html#perpendicular-lines-example"><code class="xref">perpendicular-lines-example</code></a> <em>(pages/4.1_Lines)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-plane-vector-equation"><td></td><td>
+       <strong>plane-vector-equation</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/4.2_Planes.html#plane-vector-equation"><code class="xref">plane-vector-equation</code></a> <em>(pages/4.2_Planes)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-point-line-distance-example"><td></td><td>
+       <strong>point-line-distance-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/4.3_Shortest_distance_problems.html#point-line-distance-example"><code class="xref">point-line-distance-example</code></a> <em>(pages/4.3_Shortest_distance_problems)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-point-line-distance-theorem"><td></td><td>
+       <strong>point-line-distance-theorem</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/4.3_Shortest_distance_problems.html#point-line-distance-theorem"><code class="xref">point-line-distance-theorem</code></a> <em>(pages/4.3_Shortest_distance_problems)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-point-normal-definition"><td></td><td>
+       <strong>point-normal-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/4.2_Planes.html#point-normal-definition"><code class="xref">point-normal-definition</code></a> <em>(pages/4.2_Planes)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-point-normal-example"><td></td><td>
+       <strong>point-normal-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/4.2_Planes.html#point-normal-example"><code class="xref">point-normal-example</code></a> <em>(pages/4.2_Planes)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-properties-of-determinants-theorem"><td></td><td>
+       <strong>properties-of-determinants-theorem</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.3_Determinants.html#properties-of-determinants-theorem"><code class="xref">properties-of-determinants-theorem</code></a> <em>(pages/1.3_Determinants)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-properties-of-matrix-addition-theorem"><td></td><td>
+       <strong>properties-of-matrix-addition-theorem</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.0_Matrices.html#properties-of-matrix-addition-theorem"><code class="xref">properties-of-matrix-addition-theorem</code></a> <em>(pages/1.0_Matrices)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-properties-of-matrix-transpose-theorem"><td></td><td>
+       <strong>properties-of-matrix-transpose-theorem</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.2_Special_matrices.html#properties-of-matrix-transpose-theorem"><code class="xref">properties-of-matrix-transpose-theorem</code></a> <em>(pages/1.2_Special_matrices)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-properties-of-scalar-multiplication-of-vectors"><td></td><td>
+       <strong>properties-of-scalar-multiplication-of-vectors</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/3.1_Vector_arithmetic.html#properties-of-scalar-multiplication-of-vectors"><code class="xref">properties-of-scalar-multiplication-of-vectors</code></a> <em>(pages/3.1_Vector_arithmetic)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-properties-of-the-identity-matrix"><td></td><td>
+       <strong>properties-of-the-identity-matrix</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.2_Special_matrices.html#properties-of-the-identity-matrix"><code class="xref">properties-of-the-identity-matrix</code></a> <em>(pages/1.2_Special_matrices)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-properties-of-vector-spaces-theorem"><td></td><td>
+       <strong>properties-of-vector-spaces-theorem</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/5.0_Vector_spaces.html#properties-of-vector-spaces-theorem"><code class="xref">properties-of-vector-spaces-theorem</code></a> <em>(pages/5.0_Vector_spaces)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-rank-definition"><td></td><td>
+       <strong>rank-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/2.6_Consistent_systems.html#rank-definition"><code class="xref">rank-definition</code></a> <em>(pages/2.6_Consistent_systems)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-rank-example"><td></td><td>
+       <strong>rank-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/2.6_Consistent_systems.html#rank-example"><code class="xref">rank-example</code></a> <em>(pages/2.6_Consistent_systems)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-real-numbers-vector-space-example"><td></td><td>
+       <strong>real-numbers-vector-space-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/5.0_Vector_spaces.html#real-numbers-vector-space-example"><code class="xref">real-numbers-vector-space-example</code></a> <em>(pages/5.0_Vector_spaces)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-ref-definition"><td></td><td>
+       <strong>ref-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/2.3_Gaussian_elimination.html#ref-definition"><code class="xref">ref-definition</code></a> <em>(pages/2.3_Gaussian_elimination)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-reflection-definition"><td></td><td>
+       <strong>reflection-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.2_Rotation_reflection_and_translation.html#reflection-definition"><code class="xref">reflection-definition</code></a> <em>(pages/6.2_Rotation_reflection_and_translation)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-reflection-example"><td></td><td>
+       <strong>reflection-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.2_Rotation_reflection_and_translation.html#reflection-example"><code class="xref">reflection-example</code></a> <em>(pages/6.2_Rotation_reflection_and_translation)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-reflection-theorem"><td></td><td>
+       <strong>reflection-theorem</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.2_Rotation_reflection_and_translation.html#reflection-theorem"><code class="xref">reflection-theorem</code></a> <em>(pages/6.2_Rotation_reflection_and_translation)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-rotation-definition"><td></td><td>
+       <strong>rotation-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.2_Rotation_reflection_and_translation.html#rotation-definition"><code class="xref">rotation-definition</code></a> <em>(pages/6.2_Rotation_reflection_and_translation)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-rotation-example"><td></td><td>
+       <strong>rotation-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.2_Rotation_reflection_and_translation.html#rotation-example"><code class="xref">rotation-example</code></a> <em>(pages/6.2_Rotation_reflection_and_translation)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-rotation-in-R2-theorem"><td></td><td>
+       <strong>rotation-in-R2-theorem</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.2_Rotation_reflection_and_translation.html#rotation-in-R2-theorem"><code class="xref">rotation-in-R2-theorem</code></a> <em>(pages/6.2_Rotation_reflection_and_translation)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-rotation-scaling-and-translating-example"><td></td><td>
+       <strong>rotation-scaling-and-translating-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.3_Translation.html#rotation-scaling-and-translating-example"><code class="xref">rotation-scaling-and-translating-example</code></a> <em>(pages/6.3_Translation)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-rref-definition"><td></td><td>
+       <strong>rref-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/2.5_Gauss_Jordan_elimination.html#rref-definition"><code class="xref">rref-definition</code></a> <em>(pages/2.5_Gauss_Jordan_elimination)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-scalar-multiplication-definition"><td></td><td>
+       <strong>scalar-multiplication-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.0_Matrices.html#scalar-multiplication-definition"><code class="xref">scalar-multiplication-definition</code></a> <em>(pages/1.0_Matrices)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-scalar-multiplication-example"><td></td><td>
+       <strong>scalar-multiplication-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.0_Matrices.html#scalar-multiplication-example"><code class="xref">scalar-multiplication-example</code></a> <em>(pages/1.0_Matrices)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-scalar-multiplication-of-a-vector-definition"><td></td><td>
+       <strong>scalar-multiplication-of-a-vector-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/3.1_Vector_arithmetic.html#scalar-multiplication-of-a-vector-definition"><code class="xref">scalar-multiplication-of-a-vector-definition</code></a> <em>(pages/3.1_Vector_arithmetic)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-scaling-definition"><td></td><td>
+       <strong>scaling-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.2_Rotation_reflection_and_translation.html#scaling-definition"><code class="xref">scaling-definition</code></a> <em>(pages/6.2_Rotation_reflection_and_translation)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-scaling-example"><td></td><td>
+       <strong>scaling-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.2_Rotation_reflection_and_translation.html#scaling-example"><code class="xref">scaling-example</code></a> <em>(pages/6.2_Rotation_reflection_and_translation)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-scaling-theorem"><td></td><td>
+       <strong>scaling-theorem</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.2_Rotation_reflection_and_translation.html#scaling-theorem"><code class="xref">scaling-theorem</code></a> <em>(pages/6.2_Rotation_reflection_and_translation)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-skew-lines-definition"><td></td><td>
+       <strong>skew-lines-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/4.1_Lines.html#skew-lines-definition"><code class="xref">skew-lines-definition</code></a> <em>(pages/4.1_Lines)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-skew-lines-example"><td></td><td>
+       <strong>skew-lines-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/4.1_Lines.html#skew-lines-example"><code class="xref">skew-lines-example</code></a> <em>(pages/4.1_Lines)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-solution-by-inverse-example"><td></td><td>
+       <strong>solution-by-inverse-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/2.1_Solving_using_inverse_matrix.html#solution-by-inverse-example"><code class="xref">solution-by-inverse-example</code></a> <em>(pages/2.1_Solving_using_inverse_matrix)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-solution-using-inverse-matrix-theorem"><td></td><td>
+       <strong>solution-using-inverse-matrix-theorem</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/2.1_Solving_using_inverse_matrix.html#solution-using-inverse-matrix-theorem"><code class="xref">solution-using-inverse-matrix-theorem</code></a> <em>(pages/2.1_Solving_using_inverse_matrix)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-spanning-set-definition"><td></td><td>
+       <strong>spanning-set-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/5.3_Basis.html#spanning-set-definition"><code class="xref">spanning-set-definition</code></a> <em>(pages/5.3_Basis)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-spanning-set-example"><td></td><td>
+       <strong>spanning-set-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/5.3_Basis.html#spanning-set-example"><code class="xref">spanning-set-example</code></a> <em>(pages/5.3_Basis)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-square-matrix-definition"><td></td><td>
+       <strong>square-matrix-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.2_Special_matrices.html#square-matrix-definition"><code class="xref">square-matrix-definition</code></a> <em>(pages/1.2_Special_matrices)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-subspace-condition-theorem"><td></td><td>
+       <strong>subspace-condition-theorem</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/5.1_Subspaces.html#subspace-condition-theorem"><code class="xref">subspace-condition-theorem</code></a> <em>(pages/5.1_Subspaces)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-subspace-definition"><td></td><td>
+       <strong>subspace-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/5.1_Subspaces.html#subspace-definition"><code class="xref">subspace-definition</code></a> <em>(pages/5.1_Subspaces)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-subspace-example"><td></td><td>
+       <strong>subspace-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/5.1_Subspaces.html#subspace-example"><code class="xref">subspace-example</code></a> <em>(pages/5.1_Subspaces)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-system-of-linear-equation-definition"><td></td><td>
+       <strong>system-of-linear-equation-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/2.0_Linear_systems.html#system-of-linear-equation-definition"><code class="xref">system-of-linear-equation-definition</code></a> <em>(pages/2.0_Linear_systems)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-system-of-linear-equations-matrix-form-example"><td></td><td>
+       <strong>system-of-linear-equations-matrix-form-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/2.0_Linear_systems.html#system-of-linear-equations-matrix-form-example"><code class="xref">system-of-linear-equations-matrix-form-example</code></a> <em>(pages/2.0_Linear_systems)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-theorem-1"><td></td><td>
+       <strong>theorem-1</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/0.3_Mathematical_preliminaries.html#theorem-1"><code class="xref">theorem-1</code></a> <em>(pages/0.3_Mathematical_preliminaries)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-theorem-8"><td></td><td>
+       <strong>theorem-8</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.0_Matrices.html#theorem-8"><code class="xref">theorem-8</code></a> <em>(pages/1.0_Matrices)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-transformation-matrix-definition"><td></td><td>
+       <strong>transformation-matrix-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.0_Linear_transformations.html#transformation-matrix-definition"><code class="xref">transformation-matrix-definition</code></a> <em>(pages/6.0_Linear_transformations)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-transformation-matrix-example"><td></td><td>
+       <strong>transformation-matrix-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.0_Linear_transformations.html#transformation-matrix-example"><code class="xref">transformation-matrix-example</code></a> <em>(pages/6.0_Linear_transformations)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-transformation-matrix-example-2"><td></td><td>
+       <strong>transformation-matrix-example-2</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.0_Linear_transformations.html#transformation-matrix-example-2"><code class="xref">transformation-matrix-example-2</code></a> <em>(pages/6.0_Linear_transformations)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-translation-definition"><td></td><td>
+       <strong>translation-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.3_Translation.html#translation-definition"><code class="xref">translation-definition</code></a> <em>(pages/6.3_Translation)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-translation-example"><td></td><td>
+       <strong>translation-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.3_Translation.html#translation-example"><code class="xref">translation-example</code></a> <em>(pages/6.3_Translation)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-translation-theorem"><td></td><td>
+       <strong>translation-theorem</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/6.3_Translation.html#translation-theorem"><code class="xref">translation-theorem</code></a> <em>(pages/6.3_Translation)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-unit-vector-definition"><td></td><td>
+       <strong>unit-vector-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/3.2_Vector_magnitude.html#unit-vector-definition"><code class="xref">unit-vector-definition</code></a> <em>(pages/3.2_Vector_magnitude)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-vector-addition-definition"><td></td><td>
+       <strong>vector-addition-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/3.1_Vector_arithmetic.html#vector-addition-definition"><code class="xref">vector-addition-definition</code></a> <em>(pages/3.1_Vector_arithmetic)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-vector-equality-definition"><td></td><td>
+       <strong>vector-equality-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/3.1_Vector_arithmetic.html#vector-equality-definition"><code class="xref">vector-equality-definition</code></a> <em>(pages/3.1_Vector_arithmetic)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-vector-equation-of-a-line-definition"><td></td><td>
+       <strong>vector-equation-of-a-line-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/4.1_Lines.html#vector-equation-of-a-line-definition"><code class="xref">vector-equation-of-a-line-definition</code></a> <em>(pages/4.1_Lines)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-vector-example"><td></td><td>
+       <strong>vector-example</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/3.0_Vectors.html#vector-example"><code class="xref">vector-example</code></a> <em>(pages/3.0_Vectors)</em></td><td>
+       <em>example</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-vector-space-axioms"><td></td><td>
+       <strong>vector-space-axioms</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/5.0_Vector_spaces.html#vector-space-axioms"><code class="xref">vector-space-axioms</code></a> <em>(pages/5.0_Vector_spaces)</em></td><td>
+       <em>axiom</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-vector-space-definition"><td></td><td>
+       <strong>vector-space-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/5.0_Vector_spaces.html#vector-space-definition"><code class="xref">vector-space-definition</code></a> <em>(pages/5.0_Vector_spaces)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-vector-space-dimension-definition"><td></td><td>
+       <strong>vector-space-dimension-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/5.3_Basis.html#vector-space-dimension-definition"><code class="xref">vector-space-dimension-definition</code></a> <em>(pages/5.3_Basis)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-zero-matrix-definition"><td></td><td>
+       <strong>zero-matrix-definition</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.2_Special_matrices.html#zero-matrix-definition"><code class="xref">zero-matrix-definition</code></a> <em>(pages/1.2_Special_matrices)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-zero-matrix-theorem"><td></td><td>
+       <strong>zero-matrix-theorem</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="pages/1.2_Special_matrices.html#zero-matrix-theorem"><code class="xref">zero-matrix-theorem</code></a> <em>(pages/1.2_Special_matrices)</em></td><td>
+       <em>theorem</em></td></tr>
+   </table>
+
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Jon Shiach
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

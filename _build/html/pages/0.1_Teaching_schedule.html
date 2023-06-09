@@ -1,0 +1,558 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Teaching schedule &#8212; Linear Algebra Lecture Notes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/0.1_Teaching_schedule';</script>
+    <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/0.1_Teaching_schedule.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Mathematical preliminaries" href="0.3_Mathematical_preliminaries.html" />
+    <link rel="prev" title="Linear Algebra Lecture Notes" href="../intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Linear Algebra Lecture Notes
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preliminaries</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Teaching schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0.3_Mathematical_preliminaries.html">Mathematical preliminaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0.5_How_to_pass.html">How to pass the unit</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="1.0_Matrices.html">1. Matrices</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="1.1_Matrix_multiplication.html">1.3. Matrix multiplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.2_Special_matrices.html">1.4. Special matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.3_Determinants.html">1.5. Determinants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.4_Inverse_matrix.html">1.6. Inverse matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.5_Matrix_algebra.html">1.7. Matrix algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.9_Matrices_exercises.html">1.8. Matrices exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="2.1_Solving_using_inverse_matrix.html">2.2. Solving systems of linear equations using the inverse matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_Cramers_rule.html">2.3. Cramer’s rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_Gaussian_elimination.html">2.4. Gaussian elimination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4_Partial_pivoting.html">2.5. Partial pivoting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.6. Gauss-Jordan elimination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.7. Consistent, inconsistent and indeterminate systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.8. Homogeneous systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.9. Systems of linear equations exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Vector products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="4.0_Coordinate_geometry.html">4. Co-ordinate Geometry</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="4.1_Lines.html">4.2. Lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.2_Planes.html">4.3. Planes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.3_Shortest_distance_problems.html">4.4. Shortest distance problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate geometry exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="5.1_Subspaces.html">5.3. Subspaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.2_Linear_dependence.html">5.4. Linear dependence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.3_Basis.html">5.5. Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.5_Vector_spaces_exercises.html">5.6. Vector spaces exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="6.0_Linear_transformations.html">6. Linear Transformations</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="6.1_Composite_transformations.html">6.4. Composite linear transformations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.2_Rotation_reflection_and_translation.html">6.5. Rotation, reflection and scaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.3_Translation.html">6.6. Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.7. Transformations exercises</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/pages/0.1_Teaching_schedule.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Teaching schedule</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="teaching-schedule">
+<h1>Teaching schedule<a class="headerlink" href="#teaching-schedule" title="Permalink to this heading">#</a></h1>
+<p>The teaching schedule for linear algebra is given below.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>Week</p></th>
+<th class="text-center head"><p>Date( w/c)</p></th>
+<th class="text-left head"><p>Lecture</p></th>
+<th class="text-left head"><p>Tutorial</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>02/10/2023</p></td>
+<td class="text-left"><p><a class="reference internal" href="1.0_Matrices.html#matrices-chapter"><span class="std std-ref"><strong>Matrices</strong></span></a>: <a class="reference internal" href="1.0_Matrices.html#matrices-chapter"><span class="std std-ref">definition</span></a>, <a class="reference internal" href="1.0_Matrices.html#indexing-a-matrix-section"><span class="std std-ref">indexing a matrix</span></a>, <a class="reference internal" href="1.0_Matrices.html#matrix-operations-section"><span class="std std-ref">basic arithmetic operations</span></a>, <a class="reference internal" href="1.1_Matrix_multiplication.html#matrix-multiplication-section"><span class="std std-ref">matrix multiplication</span></a></p></td>
+<td class="text-left"><p><a class="reference internal" href="1.9_Matrices_exercises.html#matrices-ex1"><span class="std std-numref">Exercise 1.1</span></a> to <a class="reference internal" href="1.9_Matrices_exercises.html#matrices-ex3"><span class="std std-numref">Exercise 1.3</span></a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-center"><p>09/10/2023</p></td>
+<td class="text-left"><p><a class="reference internal" href="1.0_Matrices.html#matrices-chapter"><span class="std std-ref"><strong>Matrices (cont.)</strong></span></a>: <a class="reference internal" href="1.3_Determinants.html#determinant-section"><span class="std std-ref">determinants</span></a>, <a class="reference internal" href="1.4_Inverse_matrix.html#inverse-matrix-section"><span class="std std-ref">inverse matrix</span></a>, <a class="reference internal" href="1.5_Matrix_algebra.html#matrix-algebra-section"><span class="std std-ref">matrix algebra</span></a></p></td>
+<td class="text-left"><p><a class="reference internal" href="1.9_Matrices_exercises.html#matrices-ex4"><span class="std std-numref">Exercise 1.4</span></a> to  <a class="reference internal" href="1.9_Matrices_exercises.html#matrices-ex7"><span class="std std-numref">Exercise 1.7</span></a></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-center"><p>16/10/2023</p></td>
+<td class="text-left"><p><a class="reference internal" href="2.0_Linear_systems.html#systems-of-linear-equations-chapter"><span class="std std-ref"><strong>Systems of linear equations</strong></span></a>: <a class="reference internal" href="2.0_Linear_systems.html#system-of-linear-equation-definition">definition</a>, solutions of systems of linear equations using the <a class="reference internal" href="2.1_Solving_using_inverse_matrix.html#solving-systems-using-inverse-section"><span class="std std-ref">inverse matrix</span></a> and <a class="reference internal" href="2.2_Cramers_rule.html#cramers-rule-section"><span class="std std-ref">Cramer’s rule</span></a></p></td>
+<td class="text-left"><p><a class="reference internal" href="2.9_Linear_systems_exercises.html#systems-ex-inverse-sol"><span class="std std-numref">Exercise 2.1</span></a> and <a class="reference internal" href="2.9_Linear_systems_exercises.html#systems-ex-cramer"><span class="std std-numref">Exercise 2.2</span></a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-center"><p>23/10/2023</p></td>
+<td class="text-left"><p><a class="reference internal" href="2.0_Linear_systems.html#systems-of-linear-equations-chapter"><span class="std std-ref"><strong>Systems of linear equations (cont.)</strong></span></a>: <a class="reference internal" href="2.3_Gaussian_elimination.html#gaussian-elimination-section"><span class="std std-ref">Gaussian elimination</span></a> and <a class="reference internal" href="2.4_Partial_pivoting.html#partial-pivoting-section"><span class="std std-ref">partial pivoting</span></a></p></td>
+<td class="text-left"><p><a class="reference internal" href="2.9_Linear_systems_exercises.html#systems-ex-gelim"><span class="std std-numref">Exercise 2.3</span></a> and <a class="reference internal" href="2.9_Linear_systems_exercises.html#systems-ex-gelimpp"><span class="std std-numref">Exercise 2.4</span></a></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-center"><p>30/10/2023</p></td>
+<td class="text-left"><p><a class="reference internal" href="2.0_Linear_systems.html#systems-of-linear-equations-chapter"><span class="std std-ref"><strong>Systems of linear equations (cont.)</strong></span></a>: <a class="reference internal" href="2.5_Gauss_Jordan_elimination.html#gauss-jordan-elimination-section"><span class="std std-ref">Gauss-Jordan elimination</span></a>, <a class="reference internal" href="2.6_Consistent_systems.html#consistent-inconsistent-and-indeterminate-systems-section"><span class="std std-ref">consistent, inconsistent and indeterminate systems</span></a>, <a class="reference internal" href="2.7_Homogeneous_systems.html#homogeneous-systems-section"><span class="std std-ref">homogeneous systems</span></a></p></td>
+<td class="text-left"><p><a class="reference internal" href="2.9_Linear_systems_exercises.html#systems-ex-gjelim"><span class="std std-numref">Exercise 2.5</span></a> to <a class="reference internal" href="2.9_Linear_systems_exercises.html#systems-ex9"><span class="std std-numref">Exercise 2.9</span></a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>6</p></td>
+<td class="text-center"><p>06/11/2023</p></td>
+<td class="text-left"><p><a class="reference internal" href="3.0_Vectors.html#vectors-chapter"><span class="std std-ref"><strong>Vectors</strong></span></a>: <a class="reference internal" href="3.0_Vectors.html#euclidean-space-section"><span class="std std-ref">Euclidean space</span></a>, <a class="reference internal" href="3.0_Vectors.html#vectors-definition-section"><span class="std std-ref">definition of a vector</span></a>, <a class="reference internal" href="3.1_Vector_arithmetic.html#arithmetic-operations-on-vectors-section"><span class="std std-ref">arithmetic operations on vectors</span></a>, <a class="reference internal" href="3.2_Vector_magnitude.html#vector-magnitude-section"><span class="std std-ref">vector magnitude</span></a>, the <a class="reference internal" href="3.3_Vector_products.html#dot-product-section"><span class="std std-ref">dot product</span></a>, the <a class="reference internal" href="3.3_Vector_products.html#cross-product-section"><span class="std std-ref">cross product</span></a>, <a class="reference internal" href="3.4_Linear_combinations.html#linear-combination-of-vectors-section"><span class="std std-ref">linear combinations of vectors</span></a></p></td>
+<td class="text-left"><p><a class="reference internal" href="3.7_Vectors_exercises.html#vectors-ex-arithmetic"><span class="std std-numref">Exercise 3.1</span></a> to <a class="reference internal" href="3.7_Vectors_exercises.html#vectors-ex-angle"><span class="std std-numref">Exercise 3.4</span></a></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>7</p></td>
+<td class="text-center"><p>13/11/2023</p></td>
+<td class="text-left"><p><a class="reference internal" href="4.0_Coordinate_geometry.html#coordinate-geometry-chapter"><span class="std std-ref"><strong>Co-ordinate Geometry</strong></span></a>: <a class="reference internal" href="4.0_Coordinate_geometry.html#points-section"><span class="std std-ref">points</span></a>, <a class="reference internal" href="4.1_Lines.html#lines-section"><span class="std std-ref">lines</span></a> and <a class="reference internal" href="4.2_Planes.html#planes-section"><span class="std std-ref">planes</span></a>, vector equations of <a class="reference internal" href="4.1_Lines.html#lines-section"><span class="std std-ref">lines</span></a> and <a class="reference internal" href="4.2_Planes.html#planes-section"><span class="std std-ref">planes</span></a>, the <a class="reference internal" href="4.2_Planes.html#point-normal-definition">point-normal equation</a> of a plane, <a class="reference internal" href="4.3_Shortest_distance_problems.html#id1"><span class="std std-ref">shortest distance problems</span></a></p></td>
+<td class="text-left"><p><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html#geometry-ex-line-plane-equations"><span class="std std-numref">Exercise 4.1</span></a> to <a class="reference internal" href="4.4_Coordinate_geometry_exercises.html#geometry-ex-point-plane-distance"><span class="std std-numref">Exercise 4.7</span></a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>8</p></td>
+<td class="text-center"><p>20/11/2023</p></td>
+<td class="text-left"><p><a class="reference internal" href="5.0_Vector_spaces.html#vector-spaces-chapter"><span class="std std-ref"><strong>Vector Spaces</strong></span></a>: <a class="reference internal" href="5.0_Vector_spaces.html#vector-spaces-definitions-section"><span class="std std-ref">definitions</span></a>, <a class="reference internal" href="5.1_Subspaces.html#subspaces-section"><span class="std std-ref">subspaces</span></a>, <a class="reference internal" href="5.2_Linear_dependence.html#linear-dependence-section"><span class="std std-ref">linear dependence</span></a>, <a class="reference internal" href="5.3_Basis.html#basis-section"><span class="std std-ref">basis of a vector space</span></a></p></td>
+<td class="text-left"><p><a class="reference internal" href="5.5_Vector_spaces_exercises.html#vector-spaces-ex-R3-axioms"><span class="std std-ref">Exercise</span></a> to <a class="reference internal" href="5.5_Vector_spaces_exercises.html#vector-spaces-ex-R4-basis-2"><span class="std std-ref">Exercise</span></a></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>9</p></td>
+<td class="text-center"><p>27/11/2023</p></td>
+<td class="text-left"><p><a class="reference internal" href="6.0_Linear_transformations.html#linear-transformations-chapter"><span class="std std-ref"><strong>Linear Transformations</strong></span></a>: <a class="reference internal" href="6.0_Linear_transformations.html#linear-transformation-definition">definition</a>, <a class="reference internal" href="6.0_Linear_transformations.html#transformation-matrix-section"><span class="std std-ref">transformation matrices</span></a>, <a class="reference internal" href="6.1_Composite_transformations.html#composite-linear-transformations-section"><span class="std std-ref">composite linear transformations</span></a></p></td>
+<td class="text-left"><p><a class="reference internal" href="6.5_Linear_transformations_exercises.html#transformations-ex-linear-transformations"><span class="std std-numref">Exercise 6.1</span></a> to <a class="reference internal" href="6.5_Linear_transformations_exercises.html#transformations-ex-R3"><span class="std std-ref">Exercise</span></a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>10</p></td>
+<td class="text-center"><p>04/12/2023</p></td>
+<td class="text-left"><p><a class="reference internal" href="6.0_Linear_transformations.html#linear-transformations-chapter"><span class="std std-ref"><strong>Linear Transformations (cont.)</strong></span></a>: <a class="reference internal" href="6.2_Rotation_reflection_and_translation.html#rotation-section"><span class="std std-ref">rotation</span></a>, <a class="reference internal" href="6.2_Rotation_reflection_and_translation.html#reflection-section"><span class="std std-ref">reflection</span></a>, <a class="reference internal" href="6.2_Rotation_reflection_and_translation.html#scaling-section"><span class="std std-ref">scaling</span></a> and <a class="reference internal" href="6.3_Translation.html#translation-section"><span class="std std-ref">translation</span></a> transformations</p></td>
+<td class="text-left"><p><a class="reference internal" href="6.5_Linear_transformations_exercises.html#transformations-ex-rotation"><span class="std std-numref">Exercise 6.5</span></a> to <a class="reference internal" href="6.5_Linear_transformations_exercises.html#transformations-ex-transform-square"><span class="std std-numref">Exercise 6.7</span></a></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>11</p></td>
+<td class="text-center"><p>11/12/2023</p></td>
+<td class="text-left"><p>Exam preparation</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+</tbody>
+</table>
+<!-- :::{div} full-width
+
+
+| 10 | 05/12/2022 | [**Linear Transformations (cont.)**](linear-transformations-chapter) <br> [Rotation](rotation-section), [reflection](reflection-section), [scaling](scaling-section) and [translation](translation-section) transformations | [Exercises 6.5](ex6.5) to [6.7](ex6.7) |
+| 11 | 12/12/2022 | Consolidation and exam preparation  <br> <span style="color:red;">**Coursework Deadline 9pm on 16th December 2022**</span> | |
+|    |   | **Christmas Break** | |
+| A1 | 09/01/2022 | Assessment week 1 | |
+| A2 | 16/01/2022 | Assessment week 2 |
+::: --></section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./pages"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Linear Algebra Lecture Notes</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="0.3_Mathematical_preliminaries.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Mathematical preliminaries</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Jon Shiach
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -4,42 +4,40 @@
 # To publish online: ghp-import -n -p -f _build/html
 
 format: jb-book
-root: title
+root: intro
 parts:
-- caption: ""
+- caption: "Preliminaries"
   chapters:  
-  - glob: 0_Preamble/*
+  - glob: pages/0*
 
 - caption: Chapters
+  numbered: true
   chapters:
-  - file: 1_Matrices/1.0_Introduction
+  - file: pages/1.0_Matrices
     sections:
-    - glob: 1_Matrices/*
+    - glob: pages/1*
 
-  - file: 2_Systems_of_Linear_Equations/2.0_Introduction
+  - file: pages/2.0_Linear_systems
     sections:
-    - glob: 2_Systems_of_Linear_Equations/*
+    - glob: pages/2*
 
-  - file: 3_Vectors/3.0_Introduction
+  - file: pages/3.0_Vectors
     sections:
-    - glob: 3_Vectors/*
+    - glob: pages/3*
 
-  - file: 4_Coordinate_geometry/4.0_Introduction
+  - file: pages/4.0_Coordinate_geometry
     sections:
-    - glob: 4_Coordinate_geometry/*
+    - glob: pages/4*
 
-  - file: 5_Vector_spaces/5.0_Introduction
+  - file: pages/5.0_Vector_spaces
     sections:
-    - glob: 5_Vector_spaces/*
+    - glob: pages/5*
 
-  - file: 6_Linear_transformations/6.0_Introduction
+  - file: pages/6.0_Linear_transformations
     sections:
-    - glob: 6_Linear_transformations/6.*
+    - glob: pages/6*
 
-- caption: 7_Appendices
+- caption: ""
+  numbered: false
   chapters:
-  - glob: 7_Appendices/*
-
-# - caption: Lecture Handouts
-#   chapters:
-#   - glob: 8_Handouts/*
+  - file: genindex
