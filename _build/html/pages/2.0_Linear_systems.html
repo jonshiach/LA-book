@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>2. Systems of Linear Equations &#8212; Linear Algebra Lecture Notes</title>
   
@@ -419,22 +419,13 @@ document.write(`
         \begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_m \end{pmatrix}
     }_{\text{constant vector}}
 \end{array} \end{split}\]</div>
-<div class="proof example admonition" id="system-of-linear-equations-matrix-form-example">
-<p class="admonition-title"><span class="caption-number">Example 2.1 </span></p>
-<section class="example-content" id="proof-content">
-<p>Write the following system of linear equations as a matrix equation</p>
+<p>For example, the follow system of linear equations</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     2x_1 + x_2 &amp;= 4, \\
     4x_1 + 3x_2 &amp;= 10.
 \end{align*} \end{split}\]</div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<p>can be written as the matrix equation</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} 
@@ -448,11 +439,9 @@ Solution<div class="sd-summary-down docutils">
         4 \\ 10 
     \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-</div>
-</details></section>
-</div><section id="solving-systems-of-linear-equations-using-algebra">
+<section id="solving-systems-of-linear-equations-using-algebra">
 <span id="solving-systems-of-linear-equations-using-algebra-section"></span><h2><span class="section-number">2.1. </span>Solving systems of linear equations using algebra<a class="headerlink" href="#solving-systems-of-linear-equations-using-algebra" title="Permalink to this heading">#</a></h2>
-<p>One way which we can solve systems of linear equations is using simple algebra. The usual approach is to try to solve for each unknown in turn by eliminating all of the other unknowns. For example, consider the system of linear equations from <a class="reference internal" href="#system-of-linear-equations-matrix-form-example">Example 2.1</a></p>
+<p>One way which we can solve systems of linear equations is using simple algebra. The usual approach is to try to solve for each unknown in turn by eliminating all of the other unknowns. For example, consider the system of linear equations</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     2x_1 + x_2 &amp;= 4, \\
