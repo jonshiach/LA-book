@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>1.4. Special matrices &#8212; Linear Algebra Lecture Notes</title>
   
@@ -369,11 +369,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-transpose">1.4.1. Matrix transpose</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#square-matrix">1.4.2. Square matrix</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diagonal-matrix">1.4.3. Diagonal matrix</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-matrix">1.4.4. Zero matrix</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-identity-matrix">1.4.5. The identity matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#square-matrix">1.4.1. Square matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diagonal-matrix">1.4.2. Diagonal matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-matrix">1.4.3. Zero matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-identity-matrix">1.4.4. The identity matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-matrix">1.4.5. Symmetric Matrix</a></li>
 </ul>
             </nav>
         </div>
@@ -387,86 +387,9 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="special-matrices">
 <span id="index-0"></span><h1><span class="section-number">1.4. </span>Special matrices<a class="headerlink" href="#special-matrices" title="Permalink to this heading">#</a></h1>
-<section id="matrix-transpose">
-<span id="index-1"></span><h2><span class="section-number">1.4.1. </span>Matrix transpose<a class="headerlink" href="#matrix-transpose" title="Permalink to this heading">#</a></h2>
-<div class="proof definition admonition" id="matrix-transpose-definition">
-<p class="admonition-title"><span class="caption-number">Definition 1.7 </span> (Matrix transpose)</p>
-<section class="definition-content" id="proof-content">
-<p>The <strong>transpose</strong> <span class="math notranslate nohighlight">\(A^\mathrm{T}\)</span> of a matrix <span class="math notranslate nohighlight">\(A\)</span> is given by</p>
-<div class="math notranslate nohighlight">
-\[ [A^\mathrm{T}]_{ij}=a_{ji}. \]</div>
-</section>
-</div><p>Transposing a matrix switches the rows and columns around so that row <span class="math notranslate nohighlight">\(i\)</span> becomes column <span class="math notranslate nohighlight">\(i\)</span> and column <span class="math notranslate nohighlight">\(j\)</span> becomes row <span class="math notranslate nohighlight">\(j\)</span>, i.e.,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    \begin{pmatrix}
-        a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
-        a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
-        \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-        a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn} 
-    \end{pmatrix}^\mathrm{T} = 
-    \begin{pmatrix}
-        a_{11} &amp; a_{21} &amp; \cdots &amp; a_{m1} \\
-        a_{12} &amp; a_{22} &amp; \cdots &amp; a_{m2} \\
-        \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-        a_{1n} &amp; a_{2n} &amp; \cdots &amp; a_{mn}
-    \end{pmatrix}.
-\end{align*} \end{split}\]</div>
-<div class="proof theorem admonition" id="properties-of-matrix-transpose-theorem">
-<p class="admonition-title"><span class="caption-number">Theorem 1.3 </span> (Properties of matrix transpose)</p>
-<section class="theorem-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> be two square <span class="math notranslate nohighlight">\(n \times n\)</span> matrices and <span class="math notranslate nohighlight">\(k\)</span> a scalar, then</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\((A^\mathrm{T})^\mathrm{T} = A\)</span>;</p></li>
-<li><p><span class="math notranslate nohighlight">\((A + B)^\mathrm{T} = A^\mathrm{T} + B^\mathrm{T}\)</span>;</p></li>
-<li><p><span class="math notranslate nohighlight">\((k A)^\mathrm{T} = k (A^\mathrm{T})\)</span>;</p></li>
-<li><p><span class="math notranslate nohighlight">\((AB)^\mathrm{T} = B^\mathrm{T}A^\mathrm{T}\)</span></p></li>
-</ul>
-</section>
-</div><div class="proof example admonition" id="matrix-transpose-example">
-<p class="admonition-title"><span class="caption-number">Example 1.7 </span></p>
-<section class="example-content" id="proof-content">
-<p>Evaluate the following:</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 3 \\ 2 &amp; 4 \end{pmatrix}^\mathrm{T}\)</span>;</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{pmatrix} 1 &amp; 3 \\ 2 &amp; 4 \end{pmatrix}^\mathrm{T} = 
-    \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} \end{split}\]</div>
-</div>
-</details><p>  (ii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 0 &amp; -2 \\ 3 &amp; -4 &amp; 1 \end{pmatrix}^\mathrm{T}\)</span>;</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{pmatrix} 1 &amp; 0 &amp; -2 \\ 3 &amp; -4 &amp; 1 \end{pmatrix}^\mathrm{T} =
-    \begin{pmatrix} 1 &amp; 3 \\ 0 &amp; -4 \\ -2 &amp; 1 \end{pmatrix} \end{split}\]</div>
-</div>
-</details><p>  (iii)   <span class="math notranslate nohighlight">\(\begin{pmatrix}2 &amp; 3 &amp; 5 \end{pmatrix}^\mathrm{T}\)</span>.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{pmatrix}2 &amp; 3 &amp; 5 \end{pmatrix}^\mathrm{T} = 
-    \begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix} \end{split}\]</div>
-</div>
-</details></section>
-</div></section>
+<p>Some matrices have certain properties which makes them useful for various mathematical applications. Understanding special matrices and their properties is essential for gaining a deeper insight into linear algebra and its practical applications.</p>
 <section id="square-matrix">
-<span id="index-2"></span><h2><span class="section-number">1.4.2. </span>Square matrix<a class="headerlink" href="#square-matrix" title="Permalink to this heading">#</a></h2>
+<span id="index-1"></span><h2><span class="section-number">1.4.1. </span>Square matrix<a class="headerlink" href="#square-matrix" title="Permalink to this heading">#</a></h2>
 <div class="proof definition admonition" id="square-matrix-definition">
 <p class="admonition-title"><span class="caption-number">Definition 1.8 </span> (Square matrix)</p>
 <section class="definition-content" id="proof-content">
@@ -481,7 +404,7 @@ Solution<div class="sd-summary-down docutils">
 \end{align*} \end{split}\]</div>
 </section>
 <section id="diagonal-matrix">
-<span id="index-3"></span><h2><span class="section-number">1.4.3. </span>Diagonal matrix<a class="headerlink" href="#diagonal-matrix" title="Permalink to this heading">#</a></h2>
+<span id="index-2"></span><h2><span class="section-number">1.4.2. </span>Diagonal matrix<a class="headerlink" href="#diagonal-matrix" title="Permalink to this heading">#</a></h2>
 <div class="proof definition admonition" id="diagonal-matrix-definition">
 <p class="admonition-title"><span class="caption-number">Definition 1.9 </span> (Diagonal matrix)</p>
 <section class="definition-content" id="proof-content">
@@ -505,19 +428,20 @@ Solution<div class="sd-summary-down docutils">
 \end{align*} \end{split}\]</div>
 </section>
 <section id="zero-matrix">
-<span id="index-4"></span><h2><span class="section-number">1.4.4. </span>Zero matrix<a class="headerlink" href="#zero-matrix" title="Permalink to this heading">#</a></h2>
+<span id="index-3"></span><h2><span class="section-number">1.4.3. </span>Zero matrix<a class="headerlink" href="#zero-matrix" title="Permalink to this heading">#</a></h2>
 <p>Similarly to <span class="math notranslate nohighlight">\(0\)</span> being a neutral element with respect to addition of real numbers, an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix of zeros plays the role of a neutral element for addition of matrices.</p>
 <div class="proof definition admonition" id="zero-matrix-definition">
 <p class="admonition-title"><span class="caption-number">Definition 1.10 </span> (Zero matrix)</p>
 <section class="definition-content" id="proof-content">
-<p>A <strong>zero matrix</strong> (or <strong>null matrix</strong>) is an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(\mathbf{0}_{m \times n} = \mathbf{0}\)</span> where all the entries are zero, that is <span class="math notranslate nohighlight">\([\mathbf{0}]_{ij} = 0\)</span> for all <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span></p>
+<p>A <strong>zero matrix</strong> (or <strong>null matrix</strong>) is an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(\mathbf{0}_{m \times n}\)</span> where all the entries are zero, that is <span class="math notranslate nohighlight">\([\mathbf{0}]_{ij} = 0\)</span> for all <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span></p>
 </section>
-</div><p>For example
-$<span class="math notranslate nohighlight">\( \begin{align*}
+</div><p>For example</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
     \mathbf{0}_{2 \times 2} &amp;= \begin{pmatrix}0 &amp; 0 \\ 0 &amp; 0 \end{pmatrix}, &amp;
     \mathbf{0}_{2 \times 3} &amp;= \begin{pmatrix} 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{pmatrix}, &amp;
     \mathbf{0}_{3 \times 1} &amp;= \begin{pmatrix}0 \\ 0 \\ 0 \end{pmatrix}.
-\end{align*} \)</span>$</p>
+\end{align*} \end{split}\]</div>
 <div class="proof theorem admonition" id="zero-matrix-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 1.4 </span> (Addition of a zero matrix)</p>
 <section class="theorem-content" id="proof-content">
@@ -528,7 +452,7 @@ $<span class="math notranslate nohighlight">\( \begin{align*}
 </section>
 </div></section>
 <section id="the-identity-matrix">
-<span id="index-5"></span><h2><span class="section-number">1.4.5. </span>The identity matrix<a class="headerlink" href="#the-identity-matrix" title="Permalink to this heading">#</a></h2>
+<span id="index-4"></span><h2><span class="section-number">1.4.4. </span>The identity matrix<a class="headerlink" href="#the-identity-matrix" title="Permalink to this heading">#</a></h2>
 <div class="proof definition admonition" id="identity-matrix-definition">
 <p class="admonition-title"><span class="caption-number">Definition 1.11 </span> (The identity matrix)</p>
 <section class="definition-content" id="proof-content">
@@ -604,6 +528,22 @@ Solution<div class="sd-summary-down docutils">
 </div>
 </details></section>
 </div></section>
+<section id="symmetric-matrix">
+<span id="index-5"></span><h2><span class="section-number">1.4.5. </span>Symmetric Matrix<a class="headerlink" href="#symmetric-matrix" title="Permalink to this heading">#</a></h2>
+<div class="proof definition admonition" id="symmetric-matrix-definition">
+<p class="admonition-title"><span class="caption-number">Definition 1.12 </span> (Symmetric matrix)</p>
+<section class="definition-content" id="proof-content">
+<p>A <strong>symmetric</strong> matrix is a matrix is a square matrix where the elements are symmetric with respect to the main diagonal, i.e., <span class="math notranslate nohighlight">\(a_{ij} = a_{ji}\)</span>. A symmetric matrix is equal to its transpose</p>
+<div class="math notranslate nohighlight">
+\[ A = A ^\textrm{T}.\]</div>
+</section>
+</div><p>For example, the following matrices are symmetric</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    &amp;\begin{pmatrix} 1 &amp; 2 \\ 2 &amp; 3 \end{pmatrix}, &amp;
+    &amp;\begin{pmatrix} 1 &amp; 2 &amp; 3 \\ 2 &amp; 1 &amp; 4 \\ 3 &amp; 4 &amp; 1 \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -673,11 +613,11 @@ Solution<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-transpose">1.4.1. Matrix transpose</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#square-matrix">1.4.2. Square matrix</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diagonal-matrix">1.4.3. Diagonal matrix</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-matrix">1.4.4. Zero matrix</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-identity-matrix">1.4.5. The identity matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#square-matrix">1.4.1. Square matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diagonal-matrix">1.4.2. Diagonal matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-matrix">1.4.3. Zero matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-identity-matrix">1.4.4. The identity matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-matrix">1.4.5. Symmetric Matrix</a></li>
 </ul>
   </nav></div>
 

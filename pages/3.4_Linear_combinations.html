@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>3.7. Linear combination of vectors &#8212; Linear Algebra Lecture Notes</title>
   
@@ -389,7 +389,7 @@ document.write(`
 <p>Let <span class="math notranslate nohighlight">\(\mathbf{v},\mathbf{u}_1,\dots,\mathbf{u}_m\in\mathbb{R}^n\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-linear-combination-equation">
 <span class="eqno">(3.6)<a class="headerlink" href="#equation-linear-combination-equation" title="Permalink to this equation">#</a></span>\[ \mathbf{v}=\alpha_1\mathbf{u}_1+\alpha_2\mathbf{u}_2+\dots+\alpha_m\mathbf{u}_m, \]</div>
-<p>for some <span class="math notranslate nohighlight">\(\alpha_1,\alpha_2,\dots,\alpha_m\in \mathbb{R}\)</span> <a class="footnote-reference brackets" href="#id2" id="id1">1</a>. Such a sum is called a <strong>linear combination of vectors</strong>.</p>
+<p>for some <span class="math notranslate nohighlight">\(\alpha_1,\alpha_2,\dots,\alpha_m\in \mathbb{R}\)</span> <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. Such a sum is called a <strong>linear combination of vectors</strong>.</p>
 </section>
 </div><p>For example</p>
 <div class="math notranslate nohighlight">
@@ -494,39 +494,14 @@ Solution<div class="sd-summary-down docutils">
     \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}
     = \begin{pmatrix} a_1 \\ a_2 \\ a_3 \end{pmatrix} = \mathbf{a}.
 \end{align*} \end{split}\]</div>
-<div class="proof example admonition" id="basis-vectors-example">
-<p class="admonition-title"><span class="caption-number">Example 3.7 </span></p>
-<section class="example-content" id="proof-content">
-<p>Represent the following vectors as linear combination of the basis vectors <span class="math notranslate nohighlight">\(\mathbf{i}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{j}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{k}\)</span></p>
-<p>  (i)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 2 \\ 5 \\ 3 \end{pmatrix}\)</span>;</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<p>For example</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \begin{pmatrix} 2 \\ 5 \\ 3 \end{pmatrix} = 2 \mathbf{i} + 5 \mathbf{j} + 3 \mathbf{k} \end{split}\]</div>
-</div>
-</details><p>  (ii)   <span class="math notranslate nohighlight">\(3\begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix}\)</span>.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[\begin{split} 3\begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix} = 3(\mathbf{i} + 0 \mathbf{j} + 2 \mathbf{k}) = 3 \mathbf{i} + 6 \mathbf{k} \end{split}\]</div>
-</div>
-</details></section>
-</div><hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p><span class="math notranslate nohighlight">\(\alpha\)</span> is the lowercase Greek character <em>alpha</em> and is equivalent to ‘a’ in the Latin alphabet.</p>
-</dd>
-</dl>
+\[\begin{split} \begin{pmatrix} 2 \\ 5 \\ 3 \end{pmatrix} = 2 \mathbf{i} + 5 \mathbf{j} + 3 \mathbf{k}. \end{split}\]</div>
+<hr class="footnotes docutils" />
+<aside class="footnote brackets" id="id2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p><span class="math notranslate nohighlight">\(\alpha\)</span> is the lowercase Greek character <em>alpha</em> and is equivalent to ‘a’ in the Latin alphabet.</p>
+</aside>
 </section>
 </section>
 

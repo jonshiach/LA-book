@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>1.6. Inverse matrix &#8212; Linear Algebra Lecture Notes</title>
   
@@ -386,7 +386,7 @@ document.write(`
 <span id="index-0"></span><h1><span class="section-number">1.6. </span>Inverse matrix<a class="headerlink" href="#inverse-matrix" title="Permalink to this heading">#</a></h1>
 <p>Whilst <a class="reference internal" href="1.1_Matrix_multiplication.html#matrix-multiplication-definition">matrix multiplication</a> is defined for matrices of a certain size this is not true for the division of two matrices. However for certain square matrices it may be possible to compute the <strong>inverse matrix</strong> which can be multiplied by the matrix to achieve the same effect. If we consider the simpler case involving numbers, the multiplicative inverse of a number <span class="math notranslate nohighlight">\(x\)</span> is a number denoted by <span class="math notranslate nohighlight">\(x^{-1}\)</span> that when multiplied by <span class="math notranslate nohighlight">\(x\)</span> results in the multiplicative identity 1, so the multiplicative inverse of <span class="math notranslate nohighlight">\(x\)</span> is <span class="math notranslate nohighlight">\(1/x\)</span>. For matrices, the multiplicate identity is the identity matrix so we can define a multiplicative inverse with respect to matrix multiplication.</p>
 <div class="proof definition admonition" id="inverse-matrix-definition">
-<p class="admonition-title"><span class="caption-number">Definition 1.16 </span> (Inverse matrix)</p>
+<p class="admonition-title"><span class="caption-number">Definition 1.17 </span> (Inverse matrix)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be a non-zero <span class="math notranslate nohighlight">\(n \times n\)</span> matrix. Then, if there exist an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix <span class="math notranslate nohighlight">\(A^{-1}\)</span>, such that <span class="math notranslate nohighlight">\(A^{-1}A = I_n,\)</span> we say that <span class="math notranslate nohighlight">\(A^{-1}\)</span> is the <strong>inverse</strong> of the matrix <span class="math notranslate nohighlight">\(A\)</span>.</p>
 </section>
@@ -420,7 +420,7 @@ Solution<div class="sd-summary-down docutils">
 </div><section id="the-adjoint-of-a-matrix">
 <span id="index-1"></span><h2><span class="section-number">1.6.1. </span>The adjoint of a matrix<a class="headerlink" href="#the-adjoint-of-a-matrix" title="Permalink to this heading">#</a></h2>
 <div class="proof definition admonition" id="adjoint-definition">
-<p class="admonition-title"><span class="caption-number">Definition 1.17 </span> (Adjoint of a matrix)</p>
+<p class="admonition-title"><span class="caption-number">Definition 1.18 </span> (Adjoint of a matrix)</p>
 <section class="definition-content" id="proof-content">
 <p>The <strong>adjoint</strong> (also known as the <strong>adjugate</strong>) of a square matrix <span class="math notranslate nohighlight">\(A\)</span> is denoted by <span class="math notranslate nohighlight">\(\operatorname{adj}(A)\)</span> and is the transpose of the matrix of cofactors of <span class="math notranslate nohighlight">\(A\)</span></p>
 <div class="math notranslate nohighlight">

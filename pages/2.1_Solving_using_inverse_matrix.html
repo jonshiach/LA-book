@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>2.2. Solving systems of linear equations using the inverse matrix &#8212; Linear Algebra Lecture Notes</title>
   
@@ -385,7 +385,7 @@ document.write(`
 <section class="theorem-content" id="proof-content">
 <p>The solution to a system of linear equations <span class="math notranslate nohighlight">\(A\mathbf{x} = \mathbf{b}\)</span> can be calculated using <span class="math notranslate nohighlight">\(\mathbf{x} = A^{-1}\mathbf{b}\)</span>.</p>
 </section>
-</div><p>Consider the system of linear equations from <a class="reference internal" href="2.0_Linear_systems.html#system-of-linear-equations-matrix-form-example">Example 2.1</a>.</p>
+</div><p>Consider the system of linear equations from the <a class="reference internal" href="2.0_Linear_systems.html#systems-of-linear-equations-chapter"><span class="std std-ref">previous section</span></a></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{pmatrix}
     2 &amp; 1 \\
@@ -397,12 +397,32 @@ document.write(`
 \begin{pmatrix}
     4 \\ 10
 \end{pmatrix}. \end{split}\]</div>
-<p>The inverse of the coefficient matrix can be easily calculated using the <a class="reference internal" href="1.4_Inverse_matrix.html#adjoint-determinant-formula-theorem">adjoint-determinant formula</a> to give</p>
+<p>The coefficient matrix and constant vector are</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} A^{-1} = \begin{pmatrix} 3/2 &amp; -1/2 \\ -2 &amp; 1 \end{pmatrix}. \end{split}\]</div>
+\[\begin{split} \begin{align*}
+    A &amp;= \begin{pmatrix}
+        2 &amp; 1 \\
+        4 &amp; 3
+    \end{pmatrix}, &amp;
+    \mathbf{b} &amp;= \begin{pmatrix} 4 \\ 10 \end{pmatrix},
+\end{align*} \end{split}\]</div>
+<p>and the inverse of this coefficient matrix can be easily calculated using the <a class="reference internal" href="1.4_Inverse_matrix.html#adjoint-determinant-formula-theorem">adjoint-determinant formula</a> to give</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} A^{-1} = \begin{pmatrix}
+    2 &amp; 1 \\
+    4 &amp; 3
+\end{pmatrix}^{-1}
+= \frac{1}{2} \begin{pmatrix}
+    3 &amp; -1 \\
+    -4 &amp; 2
+\end{pmatrix}. \end{split}\]</div>
 <p>Using <span class="math notranslate nohighlight">\(\mathbf{x} = A^{-1}\mathbf{b}\)</span> the solution is</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\mathbf{x} = \begin{pmatrix} 3/2 &amp; -1/2 \\ -2 &amp; 1 \end{pmatrix}
+\[\begin{split} \mathbf{x} = \frac{1}{2}
+\begin{pmatrix}
+    3 &amp; -1 \\
+    -4 &amp; 2
+\end{pmatrix}
     \begin{pmatrix} 4 \\ 10 \end{pmatrix} =
     \begin{pmatrix} 1 \\ 2 \end{pmatrix},\end{split}\]</div>
 <p>so <span class="math notranslate nohighlight">\(x_1 = 1\)</span> and <span class="math notranslate nohighlight">\(x_2 = 2\)</span> (which we saw when we used <a class="reference internal" href="2.0_Linear_systems.html#solving-systems-of-linear-equations-using-algebra-section"><span class="std std-ref">algebra to solve this system</span></a>). We can check whether this is the correct solution by substituting <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> into <span class="math notranslate nohighlight">\(A\mathbf{x} = \mathbf{b}\)</span></p>
@@ -411,7 +431,7 @@ document.write(`
     \begin{pmatrix} 1 \\ 2 \end{pmatrix} =
     \begin{pmatrix} 4 \\ 10 \end{pmatrix} = \mathbf{b}.\end{split}\]</div>
 <div class="proof example admonition" id="solution-by-inverse-example">
-<p class="admonition-title"><span class="caption-number">Example 2.2 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 2.1 </span></p>
 <section class="example-content" id="proof-content">
 <p>Solve the following systems of linear equations using the inverse of the coefficient matrix:</p>
 <p>  (i)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
@@ -425,21 +445,24 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Here <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; -2 \\ 2 &amp; 4 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b} = \begin{pmatrix} 11 \\ -18 \end{pmatrix}\)</span></p>
+<p class="sd-card-text">Here <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; -2 \\ 2 &amp; 4 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b} = \begin{pmatrix} 11 \\ -18 \end{pmatrix}\)</span>. Calculating <span class="math notranslate nohighlight">\(A^{-1}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \det\begin{pmatrix} 1 &amp; -2 \\ 2 &amp; 4 \end{pmatrix} &amp;= 8, \\
     \operatorname{adj}\begin{pmatrix} 1 &amp; -2 \\ 2 &amp; 4 \end{pmatrix} &amp;= 
     \begin{pmatrix} 4 &amp; -2 \\ 2 &amp; 1 \end{pmatrix}^T = 
     \begin{pmatrix} 4 &amp; 2 \\ -2 &amp; 1 \end{pmatrix},\\
-    \therefore A^{-1} &amp;= 1/8\begin{pmatrix} 4 &amp; 2 \\ -2 &amp; 1 \end{pmatrix}
-    = \begin{pmatrix} 1/2 &amp; 1/4 \\ -1/4 &amp; 1/8 \end{pmatrix}, \\
-    \therefore \mathbf{x} &amp;= \begin{pmatrix} 1/2 &amp; 1/4 \\ -1/4 &amp; 1/8 \end{pmatrix}     
-    \begin{pmatrix} 11 \\ -18 \end{pmatrix} = 
-    1/8\begin{pmatrix} 8 \\ -40 \end{pmatrix} = 
-    \begin{pmatrix} 1 \\ -5 \end{pmatrix}.
+    \therefore A^{-1} &amp;= \frac{1}{8} \begin{pmatrix} 4 &amp; 2 \\ -2 &amp; 1 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Check solution:</p>
+<p class="sd-card-text">So the solution is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \mathbf{x} &amp;= \frac{1}{8} \begin{pmatrix} 4 &amp; 2 \\ -2 &amp; 1 \end{pmatrix}
+    \begin{pmatrix} 11 \\ -18 \end{pmatrix} = 
+    \frac{1}{8} \begin{pmatrix} 8 \\ -40 \end{pmatrix} = 
+    \begin{pmatrix} 1 \\ -5 \end{pmatrix}. 
+\end{align*} \end{split}\]</div>
+<p class="sd-card-text">Checking the solution</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A\mathbf{x} = \begin{pmatrix} 1 &amp; -2 \\ 2 &amp; 4 \end{pmatrix} \begin{pmatrix} 1 \\ -5 \end{pmatrix} = \begin{pmatrix}  11 \\  -18    \end{pmatrix}  = \mathbf{b} \qquad \checkmark\end{split}\]</div>
 </div>
@@ -455,7 +478,7 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Here <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; -2 &amp; 3 \\ 0 &amp; 2 &amp; -4 \\ 3 &amp; 1 &amp; -4 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b} = \begin{pmatrix}-7 \\ 8 \\ 7 \end{pmatrix}\)</span></p>
+<p class="sd-card-text">Here <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; -2 &amp; 3 \\ 0 &amp; 2 &amp; -4 \\ 3 &amp; 1 &amp; -4 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b} = \begin{pmatrix}-7 \\ 8 \\ 7 \end{pmatrix}\)</span>. Calculating <span class="math notranslate nohighlight">\(A^{-1}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \det \begin{pmatrix} 1 &amp; -2 &amp; 3 \\ 0 &amp; 2 &amp; -4 \\ 3 &amp; 1 &amp; -4 \end{pmatrix} &amp;= 
@@ -464,13 +487,27 @@ Solution<div class="sd-summary-down docutils">
     \operatorname{adj} \begin{pmatrix} 1 &amp; -2 &amp; 3 \\ 0 &amp; 2 &amp; -4 \\ 3 &amp; 1 &amp; -4 \end{pmatrix}
     &amp;= \begin{pmatrix} -4 &amp; -12 &amp; -6 \\ -5 &amp; -13 &amp; -7 \\ 2 &amp; 4 &amp; 2 \end{pmatrix}^T 
     = \begin{pmatrix} -4 &amp; -5 &amp; 2 \\ -12 &amp; -13 &amp; 4 \\ -6 &amp; -7 &amp; 2 \end{pmatrix}, \\
-    \therefore A^{-1} &amp;= 1/2\begin{pmatrix} -4 &amp; -5 &amp; 2 \\ -12 &amp; -13 &amp; 4 \\ -6 &amp; -7 &amp; 2 \end{pmatrix} 
-    = \begin{pmatrix} -2 &amp; -5/2 &amp; 1 \\ -6 &amp; -13/2 &amp; 2 \\ -3 &amp; -7/2 &amp; 1 \end{pmatrix}, \\
-    \therefore \mathbf{x} &amp;= \begin{pmatrix} -2 &amp; -5/2 &amp; 1 \\ -6 &amp; -13/2 &amp; 2 \\ -3 &amp; -7/2 &amp; 1 \end{pmatrix} 
+    \therefore A^{-1} &amp;= \frac{1}{2}
+    \begin{pmatrix}
+        -4 &amp; -5 &amp; 2 \\
+        -12 &amp; -13 &amp; 4 \\
+        -6 &amp; -7 &amp; 2
+    \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+<p class="sd-card-text">So the solution is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \mathbf{x} &amp;= \frac{1}{2}
+    \begin{pmatrix}
+        -4 &amp; -5 &amp; 2 \\
+        -12 &amp; -13 &amp; 4 \\
+        -6 &amp; -7 &amp; 2
+    \end{pmatrix}
     \begin{pmatrix}-7 \\ 8 \\ 7 \end{pmatrix}
+    = \frac{1}{2} \begin{pmatrix} 2 \\ 8 \\ 0 \end{pmatrix}
     = \begin{pmatrix} 1 \\4 \\ 0 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Check solution:</p>
+<p class="sd-card-text">Checking the solution</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A \mathbf{x} = \begin{pmatrix} 1 &amp; -2 &amp;  3 \\ 0 &amp; 2 &amp; -4 \\ 3 &amp; 1 &amp; -4 \end{pmatrix} \begin{pmatrix} 1 \\ 4 \\ 0 \end{pmatrix} = \begin{pmatrix} -7 \\ 8 \\ 7 \end{pmatrix} = \mathbf{b} \qquad \checkmark\end{split}\]</div>
 </div>

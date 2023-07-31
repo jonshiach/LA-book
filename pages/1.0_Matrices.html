@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>1. Matrices &#8212; Linear Algebra Lecture Notes</title>
   
@@ -374,6 +374,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-equality">1.2.1. Matrix equality</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-addition">1.2.2. Matrix addition</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scalar-multiplication">1.2.3. Scalar multiplication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-transpose">1.2.4. Matrix transpose</a></li>
 </ul>
 </li>
 </ul>
@@ -702,8 +703,7 @@ Solution<div class="sd-summary-down docutils">
 \begin{pmatrix} a &amp; 6a &amp; 4a \\ 0 &amp; 3a &amp; -a \end{pmatrix} \end{split}\]</div>
 </div>
 </details><p>  (iv)   <span class="math notranslate nohighlight">\(101 \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix} - 99 \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix}\)</span>.</p>
-</section>
-</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -712,10 +712,89 @@ Solution<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} 101 \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix} - 99 \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix}
-= 2\begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix} = 
+= (101 - 99) \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix} =
 \begin{pmatrix} 2 &amp; 4 \\ 0 &amp; 2 \end{pmatrix}\end{split}\]</div>
 </div>
 </details></section>
+</div></section>
+<section id="matrix-transpose">
+<span id="index-6"></span><h3><span class="section-number">1.2.4. </span>Matrix transpose<a class="headerlink" href="#matrix-transpose" title="Permalink to this heading">#</a></h3>
+<div class="proof definition admonition" id="matrix-transpose-definition">
+<p class="admonition-title"><span class="caption-number">Definition 1.5 </span> (Matrix transpose)</p>
+<section class="definition-content" id="proof-content">
+<p>The <strong>transpose</strong> <span class="math notranslate nohighlight">\(A^\mathrm{T}\)</span> of a matrix <span class="math notranslate nohighlight">\(A\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[ [A^\mathrm{T}]_{ij}=a_{ji}. \]</div>
+</section>
+</div><p>Transposing a matrix switches the rows and columns around so that row <span class="math notranslate nohighlight">\(i\)</span> becomes column <span class="math notranslate nohighlight">\(i\)</span> and column <span class="math notranslate nohighlight">\(j\)</span> becomes row <span class="math notranslate nohighlight">\(j\)</span>, i.e.,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \begin{pmatrix}
+        a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+        a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+        \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+        a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
+    \end{pmatrix}^\mathrm{T} =
+    \begin{pmatrix}
+        a_{11} &amp; a_{21} &amp; \cdots &amp; a_{m1} \\
+        a_{12} &amp; a_{22} &amp; \cdots &amp; a_{m2} \\
+        \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+        a_{1n} &amp; a_{2n} &amp; \cdots &amp; a_{mn}
+    \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+<div class="proof theorem admonition" id="properties-of-matrix-transpose-theorem">
+<p class="admonition-title"><span class="caption-number">Theorem 1.3 </span> (Properties of matrix transpose)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> be two square <span class="math notranslate nohighlight">\(n \times n\)</span> matrices and <span class="math notranslate nohighlight">\(k\)</span> a scalar, then</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((A^\mathrm{T})^\mathrm{T} = A\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\((A + B)^\mathrm{T} = A^\mathrm{T} + B^\mathrm{T}\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\((k A)^\mathrm{T} = k (A^\mathrm{T})\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\((AB)^\mathrm{T} = B^\mathrm{T}A^\mathrm{T}\)</span>   (the product of two matrices is defined in the <a class="reference internal" href="1.1_Matrix_multiplication.html#matrix-multiplication-section"><span class="std std-ref">following section</span></a>)</p></li>
+</ul>
+</section>
+</div><div class="proof example admonition" id="matrix-transpose-example">
+<p class="admonition-title"><span class="caption-number">Example 1.5 </span></p>
+<section class="example-content" id="proof-content">
+<p>Evaluate the following:</p>
+<p>  (i)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 3 \\ 2 &amp; 4 \end{pmatrix}^\mathrm{T}\)</span>;</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{pmatrix} 1 &amp; 3 \\ 2 &amp; 4 \end{pmatrix}^\mathrm{T} = 
+    \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} \end{split}\]</div>
+</div>
+</details><p>  (ii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 0 &amp; -2 \\ 3 &amp; -4 &amp; 1 \end{pmatrix}^\mathrm{T}\)</span>;</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{pmatrix} 1 &amp; 0 &amp; -2 \\ 3 &amp; -4 &amp; 1 \end{pmatrix}^\mathrm{T} =
+    \begin{pmatrix} 1 &amp; 3 \\ 0 &amp; -4 \\ -2 &amp; 1 \end{pmatrix} \end{split}\]</div>
+</div>
+</details><p>  (iii)   <span class="math notranslate nohighlight">\(\begin{pmatrix}2 &amp; 3 &amp; 5 \end{pmatrix}^\mathrm{T}\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{pmatrix}2 &amp; 3 &amp; 5 \end{pmatrix}^\mathrm{T} = 
+    \begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix} \end{split}\]</div>
+</div>
+</details></section>
+</div></section>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -793,6 +872,7 @@ Solution<div class="sd-summary-down docutils">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-equality">1.2.1. Matrix equality</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-addition">1.2.2. Matrix addition</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scalar-multiplication">1.2.3. Scalar multiplication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-transpose">1.2.4. Matrix transpose</a></li>
 </ul>
 </li>
 </ul>

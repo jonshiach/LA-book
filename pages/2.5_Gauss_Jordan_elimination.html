@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>2.6. Gauss-Jordan elimination &#8212; Linear Algebra Lecture Notes</title>
   
@@ -390,12 +390,13 @@ document.write(`
 <li><p>the leading entry in each non-zero row is the only non-zero element in its column.</p></li>
 </ul>
 </section>
-</div><p>For example the following matrices are in reduced row echelon form:
-$<span class="math notranslate nohighlight">\( \begin{align*}
+</div><p>For example the following matrices are in reduced row echelon form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
   &amp;\begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}, &amp;
   &amp;\begin{pmatrix} 1 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}, &amp;
   &amp;\begin{pmatrix} 1 &amp; 0 &amp; 2 &amp; 0 \\ 0 &amp; 1 &amp; 3 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{pmatrix}
-\end{align*} \)</span>$</p>
+\end{align*} \end{split}\]</div>
 <p>The method of Gauss-Jordan elimination is summarised by the steps below.</p>
 <div class="proof algorithm admonition" id="gje-algorithm">
 <span id="index-2"></span><p class="admonition-title"><span class="caption-number">Algorithm 2.3 </span> (Gauss-Jordan elimination)</p>
@@ -406,12 +407,12 @@ $<span class="math notranslate nohighlight">\( \begin{align*}
 <li><p>Start with the pivot element as the element in the first row and column of <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
 <li><p>For each column of <span class="math notranslate nohighlight">\(A\)</span></p>
 <ul>
-<li><p>If not using partial pivoting</p>
+<li><p>If partial pivoting is not used</p>
 <ul>
 <li><p>Ensure the pivot element is non-zero by performing a row swap on a row beneath the pivot row</p></li>
 </ul>
 </li>
-<li><p>Else if using partial pivoting</p>
+<li><p>Else if partial pivoting is used</p>
 <ul>
 <li><p>Perform a row swap with the row beneath the pivot row that has the largest absolute value element in the pivot column which is greater than the absolute value fo the pivot element.</p></li>
 </ul>
@@ -429,7 +430,7 @@ $<span class="math notranslate nohighlight">\( \begin{align*}
 </ul>
 </section>
 </div><div class="proof example admonition" id="gje-example">
-<p class="admonition-title"><span class="caption-number">Example 2.6 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 2.5 </span></p>
 <section class="example-content" id="proof-content">
 <p>Use Gauss-Jordan elimination to solve the following system of linear equations</p>
 <div class="math notranslate nohighlight">
@@ -453,35 +454,35 @@ Solution<div class="sd-summary-down docutils">
         2 &amp; -3 &amp; 7 &amp; 4
     \end{array} \right)
     \begin{array}{l} \\ R_2 - \frac{1}{3}R_1 \\[1pt] R_3 - \frac{2}{3} R_1 \end{array} \\ \\
-    \longrightarrow
+    \longrightarrow \quad
     &amp; \left( \begin{array}{ccc|c}
         3 &amp; 1 &amp; -2 &amp; 1 \\
         0 &amp; -4/3 &amp; 8/3 &amp; 8/3 \\
         0 &amp; 11/3 &amp; 25/3 &amp; 10/3
     \end{array} \right)
     \begin{array}{l} \frac{1}{3}R_1 \\ \phantom{x} \\ \phantom{x} \end{array} \\ \\
-    \longrightarrow
+    \longrightarrow \quad
     &amp; \left( \begin{array}{ccc|c}
         1 &amp; 1/3 &amp; -2/3 &amp; 1/3 \\
         0 &amp; -4/3 &amp; 8/3 &amp; 8/3 \\
         0 &amp; -11/3 &amp; 25/3 &amp; 10/3
     \end{array} \right)
     \begin{array}{l} R_1 + \frac{1}{4}R_2 \\ \\ R_3 - \frac{11}{4}R_2 \end{array} \\ \\
-    \longrightarrow
+    \longrightarrow \quad
     &amp; \left( \begin{array}{ccc|c}
         1 &amp; 0 &amp; -1 &amp; 1 \\
         0 &amp; -4/3 &amp; 8/3 &amp; 8/3 \\
         0 &amp; 0 &amp; 1 &amp; -4
     \end{array} \right)
     \begin{array}{l} \\ -\frac{3}{4} R_2 \\ \phantom{x} \end{array} \\ \\
-    \longrightarrow
+    \longrightarrow \quad
     &amp; \left( \begin{array}{ccc|c}
         1 &amp; 0 &amp; 0 &amp; 1 \\
         0 &amp; 1 &amp; -2 &amp; -2 \\
         0 &amp; 0 &amp; 1 &amp; -4
     \end{array} \right)
     \begin{array}{l} \\[2pt] R_2 + 2 R_3 \\ \phantom{x} \end{array} \\ \\
-    \longrightarrow
+    \longrightarrow \quad
     &amp; \left( \begin{array}{ccc|c}
         1 &amp; 0 &amp; 0 &amp; 1 \\
         0 &amp; 1 &amp; 0 &amp; -10 \\

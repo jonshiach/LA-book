@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>1.5. Determinants &#8212; Linear Algebra Lecture Notes</title>
   
@@ -413,7 +413,7 @@ document.write(`
 <section id="calculating-the-determinant-of-a-2-times-2-matrix">
 <span id="index-2"></span><h2><span class="section-number">1.5.1. </span>Calculating the determinant of a <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix<a class="headerlink" href="#calculating-the-determinant-of-a-2-times-2-matrix" title="Permalink to this heading">#</a></h2>
 <div class="proof definition admonition" id="2x2-determinant-definition">
-<p class="admonition-title"><span class="caption-number">Definition 1.12 </span> (Determinant of a <span class="math notranslate nohighlight">\(2\times 2\)</span> matrix)</p>
+<p class="admonition-title"><span class="caption-number">Definition 1.13 </span> (Determinant of a <span class="math notranslate nohighlight">\(2\times 2\)</span> matrix)</p>
 <section class="definition-content" id="proof-content">
 <p>The determinant of the <span class="math notranslate nohighlight">\(2\times 2\)</span> matrix <span class="math notranslate nohighlight">\(\begin{pmatrix}a &amp; b \\ c &amp; d \end{pmatrix}\)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-2x2-determinant-equation">
@@ -475,7 +475,7 @@ Solution<div class="sd-summary-down docutils">
 <span id="index-3"></span><h2><span class="section-number">1.5.2. </span>Calculating the determinant of an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix<a class="headerlink" href="#calculating-the-determinant-of-an-n-times-n-matrix" title="Permalink to this heading">#</a></h2>
 <p>To compute the determinant of a matrix larger than <span class="math notranslate nohighlight">\(2\times 2\)</span> we need to split the matrix up into multiple <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices so we can use equation <a class="reference internal" href="#equation-2x2-determinant-equation">(1.1)</a>. This is done in a specific way explained below which using things called <strong>minors</strong> and <strong>cofactors</strong>.</p>
 <div class="proof definition admonition" id="minor-definition">
-<span id="index-4"></span><p class="admonition-title"><span class="caption-number">Definition 1.13 </span> (Minor)</p>
+<span id="index-4"></span><p class="admonition-title"><span class="caption-number">Definition 1.14 </span> (Minor)</p>
 <section class="definition-content" id="proof-content">
 <p>The <strong>minor</strong> of an element of an <span class="math notranslate nohighlight">\(n\times n\)</span> square matrix is denoted by <span class="math notranslate nohighlight">\(M_{ij}\)</span> and is the determinant of the <span class="math notranslate nohighlight">\((n-1)\times (n-1)\)</span> square matrix that is formed by removing row <span class="math notranslate nohighlight">\(i\)</span> and column <span class="math notranslate nohighlight">\(j\)</span> from <span class="math notranslate nohighlight">\(A\)</span>.</p>
 </section>
@@ -500,7 +500,10 @@ then</p>
 <div class="proof example admonition" id="minor-example">
 <p class="admonition-title"><span class="caption-number">Example 1.10 </span></p>
 <section class="example-content" id="proof-content">
-<p>Given the matrix <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \end{pmatrix},\)</span> calculate:</p>
+<p>Given the matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} A = \begin{pmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \end{pmatrix},\end{split}\]</div>
+<p>calculate:</p>
 <p>  (i)   <span class="math notranslate nohighlight">\(M_{11}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -536,7 +539,7 @@ Solution<div class="sd-summary-down docutils">
 </div>
 </details></section>
 </div><div class="proof definition admonition" id="cofactor-definition">
-<span id="index-5"></span><p class="admonition-title"><span class="caption-number">Definition 1.14 </span> (Cofactor)</p>
+<span id="index-5"></span><p class="admonition-title"><span class="caption-number">Definition 1.15 </span> (Cofactor)</p>
 <section class="definition-content" id="proof-content">
 <p>The <strong>cofactor</strong> of an element of a square matrix is denoted by <span class="math notranslate nohighlight">\(C_{ij}\)</span> and is defined by</p>
 <div class="math notranslate nohighlight" id="equation-cofactor-equation">
@@ -544,14 +547,14 @@ Solution<div class="sd-summary-down docutils">
 </section>
 </div><p>Note that the <span class="math notranslate nohighlight">\((-1)^{i+j}\)</span> in equation <a class="reference internal" href="#equation-cofactor-equation">(1.2)</a> is positive when <span class="math notranslate nohighlight">\(i + j\)</span> is even and negative when <span class="math notranslate nohighlight">\(i+j\)</span> is odd which results in the following pattern of signs</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \begin{matrix} 
+\[\begin{split} \begin{pmatrix}
         + &amp; - &amp; + &amp; \cdots \\
         - &amp; + &amp; - &amp; \cdots \\
         + &amp; - &amp; + &amp; \cdots \\
         \vdots &amp; \vdots &amp; \vdots &amp; \ddots
-      \end{matrix} \end{split}\]</div>
+\end{pmatrix} \end{split}\]</div>
 <div class="proof definition admonition" id="nxn-determinant-definition">
-<p class="admonition-title"><span class="caption-number">Definition 1.15 </span> (Determinant of an <span class="math notranslate nohighlight">\(n\times n\)</span> matrix)</p>
+<p class="admonition-title"><span class="caption-number">Definition 1.16 </span> (Determinant of an <span class="math notranslate nohighlight">\(n\times n\)</span> matrix)</p>
 <section class="definition-content" id="proof-content">
 <p>The determinant of an <span class="math notranslate nohighlight">\(n\times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> is defined by</p>
 <div class="math notranslate nohighlight" id="equation-nxn-determinant-equation">
@@ -566,9 +569,9 @@ Solution<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \det(A) &amp;= a C_{11} + b C_{12} + c C_{13} \\
-    &amp;= a (-1)^{(1+1)} \begin{vmatrix} e &amp; f \\ h &amp; i \end{vmatrix}
-    + b (-1)^{(1+2)} \begin{vmatrix}d &amp; f \\ g &amp; i \end{vmatrix} 
-    + c (-1)^{(1+3)} \begin{vmatrix}d &amp; e \\ g &amp; h \end{vmatrix} \\
+    &amp;= (-1)^{(1+1)} a \begin{vmatrix} e &amp; f \\ h &amp; i \end{vmatrix}
+    + (-1)^{(1+2)} b \begin{vmatrix}d &amp; f \\ g &amp; i \end{vmatrix} 
+    + (-1)^{(1+3)} c \begin{vmatrix}d &amp; e \\ g &amp; h \end{vmatrix} \\
     &amp;= a(ei - fh) - b(di - fg) + c(dh - eg) \\
     &amp;= aei - afh - bdi + bfg + cdh - ceg.
 \end{align*} \end{split}\]</div>

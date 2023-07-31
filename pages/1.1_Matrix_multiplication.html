@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>1.3. Matrix multiplication &#8212; Linear Algebra Lecture Notes</title>
   
@@ -385,7 +385,7 @@ document.write(`
 <span id="index-0"></span><h1><span class="section-number">1.3. </span>Matrix multiplication<a class="headerlink" href="#matrix-multiplication" title="Permalink to this heading">#</a></h1>
 <p>We can multiply any two real numbers together but multiplication of two or more matrices is a much more complicated idea. Similarly to addition, which is only defined for matrices of the same size, matrix multiplication has constrains on the sizes of the multipliers:</p>
 <div class="proof definition admonition" id="matrix-multiplication-definition">
-<p class="admonition-title"><span class="caption-number">Definition 1.5 </span> (Matrix multiplication)</p>
+<p class="admonition-title"><span class="caption-number">Definition 1.6 </span> (Matrix multiplication)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix and <span class="math notranslate nohighlight">\(B\)</span> a <span class="math notranslate nohighlight">\(p \times q\)</span> matrix. The product <span class="math notranslate nohighlight">\(AB\)</span> is only defined if <span class="math notranslate nohighlight">\(n = p\)</span> and the resulting matrix has dimension <span class="math notranslate nohighlight">\(m \times q\)</span> (i.e., the number of columns in <span class="math notranslate nohighlight">\(A\)</span> has to equal the number of rows in <span class="math notranslate nohighlight">\(B\)</span>). The product of an <span class="math notranslate nohighlight">\(m\times p\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> and a <span class="math notranslate nohighlight">\(p\times n\)</span> matrix <span class="math notranslate nohighlight">\(B\)</span> is defined as</p>
 <div class="math notranslate nohighlight">
@@ -465,7 +465,7 @@ document.write(`
     = \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; 50 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 <div class="proof example admonition" id="matrix-multiplication-example">
-<p class="admonition-title"><span class="caption-number">Example 1.5 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 1.6 </span></p>
 <section class="example-content" id="proof-content">
 <p>Given the matrices</p>
 <div class="math notranslate nohighlight">
@@ -487,6 +487,7 @@ Solution<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     AB &amp;= \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix} \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 1 \times 2 + 0 \times 1 &amp; 1 \times 3 + 0 \times 5 \\ -2 \times 2 + 3 \times 1 &amp; -2 \times 3 + 3 \times 5 \end{pmatrix} \\ 
     &amp;= \begin{pmatrix} 2+0 &amp; 3 + 0 \\ -4+3 &amp; -6+15\end{pmatrix} \\
     &amp;= \begin{pmatrix} 2 &amp; 3 \\ -1 &amp; 9 \end{pmatrix}
 \end{align*} \end{split}\]</div>
@@ -502,6 +503,10 @@ Solution<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     BC &amp;= \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix} \begin{pmatrix} 1 &amp; 1 &amp; 0 \\ 3 &amp; -2 &amp; 1 \end{pmatrix} \\
+    &amp;= \begin{pmatrix}
+        2 \times 1 + 3 \times 3 &amp; 2 \times 1 + 3 \times (-2) &amp; 2 \times 0 + 3 \times 1 \\
+        1 \times 1 + 5 \times 3 &amp; 1 \times 1 + 5 \times (-2) &amp; 1 \times 0 + 5 \times 1
+    \end{pmatrix} \\
     &amp;= \begin{pmatrix} 2+9 &amp; 2-6 &amp; 0+3 \\ 1+15 &amp; 1-10 &amp; 0+5 \end{pmatrix} \\
     &amp;= \begin{pmatrix}11 &amp; -4 &amp; 3 \\ 16 &amp; -9 &amp; 5 \end{pmatrix}
 \end{align*} \end{split}\]</div>
@@ -521,7 +526,7 @@ Solution<div class="sd-summary-down docutils">
 <span id="index-1"></span><h2><span class="section-number">1.3.1. </span>Matrix exponents<a class="headerlink" href="#matrix-exponents" title="Permalink to this heading">#</a></h2>
 <p>Just like with scalar quantities we can calculate the exponent of a number <span class="math notranslate nohighlight">\(a^n\)</span> by multiplying by itself <span class="math notranslate nohighlight">\(n\)</span> times, i.e., <span class="math notranslate nohighlight">\(a^3 = a \times a \times \times a\)</span>, we can also do this for square matrices that have the same number of rows and columns.</p>
 <div class="proof definition admonition" id="matrix-exponents-definition">
-<p class="admonition-title"><span class="caption-number">Definition 1.6 </span> (Matrix exponents)</p>
+<p class="admonition-title"><span class="caption-number">Definition 1.7 </span> (Matrix exponents)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be a square <span class="math notranslate nohighlight">\(n \times n\)</span> matrix. Then we write <span class="math notranslate nohighlight">\(A^2=AA\)</span> and more generally:</p>
 <div class="math notranslate nohighlight">
@@ -530,10 +535,11 @@ Solution<div class="sd-summary-down docutils">
 \end{align*} \]</div>
 </section>
 </div><div class="proof example admonition" id="matrix-exponents-example">
-<p class="admonition-title"><span class="caption-number">Example 1.6 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 1.7 </span></p>
 <section class="example-content" id="proof-content">
-<p>Given the matrix
-$<span class="math notranslate nohighlight">\( A = \begin{pmatrix} 1 &amp; 0 \\ 3 &amp; 2 \end{pmatrix}, \)</span>$</p>
+<p>Given the matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} A = \begin{pmatrix} 1 &amp; 0 \\ 3 &amp; 2 \end{pmatrix}, \end{split}\]</div>
 <p>evaluate:</p>
 <p>  (i)   <span class="math notranslate nohighlight">\(A^2\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
