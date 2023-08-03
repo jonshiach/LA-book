@@ -416,7 +416,7 @@ document.write(`
     \underbrace{\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}}_{2\times \mathbf{\textcolor{red}{2}}}
     \underbrace{\begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}}_{\mathbf{\textcolor{red}{2}}\times 2}.
 \end{align*} \end{split}\]</div>
-<p>Here the two inside numbers are the same so this matrix multiplication is defined. Also, the dimensions of the product of these two matrices is given by the two outside numbers. To calculate the value of the element in row 1 and column 1 we move across row 1 of the first matrix and down column 1 of the second matrix</p>
+<p>Here the two inside numbers are the same so this matrix multiplication is defined. Also, the dimensions of the product of these two matrices is given by the two outside numbers. To calculate the value of the element in row 1 and column 1 we use the elements from row 1 of the first matrix and column 1 of the second matrix. We multiply the corresponding elements and add them together, e.g., <span class="math notranslate nohighlight">\(1 \times 2 + 2 \times 7\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} \textcolor{blue}{1} &amp; \textcolor{blue}{2} \\ 3 &amp; 4 \end{pmatrix}
@@ -428,7 +428,7 @@ document.write(`
     = \begin{pmatrix} 5 + 14 &amp; \square \\ \square &amp; \square \end{pmatrix}
     = \begin{pmatrix} 19 &amp; \square \\ \square &amp; \square \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>For the element in the first row and second column we move across row 1 of the first matrix and down column 2 of the second matrix</p>
+<p>For the element in the first row and second column we use elements from row 1 of the first matrix and column 2 of the second matrix, multiplying and adding as before</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} \textcolor{blue}{1} &amp; \textcolor{blue}{2} \\ 3 &amp; 4 \end{pmatrix}
@@ -440,7 +440,7 @@ document.write(`
     = \begin{pmatrix} 19 &amp; 6 + 16 \\ \square &amp; \square \end{pmatrix}
     = \begin{pmatrix} 19 &amp; 22 \\ \square &amp; \square \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>Now that we have finished the top row, to calculate the element in row 2 column 1 we move across row 2 of the first matrix and down column 1 of the second matrix</p>
+<p>Now that we have finished the top row, to calculate the element in row 2 column 1 we use elements from row 2 of the first matrix and column 1 of the second matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} 1 &amp; 2 \\ \textcolor{blue}{3} &amp; \textcolor{blue}{4} \end{pmatrix}
@@ -452,7 +452,7 @@ document.write(`
     = \begin{pmatrix} 19 &amp; 22 \\ 15 + 28 &amp; \square \end{pmatrix}
     = \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; \square \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>Finally to calculate the elements in row 2 column 2 we move across row 2 of the first matrix and down column 2 of the second matrix</p>
+<p>Finally to calculate the elements in row 2 column 2 we use elements from row 2 of the first matrix and column 2 of the second matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} 1 &amp; 2 \\ \textcolor{blue}{3} &amp; \textcolor{blue}{4} \end{pmatrix}
