@@ -405,20 +405,21 @@ document.write(`
     a_{21} b_{11} + a_{22}b_{21} &amp; a_{21}b_{12} + a_{22} b_{22}
 \end{pmatrix}. \end{split}\]</div>
 </section>
-</div><p>The technique used to multiply two matrices together requires us to move across the horizontal rows of the first matrix (the <span class="math notranslate nohighlight">\(i\)</span> index) and down the vertical columns of the second matrix (the <span class="math notranslate nohighlight">\(j\)</span> index). We multiply corresponding elements together and sum the result. For example, consider the multiplication of the two <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices below</p>
+</div><p>The technique used to multiply two matrices together requires us to move across the horizontal rows of the first matrix (the <span class="math notranslate nohighlight">\(i\)</span> index) and down the vertical columns of the second matrix (the <span class="math notranslate nohighlight">\(j\)</span> index). We multiply corresponding elements together and sum the result. For example, consider the two <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrices</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} \begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}.
+    A &amp;= \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}, &amp; 
+    B &amp;= \begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>The first thing we need to do is check whether matrix multiplication is defined for these matrices. An easy way to do this is to write the dimensions of the matrix underneath, e.g.,</p>
+<p>To calculate the matrix multiplication <span class="math notranslate nohighlight">\(AB\)</span> the first thing we need to do is check whether matrix multiplication is defined for these matrices. An easy way to do this is to write the dimensions of the matrices underneath, e.g.,</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
+\[\begin{split}\begin{align*}
     \underbrace{\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}}_{2\times \mathbf{\textcolor{red}{2}}}
     \underbrace{\begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}}_{\mathbf{\textcolor{red}{2}}\times 2}.
 \end{align*} \end{split}\]</div>
-<p>Here the two inside numbers are the same so this matrix multiplication is defined. Also, the dimensions of the product of these two matrices is given by the two outside numbers. To calculate the value of the element in row 1 and column 1 we use the elements from row 1 of the first matrix and column 1 of the second matrix. We multiply the corresponding elements and add them together, e.g., <span class="math notranslate nohighlight">\(1 \times 2 + 2 \times 7\)</span></p>
+<p>Here the two inside numbers are the same so this matrix multiplication is defined. Also, the dimensions of the product of these two matrices is given by the two outside numbers. To calculate the value of the element in row 1 and column 1, <span class="math notranslate nohighlight">\([AB]_{11}\)</span>, we use the elements from row 1 of <span class="math notranslate nohighlight">\(A\)</span> and column 1 of <span class="math notranslate nohighlight">\(B\)</span> and multiply the corresponding elements and add them together. Here the first elements in row 1 of <span class="math notranslate nohighlight">\(A\)</span> and column 1 of <span class="math notranslate nohighlight">\(B\)</span> are <span class="math notranslate nohighlight">\(1\)</span> and <span class="math notranslate nohighlight">\(5\)</span> which are multiplied to give <span class="math notranslate nohighlight">\(5\)</span>. Then moving across row 1 of <span class="math notranslate nohighlight">\(A\)</span> and down column 1 of <span class="math notranslate nohighlight">\(B\)</span> where we have <span class="math notranslate nohighlight">\(2\)</span> and <span class="math notranslate nohighlight">\(7\)</span> which are multiplied to give <span class="math notranslate nohighlight">\(14\)</span>. We then sum these two products to give the value of <span class="math notranslate nohighlight">\([AB]_{11} = 19\)</span></p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
+\[\begin{split} AB = \begin{align*}
     \begin{pmatrix} \textcolor{blue}{1} &amp; \textcolor{blue}{2} \\ 3 &amp; 4 \end{pmatrix}
     \begin{pmatrix} \textcolor{red}{5} &amp; 6 \\ \textcolor{red}{7} &amp; 8 \end{pmatrix} = 
     \begin{pmatrix} 
@@ -428,7 +429,7 @@ document.write(`
     = \begin{pmatrix} 5 + 14 &amp; \square \\ \square &amp; \square \end{pmatrix}
     = \begin{pmatrix} 19 &amp; \square \\ \square &amp; \square \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>For the element in the first row and second column we use elements from row 1 of the first matrix and column 2 of the second matrix, multiplying and adding as before</p>
+<p>For the element <span class="math notranslate nohighlight">\([AB]_{12}\)</span> we use row 1 of <span class="math notranslate nohighlight">\(A\)</span> and column 2 of <span class="math notranslate nohighlight">\(B\)</span>. So we have <span class="math notranslate nohighlight">\(1 \times 6 = 6\)</span> and <span class="math notranslate nohighlight">\(2 \times 8 = 16\)</span> which are added together to give <span class="math notranslate nohighlight">\([AB]_{12} = 22\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} \textcolor{blue}{1} &amp; \textcolor{blue}{2} \\ 3 &amp; 4 \end{pmatrix}
@@ -440,7 +441,7 @@ document.write(`
     = \begin{pmatrix} 19 &amp; 6 + 16 \\ \square &amp; \square \end{pmatrix}
     = \begin{pmatrix} 19 &amp; 22 \\ \square &amp; \square \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>Now that we have finished the top row, to calculate the element in row 2 column 1 we use elements from row 2 of the first matrix and column 1 of the second matrix</p>
+<p>We have now calculated the elements in row 1 of <span class="math notranslate nohighlight">\(AB\)</span> so we move down to row 2. To calculate the element <span class="math notranslate nohighlight">\([AB]_{21}\)</span> we use elements from row 2 of <span class="math notranslate nohighlight">\(A\)</span> and row 1 of <span class="math notranslate nohighlight">\(B\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} 1 &amp; 2 \\ \textcolor{blue}{3} &amp; \textcolor{blue}{4} \end{pmatrix}
@@ -452,7 +453,7 @@ document.write(`
     = \begin{pmatrix} 19 &amp; 22 \\ 15 + 28 &amp; \square \end{pmatrix}
     = \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; \square \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>Finally to calculate the elements in row 2 column 2 we use elements from row 2 of the first matrix and column 2 of the second matrix</p>
+<p>Finally to calculate the element <span class="math notranslate nohighlight">\([AB]_{22}\)</span> we use elements from row 2 of <span class="math notranslate nohighlight">\(A\)</span> and column 2 of <span class="math notranslate nohighlight">\(B\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} 1 &amp; 2 \\ \textcolor{blue}{3} &amp; \textcolor{blue}{4} \end{pmatrix}
