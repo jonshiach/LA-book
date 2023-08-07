@@ -387,10 +387,10 @@ document.write(`
 <div class="proof definition admonition" id="matrix-multiplication-definition">
 <p class="admonition-title"><span class="caption-number">Definition 1.6 </span> (Matrix multiplication)</p>
 <section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix and <span class="math notranslate nohighlight">\(B\)</span> a <span class="math notranslate nohighlight">\(p \times q\)</span> matrix. The product <span class="math notranslate nohighlight">\(AB\)</span> is only defined if <span class="math notranslate nohighlight">\(n = p\)</span> and the resulting matrix has dimension <span class="math notranslate nohighlight">\(m \times q\)</span> (i.e., the number of columns in <span class="math notranslate nohighlight">\(A\)</span> has to equal the number of rows in <span class="math notranslate nohighlight">\(B\)</span>). The product of an <span class="math notranslate nohighlight">\(m\times p\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> and a <span class="math notranslate nohighlight">\(p\times n\)</span> matrix <span class="math notranslate nohighlight">\(B\)</span> is defined as</p>
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\(m \cdot n\)</span> matrix and <span class="math notranslate nohighlight">\(B\)</span> a <span class="math notranslate nohighlight">\(p \cdot q\)</span> matrix. The product <span class="math notranslate nohighlight">\(AB\)</span> is only defined if <span class="math notranslate nohighlight">\(n = p\)</span> and the resulting matrix has dimension <span class="math notranslate nohighlight">\(m \cdot q\)</span> (i.e., the number of columns in <span class="math notranslate nohighlight">\(A\)</span> has to equal the number of rows in <span class="math notranslate nohighlight">\(B\)</span>). The product of an <span class="math notranslate nohighlight">\(m\cdot p\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> and a <span class="math notranslate nohighlight">\(p\cdot n\)</span> matrix <span class="math notranslate nohighlight">\(B\)</span> is defined as</p>
 <div class="math notranslate nohighlight">
 \[ [AB]_{ij} = \sum_{k=1}^p a_{ik}b_{kj}. \]</div>
-<p>i.e., if <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are two <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices</p>
+<p>i.e., if <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are two <span class="math notranslate nohighlight">\(2\cdot 2\)</span> matrices</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{pmatrix} 
     a_{11} &amp; a_{12} \\
@@ -405,61 +405,86 @@ document.write(`
     a_{21} b_{11} + a_{22}b_{21} &amp; a_{21}b_{12} + a_{22} b_{22}
 \end{pmatrix}. \end{split}\]</div>
 </section>
-</div><p>The technique used to multiply two matrices together requires us to move across the horizontal rows of the first matrix (the <span class="math notranslate nohighlight">\(i\)</span> index) and down the vertical columns of the second matrix (the <span class="math notranslate nohighlight">\(j\)</span> index). We multiply corresponding elements together and sum the result. For example, consider the multiplication of the two <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices below</p>
+</div><p>The technique used to multiply two matrices together requires us to move across the horizontal rows of the first matrix (the <span class="math notranslate nohighlight">\(i\)</span> index) and down the vertical columns of the second matrix (the <span class="math notranslate nohighlight">\(j\)</span> index). We multiply corresponding elements together and sum the result. For example, consider the multiplication of the two <span class="math notranslate nohighlight">\(2\cdot 2\)</span> matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> given below</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} \begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}.
+    A &amp;= \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}, &amp;
+    B &amp;= \begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 <p>The first thing we need to do is check whether matrix multiplication is defined for these matrices. An easy way to do this is to write the dimensions of the matrix underneath, e.g.,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \underbrace{\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}}_{2\times \mathbf{\textcolor{red}{2}}}
-    \underbrace{\begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}}_{\mathbf{\textcolor{red}{2}}\times 2}.
+    AB = \underset{2 \times \mathbf{\textcolor{red}{2}}}{\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}}
+    \underset{\textcolor{red}{2} \times 2}{\begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}}.
 \end{align*} \end{split}\]</div>
-<p>Here the two inside numbers are the same so this matrix multiplication is defined. Also, the dimensions of the product of these two matrices is given by the two outside numbers. To calculate the value of the element in row 1 and column 1 we move across row 1 of the first matrix and down column 1 of the second matrix</p>
+<p>Here the two inside numbers are the same so this matrix multiplication is defined. Futhermore the dimensions of the product of these two matrices is given by the two outside numbers. To calculate the value of the element in row 1 and column 1 of <span class="math notranslate nohighlight">\(AB\)</span>, i.e., <span class="math notranslate nohighlight">\([AB]_{11}\)</span>, we use the elements from row 1 of <span class="math notranslate nohighlight">\(A\)</span> and column 1 of <span class="math notranslate nohighlight">\(B\)</span> multiplying corresponding elements and summing the result</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \begin{pmatrix} \textcolor{blue}{1} &amp; \textcolor{blue}{2} \\ 3 &amp; 4 \end{pmatrix}
-    \begin{pmatrix} \textcolor{red}{5} &amp; 6 \\ \textcolor{red}{7} &amp; 8 \end{pmatrix} = 
     \begin{pmatrix} 
-        \textcolor{blue}{1} \times \textcolor{red}{5} + \textcolor{blue}{2} \times \textcolor{red}{7} &amp; \square \\
-        \square &amp; \square
+        \textcolor{blue}{1} &amp; \textcolor{blue}{2} \\
+        \textcolor{lightgray}{3} &amp; \textcolor{lightgray}{4} 
+    \end{pmatrix}
+    \begin{pmatrix} 
+        \textcolor{red}{5} &amp; \textcolor{lightgray}{6} \\
+        \textcolor{red}{7} &amp; \textcolor{lightgray}{8} 
+    \end{pmatrix} =
+    \begin{pmatrix} 
+        \textcolor{blue}{1} \cdot \textcolor{red}{5} + \textcolor{blue}{2} \cdot \textcolor{red}{7} &amp; \textcolor{lightgray}{\square} \\
+        \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square}
     \end{pmatrix} 
-    = \begin{pmatrix} 5 + 14 &amp; \square \\ \square &amp; \square \end{pmatrix}
-    = \begin{pmatrix} 19 &amp; \square \\ \square &amp; \square \end{pmatrix}.
+    = \begin{pmatrix} 5 + 14 &amp; \textcolor{lightgray}{\square} \\ \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square} \end{pmatrix}
+    = \begin{pmatrix} 19 &amp; \textcolor{lightgray}{\square} \\ \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square} \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>For the element in the first row and second column we move across row 1 of the first matrix and down column 2 of the second matrix</p>
+<p>The value of <span class="math notranslate nohighlight">\([AB]_{12}\)</span> is calculated using elements from row 1 of <span class="math notranslate nohighlight">\(A\)</span> and column 2 of <span class="math notranslate nohighlight">\(B\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \begin{pmatrix} \textcolor{blue}{1} &amp; \textcolor{blue}{2} \\ 3 &amp; 4 \end{pmatrix}
-    \begin{pmatrix} 5 &amp; \textcolor{red}{6} \\ 7 &amp; \textcolor{red}{8} \end{pmatrix} = 
-    \begin{pmatrix} 
-        19 &amp; \textcolor{blue}{1} \times \textcolor{red}{6} + \textcolor{blue}{2} \times \textcolor{red}{8} \\
-        \square &amp; \square
+    \begin{pmatrix}
+        \textcolor{blue}{1} &amp; \textcolor{blue}{2} \\
+        \textcolor{lightgray}{3} &amp; \textcolor{lightgray}{4}
     \end{pmatrix}
-    = \begin{pmatrix} 19 &amp; 6 + 16 \\ \square &amp; \square \end{pmatrix}
-    = \begin{pmatrix} 19 &amp; 22 \\ \square &amp; \square \end{pmatrix}.
+    \begin{pmatrix} 
+        \textcolor{lightgray}{5} &amp; \textcolor{red}{6} \\
+        \textcolor{lightgray}{7} &amp; \textcolor{red}{8} 
+    \end{pmatrix} =
+    \begin{pmatrix}
+        19 &amp; \textcolor{blue}{1} \cdot \textcolor{red}{6} + \textcolor{blue}{2} \cdot \textcolor{red}{8} \\
+        \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square}
+    \end{pmatrix}
+    = \begin{pmatrix} 19 &amp; 6 + 16 \\ \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square} \end{pmatrix}
+    = \begin{pmatrix} 19 &amp; 22 \\ \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square} \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>Now that we have finished the top row, to calculate the element in row 2 column 1 we move across row 2 of the first matrix and down column 1 of the second matrix</p>
+<p>Now that we have finished the first row of <span class="math notranslate nohighlight">\(AB\)</span> we now move to the second row. The value of <span class="math notranslate nohighlight">\([AB]_{21}\)</span> is calculated using elements from row 2 of <span class="math notranslate nohighlight">\(A\)</span> and column 1 of <span class="math notranslate nohighlight">\(B\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \begin{pmatrix} 1 &amp; 2 \\ \textcolor{blue}{3} &amp; \textcolor{blue}{4} \end{pmatrix}
-    \begin{pmatrix} \textcolor{red}{5} &amp; 6 \\ \textcolor{red}{7} &amp; 8 \end{pmatrix} = 
+    \begin{pmatrix} 
+        \textcolor{lightgray}{1} &amp; \textcolor{lightgray}{2} \\ 
+        \textcolor{blue}{3} &amp; \textcolor{blue}{4} 
+    \end{pmatrix}
+    \begin{pmatrix} 
+        \textcolor{red}{5} &amp; \textcolor{lightgray}{6} \\ 
+        \textcolor{red}{7} &amp; \textcolor{lightgray}{8} 
+    \end{pmatrix} = 
     \begin{pmatrix} 
         19 &amp; 22 \\
-        \textcolor{blue}{3} \times \textcolor{red}{5} + \textcolor{blue}{4} \times \textcolor{red}{7} &amp; \square
+        \textcolor{blue}{3} \cdot \textcolor{red}{5} + \textcolor{blue}{4} \cdot \textcolor{red}{7} &amp; \textcolor{lightgray}{\square}
     \end{pmatrix}
-    = \begin{pmatrix} 19 &amp; 22 \\ 15 + 28 &amp; \square \end{pmatrix}
-    = \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; \square \end{pmatrix}.
+    = \begin{pmatrix} 19 &amp; 22 \\ 15 + 28 &amp; \textcolor{lightgray}{\square} \end{pmatrix}
+    = \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; \textcolor{lightgray}{\square} \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>Finally to calculate the elements in row 2 column 2 we move across row 2 of the first matrix and down column 2 of the second matrix</p>
+<p>Finally the value of <span class="math notranslate nohighlight">\([AB]_{22}\)</span> is calculated using elements from row 2 of <span class="math notranslate nohighlight">\(A\)</span> and column 2 of <span class="math notranslate nohighlight">\(B\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \begin{pmatrix} 1 &amp; 2 \\ \textcolor{blue}{3} &amp; \textcolor{blue}{4} \end{pmatrix}
-    \begin{pmatrix} 5 &amp; \textcolor{red}{6} \\ 7 &amp; \textcolor{red}{8} \end{pmatrix} = 
+    \begin{pmatrix} 
+        \textcolor{lightgray}{1} &amp; \textcolor{lightgray}{2} \\
+        \textcolor{blue}{3} &amp; \textcolor{blue}{4}
+    \end{pmatrix}
+    \begin{pmatrix} 
+        \textcolor{lightgray}{5} &amp; \textcolor{red}{6} \\
+        \textcolor{lightgray}{7} &amp; \textcolor{red}{8}
+    \end{pmatrix} = 
     \begin{pmatrix} 
         19 &amp; 22 \\
-        43 &amp; \textcolor{blue}{3} \times \textcolor{red}{6} + \textcolor{blue}{4} \times \textcolor{red}{8}
+        43 &amp; \textcolor{blue}{3} \cdot \textcolor{red}{6} + \textcolor{blue}{4} \cdot \textcolor{red}{8}
     \end{pmatrix}
     = \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; 18 + 32 \end{pmatrix}
     = \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; 50 \end{pmatrix}.
@@ -487,7 +512,7 @@ Solution<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     AB &amp;= \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix} \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 1 \times 2 + 0 \times 1 &amp; 1 \times 3 + 0 \times 5 \\ -2 \times 2 + 3 \times 1 &amp; -2 \times 3 + 3 \times 5 \end{pmatrix} \\ 
+    &amp;= \begin{pmatrix} 1 \cdot 2 + 0 \cdot 1 &amp; 1 \cdot 3 + 0 \cdot 5 \\ -2 \cdot 2 + 3 \cdot 1 &amp; -2 \cdot 3 + 3 \cdot 5 \end{pmatrix} \\ 
     &amp;= \begin{pmatrix} 2+0 &amp; 3 + 0 \\ -4+3 &amp; -6+15\end{pmatrix} \\
     &amp;= \begin{pmatrix} 2 &amp; 3 \\ -1 &amp; 9 \end{pmatrix}
 \end{align*} \end{split}\]</div>
@@ -504,8 +529,8 @@ Solution<div class="sd-summary-down docutils">
 \[\begin{split} \begin{align*}
     BC &amp;= \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix} \begin{pmatrix} 1 &amp; 1 &amp; 0 \\ 3 &amp; -2 &amp; 1 \end{pmatrix} \\
     &amp;= \begin{pmatrix}
-        2 \times 1 + 3 \times 3 &amp; 2 \times 1 + 3 \times (-2) &amp; 2 \times 0 + 3 \times 1 \\
-        1 \times 1 + 5 \times 3 &amp; 1 \times 1 + 5 \times (-2) &amp; 1 \times 0 + 5 \times 1
+        2 \cdot 1 + 3 \cdot 3 &amp; 2 \cdot 1 + 3 \cdot (-2) &amp; 2 \cdot 0 + 3 \cdot 1 \\
+        1 \cdot 1 + 5 \cdot 3 &amp; 1 \cdot 1 + 5 \cdot (-2) &amp; 1 \cdot 0 + 5 \cdot 1
     \end{pmatrix} \\
     &amp;= \begin{pmatrix} 2+9 &amp; 2-6 &amp; 0+3 \\ 1+15 &amp; 1-10 &amp; 0+5 \end{pmatrix} \\
     &amp;= \begin{pmatrix}11 &amp; -4 &amp; 3 \\ 16 &amp; -9 &amp; 5 \end{pmatrix}
@@ -519,16 +544,16 @@ Solution<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(CD\)</span> is undefined since <span class="math notranslate nohighlight">\(C\)</span> is <span class="math notranslate nohighlight">\(2\times 3\)</span> and <span class="math notranslate nohighlight">\(D\)</span> is <span class="math notranslate nohighlight">\(2\times 1\)</span>.</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(CD\)</span> is undefined since <span class="math notranslate nohighlight">\(C\)</span> is <span class="math notranslate nohighlight">\(2\cdot 3\)</span> and <span class="math notranslate nohighlight">\(D\)</span> is <span class="math notranslate nohighlight">\(2\cdot 1\)</span>.</p>
 </div>
 </details></section>
 </div><section id="matrix-exponents">
 <span id="index-1"></span><h2><span class="section-number">1.3.1. </span>Matrix exponents<a class="headerlink" href="#matrix-exponents" title="Permalink to this heading">#</a></h2>
-<p>Just like with scalar quantities we can calculate the exponent of a number <span class="math notranslate nohighlight">\(a^n\)</span> by multiplying by itself <span class="math notranslate nohighlight">\(n\)</span> times, i.e., <span class="math notranslate nohighlight">\(a^3 = a \times a \times \times a\)</span>, we can also do this for square matrices that have the same number of rows and columns.</p>
+<p>Just like with scalar quantities we can calculate the exponent of a number <span class="math notranslate nohighlight">\(a^n\)</span> by multiplying by itself <span class="math notranslate nohighlight">\(n\)</span> times, i.e., <span class="math notranslate nohighlight">\(a^3 = a \cdot a \cdot a\)</span>, we can also do this for square matrices that have the same number of rows and columns.</p>
 <div class="proof definition admonition" id="matrix-exponents-definition">
 <p class="admonition-title"><span class="caption-number">Definition 1.7 </span> (Matrix exponents)</p>
 <section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be a square <span class="math notranslate nohighlight">\(n \times n\)</span> matrix. Then we write <span class="math notranslate nohighlight">\(A^2=AA\)</span> and more generally:</p>
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be a square <span class="math notranslate nohighlight">\(n \cdot n\)</span> matrix. Then we write <span class="math notranslate nohighlight">\(A^2=AA\)</span> and more generally:</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align*}
     A^n = \underbrace{A A \cdots A}_{n \text{ times}}.
@@ -539,7 +564,7 @@ Solution<div class="sd-summary-down docutils">
 <section class="example-content" id="proof-content">
 <p>Given the matrix</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} A = \begin{pmatrix} 1 &amp; 0 \\ 3 &amp; 2 \end{pmatrix}, \end{split}\]</div>
+\[\begin{split} A = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}, \end{split}\]</div>
 <p>evaluate:</p>
 <p>  (i)   <span class="math notranslate nohighlight">\(A^2\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -551,10 +576,10 @@ Solution<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    A^2 &amp;= AA = \begin{pmatrix} 1 &amp; 0 \\ 3 &amp; 2 \end{pmatrix}
-    \begin{pmatrix} 1 &amp; 0 \\ 3 &amp; 2 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 1 + 0 &amp; 0 + 0 \\ 3 + 6 &amp; 0 + 4 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 1 &amp; 0 \\ 9 &amp; 4 \end{pmatrix}
+    A^2 &amp;= AA = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}
+    \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 1 + 6 &amp; 2 + 8 \\ 3 + 12 &amp; 6 + 16 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 7 &amp; 10 \\ 15 &amp; 22 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 </div>
 </details><p>  (ii)   <span class="math notranslate nohighlight">\(A^3\)</span>;</p>
@@ -567,10 +592,11 @@ Solution<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    A^3 &amp;= A^2A = \begin{pmatrix} 1 &amp; 0 \\ 9 &amp; 4 \end{pmatrix}
-    \begin{pmatrix} 1 &amp; 0 \\ 3 &amp; 2 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 1 + 0 &amp; 0 + 0 \\ 9 + 12 &amp; 0 + 8 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 1 &amp; 0 \\ 21 &amp; 8 \end{pmatrix}
+    A^3 &amp;= AA^2 =
+    \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}
+    \begin{pmatrix} 7 &amp; 10 \\ 15 &amp; 22 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 7 + 30 &amp; 10 + 44 \\ 21 + 60 &amp; 30 + 88 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 37 &amp; 54 \\ 81 &amp; 118 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 </div>
 </details><p>  (iii)   <span class="math notranslate nohighlight">\(A^5\)</span>.</p>
@@ -583,10 +609,11 @@ Solution<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    A^5 &amp;= A^3A^2 = \begin{pmatrix} 1 &amp; 0 \\ 21 &amp; 8 \end{pmatrix}
-    \begin{pmatrix} 1 &amp; 0 \\ 9 &amp; 4 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 1 + 0 &amp; 0 + 0 \\ 21 + 72 &amp; 0 + 32 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 1 &amp; 0 \\ 93 &amp; 32 \end{pmatrix}
+    A^5 &amp;= A^2A^3 = 
+    \begin{pmatrix} 7 &amp; 10 \\ 15 &amp; 22 \end{pmatrix}
+    \begin{pmatrix} 37 &amp; 54 \\ 81 &amp; 118 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 259 + 810 &amp; 378 + 1180 \\ 555 + 1782 &amp; 810 + 2596 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 1069 &amp; 1558 \\ 2337 &amp; 3406 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 </div>
 </details></section>
