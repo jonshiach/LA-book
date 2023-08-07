@@ -374,6 +374,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-matrix">1.4.3. Zero matrix</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-identity-matrix">1.4.4. The identity matrix</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-matrix">1.4.5. Symmetric Matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#triangular-matrices">1.4.6. Triangular matrices</a></li>
 </ul>
             </nav>
         </div>
@@ -544,6 +545,46 @@ Solution<div class="sd-summary-down docutils">
     &amp;\begin{pmatrix} 1 &amp; 2 &amp; 3 \\ 2 &amp; 1 &amp; 4 \\ 3 &amp; 4 &amp; 1 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 </section>
+<section id="triangular-matrices">
+<h2><span class="section-number">1.4.6. </span>Triangular matrices<a class="headerlink" href="#triangular-matrices" title="Permalink to this heading">#</a></h2>
+<div class="proof definition admonition" id="upper-triangular-matrix-definition">
+<p class="admonition-title"><span class="caption-number">Definition 1.13 </span> (Upper triangular matrix)</p>
+<section class="definition-content" id="proof-content">
+<p>An <strong>upper triangular matrix</strong> is a non-zero square matrix where the elements on and beneath the main diagonal are all zeros.</p>
+</section>
+</div><div class="proof definition admonition" id="lower-triangular-matrix-definition">
+<p class="admonition-title"><span class="caption-number">Definition 1.14 </span> (Lower triangular matrix)</p>
+<section class="definition-content" id="proof-content">
+<p>A <strong>lower triangular matrix</strong> is a non-zero square matrix where the elements on and above the main diagonal are all zeros.</p>
+</section>
+</div><p>For example, the following matrices are upper triangular matrices</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \begin{pmatrix} 0 &amp; 1 \\ 0 &amp; 0 \end{pmatrix}, &amp;&amp;
+    \begin{pmatrix} 0 &amp; 1 &amp; 2 \\ 0 &amp; 0 &amp; 3 \\ 0 &amp; 0 &amp; 0 \end{pmatrix}, &amp;&amp;
+    \begin{pmatrix}
+        0 &amp; 2 &amp; 4 &amp; 6 \\
+        0 &amp; 0 &amp; 8 &amp; 10 \\
+        0 &amp; 0 &amp; 0 &amp; 12 \\
+        0 &amp; 0 &amp; 0 &amp; 0
+    \end{pmatrix},
+\end{align*} \end{split}\]</div>
+<p>and the following matrixes are lower triangular matrices</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \begin{pmatrix}
+        0 &amp; 0 &amp; 0 \\
+        1 &amp; 0 &amp; 0 \\ 
+        3 &amp; 5 &amp; 0
+    \end{pmatrix}, &amp;&amp;
+    \begin{pmatrix}
+        0 &amp; 0 &amp; 0 &amp; 0 \\
+        2 &amp; 0 &amp; 0 &amp; 0 \\
+        3 &amp; 5 &amp; 0 &amp; 0 \\
+        7 &amp; 11 &amp; 13 &amp; 0
+    \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -618,6 +659,7 @@ Solution<div class="sd-summary-down docutils">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-matrix">1.4.3. Zero matrix</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-identity-matrix">1.4.4. The identity matrix</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-matrix">1.4.5. Symmetric Matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#triangular-matrices">1.4.6. Triangular matrices</a></li>
 </ul>
   </nav></div>
 
