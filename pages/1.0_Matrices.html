@@ -390,7 +390,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="matrices">
 <span id="matrices-chapter"></span><h1><span class="section-number">1. </span>Matrices<a class="headerlink" href="#matrices" title="Permalink to this heading">#</a></h1>
-<p id="index-0">Matrices are a set of numbers or other mathematical object that are arranged in a rectangular array. They provide us with a convenient way to represent systems of equations, sets of co-ordinates, collections of vectors and transformations. They are fundamental to the field of linear algebra which is why we are going to start the unit with looking at them.</p>
+<p id="index-0">Matrices are a set of numbers or other mathematical object that are arranged in a rectangular array. They provide us with a convenient way to represent systems of equations, sets of co-ordinates, collections of vectors and transformations. They are fundamental to the field of linear algebra which is why we are going to begin with studying them.</p>
 <p id="definition-of-a-matrix-section">A <strong>matrix</strong> (plural <strong>matrices</strong>) is a rectangular array of elements which can be numbers, mathematical expressions, symbols, or even other matrices. Matrices are arranged in rows and columns and enclosed by parentheses (or sometimes square brackets), for example</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{pmatrix}
@@ -461,7 +461,7 @@ Solution<div class="sd-summary-down docutils">
 </details></section>
 </div><span class="target" id="indexing-a-matrix-section"></span><section id="indexing-a-matrix">
 <span id="index-2"></span><h2><span class="section-number">1.1. </span>Indexing a matrix<a class="headerlink" href="#indexing-a-matrix" title="Permalink to this heading">#</a></h2>
-<p>Matrices are typically labeled using uppercase characters, e.g., <span class="math notranslate nohighlight">\(A\)</span>, and the elements of a matrix are labeled with the corresponding lowercase character, e.g. <span class="math notranslate nohighlight">\(a\)</span>. Individual entries of a matrix are indexed using two subscript indices <span class="math notranslate nohighlight">\(a_{ij}\)</span> where <span class="math notranslate nohighlight">\(i\)</span> is the row number reading from top to bottom and <span class="math notranslate nohighlight">\(j\)</span> is the column number reading from left to right.</p>
+<p>Matrices are typically labeled using uppercase characters, e.g., <span class="math notranslate nohighlight">\(A\)</span>, and the elements of a matrix are labelled with the corresponding lowercase character, e.g. <span class="math notranslate nohighlight">\(a\)</span>. Individual entries of a matrix are indexed using two subscript indices <span class="math notranslate nohighlight">\(a_{ij}\)</span> where <span class="math notranslate nohighlight">\(i\)</span> is the row number reading from top to bottom and <span class="math notranslate nohighlight">\(j\)</span> is the column number reading from left to right.</p>
 <p>For example, let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} A =
@@ -471,7 +471,7 @@ Solution<div class="sd-summary-down docutils">
     \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
     a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 \end{pmatrix}. \end{split}\]</div>
-<p>Some alternative notation in common usage includes</p>
+<p>Some alternative notation used for matrix indexing are given below</p>
 <div class="math notranslate nohighlight">
 \[ a_{ij} = [A]_{ij} = A(i,j). \]</div>
 <div class="proof example admonition" id="matrix-indexing-example">
@@ -551,27 +551,20 @@ Solution<div class="sd-summary-down docutils">
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> be two <span class="math notranslate nohighlight">\(m \times n\)</span> matrices. The addition or subtraction of two <span class="math notranslate nohighlight">\(m \times n\)</span> matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> is an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A \pm B\)</span> defined by:</p>
 <div class="math notranslate nohighlight">
 \[ [A \pm B]_{ij} = a_{ij} \pm b_{ij}, \]</div>
-<p>where <span class="math notranslate nohighlight">\(1 \leq i \leq m\)</span> and <span class="math notranslate nohighlight">\(1 \leq j \leq n\)</span>.</p>
+<p>where <span class="math notranslate nohighlight">\(1 \leq i \leq m\)</span> and <span class="math notranslate nohighlight">\(1 \leq j \leq n\)</span>. For example, the addition or subtraction of two <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrices is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix}
-        a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
-        a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
-        \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-        a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
-    \end{pmatrix} \pm 
+        a_{11} &amp; a_{12} \\
+        a_{21} &amp; a_{22}
+    \end{pmatrix} \pm
     \begin{pmatrix}
-        b_{11} &amp; b_{12} &amp; \cdots &amp; b_{1n} \\
-        b_{21} &amp; b_{22} &amp; \cdots &amp; b_{2n} \\
-        \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-        b_{m1} &amp; b_{m2} &amp; \cdots &amp; b_{mn}
-    \end{pmatrix} \\
-    =
+        b_{11} &amp; b_{12} \\
+        b_{21} &amp; b_{22}
+    \end{pmatrix} = 
     \begin{pmatrix}
-        a_{11} \pm b_{11} &amp; a_{12} \pm b_{12} &amp; \cdots &amp; a_{1n} \pm b_{1n} \\
-        a_{21} \pm b_{21} &amp; a_{22} \pm b_{22} &amp; \cdots &amp; a_{2n} \pm a_{2n} \\
-        \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-        a_{m1} \pm b_{m1} &amp; a_{m2} \pm b_{m2} &amp; \cdots &amp; a_{mn} \pm b_{mn}
+        a_{11} \pm b_{11} &amp; a_{12} \pm b_{12} \\
+        a_{21} \pm b_{21} &amp; a_{22} \pm b_{22}
     \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 </section>
@@ -634,7 +627,7 @@ Solution<div class="sd-summary-down docutils">
 <p>i.e.,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    k 
+    k
     \begin{pmatrix}
         a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
         a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
@@ -659,7 +652,7 @@ Solution<div class="sd-summary-down docutils">
 <li><p>scalar multiplication is distributive over matrix addition: <span class="math notranslate nohighlight">\(k (A + B) = kA + kB\)</span>;</p></li>
 <li><p>scalar multiplication is distributive over scalar addition: <span class="math notranslate nohighlight">\((k + \ell)A = kA = \ell A\)</span>;</p></li>
 <li><p>scalar multiplication is associative: <span class="math notranslate nohighlight">\(k(\ell A) = (k \ell)A\)</span>;</p></li>
-<li><p>multiplication by <span class="math notranslate nohighlight">\(-1\)</span> gives the additive inverse: <span class="math notranslate nohighlight">\((-1) A = -A\)</span>.</p></li>
+<li><p>multiplication by <span class="math notranslate nohighlight">\(-1\)</span> gives the additive inverse: <span class="math notranslate nohighlight">\(-1 \cdot A = -A\)</span>.</p></li>
 </ul>
 </section>
 </div><div class="proof example admonition" id="scalar-multiplication-example">
@@ -722,7 +715,7 @@ Solution<div class="sd-summary-down docutils">
 <div class="proof definition admonition" id="matrix-transpose-definition">
 <p class="admonition-title"><span class="caption-number">Definition 1.5 </span> (Matrix transpose)</p>
 <section class="definition-content" id="proof-content">
-<p>The <strong>transpose</strong> <span class="math notranslate nohighlight">\(A^\mathrm{T}\)</span> of a matrix <span class="math notranslate nohighlight">\(A\)</span> is given by</p>
+<p>The <strong>transpose</strong> of an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> is a <span class="math notranslate nohighlight">\(n \times m\)</span> matrix denoted by <span class="math notranslate nohighlight">\(A^\mathrm{T}\)</span> formed by switching the rows and columns of <span class="math notranslate nohighlight">\(A\)</span>, i.e.,</p>
 <div class="math notranslate nohighlight">
 \[ [A^\mathrm{T}]_{ij}=a_{ji}. \]</div>
 </section>
