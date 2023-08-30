@@ -390,7 +390,7 @@ document.write(`
     x_1 &amp;= \frac{de - bf}{ad - bc}, &amp; \qquad
     x_2 &amp;= \frac{af - ce}{ad - bc}.
 \end{align*} \]</div>
-<p>We can recognise that the solution to both variables includes the determinant of the coefficient matrix, <span class="math notranslate nohighlight">\(ad - bc\)</span>, in the denomimator. But what about the numerator? If we consider the solution to <span class="math notranslate nohighlight">\(x_1\)</span> then in <span class="math notranslate nohighlight">\(de - bf\)</span> we can see that the constant values <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(f\)</span> are included and we have the subtraction of two products which is similar to the determinant of a <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix, i.e.,</p>
+<p>We can recognise that the solution to both variables includes the determinant of the coefficient matrix, <span class="math notranslate nohighlight">\(ad - bc\)</span>, in the denominator. But what about the numerator? If we consider the solution to <span class="math notranslate nohighlight">\(x_1\)</span> then in <span class="math notranslate nohighlight">\(de - bf\)</span> we can see that the constant values <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(f\)</span> are included and we have the subtraction of two products which is similar to the determinant of a <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix, i.e.,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     de - bf = \begin{vmatrix} e &amp; b \\ f &amp; d \end{vmatrix}.
@@ -410,8 +410,7 @@ document.write(`
 <p>where <span class="math notranslate nohighlight">\(A_i\)</span> is a matrix obtained by replacing column <span class="math notranslate nohighlight">\(i\)</span> of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. (from <a href="https://proofwiki.org/wiki/Cramer%27s_Rule" target="_blank">Proof Wiki</a>)</p>
-<p>The solution to a system of linear equations <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span> can be calculated using <span class="math notranslate nohighlight">\(\mathbf{x} = A^{-1} \mathbf{b}\)</span> where <span class="math notranslate nohighlight">\(A^{-1}\)</span> is the inverse of the coefficient matrix <span class="math notranslate nohighlight">\(A\)</span>. The <a class="reference internal" href="1.4_Inverse_matrix.html#adjoint-determinant-formula-theorem">adjoint-determinant formula</a> for calculating the inverse is</p>
+<p>Proof. The solution to a system of linear equations <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span> can be calculated using <span class="math notranslate nohighlight">\(\mathbf{x} = A^{-1} \mathbf{b}\)</span> where <span class="math notranslate nohighlight">\(A^{-1}\)</span> is the inverse of the coefficient matrix <span class="math notranslate nohighlight">\(A\)</span>. The <a class="reference internal" href="1.4_Inverse_matrix.html#adjoint-determinant-formula-theorem">adjoint-determinant formula</a> for calculating the inverse is</p>
 <div class="math notranslate nohighlight">
 \[ A^{-1} = \frac{\operatorname{adj}(A)}{\det(A)}, \]</div>
 <p>so</p>

@@ -796,11 +796,28 @@ document.write(`
 
 <p class="admonition-title">Solution to<a class="reference internal" href="#matrices-ex6"> Exercise 1.6</a></p>
 <section id="solution-content">
-<p>Let <span class="math notranslate nohighlight">\(A = \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(k\)</span> be a scalar then</p>
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}\end{split}\]</div>
+<p>which has the determinant <span class="math notranslate nohighlight">\(\det(A) = ad - bc\)</span>. Also let <span class="math notranslate nohighlight">\(k\)</span> be a scalar then adding <span class="math notranslate nohighlight">\(k\)</span> multiplied by row 1 to row 2 of <span class="math notranslate nohighlight">\(A\)</span> gives</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{pmatrix} a &amp; b \\ c + ka &amp; d + kb \end{pmatrix}. \end{split}\]</div>
+<p>Calculating the determinant of this matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \begin{vmatrix} a &amp; b \\ c + ka &amp; d + kb \end{vmatrix} &amp;= ad + abk - bc - abk = ad - bc = \det(A), \\
-    \begin{vmatrix} a &amp; b + ak \\ c &amp; d + ck \end{vmatrix} &amp;= ad + ack - bc - ack = ad - bc = \det(A)
+    \begin{vmatrix} a &amp; b \\ c + ka &amp; d + kb \end{vmatrix} &amp;= ad + abk - bc - abk = ad - bc,
+\end{align*} \end{split}\]</div>
+<p>which is equal to <span class="math notranslate nohighlight">\(\det(A)\)</span>. Doing similar for adding <span class="math notranslate nohighlight">\(k\)</span> multiples of row 2 to row 1 of <span class="math notranslate nohighlight">\(A\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \begin{vmatrix} a + kc &amp; b + kd \\ c &amp; d \end{vmatrix}
+    = ad + kcd - bc - kcd = ad - bc,
+\end{align*} \end{split}\]</div>
+<p>which is also equal to <span class="math notranslate nohighlight">\(\det(A)\)</span>. Doing similar for the columns of <span class="math notranslate nohighlight">\(A\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \begin{vmatrix} a &amp; b + ak \\ c &amp; d + ck \end{vmatrix} &amp;= ad + ack - bc - ack = ad - bc, \\
+    \begin{vmatrix} a + kb &amp; b \\ c + kd &amp; d \end{vmatrix} &amp;= ad + kbd - bc - kbd = ad - bc.
 \end{align*} \end{split}\]</div>
 <div style="text-align: right"> &#9633; </div>
 </section>

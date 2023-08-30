@@ -393,9 +393,19 @@ document.write(`
 </div><p>For example the following matrices are in reduced row echelon form:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-  &amp;\begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}, &amp;
-  &amp;\begin{pmatrix} 1 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}, &amp;
-  &amp;\begin{pmatrix} 1 &amp; 0 &amp; 2 &amp; 0 \\ 0 &amp; 1 &amp; 3 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{pmatrix}
+    &amp;\begin{pmatrix}
+        \textcolor{red}{1} &amp; 0 \\
+        0 &amp; \textcolor{red}{1}
+    \end{pmatrix}, &amp;
+    &amp;\begin{pmatrix}
+        \textcolor{red}{1} &amp; 2 &amp; 0 \\
+        0 &amp; 0 &amp; \textcolor{red}{1}
+    \end{pmatrix}, &amp;
+    &amp;\begin{pmatrix}
+        \textcolor{red}{1} &amp; 0 &amp; 2 &amp; 0 \\
+        0 &amp; \textcolor{red}{1} &amp; 3 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; \textcolor{red}{1}
+    \end{pmatrix}
 \end{align*} \end{split}\]</div>
 <p>The method of Gauss-Jordan elimination is summarised by the steps below.</p>
 <div class="proof algorithm admonition" id="gje-algorithm">
@@ -488,7 +498,7 @@ Solution<div class="sd-summary-down docutils">
         0 &amp; 1 &amp; 0 &amp; -10 \\
         0 &amp; 0 &amp; 1 &amp; -4
     \end{array} \right)
-    \begin{array}{l} R_1 + \frac{1}{12} R_3 \\[2pt] R_2 - \frac{1}{12} R_3 \\ \phantom{x} \end{array} \\ \\
+    \begin{array}{l} R_1 + \frac{1}{12} R_3 \\ R_2 - \frac{1}{12} R_3 \\ \phantom{x} \end{array} \\ \\
 \end{align*} \end{split}\]</div>
 <p class="sd-card-text">Therefore the solution is <span class="math notranslate nohighlight">\(x_1 = 1\)</span>, <span class="math notranslate nohighlight">\(x_2 = -10\)</span> and <span class="math notranslate nohighlight">\(x_3 = -4\)</span>.</p>
 </div>
