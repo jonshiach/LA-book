@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.25)  17 MAY 2023 14:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.30)  5 SEP 2023 09:25
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/jon/Library/CloudStorage/OneDrive-MMU/Documents/2023_2024/Linear algebra and programming skills/LA-book/images/LaTeX/tikz_figures.tex"
-(/Users/jon/Library/CloudStorage/OneDrive-MMU/Documents/2023_2024/Linear algebra and programming skills/LA-book/images/LaTeX/tikz_figures.tex
+**"/Users/55093290/Library/CloudStorage/OneDrive-MMU/Documents/2023_2024/Linear algebra and programming skills/LA-book/Images/LaTeX/tikz_figures.tex"
+(/Users/55093290/Library/CloudStorage/OneDrive-MMU/Documents/2023_2024/Linear algebra and programming skills/LA-book/Images/LaTeX/tikz_figures.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/local/texlive/2023/texmf-dist/tex/latex/standalone/standalone.cls
 Document Class: standalone 2022/10/10 v1.3b Class to compile TeX sub-files standalone
@@ -460,12 +460,12 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./tikz_figures.aux) ) 
 Here is how much of TeX's memory you used:
  17531 strings out of 476025
- 389054 string characters out of 5790017
+ 389069 string characters out of 5790017
  1853388 words of memory out of 5000000
  37651 multiletter control sequences out of 15000+600000
  514429 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,7n,118p,523b,652s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,7n,118p,528b,652s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 Output written on tikz_figures.pdf (1 page, 19136 bytes).
 PDF statistics:
