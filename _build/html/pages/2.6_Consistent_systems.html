@@ -388,13 +388,13 @@ document.write(`
 <p>So far all of the examples of solving systems of linear equations have had a single unique solution. This will not always be the case and it is important that we consider the different situations that can arise when dealing with systems of equations.</p>
 <p>A useful measure of a system that is used to determine the number of solutions to a system of linear equations is the rank of a matrix.</p>
 <span class="target" id="index-0"></span><div class="proof definition admonition" id="rank-definition">
-<span id="index-1"></span><p class="admonition-title"><span class="caption-number">Definition 2.6 </span> (Rank of a matrix)</p>
+<span id="index-1"></span><p class="admonition-title"><span class="caption-number">Definition 2.7 </span> (Rank of a matrix)</p>
 <section class="definition-content" id="proof-content">
 <p>The <strong>rank</strong> of a matrix <span class="math notranslate nohighlight">\(A\)</span> denoted by <span class="math notranslate nohighlight">\(\operatorname{rank}(A)\)</span> is the number of non-zero rows of the row echelon form of <span class="math notranslate nohighlight">\(A\)</span>.</p>
 </section>
 </div><p>To compute the rank of a matrix we simply use elementary row operations to row reduce to row echelon form and count the number of non-zero rows.</p>
 <div class="proof definition admonition" id="consistent-inconsistent-and-indeterminate-systems-definition">
-<p class="admonition-title"><span class="caption-number">Definition 2.7 </span> (Consistent, inconsistent and indeterminate systems)</p>
+<p class="admonition-title"><span class="caption-number">Definition 2.8 </span> (Consistent, inconsistent and indeterminate systems)</p>
 <section class="definition-content" id="proof-content">
 <p>A system of equations is said to be <strong>consistent</strong> if it has a solution, otherwise it is said to be an <strong>inconsistent</strong>. If a system of equations has more than one solution then it is said to be <strong>indeterminate</strong>.</p>
 </section>
@@ -429,7 +429,7 @@ document.write(`
 \end{align*} \end{split}\]</div>
 <p>Solving by back substitution gives <span class="math notranslate nohighlight">\(x_1 = 2\)</span> and <span class="math notranslate nohighlight">\(x_2 = 1.\)</span></p>
 <div class="proof theorem admonition" id="consistent-system-theorem">
-<p class="admonition-title"><span class="caption-number">Theorem 2.3 </span> (Consistent systems)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 2.4 </span> (Consistent systems)</p>
 <section class="theorem-content" id="proof-content">
 <p>A system of linear equations <span class="math notranslate nohighlight">\(A\mathbf{x} = \mathbf{b}\)</span> is consistent if <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = \operatorname{rank}(A \mid \mathbf{b})\)</span>.</p>
 </section>
@@ -465,7 +465,7 @@ document.write(`
 \end{align*} \end{split}\]</div>
 <p>so the second equation is <span class="math notranslate nohighlight">\(0x_1 + 0x_2 = -2\)</span> which is clearly impossible. This leads to the following theorem regarding inconsistent systems.</p>
 <div class="proof theorem admonition" id="inconsistent-system-theorem">
-<p class="admonition-title"><span class="caption-number">Theorem 2.4 </span> (Inconsistent systems)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 2.5 </span> (Inconsistent systems)</p>
 <section class="theorem-content" id="proof-content">
 <p>A system of linear equations is inconsistent if <span class="math notranslate nohighlight">\(A\mathbf{x} = \mathbf{b}\)</span> is inconsistent if <span class="math notranslate nohighlight">\(\operatorname{rank}(A) &lt; \operatorname{rank}(A \mid \mathbf{b})\)</span>.</p>
 </section>
@@ -501,7 +501,7 @@ document.write(`
 \end{align*} \end{split}\]</div>
 <p>so since the second equation has been eliminated we have a single equation <span class="math notranslate nohighlight">\(x_1 - x_2 = 1\)</span>.</p>
 <div class="proof theorem admonition" id="indeterminate-system-theorem">
-<p class="admonition-title"><span class="caption-number">Theorem 2.5 </span> (indeterminate systems)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 2.6 </span> (indeterminate systems)</p>
 <section class="theorem-content" id="proof-content">
 <p>A system of linear equations with <span class="math notranslate nohighlight">\(n\)</span> unknowns <span class="math notranslate nohighlight">\(A\mathbf{x} = \mathbf{b}\)</span> is indeterminate if <span class="math notranslate nohighlight">\(\operatorname{rank}(A) &lt; n\)</span>.</p>
 </section>
@@ -510,7 +510,7 @@ document.write(`
 \[ x_1 - r = 1, \]</div>
 <p>so the solution is <span class="math notranslate nohighlight">\(x_1 = 1 + r\)</span> and <span class="math notranslate nohighlight">\(x_2 = r\)</span>. Choosing any value of <span class="math notranslate nohighlight">\(r\)</span> gives a solution to the system. For example, if <span class="math notranslate nohighlight">\(r=1\)</span> then <span class="math notranslate nohighlight">\(x_1 = 2\)</span> and <span class="math notranslate nohighlight">\(x_2 = 1\)</span>. Alternatively if <span class="math notranslate nohighlight">\(r = -1\)</span> then <span class="math notranslate nohighlight">\(x_1 = 0\)</span> and <span class="math notranslate nohighlight">\(x_2 = -1\)</span>.</p>
 <div class="proof example admonition" id="rank-example">
-<p class="admonition-title"><span class="caption-number">Example 2.6 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 2.7 </span></p>
 <section class="example-content" id="proof-content">
 <p>Determine the rank of the coefficient matrix and the augmented matrix for the following systems of linear equations and classify them as either consistent, inconsistent or indeterminate systems.</p>
 <p>  (i)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
