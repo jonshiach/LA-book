@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>3.6. Vector products &#8212; Linear Algebra Lecture Notes</title>
+    <title>3.6. Dot and cross products &#8212; Linear Algebra Lecture Notes</title>
   
   
   
@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.6. Vector products</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
@@ -359,7 +359,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Vector products</h1>
+    <h1>Dot and cross products</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -382,8 +382,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="vector-products">
-<h1><span class="section-number">3.6. </span>Vector products<a class="headerlink" href="#vector-products" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="dot-and-cross-products">
+<h1><span class="section-number">3.6. </span>Dot and cross products<a class="headerlink" href="#dot-and-cross-products" title="Permalink to this heading">#</a></h1>
 <p>There are two ways in which we calculate the product of two vectors, the dot product and the cross product.</p>
 <span class="target" id="dot-product-section"></span><span class="target" id="index-0"></span><section id="dot-product">
 <span id="index-1"></span><h2><span class="section-number">3.6.1. </span>Dot product<a class="headerlink" href="#dot-product" title="Permalink to this heading">#</a></h2>
@@ -424,8 +424,8 @@ document.write(`
 </div><div class="proof example admonition" id="dot-product-example">
 <p class="admonition-title"><span class="caption-number">Example 3.4 </span></p>
 <section class="example-content" id="proof-content">
-<p>Given the vectors <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 2, 3)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v} = (3, -1, 0)\)</span>. Calculate:</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(\mathbf{u} \cdot \mathbf{v}\)</span>;</p>
+<p>Given the vectors <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 2, 3)^\mathrm{T}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v} = (3, -1, 0)^\mathrm{T}\)</span>. Calculate:</p>
+<p>(i)   <span class="math notranslate nohighlight">\(\mathbf{u} \cdot \mathbf{v}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -439,7 +439,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
     \mathbf{u} \cdot \mathbf{v} = \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix} \cdot \begin{pmatrix} 3 \\ -1 \\ 0 \end{pmatrix} = 1(3) + 2(-1) + 3(0) = 3 - 2 + 0 = 1
 \end{align*} \end{split}\]</div>
 </div>
-</details><p>  (ii)   the angle between <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>.</p>
+</details><p>(ii)   the angle between <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -497,7 +497,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 </div><div class="proof example admonition" id="cross-product-example">
 <p class="admonition-title"><span class="caption-number">Example 3.5 </span></p>
 <section class="example-content" id="proof-content">
-<p>Calculate the cross product between the vectors <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 2, 3)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v} = (4, 5, 6)\)</span>.</p>
+<p>Calculate the cross product between the vectors <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 2, 3)^\mathrm{T}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v} = (4, 5, 6)^\mathrm{T}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">

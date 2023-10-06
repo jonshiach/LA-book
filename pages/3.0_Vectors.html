@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">3. Vectors</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Vector products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
@@ -414,16 +414,16 @@ document.write(`
 </figcaption>
 </figure>
 <p>Vectors in mathematical notation are usually denoted by a single lowercase character. To distinguish vectors from other mathematical objects such as scalars and variables, the character representing a vector is written in boldface when typeset, e.g., <span class="math notranslate nohighlight">\(\mathbf{a}\)</span>; underlined when written by hand, e.g., <span class="math notranslate nohighlight">\(\underline{a}\)</span>; or a small right arrow over the vector name, e.g., <span class="math notranslate nohighlight">\(\vec{a}\)</span>.</p>
-<p>A vector in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> can be represented by an <span class="math notranslate nohighlight">\(n\)</span>-tuple or a single column matrix</p>
+<p>A vector in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> is usually represented by a single column matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \mathbf{a} = (a_1, a_2, \ldots, a_n) = \begin{pmatrix} a_1 \\ a_2 \\ \vdots \\ a_n\end{pmatrix},
+    \mathbf{a} = \begin{pmatrix} a_1 \\ a_2 \\ \vdots \\ a_n\end{pmatrix},
 \end{align*} \end{split}\]</div>
-<p>where each coordinate represents the signed difference between the tail and head of the vector in the Cartesian coordinate system. Note we use the same <span class="math notranslate nohighlight">\(n\)</span>-tuple notation to denote both points and vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, however, it should always be clear from the context which we are referring to.</p>
+<p>where each element represents the signed difference between the tail and head of the vector in the Cartesian coordinate system.</p>
 <div class="proof example admonition" id="vector-example">
 <p class="admonition-title"><span class="caption-number">Example 3.1 </span></p>
 <section class="example-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(U=(3,-1)\)</span> and <span class="math notranslate nohighlight">\(V=(5,0)\)</span> the co-ordinates of two points in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>. Determine the vector pointing from <span class="math notranslate nohighlight">\(U\)</span> to <span class="math notranslate nohighlight">\(V\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(A=(1,1)\)</span> and <span class="math notranslate nohighlight">\(B=(5,3)\)</span> the co-ordinates of two points in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>. Determine the vector pointing from <span class="math notranslate nohighlight">\(A\)</span> to <span class="math notranslate nohighlight">\(B\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -431,30 +431,33 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">We need to find <span class="math notranslate nohighlight">\(V - U\)</span></p>
+<p class="sd-card-text">We need to find <span class="math notranslate nohighlight">\(B - A\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    V - U = 
+    B - A = 
     \begin{pmatrix}
-        5 \\ 0
+        5 \\ 3
     \end{pmatrix} -
     \begin{pmatrix}
-        3 \\ -1
+        1 \\ 1
     \end{pmatrix} =
     \begin{pmatrix}
-        2 \\ 1
+        4 \\ 2
     \end{pmatrix}.
 \end{align*} \end{split}\]</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/vector-example.svg"><img alt="../_images/vector-example.svg" src="../_images/vector-example.svg" width="400" /></a>
+</figure>
 </div>
 </details></section>
-</div><p>Consider the vector <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> as given in the <a class="reference internal" href="#r3-vector-figure"><span class="std std-numref">Fig. 3.4</span></a>. Here the displacement along the <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> axes are <span class="math notranslate nohighlight">\(a_1\)</span>, <span class="math notranslate nohighlight">\(a_2\)</span> and <span class="math notranslate nohighlight">\(a_3\)</span> respectively, therefore <span class="math notranslate nohighlight">\(\mathbf{a} = (a_1, a_2, a_3)\)</span>.</p>
+</div><p>Consider the vector <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> as given in the <a class="reference internal" href="#r3-vector-figure"><span class="std std-numref">Fig. 3.4</span></a>. Here the displacement along the <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> axes are <span class="math notranslate nohighlight">\(a_1\)</span>, <span class="math notranslate nohighlight">\(a_2\)</span> and <span class="math notranslate nohighlight">\(a_3\)</span> respectively, therefore <span class="math notranslate nohighlight">\(\mathbf{a} = (a_1, a_2, a_3)^\mathrm{T}\)</span>.</p>
 <figure class="align-default" id="r3-vector-figure">
-<a class="reference internal image-reference" href="../_images/R3_vector.svg"><img alt="../_images/R3_vector.svg" src="../_images/R3_vector.svg" width="400" /></a>
+<a class="reference internal image-reference" href="../_images/R3_vector.svg"><img alt="../_images/R3_vector.svg" src="../_images/R3_vector.svg" width="500" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.4 </span><span class="caption-text">The vector <span class="math notranslate nohighlight">\(\mathbf{a} = (a_1, a_2, a_3)\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</span><a class="headerlink" href="#r3-vector-figure" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.4 </span><span class="caption-text">The vector <span class="math notranslate nohighlight">\(\mathbf{a} = (a_1, a_2, a_3)^\mathrm{T}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</span><a class="headerlink" href="#r3-vector-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>We use <span class="math notranslate nohighlight">\(\mathbf{0}\)</span> to denote the <strong>zero vector</strong> <span class="math notranslate nohighlight">\((0, 0, \ldots, 0)\)</span>. This can be thought of as the vector <span class="math notranslate nohighlight">\(\overrightarrow{AA}\)</span>, for any point <span class="math notranslate nohighlight">\(A\)</span>. In this chapter we introduce vectors in Euclidean space, therefore the coefficients <span class="math notranslate nohighlight">\(a_i\)</span> are necessarily real numbers. In <a class="reference internal" href="5.0_Vector_spaces.html#vector-spaces-chapter"><span class="std std-ref">vector spaces</span></a> we generalise the notion of a vector and allow its coefficients to be any elements coming from a field.</p>
+<p>We use <span class="math notranslate nohighlight">\(\mathbf{0}\)</span> to denote the <strong>zero vector</strong> <span class="math notranslate nohighlight">\((0, 0, \ldots, 0)^\mathrm{T}\)</span>. This can be thought of as the vector <span class="math notranslate nohighlight">\(\overrightarrow{AA}\)</span>, for any point <span class="math notranslate nohighlight">\(A\)</span>. In this chapter we introduce vectors in Euclidean space, therefore the coefficients <span class="math notranslate nohighlight">\(a_i\)</span> are necessarily real numbers. In <a class="reference internal" href="5.0_Vector_spaces.html#vector-spaces-chapter"><span class="std std-ref">vector spaces</span></a> we generalise the notion of a vector and allow its coefficients to be any elements coming from a field.</p>
 <span class="target" id="position-vector-section"></span></section>
 <section id="position-vectors">
 <span id="index-4"></span><h2><span class="section-number">3.3. </span>Position vectors<a class="headerlink" href="#position-vectors" title="Permalink to this heading">#</a></h2>
@@ -465,7 +468,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <p><span class="caption-number">Fig. 3.5 </span><span class="caption-text">The position vector <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> points from the origin <span class="math notranslate nohighlight">\(O\)</span> to the point <span class="math notranslate nohighlight">\(P\)</span>.</span><a class="headerlink" href="#position-vector-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Since <span class="math notranslate nohighlight">\(O = (0, 0, \ldots, 0)\)</span>, the tuple representing the position vector <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> is the same as that representing the co-ordinates of <span class="math notranslate nohighlight">\(P\)</span>.</p>
+<p>Since the co-ordinates of the origin are <span class="math notranslate nohighlight">\(O = (0, 0, \ldots, 0)\)</span>, the position vector <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> is similar to the tuple for co-ordinates of <span class="math notranslate nohighlight">\(P\)</span>.</p>
 </section>
 <div class="toctree-wrapper compound">
 </div>

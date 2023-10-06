@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Vector products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
@@ -433,7 +433,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <p class="admonition-title"><span class="caption-number">Example 1.14 </span></p>
 <section class="example-content" id="proof-content">
 <p>Calculate the adjoint of the following matrices:</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(\begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}\)</span>;</p>
+<p>(i)   <span class="math notranslate nohighlight">\(\begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -447,7 +447,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 = \begin{pmatrix} d &amp; -b \\ -c &amp; a \end{pmatrix}
 \end{align*} \end{split}\]</div>
 </div>
-</details><p>  (ii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 5 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}\)</span>;</p>
+</details><p>(ii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 5 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -461,7 +461,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 = \begin{pmatrix} 4 &amp; -2 \\ -3 &amp; 5 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 </div>
-</details><p>  (iii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 0 &amp; 3 \\ 4 &amp; -2 &amp; 1 \\ 2 &amp; 1 &amp; 3 \end{pmatrix}\)</span>.</p>
+</details><p>(iii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 0 &amp; 3 \\ 4 &amp; -2 &amp; 1 \\ 2 &amp; 1 &amp; 3 \end{pmatrix}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -505,7 +505,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <p class="admonition-title"><span class="caption-number">Example 1.15 </span></p>
 <section class="example-content" id="proof-content">
 <p>Calculate the inverses of the following matrices if they exist:</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(A = \begin{pmatrix}1 &amp; 0 \\ 3 &amp; 2\end{pmatrix}\)</span>;</p>
+<p>(i)   <span class="math notranslate nohighlight">\(A = \begin{pmatrix}1 &amp; 0 \\ 3 &amp; 2\end{pmatrix}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -525,7 +525,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
     A^{-1}A = \frac{1}{2}\begin{pmatrix} 2 &amp; 0 \\ -3 &amp; 1\end{pmatrix}\begin{pmatrix}1 &amp; 0 \\ 3 &amp; 2\end{pmatrix} = \frac{1}{2} \begin{pmatrix} 2 &amp; 0 \\ 0 &amp; 2 \end{pmatrix} = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix} = I \qquad \checkmark
 \end{align*} \end{split}\]</div>
 </div>
-</details><p>  (ii)   <span class="math notranslate nohighlight">\(B = \begin{pmatrix} 1 &amp; 2 &amp; 0 \\ -2 &amp; 1 &amp; 1 \\ 1 &amp; 0 &amp; 3 \end{pmatrix}\)</span>;</p>
+</details><p>(ii)   <span class="math notranslate nohighlight">\(B = \begin{pmatrix} 1 &amp; 2 &amp; 0 \\ -2 &amp; 1 &amp; 1 \\ 1 &amp; 0 &amp; 3 \end{pmatrix}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -552,7 +552,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
     \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} = I \qquad \checkmark
 \end{align*} \end{split}\]</div>
 </div>
-</details><p>  (iii)   <span class="math notranslate nohighlight">\(C = \begin{pmatrix}1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \end{pmatrix}\)</span>.</p>
+</details><p>(iii)   <span class="math notranslate nohighlight">\(C = \begin{pmatrix}1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \end{pmatrix}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">

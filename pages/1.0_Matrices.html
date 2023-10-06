@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Vector products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
@@ -418,7 +418,7 @@ document.write(`
 <p class="admonition-title"><span class="caption-number">Example 1.1 </span></p>
 <section class="example-content" id="proof-content">
 <p>Determine the dimensions of the following matrices:</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}\)</span></p>
+<p>(i)   <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -428,7 +428,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(2\times 2 \)</span></p>
 </div>
-</details><p>  (ii)   <span class="math notranslate nohighlight">\(B = \begin{pmatrix} a &amp; b \\ c &amp; d \\ e &amp; f \end{pmatrix}\)</span></p>
+</details><p>(ii)   <span class="math notranslate nohighlight">\(B = \begin{pmatrix} a &amp; b \\ c &amp; d \\ e &amp; f \end{pmatrix}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -438,7 +438,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(3\times 2\)</span></p>
 </div>
-</details><p>  (iii)   <span class="math notranslate nohighlight">\(C = \begin{pmatrix} \sin(x) &amp; \ln(x) &amp; \cos(x+1) \end{pmatrix}\)</span></p>
+</details><p>(iii)   <span class="math notranslate nohighlight">\(C = \begin{pmatrix} \sin(x) &amp; \ln(x) &amp; \cos(x+1) \end{pmatrix}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -448,7 +448,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(1 \times 3\)</span></p>
 </div>
-</details><p>  (iv)   <span class="math notranslate nohighlight">\(D = \begin{pmatrix} 0 \end{pmatrix}\)</span>.</p>
+</details><p>(iv)   <span class="math notranslate nohighlight">\(D = \begin{pmatrix} 0 \end{pmatrix}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -478,7 +478,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <p class="admonition-title"><span class="caption-number">Example 1.2 </span></p>
 <section class="example-content" id="proof-content">
 <p>Given the matrix <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 2 &amp; 0 &amp; -3 \\ 1 &amp; 7 &amp; 4 \end{pmatrix}\)</span>, write down the following elements:</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(a_{12}\)</span>;</p>
+<p>(i)   <span class="math notranslate nohighlight">\(a_{12}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -488,7 +488,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(a_{12} = 0\)</span></p>
 </div>
-</details><p>  (ii)   <span class="math notranslate nohighlight">\(a_{21}\)</span>;</p>
+</details><p>(ii)   <span class="math notranslate nohighlight">\(a_{21}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -498,7 +498,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(a_{21} = -1\)</span></p>
 </div>
-</details><p>  (iii)   <span class="math notranslate nohighlight">\([A]_{13}\)</span>;</p>
+</details><p>(iii)   <span class="math notranslate nohighlight">\([A]_{13}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -508,7 +508,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><span class="math notranslate nohighlight">\([A]_{13} = -3\)</span></p>
 </div>
-</details><p>  (iv)   <span class="math notranslate nohighlight">\(A(2,2)\)</span>.</p>
+</details><p>(iv)   <span class="math notranslate nohighlight">\(A(2,2)\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -582,7 +582,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <p class="admonition-title"><span class="caption-number">Example 1.3 </span></p>
 <section class="example-content" id="proof-content">
 <p>Evaluate the following:</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} + \begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}\)</span>;</p>
+<p>(i)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} + \begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -593,7 +593,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} + \begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix} = \begin{pmatrix} 1 + 5 &amp; 2 + 6 \\ 3 + 7 &amp; 4 + 8 \end{pmatrix}= \begin{pmatrix}6 &amp; 8 \\ 10 &amp; 12 \end{pmatrix} \end{split}\]</div>
 </div>
-</details><p>  (ii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix} - \begin{pmatrix} 7 \\ -11 \\ -13 \end{pmatrix}\)</span>;</p>
+</details><p>(ii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix} - \begin{pmatrix} 7 \\ -11 \\ -13 \end{pmatrix}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -604,7 +604,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix} - \begin{pmatrix} 7 \\ -11 \\ -13 \end{pmatrix} = \begin{pmatrix}2 - 7 \\ 3 + 11 \\ 5 + 13 \end{pmatrix} = \begin{pmatrix} -5 \\ 14 \\ 18\end{pmatrix} \end{split}\]</div>
 </div>
-</details><p>  (iii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 3 &amp; 5 \\ 7 &amp; 9 &amp; 11 \end{pmatrix} + \begin{pmatrix}2 &amp; 3 \\ 5 &amp; 7 \end{pmatrix}\)</span>.</p>
+</details><p>(iii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 3 &amp; 5 \\ 7 &amp; 9 &amp; 11 \end{pmatrix} + \begin{pmatrix}2 &amp; 3 \\ 5 &amp; 7 \end{pmatrix}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -659,7 +659,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <p class="admonition-title"><span class="caption-number">Example 1.4 </span></p>
 <section class="example-content" id="proof-content">
 <p>Evaluate the following:</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(2 \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}\)</span>;</p>
+<p>(i)   <span class="math notranslate nohighlight">\(2 \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -671,7 +671,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 \[\begin{split} 2 \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} = 
 \begin{pmatrix} 2 &amp; 4 \\ 6 &amp; 8 \end{pmatrix} \end{split}\]</div>
 </div>
-</details><p>  (ii)   <span class="math notranslate nohighlight">\(\dfrac{1}{2} \begin{pmatrix} 0 &amp; -1 \\ 3 &amp; 2 \\ 4  &amp;-2  \end{pmatrix}\)</span>;</p>
+</details><p>(ii)   <span class="math notranslate nohighlight">\(\dfrac{1}{2} \begin{pmatrix} 0 &amp; -1 \\ 3 &amp; 2 \\ 4  &amp;-2  \end{pmatrix}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -683,7 +683,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 \[\begin{split} \dfrac{1}{2} \begin{pmatrix} 0 &amp; -1 \\ 3 &amp; 2 \\ 4  &amp;-2  \end{pmatrix} =
 \begin{pmatrix} 0 &amp; -1/2 \\ 3/2 &amp; 1 \\ 2 &amp; -1 \end{pmatrix} \end{split}\]</div>
 </div>
-</details><p>  (iii)   <span class="math notranslate nohighlight">\(a \begin{pmatrix} 1 &amp; 6 &amp; 4 \\ 0 &amp; 3 &amp; -1 \end{pmatrix}\)</span>;</p>
+</details><p>(iii)   <span class="math notranslate nohighlight">\(a \begin{pmatrix} 1 &amp; 6 &amp; 4 \\ 0 &amp; 3 &amp; -1 \end{pmatrix}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -695,7 +695,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 \[\begin{split} a \begin{pmatrix} 1 &amp; 6 &amp; 4 \\ 0 &amp; 3 &amp; -1 \end{pmatrix} = 
 \begin{pmatrix} a &amp; 6a &amp; 4a \\ 0 &amp; 3a &amp; -a \end{pmatrix} \end{split}\]</div>
 </div>
-</details><p>  (iv)   <span class="math notranslate nohighlight">\(101 \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix} - 99 \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix}\)</span>.</p>
+</details><p>(iv)   <span class="math notranslate nohighlight">\(101 \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix} - 99 \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -743,14 +743,14 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <li><p><span class="math notranslate nohighlight">\((A^\mathrm{T})^\mathrm{T} = A\)</span>;</p></li>
 <li><p><span class="math notranslate nohighlight">\((A + B)^\mathrm{T} = A^\mathrm{T} + B^\mathrm{T}\)</span>;</p></li>
 <li><p><span class="math notranslate nohighlight">\((k A)^\mathrm{T} = k (A^\mathrm{T})\)</span>;</p></li>
-<li><p><span class="math notranslate nohighlight">\((AB)^\mathrm{T} = B^\mathrm{T}A^\mathrm{T}\)</span>   (the product of two matrices is defined in the <a class="reference internal" href="1.1_Matrix_multiplication.html#matrix-multiplication-section"><span class="std std-ref">following section</span></a>)</p></li>
+<li><p><span class="math notranslate nohighlight">\((AB)^\mathrm{T} = B^\mathrm{T}A^\mathrm{T}\)</span> (the product of two matrices is defined in the <a class="reference internal" href="1.1_Matrix_multiplication.html#matrix-multiplication-section"><span class="std std-ref">following section</span></a>)</p></li>
 </ul>
 </section>
 </div><div class="proof example admonition" id="matrix-transpose-example">
 <p class="admonition-title"><span class="caption-number">Example 1.5 </span></p>
 <section class="example-content" id="proof-content">
 <p>Evaluate the following:</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 3 \\ 2 &amp; 4 \end{pmatrix}^\mathrm{T}\)</span>;</p>
+<p>(i)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 3 \\ 2 &amp; 4 \end{pmatrix}^\mathrm{T}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -762,7 +762,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 \[\begin{split} \begin{pmatrix} 1 &amp; 3 \\ 2 &amp; 4 \end{pmatrix}^\mathrm{T} = 
     \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} \end{split}\]</div>
 </div>
-</details><p>  (ii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 0 &amp; -2 \\ 3 &amp; -4 &amp; 1 \end{pmatrix}^\mathrm{T}\)</span>;</p>
+</details><p>(ii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 0 &amp; -2 \\ 3 &amp; -4 &amp; 1 \end{pmatrix}^\mathrm{T}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -774,7 +774,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 \[\begin{split} \begin{pmatrix} 1 &amp; 0 &amp; -2 \\ 3 &amp; -4 &amp; 1 \end{pmatrix}^\mathrm{T} =
     \begin{pmatrix} 1 &amp; 3 \\ 0 &amp; -4 \\ -2 &amp; 1 \end{pmatrix} \end{split}\]</div>
 </div>
-</details><p>  (iii)   <span class="math notranslate nohighlight">\(\begin{pmatrix}2 &amp; 3 &amp; 5 \end{pmatrix}^\mathrm{T}\)</span>.</p>
+</details><p>(iii)   <span class="math notranslate nohighlight">\(\begin{pmatrix}2 &amp; 3 &amp; 5 \end{pmatrix}^\mathrm{T}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">

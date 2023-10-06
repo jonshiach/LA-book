@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Vector products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
@@ -410,7 +410,7 @@ document.write(`
 </figcaption>
 </figure>
 </section>
-</div><p>Recall that <a class="reference internal" href="3.3_Vector_products.html#dot-product-definition">the dot product</a> between two perpendicular vectors is zero. So if a plane is defined by the normal vector <span class="math notranslate nohighlight">\(\mathbf{n} = (n_x, n_y, n_z)\)</span> and a point with position vector <span class="math notranslate nohighlight">\(\mathbf{p}=(p_x, p_y, p_z)\)</span> which lies on the plane and if <span class="math notranslate nohighlight">\((x,y,z)\)</span> is the position vector of another point the plane then</p>
+</div><p>Recall that <a class="reference internal" href="3.3_Vector_products.html#dot-product-definition">the dot product</a> between two perpendicular vectors is zero. So if a plane is defined by the normal vector <span class="math notranslate nohighlight">\(\mathbf{n} = (n_x, n_y, n_z)^\mathrm{T}\)</span> and a point with position vector <span class="math notranslate nohighlight">\(\mathbf{p}=(p_x, p_y, p_z)^\mathrm{T}\)</span> which lies on the plane and if <span class="math notranslate nohighlight">\((x,y,z)^\mathrm{T}\)</span> is the position vector of another point the plane then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \mathbf{n} \cdot (\mathbf{r} - \mathbf{p}) &amp;= 0 \\
@@ -425,7 +425,7 @@ document.write(`
 <div class="proof definition note admonition" id="point-normal-definition">
 <span id="index-2"></span><p class="admonition-title"><span class="caption-number">Definition 4.8 </span> (Point-normal form of a plane)</p>
 <section class="definition-content" id="proof-content">
-<p>The point-normal form of the plane in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> which passes through the point with position vector <span class="math notranslate nohighlight">\(\mathbf{p} = (p_x, p_y, p_z)\)</span> with normal vector <span class="math notranslate nohighlight">\(\mathbf{n} = (n_x, n_y, n_z)\)</span> is</p>
+<p>The point-normal form of the plane in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> which passes through the point with position vector <span class="math notranslate nohighlight">\(\mathbf{p} = (p_x, p_y, p_z)^\mathrm{T}\)</span> with normal vector <span class="math notranslate nohighlight">\(\mathbf{n} = (n_x, n_y, n_z)^\mathrm{T}\)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-point-normal-equation">
 <span class="eqno">(4.2)<a class="headerlink" href="#equation-point-normal-equation" title="Permalink to this equation">#</a></span>\[ n_x(x - p_x) + n_y(y - p_y) + n_z(z - p_z) = 0.\]</div>
 <figure class="align-default" id="point-normal-figure">
@@ -438,8 +438,8 @@ document.write(`
 </div><div class="proof example admonition" id="point-normal-example">
 <p class="admonition-title"><span class="caption-number">Example 4.6 </span></p>
 <section class="example-content" id="proof-content">
-<p>A plane in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> passes through the three points with position vectors <span class="math notranslate nohighlight">\(\mathbf{p}_1 = (2, 3, 1)\)</span>, <span class="math notranslate nohighlight">\(\mathbf{p}_2 = (1, 0, -1)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{p}_3 = (2, 1, 3)\)</span>.</p>
-<p>  (i)   Find the point-normal form of the plane;</p>
+<p>A plane in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> passes through the three points with position vectors <span class="math notranslate nohighlight">\(\mathbf{p}_1 = (2, 3, 1)^\mathrm{T}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{p}_2 = (1, 0, -1)^\mathrm{T}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{p}_3 = (2, 1, 3)^\mathrm{T}\)</span>.</p>
+<p>(i)   Find the point-normal form of the plane;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -485,7 +485,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 \end{align*} \end{split}\]</div>
 <p class="sd-card-text">which was the same answer as before. The same applies for any other point on the plane.</p>
 </div>
-</details><p>  (ii)   Do the points <span class="math notranslate nohighlight">\(\mathbf{p}_4 = (1, 2, 1)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{p}_5 = (2, 4, 0)\)</span> lie on the plane?</p>
+</details><p>(ii)   Do the points with position vectors <span class="math notranslate nohighlight">\(\mathbf{p}_4 = (1, 2, 1)^\mathrm{T}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{p}_5 = (2, 4, 0)^\mathrm{T}\)</span> lie on the plane?</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -598,7 +598,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The normal vectors for these planes is given by the coefficients of <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span>, therefore <span class="math notranslate nohighlight">\(\mathbf{n}_1 = (3, -4, 1)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{n}_2 = (1, 1, -1)\)</span>. The direction vector of the line of intersection must be parallel to both <span class="math notranslate nohighlight">\(\mathbf{n}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{n}_2\)</span> (the intersecting line must lie in both planes), therefore we need to construct a vector perpendicular to both of these. A vector perpendicular to <span class="math notranslate nohighlight">\(\mathbf{n}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{n}_2\)</span> can be found using <span class="math notranslate nohighlight">\(\mathbf{n}_1 \times \mathbf{n}_2\)</span></p>
+<p class="sd-card-text">The normal vectors for these planes is given by the coefficients of <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span>, therefore <span class="math notranslate nohighlight">\(\mathbf{n}_1 = (3, -4, 1)^\mathrm{T}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{n}_2 = (1, 1, -1)^\mathrm{T}\)</span>. The direction vector of the line of intersection must be parallel to both <span class="math notranslate nohighlight">\(\mathbf{n}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{n}_2\)</span> (the intersecting line must lie in both planes), therefore we need to construct a vector perpendicular to both of these. A vector perpendicular to <span class="math notranslate nohighlight">\(\mathbf{n}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{n}_2\)</span> can be found using <span class="math notranslate nohighlight">\(\mathbf{n}_1 \times \mathbf{n}_2\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \mathbf{d} = \mathbf{n}_1 \times \mathbf{n}_2 =

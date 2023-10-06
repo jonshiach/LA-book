@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Vector products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
@@ -381,25 +381,25 @@ document.write(`
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row docutils">
 <div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
-<p>(a)   <span class="math notranslate nohighlight">\(T: (x, y) \mapsto (0, y)\)</span></p>
+<p>(a)   <span class="math notranslate nohighlight">\(T: \begin{pmatrix} x \\ y \end{pmatrix} \mapsto \begin{pmatrix} 0 \\ y \end{pmatrix}\)</span></p>
 </div>
 <div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
-<p>(b)   <span class="math notranslate nohighlight">\(T: (x, y) \mapsto (x, 5)\)</span></p>
+<p>(b)   <span class="math notranslate nohighlight">\(T: \begin{pmatrix} x \\ y \end{pmatrix} \mapsto \begin{pmatrix} x \\ 5 \end{pmatrix}\)</span></p>
 </div>
 <div class="sd-col sd-d-flex-column sd-col-12 sd-col-xs-12 sd-col-sm-12 sd-col-md-12 sd-col-lg-12 docutils">
 <p> </p>
 </div>
 <div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
-<p>(c)   <span class="math notranslate nohighlight">\(T: (x, y) \mapsto (x, x - y)\)</span></p>
+<p>(c)   <span class="math notranslate nohighlight">\(T: \begin{pmatrix} x \\ y \end{pmatrix} \mapsto \begin{pmatrix} x \\ x - y \end{pmatrix}\)</span></p>
 </div>
 <div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
-<p>(d)   <span class="math notranslate nohighlight">\(T: (x, y, z) \mapsto (x + y, z)\)</span></p>
+<p>(d)   <span class="math notranslate nohighlight">\(T: \begin{pmatrix} 3x + 1 \\ y \end{pmatrix} \mapsto \begin{pmatrix} x + y \\ z \end{pmatrix}\)</span></p>
 </div>
 <div class="sd-col sd-d-flex-column sd-col-12 sd-col-xs-12 sd-col-sm-12 sd-col-md-12 sd-col-lg-12 docutils">
 <p> </p>
 </div>
 <div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
-<p>(e)   <span class="math notranslate nohighlight">\(T: (x, y) \mapsto (3x + 1, y)\)</span></p>
+<p>(e)   <span class="math notranslate nohighlight">\(T: \begin{pmatrix} x \\ y \end{pmatrix} \mapsto \begin{pmatrix} 3x + 1 \\ y \end{pmatrix}\)</span></p>
 </div>
 <div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
 <p>(f)   <span class="math notranslate nohighlight">\(T: f(x) \mapsto \dfrac{\mathrm{d}}{\mathrm{d}x} f(x)\)</span></p>
@@ -411,16 +411,16 @@ document.write(`
 <p>(g)   <span class="math notranslate nohighlight">\(T: f(x) \mapsto xf(x)\)</span></p>
 </div>
 <div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
-<p>(h)   <span class="math notranslate nohighlight">\(T: \mathbb{C}^2 \to \mathbb{C}\)</span> where <span class="math notranslate nohighlight">\(T: (x, y) \mapsto x + y\)</span></p>
+<p>(h)   <span class="math notranslate nohighlight">\(T: \mathbb{C}^2 \to \mathbb{C}\)</span> where <span class="math notranslate nohighlight">\(T: \begin{pmatrix} x \\ y \end{pmatrix} \mapsto x + y\)</span></p>
 </div>
 <div class="sd-col sd-d-flex-column sd-col-12 sd-col-xs-12 sd-col-sm-12 sd-col-md-12 sd-col-lg-12 docutils">
 <p> </p>
 </div>
 <div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
-<p>(i)   <span class="math notranslate nohighlight">\(T: \mathbb{C}^2 \to \mathbb{C}\)</span> where <span class="math notranslate nohighlight">\(T: (x, y) \mapsto x y\)</span></p>
+<p>(i)   <span class="math notranslate nohighlight">\(T: \mathbb{C}^2 \to \mathbb{C}\)</span> where <span class="math notranslate nohighlight">\(T: \begin{pmatrix} x \\ y \end{pmatrix} \mapsto x y\)</span></p>
 </div>
 <div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
-<p>(j)   <span class="math notranslate nohighlight">\(T: \mathbb{C}^2 \to \mathbb{C}\)</span> where <span class="math notranslate nohighlight">\(T: (x, y) \mapsto \bar{y}\)</span></p>
+<p>(j)   <span class="math notranslate nohighlight">\(T: \mathbb{C}^2 \to \mathbb{C}\)</span> where <span class="math notranslate nohighlight">\(T: \begin{pmatrix} x \\ y \end{pmatrix} \mapsto \bar{y}\)</span></p>
 <p>(<span class="math notranslate nohighlight">\(\bar{x}\)</span> is the complex conjugate of <span class="math notranslate nohighlight">\(x = a + bi\)</span> defined by <span class="math notranslate nohighlight">\(\bar{x} = a - bi\)</span>.)</p>
 </div>
 </div>
@@ -523,7 +523,7 @@ document.write(`
 
 <p class="admonition-title"><span class="caption-number">Exercise 6.2 </span></p>
 <section id="exercise-content">
-<p>A linear transformation <span class="math notranslate nohighlight">\(T: \mathbb{R}^2 \to \mathbb{R}^2\)</span> is defined by <span class="math notranslate nohighlight">\(T: (x, y) \mapsto (-x + 3y, x - 4y)\)</span>. Determine the transformation matrix for <span class="math notranslate nohighlight">\(T\)</span> and hence calculate <span class="math notranslate nohighlight">\(T \begin{pmatrix} 2 \\ 5 \end{pmatrix}\)</span>.</p>
+<p>A linear transformation <span class="math notranslate nohighlight">\(T: \mathbb{R}^2 \to \mathbb{R}^2\)</span> is defined by <span class="math notranslate nohighlight">\(T: \begin{pmatrix} x \\ y \end{pmatrix} \mapsto (-x + 3y, x - 4y)^\mathrm{T}\)</span>. Determine the transformation matrix for <span class="math notranslate nohighlight">\(T\)</span> and hence calculate <span class="math notranslate nohighlight">\(T \begin{pmatrix} 2 \\ 5 \end{pmatrix}\)</span>.</p>
 </section>
 </div>
 <div class="solution dropdown admonition" id="pages/6.5_Linear_transformations_exercises-solution-3">
@@ -547,7 +547,7 @@ document.write(`
 
 <p class="admonition-title"><span class="caption-number">Exercise 6.3 </span></p>
 <section id="exercise-content">
-<p>A linear transformation <span class="math notranslate nohighlight">\(T: \mathbb{R}^2 \to \mathbb{R}^2\)</span> is defined by <span class="math notranslate nohighlight">\(T: (x, y) \mapsto (x - 2y, 2x + 3y)\)</span>. Given <span class="math notranslate nohighlight">\(T(\mathbf{u}) = \begin{pmatrix} -1 \\ 5 \end{pmatrix}\)</span> determine <span class="math notranslate nohighlight">\(\mathbf{u}\)</span>.</p>
+<p>A linear transformation <span class="math notranslate nohighlight">\(T: \mathbb{R}^2 \to \mathbb{R}^2\)</span> is defined by <span class="math notranslate nohighlight">\(T: \begin{pmatrix} x \\ y \end{pmatrix} \mapsto (x - 2y, 2x + 3y)^\mathrm{T}\)</span>. Given <span class="math notranslate nohighlight">\(T(\mathbf{u}) = \begin{pmatrix} -1 \\ 5 \end{pmatrix}\)</span> determine <span class="math notranslate nohighlight">\(\mathbf{u}\)</span>.</p>
 </section>
 </div>
 <div class="solution dropdown admonition" id="pages/6.5_Linear_transformations_exercises-solution-5">

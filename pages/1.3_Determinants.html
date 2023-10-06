@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Vector products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
@@ -437,7 +437,7 @@ document.write(`
 <p class="admonition-title"><span class="caption-number">Example 1.9 </span></p>
 <section class="example-content" id="proof-content">
 <p>Calculate the following determinants</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(\begin{vmatrix} 5 &amp; 2 \\ 3 &amp; 4 \end{vmatrix}\)</span>;</p>
+<p>(i)   <span class="math notranslate nohighlight">\(\begin{vmatrix} 5 &amp; 2 \\ 3 &amp; 4 \end{vmatrix}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -448,7 +448,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{vmatrix} 5 &amp; 2 \\ 3 &amp; 4 \end{vmatrix} = 5 \cdot 4 - 2 \cdot 3 = 20 - 6 = 14 \end{split}\]</div>
 </div>
-</details><p>  (ii)   <span class="math notranslate nohighlight">\(\det \begin{pmatrix} a &amp; b \\ ka &amp; kb \end{pmatrix}\)</span>;</p>
+</details><p>(ii)   <span class="math notranslate nohighlight">\(\det \begin{pmatrix} a &amp; b \\ ka &amp; kb \end{pmatrix}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -459,7 +459,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \det \begin{pmatrix} a &amp; b \\ ka &amp; kb \end{pmatrix} = akb - akb = 0 \end{split}\]</div>
 </div>
-</details><p>  (iii)   <span class="math notranslate nohighlight">\(\begin{vmatrix} 5 &amp; 0 \\ 0 &amp; 2 \end{vmatrix}\)</span>;</p>
+</details><p>(iii)   <span class="math notranslate nohighlight">\(\begin{vmatrix} 5 &amp; 0 \\ 0 &amp; 2 \end{vmatrix}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -470,7 +470,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{vmatrix} 5 &amp; 0 \\ 0 &amp; 2 \end{vmatrix} = 5 \cdot 2 - 0 \cdot 0 = 10 - 0 = 10 \end{split}\]</div>
 </div>
-</details><p>  (iv)   <span class="math notranslate nohighlight">\(\begin{vmatrix} 2-\lambda &amp; 3 \\ 5 &amp; 6 - \lambda \end{vmatrix}\)</span>.</p>
+</details><p>(iv)   <span class="math notranslate nohighlight">\(\begin{vmatrix} 2-\lambda &amp; 3 \\ 5 &amp; 6 - \lambda \end{vmatrix}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -517,7 +517,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} A = \begin{pmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \end{pmatrix},\end{split}\]</div>
 <p>calculate:</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(M_{11}\)</span>;</p>
+<p>(i)   <span class="math notranslate nohighlight">\(M_{11}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -528,7 +528,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} M_{11} = \begin{vmatrix} 5 &amp; 6 \\ 8 &amp; 9 \end{vmatrix} = 5 \cdot 9 - 6 \cdot 8 = 45 - 48 = -3 \end{split}\]</div>
 </div>
-</details><p>  (ii)   <span class="math notranslate nohighlight">\(M_{12}\)</span>;</p>
+</details><p>(ii)   <span class="math notranslate nohighlight">\(M_{12}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -539,7 +539,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} M_{12} = \begin{vmatrix} 4 &amp; 6 \\ 7 &amp; 9 \end{vmatrix} = 4 \cdot 9 - 6 \cdot 7 = 36 - 42 = -6 \end{split}\]</div>
 </div>
-</details><p>  (iii)   <span class="math notranslate nohighlight">\(M_{13}\)</span>.</p>
+</details><p>(iii)   <span class="math notranslate nohighlight">\(M_{13}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -606,7 +606,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{pmatrix} 1 &amp; 0 &amp; 4 \\ 2 &amp; 5 &amp; 6 \\ 4 &amp; 5 &amp; 2 \end{pmatrix}, \end{split}\]</div>
 <p>by expanding along:</p>
-<p>  (i)   row 1;</p>
+<p>(i)   row 1;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -622,7 +622,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
     &amp;= -60
 \end{align*} \end{split}\]</div>
 </div>
-</details><p>  (ii)   column 3.</p>
+</details><p>(ii)   column 3.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">

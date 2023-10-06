@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Vector products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
@@ -513,7 +513,7 @@ document.write(`
 <p class="admonition-title"><span class="caption-number">Example 2.7 </span></p>
 <section class="example-content" id="proof-content">
 <p>Determine the rank of the coefficient matrix and the augmented matrix for the following systems of linear equations and classify them as either consistent, inconsistent or indeterminate systems.</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
+<p>(i)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
     3x_1 + x_2 - 2x_3  \!\!\!\! &amp;= 1, \\
     x_1 - x_2 + 2x_3  \!\!\!\! &amp;= 3, \\
     2x_1 - 3x_2 + 7x_3  \!\!\!\! &amp;= 4.
@@ -556,7 +556,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 \end{align*} \end{split}\]</div>
 <p class="sd-card-text">The augmented matrix is now in reduced row echelon form. Since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = \operatorname{rank}(A \mid \mathbf{b}) = 3\)</span> then this is a consistent system by the <a class="reference internal" href="#consistent-system-theorem">theorem for consistent systems</a>. Using back substitution the solution is <span class="math notranslate nohighlight">\(x_1 = 1\)</span>, <span class="math notranslate nohighlight">\(x_2 = -10\)</span> and <span class="math notranslate nohighlight">\(x_3 = -4\)</span>.</p>
 </div>
-</details><p>  (ii)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
+</details><p>(ii)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
     x_1 - x_2 + 2x_3  \!\!\!\! &amp;= 3, \\
     2x_1 - 3x_2 + 7x_3  \!\!\!\! &amp;= 4, \\
     -x_1 + 3x_2 - 8x_3  \!\!\!\! &amp;= 1.
@@ -592,7 +592,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 \end{align*} \end{split}\]</div>
 <p class="sd-card-text">The augmented matrix is now in reduced row echelon form. Since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = \operatorname{rank}(A \mid \mathbf{b}) = 2\)</span> then this is a consistent system by the <a class="reference internal" href="#consistent-system-theorem">theorem for consistent systems</a>. Furthermore, since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) \)</span> is less that the number of unknowns then this is an indeterminate system by the <a class="reference internal" href="#indeterminate-system-theorem">theorem for indeterminate systems</a>. Let <span class="math notranslate nohighlight">\(x_3 = r\)</span> then using back substitution we have <span class="math notranslate nohighlight">\(x_1 = 5 + r\)</span> and <span class="math notranslate nohighlight">\(x_2 = 2 + 3r\)</span>.</p>
 </div>
-</details><p>  (iii)    <span class="math notranslate nohighlight">\(\begin{array}{rcl}
+</details><p>(iii)    <span class="math notranslate nohighlight">\(\begin{array}{rcl}
     x_1 + x_2 - 2x_3  \!\!\!\! &amp;= 1, \\
     2x_1 - x_2 + x_3  \!\!\!\! &amp;= 9, \\
     x_1 + 4x_2 - 7x_3  \!\!\!\! &amp;= 2.

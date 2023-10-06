@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Vector products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
@@ -407,7 +407,7 @@ document.write(`
 <section class="definition-content" id="proof-content">
 <p>The homogeneous co-ordinates of a point <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> expressed using the Cartesian co-ordinates is the <span class="math notranslate nohighlight">\((n+1)\)</span>-tuple <span class="math notranslate nohighlight">\((w u_1, w u_2, \ldots, w u_n, w)\)</span> where <span class="math notranslate nohighlight">\(w \in \mathbb{R}\backslash \{0\}\)</span>.</p>
 </section>
-</div><p>If we express a point in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> with Cartesian co-ordinates <span class="math notranslate nohighlight">\((u_1, u_2,)\)</span> using the homogeneous co-ordinates <span class="math notranslate nohighlight">\((u_1, u_2    , 1)\)</span> then we can find a <span class="math notranslate nohighlight">\(3 \times 3\)</span> translation matrix <span class="math notranslate nohighlight">\(T(\mathbf{t})\)</span> that satisfies</p>
+</div><p>If we express a point in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> with Cartesian co-ordinates <span class="math notranslate nohighlight">\((u_1, u_2)\)</span> using the homogeneous co-ordinates <span class="math notranslate nohighlight">\((u_1, u_2, 1)\)</span> then we can find a <span class="math notranslate nohighlight">\(3 \times 3\)</span> translation matrix <span class="math notranslate nohighlight">\(T(\mathbf{t})\)</span> that satisfies</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} T(\mathbf{t}) \cdot
 \begin{pmatrix} u_1 \\ u_2 \\ 1 \end{pmatrix} = 
@@ -451,7 +451,7 @@ document.write(`
 <div class="proof example admonition" id="translation-example">
 <p class="admonition-title"><span class="caption-number">Example 6.10 </span></p>
 <section class="example-content" id="proof-content">
-<p>Translate the point with position vector <span class="math notranslate nohighlight">\(\mathbf{u} = (2,3)\)</span> by the vector <span class="math notranslate nohighlight">\(\mathbf{t} = (3,-1)\)</span>.</p>
+<p>Translate the point with position vector <span class="math notranslate nohighlight">\(\mathbf{u} = \begin{pmatrix} 2 \\ 3 \end{pmatrix}\)</span> by the vector <span class="math notranslate nohighlight">\(\mathbf{t} = \begin{pmatrix} 3 \\ -1 \end{pmatrix}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -459,10 +459,10 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Expressing <span class="math notranslate nohighlight">\(\mathbf{u} = (2,3)\)</span> using homogeneous co-ordinates we have <span class="math notranslate nohighlight">\(\mathbf{u} = (2,3,1)\)</span>. The translation matrix is</p>
+<p class="sd-card-text">Expressing <span class="math notranslate nohighlight">\(\mathbf{u} = \begin{pmatrix} 2 \\ 3 \end{pmatrix}\)</span> using homogeneous co-ordinates we have <span class="math notranslate nohighlight">\(\mathbf{u} = \begin{pmatrix} 2 \\ 3 \\ 1 \end{pmatrix}\)</span>. The translation matrix is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    T(3,-1) =
+    T\begin{pmatrix} 3 \\ -1 \end{pmatrix} =
     \begin{pmatrix}
         1 &amp; 0 &amp; 3 \\
         0 &amp; 1 &amp; -1 \\
@@ -479,9 +479,8 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
         0 &amp; 0 &amp; 1
     \end{pmatrix}
     \begin{pmatrix} 2 \\ 3 \\ 1 \end{pmatrix} =
-    \begin{pmatrix} 5 \\ 2 \\ 1 \end{pmatrix},
+    \begin{pmatrix} 5 \\ 2 \\ 1 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">so expressed in Cartesian co-ordinates we have <span class="math notranslate nohighlight">\(T(3,-1) \cdot \mathbf{u} = (5,2)\)</span>.</p>
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/translation_example.svg"><img alt="../_images/translation_example.svg" src="../_images/translation_example.svg" width="400" /></a>
 </figure>
@@ -527,7 +526,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <ul class="simple">
 <li><p>Scaled by a factor of 2 in both directions</p></li>
 <li><p>Rotated by <span class="math notranslate nohighlight">\(\pi/4\)</span> anti-clockwise about the origin</p></li>
-<li><p>Translated by the vector <span class="math notranslate nohighlight">\(\mathbf{t} = (6, 4)\)</span></p></li>
+<li><p>Translated by the vector <span class="math notranslate nohighlight">\(\mathbf{t} = \begin{pmatrix} 6 \\ 4 \end{pmatrix}\)</span></p></li>
 </ul>
 <p>Calculate the co-ordinates of the triangle after each of these transformations has been applied and determine a transformation matrix that performs all three transformations at the same time.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -537,7 +536,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The homogeneous vertex co-ordinates are <span class="math notranslate nohighlight">\((-1, -1, 1)\)</span>, <span class="math notranslate nohighlight">\((1, -1, 1)\)</span> and <span class="math notranslate nohighlight">\((0, 2, 1)\)</span> and can be combined in the single matrix</p>
+<p class="sd-card-text">Using homogeneous co-ordinates the vertices have position vectors <span class="math notranslate nohighlight">\(\begin{pmatrix} -1 \\ -1 \\ 1  \end{pmatrix}\)</span>, <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 \\ -1 \\ 1  \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\begin{pmatrix} 0 \\ 2 \\ 1  \end{pmatrix}\)</span>. We can combine into a single matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} U =
 \begin{pmatrix}
@@ -545,15 +544,15 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
     -1 &amp; -1 &amp; 2 \\
     1 &amp; 1 &amp; 1
 \end{pmatrix}. \end{split}\]</div>
-<p class="sd-card-text">Since we are scaling by a factor of 2 in both directions then the scaling vector is <span class="math notranslate nohighlight">\(\mathbf{s} = (2, 2)\)</span> so the scaling matrix is</p>
+<p class="sd-card-text">Since we are scaling by a factor of 2 in both directions then the scaling vector is <span class="math notranslate nohighlight">\(\mathbf{s} = \begin{pmatrix} 2 \\ 2  \end{pmatrix}\)</span> so the scaling matrix is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    S(2, 2) = \begin{pmatrix} 2 &amp; 0 &amp; 0 \\ 0 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}.
+    S\begin{pmatrix} 2 \\ 2  \end{pmatrix} = \begin{pmatrix} 2 &amp; 0 &amp; 0 \\ 0 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 <p class="sd-card-text">Applying the scaling matrix to the homogeneous co-ordinates</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    V &amp;= S(2,2) \cdot U \\
+    V &amp;= S\begin{pmatrix} 2 \\ 2 \end{pmatrix} \cdot U \\
     &amp;= \begin{pmatrix} 2 &amp; 0 &amp; 0 \\ 0 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} 
     \begin{pmatrix} -1 &amp; 1 &amp; 0 \\ -1 &amp; -1 &amp; 2 \\ 1 &amp; 1 &amp; 1 \end{pmatrix}\\
     &amp;= \begin{pmatrix} -2 &amp; 2 &amp; 0 \\ -2 &amp; -2 &amp; 4 \\ 1 &amp; 1 &amp; 1 \end{pmatrix}.
@@ -600,9 +599,9 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/rotation_scaling_and_translation_example_2.svg"><img alt="../_images/rotation_scaling_and_translation_example_2.svg" src="../_images/rotation_scaling_and_translation_example_2.svg" width="400" /></a>
 </figure>
-<p class="sd-card-text">Finally we need to translate by the translation vector <span class="math notranslate nohighlight">\(\mathbf{t} = (6, 4)\)</span> so the translation matrix is</p>
+<p class="sd-card-text">Finally we need to translate by the translation vector <span class="math notranslate nohighlight">\(\mathbf{t} = \begin{pmatrix} 6 \\ 4 \end{pmatrix}\)</span> so the translation matrix is</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} T(6, 4) =
+\[\begin{split} T\begin{pmatrix} 6 \\ 4 \end{pmatrix} =
 \begin{pmatrix}
     1 &amp; 0 &amp; 6 \\
     0 &amp; 1 &amp; 4 \\
@@ -611,7 +610,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <p class="sd-card-text">Applying the translation matrix to <span class="math notranslate nohighlight">\(W\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    X &amp;= T(6, 4) \cdot W \\
+    X &amp;= T\begin{pmatrix} 6 \\ 4 \end{pmatrix} \cdot W \\
     &amp;= \begin{pmatrix} 1 &amp; 0 &amp; 6 \\ 0 &amp; 1 &amp; 4 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
     \begin{pmatrix}
         0 &amp; 2 \sqrt{2} &amp; -2\sqrt{2} \\
@@ -635,7 +634,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <p class="sd-card-text">The single transformation matrix that performs the three transformations at the same time is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    A &amp;= T(6, 4) \cdot Rot(\pi/4) \cdot S(2,2) \\
+    A &amp;= T\begin{pmatrix} 6 \\ 4 \end{pmatrix} \cdot Rot(\pi/4) \cdot S\begin{pmatrix} 2 \\ 2 \end{pmatrix} \\
     &amp;= \begin{pmatrix}
         0 &amp; 2 \sqrt{2} &amp; -2\sqrt{2} \\
         -2\sqrt{2} &amp; 0 &amp; 2\sqrt{2} \\

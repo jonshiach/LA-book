@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>5.5. Basis &#8212; Linear Algebra Lecture Notes</title>
+    <title>5.6. Basis &#8212; Linear Algebra Lecture Notes</title>
   
   
   
@@ -66,13 +66,13 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/5.3_Basis';</script>
-    <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/5.3_Basis.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/5.3_Basis-ASN-ACA-M-1119';</script>
+    <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/5.3_Basis-ASN-ACA-M-1119.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5.6. Vector spaces exercises" href="5.5_Vector_spaces_exercises.html" />
-    <link rel="prev" title="5.4. Linear dependence" href="5.2_Linear_dependence.html" />
+    <link rel="next" title="5.7. Vector spaces exercises" href="5.5_Vector_spaces_exercises.html" />
+    <link rel="prev" title="5.5. Basis" href="5.3_Basis.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -209,8 +209,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="5.1_Subspaces.html">5.3. Subspaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5.2_Linear_dependence.html">5.4. Linear dependence</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.5. Basis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5.5_Vector_spaces_exercises.html">5.6. Vector spaces exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.3_Basis.html">5.5. Basis</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.6. Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.5_Vector_spaces_exercises.html">5.7. Vector spaces exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="6.0_Linear_transformations.html">6. Linear Transformations</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -277,7 +278,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/pages/5.3_Basis.md" target="_blank"
+      <li><a href="../_sources/pages/5.3_Basis-ASN-ACA-M-1119.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -369,9 +370,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spanning-sets">5.5.1. Spanning sets</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basis-of-a-vector-space">5.5.2. Basis of a vector space</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#change-of-basis">5.5.3. Change of basis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spanning-sets">5.6.1. Spanning sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basis-of-a-vector-space">5.6.2. Basis of a vector space</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#change-of-basis">5.6.3. Change of basis</a></li>
 </ul>
             </nav>
         </div>
@@ -384,12 +385,12 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <span class="target" id="basis-section"></span><section class="tex2jax_ignore mathjax_ignore" id="basis">
-<span id="index-0"></span><h1><span class="section-number">5.5. </span>Basis<a class="headerlink" href="#basis" title="Permalink to this heading">#</a></h1>
-<p>We have already met the concept of a basis in the chapter on vectors where we saw that <a class="reference internal" href="3.4_Linear_combinations.html#basis-vectors-section"><span class="std std-ref">the basis vectors for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span></span></a> are the vectors <span class="math notranslate nohighlight">\(\mathbf{i} = (1, 0, 0)^\mathrm{T}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{j} = (0, 1, 0)^\mathrm{T}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{k} = (0, 0, 1)^\mathrm{T}\)</span> and any vector in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> can be represented as a linear combination of these basis vectors. The concept of a basis is not limited to Euclidean geometry and we can define a basis for any vector space so that an element in the vector space can be expressed as a <a class="reference internal" href="3.4_Linear_combinations.html#linear-combination-of-vectors-definition">linear combination</a> of the basis elements.</p>
+<span id="index-0"></span><h1><span class="section-number">5.6. </span>Basis<a class="headerlink" href="#basis" title="Permalink to this heading">#</a></h1>
+<p>We have already met the concept of a basis in the chapter on vectors where we saw that <a class="reference internal" href="3.4_Linear_combinations.html#basis-vectors-section"><span class="std std-ref">the basis vectors for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span></span></a> are the vectors <span class="math notranslate nohighlight">\(\mathbf{i} = (1, 0, 0)\)</span>, <span class="math notranslate nohighlight">\(\mathbf{j} = (0, 1, 0)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{k} = (0, 0, 1)\)</span> and any vector in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> can be represented as a linear combination of these basis vectors. The concept of a basis is not limited to Euclidean geometry and we can define a basis for any vector space so that an element in the vector space can be expressed as a <a class="reference internal" href="3.4_Linear_combinations.html#linear-combination-of-vectors-definition">linear combination</a> of the basis elements.</p>
 <section id="spanning-sets">
-<span id="index-1"></span><h2><span class="section-number">5.5.1. </span>Spanning sets<a class="headerlink" href="#spanning-sets" title="Permalink to this heading">#</a></h2>
+<span id="index-1"></span><h2><span class="section-number">5.6.1. </span>Spanning sets<a class="headerlink" href="#spanning-sets" title="Permalink to this heading">#</a></h2>
 <div class="proof definition admonition" id="spanning-set-definition">
-<p class="admonition-title"><span class="caption-number">Definition 5.6 </span> (Spanning set)</p>
+<p class="admonition-title"><span class="caption-number">Definition 5.12 </span> (Spanning set)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over the field <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(S\)</span> is a subset of <span class="math notranslate nohighlight">\(V\)</span>. Let <span class="math notranslate nohighlight">\(W\)</span> be a subset of <span class="math notranslate nohighlight">\(V\)</span> that are expressible as a linear combination of vectors in <span class="math notranslate nohighlight">\(S\)</span>, i.e., for <span class="math notranslate nohighlight">\(u \in W\)</span>, <span class="math notranslate nohighlight">\(v_1, \ldots, v_n \in S\)</span> and <span class="math notranslate nohighlight">\(\alpha_1, \ldots, \alpha_n \in F\)</span></p>
 <div class="math notranslate nohighlight">
@@ -398,9 +399,9 @@ document.write(`
 </section>
 </div><p>For example, <span class="math notranslate nohighlight">\(\mathbb{C} = \operatorname{span}(\{1, i\})\)</span> over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> since every element of <span class="math notranslate nohighlight">\(\mathbb{C}\)</span> can be expressed as a linear combination of 1 and <span class="math notranslate nohighlight">\(i\)</span>.</p>
 <div class="proof example admonition" id="spanning-set-example">
-<p class="admonition-title"><span class="caption-number">Example 5.6 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 5.9 </span></p>
 <section class="example-content" id="proof-content">
-<p>(i)   Show that  <span class="math notranslate nohighlight">\(\{ \mathbf{v}_1, \mathbf{v}_2 \}\)</span> where <span class="math notranslate nohighlight">\(\mathbf{v}_1 = \begin{pmatrix} 2\\ 1 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}_2 = \begin{pmatrix} 4 \\ 3 \end{pmatrix}\)</span> is a spanning set for <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>.</p>
+<p>  (i)   Show that  <span class="math notranslate nohighlight">\(\{ \mathbf{v}_1, \mathbf{v}_2 \}\)</span> where <span class="math notranslate nohighlight">\(\mathbf{v}_1 = (2, 1)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}_2 = (4, 3)\)</span> is a spanning set for <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -408,7 +409,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">We need to show that <span class="math notranslate nohighlight">\(\alpha_1 \begin{pmatrix} 2\\ 1 \end{pmatrix} + \alpha_2 \begin{pmatrix} 4 \\ 3 \end{pmatrix} = \begin{pmatrix} a\\ b \end{pmatrix}\)</span> for any <span class="math notranslate nohighlight">\(a, b \in \mathbb{R}\)</span>, i.e., so that the following system has a non-trivial solution.</p>
+<p class="sd-card-text">We need to show that <span class="math notranslate nohighlight">\(\alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 = (a, b)\)</span> for any <span class="math notranslate nohighlight">\(a, b \in \mathbb{R}\)</span>, i.e., so that the following system has a non-trivial solution.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     2 \alpha_1 + 4 \alpha_2 &amp;= a, \\
@@ -419,7 +420,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 \[\begin{split} \det \begin{pmatrix} 2 &amp; 4 \\ 1 &amp; 3 \end{pmatrix} = 2 \neq 0, \end{split}\]</div>
 <p class="sd-card-text">so <span class="math notranslate nohighlight">\(\{\mathbf{v}_1, \mathbf{v}_2\}\)</span> is a spanning set for <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>.</p>
 </div>
-</details><p>(ii)   Determine a spanning set for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
+</details><p>  (ii)   Determine a spanning set for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -427,14 +428,10 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Lets suggest <span class="math notranslate nohighlight">\(\left\{ \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}
-\right\}\)</span> as a spanning set for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span></p>
+<p class="sd-card-text">Lets suggest <span class="math notranslate nohighlight">\(\{ (1, 0, 0), (0, 1, 0), (0, 0, 1) \}\)</span> as a spanning set for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    (x, y, z) &amp;= \{ \alpha_1 
-    \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} + \alpha_2
-    \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}  + \alpha_3
-    \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} : \alpha_1, \alpha_2, \alpha_3 \in \mathbb{R}\} \\
+    (x, y, z) &amp;= \{ \alpha_1 (1, 0, 0) + \alpha_2 (0, 1, 0) + \alpha_3(0, 0, 1) : \alpha_1, \alpha_2, \alpha_3 \in \mathbb{R}\} \\
     &amp;= \{ \alpha_1 \mathbf{i} + \alpha_2 \mathbf{j} + \alpha_3 \mathbf{k} : \alpha_1, \alpha_2, \alpha_3 \in \mathbb{R} \},
 \end{align*} \end{split}\]</div>
 <p class="sd-card-text">therefore <span class="math notranslate nohighlight">\(\{ \mathbf{i}, \mathbf{j}, \mathbf{k} \}\)</span> is a spanning set for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. Note that this is just one of many examples of spanning sets for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
@@ -443,9 +440,9 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 </div><p>The vectors <span class="math notranslate nohighlight">\(\mathbf{i}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{j}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{j}\)</span> were introduced in <a class="reference internal" href="3.4_Linear_combinations.html#basis-vectors-section"><span class="std std-ref">basis vectors</span></a>. This leads to the definition of a basis of a vector space.</p>
 </section>
 <section id="basis-of-a-vector-space">
-<h2><span class="section-number">5.5.2. </span>Basis of a vector space<a class="headerlink" href="#basis-of-a-vector-space" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.6.2. </span>Basis of a vector space<a class="headerlink" href="#basis-of-a-vector-space" title="Permalink to this heading">#</a></h2>
 <div class="proof definition admonition" id="basis-definition">
-<p class="admonition-title"><span class="caption-number">Definition 5.7 </span> (Basis of a vector space)</p>
+<p class="admonition-title"><span class="caption-number">Definition 5.13 </span> (Basis of a vector space)</p>
 <section class="definition-content" id="proof-content">
 <p>A <strong>basis</strong> of a vector space <span class="math notranslate nohighlight">\(V\)</span> of a field <span class="math notranslate nohighlight">\(F\)</span> is a linearly independent subset of <span class="math notranslate nohighlight">\(V\)</span> that spans <span class="math notranslate nohighlight">\(V\)</span>. A subset <span class="math notranslate nohighlight">\(W\)</span> is a basis if it satisfies the following:</p>
 <ul class="simple">
@@ -460,24 +457,24 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 \[ u = \alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n v_n. \]</div>
 </section>
 </div><div class="proof definition admonition" id="orthogonal-basis-definition">
-<span id="index-2"></span><p class="admonition-title"><span class="caption-number">Definition 5.8 </span> (Orthogonal basis)</p>
+<span id="index-2"></span><p class="admonition-title"><span class="caption-number">Definition 5.14 </span> (Orthogonal basis)</p>
 <section class="definition-content" id="proof-content">
 <p>An <strong>orthogonal basis</strong> of a vector space is one in which each of the vectors are orthogonal (perpendicular) to one another.</p>
 </section>
 </div><div class="proof definition admonition" id="orthonormal-basis-definition">
-<span id="index-3"></span><p class="admonition-title"><span class="caption-number">Definition 5.9 </span> (Orthonormal basis)</p>
+<span id="index-3"></span><p class="admonition-title"><span class="caption-number">Definition 5.15 </span> (Orthonormal basis)</p>
 <section class="definition-content" id="proof-content">
 <p>An <strong>orthonormal basis</strong> of a vector space is one in which each of the vectors are orthogonal to one another and each vector is a unit vector.</p>
 </section>
 </div><div class="proof definition admonition" id="vector-space-dimension-definition">
-<span id="index-4"></span><p class="admonition-title"><span class="caption-number">Definition 5.10 </span> (Dimension of a vector space)</p>
+<span id="index-4"></span><p class="admonition-title"><span class="caption-number">Definition 5.16 </span> (Dimension of a vector space)</p>
 <section class="definition-content" id="proof-content">
 <p>The <strong>dimension</strong> of a vector space <span class="math notranslate nohighlight">\(V\)</span> is denoted by <span class="math notranslate nohighlight">\(\dim(V)\)</span> and is the number of elements in the basis for the vector space.</p>
 </section>
 </div><div class="proof example admonition" id="basis-example">
-<p class="admonition-title"><span class="caption-number">Example 5.7 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 5.10 </span></p>
 <section class="example-content" id="proof-content">
-<p>Show that <span class="math notranslate nohighlight">\(\{ \mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3\}\)</span> where <span class="math notranslate nohighlight">\(\mathbf{v}_1 = \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{v}_2 = \begin{pmatrix} 1 \\ -1 \\ 1 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}_3 = \begin{pmatrix} 1 \\ -1 \\ -2 \end{pmatrix}\)</span> is a basis for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
+<p>Show that the vectors <span class="math notranslate nohighlight">\(\mathbf{v}_1 = (1, 1, 0)\)</span>, <span class="math notranslate nohighlight">\(\mathbf{v}_2 = (1, -1, 1)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}_3 = (1, -1, -2)\)</span> is a basis for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -540,7 +537,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <p class="sd-card-text">So <span class="math notranslate nohighlight">\(\mathbf{v}_1\)</span>, <span class="math notranslate nohighlight">\(\mathbf{v}_2\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}_3\)</span> are linearly independent. We also need to show that <span class="math notranslate nohighlight">\(\{ \mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3 \}\)</span> spans <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \det \begin{pmatrix} 1 &amp; 1 &amp; 1 \\ 1 &amp; -1 &amp; -1 \\ 0 &amp; 1 &amp; -2 \end{pmatrix} = 3 + 3 = 6 \neq 0, \end{split}\]</div>
-<p class="sd-card-text">so <span class="math notranslate nohighlight">\(\{ \mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3 \}\)</span> is a spanning set for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. Note that in showing that <span class="math notranslate nohighlight">\(\mathbf{v}_1\)</span>, <span class="math notranslate nohighlight">\(\mathbf{v}_2\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}_3\)</span> are linearly independent we have also shown that <span class="math notranslate nohighlight">\(\alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 + \alpha_3 \mathbf{v}_3 = (a, b, c)^\mathrm{T}\)</span> has a solution and <span class="math notranslate nohighlight">\(\{ \mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3 \}\)</span> is a spanning set. Futhermore</p>
+<p class="sd-card-text">so <span class="math notranslate nohighlight">\(\{ \mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3 \}\)</span> is a spanning set for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. Note that in showing that <span class="math notranslate nohighlight">\(\mathbf{v}_1\)</span>, <span class="math notranslate nohighlight">\(\mathbf{v}_2\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}_3\)</span> are linearly independent we have also shown that <span class="math notranslate nohighlight">\(\alpha_1 \mathbf{v}_1 + \alpha_2 \mathbf{v}_2 + \alpha_3 \mathbf{v}_3 = (a, b, c)\)</span> has a solution and <span class="math notranslate nohighlight">\(\{ \mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3 \}\)</span> is a spanning set. Futhermore</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \mathbf{v}_1 \cdot \mathbf{v}_2 &amp;= \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} \cdot
@@ -555,7 +552,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 </details></section>
 </div><span class="target" id="index-5"></span></section>
 <section id="change-of-basis">
-<span id="change-of-basis-section"></span><span id="index-6"></span><h2><span class="section-number">5.5.3. </span>Change of basis<a class="headerlink" href="#change-of-basis" title="Permalink to this heading">#</a></h2>
+<span id="change-of-basis-section"></span><span id="index-6"></span><h2><span class="section-number">5.6.3. </span>Change of basis<a class="headerlink" href="#change-of-basis" title="Permalink to this heading">#</a></h2>
 <p><span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> has a particularly nice basis that is easy to write down</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} E = \left\{ 
@@ -564,26 +561,23 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
         \mathbf{e}_n = \begin{pmatrix} 0 \\ 0 \\ 0 \\ \vdots \\ 1 \end{pmatrix}
         \right\}, \end{split}\]</div>
 <p>which is called the <strong>standard basis</strong>. Note that <span class="math notranslate nohighlight">\(\mathbf{e}_i\)</span> is column <span class="math notranslate nohighlight">\(i\)</span> of the identity matrix and for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> we have <span class="math notranslate nohighlight">\(\mathbf{i} = \mathbf{e}_1\)</span>, <span class="math notranslate nohighlight">\(\mathbf{j} = \mathbf{e}_2\)</span> and <span class="math notranslate nohighlight">\(\mathbf{k} = \mathbf{e}_3\)</span>.</p>
-<p>We can represent a vector <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2, \ldots, u_n)^\mathrm{T} \in \mathbb{R}^n\)</span> in the standard basis as a vector with respect to another basis <span class="math notranslate nohighlight">\(W = \{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\}\)</span> which is denoted using <span class="math notranslate nohighlight">\([\mathbf{u}]_W\)</span>. Using the standard basis we have</p>
+<p>We can represent a vector <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2, \ldots, u_n) \in \mathbb{R}^n\)</span> in the standard basis as a vector with respect to another basis <span class="math notranslate nohighlight">\(W = \{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\}\)</span> which is denoted using <span class="math notranslate nohighlight">\([\mathbf{u}]_W\)</span>. Using the standard basis we have</p>
 <div class="math notranslate nohighlight">
-\[u_1 \mathbf{e}_1 + u_2 \mathbf{e}_2 + \cdots + u_n \mathbf{e}_n = \mathbf{u}, \]</div>
+\[ \mathbf{u} = u_1 \mathbf{e}_1 + u_2 \mathbf{e}_2 + \cdots + u_n \mathbf{e}_n = (u_1, u_2, \ldots, u_n), \]</div>
 <p>and to express <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> with respect to the basis <span class="math notranslate nohighlight">\(W\)</span> we need to solve</p>
 <div class="math notranslate nohighlight">
-\[  w_1 \mathbf{v}_1 + w_2 \mathbf{v}_2 + \cdots + w_n \mathbf{v}_n = \mathbf{u}, \]</div>
-<p>for <span class="math notranslate nohighlight">\(w_1, w_2, \ldots, w_n\)</span>. This concept is illustrated for <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> in <a class="reference internal" href="#change-of-basis-figure"><span class="std std-numref">Fig. 5.2</span></a>.</p>
+\[ [\mathbf{u}]_W = w_1 \mathbf{v}_1 + w_2 \mathbf{v}_2 + \cdots + w_n \mathbf{v}_n = (u_1, u_2, \ldots, u_n), \]</div>
+<p>for <span class="math notranslate nohighlight">\(w_1, w_2, \ldots, w_n\)</span>. This concept is illustrated for <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> in <a class="reference internal" href="#change-of-basis-figure"><span class="std std-numref">Fig. 5.3</span></a>.</p>
 <figure class="align-default" id="change-of-basis-figure">
 <a class="reference internal image-reference" href="../_images/change_of_basis.svg"><img alt="../_images/change_of_basis.svg" src="../_images/change_of_basis.svg" width="400" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5.2 </span><span class="caption-text">The vector <span class="math notranslate nohighlight">\((u_1, u_2)^\mathrm{T}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> expressed with respect to the basis <span class="math notranslate nohighlight">\(E = \{\mathbf{e}_1, \mathbf{e}_2 \}\)</span> and <span class="math notranslate nohighlight">\(W = \{\mathbf{v}_1, \mathbf{v}_2\}\)</span>.</span><a class="headerlink" href="#change-of-basis-figure" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 5.3 </span><span class="caption-text">The vector <span class="math notranslate nohighlight">\((u_1, u_2)\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> expressed with respect to the basis <span class="math notranslate nohighlight">\(E = \{\mathbf{e}_1, \mathbf{e}_2 \}\)</span> and <span class="math notranslate nohighlight">\(W = \{\mathbf{v}_1, \mathbf{v}_2\}\)</span>.</span><a class="headerlink" href="#change-of-basis-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="proof example admonition" id="change-of-basis-example">
-<p class="admonition-title"><span class="caption-number">Example 5.8 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 5.11 </span></p>
 <section class="example-content" id="proof-content">
-<p>Represent the vector <span class="math notranslate nohighlight">\(\mathbf{u} = \begin{pmatrix} 4 \\ 0 \\ 5 \end{pmatrix}\)</span> with respect to the basis <span class="math notranslate nohighlight">\(W = \left\{ 
-    \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix},
-    \begin{pmatrix} 1 \\ -1 \\ 1 \end{pmatrix},
-    \begin{pmatrix} 1 \\ -1 \\ -2 \end{pmatrix} \right\}\)</span>.</p>
+<p>Represent the vector <span class="math notranslate nohighlight">\(\mathbf{u} = (4, 0, 5)\)</span> with respect to the basis <span class="math notranslate nohighlight">\(W = \{(1, 1, 0), (1, -1, 1), (1, -1, -2)\}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -606,7 +600,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
     \end{pmatrix}
     \begin{pmatrix} w_1 \\ w_2 \\ w_3 \end{pmatrix} =
     \begin{pmatrix} 4 \\ 0 \\ 5 \end{pmatrix}, \end{split}\]</div>
-<p class="sd-card-text">Calculating the inverse of the coefficient matrix</p>
+<p class="sd-card-text">where <span class="math notranslate nohighlight">\([\mathbf{u}]_w = (w_1, w_2, w_3)\)</span>. Calculating the inverse of the coefficient matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} 
@@ -647,9 +641,9 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 \end{align*} \end{split}\]</div>
 </div>
 </details></section>
-</div><p>Note that in <a class="reference internal" href="#change-of-basis-example">Example 5.8</a> we can represent any vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> with respect to the basis <span class="math notranslate nohighlight">\(W\)</span> by multiplying by the square matrix in the final equation. This matrix is known as the <a href="https://en.wikipedia.org/wiki/Change_of_basis" target="_blank"><strong>change of basis matrix</strong></a>.</p>
+</div><p>Note that in <a class="reference internal" href="#change-of-basis-example">Example 5.11</a> we can represent any vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> with respect to the basis <span class="math notranslate nohighlight">\(W\)</span> by multiplying by the square matrix in the final equation. This matrix is known as the <a href="https://en.wikipedia.org/wiki/Change_of_basis" target="_blank"><strong>change of basis matrix</strong></a>.</p>
 <div class="proof definition admonition" id="change-of-basis-matrix-definition">
-<span id="index-7"></span><p class="admonition-title"><span class="caption-number">Definition 5.11 </span> (Change of basis matrix)</p>
+<span id="index-7"></span><p class="admonition-title"><span class="caption-number">Definition 5.17 </span> (Change of basis matrix)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over the field <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(u \in V\)</span>. If <span class="math notranslate nohighlight">\(E\)</span> and <span class="math notranslate nohighlight">\(W\)</span> are two basis for <span class="math notranslate nohighlight">\(V\)</span> then the change of basis matrix is the matrix <span class="math notranslate nohighlight">\(A_{E \to W}\)</span> such that <span class="math notranslate nohighlight">\([u]_{W} = A_{E \to W} [u]_E\)</span>.</p>
 </section>
@@ -689,12 +683,12 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="5.2_Linear_dependence.html"
+       href="5.3_Basis.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">5.4. </span>Linear dependence</p>
+        <p class="prev-next-title"><span class="section-number">5.5. </span>Basis</p>
       </div>
     </a>
     <a class="right-next"
@@ -702,7 +696,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.6. </span>Vector spaces exercises</p>
+        <p class="prev-next-title"><span class="section-number">5.7. </span>Vector spaces exercises</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -724,9 +718,9 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spanning-sets">5.5.1. Spanning sets</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basis-of-a-vector-space">5.5.2. Basis of a vector space</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#change-of-basis">5.5.3. Change of basis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spanning-sets">5.6.1. Spanning sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basis-of-a-vector-space">5.6.2. Basis of a vector space</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#change-of-basis">5.6.3. Change of basis</a></li>
 </ul>
   </nav></div>
 

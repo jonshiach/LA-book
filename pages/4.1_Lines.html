@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Vector products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
@@ -412,7 +412,7 @@ document.write(`
 <div class="proof example admonition" id="line-vector-equation-example">
 <p class="admonition-title"><span class="caption-number">Example 4.1 </span></p>
 <section class="example-content" id="proof-content">
-<p>Given a point <span class="math notranslate nohighlight">\(\mathbf{p} = (1, 0, 2, 1, 4)\)</span> and a direction vector <span class="math notranslate nohighlight">\(\mathbf{d} = (1, -1, 0, -1, 1)\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^5,\)</span> find the equation of the line <span class="math notranslate nohighlight">\(\ell\)</span> which goes through <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> in the direction of <span class="math notranslate nohighlight">\(\mathbf{d}\)</span>.</p>
+<p>Given a point with position vector <span class="math notranslate nohighlight">\(\mathbf{p} = (1, 0, 2, 1, 4)^\mathrm{T}\)</span> and a direction vector <span class="math notranslate nohighlight">\(\mathbf{d} = (1, -1, 0, -1, 1)^\mathrm{T}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^5\)</span>, find the equation of the line <span class="math notranslate nohighlight">\(\ell\)</span> which passes through <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> in the direction of <span class="math notranslate nohighlight">\(\mathbf{d}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -446,7 +446,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="proof example admonition" id="line-line-intersection-example">
 <p class="admonition-title"><span class="caption-number">Example 4.2 </span></p>
 <section class="example-content" id="proof-content">
-<p>Three lines <span class="math notranslate nohighlight">\(\ell_1\)</span>, <span class="math notranslate nohighlight">\(\ell_2\)</span> and <span class="math notranslate nohighlight">\(\ell_3\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> are defined by the vector equations <span class="math notranslate nohighlight">\((1 + t_1, -3 + 2t_1, t_1)\)</span>, <span class="math notranslate nohighlight">\((6 - t_2, -5 - 2t_2, t_2 - 1)\)</span> and <span class="math notranslate nohighlight">\((6 + 2t_3, -11 + 2t_3, -2 - t_3)\)</span> respectively. Determine the points of intersection between the three lines (if possible).</p>
+<p>Three lines <span class="math notranslate nohighlight">\(\ell_1\)</span>, <span class="math notranslate nohighlight">\(\ell_2\)</span> and <span class="math notranslate nohighlight">\(\ell_3\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> are defined by the vector equations <span class="math notranslate nohighlight">\((1 + t_1, -3 + 2t_1, t_1)^\mathrm{T}\)</span>, <span class="math notranslate nohighlight">\((6 - t_2, -5 - 2t_2, t_2 - 1)^\mathrm{T}\)</span> and <span class="math notranslate nohighlight">\((6 + 2t_3, -11 + 2t_3, -2 - t_3)^\mathrm{T}\)</span> respectively. Determine the points of intersection between the three lines (if possible).</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -514,15 +514,15 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <p class="admonition-title"><span class="caption-number">Example 4.3 </span></p>
 <section class="example-content" id="proof-content">
 <p><span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> are two lines in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> be defined by <span class="math notranslate nohighlight">\(\{(x,y,z) : z = x+1, y=0\}\)</span> and <span class="math notranslate nohighlight">\(\{(x,y,z) : z = -x-1, y=3\}\)</span>.</p>
-<p>  (i)   Write equations for <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> in vector form;</p>
+<p>(i)   Write equations for <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> in vector form;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)s<div class="sd-summary-down docutils">
+Solution (click to reveal)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">To calculate the direction vector <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> we need two points on the line. Choosing <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(x=1\)</span> then we have the two points <span class="math notranslate nohighlight">\(\mathbf{p}_1 = (0, 0, 1)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{p}_2 = (1, 0, 2)\)</span> on <span class="math notranslate nohighlight">\(\ell_1\)</span>. Therefore</p>
+<p class="sd-card-text">To calculate the direction vector <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> we need two points on the line. Choosing <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(x=1\)</span> then we have the two points with position vectors <span class="math notranslate nohighlight">\(\mathbf{p}_1 = (0, 0, 1)^\mathrm{T}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{p}_2 = (1, 0, 2)^\mathrm{T}\)</span> on <span class="math notranslate nohighlight">\(\ell_1\)</span>. Therefore</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \mathbf{d} = \mathbf{p}_2 - \mathbf{p}_1 = \begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix} - 
@@ -534,7 +534,7 @@ Solution (click to reveal)s<div class="sd-summary-down docutils">
 \[\begin{split} \begin{align*}
     \mathbf{r}_1 = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} + t \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} = \begin{pmatrix} t \\ 0 \\ 1 + t \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Doing similar for <span class="math notranslate nohighlight">\(\ell_2\)</span> we have <span class="math notranslate nohighlight">\(\mathbf{p}_1 = (0, 3, -1)\)</span>, <span class="math notranslate nohighlight">\(\mathbf{p}_2 = (1, 3, -2)\)</span> so</p>
+<p class="sd-card-text">Doing similar for <span class="math notranslate nohighlight">\(\ell_2\)</span> we have <span class="math notranslate nohighlight">\(\mathbf{p}_1 = (0, 3, -1)^\mathrm{T}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{p}_2 = (1, 3, -2)^\mathrm{T}\)</span> so</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \mathbf{d} = \mathbf{p}_2 - \mathbf{p}_1 = 
@@ -548,10 +548,10 @@ Solution (click to reveal)s<div class="sd-summary-down docutils">
     \mathbf{r}_2 = \begin{pmatrix} 0 \\ 3 \\ -1 \end{pmatrix} + t \begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix} = \begin{pmatrix} t \\ 3 \\ -1 -t \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 </div>
-</details><p>  (ii)   show that these lines are not parallel in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
+</details><p>(ii)   show that these lines are not parallel in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)s<div class="sd-summary-down docutils">
+Solution (click to reveal)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -616,7 +616,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 </div><div class="proof example admonition" id="perpendicular-lines-example">
 <p class="admonition-title"><span class="caption-number">Example 4.5 </span></p>
 <section class="example-content" id="proof-content">
-<p>  (i)   Determine whether the two lines from <a class="reference internal" href="#parallel-lines-example">Example 4.3</a> are perpendicular.</p>
+<p>(i)   Determine whether the two lines from <a class="reference internal" href="#parallel-lines-example">Example 4.3</a> are perpendicular.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -632,7 +632,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 \end{align*} \end{split}\]</div>
 <p class="sd-card-text">So <span class="math notranslate nohighlight">\(\ell_1 \perp \ell_2\)</span>.</p>
 </div>
-</details><p>  (ii)   Find the equation of a line <span class="math notranslate nohighlight">\(\ell_2\)</span> which is perpendicular to <span class="math notranslate nohighlight">\((t,-t,1+t)\)</span> at the point <span class="math notranslate nohighlight">\(\mathbf{p} = (-1,1,0).\)</span></p>
+</details><p>(ii)   Find the equation of a line <span class="math notranslate nohighlight">\(\ell_2\)</span> which is perpendicular to <span class="math notranslate nohighlight">\((t,-t,1+t)^\mathrm{T}\)</span> at the point with position vector <span class="math notranslate nohighlight">\(\mathbf{p} = (-1,1,0)^\mathrm{T}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">

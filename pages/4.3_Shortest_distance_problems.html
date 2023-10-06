@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Vector products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
@@ -388,10 +388,10 @@ document.write(`
 <p id="id1"><span id="index-0"></span>We can take advantage of vector geometry to calculate the solutions to shortest distance problems.</p>
 <span class="target" id="shortest-distance-between-two-points"></span><section id="index-1">
 <span id="id2"></span><h2><span class="section-number">4.4.1. </span>Shortest distance between two points<a class="headerlink" href="#index-1" title="Permalink to this heading">#</a></h2>
-<p>In <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> the shortest distance, <span class="math notranslate nohighlight">\(d\)</span>, between two points <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> is the length of a straight line segment connecting them. If we think about this segment as of a vector, then</p>
+<p>In <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> the shortest distance, <span class="math notranslate nohighlight">\(d\)</span>, between two points with position vectors <span class="math notranslate nohighlight">\(\mathbf{p}=(p_1, p_2, \ldots, p_n)^\mathrm{T}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{q} = (q_1, q_2, \ldots, q_n)^\mathrm{T}\)</span> is the length of a straight line segment connecting them. If we think about this segment as of a vector, then</p>
 <div class="math notranslate nohighlight">
-\[ d = |\overrightarrow{PQ}| = \sqrt{\displaystyle\sum_{i=1}^n (p_i-q_i)^2}, \]</div>
-<p>where <span class="math notranslate nohighlight">\(P=(p_1,p_2,\dots,p_n)\)</span> and <span class="math notranslate nohighlight">\(Q=(q_1,q_2,\dots,q_n)\)</span>.</p>
+\[ d = |\mathbf{p} - \mathbf{q}| = \sqrt{\displaystyle\sum_{i=1}^n (p_i-q_i)^2}. \]</div>
+<p>Note that <span class="math notranslate nohighlight">\(|\mathbf{p} - \mathbf{q}| = |\mathbf{q} - \mathbf{p}|\)</span>.</p>
 </section>
 <section id="shortest-distance-between-a-line-and-a-point">
 <span id="index-2"></span><h2><span class="section-number">4.4.2. </span>Shortest distance between a line and a point<a class="headerlink" href="#shortest-distance-between-a-line-and-a-point" title="Permalink to this heading">#</a></h2>
@@ -424,7 +424,7 @@ document.write(`
 </div><div class="proof example admonition" id="point-line-distance-example">
 <p class="admonition-title"><span class="caption-number">Example 4.8 </span></p>
 <section class="example-content" id="proof-content">
-<p>Find the shortest distance between the point with position vector <span class="math notranslate nohighlight">\(\mathbf{q} = (2,2,2)\)</span> and the line <span class="math notranslate nohighlight">\((t,t-2, t+1)\)</span>.</p>
+<p>Find the shortest distance between the point with position vector <span class="math notranslate nohighlight">\(\mathbf{q} = (2,2,2)^\mathrm{T}\)</span> and the line <span class="math notranslate nohighlight">\((t,t-2, t+1)^\mathrm{T}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -434,7 +434,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Writing the line in the form <span class="math notranslate nohighlight">\(\mathbf{r} = \mathbf{p} + t \mathbf{d}\)</span></p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \mathbr{r} = \begin{pmatrix} 0 \\ -2 \\ 1 \end{pmatrix} + t
+\[\begin{split} \mathbf{r} = \begin{pmatrix} 0 \\ -2 \\ 1 \end{pmatrix} + t
 \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix}, \end{split}\]</div>
 <p class="sd-card-text">so the direction vector is <span class="math notranslate nohighlight">\(\mathbf{d} = (1, 1, 1)\)</span>. Using equation <a class="reference internal" href="#equation-point-line-t-equation">(4.3)</a></p>
 <div class="math notranslate nohighlight">
@@ -516,7 +516,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 </div><div class="proof example admonition" id="line-line-distance-example">
 <p class="admonition-title"><span class="caption-number">Example 4.9 </span></p>
 <section class="example-content" id="proof-content">
-<p>Find the shortest distance between the two skew lines <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> defined by <span class="math notranslate nohighlight">\((t_1, 1 + 4t_1, 3 + 2 t_1)\)</span> and <span class="math notranslate nohighlight">\((1, 1 + 2t_2, 3 + 4t_2)\)</span>.</p>
+<p>Find the shortest distance between the two skew lines <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> defined by <span class="math notranslate nohighlight">\((t_1, 1 + 4t_1, 3 + 2 t_1)^\mathrm{T}\)</span> and <span class="math notranslate nohighlight">\((1, 1 + 2t_2, 3 + 4t_2)^\mathrm{T}\)</span> respectively.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
