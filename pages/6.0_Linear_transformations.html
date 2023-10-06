@@ -399,7 +399,7 @@ document.write(`
 </ul>
 <p>The result of applying a linear transformation to an object is known as the <strong>image</strong>.</p>
 </section>
-</div><p>For example, let <span class="math notranslate nohighlight">\(V = \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(W = \mathbb{R}^3\)</span> then <span class="math notranslate nohighlight">\(T : V \to W\)</span> defined by <span class="math notranslate nohighlight">\(T : (x, y)^\mathrm{T} \mapsto (x, y, 0)^\mathrm{T}\)</span> is a linear transformation. Let <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2)^\mathrm{T}, \mathbf{v} = (v_1, v_2)^\mathrm{T} \in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span> then</p>
+</div><p>For example, let <span class="math notranslate nohighlight">\(V = \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(W = \mathbb{R}^3\)</span> then <span class="math notranslate nohighlight">\(T : V \to W\)</span> defined by <span class="math notranslate nohighlight">\(T : (x, y)^\mathsf{T} \mapsto (x, y, 0)^\mathsf{T}\)</span> is a linear transformation. Let <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2)^\mathsf{T}, \mathbf{v} = (v_1, v_2)^\mathsf{T} \in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     T \left( \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} + \begin{pmatrix} v_1 \\ v_2 \end{pmatrix} \right)
@@ -422,7 +422,7 @@ document.write(`
 <p class="admonition-title"><span class="caption-number">Example 6.1 </span></p>
 <section class="example-content" id="proof-content">
 <p>Determine which of the following transformations are linear transformations</p>
-<p>(i)   <span class="math notranslate nohighlight">\(T: \mathbb{R}^3 \to \mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(T: (x, y, z)^\mathrm{T} \mapsto (x, y)^\mathrm{T}\)</span></p>
+<p>(i)   <span class="math notranslate nohighlight">\(T: \mathbb{R}^3 \to \mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(T: (x, y, z)^\mathsf{T} \mapsto (x, y)^\mathsf{T}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -440,9 +440,9 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
     &amp;= \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} + \alpha \begin{pmatrix}  v_1 \\ v_2 \end{pmatrix} \\
     &amp;= T\begin{pmatrix} u_1 \\ u_2 \\ u_3 \end{pmatrix} + \alpha T\begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">So <span class="math notranslate nohighlight">\(T: (x, y, z)^\mathrm{T} \mapsto (x, y)^\mathrm{T}\)</span> is a linear transformation.</p>
+<p class="sd-card-text">So <span class="math notranslate nohighlight">\(T: (x, y, z)^\mathsf{T} \mapsto (x, y)^\mathsf{T}\)</span> is a linear transformation.</p>
 </div>
-</details><p>(ii)   <span class="math notranslate nohighlight">\(T: \mathbb{R}^3 \to \mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(T: (x, y, z)^\mathrm{T} \mapsto (x + 3, y)^\mathrm{T}\)</span></p>
+</details><p>(ii)   <span class="math notranslate nohighlight">\(T: \mathbb{R}^3 \to \mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(T: (x, y, z)^\mathsf{T} \mapsto (x + 3, y)^\mathsf{T}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -462,7 +462,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
     = 
     \begin{pmatrix} u_1 + v_1 + 6 \\ u_2 + v_2 \end{pmatrix}
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Therefore <span class="math notranslate nohighlight">\(T(\mathbf{u} + \alpha \mathbf{v}) \neq T(\mathbf{u}) + \alpha T(\mathbf{v})\)</span> so <span class="math notranslate nohighlight">\(T: (x, y, z)^\mathrm{T} \mapsto (x + 3, y)^\mathrm{T}\)</span> is not a linear transformation.</p>
+<p class="sd-card-text">Therefore <span class="math notranslate nohighlight">\(T(\mathbf{u} + \alpha \mathbf{v}) \neq T(\mathbf{u}) + \alpha T(\mathbf{v})\)</span> so <span class="math notranslate nohighlight">\(T: (x, y, z)^\mathsf{T} \mapsto (x + 3, y)^\mathsf{T}\)</span> is not a linear transformation.</p>
 <p class="sd-card-text">Note that we could have shown this by a counterexample, e.g., let <span class="math notranslate nohighlight">\(\mathbf{u} = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}, \mathbf{v} = \begin{pmatrix} 2 \\ 0 \\ 0 \end{pmatrix} \in \mathbb{R}^3\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -528,7 +528,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 </div><div class="proof example admonition" id="transformation-matrix-example">
 <p class="admonition-title"><span class="caption-number">Example 6.2 </span></p>
 <section class="example-content" id="proof-content">
-<p>A linear transformation <span class="math notranslate nohighlight">\(T:\mathbb{R}^2 \to \mathbb{R}^2\)</span> is defined by <span class="math notranslate nohighlight">\(T: (x, y)^\mathrm{T} \mapsto (3x + y, x + 2y)^\mathrm{T}\)</span>. Calculate the transformation matrix and use it to calculate <span class="math notranslate nohighlight">\(T\begin{pmatrix} 1 \\ 1 \end{pmatrix}\)</span>.</p>
+<p>A linear transformation <span class="math notranslate nohighlight">\(T:\mathbb{R}^2 \to \mathbb{R}^2\)</span> is defined by <span class="math notranslate nohighlight">\(T: (x, y)^\mathsf{T} \mapsto (3x + y, x + 2y)^\mathsf{T}\)</span>. Calculate the transformation matrix and use it to calculate <span class="math notranslate nohighlight">\(T\begin{pmatrix} 1 \\ 1 \end{pmatrix}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -552,7 +552,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <p class="sd-card-text">so the transformation matrix is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} A = \begin{pmatrix} 3 &amp; 1 \\ 1 &amp; 2 \end{pmatrix}. \end{split}\]</div>
-<p class="sd-card-text">Applying the transformation matrix to <span class="math notranslate nohighlight">\((1, 1)^\mathrm{T}\)</span></p>
+<p class="sd-card-text">Applying the transformation matrix to <span class="math notranslate nohighlight">\((1, 1)^\mathsf{T}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} T\begin{pmatrix} 1 \\ 1 \end{pmatrix} = A \cdot \begin{pmatrix} 1 \\ 1 \end{pmatrix} =  
     \begin{pmatrix} 3 &amp; 1 \\ 1 &amp; 2 \end{pmatrix} 
@@ -564,7 +564,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <figure class="align-default" id="linear-transformation-figure">
 <a class="reference internal image-reference" href="../_images/linear_transformation.svg"><img alt="../_images/linear_transformation.svg" src="../_images/linear_transformation.svg" width="400" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.1 </span><span class="caption-text">The affect of applying a linear transformation <span class="math notranslate nohighlight">\(T: (x,y)^\mathrm{T} \mapsto (3x + y, x + 2y)^\mathrm{T}\)</span> to the vector <span class="math notranslate nohighlight">\((1,1)^\mathrm{T}\)</span>.</span><a class="headerlink" href="#linear-transformation-figure" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.1 </span><span class="caption-text">The affect of applying a linear transformation <span class="math notranslate nohighlight">\(T: (x,y)^\mathsf{T} \mapsto (3x + y, x + 2y)^\mathsf{T}\)</span> to the vector <span class="math notranslate nohighlight">\((1,1)^\mathsf{T}\)</span>.</span><a class="headerlink" href="#linear-transformation-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -669,7 +669,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 </div><div class="proof example admonition" id="inverse-transformation-example">
 <p class="admonition-title"><span class="caption-number">Example 6.4 </span></p>
 <section class="example-content" id="proof-content">
-<p>Determine the inverse of the transformation <span class="math notranslate nohighlight">\(T: \mathbb{R}^2 \to \mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(T(x, y)^\mathrm{T} \mapsto (3 x + y, x + 2 y)^\mathrm{T}\)</span> and calculate <span class="math notranslate nohighlight">\(T^{-1}\begin{pmatrix} 4 \\ 3 \end{pmatrix}\)</span>.</p>
+<p>Determine the inverse of the transformation <span class="math notranslate nohighlight">\(T: \mathbb{R}^2 \to \mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(T(x, y)^\mathsf{T} \mapsto (3 x + y, x + 2 y)^\mathsf{T}\)</span> and calculate <span class="math notranslate nohighlight">\(T^{-1}\begin{pmatrix} 4 \\ 3 \end{pmatrix}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
