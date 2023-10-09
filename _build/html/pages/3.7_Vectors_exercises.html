@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Vector products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">3.8. Vectors exercises</a></li>
 </ul>
@@ -385,37 +385,37 @@ document.write(`
     \mathbf{w} &amp;= \begin{pmatrix} 1 \\ 6 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 <p>Find:</p>
-<p>  (a)   <span class="math notranslate nohighlight">\(2 \mathbf{u} + \mathbf{w}\)</span></p>
-<p>  (b)   <span class="math notranslate nohighlight">\(\mathbf{w} - \mathbf{u}\)</span></p>
-<p>  (c)   a unit vector pointing in the same direction of <span class="math notranslate nohighlight">\(\mathbf{u}\)</span></p>
-<p>  (d)   a unit vector pointing in the opposite direction of <span class="math notranslate nohighlight">\(\mathbf{v}\)</span></p>
-<p>  (e)   a vector pointing in the same direction as <span class="math notranslate nohighlight">\(\mathbf{v}\)</span></p>
-<p>  (f)   <span class="math notranslate nohighlight">\(\overrightarrow{UV}\)</span></p>
-<p>  (g)   <span class="math notranslate nohighlight">\(\overrightarrow{UW}\)</span></p>
-<p>  (h)   <span class="math notranslate nohighlight">\(\mathbf{u} \cdot \mathbf{w}\)</span></p>
-<p>  (i)   the angle <span class="math notranslate nohighlight">\(\angle VUW\)</span></p>
-<p>  (j)   show that <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> is at right angles to <span class="math notranslate nohighlight">\(\mathbf{v}\)</span></p>
-<p>  (k)   <span class="math notranslate nohighlight">\(\mathbf{v} \times \mathbf{w}\)</span></p>
+<p>(a)   <span class="math notranslate nohighlight">\(2 \mathbf{u} + \mathbf{w}\)</span></p>
+<p>(b)   <span class="math notranslate nohighlight">\(\mathbf{w} - \mathbf{u}\)</span></p>
+<p>(c)   a unit vector pointing in the same direction of <span class="math notranslate nohighlight">\(\mathbf{u}\)</span></p>
+<p>(d)   a unit vector pointing in the opposite direction of <span class="math notranslate nohighlight">\(\mathbf{v}\)</span></p>
+<p>(e)   a vector pointing in the same direction as <span class="math notranslate nohighlight">\(\mathbf{v}\)</span></p>
+<p>(f)   <span class="math notranslate nohighlight">\(\overrightarrow{UV}\)</span></p>
+<p>(g)   <span class="math notranslate nohighlight">\(\overrightarrow{UW}\)</span></p>
+<p>(h)   <span class="math notranslate nohighlight">\(\mathbf{u} \cdot \mathbf{w}\)</span></p>
+<p>(i)   the angle <span class="math notranslate nohighlight">\(\angle VUW\)</span></p>
+<p>(j)   show that <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> is at right angles to <span class="math notranslate nohighlight">\(\mathbf{v}\)</span></p>
+<p>(k)   <span class="math notranslate nohighlight">\(\mathbf{v} \times \mathbf{w}\)</span></p>
 </section>
 </div>
 <div class="solution dropdown admonition" id="pages/3.7_Vectors_exercises-solution-1">
 
 <p class="admonition-title">Solution to<a class="reference internal" href="#vectors-ex-arithmetic"> Exercise 3.1</a></p>
 <section id="solution-content">
-<p>  (a)   <span class="math notranslate nohighlight">\(2\mathbf{u} + \mathbf{w} = 2\begin{pmatrix} 2 \\ 3 \end{pmatrix} + \begin{pmatrix} 1 \\ 6 \end{pmatrix} 
+<p>(a)   <span class="math notranslate nohighlight">\(2\mathbf{u} + \mathbf{w} = 2\begin{pmatrix} 2 \\ 3 \end{pmatrix} + \begin{pmatrix} 1 \\ 6 \end{pmatrix} 
 = \begin{pmatrix} 4 \\ 6 \end{pmatrix} + \begin{pmatrix} 1 \\ 6 \end{pmatrix} 
 = \begin{pmatrix} 5 \\ 12 \end{pmatrix}\)</span>;</p>
-<p>  (b)   <span class="math notranslate nohighlight">\(\mathbf{w} - \mathbf{u} = \begin{pmatrix} 1 \\ 6 \end{pmatrix} - \begin{pmatrix} 2 \\ 3 \end{pmatrix} 
+<p>(b)   <span class="math notranslate nohighlight">\(\mathbf{w} - \mathbf{u} = \begin{pmatrix} 1 \\ 6 \end{pmatrix} - \begin{pmatrix} 2 \\ 3 \end{pmatrix} 
 = \begin{pmatrix} 1 - 2 \\ 6 - 3 \end{pmatrix} = \begin{pmatrix} -1 \\ 3 \end{pmatrix}\)</span>;</p>
-<p>  (c)   <span class="math notranslate nohighlight">\(\hat{\mathbf{u}} = \dfrac{\mathbf{u}}{|\mathbf{u}|} = \dfrac{1}{\sqrt{13}} \begin{pmatrix} 2 \\ 3 \end{pmatrix} 
+<p>(c)   <span class="math notranslate nohighlight">\(\hat{\mathbf{u}} = \dfrac{\mathbf{u}}{|\mathbf{u}|} = \dfrac{1}{\sqrt{13}} \begin{pmatrix} 2 \\ 3 \end{pmatrix} 
 = \begin{pmatrix} \frac{2}{\sqrt{13}} \\ \frac{3}{\sqrt{13}} \end{pmatrix}\)</span>;</p>
-<p>  (d)   <span class="math notranslate nohighlight">\(-\hat{\mathbf{v}} = -\dfrac{\mathbf{v}}{|\mathbf{v}|} = -\dfrac{1}{\sqrt{13}} \begin{pmatrix} 3 \\ -2 \end{pmatrix} = \begin{pmatrix} -\frac{3}{\sqrt{13}} \\ \frac{2}{\sqrt{13}} \end{pmatrix}\)</span>;</p>
-<p>  (e)   <span class="math notranslate nohighlight">\(\dfrac{1}{2}\mathbf{v} = \dfrac{1}{2} \begin{pmatrix} 3 \\ -2 \end{pmatrix} 
+<p>(d)   <span class="math notranslate nohighlight">\(-\hat{\mathbf{v}} = -\dfrac{\mathbf{v}}{|\mathbf{v}|} = -\dfrac{1}{\sqrt{13}} \begin{pmatrix} 3 \\ -2 \end{pmatrix} = \begin{pmatrix} -\frac{3}{\sqrt{13}} \\ \frac{2}{\sqrt{13}} \end{pmatrix}\)</span>;</p>
+<p>(e)   <span class="math notranslate nohighlight">\(\dfrac{1}{2}\mathbf{v} = \dfrac{1}{2} \begin{pmatrix} 3 \\ -2 \end{pmatrix} 
 = \begin{pmatrix} 3 / 2 \\ -2 / 2 \end{pmatrix}\)</span>;</p>
-<p>  (f)   <span class="math notranslate nohighlight">\(\overrightarrow{UV} = \mathbf{v} - \mathbf{u} = \begin{pmatrix} 3 \\ -2 \end{pmatrix} - \begin{pmatrix} 2 \\ 3 \end{pmatrix}= \begin{pmatrix} 1 \\ -5 \end{pmatrix}\)</span>;</p>
-<p>  (g)   <span class="math notranslate nohighlight">\(\overrightarrow{UW} = \mathbf{w} - \mathbf{u} = \begin{pmatrix} 1 \\ 6 \end{pmatrix} - \begin{pmatrix} 2 \\ 3 \end{pmatrix} = \begin{pmatrix} -1 \\ 3 \end{pmatrix}\)</span>;</p>
-<p>  (h)   <span class="math notranslate nohighlight">\(\mathbf{u} \cdot \mathbf{w} = \begin{pmatrix} 2 \\ 3 \end{pmatrix} \cdot \begin{pmatrix} 1 \\ 6 \end{pmatrix} = 2 \times 1 + 3 \times 6 = 20\)</span>;</p>
-<p>  (i)   Using equation <a class="reference internal" href="3.3_Vector_products.html#equation-geometric-dot-product-equation">(3.4)</a></p>
+<p>(f)   <span class="math notranslate nohighlight">\(\overrightarrow{UV} = \mathbf{v} - \mathbf{u} = \begin{pmatrix} 3 \\ -2 \end{pmatrix} - \begin{pmatrix} 2 \\ 3 \end{pmatrix}= \begin{pmatrix} 1 \\ -5 \end{pmatrix}\)</span>;</p>
+<p>(g)   <span class="math notranslate nohighlight">\(\overrightarrow{UW} = \mathbf{w} - \mathbf{u} = \begin{pmatrix} 1 \\ 6 \end{pmatrix} - \begin{pmatrix} 2 \\ 3 \end{pmatrix} = \begin{pmatrix} -1 \\ 3 \end{pmatrix}\)</span>;</p>
+<p>(h)   <span class="math notranslate nohighlight">\(\mathbf{u} \cdot \mathbf{w} = \begin{pmatrix} 2 \\ 3 \end{pmatrix} \cdot \begin{pmatrix} 1 \\ 6 \end{pmatrix} = 2 \times 1 + 3 \times 6 = 20\)</span>;</p>
+<p>(i)   Using equation <a class="reference internal" href="3.3_Vector_products.html#equation-geometric-dot-product-equation">(3.4)</a></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \overrightarrow{UV} \cdot \overrightarrow{UW} &amp;= |\overrightarrow{UV}||\overrightarrow{UW}| \cos(\theta) \\
@@ -425,8 +425,8 @@ document.write(`
     -16 &amp;= \sqrt{26} \sqrt{10} \cos(\theta) \\
     \theta &amp;= \cos^{-1} \left( \frac{-16}{\sqrt{260}} \right) \approx 3.0172
 \end{align*} \end{split}\]</div>
-<p>  (j)   <span class="math notranslate nohighlight">\(\mathbf{u} \cdot \mathbf{v} = \begin{pmatrix} 2 \\ 3 \end{pmatrix} \cdot \begin{pmatrix} 3 \\ -2 \end{pmatrix} = 2 \times 3 + 3 \times (-2) = 0\)</span>;</p>
-<p>  (k)   <span class="math notranslate nohighlight">\(\mathbf{v} \times \mathbf{w} = \begin{vmatrix} \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\ 3 &amp; -2 &amp; 0 \\ 1 &amp; 6 &amp; 0 \end{vmatrix} = 0\mathbf{i} - 0 \mathbf{j} + 20 \mathbf{k} = \begin{pmatrix} 0 \\ 0 \\ 20 \end{pmatrix}\)</span>.</p>
+<p>(j)   <span class="math notranslate nohighlight">\(\mathbf{u} \cdot \mathbf{v} = \begin{pmatrix} 2 \\ 3 \end{pmatrix} \cdot \begin{pmatrix} 3 \\ -2 \end{pmatrix} = 2 \times 3 + 3 \times (-2) = 0\)</span>;</p>
+<p>(k)   <span class="math notranslate nohighlight">\(\mathbf{v} \times \mathbf{w} = \begin{vmatrix} \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\ 3 &amp; -2 &amp; 0 \\ 1 &amp; 6 &amp; 0 \end{vmatrix} = 0\mathbf{i} - 0 \mathbf{j} + 20 \mathbf{k} = \begin{pmatrix} 0 \\ 0 \\ 20 \end{pmatrix}\)</span>.</p>
 </section>
 </div>
 <div class="exercise admonition" id="vectors-ex-linear-combination">
@@ -434,16 +434,16 @@ document.write(`
 <p class="admonition-title"><span class="caption-number">Exercise 3.2 </span></p>
 <section id="exercise-content">
 <p>Write <span class="math notranslate nohighlight">\(\mathbf{u} = (2,7,1)\)</span> as:</p>
-<p>  (a)   a linear combination of <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}\)</span>, <span class="math notranslate nohighlight">\(\begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}\)</span>.</p>
-<p>  (b)   a linear combination of vectors <span class="math notranslate nohighlight">\(\mathbf{f}_1 = \begin{pmatrix} 1 \\ -1 \\ 0 \end{pmatrix}, \mathbf{f}_2 = \begin{pmatrix} 0 \\ 2 \\ 0 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{f}_3 = \begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix}\)</span>.</p>
+<p>(a)   a linear combination of <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}\)</span>, <span class="math notranslate nohighlight">\(\begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}\)</span>.</p>
+<p>(b)   a linear combination of vectors <span class="math notranslate nohighlight">\(\mathbf{f}_1 = \begin{pmatrix} 1 \\ -1 \\ 0 \end{pmatrix}, \mathbf{f}_2 = \begin{pmatrix} 0 \\ 2 \\ 0 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{f}_3 = \begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix}\)</span>.</p>
 </section>
 </div>
 <div class="solution dropdown admonition" id="pages/3.7_Vectors_exercises-solution-3">
 
 <p class="admonition-title">Solution to<a class="reference internal" href="#vectors-ex-linear-combination"> Exercise 3.2</a></p>
 <section id="solution-content">
-<p>  (a)   <span class="math notranslate nohighlight">\(\mathbf{u} = 2 \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} + 7 \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix} + \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} = 2 \mathbf{i} + 7 \mathbf{j} + \mathbf{k}\)</span>;</p>
-<p>  (b)</p>
+<p>(a)   <span class="math notranslate nohighlight">\(\mathbf{u} = 2 \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} + 7 \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix} + \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} = 2 \mathbf{i} + 7 \mathbf{j} + \mathbf{k}\)</span>;</p>
+<p>(b)</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     &amp; \left( \begin{array}{ccc|c}
@@ -481,28 +481,30 @@ document.write(`
 <p class="admonition-title"><span class="caption-number">Exercise 3.3 </span></p>
 <section id="exercise-content">
 <p>Find <span class="math notranslate nohighlight">\(k\)</span> such that the vectors <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> are perpendicular:</p>
-<p>  (a)   <span class="math notranslate nohighlight">\(\mathbf{u} = (1, k, -2)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v} = (2, -5, 4)\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
-<p>  (b)   <span class="math notranslate nohighlight">\(\mathbf{u} =(1, 0, k+2, -1, 2)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v} = (1, k, -2, 1, 2)\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^5\)</span>.</p>
+<p>(a)   <span class="math notranslate nohighlight">\(\mathbf{u} = \begin{pmatrix} 1 \\ k \\ -2 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v} = \begin{pmatrix} 2 \\ -5 \\ 4 \end{pmatrix}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
+<p>(b)   <span class="math notranslate nohighlight">\(\mathbf{u} = \begin{pmatrix} 1 \\ 0 \\ k + 2 \\ -1 \\ 2 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v} = \begin{pmatrix} 1 \\ k \\ -2 \\ 1 \\ 2 \end{pmatrix}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^5\)</span>.</p>
 </section>
 </div>
 <div class="solution dropdown admonition" id="pages/3.7_Vectors_exercises-solution-5">
 
 <p class="admonition-title">Solution to<a class="reference internal" href="#vectors-ex-perpendicular"> Exercise 3.3</a></p>
 <section id="solution-content">
-<p>  (a)   If <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> are perpendicular then <span class="math notranslate nohighlight">\(\mathbf{u} \cdot \mathbf{v} = 0\)</span>.</p>
+<p>(a)   If <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> are perpendicular then <span class="math notranslate nohighlight">\(\mathbf{u} \cdot \mathbf{v} = 0\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \mathbf{u} \cdot \mathbf{v} &amp;= 0 \\
-    (1, k, -2) \cdot (2, -5, 4) &amp;= 0 \\
+    \begin{pmatrix} 1 \\ k \\ -2 \end{pmatrix} \cdot
+    \begin{pmatrix} 2 \\ -5 \\ 4 \end{pmatrix} &amp;= 0 \\
     2 - 5 k - 8 &amp;= 0 \\
     -5k &amp;= 6 \\
     \therefore k &amp;= -\frac{6}{5}.
 \end{align*} \end{split}\]</div>
-<p>  (b)  </p>
+<p>(b)  </p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \mathbf{u} \cdot \mathbf{v} &amp;= 0 \\
-    (1, 0, k+2, -1, 2) \cdot (1, k, -2, 1, 2) &amp;= 0 \\
+    \begin{pmatrix} 1 \\ 0 \\ k + 2 \\ -1 \\ 2 \end{pmatrix} \cdot 
+    \begin{pmatrix} 1 \\ k \\ -2 \\ 1 \\ 2 \end{pmatrix} &amp;= 0 \\
     1 - 2k - 2 - 1 + 2 &amp;= 0 \\
     -2k &amp;= 0 \\
     \therefore k &amp;= 0.

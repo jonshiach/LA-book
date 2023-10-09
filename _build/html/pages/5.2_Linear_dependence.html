@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Vector products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
@@ -379,8 +379,8 @@ document.write(`
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(v_1, v_2, \ldots, v_n \in V\)</span> and consider the equation</p>
 <div class="math notranslate nohighlight" id="equation-linear-dependence-equation">
-<span class="eqno">(5.2)<a class="headerlink" href="#equation-linear-dependence-equation" title="Permalink to this equation">#</a></span>\[ \alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n v_n = \mathbf{0}, \]</div>
-<p>where <span class="math notranslate nohighlight">\(\alpha \in F\)</span>. The vectors <span class="math notranslate nohighlight">\(v_1, v_2, \ldots, v_n \in V\)</span> are said to be <strong>linearly independent over <span class="math notranslate nohighlight">\(F\)</span></strong> if the only solution to the above equation is when all of the <span class="math notranslate nohighlight">\(\alpha_i\)</span> values are zero (this solution is called the trivial solution). If the above equation is satisfied where <span class="math notranslate nohighlight">\(\alpha_i \neq 0\)</span> for <span class="math notranslate nohighlight">\(1 \leq i \leq n\)</span>, then the vectors <span class="math notranslate nohighlight">\(v_1, v_2, \ldots, v_n \in V\)</span> are said to be <strong>linearly dependent over <span class="math notranslate nohighlight">\(F\)</span></strong>.</p>
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-linear-dependence-equation" title="Permalink to this equation">#</a></span>\[ \alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n v_n = 0, \]</div>
+<p>where <span class="math notranslate nohighlight">\(\alpha \in F\)</span>. The objects <span class="math notranslate nohighlight">\(v_1, v_2, \ldots, v_n \in V\)</span> are said to be <strong>linearly independent over <span class="math notranslate nohighlight">\(F\)</span></strong> if the only solution to the above equation is when all of the <span class="math notranslate nohighlight">\(\alpha_i\)</span> values are zero (this solution is called the trivial solution). If the above equation is satisfied where <span class="math notranslate nohighlight">\(\alpha_i \neq 0\)</span> for <span class="math notranslate nohighlight">\(1 \leq i \leq n\)</span>, then <span class="math notranslate nohighlight">\(v_1, v_2, \ldots, v_n \in V\)</span> are said to be <strong>linearly dependent over <span class="math notranslate nohighlight">\(F\)</span></strong>.</p>
 </section>
 </div><p>Another way to think about linear independence is that a set of vectors is linearly independent if none of the vectors in the set can be represented as a linear combination of the other vectors in the same set. For example, are the matrices</p>
 <div class="math notranslate nohighlight">
@@ -397,7 +397,7 @@ document.write(`
 <p class="admonition-title"><span class="caption-number">Example 5.5 </span></p>
 <section class="example-content" id="proof-content">
 <p>Determine whether the following are linearly dependent</p>
-<p>  (i)   <span class="math notranslate nohighlight">\((1, 0, 2), (2, 1, 3), (-3, -4, -2) \in \mathbb{R}^3\)</span> over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span></p>
+<p>(i)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix}, \begin{pmatrix} 2 \\ 1 \\ 3 \end{pmatrix}, \begin{pmatrix} -3 \\ -4 \\ -2 \end{pmatrix} \in \mathbb{R}^3\)</span> over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -420,8 +420,9 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
     \alpha_2 - 4\alpha_3 &amp;= 0, \\
     2\alpha_3 + 3\alpha_2 - 2\alpha_3 &amp;= 0.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Solving this homogeneous system using Gaussian elimination
-$<span class="math notranslate nohighlight">\( \begin{align*}
+<p class="sd-card-text">Solving this homogeneous system using Gaussian elimination</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
     &amp; \left( \begin{array}{ccc|c}
         1 &amp; 2 &amp; -3 &amp; 0 \\
         0 &amp; 1 &amp; -4 &amp; 0 \\
@@ -448,7 +449,7 @@ $<span class="math notranslate nohighlight">\( \begin{align*}
         0 &amp; 1 &amp; -4 &amp; 0 \\
         0 &amp; 0 &amp; 0 &amp; 0
     \end{array} \right)
-\end{align*} \)</span>$</p>
+\end{align*} \end{split}\]</div>
 <p class="sd-card-text">Here <span class="math notranslate nohighlight">\(\alpha_3\)</span> is a free variable, so let <span class="math notranslate nohighlight">\(\alpha_3 = r\)</span> then <span class="math notranslate nohighlight">\(\alpha_1 = -5r\)</span> and <span class="math notranslate nohighlight">\(\alpha_2 = 4r\)</span>. There vectors are therefore linearly dependent, i.e., if <span class="math notranslate nohighlight">\(r = 1\)</span>, then <span class="math notranslate nohighlight">\(\alpha_1 = -5\)</span> and <span class="math notranslate nohighlight">\(\alpha_2 = 4\)</span>, i.e.,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -458,7 +459,7 @@ $<span class="math notranslate nohighlight">\( \begin{align*}
     \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 </div>
-</details><p>  (ii)   <span class="math notranslate nohighlight">\(p(x) = x^2 + x + 1\)</span>, <span class="math notranslate nohighlight">\(r(x) = x - 1\)</span> and <span class="math notranslate nohighlight">\(s(x) = x^2 - 1 \in P_(\mathbb{R})\)</span> over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span></p>
+</details><p>(ii)   <span class="math notranslate nohighlight">\(u = x^2 + x + 1\)</span>, <span class="math notranslate nohighlight">\(v = x - 1\)</span> and <span class="math notranslate nohighlight">\(w = x^2 - 1 \in P(\mathbb{R})\)</span> over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -469,13 +470,14 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <p class="sd-card-text">Let <span class="math notranslate nohighlight">\(\alpha_1, \alpha_2, \alpha_3 \in \mathbb{R}\)</span> then we need to ascertain when</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align*}
-    \alpha_1 p(x) + \alpha_2 r(x) + \alpha_3 s(x) = 0.
+    \alpha_1 u + \alpha_2 v + \alpha_3 w = 0.
 \end{align*} \]</div>
-<p class="sd-card-text">Now
-$<span class="math notranslate nohighlight">\( \begin{align*}
+<p class="sd-card-text">Now</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
     \alpha_1 (x^2 + x + 1) + \alpha_2 (x - 1) + \alpha_3 (x^2 - 1) &amp;= 0 \\
     (\alpha_1 + \alpha_3)x^2 + (\alpha_1 + \alpha_2)x + (\alpha_1 - \alpha_2 - \alpha_3)x^0 &amp;= 0.
-\end{align*} \)</span>$</p>
+\end{align*} \end{split}\]</div>
 <p class="sd-card-text">For a polynomial to be equal to zero, the coefficients of <span class="math notranslate nohighlight">\(x^i\)</span> must all be equal to zero, therefore</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -520,7 +522,7 @@ $<span class="math notranslate nohighlight">\( \begin{align*}
         0 &amp; 0 &amp; 1 &amp; 0
     \end{array} \right)
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Therefore the only solution is <span class="math notranslate nohighlight">\(\alpha_1 = \alpha_2 = \alpha_3 = 0\)</span> so the polynomials are linearly independent.</p>
+<p class="sd-card-text">Therefore the only solution is <span class="math notranslate nohighlight">\(\alpha_1 = \alpha_2 = \alpha_3 = 0\)</span> so the polynomials <span class="math notranslate nohighlight">\(u\)</span>, <span class="math notranslate nohighlight">\(v\)</span> and <span class="math notranslate nohighlight">\(w\)</span> are linearly independent.</p>
 </div>
 </details></section>
 </div></section>

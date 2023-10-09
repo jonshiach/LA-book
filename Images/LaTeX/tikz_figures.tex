@@ -49,6 +49,22 @@
 %     \draw [latex'-latex'] ($(a)+(\x:2)+(\y:\a2)+(0:0.2)$) -- node [right] {$a_3$} ++(\z:\a3);
 % \end{tikzpicture}
 
+% Vector example
+\begin{tikzpicture}
+    \draw [help lines] (0,0) grid (6, 4);
+    \draw [-stealth'] (0,0) -- (0:6.25) node at (0:6.5) {$x$};
+    \draw [-stealth'] (90:0) -- (90:4.25) node at (90:4.5) {$y$};
+    \node [point,label=below left:$A$] (A) at (1,1) {};
+    \node [point,label=above right:$B$] (B) at (5,3) {};
+    \draw [vector] (A) to (B);
+    \foreach \i in {0,...,6} {
+        \node [below] at (\i,0) {$\i$};
+    }
+    \foreach \i in {0,...,4} {
+        \node [left] at (0,\i) {$\i$};
+    }
+\end{tikzpicture}
+
 % % Position vector
 % \begin{tikzpicture}
 %     \tikzmath{\x=330;\y=30;\z=90;\al=2;\a1=2;\a2=2.5;\a3=1;}
@@ -112,16 +128,16 @@
 %     \node at (22.5:0.67) {$\theta$};
 % \end{tikzpicture}
 
-% Cross product
-\begin{tikzpicture}
-    \draw (0, 0) -- ++(330:3) -- ++(30:3) -- ++(150:3) -- cycle;
-    \draw [vector] (0, 0) -- node [below left] {$\mathbf{a}$} ++(-30:3);
-    \draw [vector, red] (0, 0) -- node [above left] {$\mathbf{b}$} ++(30:3);
-    \draw [vector, green!75!black] (0, 0) -- node [left] {$\mathbf{a}\times \mathbf{b}$} ++(90:2);
-    \draw [vector, black] (0, 0) -- node [left] {$\mathbf{b}\times \mathbf{a}$} ++(270:2);
-    \draw (90:0.25) -- ++(330:0.25) -- ++(270:0.5) -- ++(150:0.25);
-    \draw (30:0.25) -- ++(90:0.25) -- ++(210:0.25);
-\end{tikzpicture}
+% % Cross product
+% \begin{tikzpicture}
+%     \draw (0, 0) -- ++(330:3) -- ++(30:3) -- ++(150:3) -- cycle;
+%     \draw [vector] (0, 0) -- node [below left] {$\mathbf{a}$} ++(-30:3);
+%     \draw [vector, red] (0, 0) -- node [above left] {$\mathbf{b}$} ++(30:3);
+%     \draw [vector, green!75!black] (0, 0) -- node [left] {$\mathbf{a}\times \mathbf{b}$} ++(90:2);
+%     \draw [vector, black] (0, 0) -- node [left] {$\mathbf{b}\times \mathbf{a}$} ++(270:2);
+%     \draw (90:0.25) -- ++(330:0.25) -- ++(270:0.5) -- ++(150:0.25);
+%     \draw (30:0.25) -- ++(90:0.25) -- ++(210:0.25);
+% \end{tikzpicture}
 
 % Basis vectors
 % \begin{tikzpicture}

@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Vector products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
@@ -434,7 +434,7 @@ document.write(`
 <p class="admonition-title"><span class="caption-number">Example 2.1 </span></p>
 <section class="example-content" id="proof-content">
 <p>Solve the following systems of linear equations using the inverse of the coefficient matrix:</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
+<p>(i)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
         x_1 - 2x_2  \!\!\!\! &amp;= 11, \\
         2x_1 + 4x_2  \!\!\!\! &amp;= -18.
     \end{array}\)</span></p>
@@ -450,7 +450,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 \[\begin{split} \begin{align*}
     \det\begin{pmatrix} 1 &amp; -2 \\ 2 &amp; 4 \end{pmatrix} &amp;= 8, \\
     \operatorname{adj}\begin{pmatrix} 1 &amp; -2 \\ 2 &amp; 4 \end{pmatrix} &amp;= 
-    \begin{pmatrix} 4 &amp; -2 \\ 2 &amp; 1 \end{pmatrix}^T = 
+    \begin{pmatrix} 4 &amp; -2 \\ 2 &amp; 1 \end{pmatrix}^\mathsf{T} = 
     \begin{pmatrix} 4 &amp; 2 \\ -2 &amp; 1 \end{pmatrix},\\
     \therefore A^{-1} &amp;= \frac{1}{8} \begin{pmatrix} 4 &amp; 2 \\ -2 &amp; 1 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
@@ -466,7 +466,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split}A\mathbf{x} = \begin{pmatrix} 1 &amp; -2 \\ 2 &amp; 4 \end{pmatrix} \begin{pmatrix} 1 \\ -5 \end{pmatrix} = \begin{pmatrix}  11 \\  -18    \end{pmatrix}  = \mathbf{b} \qquad \checkmark\end{split}\]</div>
 </div>
-</details><p>  (ii)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
+</details><p>(ii)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
         x_1 - 2x_2 + 3x_3 \!\!\!\! &amp;= -7, \\
         2x_2 - 4x_3  \!\!\!\! &amp;= 8, \\
         3x_1 + x_2 - 4x_3  \!\!\!\! &amp;= 7.
@@ -485,7 +485,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
     \begin{vmatrix} 2 &amp; -4 \\ 1 &amp; -4 \end{vmatrix} + 
     3 \begin{vmatrix} -2 &amp; 3 \\ 2 &amp; -4 \end{vmatrix} = -4 + 3(2) = 2, \\
     \operatorname{adj} \begin{pmatrix} 1 &amp; -2 &amp; 3 \\ 0 &amp; 2 &amp; -4 \\ 3 &amp; 1 &amp; -4 \end{pmatrix}
-    &amp;= \begin{pmatrix} -4 &amp; -12 &amp; -6 \\ -5 &amp; -13 &amp; -7 \\ 2 &amp; 4 &amp; 2 \end{pmatrix}^T 
+    &amp;= \begin{pmatrix} -4 &amp; -12 &amp; -6 \\ -5 &amp; -13 &amp; -7 \\ 2 &amp; 4 &amp; 2 \end{pmatrix}^\mathsf{T} 
     = \begin{pmatrix} -4 &amp; -5 &amp; 2 \\ -12 &amp; -13 &amp; 4 \\ -6 &amp; -7 &amp; 2 \end{pmatrix}, \\
     \therefore A^{-1} &amp;= \frac{1}{2}
     \begin{pmatrix}

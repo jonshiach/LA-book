@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Vector products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
@@ -404,30 +404,29 @@ document.write(`
 <span class="eqno">(5.1)<a class="headerlink" href="#equation-subspace-condition-equation" title="Permalink to this equation">#</a></span>\[ u + \alpha w \in W,\]</div>
 <p>where <span class="math notranslate nohighlight">\(u, w \in W\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span>.</p>
 </section>
-</div><p>To demonstrate the use of <a class="reference internal" href="#subspace-condition-theorem">the subspace condition</a> let’s check whether <span class="math notranslate nohighlight">\(W = \{(x, y, z) : x + 2y - 3z = 0\}\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. First we need to verify that <span class="math notranslate nohighlight">\(W\)</span> is non-empty. To do this we simply need to find an element of <span class="math notranslate nohighlight">\(W\)</span>, e.g., <span class="math notranslate nohighlight">\((0, 0, 0) \in W\)</span> so <span class="math notranslate nohighlight">\(W\)</span> is non-empty.</p>
-<p>Next we need to take two arbitrary vectors in <span class="math notranslate nohighlight">\(W\)</span>, <span class="math notranslate nohighlight">\(u = (x_1, y_1, z_1), v = (x_2, y_2, z_2) \in W\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
+</div><p>To demonstrate the use of <a class="reference internal" href="#subspace-condition-theorem">the subspace condition</a> let’s check whether <span class="math notranslate nohighlight">\(W = \{(x, y, z)^\mathsf{T} : x + 2y - 3z = 0\}\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. First we need to verify that <span class="math notranslate nohighlight">\(W\)</span> is non-empty. To do this we simply need to find an element of <span class="math notranslate nohighlight">\(W\)</span>, e.g., <span class="math notranslate nohighlight">\(\mathbf{0} \in W\)</span> so <span class="math notranslate nohighlight">\(W\)</span> is non-empty.</p>
+<p>Next we need to take two arbitrary vectors in <span class="math notranslate nohighlight">\(W\)</span>, <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2, u_3)^\mathsf{T}, \mathbf{v} = (v_1, v_2, v_3)^\mathsf{T} \in W\)</span> say and a scalar <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} u + \alpha v =
-    \begin{pmatrix} x_1 \\ y_1 \\ z_1 \end{pmatrix} + \alpha 
-    \begin{pmatrix} x_2 \\ y_2 \\ z_2 \end{pmatrix} 
-    = \begin{pmatrix} x_1 + \alpha x_2 \\ y_1 + \alpha y_2 \\ z_1 + \alpha z_2 \end{pmatrix}. \end{split}\]</div>
-<p>We now need to show that <span class="math notranslate nohighlight">\((x_1 + \alpha x_2, y_1 + \alpha y_2, z_1 + \alpha z_2) = 0\)</span> (i.e., it is in <span class="math notranslate nohighlight">\(W\)</span>). To do this let <span class="math notranslate nohighlight">\(x = x_1 + \alpha x_2\)</span>, <span class="math notranslate nohighlight">\(y = y_1 + \alpha y_2\)</span> and <span class="math notranslate nohighlight">\(z = z_1 + \alpha z_2\)</span> then</p>
+\[\begin{split} \mathbf{u} + \alpha \mathbf{v} =
+    \begin{pmatrix} u_1 \\ u_2 \\ u_3 \end{pmatrix} + \alpha 
+    \begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix} 
+    = \begin{pmatrix} u_1 + \alpha v_1 \\ u_2 + \alpha v_2 \\ u_3 + \alpha v_3 \end{pmatrix}. \end{split}\]</div>
+<p>We now need to show that <span class="math notranslate nohighlight">\((u_1 + \alpha v_1, u_2 + \alpha v_2, u_3 + \alpha v_3)^\mathsf{T}  \in W\)</span>, i.e., that <span class="math notranslate nohighlight">\(x + 2y - 3z = 0\)</span>, so since <span class="math notranslate nohighlight">\(x = u_1 + \alpha v_1\)</span>, <span class="math notranslate nohighlight">\(y = u_2 + \alpha v_2\)</span> and <span class="math notranslate nohighlight">\(z = u_3 + \alpha v_3\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    x + 2y - 3z &amp;= (x_1 + \alpha x_2) + 2(y_1 + \alpha y_2) - 3(z_1 + \alpha z_2) \\
-    &amp;= (x_1 + 2y_1 - 3z_1) + \alpha (x_2 + 2y_2 - 3z_2) \\
+    x + 2y - 3z &amp;= (u_1 + \alpha v_1) + 2(u_2 + \alpha v_2) - 3(u_3 + \alpha v_3) \\
+    &amp;= (u_1 + 2u_2 - 3u_3) + \alpha (v_1 + 2v_2 - 3v_3) \\
     &amp;= 0 + \alpha \cdot 0 = 0,
 \end{align*} \end{split}\]</div>
-<p>therefore <span class="math notranslate nohighlight">\(u + \alpha v \in W\)</span> and <span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span></p>
-<p>By a proof similar to the above, you can show that any plane of the form <span class="math notranslate nohighlight">\(\{(x, y, z) : ax + by + cz = d\}\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> when <span class="math notranslate nohighlight">\(d=0\)</span> and not a subspace otherwise.</p>
+<p>therefore <span class="math notranslate nohighlight">\(\mathbf{u} + \alpha \mathbf{v} \in W\)</span> and <span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span></p>
 <div class="proof example admonition" id="subspace-example">
 <p class="admonition-title"><span class="caption-number">Example 5.3 </span></p>
 <section class="example-content" id="proof-content">
-<p>  (i)   Let <span class="math notranslate nohighlight">\(W\)</span> be the subset <span class="math notranslate nohighlight">\(M_{2\times 2}\)</span> given by</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
+<p>(i)   Let <span class="math notranslate nohighlight">\(W\)</span> be the subset <span class="math notranslate nohighlight">\(M_{2\times 2}\)</span> given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
     W = \left\{ \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} : a + b + c + d = 0 \right\}.
-\end{align*}\]</div>
+\end{align*} \end{split}\]</div>
 <p>Show that <span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(M_{2\times 2}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -436,24 +435,27 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Clearly <span class="math notranslate nohighlight">\(\mathbf{0}_{2\times 2} \in W\)</span> so <span class="math notranslate nohighlight">\(W\)</span> is non-empty. Let <span class="math notranslate nohighlight">\(U = \begin{pmatrix} x_1 &amp; y_1 \\ z_1 &amp; w_1 \end{pmatrix}, V = \begin{pmatrix} x_2 &amp; y_2 \\ z_2 &amp; w_2 \end{pmatrix} \in W\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>. Then</p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
+<p class="sd-card-text">Clearly <span class="math notranslate nohighlight">\(\mathbf{0}_{2\times 2} \in W\)</span> so <span class="math notranslate nohighlight">\(W\)</span> is non-empty. Let <span class="math notranslate nohighlight">\(U, V \in W\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
     U + \alpha V = 
+    \begin{pmatrix} u_{11} &amp; u_{12} \\ u_{21} &amp; u_{22} \end{pmatrix} + \alpha
+    \begin{pmatrix} v_{11} &amp; v_{!2} \\ v_{21} &amp; v_{22} \end{pmatrix} = 
     \begin{pmatrix} 
-        x_1 + \alpha x_2 &amp; y_1 + \alpha y_2 \\ 
-        z_1 + \alpha z_2 &amp; w_1 + \alpha w_2 \end{pmatrix}.
-\end{align*}\]</div>
+        u_{11} + \alpha v_{11} &amp; u_{12} + \alpha v_{12} \\ 
+        u_{21} + \alpha v_{21} &amp; u_{22} + \alpha v_{22} 
+    \end{pmatrix}.
+\end{align*} \end{split}\]</div>
 <p class="sd-card-text">Checking that <span class="math notranslate nohighlight">\(U + \alpha V \in W\)</span></p>
-<div class="amsmath math notranslate nohighlight">
-\[\begin{align*}
-    a + b + c + d &amp;= (x_1 + \alpha x_2) + (y_1 + \alpha y_2) + (z_1 + \alpha z_2) + (w_1 + \alpha w_2) \\ 
-    &amp; = (x_1 + y_1 + z_1 + w_1) + \alpha (x_2 + y_2 + z_2 + w_2) \\
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    a + b + c + d &amp;= (u_{11} + \alpha v_{11}) + (u_{12} + \alpha v_{12}) + (u_{21} + \alpha v_{21}) + (u_{22} + \alpha v_{22}) \\ 
+    &amp; = (u_{11} + u_{12} + u_{21} + u_{22}) + \alpha (v_{11} + v_{12} + v_{21} + v_{22}) \\
     &amp; = 0 + \alpha \cdot 0 = 0,
-\end{align*}\]</div>
+\end{align*} \end{split}\]</div>
 <p class="sd-card-text">so <span class="math notranslate nohighlight">\(U + \alpha V \in W\)</span> therefore <span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(M_{2\times 2}\)</span>.</p>
 </div>
-</details><p>  (ii)   Let <span class="math notranslate nohighlight">\(W = \{ p(x) \in P_n(\mathbb{R}) : p(x) = p(-x)\} \subseteq P(\mathbb{R}_n)\)</span> be the set of all even functions. Show that <span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(P(\mathbb{R}_n)\)</span>.</p>
+</details><p>(ii)   Let <span class="math notranslate nohighlight">\(W = \{ p(x) \in P_n(\mathbb{R}) : p(x) = p(-x)\} \subseteq P(\mathbb{R}_n)\)</span> be the set of all even functions. Show that <span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(P(\mathbb{R}_n)\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -461,34 +463,34 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The zero polynomial <span class="math notranslate nohighlight">\(0 \in W\)</span> so <span class="math notranslate nohighlight">\(W\)</span> is non-empty. Let <span class="math notranslate nohighlight">\(p, r \in W\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>, we need to show that <span class="math notranslate nohighlight">\(p + \alpha r \in W\)</span>. Now we know that <span class="math notranslate nohighlight">\(p(-x) = p(x)\)</span> and <span class="math notranslate nohighlight">\(r(-x) = r(x)\)</span></p>
+<p class="sd-card-text">The zero polynomial <span class="math notranslate nohighlight">\(0 \in W\)</span> so <span class="math notranslate nohighlight">\(W\)</span> is non-empty. Let <span class="math notranslate nohighlight">\(u, v \in W\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>, we need to show that <span class="math notranslate nohighlight">\(u + \alpha v \in W\)</span>. Now we know that <span class="math notranslate nohighlight">\(u(-x) = u(x)\)</span> and <span class="math notranslate nohighlight">\(v(-x) = v(x)\)</span> so</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align*}
-    (p + \alpha r)(-x) = p(-x) + \alpha r(-x) = p(x) + \alpha r(x) = (p + \alpha r)(x),
+    (u + \alpha v)(x) = u(x) + \alpha v(x) = u(-x) + \alpha v(-x) = (u + \alpha v)(-x),
 \end{align*} \]</div>
-<p class="sd-card-text">so <span class="math notranslate nohighlight">\((p + \alpha r)(x) \in W\)</span> is an even function therefore <span class="math notranslate nohighlight">\(W\)</span> is a subspace.</p>
+<p class="sd-card-text">so <span class="math notranslate nohighlight">\((u + \alpha v)(x) \in W\)</span> is also an even function therefore <span class="math notranslate nohighlight">\(W\)</span> is a subspace.</p>
 </div>
 </details></section>
 </div><section id="non-examples-of-subspaces">
 <h2><span class="section-number">5.3.1. </span>Non-examples of Subspaces<a class="headerlink" href="#non-examples-of-subspaces" title="Permalink to this heading">#</a></h2>
 <p>Not all subsets of a vector space will be a subspace. For example, define <span class="math notranslate nohighlight">\(p\)</span> as the polynomial</p>
 <div class="math notranslate nohighlight">
-\[ p(x)=a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n = \sum_{i = 0}^n a_ix^i, \]</div>
+\[ p=a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n = \sum_{i = 0}^n a_ix^i, \]</div>
 <p>with <span class="math notranslate nohighlight">\(a_n\neq 0\)</span>, we say <span class="math notranslate nohighlight">\(p\)</span> has degree <span class="math notranslate nohighlight">\(n\)</span> and write <span class="math notranslate nohighlight">\(\operatorname{deg}(p)=n\)</span>. Let</p>
 <div class="math notranslate nohighlight">
 \[ W = \{p \in P_n(\mathbb{R}) : \operatorname{deg}(p) \in \{0,2,4\}\} \]</div>
-<p>i.e, those polynomials of even degree at most five together with the zero polynomial. Is <span class="math notranslate nohighlight">\(W\)</span> a subspace of <span class="math notranslate nohighlight">\(P(\mathbb{R}_5)\)</span>?</p>
-<p>Let <span class="math notranslate nohighlight">\(p = x^2\)</span> and <span class="math notranslate nohighlight">\(r = -x ^ 2 + x\)</span> then <span class="math notranslate nohighlight">\(p, r \in W\)</span> but <span class="math notranslate nohighlight">\(p + r = x^2 - x^2 + x = x \notin W\)</span> since <span class="math notranslate nohighlight">\(\operatorname{deg}(x) = 1\)</span> is odd. Therefore <span class="math notranslate nohighlight">\(W\)</span> is not a subspace of <span class="math notranslate nohighlight">\(P(\mathbb{R}_5)\)</span>. Here we came up with a single counter example to show that the linear combination <span class="math notranslate nohighlight">\(p + r \notin W\)</span>.</p>
-<p>This counterexample is great but how does one come up with such a counterexample if you can’t immediately think of one? If you do not see an obvious counterexample, try and construct one: we are looking for two even-degree polynomials, whose sum is not an even polynomial. Let’s start at the lowest degree: <span class="math notranslate nohighlight">\(0\)</span>. The sum of two polynomials of degree <span class="math notranslate nohighlight">\(0\)</span> is just the sum of two real numbers, so there is no counterexample here. Let’s try degree <span class="math notranslate nohighlight">\(2\)</span>. Now we need to find: <span class="math notranslate nohighlight">\(p(x) = ax^2 + bx + c\)</span> and <span class="math notranslate nohighlight">\(r(x) = dx^2 + ex + f\)</span>, such that <span class="math notranslate nohighlight">\(p+r\)</span> has an odd degree. Now</p>
+<p>i.e, the set of all polynomials of even degree at most 4 together with the zero polynomial. Is <span class="math notranslate nohighlight">\(W\)</span> a subspace of <span class="math notranslate nohighlight">\(P(\mathbb{R}_4)\)</span>?</p>
+<p>Let <span class="math notranslate nohighlight">\(u = x^2\)</span> and <span class="math notranslate nohighlight">\(v = -x ^ 2 + x\)</span> then <span class="math notranslate nohighlight">\(u, v \in W\)</span> but <span class="math notranslate nohighlight">\(u + v = x^2 - x^2 + x = x \notin W\)</span> since <span class="math notranslate nohighlight">\(\operatorname{deg}(x) = 1\)</span> is odd. Therefore <span class="math notranslate nohighlight">\(W\)</span> is not a subspace of <span class="math notranslate nohighlight">\(P(\mathbb{R}_4)\)</span>. Here we came up with a single counter example to show that the linear combination <span class="math notranslate nohighlight">\(u + v \notin W\)</span>.</p>
+<p>This counterexample is great but how does one come up with such a counterexample if you can’t immediately think of one? If you do not see an obvious counterexample, try and construct one: we are looking for two even-degree polynomials, whose sum is not an even polynomial. Let’s start at the lowest degree: <span class="math notranslate nohighlight">\(0\)</span>. The sum of two polynomials of degree <span class="math notranslate nohighlight">\(0\)</span> is just the sum of two real numbers, so there is no counterexample here. Let’s try degree <span class="math notranslate nohighlight">\(2\)</span>. Now we need to find: <span class="math notranslate nohighlight">\(u = ax^2 + bx + c\)</span> and <span class="math notranslate nohighlight">\(v = dx^2 + ex + f\)</span>, such that <span class="math notranslate nohighlight">\(u + v\)</span> has an odd degree. Now</p>
 <div class="math notranslate nohighlight">
-\[ p+r = (a + d)x^2 + (b + e)x + (c + f) \]</div>
-<p>has degree one when <span class="math notranslate nohighlight">\((a + d) = 0\)</span> and <span class="math notranslate nohighlight">\((b + e) \neq 0\)</span>. So let’s take <span class="math notranslate nohighlight">\(a = 1\)</span>, <span class="math notranslate nohighlight">\(d = -1\)</span> and <span class="math notranslate nohighlight">\(b = 0\)</span>, <span class="math notranslate nohighlight">\(e = 1\)</span> (we don’t care about <span class="math notranslate nohighlight">\(c\)</span> or <span class="math notranslate nohighlight">\(f\)</span>, so let’s just set both to be 0). This yields <span class="math notranslate nohighlight">\(p = x^2\)</span> and <span class="math notranslate nohighlight">\(r = -x^2 + x\)</span>, which was our counterexample.</p>
-<p>If we try constructing a counterexample and but fail, then it might mean that (a) a counterexample is not easy to find or (b) the statement is actually true. With a lot of pure maths research, mathematicians are often in this situation, trying to find a counterexample or a proof, not knowing which one it should be.</p>
+\[ u + v = (a + d)x^2 + (b + e)x + (c + f) \]</div>
+<p>has degree one when <span class="math notranslate nohighlight">\((a + d) = 0\)</span> and <span class="math notranslate nohighlight">\((b + e) \neq 0\)</span>. So let’s take <span class="math notranslate nohighlight">\(a = 1\)</span>, <span class="math notranslate nohighlight">\(d = -1\)</span> and <span class="math notranslate nohighlight">\(b = 0\)</span>, <span class="math notranslate nohighlight">\(e = 1\)</span> (we don’t care about <span class="math notranslate nohighlight">\(c\)</span> or <span class="math notranslate nohighlight">\(f\)</span>, so let’s just set both to be 0). This yields <span class="math notranslate nohighlight">\(u = x^2\)</span> and <span class="math notranslate nohighlight">\(v = -x^2 + x\)</span>, which was our counterexample.</p>
+<p>If we try constructing a counterexample and but fail, then it might mean that either a counterexample is not easy to find or the statement is actually true. With a lot of pure maths research, mathematicians are often in this situation, trying to find a counterexample or a proof, not knowing which one it should be.</p>
 <div class="proof example admonition" id="non-subspace-example">
 <p class="admonition-title"><span class="caption-number">Example 5.4 </span></p>
 <section class="example-content" id="proof-content">
 <p>Show that the following are not subspaces:</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(W = \{z = (a+bi) : a + b = 5\} \subseteq \mathbb{C}\)</span>;</p>
+<p>(i)   <span class="math notranslate nohighlight">\(W = \{z = (a+bi) : a + b = 5\} \subseteq \mathbb{C}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -496,9 +498,9 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(z = 1 + 4i \in W\)</span> but <span class="math notranslate nohighlight">\(-1 \cdot z = -1 - 4i \notin W\)</span>. This shows that <span class="math notranslate nohighlight">\(W\)</span> is not closed under taking scalar multiples, and hence not a subspace of <span class="math notranslate nohighlight">\(\mathbb{C}\)</span> over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. We could have also noted simply that <span class="math notranslate nohighlight">\(0\notin W\)</span>.</p>
+<p class="sd-card-text">Here <span class="math notranslate nohighlight">\(0 \notin W\)</span> so <span class="math notranslate nohighlight">\(W\)</span> is not a subspace.</p>
 </div>
-</details><p>  (ii)   <span class="math notranslate nohighlight">\(W = \{z = (a + bi) : a^2 + b^2 &lt; 0\} \subseteq \mathbb{C}\)</span>;</p>
+</details><p>(ii)   <span class="math notranslate nohighlight">\(W = \{z = (a + bi) : a^2 + b^2 &lt; 0\} \subseteq \mathbb{C}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -506,9 +508,9 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(W\)</span> is the empty since <span class="math notranslate nohighlight">\(a^2 + b^2 \geq 0\)</span> for all <span class="math notranslate nohighlight">\(a, b \in \mathbb{R}\)</span>. Hence <span class="math notranslate nohighlight">\(W\)</span> is not a subspace.</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(W\)</span> is the empty set since <span class="math notranslate nohighlight">\(a^2 + b^2 \geq 0\)</span> for all <span class="math notranslate nohighlight">\(a, b \in \mathbb{R}\)</span>. Hence <span class="math notranslate nohighlight">\(W\)</span> is not a subspace.</p>
 </div>
-</details><p>  (iii)   <span class="math notranslate nohighlight">\(W = \{(x,y,z) : x + y + z = 5\} \subseteq{\mathbb{R}^3}\)</span>.</p>
+</details><p>(iii)   <span class="math notranslate nohighlight">\(W = \{(x,y,z)^\mathsf{T} : x + y + z = 5\} \subseteq{\mathbb{R}^3}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -516,7 +518,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(u = (1, 2, 2) \in W\)</span> and <span class="math notranslate nohighlight">\(v = (2, 1, 2) \in W\)</span>, then <span class="math notranslate nohighlight">\(u + v = (3, 3, 4) \notin W\)</span>. We could’ve also just noted that <span class="math notranslate nohighlight">\(0 \notin W\)</span>.</p>
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 2, 2)^\mathsf{T} \in W\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v} = (2, 1, 2)^\mathsf{T} \in W\)</span>, then <span class="math notranslate nohighlight">\(\mathbf{u} + \mathbf{v} = (3, 3, 4) \notin W\)</span>. We could’ve also just noted that <span class="math notranslate nohighlight">\(\mathbf{0} \notin W\)</span>.</p>
 </div>
 </details></section>
 </div></section>

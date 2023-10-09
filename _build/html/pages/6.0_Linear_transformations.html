@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Vector products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
@@ -399,7 +399,7 @@ document.write(`
 </ul>
 <p>The result of applying a linear transformation to an object is known as the <strong>image</strong>.</p>
 </section>
-</div><p>For example, let <span class="math notranslate nohighlight">\(V = \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(W = \mathbb{R}^3\)</span> then <span class="math notranslate nohighlight">\(T : V \to W\)</span> defined by <span class="math notranslate nohighlight">\(T : (x, y) \mapsto (x, y, 0)\)</span> is a linear transformation. Let <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2), \mathbf{v} = (v_1, v_2) \in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span> then</p>
+</div><p>For example, let <span class="math notranslate nohighlight">\(V = \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(W = \mathbb{R}^3\)</span> then <span class="math notranslate nohighlight">\(T : V \to W\)</span> defined by <span class="math notranslate nohighlight">\(T : (x, y)^\mathsf{T} \mapsto (x, y, 0)^\mathsf{T}\)</span> is a linear transformation. Let <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2)^\mathsf{T}, \mathbf{v} = (v_1, v_2)^\mathsf{T} \in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     T \left( \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} + \begin{pmatrix} v_1 \\ v_2 \end{pmatrix} \right)
@@ -422,7 +422,7 @@ document.write(`
 <p class="admonition-title"><span class="caption-number">Example 6.1 </span></p>
 <section class="example-content" id="proof-content">
 <p>Determine which of the following transformations are linear transformations</p>
-<p>(i)   <span class="math notranslate nohighlight">\(T: \mathbb{R}^3 \to \mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(T: (x, y, z) \mapsto (x, y)\)</span></p>
+<p>(i)   <span class="math notranslate nohighlight">\(T: \mathbb{R}^3 \to \mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(T: (x, y, z)^\mathsf{T} \mapsto (x, y)^\mathsf{T}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -430,19 +430,19 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Let <span class="math notranslate nohighlight">\((x_1, y_1, z_1), (x_2, y_2, z_2) \in \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span> then</p>
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(\begin{pmatrix} u_1 \\ u_2 \\ u_3 \end{pmatrix}, \begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix} \in \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    &amp;T \left( \begin{pmatrix} x_1 \\ y_1 \\ z_1 \end{pmatrix} + \alpha \begin{pmatrix} x_2 \\ y_2 \\ z_2 \end{pmatrix}
+    &amp;T \left( \begin{pmatrix} u_1 \\ u_2 \\ u_3 \end{pmatrix} + \alpha \begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix}
     \right) \\
-    &amp;= T \begin{pmatrix} x_1 + \alpha x_2 \\ y_1 + \alpha y_2 \\ z_1 + \alpha z_2 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} x_1 + \alpha x_2 \\  y_1 + \alpha y_2 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} x_1 \\ y_1 \end{pmatrix} + \alpha \begin{pmatrix}  x_2 \\ y_2 \end{pmatrix} \\
-    &amp;= T\begin{pmatrix} x_1 \\ y_1 \\ z_1 \end{pmatrix} + \alpha T\begin{pmatrix} x_2 \\ y_2 \\ z_2 \end{pmatrix}.
+    &amp;= T \begin{pmatrix} u_1 + \alpha v_1 \\ u_2 + \alpha v_2 \\ u_3 + \alpha v_3 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} u_1 + \alpha v_1 \\  u_2 + \alpha v_2 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} + \alpha \begin{pmatrix}  v_1 \\ v_2 \end{pmatrix} \\
+    &amp;= T\begin{pmatrix} u_1 \\ u_2 \\ u_3 \end{pmatrix} + \alpha T\begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">So <span class="math notranslate nohighlight">\(T: (x, y, z) \mapsto (x, y)\)</span> is a linear transformation.</p>
+<p class="sd-card-text">So <span class="math notranslate nohighlight">\(T: (x, y, z)^\mathsf{T} \mapsto (x, y)^\mathsf{T}\)</span> is a linear transformation.</p>
 </div>
-</details><p>(ii)   <span class="math notranslate nohighlight">\(T: \mathbb{R}^3 \to \mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(T: (x, y, z) \mapsto (x + 3, y)\)</span></p>
+</details><p>(ii)   <span class="math notranslate nohighlight">\(T: \mathbb{R}^3 \to \mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(T: (x, y, z)^\mathsf{T} \mapsto (x + 3, y)^\mathsf{T}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -450,27 +450,30 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Let <span class="math notranslate nohighlight">\((x_1, y_1, z_1)\)</span>, <span class="math notranslate nohighlight">\((x_2, y_2, z_2) \in \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span> then</p>
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(\mathbf{u} = \begin{pmatrix} u_1 \\ u_1 \\ u_1 \end{pmatrix}, \mathbf{v} = \begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix} \in \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    T \left( \begin{pmatrix} x_1 \\ y_1 \\ z_1 \end{pmatrix} + \alpha \begin{pmatrix} x_2 \\ y_2 \\ z_2 \end{pmatrix} \right)
-    &amp;= T \begin{pmatrix} x_1 + \alpha x_2 \\ y_1 + \alpha y_2 \\ z_1 + \alpha z_2 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} x_1 + \alpha x_2 + 3 \\ y_1 + \alpha y_2 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} x_1 + 3 \\ y_1 \end{pmatrix} + \begin{pmatrix} \alpha x_2 \\ \alpha y_2 \end{pmatrix} \\
-    &amp;\neq T\begin{pmatrix} x_1 \\ y_1 \\ z_1 \end{pmatrix} + \alpha T \begin{pmatrix} x_2 \\ y_2 \\ z_2 \end{pmatrix}.
+    T(\mathbf{u} + \alpha \mathbf{v}) &amp;= T 
+    \begin{pmatrix} u_1 + \alpha v_1 \\ u_2 + \alpha v_2 \\ u_3 + \alpha v_3 \end{pmatrix} 
+    = \begin{pmatrix} u_1 + \alpha v_1 + 3 \\ u_2 + \alpha v_2 \end{pmatrix}, \\
+    T(\mathbf{u}) + \alpha T(\mathbf{v}) &amp;= 
+    \begin{pmatrix} u_1 + 3 \\ u_2 \end{pmatrix} + \alpha 
+    \begin{pmatrix} v_1 + 3 \\ v_2 \end{pmatrix} 
+    = 
+    \begin{pmatrix} u_1 + v_1 + 6 \\ u_2 + v_2 \end{pmatrix}
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">So <span class="math notranslate nohighlight">\(T: (x, y, z) \mapsto (x + 3, y)\)</span> is not a linear transformation. Note that we could have shown this by a counterexample, e.g., let <span class="math notranslate nohighlight">\((1, 0, 0), (2, 0, 0) \in \mathbb{R}^3\)</span> then by the first condition the <a class="reference internal" href="#linear-transformation-definition">definition of a linear transformation</a></p>
+<p class="sd-card-text">Therefore <span class="math notranslate nohighlight">\(T(\mathbf{u} + \alpha \mathbf{v}) \neq T(\mathbf{u}) + \alpha T(\mathbf{v})\)</span> so <span class="math notranslate nohighlight">\(T: (x, y, z)^\mathsf{T} \mapsto (x + 3, y)^\mathsf{T}\)</span> is not a linear transformation.</p>
+<p class="sd-card-text">Note that we could have shown this by a counterexample, e.g., let <span class="math notranslate nohighlight">\(\mathbf{u} = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}, \mathbf{v} = \begin{pmatrix} 2 \\ 0 \\ 0 \end{pmatrix} \in \mathbb{R}^3\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    T\left( \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} + \begin{pmatrix} 2 \\ 0 \\ 0 \end{pmatrix} \right)
-    &amp;= T\begin{pmatrix} 3 \\ 0 \\ 0 \end{pmatrix} 
+    T(\mathbf{u} + \mathbf{v}) &amp;= T\begin{pmatrix} 3 \\ 0 \\ 0 \end{pmatrix} 
     = \begin{pmatrix} 6 \\ 0 \end{pmatrix}, \\
-    T \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} + T \begin{pmatrix} 2 \\ 0 \\ 0 \end{pmatrix}
-    &amp;= \begin{pmatrix} 4 \\ 0 \\ 0 \end{pmatrix} + \begin{pmatrix} 5 \\ 0 \\ 0 \end{pmatrix}
+    T(\mathbf{u}) + T(\mathbf{v}) &amp;=
+    \begin{pmatrix} 4 \\ 0 \\ 0 \end{pmatrix} + \begin{pmatrix} 5 \\ 0 \\ 0 \end{pmatrix}
     = \begin{pmatrix} 9 \\ 0 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 </div>
-</details><p>(iii)   <span class="math notranslate nohighlight">\(T: P(\mathbb{R}) \to P(\mathbb{R})\)</span> defined by <span class="math notranslate nohighlight">\(T: T(x) \mapsto T(x) \dfrac{\mathrm{d}}{\mathrm{d}x} T(x)\)</span></p>
+</details><p>(iii)   <span class="math notranslate nohighlight">\(T: P(\mathbb{R}) \to P(\mathbb{R})\)</span> defined by <span class="math notranslate nohighlight">\(T: p \mapsto p \dfrac{\mathrm{d}p}{\mathrm{d}x}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -478,15 +481,18 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(x^2 \in P(\mathbb{R})\)</span> and <span class="math notranslate nohighlight">\(2 \in F\)</span> then</p>
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(u = x^2 \in P(\mathbb{R})\)</span> then</p>
 <div class="math notranslate nohighlight">
-\[ T(2x^2) = 2x^2(4x) = 8x^3 \neq 2T(x^2) = 2(x^2)(2x) = 4x^3, \]</div>
-<p class="sd-card-text">so <span class="math notranslate nohighlight">\(T: T(x) \mapsto T(x) \dfrac{\mathrm{d}}{\mathrm{d}x} T(x)\)</span> is not a linear transformation.</p>
+\[\begin{split} \begin{align*}
+    T(2u) &amp;= T(2x^2) = 2x^2(4x) = 8x^3, \\
+    2T(u) &amp;= 2T(x^2) = 2(2x(x^2)) = 4x^3,
+\end{align*}  \end{split}\]</div>
+<p class="sd-card-text">therefore <span class="math notranslate nohighlight">\(T(2u) \neq 2T(u)\)</span> and <span class="math notranslate nohighlight">\(T: p \mapsto p \dfrac{\mathrm{d}p}{\mathrm{d}x}\)</span> is not a linear transformation.</p>
 </div>
 </details></section>
 </div><span class="target" id="transformation-matrix-section"></span><section id="transformation-matrices">
 <span id="index-1"></span><h2><span class="section-number">6.1. </span>Transformation matrices<a class="headerlink" href="#transformation-matrices" title="Permalink to this heading">#</a></h2>
-<p>For convenience we tend to use matrices to represent linear transformations. Let <span class="math notranslate nohighlight">\(T: V \to W\)</span> be a linear transformation from the vector spaces <span class="math notranslate nohighlight">\(V\)</span> to <span class="math notranslate nohighlight">\(W\)</span>. If <span class="math notranslate nohighlight">\(\{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\}\)</span> is a basis for <span class="math notranslate nohighlight">\(V\)</span> then for a vector <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span></p>
+<p>For convenience we tend to use matrices to represent linear transformations. Let <span class="math notranslate nohighlight">\(T: V \to W\)</span> be a linear transformation from the vector spaces <span class="math notranslate nohighlight">\(V\)</span> to <span class="math notranslate nohighlight">\(W\)</span> where <span class="math notranslate nohighlight">\(V, W \in \mathbb{R}^n\)</span>. If <span class="math notranslate nohighlight">\(\{\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\}\)</span> is a basis for <span class="math notranslate nohighlight">\(V\)</span> then for a vector <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span></p>
 <div class="math notranslate nohighlight">
 \[ \mathbf{u} = u_1 \mathbf{v}_1 + u_2 \mathbf{v}_2 + \cdots + u_n \mathbf{v}_n, \]</div>
 <p>and by the <a class="reference internal" href="#linear-transformation-definition">definition of a linear transformation</a></p>
@@ -500,8 +506,8 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
         T(\mathbf{v}_1) &amp; T(\mathbf{v}_2) &amp; \cdots &amp; T(\mathbf{v}_n) \\
         \downarrow &amp; \downarrow &amp; &amp; \downarrow
     \end{pmatrix}
-    \begin{pmatrix} u_1 \\ u_2 \\ \vdots \\ u_n \end{pmatrix} \\
-    &amp;= A \mathbf{u}.
+    \begin{pmatrix} u_1 \\ u_2 \\ \vdots \\ u_n \end{pmatrix} 
+    = A \mathbf{u}.
 \end{align*} \end{split}\]</div>
 <p>In other words we can apply a linear transformation simply by multiplying <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> by a matrix <span class="math notranslate nohighlight">\(A\)</span>.</p>
 <div class="proof definition admonition" id="transformation-matrix-definition">
@@ -522,7 +528,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 </div><div class="proof example admonition" id="transformation-matrix-example">
 <p class="admonition-title"><span class="caption-number">Example 6.2 </span></p>
 <section class="example-content" id="proof-content">
-<p>A linear transformation <span class="math notranslate nohighlight">\(T:\mathbb{R}^2 \to \mathbb{R}^2\)</span> is defined by <span class="math notranslate nohighlight">\(T: (x, y) \mapsto (3x + y, x + 2y)\)</span>. Calculate the transformation matrix and use it to calculate <span class="math notranslate nohighlight">\(T(1, 1)\)</span>.</p>
+<p>A linear transformation <span class="math notranslate nohighlight">\(T:\mathbb{R}^2 \to \mathbb{R}^2\)</span> is defined by <span class="math notranslate nohighlight">\(T: (x, y)^\mathsf{T} \mapsto (3x + y, x + 2y)^\mathsf{T}\)</span>. Calculate the transformation matrix and use it to calculate <span class="math notranslate nohighlight">\(T\begin{pmatrix} 1 \\ 1 \end{pmatrix}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -545,25 +551,26 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 \end{align*} \end{split}\]</div>
 <p class="sd-card-text">so the transformation matrix is</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} A &amp;= \begin{pmatrix} 3 &amp; 1 \\ 1 &amp; 2 \end{pmatrix}. \end{split}\]</div>
-<p class="sd-card-text">Applying the transformation matrix to <span class="math notranslate nohighlight">\((1, 1)\)</span>
-$<span class="math notranslate nohighlight">\( T\begin{pmatrix} 1 \\ 1 \end{pmatrix} = A \cdot \begin{pmatrix} 1 \\ 1 \end{pmatrix} =  
+\[\begin{split} A = \begin{pmatrix} 3 &amp; 1 \\ 1 &amp; 2 \end{pmatrix}. \end{split}\]</div>
+<p class="sd-card-text">Applying the transformation matrix to <span class="math notranslate nohighlight">\((1, 1)^\mathsf{T}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} T\begin{pmatrix} 1 \\ 1 \end{pmatrix} = A \cdot \begin{pmatrix} 1 \\ 1 \end{pmatrix} =  
     \begin{pmatrix} 3 &amp; 1 \\ 1 &amp; 2 \end{pmatrix} 
     \begin{pmatrix} 1 \\ 1 \end{pmatrix} = 
-    \begin{pmatrix} 4 \\ 3 \end{pmatrix}. \)</span>$</p>
+    \begin{pmatrix} 4 \\ 3 \end{pmatrix}. \end{split}\]</div>
 </div>
 </details></section>
 </div><p>The affects of the linear transformation from <a class="reference internal" href="#linear-transformation-example">Example 6.1</a> is illustrated in <a class="reference internal" href="#linear-transformation-figure"><span class="std std-numref">Fig. 6.1</span></a>. Note that the transformation <span class="math notranslate nohighlight">\(T\)</span> can be thought of as changing the basis of the vector space. The unit square with respect to the basis <span class="math notranslate nohighlight">\(\{\mathbf{e}_1, \mathbf{e}_1\}\)</span> has been transformed into a unit parallelogram with respect to the basis <span class="math notranslate nohighlight">\(\{ T(\mathbf{e}_1), T(\mathbf{e}_2)\}\)</span>.</p>
 <figure class="align-default" id="linear-transformation-figure">
 <a class="reference internal image-reference" href="../_images/linear_transformation.svg"><img alt="../_images/linear_transformation.svg" src="../_images/linear_transformation.svg" width="400" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.1 </span><span class="caption-text">The affect of applying a linear transformation <span class="math notranslate nohighlight">\(T: (x,y) \mapsto (3x + y, x + 2y)\)</span> to the vector <span class="math notranslate nohighlight">\((1,1)\)</span>.</span><a class="headerlink" href="#linear-transformation-figure" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.1 </span><span class="caption-text">The affect of applying a linear transformation <span class="math notranslate nohighlight">\(T: (x,y)^\mathsf{T} \mapsto (3x + y, x + 2y)^\mathsf{T}\)</span> to the vector <span class="math notranslate nohighlight">\((1,1)^\mathsf{T}\)</span>.</span><a class="headerlink" href="#linear-transformation-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="finding-the-transformation-matrix-from-a-set-of-images">
 <h2><span class="section-number">6.2. </span>Finding the transformation matrix from a set of images<a class="headerlink" href="#finding-the-transformation-matrix-from-a-set-of-images" title="Permalink to this heading">#</a></h2>
-<p>The calculation of the transformation matrix in <a class="reference internal" href="#transformation-matrix-example">Example 6.2</a> was straightforward as we knew what the transformation was. This will not always be a the case and we may know what the output (known as the image) of the transformation is but not the transformation itself. Consider a linear transformation <span class="math notranslate nohighlight">\(T: \mathbb{R}^n \to \mathbb{R}^m\)</span> applied to vectors <span class="math notranslate nohighlight">\(u_1, u_2, \ldots, u_n\)</span>. If <span class="math notranslate nohighlight">\(A\)</span> is the transformation matrix for <span class="math notranslate nohighlight">\(T\)</span> then</p>
+<p>The calculation of the transformation matrix in <a class="reference internal" href="#transformation-matrix-example">Example 6.2</a> was straightforward as we knew what the transformation was. This will not always be a the case and we may know what the output (known as the image) of the transformation is but not the transformation itself. Consider a linear transformation <span class="math notranslate nohighlight">\(T: \mathbb{R}^n \to \mathbb{R}^m\)</span> applied to vectors <span class="math notranslate nohighlight">\(\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_n\)</span>. If <span class="math notranslate nohighlight">\(A\)</span> is the transformation matrix for <span class="math notranslate nohighlight">\(T\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     A
@@ -598,7 +605,8 @@ $<span class="math notranslate nohighlight">\( T\begin{pmatrix} 1 \\ 1 \end{pmat
 <section class="theorem-content" id="proof-content">
 <p>Given a linear transformation <span class="math notranslate nohighlight">\(T: \mathbb{R}^n \to \mathbb{R}^m\)</span> applied to a set of <span class="math notranslate nohighlight">\(n\)</span> vectors <span class="math notranslate nohighlight">\(\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_n\)</span> with known image vectors <span class="math notranslate nohighlight">\(T(\mathbf{u}_1), T(\mathbf{u}_2), \ldots, T(\mathbf{u}_n)\)</span> then the transformation matrix <span class="math notranslate nohighlight">\(A\)</span> for <span class="math notranslate nohighlight">\(T\)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-determining-the-transformation-matrix">
-<span class="eqno">(6.2)<a class="headerlink" href="#equation-determining-the-transformation-matrix" title="Permalink to this equation">#</a></span>\[ A = (T(\mathbf{u}_1), T(\mathbf{u}_2), \ldots, T(\mathbf{u}_n)) \cdot (\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_n)^{-1}. \]</div>
+<span class="eqno">(6.2)<a class="headerlink" href="#equation-determining-the-transformation-matrix" title="Permalink to this equation">#</a></span>\[ A = \begin{pmatrix} T(\mathbf{u}_1) &amp; T(\mathbf{u}_2) &amp; \cdots &amp; T(\mathbf{u}_n) \end{pmatrix}  
+\begin{pmatrix} \mathbf{u}_1 &amp; \mathbf{u}_2 &amp; \cdots &amp; \mathbf{u}_n \end{pmatrix}^{-1}. \]</div>
 </section>
 </div><div class="proof example admonition" id="transformation-matrix-example-2">
 <p class="admonition-title"><span class="caption-number">Example 6.3 </span></p>
@@ -616,27 +624,14 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Using Gauss-Jordan elimination to determine the inverse of <span class="math notranslate nohighlight">\((\mathbf{u}_1, \mathbf{u}_2)\)</span></p>
+<p class="sd-card-text">Using the adjoint-determinant formula to determine the inverse of <span class="math notranslate nohighlight">\((\mathbf{u}_1, \mathbf{u}_2)\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    &amp; \left( \begin{array}{rr|rr} 
-        1 &amp; 1 &amp; 1 &amp; 0 \\
-        1 &amp; 2 &amp; 0 &amp; 1
-    \end{array} \right)
-    \begin{array}{l} \\ R_2 - R_1 \end{array}  \\ \\ 
-    \longrightarrow \quad &amp;
-    \left( \begin{array}{rr|rr} 
-        1 &amp; 1 &amp; 1 &amp; 0 \\
-        0 &amp; 1 &amp; -1 &amp; 1
-    \end{array} \right)
-    \begin{array}{l} R_1 - R_2 \\ \phantom{x} \end{array}  \\ \\
-    \longrightarrow \quad &amp;
-    \left( \begin{array}{rr|rr} 
-        1 &amp; 0 &amp; 2 &amp; -1 \\
-        0 &amp; 1 &amp; -1 &amp; 1
-    \end{array} \right)
+    \det \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; 2 \end{pmatrix} &amp;= 1, \\
+    \operatorname{adj} \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; 2 \end{pmatrix} &amp;= \begin{pmatrix} 2 &amp; -1 \\ -1 &amp; 1 \end{pmatrix} \\
+    \therefore \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; 2 \end{pmatrix}^{-1} &amp;= \begin{pmatrix} 2 &amp; -1 \\ -1 &amp; 1 \end{pmatrix} 
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">so <span class="math notranslate nohighlight">\((\mathbf{u}_1, \mathbf{u}_2)^{-1} = \begin{pmatrix} 2 &amp; -1 \\ -1 &amp; 1 \end{pmatrix}\)</span>. Right multiplying the image matrix</p>
+<p class="sd-card-text">Right multiplying the image matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     A &amp;= \begin{pmatrix} 4 &amp; 5 \\ 3 &amp; 5 \end{pmatrix} \begin{pmatrix} 2 &amp; -1 \\ -1 &amp; 1 \end{pmatrix}
@@ -662,7 +657,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 </div><div class="proof example admonition" id="inverse-transformation-example">
 <p class="admonition-title"><span class="caption-number">Example 6.4 </span></p>
 <section class="example-content" id="proof-content">
-<p>Determine the inverse of the transformation <span class="math notranslate nohighlight">\(T: \mathbb{R}^2 \to \mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(T(x, y) \mapsto (3 x + y, x + 2 y)\)</span> and calculate <span class="math notranslate nohighlight">\(T^{-1}(4, 3)\)</span>.</p>
+<p>Determine the inverse of the transformation <span class="math notranslate nohighlight">\(T: \mathbb{R}^2 \to \mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(T(x, y)^\mathsf{T} \mapsto (3 x + y, x + 2 y)^\mathsf{T}\)</span> and calculate <span class="math notranslate nohighlight">\(T^{-1}\begin{pmatrix} 4 \\ 3 \end{pmatrix}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -684,7 +679,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
     \begin{pmatrix} x \\ y \end{pmatrix} \\
     &amp;= \begin{pmatrix} \frac{2}{5}x - \frac{1}{5}y \\ -\frac{1}{5}x + \frac{3}{5}y \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Calculating <span class="math notranslate nohighlight">\(T^{-1}(4, 3)\)</span></p>
+<p class="sd-card-text">Calculating <span class="math notranslate nohighlight">\(T^{-1}\begin{pmatrix} 4 \\ 3 \end{pmatrix}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     A^{-1} \begin{pmatrix} 4 \\ 3 \end{pmatrix} &amp;=

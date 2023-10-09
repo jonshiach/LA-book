@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Vector products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
@@ -477,7 +477,7 @@ document.write(`
 <p class="admonition-title"><span class="caption-number">Example 5.1 </span></p>
 <section class="example-content" id="proof-content">
 <p>Show that the following are vector spaces:</p>
-<p>  (i)   The set of real numbers over itself;</p>
+<p>(i)   The set of real numbers over itself;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -497,7 +497,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <li><p class="sd-card-text">M4: <span class="math notranslate nohighlight">\((\alpha + \beta) u = \alpha u + \beta u \quad \checkmark\)</span></p></li>
 </ul>
 </div>
-</details><p>  (ii)   The set of all polynomials of degree at most <span class="math notranslate nohighlight">\(n\)</span> with real coefficients <span class="math notranslate nohighlight">\(P_n(\mathbb{R})\)</span></p>
+</details><p>(ii)   The set of all polynomials of degree at most <span class="math notranslate nohighlight">\(n\)</span> with real coefficients <span class="math notranslate nohighlight">\(P_n(\mathbb{R})\)</span></p>
 <div class="math notranslate nohighlight">
 \[ \begin{align*}
     p = p(x) := a_0x^0 + a_1x^1 + a_2x^2 + \cdots + a_nx^n = \sum_{i=0}^n a_ix^i,
@@ -510,22 +510,22 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(p, r, q \in P_n(\mathbb{R})\)</span> where <span class="math notranslate nohighlight">\(a_i, b_i, c_i \in \mathbb{R}\)</span> are the coefficients for <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(q\)</span> and <span class="math notranslate nohighlight">\(r\)</span> respectively and <span class="math notranslate nohighlight">\(k\in \mathbb{R}\)</span> is some scalar then we define</p>
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(u(x), v(x), w(x) \in P_n(\mathbb{R})\)</span> where <span class="math notranslate nohighlight">\(u_i, v_i, w_i \in \mathbb{R}\)</span> are the coefficients for <span class="math notranslate nohighlight">\(u(x)\)</span>, <span class="math notranslate nohighlight">\(v(x)\)</span> and <span class="math notranslate nohighlight">\(w(x)\)</span> respectively and <span class="math notranslate nohighlight">\(k\in \mathbb{R}\)</span> is some scalar then we define</p>
 <ul class="simple">
 <li><p class="sd-card-text">Vector addition:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    p + r &amp;= (a_0 + b_0)x^0 + (a_1 + b_1)x^1 + \cdots + (a_n + b_n)x^n \\
-    &amp;= \sum_{i=0}^n (a_i + b_i)x^i.
+    u(x) + v(x) &amp;= (u_0 + v_0)x^0 + (u_1 + v_1)x^1 + \cdots + (u_n + v_n)x^n \\
+    &amp;= \sum_{i=0}^n (u_i + v_i)x^i.
 \end{align*} \end{split}\]</div>
 <ul class="simple">
 <li><p class="sd-card-text">Scalar multiplication:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    k \cdot p &amp;= ka_0x^0 + ka_1x^1 + \cdots + ka_nx^n \\
-    &amp;= \sum_{i=0}^n ka_ix^i.
+    k \cdot u(x) &amp;= ku_0x^0 + ku_1x^1 + \cdots + ku_nx^n \\
+    &amp;= \sum_{i=0}^n ku_ix^i.
 \end{align*} \end{split}\]</div>
 <ul class="simple">
 <li><p class="sd-card-text">Additive identity element is the zero polynomial</p></li>
@@ -539,60 +539,82 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    -p &amp;= (-a_0)x^0 + (-a_1)x^2 + \cdots + (-a_n)x^n \\
-    &amp;= \sum_{i=0}^n (-a_i)x^i \\
-    &amp;= -\sum_{i=0}^n a_ix^i.
+    -u(x) &amp;= (-u_0)x^0 + (-u_1)x^2 + \cdots + (-u_n)x^n \\
+    &amp;= \sum_{i=0}^n (-u_i)x^i \\
+    &amp;= -\sum_{i=0}^n u_ix^i.
 \end{align*} \end{split}\]</div>
 <p class="sd-card-text">Checking the that axioms of vector spaces are satisfied</p>
 <ul class="simple">
-<li><p class="sd-card-text">A1:
-$<span class="math notranslate nohighlight">\( \begin{align*}
-  p + (q + r) &amp;= \displaystyle \sum_{i=0}^n (a_i + (b_i + c_i))x^i \\
-  &amp;= \displaystyle \sum_{i=0}^n ((a_i + b_i) + c_i)x^i \\
-  &amp;= (p + q) + r \quad \checkmark
-\end{align*} \)</span>$</p></li>
-<li><p class="sd-card-text">A2:
-$<span class="math notranslate nohighlight">\( \begin{align*}
-  p + q &amp;= \displaystyle \sum_{i=0}^n (a_i + b_i)x^i \\
-  &amp;= \displaystyle \sum_{i=0}^n (b_i + a_i)x^i \\
-  &amp;= q + p \quad \checkmark
-\end{align*} \)</span>$</p></li>
-<li><p class="sd-card-text">A3:
-$<span class="math notranslate nohighlight">\( \begin{align*}
-  p + 0 &amp;= \displaystyle \sum_{i=0}^n (a_i + 0)x^i \\
-  &amp;= \displaystyle \sum_{i=0}^n a_ix^i \\
-  &amp;= p \quad \checkmark
-\end{align*} \)</span>$</p></li>
-<li><p class="sd-card-text">A4:
-$<span class="math notranslate nohighlight">\( \begin{align*}
-  p + (-p) &amp;= \displaystyle \sum_{i=0}^n(a_i + (-a_i)) x^i \\
-  &amp;= 0 \quad \checkmark
-\end{align*} \)</span>$</p></li>
-<li><p class="sd-card-text">M1:
-$<span class="math notranslate nohighlight">\( \begin{align*}
-  \alpha(\beta p) &amp;= \alpha \displaystyle \sum_{i=0}^n \beta a_i x^i \\
-  &amp;= \alpha \beta \displaystyle \sum_{i=0}^n a_i x^i \\
-  &amp;= (\alpha \beta) p \quad \checkmark
-\end{align*} \)</span>$</p></li>
-<li><p class="sd-card-text">M2:
-$<span class="math notranslate nohighlight">\( \begin{align*}
-  1p &amp;= \displaystyle \sum_{i=0}^n 1 a_i x^i \\
-  &amp;= \displaystyle \sum_{i=0}^n a_i x^i \\
-  &amp;= p \quad \checkmark
-\end{align*} \)</span>$</p></li>
-<li><p class="sd-card-text">M3:
-$<span class="math notranslate nohighlight">\( \begin{align*}
-  \alpha (p + q) &amp;= \alpha \sum (a_i + b_i) x^i \\
-  &amp;= \alpha \sum a_i x^i + \alpha b_i x^i \\
-  &amp;= \alpha p + \alpha q \quad \checkmark
-\end{align*} \)</span>$</p></li>
-<li><p class="sd-card-text">M4:
-$<span class="math notranslate nohighlight">\( \begin{align*}
-  (\alpha + \beta) p &amp;= (\alpha + \beta) \displaystyle \sum_{i=0}^n a_i x^i \\
-  &amp;= \alpha \displaystyle \sum_{i=0}^n a_i x^i + \beta \displaystyle \sum_{i=0}^n a_i x^i \\
-  &amp;= \alpha p + \beta p \quad \checkmark
-\end{align*} \)</span>$</p></li>
+<li><p class="sd-card-text">A1: Associativity of addition</p></li>
 </ul>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    u(x) + (v(x) + w(x)) &amp;= \displaystyle \sum_{i=0}^n (u_i + (v_i + w_i))x^i \\
+    &amp;= \displaystyle \sum_{i=0}^n ((u_i + v_i) + w_i)x^i \\
+    &amp;= (u(x) + v(x)) + w(x) \quad \checkmark
+\end{align*} \end{split}\]</div>
+<ul class="simple">
+<li><p class="sd-card-text">A2: Commutativity of addition</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    u(x) + v(x) &amp;= \displaystyle \sum_{i=0}^n (u_i + v_i)x^i \\
+    &amp;= \displaystyle \sum_{i=0}^n (v_i + u_i)x^i \\
+    &amp;= v(x) + u(x) \quad \checkmark
+\end{align*} \end{split}\]</div>
+<ul class="simple">
+<li><p class="sd-card-text">A3: Identity element for addition</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    u(x) + 0 &amp;= \displaystyle \sum_{i=0}^n (u_i + 0)x^i \\
+    &amp;= \displaystyle \sum_{i=0}^n u_ix^i \\
+    &amp;= u(x) \quad \checkmark
+\end{align*} \end{split}\]</div>
+<ul class="simple">
+<li><p class="sd-card-text">A4: Inverse element for addition</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    u(x) + (-u(x)) &amp;= \displaystyle \sum_{i=0}^n(u_i + (-u_i)) x^i \\
+    &amp;= 0 \quad \checkmark
+\end{align*} \end{split}\]</div>
+<ul class="simple">
+<li><p class="sd-card-text">M1: Associativity of scalar multiplication</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \alpha(\beta u(x)) &amp;= \alpha \displaystyle \sum_{i=0}^n \beta u_i x^i \\
+    &amp;= \alpha \beta \displaystyle \sum_{i=0}^n u_i x^i \\
+    &amp;= (\alpha \beta) u(x) \quad \checkmark
+\end{align*} \end{split}\]</div>
+<ul class="simple">
+<li><p class="sd-card-text">M2: Identity element for scalar multiplication</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    1 \cdot u(x) &amp;= \displaystyle \sum_{i=0}^n 1 u_i x^i \\
+    &amp;= \displaystyle \sum_{i=0}^n u_i x^i \\
+    &amp;= u(x) \quad \checkmark
+\end{align*} \end{split}\]</div>
+<ul class="simple">
+<li><p class="sd-card-text">M3: Distributivity of scalar multiplication</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \alpha (u(x) + v(x)) &amp;= \alpha \sum (u_i + v_i) x^i \\
+    &amp;= \alpha \sum u_i x^i + \alpha v_i x^i \\
+    &amp;= \alpha u(x) + \alpha v(x) \quad \checkmark
+\end{align*} \end{split}\]</div>
+<ul class="simple">
+<li><p class="sd-card-text">M4: Distributivity of scalar multiplication over addition</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    (\alpha + \beta) u(x) &amp;= (\alpha + \beta) \displaystyle \sum_{i=0}^n u_i x^i \\
+    &amp;= \alpha \displaystyle \sum_{i=0}^n u_i x^i + \beta \displaystyle \sum_{i=0}^n u_i x^i \\
+    &amp;= \alpha u(x) + \beta u(x) \quad \checkmark
+\end{align*} \end{split}\]</div>
 </div>
 </details></section>
 </div></section>
@@ -603,7 +625,7 @@ $<span class="math notranslate nohighlight">\( \begin{align*}
 <p class="admonition-title"><span class="caption-number">Example 5.2 </span></p>
 <section class="example-content" id="proof-content">
 <p>Show that the following a not vector spaces:</p>
-<p>  (i)   The set of all positive real numbers, <span class="math notranslate nohighlight">\(\mathbb{R}_+\)</span> over itself;</p>
+<p>(i)   The set of all positive real numbers, <span class="math notranslate nohighlight">\(\mathbb{R}_+\)</span> over itself;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -613,7 +635,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">We do not have an identity element for addition since <span class="math notranslate nohighlight">\(0 \notin \mathbb{R}_+\)</span> so axiom A3 is not satisfied. Also, by axiom A4, if <span class="math notranslate nohighlight">\(u, v \in \mathbb{R}_+\)</span> are two positive real numbers then <span class="math notranslate nohighlight">\(x + y &gt; 0\)</span> so no additive inverse exists.</p>
 </div>
-</details><p>  (ii)   <span class="math notranslate nohighlight">\(V\)</span> is defined to be a parabola <span class="math notranslate nohighlight">\(y=x^2\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>, i.e., all the points in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(V = {(x, x^2)}\)</span>.</p>
+</details><p>(ii)   <span class="math notranslate nohighlight">\(V\)</span> is defined to be a parabola <span class="math notranslate nohighlight">\(y=x^2\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>, i.e., all the points in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(V = {(x, x^2)}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -621,7 +643,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">If we take the example <span class="math notranslate nohighlight">\(u \in V\)</span> such that <span class="math notranslate nohighlight">\(u = (1, 1)\)</span> then the additive inverse <span class="math notranslate nohighlight">\(-u = (-1, -1) \notin V\)</span> so <span class="math notranslate nohighlight">\(V\)</span> is not a vector space.</p>
+<p class="sd-card-text">If we take the example <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> such that <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 1)^\mathsf{T}\)</span> then the additive inverse <span class="math notranslate nohighlight">\(-\mathbf{u}^\mathsf{T} = (-1, -1) \notin V\)</span> so <span class="math notranslate nohighlight">\(V\)</span> is not a vector space.</p>
 </div>
 </details></section>
 </div><hr class="footnotes docutils" />

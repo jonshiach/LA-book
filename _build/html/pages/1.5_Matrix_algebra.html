@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Vector products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
@@ -408,7 +408,7 @@ document.write(`
 <p class="admonition-title"><span class="caption-number">Example 1.16 </span></p>
 <section class="example-content" id="proof-content">
 <p>Solve the following matrix equations for <span class="math notranslate nohighlight">\(X\)</span>:</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(2X + \begin{pmatrix} 1 &amp; 3 \\ 6 &amp; 4 \end{pmatrix} = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}\)</span>;</p>
+<p>(i)   <span class="math notranslate nohighlight">\(2X + \begin{pmatrix} 1 &amp; 3 \\ 6 &amp; 4 \end{pmatrix} = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -430,7 +430,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
     \begin{pmatrix} 0 &amp; -3/2 \\ -3 &amp; -3/2 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 </div>
-</details><p>  (ii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 4 &amp; 1 \\ 2 &amp; 5 \end{pmatrix} X - \begin{pmatrix} 5 &amp; -3 \\ 2 &amp; 4 \end{pmatrix} = \begin{pmatrix} 1 &amp; 1 \\ 3 &amp; 2 \end{pmatrix}\)</span>;</p>
+</details><p>(ii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 4 &amp; 1 \\ 2 &amp; 5 \end{pmatrix} X - \begin{pmatrix} 5 &amp; -3 \\ 2 &amp; 4 \end{pmatrix} = \begin{pmatrix} 1 &amp; 1 \\ 3 &amp; 2 \end{pmatrix}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -457,7 +457,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
     &amp;= \begin{pmatrix} 25 &amp; -16 \\ 8 &amp; 28 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 </div>
-</details><p>  (iii)   <span class="math notranslate nohighlight">\(X^2 = \begin{pmatrix} 4 &amp; 3 \\ 0 &amp; 1 \end{pmatrix}\)</span>.</p>
+</details><p>(iii)   <span class="math notranslate nohighlight">\(X^2 = \begin{pmatrix} 4 &amp; 3 \\ 0 &amp; 1 \end{pmatrix}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">

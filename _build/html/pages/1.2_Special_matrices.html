@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Vector products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
@@ -457,12 +457,13 @@ document.write(`
     \mathbf{0}_{3 \times 1} &amp;= \begin{pmatrix}0 \\ 0 \\ 0 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 <div class="proof theorem admonition" id="zero-matrix-theorem">
-<p class="admonition-title"><span class="caption-number">Theorem 1.4 </span> (Addition of a zero matrix)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 1.4 </span> (Properties of the zero matrix)</p>
 <section class="theorem-content" id="proof-content">
-<p>For any <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(\mathbf{0} = \mathbf{0}_{m \times n}\)</span></p>
-<div class="math notranslate nohighlight">
-\[ A + \mathbf{0} = \mathbf{0} + A = A. \]</div>
-<p>Thus zero matrices are <strong>neutral elements with respect to matrix addition</strong>.</p>
+<p>For any <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> and the zero matrix is the neutral element with respect to matrix addition and multiplication, i.e.,</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\( A + \mathbf{0} = \mathbf{0} + A = A\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\( A \mathbf{0} = \mathbf{0} A = \mathbf{0}\)</span>.</p></li>
+</ul>
 </section>
 </div></section>
 <section id="the-identity-matrix">
@@ -485,17 +486,17 @@ document.write(`
 <div class="proof theorem admonition" id="properties-of-the-identity-matrix">
 <p class="admonition-title"><span class="caption-number">Theorem 1.5 </span> (Properties of the identity matrix)</p>
 <section class="theorem-content" id="proof-content">
+<p>The identity matrix has the following properties:</p>
 <ul class="simple">
-<li><p>For any <span class="math notranslate nohighlight">\(m\times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span>:   <span class="math notranslate nohighlight">\(I_m A = A I_n\)</span>;</p></li>
-<li><p>For any <span class="math notranslate nohighlight">\(n\times n\)</span> square matrix <span class="math notranslate nohighlight">\(A\)</span>:   <span class="math notranslate nohighlight">\(IA=AI=A\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(I\)</span> is the identify element with resepct to matrix multiplication, i.e., <span class="math notranslate nohighlight">\(I A = A I = A\)</span>;</p></li>
+<li><p>The produce of an invertible square matrix <span class="math notranslate nohighlight">\(A\)</span> and its <a class="reference internal" href="1.4_Inverse_matrix.html#inverse-matrix-section"><span class="std std-ref">inverse</span></a> is the identify matrix, i.e., <span class="math notranslate nohighlight">\(AA^{-1} = A^{-1}A = I\)</span>.</p></li>
 </ul>
-<p>Thus for square matrices <span class="math notranslate nohighlight">\(I\)</span> is an identity element with respect to matrix multiplication.</p>
 </section>
 </div><div class="proof example admonition" id="identity-matrix-example">
 <p class="admonition-title"><span class="caption-number">Example 1.8 </span></p>
 <section class="example-content" id="proof-content">
 <p>Given the matrices <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(B = \begin{pmatrix} 1 &amp; 2 \\ 4 &amp; 3 \\ -2 &amp; 1 \end{pmatrix}\)</span> evaluate:</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(IA\)</span>;</p>
+<p>(i)   <span class="math notranslate nohighlight">\(IA\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -510,7 +511,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
     &amp;= \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 </div>
-</details><p>  (ii)   <span class="math notranslate nohighlight">\(AI\)</span>;</p>
+</details><p>(ii)   <span class="math notranslate nohighlight">\(AI\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -525,7 +526,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
     &amp;= \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 </div>
-</details><p>  (iii)   <span class="math notranslate nohighlight">\(IB\)</span>.</p>
+</details><p>(iii)   <span class="math notranslate nohighlight">\(IB\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
