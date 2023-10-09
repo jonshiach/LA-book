@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>6.4. Composite linear transformations &#8212; Linear Algebra Lecture Notes</title>
+    <title>4.4. Shortest distance problems &#8212; Linear Algebra Lecture Notes</title>
   
   
   
@@ -66,13 +66,13 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/6.1_Composite_transformations';</script>
-    <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/6.1_Composite_transformations.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/4.3_Shortest_distance_problems';</script>
+    <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/4.3_Shortest_distance_problems.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6.5. Rotation, reflection and scaling" href="6.2_Rotation_reflection_and_translation.html" />
-    <link rel="prev" title="6. Linear Transformations" href="6.0_Linear_transformations.html" />
+    <link rel="next" title="4.5. Co-ordinate geometry exercises" href="4.4_Coordinate_geometry_exercises.html" />
+    <link rel="prev" title="4.3. Planes" href="4.2_Planes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -199,10 +199,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="4.0_Coordinate_geometry.html">4. Co-ordinate Geometry</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="4.0_Coordinate_geometry.html">4. Co-ordinate Geometry</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="4.1_Lines.html">4.2. Lines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.2_Planes.html">4.3. Planes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4.3_Shortest_distance_problems.html">4.4. Shortest distance problems</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.4. Shortest distance problems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate geometry exercises</a></li>
 </ul>
 </li>
@@ -213,8 +213,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="5.5_Vector_spaces_exercises.html">5.6. Vector spaces exercises</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="6.0_Linear_transformations.html">6. Linear Transformations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.4. Composite linear transformations</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="6.0_Linear_transformations.html">6. Linear Transformations</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="6.1_Composite_transformations.html">6.4. Composite linear transformations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.2_Rotation_reflection_and_translation.html">6.5. Rotation, reflection and scaling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.3_Translation.html">6.6. Translation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.7. Transformations exercises</a></li>
@@ -277,7 +277,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/pages/6.1_Composite_transformations.md" target="_blank"
+      <li><a href="../_sources/pages/4.3_Shortest_distance_problems.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -359,7 +359,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Composite linear transformations</h1>
+    <h1>Shortest distance problems</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -369,7 +369,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#composite-transformation-matrices">6.4.1. Composite transformation matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#index-1">4.4.1. Shortest distance between two points</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shortest-distance-between-a-line-and-a-point">4.4.2. Shortest distance between a line and a point</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shortest-distance-between-two-lines">4.4.3. Shortest distance between two lines</a></li>
 </ul>
             </nav>
         </div>
@@ -381,20 +383,48 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <span class="target" id="composite-linear-transformations-section"></span><section class="tex2jax_ignore mathjax_ignore" id="composite-linear-transformations">
-<span id="index-0"></span><h1><span class="section-number">6.4. </span>Composite linear transformations<a class="headerlink" href="#composite-linear-transformations" title="Permalink to this heading">#</a></h1>
-<div class="proof definition admonition" id="composite-transformation-definition">
-<p class="admonition-title"><span class="caption-number">Definition 6.4 </span> (Composite transformations)</p>
-<section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(S : V \to W\)</span> and <span class="math notranslate nohighlight">\(T: W \to X\)</span> be two linear transformations over the vector spaces <span class="math notranslate nohighlight">\(V, W\)</span> and <span class="math notranslate nohighlight">\(X\)</span>. The <strong>composition</strong> of <span class="math notranslate nohighlight">\(S\)</span> and <span class="math notranslate nohighlight">\(T\)</span> is the transformation <span class="math notranslate nohighlight">\(S \circ T: V \to X\)</span> defined by</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="shortest-distance-problems">
+<h1><span class="section-number">4.4. </span>Shortest distance problems<a class="headerlink" href="#shortest-distance-problems" title="Permalink to this heading">#</a></h1>
+<p id="id1"><span id="index-0"></span>We can take advantage of vector geometry to calculate the solutions to shortest distance problems.</p>
+<span class="target" id="shortest-distance-between-two-points"></span><section id="index-1">
+<span id="id2"></span><h2><span class="section-number">4.4.1. </span>Shortest distance between two points<a class="headerlink" href="#index-1" title="Permalink to this heading">#</a></h2>
+<p>In <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> the shortest distance, <span class="math notranslate nohighlight">\(d\)</span>, between two points <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> is the length of a straight line segment connecting them. If we think about this segment as of a vector, then</p>
 <div class="math notranslate nohighlight">
-\[ (S \circ T)(\mathbf{u}) = S(T(\mathbf{u})), \]</div>
-<p>for all vectors <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span>.</p>
+\[ d = |\overrightarrow{PQ}| = \sqrt{\displaystyle\sum_{i=1}^n (p_i-q_i)^2}, \]</div>
+<p>where <span class="math notranslate nohighlight">\(P=(p_1,p_2,\dots,p_n)\)</span> and <span class="math notranslate nohighlight">\(Q=(q_1,q_2,\dots,q_n)\)</span>.</p>
 </section>
-</div><div class="proof example admonition" id="composite-transformation-example">
-<p class="admonition-title"><span class="caption-number">Example 6.5 </span></p>
+<section id="shortest-distance-between-a-line-and-a-point">
+<span id="index-2"></span><h2><span class="section-number">4.4.2. </span>Shortest distance between a line and a point<a class="headerlink" href="#shortest-distance-between-a-line-and-a-point" title="Permalink to this heading">#</a></h2>
+<p>To the shortest distance, <span class="math notranslate nohighlight">\(d\)</span>, between a line <span class="math notranslate nohighlight">\(\mathbf{r} = \mathbf{p} + t\mathbf{d}\)</span> and a point with position vector <span class="math notranslate nohighlight">\(\mathbf{q}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> is the length of the vector <span class="math notranslate nohighlight">\(\mathbf{q} - \mathbf{r}\)</span> which is perpendicular to <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> (<a class="reference internal" href="#line-point-distance-figure"><span class="std std-numref">Fig. 4.10</span></a>).</p>
+<figure class="align-default" id="line-point-distance-figure">
+<a class="reference internal image-reference" href="../_images/line_point_distance.svg"><img alt="../_images/line_point_distance.svg" src="../_images/line_point_distance.svg" width="450" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.10 </span><span class="caption-text">The shortest distance of a point <span class="math notranslate nohighlight">\(\mathbf{q}\)</span> from the line <span class="math notranslate nohighlight">\(\mathbf{r} = \mathbf{p} + t \mathbf{d}\)</span> is the length of the vector <span class="math notranslate nohighlight">\(\mathbf{q} - \mathbf{r}\)</span> which is perpendicular to <span class="math notranslate nohighlight">\(\mathbf{d}\)</span>.</span><a class="headerlink" href="#line-point-distance-figure" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Since <span class="math notranslate nohighlight">\(\mathbf{q} - \mathbf{r}\)</span> is perpendicular to <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> then since the dot product between two perpendicular vectors is zero then</p>
+<div class="math notranslate nohighlight">
+\[ \mathbf{d} \cdot (\mathbf{r} - \mathbf{q}) = 0, \]</div>
+<p>Substituting the <a class="reference internal" href="4.1_Lines.html#vector-equation-of-a-line-definition">vector equation of a line</a>  and rearranging to make <span class="math notranslate nohighlight">\(t\)</span> the subject gives</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \mathbf{d} \cdot (\mathbf{r} - \mathbf{q}) &amp;= 0 \\
+    \mathbf{d} \cdot (\mathbf{p} + t \mathbf{d} - \mathbf{q}) &amp;= 0 \\
+    \mathbf{d} \cdot \mathbf{p} + t \mathbf{d} \cdot \mathbf{d} - \mathbf{d} \cdot \mathbf{q} &amp;= 0 \\
+    \therefore t &amp;= \frac{\mathbf{d} \cdot \mathbf{q} - \mathbf{d} \cdot \mathbf{p}}{\mathbf{d} \cdot \mathbf{d}}.
+\end{align*} \end{split}\]</div>
+<p>This gives the value of the parameter <span class="math notranslate nohighlight">\(t\)</span> that can be used to calculate the position vector <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> and therefore the shortest distance between the point <span class="math notranslate nohighlight">\(\mathbf{q}\)</span> and the line is <span class="math notranslate nohighlight">\(|\mathbf{q} - \mathbf{r}|\)</span><a class="footnote-reference brackets" href="#id4" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
+<div class="proof theorem admonition" id="point-line-distance-theorem">
+<p class="admonition-title"><span class="caption-number">Theorem 4.1 </span> (The shortest distance between a point and a line)</p>
+<section class="theorem-content" id="proof-content">
+<p>The shortest distance between the point with position vector <span class="math notranslate nohighlight">\(\mathbf{q}\)</span> and a line that passes through the point with position vector <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> in the direction <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> is <span class="math notranslate nohighlight">\(|\mathbf{q} - \mathbf{r}|\)</span> where <span class="math notranslate nohighlight">\(\mathbf{r} = \mathbf{p} + t \mathbf{d}\)</span> and</p>
+<div class="math notranslate nohighlight" id="equation-point-line-t-equation">
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-point-line-t-equation" title="Permalink to this equation">#</a></span>\[ t = \frac{\mathbf{d} \cdot \mathbf{q} - \mathbf{d} \cdot \mathbf{p}}{\mathbf{d} \cdot \mathbf{d}}. \]</div>
+</section>
+</div><div class="proof example admonition" id="point-line-distance-example">
+<p class="admonition-title"><span class="caption-number">Example 4.8 </span></p>
 <section class="example-content" id="proof-content">
-<p>Two linear transformations is defined as <span class="math notranslate nohighlight">\(T:(x, y, z)^\mathsf{T} \mapsto (2 x + 4 y, -x + 3 y, x + 2 y)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(S:(x, y)^\mathsf{T} \mapsto (2x + y - z, 3x + z, y - 2z)^\mathsf{T}\)</span>, determine the composite linear transformation <span class="math notranslate nohighlight">\(S \circ T(\mathbf{u})\)</span> for <span class="math notranslate nohighlight">\(\mathbf{u} = (x, y, z)^\mathsf{T}\)</span>.</p>
+<p>Find the shortest distance between the point with position vector <span class="math notranslate nohighlight">\(\mathbf{q} = (2,2,2)\)</span> and the line <span class="math notranslate nohighlight">\((t,t-2, t+1)\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -402,42 +432,91 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Writing the line in the form <span class="math notranslate nohighlight">\(\mathbf{r} = \mathbf{p} + t \mathbf{d}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \mathbf{r} = \begin{pmatrix} 0 \\ -2 \\ 1 \end{pmatrix} + t
+\begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix}, \end{split}\]</div>
+<p class="sd-card-text">so the direction vector is <span class="math notranslate nohighlight">\(\mathbf{d} = (1, 1, 1)\)</span>. Using equation <a class="reference internal" href="#equation-point-line-t-equation">(4.3)</a></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    S \circ T\begin{pmatrix} x \\ y \\ z \end{pmatrix} &amp;= 
-    S \left( T\begin{pmatrix} x \\ y \\ z \end{pmatrix} \right)
-    = S \begin{pmatrix} 2 x + 4 \\ - x + 3y \\ x + 2 y \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 
-        2(2 x + 4 y) + (-x + 3 y) - (x + 2 y) \\ 
-        3(2 x + 4 y) + (x + 2 y) \\
-        (-x + 3 y) - 2(x + 2 y)
-    \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 2 x + 9 y \\ 7 x + 14 y \\ -3 x - y \end{pmatrix}.
+    t &amp;= \frac{\mathbf{d} \cdot \mathbf{q} - \mathbf{d} \cdot \mathbf{p}}{\mathbf{d} \cdot \mathbf{d}} \\
+    &amp;= \frac{
+        \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix} \cdot
+        \begin{pmatrix} 2 \\ 2 \\ 2 \end{pmatrix} -
+        \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix} \cdot
+        \begin{pmatrix} 0 \\ -2 \\ 1 \end{pmatrix}
+    }{
+        \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix} \cdot
+        \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix}
+    } \\
+    &amp;= \frac{6 + 1}{3} = \frac{7}{3}.
+\end{align*} \end{split}\]</div>
+<p class="sd-card-text">So the point on the line which is closest to <span class="math notranslate nohighlight">\(\mathbf{q}\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \mathbf{r} = 
+    \begin{pmatrix} 0 \\ -2 \\ 1 \end{pmatrix} + \frac{7}{3} 
+    \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix} =
+    \begin{pmatrix} 7/3 \\ 1/3 \\ 10/3 \end{pmatrix},
+\end{align*} \end{split}\]</div>
+<p class="sd-card-text">and the shortest distance is <span class="math notranslate nohighlight">\(|\mathbf{q} - \mathbf{r}|\)</span> so</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \mathbf{q} - \mathbf{r} &amp;= \begin{pmatrix} 2 \\ 2 \\ 2 \end{pmatrix} - 
+    \begin{pmatrix} 7/3 \\ 1/3 \\ 10/3 \end{pmatrix} =
+    \begin{pmatrix} - 1/3 \\ 5/3 \\ -4/3 \end{pmatrix}, \\
+    \therefore d &amp;= \sqrt{\left(-\frac{1}{3}\right)^2 + \left(\frac{5}{3}\right)^2 + \left( -\frac{4}{3}\right)^2} \\
+    &amp;= \sqrt{\frac{14}{3}} \approx 2.16.
 \end{align*} \end{split}\]</div>
 </div>
 </details></section>
-</div><section id="composite-transformation-matrices">
-<h2><span class="section-number">6.4.1. </span>Composite transformation matrices<a class="headerlink" href="#composite-transformation-matrices" title="Permalink to this heading">#</a></h2>
-<p>We have seen that a linear transformation <span class="math notranslate nohighlight">\(T: V \to W\)</span> can be represented by a <a class="reference internal" href="6.0_Linear_transformations.html#transformation-matrix-definition">transformation matrix</a> so that given a vector <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> the image is calculated using</p>
-<div class="math notranslate nohighlight" id="equation-composite-transformation-matrix-equation-1">
-<span class="eqno">(6.3)<a class="headerlink" href="#equation-composite-transformation-matrix-equation-1" title="Permalink to this equation">#</a></span>\[ T(\mathbf{u}) = A \mathbf{u}. \]</div>
-<p>Consider the composition of <span class="math notranslate nohighlight">\(T\)</span> with another linear transformation <span class="math notranslate nohighlight">\(S: W \to X\)</span> with a transformation matrix <span class="math notranslate nohighlight">\(B\)</span></p>
-<div class="math notranslate nohighlight" id="equation-composite-transformation-matrix-equation-2">
-<span class="eqno">(6.4)<a class="headerlink" href="#equation-composite-transformation-matrix-equation-2" title="Permalink to this equation">#</a></span>\[ S \circ T(\mathbf{u}) = B \cdot T(\mathbf{u}) \]</div>
-<p>Substituting equation <a class="reference internal" href="#equation-composite-transformation-matrix-equation-1">(6.3)</a> into equation <a class="reference internal" href="#equation-composite-transformation-matrix-equation-1">(6.3)</a> gives</p>
+</div></section>
+<section id="shortest-distance-between-two-lines">
+<span id="index-3"></span><h2><span class="section-number">4.4.3. </span>Shortest distance between two lines<a class="headerlink" href="#shortest-distance-between-two-lines" title="Permalink to this heading">#</a></h2>
+<p>Given two lines <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> described by <span class="math notranslate nohighlight">\(\mathbf{r}_1 = \mathbf{p}_1 + t \mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{r}_2 =  \mathbf{p}_2 + t \mathbf{d}_2\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> we have three situations to consider</p>
+<ul class="simple">
+<li><p>If the two lines intersect then obviously the shortest distance is obviously 0.</p></li>
+<li><p>If the two lines are parallel then any point on <span class="math notranslate nohighlight">\(\ell_1\)</span> can gives the shortest distance between <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span>. Hence we simply choose a point on <span class="math notranslate nohighlight">\(\ell_2\)</span> and apply method for <a class="reference internal" href="#point-line-distance-theorem">finding the distance between a point and a line</a>.</p></li>
+<li><p>If the two lines are skew then the shortest distance is the distance of the chord that is perpendicular to both <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> (<a class="reference internal" href="#line-line-distance-figure"><span class="std std-numref">Fig. 4.11</span></a>).</p></li>
+</ul>
+<figure class="align-default" id="line-line-distance-figure">
+<a class="reference internal image-reference" href="../_images/line_line_distance.svg"><img alt="../_images/line_line_distance.svg" src="../_images/line_line_distance.svg" width="350" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4.11 </span><span class="caption-text">The shortest distance between skew lines is the distance of the chord which is perpendicular to both lines.</span><a class="headerlink" href="#line-line-distance-figure" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>If <span class="math notranslate nohighlight">\(\mathbf{r}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{r}_2\)</span> are points on the lines <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> respectively then the chord <span class="math notranslate nohighlight">\(\mathbf{r}_1 \to  \mathbf{q}_2\)</span> which is perpendicular to both lines has the direction vector <span class="math notranslate nohighlight">\(\mathbf{n} = \mathbf{d}_1 \times \mathbf{d}_2\)</span>. If <span class="math notranslate nohighlight">\(d\)</span> is the distance between <span class="math notranslate nohighlight">\(\mathbf{r}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{r}_2\)</span> then</p>
+<div class="math notranslate nohighlight" id="equation-line-line-distance-equation-1">
+<span class="eqno">(4.4)<a class="headerlink" href="#equation-line-line-distance-equation-1" title="Permalink to this equation">#</a></span>\[ \mathbf{r}_2 - \mathbf{r}_1 = d (\mathbf{d}_1 \times \mathbf{d}_2), \]</div>
+<p>Let <span class="math notranslate nohighlight">\(\hat{\mathbf{n}} = \dfrac{\mathbf{d}_1 \times \mathbf{d}_2}{|\mathbf{d}_1 \times \mathbf{d}_2|}\)</span> and substituting the equations of <span class="math notranslate nohighlight">\(\mathbf{r}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{r}_2\)</span> equation <a class="reference internal" href="#equation-line-line-distance-equation-1">(4.4)</a> gives</p>
 <div class="math notranslate nohighlight">
-\[ S \circ T (\mathbf{u}) = B \cdot A \mathbf{u}. \]</div>
-<div class="proof theorem admonition" id="composite-transformation-matrices-theorem">
-<p class="admonition-title"><span class="caption-number">Theorem 6.2 </span> (Composite transformation matrices)</p>
+\[\begin{split} \begin{align*}
+    \mathbf{r}_2 - \mathbf{r}_1 &amp;= d \hat{\mathbf{n}}\\
+    (\mathbf{p}_2 + t_2 \mathbf{d}_2) - (\mathbf{p}_1 + t_1 \mathbf{d}_1) 
+    &amp;= d \hat{\mathbf{n}}\\
+    (\mathbf{p}_2 + t_2 \mathbf{d}_2) \cdot \hat{\mathbf{n}} - (\mathbf{p}_1 + t_1 \mathbf{d}_1) \cdot \hat{\mathbf{n}} 
+    &amp;= d \hat{\mathbf{n}} \cdot \hat{\mathbf{n}} \\
+    \mathbf{p}_2 \cdot \hat{\mathbf{n}} + t_2 \mathbf{d}_2 \cdot \hat{\mathbf{n}} - \mathbf{p}_1 \cdot \hat{\mathbf{n}} - t_1 \mathbf{d}_1 \cdot \hat{\mathbf{n}} 
+    &amp;= d \hat{\mathbf{n}} \cdot \hat{\mathbf{n}}.
+\end{align*} \end{split}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> is perpendicular to both <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> then <span class="math notranslate nohighlight">\(\mathbf{d}_1 \cdot \mathbf{n} = \mathbf{d}_2 \cdot \mathbf{n} = 0\)</span> and <span class="math notranslate nohighlight">\(\hat{\mathbf{n}} \cdot \hat{\mathbf{n}} = 1\)</span> then</p>
+<div class="math notranslate nohighlight">
+\[ \mathbf{p}_2 \cdot \hat{\mathbf{n}} - \mathbf{p}_1 \cdot \hat{\mathbf{n}} = d, \]</div>
+<p>which simplifies to</p>
+<div class="math notranslate nohighlight">
+\[ d = (\mathbf{p}_2 - \mathbf{p}_1) \cdot \hat{\mathbf{n}}. \]</div>
+<div class="proof theorem admonition" id="line-line-distance-theorem">
+<p class="admonition-title"><span class="caption-number">Theorem 4.2 </span> (The shortest distance between two skew lines)</p>
 <section class="theorem-content" id="proof-content">
-<p>Given two linear transformations <span class="math notranslate nohighlight">\(T:V \to W\)</span> and <span class="math notranslate nohighlight">\(S:W \to X\)</span> with transformation matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> respectively then the composition <span class="math notranslate nohighlight">\(S \circ T\)</span> of the vector <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> is<a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
-<div class="math notranslate nohighlight" id="equation-composite-transformation-matrices-theorem-equation">
-<span class="eqno">(6.5)<a class="headerlink" href="#equation-composite-transformation-matrices-theorem-equation" title="Permalink to this equation">#</a></span>\[ S \circ T (\mathbf{u}) = B \cdot A \cdot \mathbf{u}. \]</div>
+<p>The shortest distance between two skew lines <span class="math notranslate nohighlight">\(\mathbf{r}_1 = \mathbf{p}_1 + t_1 \mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{r}_2 = \mathbf{p}_2 + t_2 \mathbf{d}_2\)</span> is</p>
+<div class="math notranslate nohighlight" id="equation-line-line-distance-equation">
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-line-line-distance-equation" title="Permalink to this equation">#</a></span>\[ d = (\mathbf{p}_2 - \mathbf{p}_1) \cdot \hat{\mathbf{n}}.\]</div>
+<p>where <span class="math notranslate nohighlight">\(\hat{\mathbf{n}} = \dfrac{\mathbf{d}_1 \times \mathbf{d}_2}{|\mathbf{d}_1 \times \mathbf{d}_2|}\)</span>.</p>
 </section>
-</div><div class="proof example admonition" id="composite-transformation-matrix-example">
-<p class="admonition-title"><span class="caption-number">Example 6.6 </span></p>
+</div><div class="proof example admonition" id="line-line-distance-example">
+<p class="admonition-title"><span class="caption-number">Example 4.9 </span></p>
 <section class="example-content" id="proof-content">
-<p>Calculate the transformation matrices, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, for the transformations <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(S\)</span> from <a class="reference internal" href="#composite-transformation-example">Example 6.5</a> and use them to calculate the transformation matrix <span class="math notranslate nohighlight">\(C\)</span> for <span class="math notranslate nohighlight">\(S\circ T\)</span>.</p>
+<p>Find the shortest distance between the two skew lines <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> defined by <span class="math notranslate nohighlight">\((t_1, 1 + 4t_1, 3 + 2 t_1)\)</span> and <span class="math notranslate nohighlight">\((1, 1 + 2t_2, 3 + 4t_2)\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -445,28 +524,48 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">First, we need to identify the direction vectors <span class="math notranslate nohighlight">\(\mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}_2\)</span>. Writing <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> in the form <span class="math notranslate nohighlight">\(\mathbf{r} = \mathbf{p} + t \mathbf{d}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    A &amp;= \begin{pmatrix} 2 &amp; 4 \\ -1 &amp; 3 \\ 1 &amp; 2 \end{pmatrix}, \\
-    B &amp;= \begin{pmatrix} 2 &amp; 1 &amp; - 1 \\ 3 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; -2 \end{pmatrix}, \\ 
-    \therefore C &amp;= BA = \begin{pmatrix} 2 &amp; 1 &amp; - 1 \\ 3 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; -2 \end{pmatrix}
-    \begin{pmatrix} 2 &amp; 4 \\ -1 &amp; 3 \\ 1 &amp; 2 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 2 &amp; 9 \\ 7 &amp; 14 \\ -3 &amp; 1 \end{pmatrix}.
+    \mathbf{r}_1 &amp;= \mathbf{p}_1 + t_1 \mathbf{d}_1 = \begin{pmatrix} 0 \\ 1 \\ 3 \end{pmatrix} + t_1
+    \begin{pmatrix} 1 \\ 4 \\ 2 \end{pmatrix} , \\
+    \mathbf{r}_2 &amp;= \mathbf{p}_2 + t_2 \mathbf{d}_2 = \begin{pmatrix} 1 \\ 1 \\ 3 \end{pmatrix} + t_2
+    \begin{pmatrix} 0 \\ 2 \\ 4 \end{pmatrix},
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Checking that <span class="math notranslate nohighlight">\(C \mathbf{u}\)</span> gives the answer from <a class="reference internal" href="#composite-transformation-example">Example 6.5</a></p>
+<p class="sd-card-text">therefore <span class="math notranslate nohighlight">\(\mathbf{d}_1 = (1, 4, 2)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}_2 = (0, 2, 4)\)</span>. Now we can calculate <span class="math notranslate nohighlight">\(\hat{\mathbf{n}}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    C \cdot \begin{pmatrix} x \\ y \\ z \end{pmatrix} = 
-    \begin{pmatrix} 2 &amp; 9 \\ 7 &amp; 14 \\ -3 &amp; 1 \end{pmatrix}
-    \begin{pmatrix} x \\ y \\ z \end{pmatrix} =
-    \begin{pmatrix} 2 x + 9 y \\ 7 x + 14 y \\ -3 x + y \end{pmatrix} \quad \checkmark
+    \mathbf{n} &amp;= \mathbf{d}_1 \times \mathbf{d}_2
+    = \begin{vmatrix} 
+        \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+        1 &amp; 4 &amp; 2 \\
+        0 &amp; 2 &amp; 4
+    \end{vmatrix} = 
+    \begin{pmatrix} 12 \\ -4 \\ 2 \end{pmatrix}, \\
+    |\mathbf{n}| &amp;= \sqrt{12^2 + (-4)^2 + 2^2} = \sqrt{164} = 2\sqrt{41}, \\
+    \therefore \hat{\mathbf{n}} &amp;= \frac{\mathbf{n}}{|\mathbf{n}|} 
+    = \frac{1}{2\sqrt{41}}
+    \begin{pmatrix} 12 \\ -4 \\ 2 \end{pmatrix} 
+    = 
+    \begin{pmatrix} 6\sqrt{41}/41 \\ -2\sqrt{41}/41 \\ \sqrt{41}/41 \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+<p class="sd-card-text">Note that since <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> is non-zero, <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> are skew lines. Using equation <a class="reference internal" href="#equation-line-line-distance-equation">(4.5)</a></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    d &amp;= (\mathbf{p}_2 - \mathbf{p}_1) \cdot \hat{\mathbf{n}} \\
+    &amp;= \left( \begin{pmatrix} 1 \\ 1 \\ 3 \end{pmatrix} -
+    \begin{pmatrix} 0 \\ 1 \\ 3 \end{pmatrix} \right) \cdot 
+    \begin{pmatrix} 6\sqrt{41}/41 \\ -2\sqrt{41}/41 \\ \sqrt{41}/41 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} \cdot 
+    \begin{pmatrix} 6\sqrt{41}/41 \\ -2\sqrt{41}/41 \\ \sqrt{41}/41 \end{pmatrix} \\
+    &amp;= \frac{6 \sqrt{41}}{41}.
 \end{align*} \end{split}\]</div>
 </div>
 </details></section>
 </div><hr class="footnotes docutils" />
-<aside class="footnote brackets" id="id2" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>This is the reason why <a class="reference internal" href="1.1_Matrix_multiplication.html#matrix-multiplication-definition">matrix multiplication</a> is defined how it is.</p>
+<aside class="footnote brackets" id="id4" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">1</a><span class="fn-bracket">]</span></span>
+<p>The dot product of between vector <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and itself is sometimes denoted as <span class="math notranslate nohighlight">\(\mathbf{a}^2 = \mathbf{a} \cdot \mathbf{a}\)</span>.</p>
 </aside>
 </section>
 </section>
@@ -503,20 +602,20 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="6.0_Linear_transformations.html"
+       href="4.2_Planes.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Linear Transformations</p>
+        <p class="prev-next-title"><span class="section-number">4.3. </span>Planes</p>
       </div>
     </a>
     <a class="right-next"
-       href="6.2_Rotation_reflection_and_translation.html"
+       href="4.4_Coordinate_geometry_exercises.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6.5. </span>Rotation, reflection and scaling</p>
+        <p class="prev-next-title"><span class="section-number">4.5. </span>Co-ordinate geometry exercises</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -538,7 +637,9 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#composite-transformation-matrices">6.4.1. Composite transformation matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#index-1">4.4.1. Shortest distance between two points</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shortest-distance-between-a-line-and-a-point">4.4.2. Shortest distance between a line and a point</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shortest-distance-between-two-lines">4.4.3. Shortest distance between two lines</a></li>
 </ul>
   </nav></div>
 

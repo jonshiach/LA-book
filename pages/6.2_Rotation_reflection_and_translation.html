@@ -408,13 +408,13 @@ document.write(`
 <p><span class="caption-number">Fig. 6.2 </span><span class="caption-text">Rotation of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> anti-clockwise about the origin.</span><a class="headerlink" href="#rotation-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Consider the diagram in <a class="reference internal" href="#rotation-figure"><span class="std std-numref">Fig. 6.2</span></a>. To determine the linear mapping <span class="math notranslate nohighlight">\(Rot(\theta): \mathbf{u} \mapsto \mathbf{v}\)</span> we first consider the values of <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2)^\mathbf{T}\)</span> as the vector which points along the <span class="math notranslate nohighlight">\(x\)</span>-axis with the same magnitude as <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> rotated by an angle <span class="math notranslate nohighlight">\(\phi\)</span> anti-clockwise about the origin. Forming a right-angled triangle with the angle <span class="math notranslate nohighlight">\(\phi\)</span> and hypotenuse of length <span class="math notranslate nohighlight">\(|\mathbf{u}|\)</span> then</p>
+<p>Consider the diagram in <a class="reference internal" href="#rotation-figure"><span class="std std-numref">Fig. 6.2</span></a>. To determine the linear mapping <span class="math notranslate nohighlight">\(Rot(\theta): \mathbf{u} \mapsto \mathbf{v}\)</span> we first consider the values of <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2)^\mathsf{T}\)</span> as the vector which points along the <span class="math notranslate nohighlight">\(x\)</span>-axis with the same magnitude as <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> rotated by an angle <span class="math notranslate nohighlight">\(\phi\)</span> anti-clockwise about the origin. Forming a right-angled triangle with the angle <span class="math notranslate nohighlight">\(\phi\)</span> and hypotenuse of length <span class="math notranslate nohighlight">\(|\mathbf{u}|\)</span> then</p>
 <div class="math notranslate nohighlight" id="equation-rotation-equation-1">
 <span class="eqno">(6.6)<a class="headerlink" href="#equation-rotation-equation-1" title="Permalink to this equation">#</a></span>\[\begin{split} \begin{align*}
     \cos(\phi) &amp;= \frac{u_1}{|\mathbf{u}|} &amp; \therefore u_1 &amp;= |\mathbf{u}| \cos(\phi), \\
     \sin(\phi) &amp;= \frac{u_2}{|\mathbf{u}|} &amp; \therefore u_2 &amp;= |\mathbf{u}| \sin(\phi).
 \end{align*} \end{split}\]</div>
-<p>Doing similar for <span class="math notranslate nohighlight">\(\mathbf{v} = (v_x, v_y)^\mathbf{T}\)</span> we have</p>
+<p>Doing similar for <span class="math notranslate nohighlight">\(\mathbf{v} = (v_x, v_y)^\mathsf{T}\)</span> we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     v_x &amp;= |\mathbf{u}| \cos(\phi + \theta), \\
@@ -488,7 +488,7 @@ document.write(`
 <div class="proof example admonition" id="rotation-example">
 <p class="admonition-title"><span class="caption-number">Example 6.7 </span></p>
 <section class="example-content" id="proof-content">
-<p>Rotate the vector <span class="math notranslate nohighlight">\(\mathbf{u} = (2, 1)^\mathbf{T}\)</span> by angle <span class="math notranslate nohighlight">\(\theta = \frac{\pi}{2}\)</span> anti-clockwise about the origin.</p>
+<p>Rotate the vector <span class="math notranslate nohighlight">\(\mathbf{u} = (2, 1)^\mathsf{T}\)</span> by angle <span class="math notranslate nohighlight">\(\theta = \frac{\pi}{2}\)</span> anti-clockwise about the origin.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -507,7 +507,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
         0 &amp; -1 \\
         1 &amp; 0
     \end{pmatrix}. \end{split}\]</div>
-<p class="sd-card-text">Applying the transformation to <span class="math notranslate nohighlight">\(\mathbf{u} = (2, 1)^\mathbf{T}\)</span></p>
+<p class="sd-card-text">Applying the transformation to <span class="math notranslate nohighlight">\(\mathbf{u} = (2, 1)^\mathsf{T}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} Rot\left( \frac{\pi}{2} \right) \cdot \mathbf{u} = 
     \begin{pmatrix}
@@ -537,7 +537,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <p><span class="caption-number">Fig. 6.3 </span><span class="caption-text">The reflection of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> about a line that passes through the origin.</span><a class="headerlink" href="#reflection-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The simplest reflection we can perform is to reflect a vector <span class="math notranslate nohighlight">\(\mathbf{u} =(u_1, u_2)^\mathbf{T}\)</span> about the <span class="math notranslate nohighlight">\(x\)</span>-axis or <span class="math notranslate nohighlight">\(y\)</span>-axis. For example, to reflect about the <span class="math notranslate nohighlight">\(x\)</span>-axis we simply change the sign of the <span class="math notranslate nohighlight">\(y\)</span> co-ordinate (<a class="reference internal" href="#reflection-about-x-figure"><span class="std std-numref">Fig. 6.4</span></a>), i.e.,</p>
+<p>The simplest reflection we can perform is to reflect a vector <span class="math notranslate nohighlight">\(\mathbf{u} =(u_1, u_2)^\mathsf{T}\)</span> about the <span class="math notranslate nohighlight">\(x\)</span>-axis or <span class="math notranslate nohighlight">\(y\)</span>-axis. For example, to reflect about the <span class="math notranslate nohighlight">\(x\)</span>-axis we simply change the sign of the <span class="math notranslate nohighlight">\(y\)</span> co-ordinate (<a class="reference internal" href="#reflection-about-x-figure"><span class="std std-numref">Fig. 6.4</span></a>), i.e.,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} Re\!f(0) \cdot \mathbf{u} = 
 \begin{pmatrix} u_1 \\ -u_2 \end{pmatrix}, \end{split}\]</div>
@@ -626,7 +626,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="proof example admonition" id="reflection-example">
 <p class="admonition-title"><span class="caption-number">Example 6.8 </span></p>
 <section class="example-content" id="proof-content">
-<p>Reflect the vector <span class="math notranslate nohighlight">\(\mathbf{u} = \begin{pmatrix} 3 \\ -1 \end{pmatrix}\)</span> about the line that passes through the origin and has gradient of 1.</p>
+<p>Reflect the vector <span class="math notranslate nohighlight">\(\mathbf{u} = (3, -1)^\mathsf{T}\)</span> about the line that passes through the origin and has gradient of 1.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
@@ -711,7 +711,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="proof example admonition" id="scaling-example">
 <p class="admonition-title"><span class="caption-number">Example 6.9 </span></p>
 <section class="example-content" id="proof-content">
-<p>Scale the point with position vector <span class="math notranslate nohighlight">\(\mathbf{u} = \begin{pmatrix} 2 \\ 1 \end{pmatrix}\)</span> by scaling scaling vector <span class="math notranslate nohighlight">\(\mathbf{s} = \begin{pmatrix} 2 \\ 3 \end{pmatrix}\)</span>.</p>
+<p>Scale the point with position vector <span class="math notranslate nohighlight">\(\mathbf{u} = (2, 1)^\mathsf{T}\)</span> by scaling scaling vector <span class="math notranslate nohighlight">\(\mathbf{s} = (2, 3)^\mathsf{T}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to reveal)<div class="sd-summary-down docutils">
