@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
@@ -410,7 +410,7 @@ document.write(`
 </figcaption>
 </figure>
 </section>
-</div><p>Recall that <a class="reference internal" href="3.3_Vector_products.html#dot-product-definition">the dot product</a> between two perpendicular vectors is zero. So if a plane is defined by the normal vector <span class="math notranslate nohighlight">\(\mathbf{n} = (n_x, n_y, n_z)^\mathsf{T}\)</span> and a point with position vector <span class="math notranslate nohighlight">\(\mathbf{p}=(p_x, p_y, p_z)^\mathsf{T}\)</span> which lies on the plane and if <span class="math notranslate nohighlight">\((x,y,z)^\mathsf{T}\)</span> is the position vector of another point the plane then</p>
+</div><p>Recall that <a class="reference internal" href="3.3_Dot_and_cross_products.html#dot-product-definition">the dot product</a> between two perpendicular vectors is zero. So if a plane is defined by the normal vector <span class="math notranslate nohighlight">\(\mathbf{n} = (n_x, n_y, n_z)^\mathsf{T}\)</span> and a point with position vector <span class="math notranslate nohighlight">\(\mathbf{p}=(p_x, p_y, p_z)^\mathsf{T}\)</span> which lies on the plane and if <span class="math notranslate nohighlight">\((x,y,z)^\mathsf{T}\)</span> is the position vector of another point the plane then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \mathbf{n} \cdot (\mathbf{r} - \mathbf{p}) &amp;= 0 \\
@@ -427,9 +427,10 @@ document.write(`
 <section class="definition-content" id="proof-content">
 <p>The point-normal form of the plane in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> which passes through the point with position vector <span class="math notranslate nohighlight">\(\mathbf{p} = (p_x, p_y, p_z)^\mathsf{T}\)</span> with normal vector <span class="math notranslate nohighlight">\(\mathbf{n} = (n_x, n_y, n_z)^\mathsf{T}\)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-point-normal-equation">
-<span class="eqno">(4.2)<a class="headerlink" href="#equation-point-normal-equation" title="Permalink to this equation">#</a></span>\[ n_x(x - p_x) + n_y(y - p_y) + n_z(z - p_z) = 0.\]</div>
+<span class="eqno">(4.2)<a class="headerlink" href="#equation-point-normal-equation" title="Permalink to this equation">#</a></span>\[ \mathbf{n} \cdot (\mathbf{r} - \mathbf{p}) = 0,\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{r} = (x, y, z)^\mathsf{T}\)</span> is the position vector of an arbitrary point on the plane.</p>
 <figure class="align-default" id="point-normal-figure">
-<a class="reference internal image-reference" href="../_images/plane_3.svg"><img alt="../_images/plane_3.svg" src="../_images/plane_3.svg" width="400" /></a>
+<a class="reference internal image-reference" href="../_images/point_normal.svg"><img alt="../_images/point_normal.svg" src="../_images/point_normal.svg" width="400" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.9 </span><span class="caption-text">A plane can be defined by a point on the plane and the normal vector to the plane.</span><a class="headerlink" href="#point-normal-figure" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -442,7 +443,7 @@ document.write(`
 <p>(i)   Find the point-normal form of the plane;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -472,14 +473,22 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <p class="sd-card-text">Using equation <a class="reference internal" href="#equation-point-normal-equation">(4.2)</a> with <span class="math notranslate nohighlight">\(\mathbf{p} = \mathbf{p}_1\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    n_x(x - p_x) + n_y(y - p_y) + n_z(z - p_z) &amp;= 0 \\
+    \mathbf{n} \cdot (\mathbf{r} - \mathbf{p}_1) &amp;= 0 \\
+    \begin{pmatrix} -10 \\ 2 \\ 2 \end{pmatrix} \cdot \left(
+        \begin{pmatrix} x \\ y \\ z \end{pmatrix} -
+        \begin{pmatrix} 2 \\ 3 \\ 1 \end{pmatrix}
+    \right) &amp;= 0 \\
     -10(x - 2) + 2(y - 3) + 2(z - 1) &amp;= 0 \\
     -10x + 2y + 2z + 12 &amp;= 0. 
 \end{align*} \end{split}\]</div>
 <p class="sd-card-text">If we had chosen <span class="math notranslate nohighlight">\(\mathbf{p} = \mathbf{p}_2\)</span> instead</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    n_x(x - p_x) + n_y(y - p_y) + n_z(z - p_z) &amp;= 0 \\
+\mathbf{n} \cdot (\mathbf{r} - \mathbf{p}_2) &amp;= 0 \\
+    \begin{pmatrix} -10 \\ 2 \\ 2 \end{pmatrix} \cdot \left(
+        \begin{pmatrix} x \\ y \\ z \end{pmatrix} -
+        \begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix}
+    \right) &amp;= 0 \\
     -10(x - 1) + 2(y - 0) + 2(z + 1) &amp;= 0 \\
     -10x + 2y + 2z + 12 &amp;= 0.
 \end{align*} \end{split}\]</div>
@@ -488,7 +497,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 </details><p>(ii)   Do the points with position vectors <span class="math notranslate nohighlight">\(\mathbf{p}_4 = (1, 2, 1)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{p}_5 = (2, 4, 0)^\mathsf{T}\)</span> lie on the plane?</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -593,7 +602,7 @@ All 3 planes coincide: infinite solutions
 <p>Two non-parallel planes in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> are defined by the point-normal forms <span class="math notranslate nohighlight">\(3x - 4y + z - 5 = 0\)</span> and <span class="math notranslate nohighlight">\(x + y - z - 2 = 0\)</span> respectively. Find the intersection of these two planes</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>

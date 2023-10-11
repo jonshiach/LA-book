@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
@@ -408,13 +408,13 @@ document.write(`
 <p><span class="caption-number">Fig. 6.2 </span><span class="caption-text">Rotation of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> anti-clockwise about the origin.</span><a class="headerlink" href="#rotation-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Consider the diagram in <a class="reference internal" href="#rotation-figure"><span class="std std-numref">Fig. 6.2</span></a>. To determine the linear mapping <span class="math notranslate nohighlight">\(Rot(\theta): \mathbf{u} \mapsto \mathbf{v}\)</span> we first consider the values of <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2)^\mathsf{T}\)</span> as the vector which points along the <span class="math notranslate nohighlight">\(x\)</span>-axis with the same magnitude as <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> rotated by an angle <span class="math notranslate nohighlight">\(\phi\)</span> anti-clockwise about the origin. Forming a right-angled triangle with the angle <span class="math notranslate nohighlight">\(\phi\)</span> and hypotenuse of length <span class="math notranslate nohighlight">\(|\mathbf{u}|\)</span> then</p>
+<p>Consider the diagram in <a class="reference internal" href="#rotation-figure"><span class="std std-numref">Fig. 6.2</span></a>. Here we have the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> which is rotated by angle <span class="math notranslate nohighlight">\(\theta\)</span> anti-clockwise about the origin to give the vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>. To determine the linear mapping <span class="math notranslate nohighlight">\(Rot(\theta): \mathbf{u} \mapsto \mathbf{v}\)</span> we first consider the rotation from the vector <span class="math notranslate nohighlight">\(\mathbf{e}_1|\mathbf{u}|\)</span>, which points along the <span class="math notranslate nohighlight">\(x\)</span>-axis and has the same magnitude as <span class="math notranslate nohighlight">\(\mathbf{u}\)</span>, by angle <span class="math notranslate nohighlight">\(\phi\)</span> anti-clockwise about the original to <span class="math notranslate nohighlight">\(\mathbf{u}\)</span>. Forming a right-angled triangle (the blue triangle) with the angle <span class="math notranslate nohighlight">\(\phi\)</span> and hypotenuse of length <span class="math notranslate nohighlight">\(|\mathbf{u}|\)</span> then</p>
 <div class="math notranslate nohighlight" id="equation-rotation-equation-1">
 <span class="eqno">(6.6)<a class="headerlink" href="#equation-rotation-equation-1" title="Permalink to this equation">#</a></span>\[\begin{split} \begin{align*}
     \cos(\phi) &amp;= \frac{u_1}{|\mathbf{u}|} &amp; \therefore u_1 &amp;= |\mathbf{u}| \cos(\phi), \\
     \sin(\phi) &amp;= \frac{u_2}{|\mathbf{u}|} &amp; \therefore u_2 &amp;= |\mathbf{u}| \sin(\phi).
 \end{align*} \end{split}\]</div>
-<p>Doing similar for <span class="math notranslate nohighlight">\(\mathbf{v} = (v_x, v_y)^\mathsf{T}\)</span> we have</p>
+<p>Doing similar for <span class="math notranslate nohighlight">\(\mathbf{v} = (v_x, v_y)^\mathsf{T}\)</span> (the red triangle) we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     v_x &amp;= |\mathbf{u}| \cos(\phi + \theta), \\
@@ -426,7 +426,7 @@ document.write(`
     \cos(\phi + \theta) &amp;= \cos(\phi) \cos(\theta) - \sin(\phi) \sin(\theta), \\
     \sin(\phi + \theta) &amp;= \sin(\phi) \cos(\theta) + \cos(\phi) \sin(\theta),
 \end{align*} \end{split}\]</div>
-<p>then we have</p>
+<p>then</p>
 <div class="math notranslate nohighlight" id="equation-rotation-equation-2">
 <span class="eqno">(6.7)<a class="headerlink" href="#equation-rotation-equation-2" title="Permalink to this equation">#</a></span>\[\begin{split} \begin{align*}
     v_x &amp;= |\mathbf{u}| \cos(\phi) \cos(\theta) - |\mathbf{u}|\sin(\phi) \sin(\theta) \\
@@ -438,12 +438,15 @@ document.write(`
     v_x &amp;= u_1 \cos(\theta) - u_2 \sin(\theta), \\
     v_y &amp;= u_2 \cos(\theta) + u_1 \sin(\theta).
 \end{align*} \end{split}\]</div>
-<p>Therefore the rotated matrix is</p>
+<p>Therefore the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> rotated by angle <span class="math notranslate nohighlight">\(\theta\)</span> anti-clockwise about the original is</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} Rot(\theta) \cdot \mathbf{u} = \begin{pmatrix}
-    u_1 \cos(\theta) - u_2 \sin(\theta) \\
-    u_1 \sin(\theta) + u_2 \cos(\theta)
-\end{pmatrix} \end{split}\]</div>
+\[\begin{split} Rot(\theta) \cdot \mathbf{u} = 
+    \begin{pmatrix} \cos(\theta) &amp; -\sin(\theta) \\ \sin(\theta) &amp; \cos(\theta) \end{pmatrix}
+    \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} = 
+    \begin{pmatrix}
+        u_1 \cos(\theta) - u_2 \sin(\theta) \\
+        u_1 \sin(\theta) + u_2 \cos(\theta)
+    \end{pmatrix} \end{split}\]</div>
 <div class="proof theorem admonition" id="rotation-in-R2-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 6.3 </span> (Rotation in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>)</p>
 <section class="theorem-content" id="proof-content">
@@ -474,13 +477,12 @@ document.write(`
 <p>We could have also calculated the inverse of the rotation matrix to give the same result</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    Rot(\theta)^{-1} &amp;= \frac{\operatorname{adj}(Rot(\theta))}{\det(Rot(\theta))} \\
-    &amp;= \frac{1}{\cos^2(\theta) + \sin^2(\theta)}
+    Rot(\theta)^{-1} &amp;= \frac{1}{\cos^2(\theta) + \sin^2(\theta)}
     \begin{pmatrix}
         \cos(\theta) &amp; -\sin(\theta) \\
         \sin(\theta) &amp; \cos(\theta)
-    \end{pmatrix}^\mathsf{T} \\
-    &amp;= \begin{pmatrix}
+    \end{pmatrix}^\mathsf{T}
+    = \begin{pmatrix}
         \cos(\theta) &amp; \sin(\theta) \\
         -\sin(\theta) &amp; \cos(\theta)
     \end{pmatrix}.
@@ -491,7 +493,7 @@ document.write(`
 <p>Rotate the vector <span class="math notranslate nohighlight">\(\mathbf{u} = (2, 1)^\mathsf{T}\)</span> by angle <span class="math notranslate nohighlight">\(\theta = \frac{\pi}{2}\)</span> anti-clockwise about the origin.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -537,19 +539,20 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <p><span class="caption-number">Fig. 6.3 </span><span class="caption-text">The reflection of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> about a line that passes through the origin.</span><a class="headerlink" href="#reflection-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The simplest reflection we can perform is to reflect a vector <span class="math notranslate nohighlight">\(\mathbf{u} =(u_1, u_2)^\mathsf{T}\)</span> about the <span class="math notranslate nohighlight">\(x\)</span>-axis or <span class="math notranslate nohighlight">\(y\)</span>-axis. For example, to reflect about the <span class="math notranslate nohighlight">\(x\)</span>-axis we simply change the sign of the <span class="math notranslate nohighlight">\(y\)</span> co-ordinate (<a class="reference internal" href="#reflection-about-x-figure"><span class="std std-numref">Fig. 6.4</span></a>), i.e.,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} Re\!f(0) \cdot \mathbf{u} = 
-\begin{pmatrix} u_1 \\ -u_2 \end{pmatrix}, \end{split}\]</div>
-<p>and the transformation matrix is</p>
-<div class="math notranslate nohighlight" id="equation-reflection-about-x-equation">
-<span class="eqno">(6.9)<a class="headerlink" href="#equation-reflection-about-x-equation" title="Permalink to this equation">#</a></span>\[\begin{split} Re\!f(0) = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}. \end{split}\]</div>
+<p>The simplest reflection we can perform is to reflect a vector <span class="math notranslate nohighlight">\(\mathbf{u} =(u_1, u_2)^\mathsf{T}\)</span> about the <span class="math notranslate nohighlight">\(x\)</span>-axis or <span class="math notranslate nohighlight">\(y\)</span>-axis (<a class="reference internal" href="#reflection-about-x-figure"><span class="std std-numref">Fig. 6.4</span></a>).</p>
 <figure class="align-default" id="reflection-about-x-figure">
 <a class="reference internal image-reference" href="../_images/reflection_about_x.svg"><img alt="../_images/reflection_about_x.svg" src="../_images/reflection_about_x.svg" width="300" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 6.4 </span><span class="caption-text">Reflection of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> about the <span class="math notranslate nohighlight">\(x\)</span> axis.</span><a class="headerlink" href="#reflection-about-x-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<p>To reflect about the <span class="math notranslate nohighlight">\(x\)</span>-axis we simply change the sign of the <span class="math notranslate nohighlight">\(y\)</span> co-ordinate</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} Re\!f(0) \cdot \mathbf{u} = 
+\begin{pmatrix} u_1 \\ -u_2 \end{pmatrix}, \end{split}\]</div>
+<p>and the transformation matrix is</p>
+<div class="math notranslate nohighlight" id="equation-reflection-about-x-equation">
+<span class="eqno">(6.9)<a class="headerlink" href="#equation-reflection-about-x-equation" title="Permalink to this equation">#</a></span>\[\begin{split} Re\!f(0) = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}. \end{split}\]</div>
 <p>Note that here the line of reflection makes an angle of <span class="math notranslate nohighlight">\(\theta=0\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis.</p>
 <p>The determine the reflection about a line that makes and arbitrary angle <span class="math notranslate nohighlight">\(\theta\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis we first perform a rotation by <span class="math notranslate nohighlight">\(-\theta\)</span> so that the line of reflection is on the <span class="math notranslate nohighlight">\(x\)</span>-axis (<a class="reference internal" href="#reflection-about-line-1-figure"><span class="std std-numref">Fig. 6.5</span></a>). This means we can then use equation <a class="reference internal" href="#equation-reflection-about-x-equation">(6.9)</a> to reflect the rotated <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> vector to give the vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> (<a class="reference internal" href="#reflection-about-line-2-figure"><span class="std std-numref">Fig. 6.6</span></a>) before rotating by <span class="math notranslate nohighlight">\(\theta\)</span> so that the line of reflection is back to its original position (<a class="reference internal" href="#reflection-about-line-3-figure"><span class="std std-numref">Fig. 6.7</span></a>).</p>
 <figure class="align-default" id="reflection-about-line-1-figure">
@@ -629,7 +632,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <p>Reflect the vector <span class="math notranslate nohighlight">\(\mathbf{u} = (3, -1)^\mathsf{T}\)</span> about the line that passes through the origin and has gradient of 1.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -714,7 +717,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <p>Scale the point with position vector <span class="math notranslate nohighlight">\(\mathbf{u} = (2, 1)^\mathsf{T}\)</span> by scaling scaling vector <span class="math notranslate nohighlight">\(\mathbf{s} = (2, 3)^\mathsf{T}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>

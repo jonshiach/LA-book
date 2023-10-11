@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
@@ -453,12 +453,13 @@ document.write(`
 <p>Translate the point with position vector <span class="math notranslate nohighlight">\(\mathbf{u} = (2, 3)^\mathsf{T}\)</span> by the vector <span class="math notranslate nohighlight">\(\mathbf{t} = (3, -1)^\mathsf{T}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Expressing <span class="math notranslate nohighlight">\(\mathbf{u} = \begin{pmatrix} 2 \\ 3 \end{pmatrix}\)</span> using homogeneous co-ordinates we have <span class="math notranslate nohighlight">\(\mathbf{u} = \begin{pmatrix} 2 \\ 3 \\ 1 \end{pmatrix}\)</span>. The translation matrix is</p>
+<p class="sd-card-text">Expressing the position vector <span class="math notranslate nohighlight">\(\mathbf{u} = \begin{pmatrix} 2 \\ 3 \end{pmatrix}\)</span> using homogeneous co-ordinates we have <span class="math notranslate nohighlight">\(\mathbf{u} = \begin{pmatrix} 2 \\ 3 \\ 1 \end{pmatrix}\)</span>.</p>
+<p class="sd-card-text">The translation matrix is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     T\begin{pmatrix} 3 \\ -1 \end{pmatrix} =
@@ -497,7 +498,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
     \end{pmatrix}, \\
     Ref(\theta) &amp;= \begin{pmatrix}
         \cos(2\theta) &amp; \sin(2\theta) &amp; 0 \\
-        \sin(2\theta) &amp; -cos(2\theta) &amp; 0 \\
+        \sin(2\theta) &amp; -\cos(2\theta) &amp; 0 \\
         0 &amp; 0 &amp; 1
     \end{pmatrix}, \\
     S(\mathbf{s}) &amp;= \begin{pmatrix}
@@ -517,7 +518,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
     \mathbf{u}_1 &amp; \mathbf{u}_2 &amp; \cdots &amp; \mathbf{u}_m \\
     \downarrow &amp; \downarrow &amp; &amp; \downarrow
 \end{pmatrix}. \end{split}\]</div>
-<p>Then given an <span class="math notranslate nohighlight">\(3 \times 3\)</span> transformation matrix <span class="math notranslate nohighlight">\(A\)</span> we can apply this transformation to all of the vectors <span class="math notranslate nohighlight">\(\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_m\)</span> using <span class="math notranslate nohighlight">\(V = A \cdot U.\)</span></p>
+<p>Given an <span class="math notranslate nohighlight">\(3 \times 3\)</span> transformation matrix <span class="math notranslate nohighlight">\(A\)</span> we can apply this transformation to all of the vectors <span class="math notranslate nohighlight">\(\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_m\)</span> using <span class="math notranslate nohighlight">\(V = A \cdot U.\)</span></p>
 <div class="proof example admonition" id="rotation-scaling-and-translating-example">
 <p class="admonition-title"><span class="caption-number">Example 6.11 </span></p>
 <section class="example-content" id="proof-content">
@@ -525,12 +526,12 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <ul class="simple">
 <li><p>Scaled by a factor of 2 in both directions</p></li>
 <li><p>Rotated by <span class="math notranslate nohighlight">\(\pi/4\)</span> anti-clockwise about the origin</p></li>
-<li><p>Translated by the vector <span class="math notranslate nohighlight">\(\mathbf{t} = \begin{pmatrix} 6 \\ 4 \end{pmatrix}\)</span></p></li>
+<li><p>Translated by the vector <span class="math notranslate nohighlight">\(\mathbf{t} = (6,4)^\mathsf{T}\)</span></p></li>
 </ul>
 <p>Calculate the co-ordinates of the triangle after each of these transformations has been applied and determine a transformation matrix that performs all three transformations at the same time.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>

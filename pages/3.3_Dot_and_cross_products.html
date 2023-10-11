@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/3.3_Vector_products';</script>
-    <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/3.3_Vector_products.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/3.3_Dot_and_cross_products';</script>
+    <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/3.3_Dot_and_cross_products.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -277,7 +277,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/pages/3.3_Vector_products.md" target="_blank"
+      <li><a href="../_sources/pages/3.3_Dot_and_cross_products.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -369,7 +369,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dot-product">3.6.1. Dot product</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dot-product">3.6.1. Dot product</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-multiplication-revisited">3.6.1.1. Matrix multiplication revisited</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-cross-product">3.6.2. The cross product</a></li>
 </ul>
             </nav>
@@ -384,7 +387,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="dot-and-cross-products">
 <h1><span class="section-number">3.6. </span>Dot and cross products<a class="headerlink" href="#dot-and-cross-products" title="Permalink to this heading">#</a></h1>
-<p>There are two ways in which we calculate the product of two vectors, the dot product and the cross product.</p>
+<p>There are two ways in which we calculate the product of two vectors, these are known as the dot product and the cross product.</p>
 <span class="target" id="dot-product-section"></span><span class="target" id="index-0"></span><section id="dot-product">
 <span id="index-1"></span><h2><span class="section-number">3.6.1. </span>Dot product<a class="headerlink" href="#dot-product" title="Permalink to this heading">#</a></h2>
 <div class="proof definition admonition" id="dot-product-definition">
@@ -428,7 +431,7 @@ document.write(`
 <p>(i)   <span class="math notranslate nohighlight">\(\mathbf{u} \cdot \mathbf{v}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -442,7 +445,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 </details><p>(ii)   the angle between <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -457,7 +460,17 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 </div>
 </details></section>
 </div><p>Note: angles should be expressed in radians at all times.</p>
+<section id="matrix-multiplication-revisited">
+<h3><span class="section-number">3.6.1.1. </span>Matrix multiplication revisited<a class="headerlink" href="#matrix-multiplication-revisited" title="Permalink to this heading">#</a></h3>
+<p>We have already seen that the <a class="reference internal" href="1.1_Matrix_multiplication.html#matrix-multiplication-definition">multiplication of two matrices</a> is defined by</p>
+<div class="math notranslate nohighlight">
+\[ [AB]_{ij} = \sum_{k = 1}^n a_{ik}b_{kj}. \]</div>
+<p>You may note that the term in the summation is similar to the dot product. In fact, when we multiply two matrices together we are calculating the dot product between the rows of the left-hand matrix and the columns of the right-hand matrix, i.e.,</p>
+<div class="math notranslate nohighlight">
+\[ [AB]_{ij} = \mathbf{a}_i \cdot \mathbf{b}_j, \]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{a}_i\)</span> is row <span class="math notranslate nohighlight">\(i\)</span> of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}_j\)</span> is column <span class="math notranslate nohighlight">\(j\)</span> of <span class="math notranslate nohighlight">\(B\)</span>.</p>
 <span class="target" id="cross-product-section"></span><span class="target" id="index-2"></span></section>
+</section>
 <section id="the-cross-product">
 <span id="index-3"></span><h2><span class="section-number">3.6.2. </span>The cross product<a class="headerlink" href="#the-cross-product" title="Permalink to this heading">#</a></h2>
 <div class="proof definition admonition" id="cross-product-definition">
@@ -473,7 +486,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 \end{pmatrix}. \end{split}\]</div>
 <p>The cross product between two vectors <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> returns a vector that is perpendicular to both <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>. Futhermore <span class="math notranslate nohighlight">\(\mathbf{a} \times \mathbf{b} = -\mathbf{b} \times \mathbf{a}\)</span>, i.e., <span class="math notranslate nohighlight">\(\mathbf{b} \times \mathbf{a}\)</span> is a vector pointing in the exact opposite direction to <span class="math notranslate nohighlight">\(\mathbf{a} \times \mathbf{b}\)</span> (<a class="reference internal" href="#cross-product-figure"><span class="std std-numref">Fig. 3.10</span></a>).</p>
 <figure class="align-default" id="cross-product-figure">
-<a class="reference internal image-reference" href="../_images/cross_product.svg"><img alt="../_images/cross_product.svg" src="../_images/cross_product.svg" width="400" /></a>
+<a class="reference internal image-reference" href="../_images/cross_product.svg"><img alt="../_images/cross_product.svg" src="../_images/cross_product.svg" width="250" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 3.10 </span><span class="caption-text">The cross product <span class="math notranslate nohighlight">\(\mathbf{a} \times \mathbf{b}\)</span> is another vector perpendicular to both <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</span><a class="headerlink" href="#cross-product-figure" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -486,7 +499,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\mathbf{a}\times \mathbf{b}\)</span> produces a vector in the same space as <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>;</p></li>
 <li><p><span class="math notranslate nohighlight">\(\mathbf{a}\times \mathbf{b}\)</span> produces a vector that is perpendicular to both <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>;</p></li>
-<li><p><span class="math notranslate nohighlight">\(\mathbf{a} \times \mathbf{b} = -(\mathbf{b} \times \mathbf{a})\)</span> (i.e., there are two vectors perpendicular to <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> pointing in opposite directions);</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{a} \times \mathbf{b} = -(\mathbf{b} \times \mathbf{a})\)</span>   (i.e., there are two vectors perpendicular to <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> pointing in opposite directions);</p></li>
 <li><p>if <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> are parallel vectors, then <span class="math notranslate nohighlight">\(\mathbf{a}\times \mathbf{b} = \mathbf{0}\)</span>;</p></li>
 <li><p>the self cross product of a vector is the zero vector, i.e., <span class="math notranslate nohighlight">\(\mathbf{a} \times \mathbf{a} = \mathbf{0}\)</span>;</p></li>
 <li><p>the cross product is not commutative, i.e., <span class="math notranslate nohighlight">\(\mathbf{a} \times \mathbf{b} \neq \mathbf{b} \times \mathbf{a}\)</span>;</p></li>
@@ -500,7 +513,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <p>Calculate the cross product between the vectors <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 2, 3)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v} = (4, 5, 6)^\mathsf{T}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -584,7 +597,10 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dot-product">3.6.1. Dot product</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dot-product">3.6.1. Dot product</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-multiplication-revisited">3.6.1.1. Matrix multiplication revisited</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-cross-product">3.6.2. The cross product</a></li>
 </ul>
   </nav></div>

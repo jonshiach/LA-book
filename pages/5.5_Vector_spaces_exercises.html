@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
@@ -548,71 +548,26 @@ document.write(`
 <p>So this set of vectors is a basis for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>, calculating the inverse of the coefficient matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    &amp; \left( \begin{array}{ccc|ccc}
-        1 &amp; 0 &amp; -1 &amp; 1 &amp; 0 &amp; 0 \\
-        2 &amp; 5 &amp; 1 &amp; 0 &amp; 1 &amp; 0 \\
-        0 &amp; 7 &amp; 3 &amp; 0 &amp; 0 &amp; 1
-    \end{array} \right)
-    \begin{matrix} \\ R_2 - 2R_1 \\ \phantom{x} \end{matrix} \\ \\
-    \longrightarrow \quad &amp;
-    \left( \begin{array}{ccc|ccc}
-        1 &amp; 0 &amp; -1 &amp; 1 &amp; 0 &amp; 0 \\
-        0 &amp; 5 &amp; 3 &amp; -2 &amp; 1 &amp; 0 \\
-        0 &amp; 7 &amp; 3 &amp; 0 &amp; 0 &amp; 1
-    \end{array} \right)
-    \begin{matrix} \\ \frac{1}{5}R_2 \\ \phantom{x} \end{matrix} \\ \\
-    \longrightarrow \quad &amp;
-    \left( \begin{array}{ccc|ccc}
-        1 &amp; 0 &amp; -1 &amp; 1 &amp; 0 &amp; 0 \\
-        0 &amp; 1 &amp; 3/5 &amp; -2/5 &amp; 1/5 &amp; 0 \\
-        0 &amp; 7 &amp; 3 &amp; 0 &amp; 0 &amp; 1
-    \end{array} \right)
-    \begin{matrix} \\ \\ R_3 - 7R_2 \end{matrix} \\ \\
-    \longrightarrow \quad &amp;
-    \left( \begin{array}{ccc|ccc}
-        1 &amp; 0 &amp; -1 &amp; 1 &amp; 0 &amp; 0 \\
-        0 &amp; 1 &amp; 3/10 &amp; -1/10 &amp; 1/5 &amp; 0 \\
-        0 &amp; 0 &amp; -6/5 &amp; 14/5 &amp; -7/5 &amp; 1
-    \end{array} \right)
-    \begin{matrix} \\ \\ -\frac{5}{6}R_3 \end{matrix}  \\ \\
-    \longrightarrow \quad &amp;
-    \left( \begin{array}{ccc|ccc}
-        1 &amp; 0 &amp; -1 &amp; 1 &amp; 0 &amp; 0 \\
-        0 &amp; 1 &amp; 3/10 &amp; -1/10 &amp; 1/5 &amp; 0  \\
-        0 &amp; 0 &amp; 1 &amp; -7/3 &amp; 7/6 &amp; 5/6
-    \end{array} \right)
-    \begin{matrix} R_1 + R_3 \\ R_2 - \frac{3}{5}R_3 \\ \phantom{x} \end{matrix} \\ \\
-    \longrightarrow \quad &amp;
-    \left( \begin{array}{ccc|ccc}
-        1 &amp; 0 &amp; 0 &amp; -4/3 &amp; 7/6 &amp; -5/6 \\
-        0 &amp; 1 &amp; 0 &amp; 1 &amp; -1/2 &amp; 1/2  \\
-        0 &amp; 0 &amp; 1 &amp; -7/3 &amp; 7/6 &amp; -5/6
-    \end{array} \right) 
+    \det 
+    \begin{pmatrix} 1 &amp; 0 &amp; -1 \\ 2 &amp; 5 &amp; 1 \\ 0 &amp; 7 &amp; 3 \end{pmatrix} &amp;=
+    8 - 14 = -6, \\
+    \operatorname{adj}
+    \begin{pmatrix} 1 &amp; 0 &amp; -1 \\ 2 &amp; 5 &amp; 1 \\ 0 &amp; 7 &amp; 3 \end{pmatrix} &amp;=
+    \begin{pmatrix} 8 &amp; -6 &amp; 14 \\ -7 &amp; 3 &amp; -7 \\ 5 &amp; -3 &amp; 5 \end{pmatrix}^\mathsf{T} =
+    \begin{pmatrix} 8 &amp; -7 &amp; 5 \\ -6 &amp; 3 &amp; -3 \\ 14 &amp; -7 &amp; 5 \end{pmatrix}, \\
+    \therefore
+    \begin{pmatrix} 1 &amp; 0 &amp; -1 \\ 2 &amp; 5 &amp; 1 \\ 0 &amp; 7 &amp; 3 \end{pmatrix}^{-1} &amp;=
+    \frac{1}{6} \begin{pmatrix} -8 &amp; 7 &amp; -5 \\ 6 &amp; -3 &amp; 3 \\ -14 &amp; 7 &amp; -5 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>So the change of basis matrix is</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{pmatrix}
-    -4/3 &amp; 7/6 &amp; -5/6 \\
-    1 &amp; -1/2 &amp; 1/2 \\
-    -7/3 &amp; 7/6 &amp; -5/6
-\end{pmatrix}. \end{split}\]</div>
 <p>Let <span class="math notranslate nohighlight">\(U = \left\{ \begin{pmatrix} 1 \\ 2 \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ 5 \\ 7 \end{pmatrix}, \begin{pmatrix} -1 \\ 1 \\ 3 \end{pmatrix} \right\}\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \left[ \begin{pmatrix} 0 \\ 13 \\ 17 \end{pmatrix} \right]_U &amp;= 
-    \begin{pmatrix}
-        -4/3 &amp; 7/6 &amp; -5/6 \\
-        1 &amp; -1/2 &amp; 1/2 \\
-        -7/3 &amp; 7/6 &amp; -5/6
-    \end{pmatrix}
+    \frac{1}{6} \begin{pmatrix} -8 &amp; 7 &amp; -5 \\ 6 &amp; -3 &amp; 3 \\ -14 &amp; 7 &amp; -5 \end{pmatrix}
     \begin{pmatrix} 0 \\ 13 \\ 17 \end{pmatrix} =
     \begin{pmatrix} 1 \\ 2 \\ 1 \end{pmatrix}, \\
     \left[ \begin{pmatrix} 2 \\ 3 \\ 1 \end{pmatrix} \right]_U &amp;= 
-    \begin{pmatrix}
-        -4/3 &amp; 7/6 &amp; -5/6 \\
-        1 &amp; -1/2 &amp; 1/2 \\
-        -7/3 &amp; 7/6 &amp; -5/6
-    \end{pmatrix}
+    \frac{1}{6} \begin{pmatrix} -8 &amp; 7 &amp; -5 \\ 6 &amp; -3 &amp; 3 \\ -14 &amp; 7 &amp; -5 \end{pmatrix}
     \begin{pmatrix} 2 \\ 3 \\ 1 \end{pmatrix} =
     \begin{pmatrix} 0 \\ 1 \\ -2  \end{pmatrix}.
 \end{align*} \end{split}\]</div>

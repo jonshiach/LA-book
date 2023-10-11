@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
@@ -397,7 +397,7 @@ document.write(`
 <p>Two linear transformations is defined as <span class="math notranslate nohighlight">\(T:(x, y, z)^\mathsf{T} \mapsto (2 x + 4 y, -x + 3 y, x + 2 y)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(S:(x, y)^\mathsf{T} \mapsto (2x + y - z, 3x + z, y - 2z)^\mathsf{T}\)</span>, determine the composite linear transformation <span class="math notranslate nohighlight">\(S \circ T(\mathbf{u})\)</span> for <span class="math notranslate nohighlight">\(\mathbf{u} = (x, y, z)^\mathsf{T}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -440,16 +440,21 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <p>Calculate the transformation matrices, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, for the transformations <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(S\)</span> from <a class="reference internal" href="#composite-transformation-example">Example 6.5</a> and use them to calculate the transformation matrix <span class="math notranslate nohighlight">\(C\)</span> for <span class="math notranslate nohighlight">\(S\circ T\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The transformations are <span class="math notranslate nohighlight">\(T:(x, y, z)^\mathsf{T} \mapsto (2 x + 4 y, -x + 3 y, x + 2 y)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(S:(x, y)^\mathsf{T} \mapsto (2x + y - z, 3x + z, y - 2z)^\mathsf{T}\)</span> which have the transformation matrices</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    A &amp;= \begin{pmatrix} 2 &amp; 4 \\ -1 &amp; 3 \\ 1 &amp; 2 \end{pmatrix}, \\
-    B &amp;= \begin{pmatrix} 2 &amp; 1 &amp; - 1 \\ 3 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; -2 \end{pmatrix}, \\ 
-    \therefore C &amp;= BA = \begin{pmatrix} 2 &amp; 1 &amp; - 1 \\ 3 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; -2 \end{pmatrix}
+    A &amp;= \begin{pmatrix} 2 &amp; 4 \\ -1 &amp; 3 \\ 1 &amp; 2 \end{pmatrix}, &amp;
+    B &amp;= \begin{pmatrix} 2 &amp; 1 &amp; - 1 \\ 3 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; -2 \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+<p class="sd-card-text">Calculate the composite transformation matrix for <span class="math notranslate nohighlight">\(S \circ T\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    C &amp;= BA = \begin{pmatrix} 2 &amp; 1 &amp; - 1 \\ 3 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; -2 \end{pmatrix}
     \begin{pmatrix} 2 &amp; 4 \\ -1 &amp; 3 \\ 1 &amp; 2 \end{pmatrix} \\
     &amp;= \begin{pmatrix} 2 &amp; 9 \\ 7 &amp; 14 \\ -3 &amp; 1 \end{pmatrix}.
 \end{align*} \end{split}\]</div>

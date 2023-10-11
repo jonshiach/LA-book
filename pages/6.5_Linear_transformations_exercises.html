@@ -194,7 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
 </ul>
@@ -381,25 +381,25 @@ document.write(`
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row docutils">
 <div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
-<p>(a)   <span class="math notranslate nohighlight">\(T: \begin{pmatrix} x \\ y \end{pmatrix} \mapsto \begin{pmatrix} 0 \\ y \end{pmatrix}\)</span></p>
+<p>(a)   <span class="math notranslate nohighlight">\(T: (x, y)^\mathsf{T} \mapsto (9, y)^\mathsf{T}\)</span></p>
 </div>
 <div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
-<p>(b)   <span class="math notranslate nohighlight">\(T: \begin{pmatrix} x \\ y \end{pmatrix} \mapsto \begin{pmatrix} x \\ 5 \end{pmatrix}\)</span></p>
+<p>(b)   <span class="math notranslate nohighlight">\(T: (x, y)^\mathsf{T} \mapsto (x, 5)^\mathsf{T}\)</span></p>
 </div>
 <div class="sd-col sd-d-flex-column sd-col-12 sd-col-xs-12 sd-col-sm-12 sd-col-md-12 sd-col-lg-12 docutils">
 <p> </p>
 </div>
 <div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
-<p>(c)   <span class="math notranslate nohighlight">\(T: \begin{pmatrix} x \\ y \end{pmatrix} \mapsto \begin{pmatrix} x \\ x - y \end{pmatrix}\)</span></p>
+<p>(c)   <span class="math notranslate nohighlight">\(T: (x, y)^\mathsf{T} \mapsto (x, x - y)^\mathsf{T}\)</span></p>
 </div>
 <div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
-<p>(d)   <span class="math notranslate nohighlight">\(T: \begin{pmatrix} 3x + 1 \\ y \end{pmatrix} \mapsto \begin{pmatrix} x + y \\ z \end{pmatrix}\)</span></p>
+<p>(d)   <span class="math notranslate nohighlight">\(T: (x, y)^\mathsf{T} \mapsto \begin{pmatrix} x + y \\ z \end{pmatrix}\)</span></p>
 </div>
 <div class="sd-col sd-d-flex-column sd-col-12 sd-col-xs-12 sd-col-sm-12 sd-col-md-12 sd-col-lg-12 docutils">
 <p> </p>
 </div>
 <div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
-<p>(e)   <span class="math notranslate nohighlight">\(T: \begin{pmatrix} x \\ y \end{pmatrix} \mapsto \begin{pmatrix} 3x + 1 \\ y \end{pmatrix}\)</span></p>
+<p>(e)   <span class="math notranslate nohighlight">\(T: (x, y)^\mathsf{T} \mapsto (3x + 1, y)^\mathsf{T}\)</span></p>
 </div>
 <div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
 <p>(f)   <span class="math notranslate nohighlight">\(T: f(x) \mapsto \dfrac{\mathrm{d}}{\mathrm{d}x} f(x)\)</span></p>
@@ -411,20 +411,20 @@ document.write(`
 <p>(g)   <span class="math notranslate nohighlight">\(T: f(x) \mapsto xf(x)\)</span></p>
 </div>
 <div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
-<p>(h)   <span class="math notranslate nohighlight">\(T: \mathbb{C}^2 \to \mathbb{C}\)</span> where <span class="math notranslate nohighlight">\(T: \begin{pmatrix} x \\ y \end{pmatrix} \mapsto x + y\)</span></p>
+<p>(h)   <span class="math notranslate nohighlight">\(T: \mathbb{C}^2 \to \mathbb{C}\)</span> where <span class="math notranslate nohighlight">\(T: (x, y)^\mathsf{T} \mapsto x + y\)</span></p>
 </div>
 <div class="sd-col sd-d-flex-column sd-col-12 sd-col-xs-12 sd-col-sm-12 sd-col-md-12 sd-col-lg-12 docutils">
 <p> </p>
 </div>
 <div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
-<p>(i)   <span class="math notranslate nohighlight">\(T: \mathbb{C}^2 \to \mathbb{C}\)</span> where <span class="math notranslate nohighlight">\(T: \begin{pmatrix} x \\ y \end{pmatrix} \mapsto x y\)</span></p>
+<p>(i)   <span class="math notranslate nohighlight">\(T: \mathbb{C}^2 \to \mathbb{C}\)</span> where <span class="math notranslate nohighlight">\(T: (x, y)^\mathsf{T} \mapsto x y\)</span></p>
 </div>
 <div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
-<p>(j)   <span class="math notranslate nohighlight">\(T: \mathbb{C}^2 \to \mathbb{C}\)</span> where <span class="math notranslate nohighlight">\(T: \begin{pmatrix} x \\ y \end{pmatrix} \mapsto \bar{y}\)</span></p>
+<p>(j)   <span class="math notranslate nohighlight">\(T: \mathbb{C}^2 \to \mathbb{C}\)</span> where <span class="math notranslate nohighlight">\(T: (x, y)^\mathsf{T} \mapsto \bar{y}\)</span></p>
+</div>
+</div>
+</div>
 <p>(<span class="math notranslate nohighlight">\(\bar{x}\)</span> is the complex conjugate of <span class="math notranslate nohighlight">\(x = a + bi\)</span> defined by <span class="math notranslate nohighlight">\(\bar{x} = a - bi\)</span>.)</p>
-</div>
-</div>
-</div>
 </section>
 </div>
 <div class="solution dropdown admonition" id="pages/6.5_Linear_transformations_exercises-solution-1">
@@ -547,7 +547,7 @@ document.write(`
 \begin{pmatrix} -1 &amp; 3 \\ 1 &amp; -4 \end{pmatrix} 
 \begin{pmatrix} 2 \\ 5 \end{pmatrix}
 = \begin{pmatrix} 13 \\ -18 \end{pmatrix}, \end{split}\]</div>
-<p>therefore <span class="math notranslate nohighlight">\(T\begin{pmatrix} 2 \\ 5 \end{pmatrix} = (13, -18)\)</span>.</p>
+<p>therefore <span class="math notranslate nohighlight">\(T\begin{pmatrix} 2 \\ 5 \end{pmatrix} = \begin{pmatrix} 13 \\  -18 \end{pmatrix}\)</span>.</p>
 </section>
 </div>
 <div class="exercise admonition" id="transformations-ex-R2">
@@ -751,7 +751,8 @@ Re\!f \left(\pi/3\right)
 <p>(b) Translate by <span class="math notranslate nohighlight">\((-3, -2)^\mathsf{T}\)</span> so that the centre of the square is at the origin:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*} 
-    T (-\mathbf{c}) = \begin{pmatrix}
+    T \begin{pmatrix} -3 \\ -2 \end{pmatrix} = 
+    \begin{pmatrix}
         1 &amp; 0 &amp; -3 \\
         0 &amp; 1 &amp; -2 \\
         0 &amp; 0 &amp; 1 
@@ -777,10 +778,11 @@ Re\!f \left(\pi/3\right)
         0 &amp; 0 &amp; 1
     \end{pmatrix}
 \end{align*} \end{split}\]</div>
-<p>Translate by <span class="math notranslate nohighlight">\(\mathbf{c}\)</span> so that the centre of the square is back to <span class="math notranslate nohighlight">\(\mathbf{c}\)</span></p>
+<p>Translate by <span class="math notranslate nohighlight">\((3, 2)^\mathsf{T}\)</span> so that the centre of the square is back to <span class="math notranslate nohighlight">\(\mathbf{c}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    T (\mathbf{c}) &amp;= \begin{pmatrix}
+    T \begin{pmatrix} 3 \\ 2 \end{pmatrix} &amp;= 
+    \begin{pmatrix}
         1 &amp; 0 &amp; 3 \\
         0 &amp; 1 &amp; 2 \\
         0 &amp; 0 &amp; 1
@@ -789,7 +791,7 @@ Re\!f \left(\pi/3\right)
 <p>(c) Calculate composite alignment matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    A &amp;= T (\mathbf{c}) \cdot Rot\left(-\frac{\pi}{3}\right) \cdot T (-\mathbf{c}) \\
+    A &amp;= T \begin{pmatrix} 3 \\ 2 \end{pmatrix} \cdot Rot\left(-\frac{\pi}{3}\right) \cdot T \begin{pmatrix} -3 \\ -2 \end{pmatrix} \\
     &amp;= \begin{pmatrix}
         1 &amp; 0 &amp; 3 \\
         0 &amp; 1 &amp; 2 \\
