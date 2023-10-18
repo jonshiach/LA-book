@@ -597,19 +597,7 @@ document.write(`
 
 <p class="admonition-title"><span class="caption-number">Exercise 1.4 </span></p>
 <section id="exercise-content">
-<p>Using the matrices from <a class="reference internal" href="#matrices-ex2"><span class="std std-numref">Exercise 1.2</span></a> (repeated below)</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    A &amp;= \begin{pmatrix} 1 &amp; -3 \\ 4 &amp; 2 \end{pmatrix}, &amp;
-    B &amp;= \begin{pmatrix} 3 &amp; 0 \\ -1 &amp; 5 \end{pmatrix}, \\
-    C &amp;= \begin{pmatrix} 5 \\ 9 \end{pmatrix}, &amp;
-    D &amp;= \begin{pmatrix} 1 &amp; 1 &amp; 3 \\ 4 &amp; -2 &amp; 3 \end{pmatrix}, \\
-    E &amp;= \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 6 \\ -2 &amp; 3 \end{pmatrix} &amp;
-    F &amp;= \begin{pmatrix} 1 &amp; -2 &amp; 4 \end{pmatrix}, \\
-    G &amp;= \begin{pmatrix} 4 &amp; 2 &amp; 3 \\ -2 &amp; 6 &amp; 0 \\ 0 &amp; 7 &amp; 1 \end{pmatrix}, &amp;
-    H &amp;= \begin{pmatrix} 1 &amp; 0 &amp; 1 \\ 5 &amp; 2 &amp; -2 \\ 2 &amp; -3 &amp; 4 \end{pmatrix},
-\end{align*} \end{split}\]</div>
-<p>calculate the following:</p>
+<p>Using the matrices from <a class="reference internal" href="#matrices-ex2"><span class="std std-numref">Exercise 1.2</span></a> calculate the following:</p>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row docutils">
 <div class="sd-col sd-d-flex-column sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 docutils">
@@ -954,23 +942,16 @@ document.write(`
     c(a + d) = 0c = -1,
 \end{align*} \]</div>
 <p>which is a contradiction so <span class="math notranslate nohighlight">\(a = -d\)</span> yields no solutions.</p>
-<p>(h)</p>
+<p>(h) <strong>Note that this has been corrected recently</strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     (X + A)B &amp;= I \\
-    XB + AB &amp;= I \\
-    XB &amp;= I - AB \\
-    X &amp;= B^{-1}(I - AB) \\
-    &amp;= \begin{pmatrix} \frac{1}{3} &amp; 0 \\ \frac{1}{15} &amp; \frac{1}{5} \end{pmatrix}\left(
-    \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix} - 
-    \begin{pmatrix} 1 &amp; -3 \\ 4 &amp; 2 \end{pmatrix}
-    \begin{pmatrix} 3 &amp; 0 \\ -1 &amp; 5 \end{pmatrix} \right) \\
-    &amp;= \begin{pmatrix} \frac{1}{3} &amp; 0 \\ \frac{1}{15} &amp; \frac{1}{5} \end{pmatrix}\left(
-    \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix} - 
-    \begin{pmatrix} 6 &amp; -15 \\ 10 &amp; 10 \end{pmatrix} \right) \\
-    &amp;= \begin{pmatrix} \frac{1}{3} &amp; 0 \\ \frac{1}{15} &amp; \frac{1}{5} \end{pmatrix}
-    \begin{pmatrix} -5 &amp; 15 \\ -10 &amp; -9 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} -\frac{5}{3} &amp; 5 \\ -\frac{7}{3} &amp; -\frac{4}{5} \end{pmatrix}
+    X + A &amp;= I B^{-1} \\
+    X &amp;= B^{-1} - A \\
+    &amp;= \frac{1}{15} \begin{pmatrix} 5 &amp; 0 \\ 1 &amp; 3 \end{pmatrix} - 
+    \begin{pmatrix} 1 &amp; -3 \\ 4 &amp; 2 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} -2/3 &amp; 3 \\ -59/15 &amp; -9/5 \end{pmatrix} \\
+    &amp;= \frac{1}{15} \begin{pmatrix} -10 &amp; 45 \\ -59 &amp; -27 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 </section>
 </div>

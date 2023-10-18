@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1.6. Inverse matrix &#8212; Linear Algebra Lecture Notes</title>
+    <title>1.4. Matrix multiplication &#8212; Linear Algebra Lecture Notes</title>
   
   
   
@@ -66,13 +66,13 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/1.4_Inverse_matrix';</script>
-    <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/1.4_Inverse_matrix.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/1.1_Matrix_multiplication-decio (3)';</script>
+    <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/1.1_Matrix_multiplication-decio (3).html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1.7. Matrix algebra" href="1.5_Matrix_algebra.html" />
-    <link rel="prev" title="1.5. Determinants" href="1.3_Determinants.html" />
+    <link rel="next" title="1.5. Special matrices" href="1.2_Special_matrices.html" />
+    <link rel="prev" title="1.3. Matrix multiplication" href="1.1_Matrix_multiplication.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -173,11 +173,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="1.0_Matrices.html">1. Matrices</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="1.1_Matrix_multiplication.html">1.3. Matrix multiplication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.2_Special_matrices.html">1.4. Special matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.3_Determinants.html">1.5. Determinants</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.6. Inverse matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.5_Matrix_algebra.html">1.7. Matrix algebra</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.9_Matrices_exercises.html">1.8. Matrices exercises</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.4. Matrix multiplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.2_Special_matrices.html">1.5. Special matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.3_Determinants.html">1.6. Determinants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.4_Inverse_matrix.html">1.7. Inverse matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.5_Matrix_algebra.html">1.8. Matrix algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.9_Matrices_exercises.html">1.9. Matrices exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -277,7 +278,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/pages/1.4_Inverse_matrix.md" target="_blank"
+      <li><a href="../_sources/pages/1.1_Matrix_multiplication-decio (3).md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -359,7 +360,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Inverse matrix</h1>
+    <h1>Matrix multiplication</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -369,9 +370,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-adjoint-of-a-matrix">1.6.1. The adjoint of a matrix</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-a-matrix-inverse-using-the-adjoint-determinant-formula">1.6.2. Calculating a matrix inverse using the adjoint-determinant formula</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#video">1.6.3. Video</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-exponents">1.4.1. Matrix exponents</a></li>
 </ul>
             </nav>
         </div>
@@ -383,215 +382,250 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <span class="target" id="inverse-matrix-section"></span><section class="tex2jax_ignore mathjax_ignore" id="inverse-matrix">
-<span id="index-0"></span><h1><span class="section-number">1.6. </span>Inverse matrix<a class="headerlink" href="#inverse-matrix" title="Permalink to this heading">#</a></h1>
-<p>Whilst <code class="xref prf prf-ref docutils literal notranslate"><span class="pre">matrix</span> <span class="pre">multiplication</span></code> is defined for matrices of a certain size this is not true for the division of two matrices. However for certain square matrices it may be possible to compute the <strong>inverse matrix</strong> which can be multiplied by the matrix to achieve the same effect. If we consider the simpler case involving numbers, the <a class="reference internal" href="0.3_Mathematical_preliminaries.html#axioms-of-addition-and-multiplication-section"><span class="std std-ref">multiplicative inverse</span></a> of a number <span class="math notranslate nohighlight">\(x\)</span> is a number denoted by <span class="math notranslate nohighlight">\(x^{-1}\)</span> that when multiplied by <span class="math notranslate nohighlight">\(x\)</span> results in the multiplicative identity 1, so the multiplicative inverse of <span class="math notranslate nohighlight">\(x\)</span> is <span class="math notranslate nohighlight">\(1/x\)</span>. For matrices, the multiplicate identity is the <a class="reference internal" href="1.2_Special_matrices.html#identity-matrix-definition">identity matrix</a> so we can define a multiplicative inverse with respect to matrix multiplication.</p>
-<div class="proof definition admonition" id="inverse-matrix-definition">
-<p class="admonition-title"><span class="caption-number">Definition 1.20 </span> (Inverse matrix)</p>
+  <span class="target" id="matrix-multiplication-section"></span><section class="tex2jax_ignore mathjax_ignore" id="matrix-multiplication">
+<span id="index-0"></span><h1><span class="section-number">1.4. </span>Matrix multiplication<a class="headerlink" href="#matrix-multiplication" title="Permalink to this heading">#</a></h1>
+<p>We can multiply any two real numbers together but multiplication of two or more matrices is a much more complicated idea. Similarly to addition, which is only defined for matrices of the same size, matrix multiplication has constrains on the sizes of the multipliers:</p>
+<div class="proof definition admonition" id="matrix-multiplication-definition">
+<p class="admonition-title"><span class="caption-number">Definition 1.8 </span> (Matrix multiplication)</p>
 <section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be a non-zero <span class="math notranslate nohighlight">\(n \times n\)</span> matrix. Then, if there exist an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix <span class="math notranslate nohighlight">\(A^{-1}\)</span>, such that <span class="math notranslate nohighlight">\(A^{-1}A = I_n,\)</span> we say that <span class="math notranslate nohighlight">\(A^{-1}\)</span> is the <strong>inverse</strong> of the matrix <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\(m \times  n\)</span> matrix and <span class="math notranslate nohighlight">\(B\)</span> a <span class="math notranslate nohighlight">\(p \times q\)</span> matrix. The product <span class="math notranslate nohighlight">\(AB\)</span> is only defined if <span class="math notranslate nohighlight">\(n = p\)</span> and the resulting matrix has dimension <span class="math notranslate nohighlight">\(m \times q\)</span> (i.e., the number of columns in <span class="math notranslate nohighlight">\(A\)</span> has to equal the number of rows in <span class="math notranslate nohighlight">\(B\)</span>). The product of an <span class="math notranslate nohighlight">\(m \times p\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> and a <span class="math notranslate nohighlight">\(p \times n\)</span> matrix <span class="math notranslate nohighlight">\(B\)</span> is defined as</p>
+<div class="math notranslate nohighlight">
+\[ [AB]_{ij} = \sum_{k=1}^n a_{ik}b_{kj}. \]</div>
+<p>i.e., if <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are two <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{pmatrix} 
+    a_{11} &amp; a_{12} \\
+    a_{21} &amp; a_{22} 
+\end{pmatrix}
+\begin{pmatrix} 
+    b_{11} &amp; b_{12} \\
+    b_{21} &amp; b_{22}
+\end{pmatrix} =
+\begin{pmatrix}
+    a_{11} b_{11} + a_{12}b_{21} &amp; a_{11}b_{12} + a_{12} b_{22} \\
+    a_{21} b_{11} + a_{22}b_{21} &amp; a_{21}b_{12} + a_{22} b_{22}
+\end{pmatrix}. \end{split}\]</div>
 </section>
-</div><p>Note:</p>
-<ul class="simple">
-<li><p>not all square matrices have an inverse;</p></li>
-<li><p>if a matrix does not have an inverse it is said to be <strong>singular</strong>;</p></li>
-<li><p>if a matrix has an inverse it is said to be <strong>non-singular</strong> or <strong>invertible</strong>;</p></li>
-<li><p>an inverse of a square matrix is unique.</p></li>
-</ul>
-<div class="proof example admonition" id="inverse-matrix-example-1">
-<p class="admonition-title"><span class="caption-number">Example 1.13 </span></p>
+</div><p>The technique used to multiply two matrices together requires us to move across the horizontal rows of the first matrix (the <span class="math notranslate nohighlight">\(i\)</span> index) and down the vertical columns of the second matrix (the <span class="math notranslate nohighlight">\(j\)</span> index). We multiply corresponding elements together and sum the result. For example, consider the multiplication of the two <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> given below</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    A &amp;= \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}, &amp;
+    B &amp;= \begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+<p>The first thing we need to do is check whether matrix multiplication is defined for these matrices. An easy way to do this is to write the dimensions of the matrix underneath, e.g.,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    AB = \underset{2 \times \mathbf{\textcolor{red}{2}}}{\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}}
+    \underset{\textcolor{red}{2} \times 2}{\begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}}.
+\end{align*} \end{split}\]</div>
+<p>Here the two inside numbers are the same so this matrix multiplication is defined. Futhermore the dimensions of the product of these two matrices is given by the two outside numbers. To calculate the value of the element in row 1 and column 1 of <span class="math notranslate nohighlight">\(AB\)</span>, i.e., <span class="math notranslate nohighlight">\([AB]_{11}\)</span>, we use the elements from row 1 of <span class="math notranslate nohighlight">\(A\)</span> and column 1 of <span class="math notranslate nohighlight">\(B\)</span> multiplying corresponding elements and summing the result</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \begin{pmatrix} 
+        \textcolor{blue}{1} &amp; \textcolor{blue}{2} \\
+        \textcolor{lightgray}{3} &amp; \textcolor{lightgray}{4} 
+    \end{pmatrix}
+    \begin{pmatrix} 
+        \textcolor{red}{5} &amp; \textcolor{lightgray}{6} \\
+        \textcolor{red}{7} &amp; \textcolor{lightgray}{8} 
+    \end{pmatrix} =
+    \begin{pmatrix} 
+        \textcolor{blue}{1} \cdot \textcolor{red}{5} + \textcolor{blue}{2} \cdot \textcolor{red}{7} &amp; \textcolor{lightgray}{\square} \\
+        \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square}
+    \end{pmatrix} 
+    = \begin{pmatrix} 5 + 14 &amp; \textcolor{lightgray}{\square} \\ \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square} \end{pmatrix}
+    = \begin{pmatrix} 19 &amp; \textcolor{lightgray}{\square} \\ \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square} \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+<p>The value of <span class="math notranslate nohighlight">\([AB]_{12}\)</span> is calculated using elements from row 1 of <span class="math notranslate nohighlight">\(A\)</span> and column 2 of <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \begin{pmatrix}
+        \textcolor{blue}{1} &amp; \textcolor{blue}{2} \\
+        \textcolor{lightgray}{3} &amp; \textcolor{lightgray}{4}
+    \end{pmatrix}
+    \begin{pmatrix} 
+        \textcolor{lightgray}{5} &amp; \textcolor{red}{6} \\
+        \textcolor{lightgray}{7} &amp; \textcolor{red}{8} 
+    \end{pmatrix} =
+    \begin{pmatrix}
+        19 &amp; \textcolor{blue}{1} \cdot \textcolor{red}{6} + \textcolor{blue}{2} \cdot \textcolor{red}{8} \\
+        \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square}
+    \end{pmatrix}
+    = \begin{pmatrix} 19 &amp; 6 + 16 \\ \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square} \end{pmatrix}
+    = \begin{pmatrix} 19 &amp; 22 \\ \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square} \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+<p>Now that we have finished the first row of <span class="math notranslate nohighlight">\(AB\)</span> we now move to the second row. The value of <span class="math notranslate nohighlight">\([AB]_{21}\)</span> is calculated using elements from row 2 of <span class="math notranslate nohighlight">\(A\)</span> and column 1 of <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \begin{pmatrix} 
+        \textcolor{lightgray}{1} &amp; \textcolor{lightgray}{2} \\ 
+        \textcolor{blue}{3} &amp; \textcolor{blue}{4} 
+    \end{pmatrix}
+    \begin{pmatrix} 
+        \textcolor{red}{5} &amp; \textcolor{lightgray}{6} \\ 
+        \textcolor{red}{7} &amp; \textcolor{lightgray}{8} 
+    \end{pmatrix} = 
+    \begin{pmatrix} 
+        19 &amp; 22 \\
+        \textcolor{blue}{3} \cdot \textcolor{red}{5} + \textcolor{blue}{4} \cdot \textcolor{red}{7} &amp; \textcolor{lightgray}{\square}
+    \end{pmatrix}
+    = \begin{pmatrix} 19 &amp; 22 \\ 15 + 28 &amp; \textcolor{lightgray}{\square} \end{pmatrix}
+    = \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; \textcolor{lightgray}{\square} \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+<p>Finally the value of <span class="math notranslate nohighlight">\([AB]_{22}\)</span> is calculated using elements from row 2 of <span class="math notranslate nohighlight">\(A\)</span> and column 2 of <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \begin{pmatrix} 
+        \textcolor{lightgray}{1} &amp; \textcolor{lightgray}{2} \\
+        \textcolor{blue}{3} &amp; \textcolor{blue}{4}
+    \end{pmatrix}
+    \begin{pmatrix} 
+        \textcolor{lightgray}{5} &amp; \textcolor{red}{6} \\
+        \textcolor{lightgray}{7} &amp; \textcolor{red}{8}
+    \end{pmatrix} = 
+    \begin{pmatrix} 
+        19 &amp; 22 \\
+        43 &amp; \textcolor{blue}{3} \cdot \textcolor{red}{6} + \textcolor{blue}{4} \cdot \textcolor{red}{8}
+    \end{pmatrix}
+    = \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; 18 + 32 \end{pmatrix}
+    = \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; 50 \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+<figure class="margin align-default" id="id1">
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Arthur_Cayley.jpg/480px-Arthur_Cayley.jpg"><img alt="Arthur Cayley" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Arthur_Cayley.jpg/480px-Arthur_Cayley.jpg" style="width: 200px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1.2 </span><span class="caption-text"><a href="https://en.wikipedia.org/wiki/Arthur_Cayley" target="_blank">Arthur Cayley (1821 - 1895)</a></span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>This method of multiplying matrices together may seem unnecessarily convoluted when first encountered. The reason we perform matrix multiplication in this way is because English mathematician Arthur Cayley found that it allows for a convenient way to represent <a class="reference internal" href="6.1_Composite_transformations.html#composite-linear-transformations-section"><span class="std std-ref">composite linear transformations</span></a>.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dPot7peK1NI?si=6nHfWqtSAcSwj9t_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="proof example admonition" id="matrix-multiplication-example">
+<p class="admonition-title"><span class="caption-number">Example 1.8 </span></p>
 <section class="example-content" id="proof-content">
-<p>Given the two matrices
-<span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; 2 \end{pmatrix}\)</span> and
-<span class="math notranslate nohighlight">\(B = \begin{pmatrix} 2 &amp; -1 \\ -1 &amp; 1 \end{pmatrix},\)</span>
-show that <span class="math notranslate nohighlight">\(B\)</span> is the inverse of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>Given the matrices</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    A &amp;= \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix}, &amp;
+    B &amp;= \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix}, \\
+    C &amp;= \begin{pmatrix} 1 &amp; 1 &amp; 0 \\ 3 &amp; -2 &amp; 1 \end{pmatrix}, &amp;
+    D &amp;= \begin{pmatrix} 1 \\ 3 \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+<p>calculate the following (where possible):</p>
+<p>(i)   <span class="math notranslate nohighlight">\(AB\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    BA = \begin{pmatrix} 2 &amp; -1 \\ -1 &amp; 1 \end{pmatrix}\begin{pmatrix} 1 &amp; 1 \\ 1 &amp; 2 \end{pmatrix} = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix} = I.
+    AB &amp;= \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix} \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 1 \cdot 2 + 0 \cdot 1 &amp; 1 \cdot 3 + 0 \cdot 5 \\ -2 \cdot 2 + 3 \cdot 1 &amp; -2 \cdot 3 + 3 \cdot 5 \end{pmatrix} \\ 
+    &amp;= \begin{pmatrix} 2+0 &amp; 3 + 0 \\ -4+3 &amp; -6+15\end{pmatrix} \\
+    &amp;= \begin{pmatrix} 2 &amp; 3 \\ -1 &amp; 9 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 </div>
-</details></section>
-</div><section id="the-adjoint-of-a-matrix">
-<span id="index-1"></span><h2><span class="section-number">1.6.1. </span>The adjoint of a matrix<a class="headerlink" href="#the-adjoint-of-a-matrix" title="Permalink to this heading">#</a></h2>
-<div class="proof definition admonition" id="adjoint-definition">
-<p class="admonition-title"><span class="caption-number">Definition 1.21 </span> (Adjoint of a matrix)</p>
-<section class="definition-content" id="proof-content">
-<p>The <strong>adjoint</strong> (also known as the <strong>adjugate</strong>) of a square matrix <span class="math notranslate nohighlight">\(A\)</span> is denoted by <span class="math notranslate nohighlight">\(\operatorname{adj}(A)\)</span> and is the transpose of the matrix of <a class="reference internal" href="1.3_Determinants.html#cofactor-definition">cofactors</a> of <span class="math notranslate nohighlight">\(A\)</span></p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    \operatorname{adj}(A) &amp;= C^\mathrm{T}, \\
-    \therefore [\operatorname{adj}(A)]_{ij}&amp;=(-1)^{i+j}M_{ji}.
-\end{align*} \end{split}\]</div>
-</section>
-</div><div class="proof example seealso admonition" id="adjoint-example">
-<p class="admonition-title"><span class="caption-number">Example 1.14 </span></p>
-<section class="example-content" id="proof-content">
-<p>Calculate the adjoint of the following matrices:</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(\begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}\)</span>;</p>
+</details><p>(ii)   <span class="math notranslate nohighlight">\(BC\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \operatorname{adj}\begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} = \begin{pmatrix} d &amp; -c \\ -b &amp; a \end{pmatrix}^\mathrm{T}
-= \begin{pmatrix} d &amp; -b \\ -c &amp; a \end{pmatrix}
-\end{align*} \end{split}\]</div>
-</div>
-</details><p>  (ii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 5 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}\)</span>;</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    \operatorname{adj}\begin{pmatrix} 5 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} = \begin{pmatrix} 4 &amp; -3 \\ -2 &amp; 5 \end{pmatrix}^\mathrm{T}
-= \begin{pmatrix} 4 &amp; -2 \\ -3 &amp; 5 \end{pmatrix}
-\end{align*} \end{split}\]</div>
-</div>
-</details><p>  (iii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 0 &amp; 3 \\ 4 &amp; -2 &amp; 1 \\ 2 &amp; 1 &amp; 3 \end{pmatrix}\)</span>.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    \operatorname{adj}\begin{pmatrix} 1 &amp; 0 &amp; 3 \\ 4 &amp; -2 &amp; 1 \\ 2 &amp; 1 &amp; 3 \end{pmatrix} 
+    BC &amp;= \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix} \begin{pmatrix} 1 &amp; 1 &amp; 0 \\ 3 &amp; -2 &amp; 1 \end{pmatrix} \\
     &amp;= \begin{pmatrix}
-        \begin{vmatrix} -2 &amp; 1 \\ 1 &amp; 3 \end{vmatrix} &amp;
-        -\begin{vmatrix} 4 &amp; 1 \\ 2 &amp; 3 \end{vmatrix} &amp;
-        \begin{vmatrix} 4 &amp; -2 \\ 2 &amp; 1 \end{vmatrix} \\
-        -\begin{vmatrix} 0 &amp; 3 \\ 1 &amp; 3 \end{vmatrix} &amp;
-        \begin{vmatrix} 1 &amp; 3 \\ 2 &amp; 3 \end{vmatrix} &amp;
-        -\begin{vmatrix} 1 &amp; 0 \\ 2 &amp; 1 \end{vmatrix} \\
-        \begin{vmatrix} 0 &amp; 3 \\ -2 &amp; 1 \end{vmatrix} &amp;
-        -\begin{vmatrix} 1 &amp; 3 \\ 4 &amp; 1 \end{vmatrix} &amp;
-        \begin{vmatrix} 1 &amp; 0 \\ 4 &amp; -2 \end{vmatrix}
-    \end{pmatrix}^\mathrm{T} \\
-    &amp;= \begin{pmatrix} -7 &amp; -10 &amp; 8 \\ 3 &amp; -3 &amp; -1 \\ 6 &amp; 11 &amp; -2 \end{pmatrix}^\mathrm{T} \\
-    &amp;= \begin{pmatrix} -7 &amp; 3 &amp; 6 \\ -10 &amp; -3 &amp; 11 \\ 8 &amp; -1 &amp; -2 \end{pmatrix}.
+        2 \cdot 1 + 3 \cdot 3 &amp; 2 \cdot 1 + 3 \cdot (-2) &amp; 2 \cdot 0 + 3 \cdot 1 \\
+        1 \cdot 1 + 5 \cdot 3 &amp; 1 \cdot 1 + 5 \cdot (-2) &amp; 1 \cdot 0 + 5 \cdot 1
+    \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 2+9 &amp; 2-6 &amp; 0+3 \\ 1+15 &amp; 1-10 &amp; 0+5 \end{pmatrix} \\
+    &amp;= \begin{pmatrix}11 &amp; -4 &amp; 3 \\ 16 &amp; -9 &amp; 5 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 </div>
+</details><p>(iii)   <span class="math notranslate nohighlight">\(CD\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution (click to show)<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(CD\)</span> is undefined since <span class="math notranslate nohighlight">\(C\)</span> has 3 columns and <span class="math notranslate nohighlight">\(D\)</span> only has 2 rows.</p>
+</div>
 </details></section>
-</div></section>
-<section id="calculating-a-matrix-inverse-using-the-adjoint-determinant-formula">
-<span id="index-2"></span><h2><span class="section-number">1.6.2. </span>Calculating a matrix inverse using the adjoint-determinant formula<a class="headerlink" href="#calculating-a-matrix-inverse-using-the-adjoint-determinant-formula" title="Permalink to this heading">#</a></h2>
-<p>There are several methods used to calculate the inverse of a matrix. For smaller matrices we can use the adjoint-determinant formula.</p>
-<div class="proof theorem admonition" id="adjoint-determinant-formula-theorem">
-<p class="admonition-title"><span class="caption-number">Theorem 1.7 </span> (Adjoint-determinant formula)</p>
-<section class="theorem-content" id="proof-content">
-<p>The inverse of a non-singular square matrix <span class="math notranslate nohighlight">\(A\)</span> can be calculated using</p>
-<div class="math notranslate nohighlight" id="equation-adjoint-determinant-formula-equation">
-<span class="eqno">(1.4)<a class="headerlink" href="#equation-adjoint-determinant-formula-equation" title="Permalink to this equation">#</a></span>\[ A^{-1} = \frac{\operatorname{adj}(A)}{\det(A)}. \]</div>
-<p>In particular, <span class="math notranslate nohighlight">\(A\)</span> is invertible if and only if <span class="math notranslate nohighlight">\(\det(A)\neq 0\)</span>.</p>
+</div><section id="matrix-exponents">
+<span id="index-1"></span><h2><span class="section-number">1.4.1. </span>Matrix exponents<a class="headerlink" href="#matrix-exponents" title="Permalink to this heading">#</a></h2>
+<p>Just like with scalar quantities we can calculate the exponent of a number <span class="math notranslate nohighlight">\(a^n\)</span> by multiplying by itself <span class="math notranslate nohighlight">\(n\)</span> times, i.e., <span class="math notranslate nohighlight">\(a^3 = a \cdot a \cdot a\)</span>, we can also do this for square matrices that have the same number of rows and columns.</p>
+<div class="proof definition admonition" id="matrix-exponents-definition">
+<p class="admonition-title"><span class="caption-number">Definition 1.9 </span> (Matrix exponents)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be a square <span class="math notranslate nohighlight">\(n \times n\)</span> matrix. Then we write <span class="math notranslate nohighlight">\(A^2=AA\)</span> and more generally:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align*}
+    A^n = \underbrace{A A \cdots A}_{n \text{ times}}.
+\end{align*} \]</div>
 </section>
-</div><p>It is useful to calculate the determinant first to check that it is non-zero before calculating the adjoint.</p>
-</section>
-<section id="video">
-<h2><span class="section-number">1.6.3. </span>Video<a class="headerlink" href="#video" title="Permalink to this heading">#</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KaVO5mQH2H8?si=0RDIGqAhTYuSB8UA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<div class="proof example admonition" id="matrix-inverse-example-2">
-<p class="admonition-title"><span class="caption-number">Example 1.15 </span></p>
+</div><div class="proof example admonition" id="matrix-exponents-example">
+<p class="admonition-title"><span class="caption-number">Example 1.9 </span></p>
 <section class="example-content" id="proof-content">
-<p>Calculate the inverses of the following matrices if they exist:</p>
-<p>  (i)   <span class="math notranslate nohighlight">\(A = \begin{pmatrix}1 &amp; 0 \\ 3 &amp; 2\end{pmatrix}\)</span>;</p>
+<p>Given the matrix</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} A = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}, \end{split}\]</div>
+<p>evaluate:</p>
+<p>(i)   <span class="math notranslate nohighlight">\(A^2\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \det(A) &amp;= 2, \\
-    \operatorname{adj}(A) &amp;= \begin{pmatrix} 2 &amp; -3 \\ 0 &amp; 1 \end{pmatrix}^\mathrm{T}  = \begin{pmatrix} 2 &amp; 0 \\ -3 &amp; 1\end{pmatrix} \\
-    \therefore A^{-1} &amp;= \frac{1}{2}\begin{pmatrix} 2 &amp; 0 \\ -3 &amp; 1\end{pmatrix}.
-\end{align*} \end{split}\]</div>
-<p class="sd-card-text">Check answer:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    A^{-1}A = \frac{1}{2}\begin{pmatrix} 2 &amp; 0 \\ -3 &amp; 1\end{pmatrix}\begin{pmatrix}1 &amp; 0 \\ 3 &amp; 2\end{pmatrix} = \frac{1}{2} \begin{pmatrix} 2 &amp; 0 \\ 0 &amp; 2 \end{pmatrix} = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix} = I \qquad \checkmark
+    A^2 &amp;= AA = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}
+    \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 1 + 6 &amp; 2 + 8 \\ 3 + 12 &amp; 6 + 16 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 7 &amp; 10 \\ 15 &amp; 22 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 </div>
-</details><p>  (ii)   <span class="math notranslate nohighlight">\(B = \begin{pmatrix} 1 &amp; 2 &amp; 0 \\ -2 &amp; 1 &amp; 1 \\ 1 &amp; 0 &amp; 3 \end{pmatrix}\)</span>;</p>
+</details><p>(ii)   <span class="math notranslate nohighlight">\(A^3\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \det\begin{pmatrix} 1 &amp; 2 &amp; 0 \\ -2 &amp; 1 &amp; 1 \\ 1 &amp; 0 &amp; 3 \end{pmatrix} &amp;= 
-    \begin{vmatrix} 1 &amp; 1 \\ 0 &amp; 3 \end{vmatrix}  - 2 \begin{vmatrix}-2 &amp; 1 \\ 1 &amp; 3 \end{vmatrix} =
-    3 - 2(-7) = 17, \\
-    \operatorname{adj}\begin{pmatrix} 1 &amp; 2 &amp; 0 \\ -2 &amp; 1 &amp; 1 \\ 1 &amp; 0 &amp; 3 \end{pmatrix} &amp;= 
-    \begin{pmatrix} 3 &amp; 7 &amp; -1 \\ -6 &amp; 3 &amp; 2 \\ 2 &amp; -1 &amp; 5 \end{pmatrix}^\mathrm{T} =
-    \begin{pmatrix} 3 &amp; -6 &amp; 2 \\ 7 &amp; 3 &amp; -1 \\ -1 &amp; 2 &amp; 5 \end{pmatrix}, \\
-    \therefore B^{-1} &amp;= \frac{1}{17}\begin{pmatrix} 3 &amp; -6 &amp; 2 \\ 7 &amp; 3 &amp; -1 \\ -1 &amp; 2 &amp; 5 \end{pmatrix}
-\end{align*} \end{split}\]</div>
-<p class="sd-card-text">Check answer:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    B^{-1}B &amp;= \frac{1}{17}\begin{pmatrix} 3 &amp; -6 &amp; 2 \\ 7 &amp; 3 &amp; -1 \\ -1 &amp; 2 &amp; 5 \end{pmatrix}
-    \begin{pmatrix} 1 &amp; 2 &amp; 0 \\ -2 &amp; 1 &amp; 1 \\ 1 &amp; 0 &amp; 3 \end{pmatrix} \\
-    &amp;= \frac{1}{17}\begin{pmatrix} 17 &amp; 0 &amp; 0 \\ 0 &amp; 17 &amp; 0 \\ 0 &amp; 0 &amp; 17 \end{pmatrix} =
-    \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} = I \qquad \checkmark
+    A^3 &amp;= AA^2 =
+    \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}
+    \begin{pmatrix} 7 &amp; 10 \\ 15 &amp; 22 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 7 + 30 &amp; 10 + 44 \\ 21 + 60 &amp; 30 + 88 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 37 &amp; 54 \\ 81 &amp; 118 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 </div>
-</details><p>  (iii)   <span class="math notranslate nohighlight">\(C = \begin{pmatrix}1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \end{pmatrix}\)</span>.</p>
+</details><p>(iii)   <span class="math notranslate nohighlight">\(A^5\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \det\begin{pmatrix}1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \end{pmatrix} &amp;= 
-    \begin{vmatrix} 5 &amp; 6 \\ 8 &amp; 9 \end{vmatrix} - 2
-    \begin{vmatrix} 4 &amp; 6 \\ 7 &amp; 9 \end{vmatrix} + 3
-    \begin{vmatrix} 4 &amp; 5 \\ 7 &amp; 8 \end{vmatrix} \\
-    &amp;= -3 - 2(-6) + 3(-3) = 0.
+    A^5 &amp;= A^2A^3 = 
+    \begin{pmatrix} 7 &amp; 10 \\ 15 &amp; 22 \end{pmatrix}
+    \begin{pmatrix} 37 &amp; 54 \\ 81 &amp; 118 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 259 + 810 &amp; 378 + 1180 \\ 555 + 1782 &amp; 810 + 2596 \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 1069 &amp; 1558 \\ 2337 &amp; 3406 \end{pmatrix}
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(\det(C)=0\)</span> then <span class="math notranslate nohighlight">\(C\)</span> is singular and does not have an inverse.</p>
 </div>
 </details></section>
-</div><div class="proof theorem admonition" id="inverse-matrix-properties-theorem">
-<span id="index-3"></span><p class="admonition-title"><span class="caption-number">Theorem 1.8 </span> (Properties of inverse matrices)</p>
-<section class="theorem-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> be two invertible <span class="math notranslate nohighlight">\(n \times n\)</span> matrices, then the following hold:</p>
-<ul>
-<li><p><span class="math notranslate nohighlight">\(AB\)</span> is also invertible and</p>
-<div class="math notranslate nohighlight">
-\[(AB)^{-1} = B^{-1}A^{-1}.\]</div>
-<p>It follows that <span class="math notranslate nohighlight">\((A^m)^{-1} = (A^{-1})^m\)</span> for all positive integers <span class="math notranslate nohighlight">\(m\)</span>.</p>
-</li>
-<li><p><span class="math notranslate nohighlight">\(A^\mathrm{T}\)</span> is also invertible and</p>
-<div class="math notranslate nohighlight">
-\[(A^\mathrm{T})^{-1} = (A^{-1})^\mathrm{T}.\]</div>
-</li>
-</ul>
-</section>
 </div></section>
 </section>
 
@@ -627,20 +661,20 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="1.3_Determinants.html"
+       href="1.1_Matrix_multiplication.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1.5. </span>Determinants</p>
+        <p class="prev-next-title"><span class="section-number">1.3. </span>Matrix multiplication</p>
       </div>
     </a>
     <a class="right-next"
-       href="1.5_Matrix_algebra.html"
+       href="1.2_Special_matrices.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.7. </span>Matrix algebra</p>
+        <p class="prev-next-title"><span class="section-number">1.5. </span>Special matrices</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -662,9 +696,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-adjoint-of-a-matrix">1.6.1. The adjoint of a matrix</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-a-matrix-inverse-using-the-adjoint-determinant-formula">1.6.2. Calculating a matrix inverse using the adjoint-determinant formula</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#video">1.6.3. Video</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-exponents">1.4.1. Matrix exponents</a></li>
 </ul>
   </nav></div>
 
