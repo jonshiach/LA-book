@@ -369,7 +369,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-inverse-of-a-matrix-using-gauss-jordan-elimination">2.6.1. Calculating the inverse of a matrix using Gauss-Jordan elimination</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#video">2.6.1. Video</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-inverse-of-a-matrix-using-gauss-jordan-elimination">2.6.2. Calculating the inverse of a matrix using Gauss-Jordan elimination</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.6.3. Video</a></li>
 </ul>
             </nav>
         </div>
@@ -383,10 +385,10 @@ document.write(`
                   
   <span class="target" id="gauss-jordan-elimination-section"></span><section class="tex2jax_ignore mathjax_ignore" id="gauss-jordan-elimination">
 <span id="index-0"></span><h1><span class="section-number">2.6. </span>Gauss-Jordan elimination<a class="headerlink" href="#gauss-jordan-elimination" title="Permalink to this heading">#</a></h1>
-<figure class="margin align-default" id="id1">
+<figure class="margin align-default" id="id2">
 <a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/7/70/Wilhelm_Jordan.png"><img alt="Wilhelm Jordan" src="https://upload.wikimedia.org/wikipedia/commons/7/70/Wilhelm_Jordan.png" style="width: 200px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.3 </span><span class="caption-text"><a href="https://en.wikipedia.org/wiki/Wilhelm_Jordan_(geodesist)" target="_blank">Carl Wilhelm Jordan (1842 - 1899)</a></span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.3 </span><span class="caption-text"><a href="https://en.wikipedia.org/wiki/Wilhelm_Jordan_(geodesist)" target="_blank">Carl Wilhelm Jordan (1842 - 1899)</a></span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>Gauss-Jordan elimination (GJE)</strong>, named after <a href="https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss" target="_blank">Gauss</a> and German geodesist <a href="https://en.wikipedia.org/wiki/Wilhelm_Jordan_(geodesist)" target="_blank">Wilhelm Jordan</a>, is similar to <a class="reference internal" href="2.3_Gaussian_elimination.html#gaussian-elimination-section"><span class="std std-ref">Gaussian elimination</span></a> with the difference that the augmented matrix is reduced using elementary row operations so that the values of the pivot elements are 1 and are the only non-zero element in the column. This allows the solution to be read from the final augmented matrix without the need to perform back substitution. A matrix in this form is said to be in reduced row echelon form.</p>
@@ -449,7 +451,10 @@ document.write(`
 <li><p>Return <span class="math notranslate nohighlight">\(A\)</span></p></li>
 </ul>
 </section>
-</div><div class="proof example admonition" id="gje-example">
+</div><section id="video">
+<h2><span class="section-number">2.6.1. </span>Video<a class="headerlink" href="#video" title="Permalink to this heading">#</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KMojbHRNY9o?si=54PqTE2f3Xl_SpQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="proof example admonition" id="gje-example">
 <p class="admonition-title"><span class="caption-number">Example 2.5 </span></p>
 <section class="example-content" id="proof-content">
 <p>Use Gauss-Jordan elimination to solve the following system of linear equations</p>
@@ -512,8 +517,9 @@ Solution (click to show)<div class="sd-summary-down docutils">
 <p class="sd-card-text">Therefore the solution is <span class="math notranslate nohighlight">\(x_1 = 1\)</span>, <span class="math notranslate nohighlight">\(x_2 = -10\)</span> and <span class="math notranslate nohighlight">\(x_3 = -4\)</span>.</p>
 </div>
 </details></section>
-</div><section id="calculating-the-inverse-of-a-matrix-using-gauss-jordan-elimination">
-<h2><span class="section-number">2.6.1. </span>Calculating the inverse of a matrix using Gauss-Jordan elimination<a class="headerlink" href="#calculating-the-inverse-of-a-matrix-using-gauss-jordan-elimination" title="Permalink to this heading">#</a></h2>
+</div></section>
+<section id="calculating-the-inverse-of-a-matrix-using-gauss-jordan-elimination">
+<h2><span class="section-number">2.6.2. </span>Calculating the inverse of a matrix using Gauss-Jordan elimination<a class="headerlink" href="#calculating-the-inverse-of-a-matrix-using-gauss-jordan-elimination" title="Permalink to this heading">#</a></h2>
 <p>Gauss-Jordan elimination allows us to calculate the inverse of matrices which is much more computationally efficient than the <a class="reference internal" href="1.4_Inverse_matrix.html#adjoint-definition">adjoint-determinant formula</a>. To show how we can use ERO to calculate an inverse of a matrix we first need to consider elementary matrices.</p>
 <div class="proof definition admonition" id="elementary-matrices-definition">
 <p class="admonition-title"><span class="caption-number">Definition 2.6 </span> (Elementary matrices)</p>
@@ -555,6 +561,10 @@ A^{-1} &amp;= E_k E_{k-1} \cdots E_2 E_1 I.
 \end{align*} \end{split}\]</div>
 <p>In other words, we can calculate the inverse of <span class="math notranslate nohighlight">\(A\)</span> by applying the same row operations to the identity matrix as we do when we reduce <span class="math notranslate nohighlight">\(A\)</span> to reduced row echelon form. For brevity we do this by forming an augmented matrix <span class="math notranslate nohighlight">\((A \mid I)\)</span> and perform Gauss-Jordan elimination on the augmented matrix. Once this has been reduced to reduced row echelon form the matrix to the right of the partition is the inverse of <span class="math notranslate nohighlight">\(A\)</span>.</p>
 <p>The calculation of a matrix inverse using Gauss-Jordan elimination is more efficient that using the adjoint- determinant formula when dealing with larger matrices (i.e., when <span class="math notranslate nohighlight">\(n &gt; 3\)</span>) since the steps can be easily programmed into a computer and it does not require the calculation of determinants which can be computationally expensive.</p>
+</section>
+<section id="id1">
+<h2><span class="section-number">2.6.3. </span>Video<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WKz40mnevwE?si=xLZZRR2JT9TeQa8m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <div class="proof example admonition" id="gauss-jordan-inverse-example">
 <p class="admonition-title"><span class="caption-number">Example 2.6 </span></p>
 <section class="example-content" id="proof-content">
@@ -712,7 +722,9 @@ Solution (click to show)<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-inverse-of-a-matrix-using-gauss-jordan-elimination">2.6.1. Calculating the inverse of a matrix using Gauss-Jordan elimination</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#video">2.6.1. Video</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-inverse-of-a-matrix-using-gauss-jordan-elimination">2.6.2. Calculating the inverse of a matrix using Gauss-Jordan elimination</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.6.3. Video</a></li>
 </ul>
   </nav></div>
 
