@@ -408,11 +408,11 @@ document.write(`
 <p><span class="caption-number">Fig. 6.2 </span><span class="caption-text">Rotation of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> anti-clockwise about the origin.</span><a class="headerlink" href="#rotation-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Consider the diagram in <a class="reference internal" href="#rotation-figure"><span class="std std-numref">Fig. 6.2</span></a>. Here we have the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> which is rotated by angle <span class="math notranslate nohighlight">\(\theta\)</span> anti-clockwise about the origin to give the vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>. To determine the linear mapping <span class="math notranslate nohighlight">\(Rot(\theta): \mathbf{u} \mapsto \mathbf{v}\)</span> we first consider the rotation from the vector <span class="math notranslate nohighlight">\(\mathbf{e}_1|\mathbf{u}|\)</span>, which points along the <span class="math notranslate nohighlight">\(x\)</span>-axis and has the same magnitude as <span class="math notranslate nohighlight">\(\mathbf{u}\)</span>, by angle <span class="math notranslate nohighlight">\(\phi\)</span> anti-clockwise about the original to <span class="math notranslate nohighlight">\(\mathbf{u}\)</span>. Forming a right-angled triangle (the blue triangle) with the angle <span class="math notranslate nohighlight">\(\phi\)</span> and hypotenuse of length <span class="math notranslate nohighlight">\(|\mathbf{u}|\)</span> then</p>
+<p>Consider the diagram in <a class="reference internal" href="#rotation-figure"><span class="std std-numref">Fig. 6.2</span></a>. Here we have the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> which is rotated by angle <span class="math notranslate nohighlight">\(\theta\)</span> anti-clockwise about the origin to give the vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>. To determine the linear mapping <span class="math notranslate nohighlight">\(Rot(\theta): \mathbf{u} \mapsto \mathbf{v}\)</span> we first consider the rotation from the vector <span class="math notranslate nohighlight">\(\mathbf{e}_1|\mathbf{u}|\)</span>, which points along the <span class="math notranslate nohighlight">\(x\)</span>-axis and has the same magnitude as <span class="math notranslate nohighlight">\(\mathbf{u}\)</span>, by angle <span class="math notranslate nohighlight">\(\phi\)</span> anti-clockwise about the original to <span class="math notranslate nohighlight">\(\mathbf{u}=(u_x, u_y)^\mathsf{T}\)</span>. Forming a right-angled triangle (the blue triangle) with the angle <span class="math notranslate nohighlight">\(\phi\)</span> and hypotenuse of length <span class="math notranslate nohighlight">\(|\mathbf{u}|\)</span> then</p>
 <div class="math notranslate nohighlight" id="equation-rotation-equation-1">
 <span class="eqno">(6.6)<a class="headerlink" href="#equation-rotation-equation-1" title="Permalink to this equation">#</a></span>\[\begin{split} \begin{align*}
-    \cos(\phi) &amp;= \frac{u_1}{|\mathbf{u}|} &amp; \therefore u_1 &amp;= |\mathbf{u}| \cos(\phi), \\
-    \sin(\phi) &amp;= \frac{u_2}{|\mathbf{u}|} &amp; \therefore u_2 &amp;= |\mathbf{u}| \sin(\phi).
+    \cos(\phi) &amp;= \frac{u_x}{|\mathbf{u}|} &amp; \therefore u_x &amp;= |\mathbf{u}| \cos(\phi), \\
+    \sin(\phi) &amp;= \frac{u_y}{|\mathbf{u}|} &amp; \therefore u_y &amp;= |\mathbf{u}| \sin(\phi).
 \end{align*} \end{split}\]</div>
 <p>Doing similar for <span class="math notranslate nohighlight">\(\mathbf{v} = (v_x, v_y)^\mathsf{T}\)</span> (the red triangle) we have</p>
 <div class="math notranslate nohighlight">
@@ -435,26 +435,26 @@ document.write(`
 <p>Substituting equation <a class="reference internal" href="#equation-rotation-equation-1">(6.6)</a> into equation <a class="reference internal" href="#equation-rotation-equation-2">(6.7)</a></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    v_x &amp;= u_1 \cos(\theta) - u_2 \sin(\theta), \\
-    v_y &amp;= u_2 \cos(\theta) + u_1 \sin(\theta).
+    v_x &amp;= u_x \cos(\theta) - u_y \sin(\theta), \\
+    v_y &amp;= u_y \cos(\theta) + u_x \sin(\theta).
 \end{align*} \end{split}\]</div>
 <p>Therefore the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> rotated by angle <span class="math notranslate nohighlight">\(\theta\)</span> anti-clockwise about the original is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} Rot(\theta) \cdot \mathbf{u} = 
     \begin{pmatrix} \cos(\theta) &amp; -\sin(\theta) \\ \sin(\theta) &amp; \cos(\theta) \end{pmatrix}
-    \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} = 
+    \begin{pmatrix} u_x \\ u_y \end{pmatrix} = 
     \begin{pmatrix}
-        u_1 \cos(\theta) - u_2 \sin(\theta) \\
-        u_1 \sin(\theta) + u_2 \cos(\theta)
+        u_x \cos(\theta) - u_y \sin(\theta) \\
+        u_x \sin(\theta) + u_y \cos(\theta)
     \end{pmatrix} \end{split}\]</div>
 <div class="proof theorem admonition" id="rotation-in-R2-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 6.3 </span> (Rotation in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>)</p>
 <section class="theorem-content" id="proof-content">
-<p>The rotation of a vector <span class="math notranslate nohighlight">\(\mathbf{u} \in \mathbb{R}^2\)</span> <strong>anti-clockwise</strong> by an angle <span class="math notranslate nohighlight">\(\theta\)</span> is the linear transformation <span class="math notranslate nohighlight">\(Rot(\theta): \mathbb{R}^2 \to \mathbb{R}^2\)</span> defined by</p>
+<p>The rotation of a vector <span class="math notranslate nohighlight">\(\mathbf{u} = (u_x, u_y)^\mathsf{T} \in \mathbb{R}^2\)</span> <strong>anti-clockwise</strong> by an angle <span class="math notranslate nohighlight">\(\theta\)</span> is the linear transformation <span class="math notranslate nohighlight">\(Rot(\theta): \mathbb{R}^2 \to \mathbb{R}^2\)</span> defined by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} Rot(\theta) : 
-    \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} \mapsto 
-    \begin{pmatrix} u_1 \cos(\theta) - u_2 \sin(\theta) \\ u_1 \sin(\theta) + u_2 \cos(\theta) \end{pmatrix}. \end{split}\]</div>
+    \begin{pmatrix} u_x \\ u_y \end{pmatrix} \mapsto 
+    \begin{pmatrix} u_x \cos(\theta) - u_y \sin(\theta) \\ u_x \sin(\theta) + u_y \cos(\theta) \end{pmatrix}. \end{split}\]</div>
 <p>The transformation matrix for rotation in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-rotation-matrix-equation">
 <span class="eqno">(6.8)<a class="headerlink" href="#equation-rotation-matrix-equation" title="Permalink to this equation">#</a></span>\[\begin{split} Rot(\theta) = \begin{pmatrix} 
@@ -539,7 +539,7 @@ Solution (click to show)<div class="sd-summary-down docutils">
 <p><span class="caption-number">Fig. 6.3 </span><span class="caption-text">The reflection of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> about a line that passes through the origin.</span><a class="headerlink" href="#reflection-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The simplest reflection we can perform is to reflect a vector <span class="math notranslate nohighlight">\(\mathbf{u} =(u_1, u_2)^\mathsf{T}\)</span> about the <span class="math notranslate nohighlight">\(x\)</span>-axis or <span class="math notranslate nohighlight">\(y\)</span>-axis (<a class="reference internal" href="#reflection-about-x-figure"><span class="std std-numref">Fig. 6.4</span></a>).</p>
+<p>The simplest reflection we can perform is to reflect a vector <span class="math notranslate nohighlight">\(\mathbf{u} =(u_x, u_y)^\mathsf{T}\)</span> about the <span class="math notranslate nohighlight">\(x\)</span>-axis or <span class="math notranslate nohighlight">\(y\)</span>-axis (<a class="reference internal" href="#reflection-about-x-figure"><span class="std std-numref">Fig. 6.4</span></a>).</p>
 <figure class="align-default" id="reflection-about-x-figure">
 <a class="reference internal image-reference" href="../_images/reflection_about_x.svg"><img alt="../_images/reflection_about_x.svg" src="../_images/reflection_about_x.svg" width="300" /></a>
 <figcaption>
@@ -549,7 +549,7 @@ Solution (click to show)<div class="sd-summary-down docutils">
 <p>To reflect about the <span class="math notranslate nohighlight">\(x\)</span>-axis we simply change the sign of the <span class="math notranslate nohighlight">\(y\)</span> co-ordinate</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} Re\!f(0) \cdot \mathbf{u} = 
-\begin{pmatrix} u_1 \\ -u_2 \end{pmatrix}, \end{split}\]</div>
+\begin{pmatrix} u_x \\ -u_y \end{pmatrix}, \end{split}\]</div>
 <p>and the transformation matrix is</p>
 <div class="math notranslate nohighlight" id="equation-reflection-about-x-equation">
 <span class="eqno">(6.9)<a class="headerlink" href="#equation-reflection-about-x-equation" title="Permalink to this equation">#</a></span>\[\begin{split} Re\!f(0) = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}. \end{split}\]</div>
@@ -606,12 +606,12 @@ Solution (click to show)<div class="sd-summary-down docutils">
 <div class="proof theorem admonition" id="reflection-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 6.4 </span> (Reflection in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>)</p>
 <section class="theorem-content" id="proof-content">
-<p>The reflection of a vector <span class="math notranslate nohighlight">\(\mathbf{u} \in \mathbb{R}^2\)</span> about a line which passes through the origin and makes an angle <span class="math notranslate nohighlight">\(\theta\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis (i.e., <span class="math notranslate nohighlight">\(y = \tan(\theta)x\)</span>) is the linear transformation <span class="math notranslate nohighlight">\(Re\!f(\theta) : \mathbb{R}^2 \to \mathbb{R}^2\)</span> defined by</p>
+<p>The reflection of a vector <span class="math notranslate nohighlight">\(\mathbf{u} = (u_x, u_y)^\mathsf{T} \in \mathbb{R}^2\)</span> about a line which passes through the origin and makes an angle <span class="math notranslate nohighlight">\(\theta\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis (i.e., <span class="math notranslate nohighlight">\(y = \tan(\theta)x\)</span>) is the linear transformation <span class="math notranslate nohighlight">\(Re\!f(\theta) : \mathbb{R}^2 \to \mathbb{R}^2\)</span> defined by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     Re\!f(\theta) :
-    \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} \mapsto 
-    \begin{pmatrix} u_1 \cos (2\theta) + u_2 \sin(2 \theta) \\ u_1 \sin(2\theta) - u_2 \cos (2\theta) \end{pmatrix}.
+    \begin{pmatrix} u_x \\ u_y \end{pmatrix} \mapsto 
+    \begin{pmatrix} u_x \cos (2\theta) + u_y \sin(2 \theta) \\ u_x \sin(2\theta) - u_y \cos (2\theta) \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 <p>The transformation matrix for reflection in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-reflection-matrix-equation">

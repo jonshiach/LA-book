@@ -398,8 +398,8 @@ document.write(`
 </figure>
 <p>The problem we have here is what is the matrix representation of translation, i.e., in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> what is the matrix <span class="math notranslate nohighlight">\(T\)</span> that satisfies</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} T(\mathbf{t}) \cdot \begin{pmatrix} u_1 \\ u_2 \end{pmatrix}  = \begin{pmatrix} u_1 + t_1 \\ u_2 + t_2 \end{pmatrix}. \end{split}\]</div>
-<p id="index-1">A matrix <span class="math notranslate nohighlight">\(T(\mathbf{t})\)</span> does not exist which is independent of <span class="math notranslate nohighlight">\(u_1\)</span> and <span class="math notranslate nohighlight">\(u_2\)</span> so we can use a trick which makes use of <strong>homogeneous co-ordinates</strong>. A point is typically represented by Cartesian coordinates as <span class="math notranslate nohighlight">\((x, y)\)</span>. Homogeneous coordinates extend this representation by introducing an additional coordinate, denoted as <span class="math notranslate nohighlight">\(w\)</span>, to represent the point in homogeneous coordinates as <span class="math notranslate nohighlight">\((wx, wy, w)\)</span>. To convert homogeneous co-ordinates to Cartesian co-ordinates we divide by the additional co-ordinate <span class="math notranslate nohighlight">\(w\)</span>, i.e.,</p>
+\[\begin{split} T(\mathbf{t}) \cdot \begin{pmatrix} u_x \\ u_y \end{pmatrix}  = \begin{pmatrix} u_x + t_x \\ u_y + t_y \end{pmatrix}. \end{split}\]</div>
+<p id="index-1">A matrix <span class="math notranslate nohighlight">\(T(\mathbf{t})\)</span> does not exist which is independent of <span class="math notranslate nohighlight">\(u_x\)</span> and <span class="math notranslate nohighlight">\(u_y\)</span> so we can use a trick which makes use of <strong>homogeneous co-ordinates</strong>. A point is typically represented by Cartesian coordinates as <span class="math notranslate nohighlight">\((x, y)\)</span>. Homogeneous coordinates extend this representation by introducing an additional coordinate, denoted as <span class="math notranslate nohighlight">\(w\)</span>, to represent the point in homogeneous coordinates as <span class="math notranslate nohighlight">\((wx, wy, w)\)</span>. To convert homogeneous co-ordinates to Cartesian co-ordinates we divide by the additional co-ordinate <span class="math notranslate nohighlight">\(w\)</span>, i.e.,</p>
 <div class="math notranslate nohighlight">
 \[(wx, wy, w) \mapsto (x, y, 1).\]</div>
 <div class="proof definition admonition" id="homogeneous-coordinates-definition">
@@ -407,35 +407,35 @@ document.write(`
 <section class="definition-content" id="proof-content">
 <p>The homogeneous co-ordinates of a point <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> expressed using the Cartesian co-ordinates is the <span class="math notranslate nohighlight">\((n+1)\)</span>-tuple <span class="math notranslate nohighlight">\((w u_1, w u_2, \ldots, w u_n, w)\)</span> where <span class="math notranslate nohighlight">\(w \in \mathbb{R}\backslash \{0\}\)</span>.</p>
 </section>
-</div><p>If we express a point in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> with Cartesian co-ordinates <span class="math notranslate nohighlight">\((u_1, u_2)\)</span> using the homogeneous co-ordinates <span class="math notranslate nohighlight">\((u_1, u_2, 1)\)</span> then we can find a <span class="math notranslate nohighlight">\(3 \times 3\)</span> translation matrix <span class="math notranslate nohighlight">\(T(\mathbf{t})\)</span> that satisfies</p>
+</div><p>If we express a point in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> with Cartesian co-ordinates <span class="math notranslate nohighlight">\((u_1, u_2)\)</span> using the homogeneous co-ordinates <span class="math notranslate nohighlight">\((u_x, u_y, 1)\)</span> then we can find a <span class="math notranslate nohighlight">\(3 \times 3\)</span> translation matrix <span class="math notranslate nohighlight">\(T(\mathbf{t})\)</span> that satisfies</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} T(\mathbf{t}) \cdot
-\begin{pmatrix} u_1 \\ u_2 \\ 1 \end{pmatrix} = 
-\begin{pmatrix} u_1 + t_1 \\ u_1 + t_2 \\ 1 \end{pmatrix}.\end{split}\]</div>
+\begin{pmatrix} u_x \\ u_y \\ 1 \end{pmatrix} = 
+\begin{pmatrix} u_x + t_x \\ u_y + t_y \\ 1 \end{pmatrix}.\end{split}\]</div>
 <p>so</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{pmatrix}
-    1 &amp; 0 &amp; t_1 \\
-    0 &amp; 1 &amp; t_2 \\
+    1 &amp; 0 &amp; t_x \\
+    0 &amp; 1 &amp; t_y \\
     0 &amp; 0 &amp; 1
 \end{pmatrix}
-\begin{pmatrix} u_1 \\ u_2 \\ 1 \end{pmatrix}
-= \begin{pmatrix} u_1 + t_1 \\ u_1 + t_2 \\ 1 \end{pmatrix} \end{split}\]</div>
+\begin{pmatrix} u_x \\ u_y \\ 1 \end{pmatrix}
+= \begin{pmatrix} u_x + t_x \\ u_y + t_y \\ 1 \end{pmatrix} \end{split}\]</div>
 <div class="proof theorem admonition" id="translation-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 6.6 </span> (Translation in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>)</p>
 <section class="theorem-content" id="proof-content">
 <p>The translation of the vector <span class="math notranslate nohighlight">\(\mathbf{u} \in \mathbb{R}^2\)</span> by the translation vector <span class="math notranslate nohighlight">\(\mathbf{t} \in \mathbb{R}^2\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} T(\mathbf{t}) :
-\begin{pmatrix} u_1 \\ u_2  \end{pmatrix} \mapsto
-\begin{pmatrix} u_1 + t_1 \\ u_2 + t_2  \end{pmatrix}. \end{split}\]</div>
+\begin{pmatrix} u_x \\ u_y  \end{pmatrix} \mapsto
+\begin{pmatrix} u_x + t_x \\ u_y + t_y  \end{pmatrix}. \end{split}\]</div>
 <p>If <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> is expressed using homogeneous co-ordinates then the transformation matrix for translation is</p>
 <div class="math notranslate nohighlight" id="equation-translation-matrix-equation">
 <span class="eqno">(6.12)<a class="headerlink" href="#equation-translation-matrix-equation" title="Permalink to this equation">#</a></span>\[\begin{split} T(\mathbf{t}) =
 \begin{pmatrix}
-    1 &amp; 0 &amp; t_1 \\
-    0 &amp; 1 &amp; t_2 \\
+    1 &amp; 0 &amp; t_x \\
+    0 &amp; 1 &amp; t_y \\
     0 &amp; 0 &amp; 1
 \end{pmatrix}. \end{split}\]</div>
 </section>
@@ -443,8 +443,8 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\begin{split} T^{-1}(-\mathbf{t}) =
 \begin{pmatrix}
-    1 &amp; 0 &amp; -t_1 \\
-    0 &amp; 1 &amp; -t_2 \\
+    1 &amp; 0 &amp; -t_x \\
+    0 &amp; 1 &amp; -t_y \\
     0 &amp; 0 &amp; 1 
 \end{pmatrix}. \end{split}\]</div>
 <div class="proof example admonition" id="translation-example">
