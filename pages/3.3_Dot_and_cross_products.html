@@ -477,7 +477,7 @@ Solution (click to show)<div class="sd-summary-down docutils">
 <div class="proof definition admonition" id="cross-product-definition">
 <p class="admonition-title"><span class="caption-number">Definition 3.7 </span> (The cross product)</p>
 <section class="definition-content" id="proof-content">
-<p>The <strong>cross product</strong> (also known as the <strong>vector product</strong>) of two vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>, <span class="math notranslate nohighlight">\(\mathbf{a}=(a_1,a_2,a_3)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}=(b_1,b_2,b_3)\)</span> can be calculated using the formula</p>
+<p>The <strong>cross product</strong> (also known as the <strong>vector product</strong>) of two vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>, <span class="math notranslate nohighlight">\(\mathbf{a}=(a_1,a_2,a_3)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}=(b_1,b_2,b_3)^\mathsf{T}\)</span> can be calculated using a <a class="reference internal" href="1.3_Determinants.html#determinant-section"><span class="std std-ref">determinant</span></a> where</p>
 <div class="math notranslate nohighlight" id="equation-cross-product-equation">
 <span class="eqno">(3.5)<a class="headerlink" href="#equation-cross-product-equation" title="Permalink to this equation">#</a></span>\[\begin{split}\mathbf{a} \times \mathbf{b} = \det 
 \begin{pmatrix}
@@ -485,7 +485,7 @@ Solution (click to show)<div class="sd-summary-down docutils">
     a_1 &amp; a_2 &amp; a_3 \\
     b_1 &amp; b_2 &amp; b_3
 \end{pmatrix}. \end{split}\]</div>
-<p>The cross product between two vectors <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> returns a vector that is perpendicular to both <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>. Futhermore <span class="math notranslate nohighlight">\(\mathbf{a} \times \mathbf{b} = -\mathbf{b} \times \mathbf{a}\)</span>, i.e., <span class="math notranslate nohighlight">\(\mathbf{b} \times \mathbf{a}\)</span> is a vector pointing in the exact opposite direction to <span class="math notranslate nohighlight">\(\mathbf{a} \times \mathbf{b}\)</span> (<a class="reference internal" href="#cross-product-figure"><span class="std std-numref">Fig. 3.10</span></a>).</p>
+<p>and <span class="math notranslate nohighlight">\(\mathbf{i} = (1, 0, 0)^\mathsf{T}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{j} = (0, 1, 0)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{k} = (0, 0, 1)^\mathsf{T}\)</span>. The cross product between two vectors <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> returns a vector that is perpendicular to both <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>. Futhermore <span class="math notranslate nohighlight">\(\mathbf{a} \times \mathbf{b} = -\mathbf{b} \times \mathbf{a}\)</span>, i.e., <span class="math notranslate nohighlight">\(\mathbf{b} \times \mathbf{a}\)</span> is a vector pointing in the exact opposite direction to <span class="math notranslate nohighlight">\(\mathbf{a} \times \mathbf{b}\)</span> (<a class="reference internal" href="#cross-product-figure"><span class="std std-numref">Fig. 3.10</span></a>).</p>
 <figure class="align-default" id="cross-product-figure">
 <a class="reference internal image-reference" href="../_images/cross_product.svg"><img alt="../_images/cross_product.svg" src="../_images/cross_product.svg" width="250" /></a>
 <figcaption>
@@ -512,7 +512,7 @@ Solution (click to show)<div class="sd-summary-down docutils">
 <div class="proof example admonition" id="cross-product-example">
 <p class="admonition-title"><span class="caption-number">Example 3.5 </span></p>
 <section class="example-content" id="proof-content">
-<p>Calculate the cross product between the vectors <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 2, 3)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v} = (4, 5, 6)^\mathsf{T}\)</span>.</p>
+<p>Calculate the cross product between the vectors <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 2, 3)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v} = (4, 5, 6)^\mathsf{T}\)</span> and show that it is perpendicular to both <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to show)<div class="sd-summary-down docutils">
@@ -527,6 +527,19 @@ Solution (click to show)<div class="sd-summary-down docutils">
     &amp;= -3\mathbf{i} + 6 \mathbf{j} - 3\mathbf{k}
     = \begin{pmatrix} -3 \\ 6 \\ -3 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
+<p class="sd-card-text">To show that <span class="math notranslate nohighlight">\(\mathbf{u} \times \mathbf{v} \perp \mathbf{u}, \mathbf{v}\)</span> we calculate the dot product</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \mathbf{u} \cdot (\mathbf{u} \times \mathbf{v}) &amp;= 
+    \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix} \cdot
+    \begin{pmatrix} -3 \\ 6 \\ -3 \end{pmatrix} 
+    = -3 + 12 - 9 = 0, \\
+    \mathbf{v} \cdot (\mathbf{u} \times \mathbf{v}) &amp;=
+    \begin{pmatrix} 4 \\ 5 \\ 6 \end{pmatrix} \cdot
+    \begin{pmatrix} -3 \\ 6 \\ -3 \end{pmatrix}
+    = -12 + 30 - 18 = 0,
+\end{align*} \end{split}\]</div>
+<p class="sd-card-text">therefore <span class="math notranslate nohighlight">\(\mathbf{u} \times \mathbf{v}\)</span> is perpendicular to both <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>.</p>
 </div>
 </details></section>
 </div></section>

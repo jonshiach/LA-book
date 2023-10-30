@@ -414,12 +414,12 @@ document.write(`
 </figcaption>
 </figure>
 <p>Vectors in mathematical notation are usually denoted by a single lowercase character. To distinguish vectors from other mathematical objects such as scalars and variables, the character representing a vector is written in boldface when typeset, e.g., <span class="math notranslate nohighlight">\(\mathbf{a}\)</span>; underlined when written by hand, e.g., <span class="math notranslate nohighlight">\(\underline{a}\)</span>; or a small right arrow over the vector name, e.g., <span class="math notranslate nohighlight">\(\vec{a}\)</span>.</p>
-<p>A vector in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> is usually represented by a single column matrix</p>
+<p>A vector in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> can be represented by a single column or row matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \mathbf{a} = \begin{pmatrix} a_1 \\ a_2 \\ \vdots \\ a_n\end{pmatrix},
+    \mathbf{a} = \begin{pmatrix} a_1 \\ a_2 \\ \vdots \\ a_n\end{pmatrix} = \begin{pmatrix} a_1 &amp; a_2 &amp; \cdots &amp; a_n \end{pmatrix},
 \end{align*} \end{split}\]</div>
-<p>where each element represents the signed difference between the tail and head of the vector in the Cartesian coordinate system.</p>
+<p>where each element represents the signed difference between the tail and head of the vector in the Cartesian coordinate system. The choice whether to use row or column vectors is arbitrary, however here we will express vectors as column matrices since this is the common convention.</p>
 <div class="proof example admonition" id="vector-example">
 <p class="admonition-title"><span class="caption-number">Example 3.1 </span></p>
 <section class="example-content" id="proof-content">
@@ -468,7 +468,7 @@ Solution (click to show)<div class="sd-summary-down docutils">
 <p><span class="caption-number">Fig. 3.5 </span><span class="caption-text">The position vector <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> points from the origin <span class="math notranslate nohighlight">\(O\)</span> to the point <span class="math notranslate nohighlight">\(P\)</span>.</span><a class="headerlink" href="#position-vector-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Since the co-ordinates of the origin are <span class="math notranslate nohighlight">\(O = (0, 0, \ldots, 0)\)</span>, the position vector <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> is similar to the tuple for co-ordinates of <span class="math notranslate nohighlight">\(P\)</span>.</p>
+<p>Since the co-ordinates of the origin are <span class="math notranslate nohighlight">\(O = (0, 0, \ldots, 0)^\mathsf{T}\)</span>, the position vector <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> is similar to the tuple for co-ordinates of <span class="math notranslate nohighlight">\(P\)</span>.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3-LCn_dGzaY?si=83mL-se8kta0pqFL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></section>
 <div class="toctree-wrapper compound">
 </div>
