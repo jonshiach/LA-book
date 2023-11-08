@@ -386,14 +386,14 @@ document.write(`
 <section id="solution-content">
 <p>Let <span class="math notranslate nohighlight">\(\mathbf{u}, \mathbf{v}, \mathbf{w} \in \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\alpha, \beta \in \mathbb{R}\)</span> then</p>
 <ul class="simple">
-<li><p>A1: <span class="math notranslate nohighlight">\(\mathbf{u} + (\mathbf{v} + \mathbf{w}) = (\mathbf{u} + \mathbf{v}) + \mathbf{w} \quad \checkmark\)</span></p></li>
-<li><p>A2: <span class="math notranslate nohighlight">\(\mathbf{u} + \mathbf{v} = \mathbf{v} + \mathbf{u} \quad \checkmark\)</span></p></li>
-<li><p>A3: <span class="math notranslate nohighlight">\(\mathbf{u} + \mathbf{0} = \mathbf{u} \quad \checkmark\)</span></p></li>
-<li><p>A4: <span class="math notranslate nohighlight">\(\mathbf{u} + (-\mathbf{u}) = \mathbf{0} \quad \checkmark\)</span></p></li>
-<li><p>M1: <span class="math notranslate nohighlight">\(\alpha(\beta \mathbf{u}) = (\alpha \beta) \mathbf{u} \quad \checkmark\)</span></p></li>
-<li><p>M2: <span class="math notranslate nohighlight">\(1 \mathbf{u} = \mathbf{u} \quad \checkmark\)</span></p></li>
-<li><p>M3: <span class="math notranslate nohighlight">\(\alpha(\mathbf{u} + \mathbf{v}) = \alpha\mathbf{u} + \alpha \mathbf{v} \quad \checkmark\)</span></p></li>
-<li><p>M4: <span class="math notranslate nohighlight">\((\alpha + \beta) \mathbf{u} = \alpha \mathbf{u} + \beta \mathbf{u} \quad \checkmark\)</span></p></li>
+<li><p>A1: <span class="math notranslate nohighlight">\(\mathbf{u} + (\mathbf{v} + \mathbf{w}) = (\mathbf{u} + \mathbf{v}) + \mathbf{w} \checkmark\)</span></p></li>
+<li><p>A2: <span class="math notranslate nohighlight">\(\mathbf{u} + \mathbf{v} = \mathbf{v} + \mathbf{u} \checkmark\)</span></p></li>
+<li><p>A3: <span class="math notranslate nohighlight">\(\mathbf{u} + \mathbf{0} = \mathbf{u} \checkmark\)</span></p></li>
+<li><p>A4: <span class="math notranslate nohighlight">\(\mathbf{u} + (-\mathbf{u}) = \mathbf{0} \checkmark\)</span></p></li>
+<li><p>M1: <span class="math notranslate nohighlight">\(\alpha(\beta \mathbf{u}) = (\alpha \beta) \mathbf{u} \checkmark\)</span></p></li>
+<li><p>M2: <span class="math notranslate nohighlight">\(1 \mathbf{u} = \mathbf{u} \checkmark\)</span></p></li>
+<li><p>M3: <span class="math notranslate nohighlight">\(\alpha(\mathbf{u} + \mathbf{v}) = \alpha\mathbf{u} + \alpha \mathbf{v} \checkmark\)</span></p></li>
+<li><p>M4: <span class="math notranslate nohighlight">\((\alpha + \beta) \mathbf{u} = \alpha \mathbf{u} + \beta \mathbf{u} \checkmark\)</span></p></li>
 </ul>
 <p>All of the axioms of vector spaces hold for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
 </section>
@@ -509,36 +509,36 @@ document.write(`
         2 &amp; 5 &amp; 1 &amp; 0 \\
         0 &amp; 7 &amp; 3 &amp; 0
     \end{array} \right)
-    \begin{matrix} \\ R_2 - 2R_1 \\ \phantom{x} \end{matrix} \\ \\
-    \longrightarrow \quad &amp;
+    \begin{matrix} \\ R_2 - 2R_1 \\ \phantom{x} \end{matrix} &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
         1 &amp; 0 &amp; -1 &amp; 0 \\
         0 &amp; 5 &amp; 3 &amp; 0 \\
         0 &amp; 7 &amp; 3 &amp; 0
     \end{array} \right)
     \begin{matrix} \\ \frac{1}{5}R_2 \\ \phantom{x} \end{matrix} \\ \\
-    \longrightarrow \quad &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
         1 &amp; 0 &amp; -1 &amp; 0 \\
         0 &amp; 1 &amp; 3/5 &amp; 0 \\
         0 &amp; 7 &amp; 3 &amp; 0
     \end{array} \right)
-    \begin{matrix} \\ \\ R_3 - 7R_2 \end{matrix} \\ \\
-    \longrightarrow \quad &amp;
+    \begin{matrix} \\ \\ R_3 - 7R_2 \end{matrix} &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
         1 &amp; 0 &amp; -1 &amp; 0 \\
         0 &amp; 1 &amp; 3/5 &amp; 0 \\
         0 &amp; 0 &amp; -6/5 &amp; 0
     \end{array} \right)
     \begin{matrix} \\ \\ -\frac{5}{6}R_3 \end{matrix}  \\ \\
-    \longrightarrow \quad &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
         1 &amp; 0 &amp; -1 &amp; 0 \\
         0 &amp; 1 &amp; 3/5 &amp; 0 \\
         0 &amp; 0 &amp; 1 &amp; 0
     \end{array} \right)
-    \begin{matrix} R_1 + R_3 \\ R_2 - \frac{3}{5}R_3 \\ \phantom{x} \end{matrix} \\ \\
-    \longrightarrow \quad &amp;
+    \begin{matrix} R_1 + R_3 \\ R_2 - \frac{3}{5}R_3 \\ \phantom{x} \end{matrix} &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
         1 &amp; 0 &amp; 0 &amp; 0 \\
         0 &amp; 1 &amp; 0 &amp; 0 \\
@@ -593,8 +593,8 @@ document.write(`
         0 &amp; 0 &amp; 2 &amp; -5 &amp; 0 \\
         0 &amp; 0 &amp; 4 &amp; 2 &amp; 0
     \end{array} \right)
-    \begin{matrix} \\ \\ \frac{1}{2}R_3 \\ \phantom{x} \end{matrix} \\ \\
-    \longrightarrow \quad &amp;
+    \begin{matrix} \\ \\ \frac{1}{2}R_3 \\ \phantom{x} \end{matrix} &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{cccc|c}
         1 &amp; 0 &amp; 1 &amp; 2 &amp; 0 \\
         0 &amp; 1 &amp; 1 &amp; -1 &amp; 0 \\
@@ -602,15 +602,15 @@ document.write(`
         0 &amp; 0 &amp; 4 &amp; 2 &amp; 0
     \end{array} \right)
     \begin{matrix} R_1 - R_3 \\ R_2 - R_3 \\ \\ R_4 - 4R_1 \end{matrix} \\ \\
-    \longrightarrow \quad &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{cccc|c}
         1 &amp; 0 &amp; 0 &amp; 9/2 &amp; 0 \\
         0 &amp; 1 &amp; 0 &amp; 3/2 &amp; 0 \\
         0 &amp; 0 &amp; 1 &amp; -5/2 &amp; 0 \\
         0 &amp; 0 &amp; 0 &amp; 12 &amp; 0
     \end{array} \right)
-    \begin{matrix} \\ \\ \\ \frac{1}{12}R_4 \end{matrix}  \\ \\
-    \longrightarrow \quad &amp;
+    \begin{matrix} \\ \\ \\ \frac{1}{12}R_4 \end{matrix}  &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{cccc|c}
         1 &amp; 0 &amp; 0 &amp; 9/2 &amp; 0 \\
         0 &amp; 1 &amp; 0 &amp; 3/2 &amp; 0 \\
@@ -618,7 +618,7 @@ document.write(`
         0 &amp; 0 &amp; 0 &amp; 1 &amp; 0
     \end{array} \right)
     \begin{matrix} R_1 - \frac{9}{2}R_4 \\ R_2 - \frac{3}{2}R_4 \\ R_3 + \frac{5}{2}R_4 \\ \phantom{x} \end{matrix} \\ \\
-    \longrightarrow \quad &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{cccc|c}
         1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
         0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
@@ -658,8 +658,8 @@ document.write(`
         3 &amp; 2 &amp; 5 &amp; 0 &amp; 0 &amp; 0 \\
         4 &amp; 0 &amp; 3 &amp; 3 &amp; 4 &amp; 0
     \end{array} \right)
-    \begin{matrix} \\ R_2 - 2R_1 \\ R_3 - 3R_1 \\ R_4 - 4R_1 \end{matrix} \\ \\ 
-    \longrightarrow \quad &amp;
+    \begin{matrix} \\ R_2 - 2R_1 \\ R_3 - 3R_1 \\ R_4 - 4R_1 \end{matrix} &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccccc|c}
         1 &amp; 1 &amp; 2 &amp; 1 &amp; 1 &amp; 0 \\
         0 &amp; -3 &amp; -3 &amp; -3 &amp; -3 &amp; 0 \\
@@ -667,15 +667,15 @@ document.write(`
         0 &amp; -4 &amp; -5 &amp; -1 &amp; 0 &amp; 0
     \end{array} \right)
     \begin{matrix} \\ -\frac{1}{3}R_2 \\ \phantom{x} \\ \phantom{x} \end{matrix} \\ \\
-    \longrightarrow \quad &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccccc|c}
         1 &amp; 1 &amp; 2 &amp; 1 &amp; 1 &amp; 0 \\
         0 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 \\
         0 &amp; -1 &amp; -1 &amp; -3 &amp; -3 &amp; 0 \\
         0 &amp; -4 &amp; -5 &amp; -1 &amp; 0 &amp; 0
     \end{array} \right)
-    \begin{matrix} R_1 - R_2 \\ \\ R_3 + R_2 \\ R_4 + 4R_2 \end{matrix} \\ \\
-    \longrightarrow \quad &amp;
+    \begin{matrix} R_1 - R_2 \\ \\ R_3 + R_2 \\ R_4 + 4R_2 \end{matrix} &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccccc|c}
         1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
         0 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 \\
@@ -683,15 +683,15 @@ document.write(`
         0 &amp; 0 &amp; -1 &amp; 3 &amp; 4 &amp; 0
     \end{array} \right)
     \begin{matrix} \\ \\ R_3 \leftrightarrow R_4 \\ \phantom{x} \end{matrix} \\ \\
-    \longrightarrow \quad &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccccc|c}
         1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
         0 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 \\
         0 &amp; 0 &amp; -1 &amp; 3 &amp; 4 &amp; 0 \\
         0 &amp; 0 &amp; 0 &amp; -2 &amp; -2 &amp; 0 
     \end{array} \right)
-    \begin{matrix} \\ \\ -R_3 \\ \phantom{x} \end{matrix} \\ \\
-    \longrightarrow \quad &amp;
+    \begin{matrix} \\ \\ -R_3 \\ \phantom{x} \end{matrix} &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccccc|c}
         1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
         0 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 \\
@@ -699,15 +699,15 @@ document.write(`
         0 &amp; 0 &amp; 0 &amp; -2 &amp; -2 &amp; 0 
     \end{array} \right)
     \begin{matrix} R_1 - R_3 \\ R_2 - R_3 \\ \phantom{x} \\ \phantom{x} \end{matrix} \\ \\
-    \longrightarrow \quad &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccccc|c}
         1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
         0 &amp; 1 &amp; 0 &amp; 4 &amp; 5 &amp; 0 \\
         0 &amp; 0 &amp; 1 &amp; -3 &amp; -4 &amp; 0 \\
         0 &amp; 0 &amp; 0 &amp; -2 &amp; -2 &amp; 0 
     \end{array} \right) 
-    \begin{matrix} \\  \\  \\ -\frac{1}{2}R_4 \end{matrix}  \\ \\
-    \longrightarrow \quad &amp;
+    \begin{matrix} \\  \\  \\ -\frac{1}{2}R_4 \end{matrix}  &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccccc|c}
         1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
         0 &amp; 1 &amp; 0 &amp; 4 &amp; 5 &amp; 0 \\
@@ -715,15 +715,15 @@ document.write(`
         0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 0 
     \end{array} \right)
     \begin{matrix} \\ R_2 - 4R_4 \\ R_3 + 3R_4 \\ \phantom{x} \end{matrix} \\ \\
-    \longrightarrow \quad &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccccc|c}
         1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
         0 &amp; 1 &amp; 0 &amp; 4 &amp; 5 &amp; 0 \\
         0 &amp; 0 &amp; 1 &amp; -3 &amp; -4 &amp; 0 \\
         0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 0 
     \end{array} \right)
-    \begin{matrix} \\ R_2 - 4R_4 \\ R_3 + 3R_4 \\ \phantom{x} \end{matrix}  \\ \\
-    \longrightarrow \quad &amp;
+    \begin{matrix} \\ R_2 - 4R_4 \\ R_3 + 3R_4 \\ \phantom{x} \end{matrix}  &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccccc|c}
         1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
         0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\

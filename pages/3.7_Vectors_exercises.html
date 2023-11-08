@@ -389,7 +389,7 @@ document.write(`
 <p>(b)   <span class="math notranslate nohighlight">\(\mathbf{w} - \mathbf{u}\)</span></p>
 <p>(c)   a unit vector pointing in the same direction of <span class="math notranslate nohighlight">\(\mathbf{u}\)</span></p>
 <p>(d)   a unit vector pointing in the opposite direction of <span class="math notranslate nohighlight">\(\mathbf{v}\)</span></p>
-<p>(e)   a vector pointing in the same direction as <span class="math notranslate nohighlight">\(\mathbf{v}\)</span></p>
+<p>(e)   a vector pointing in the same direction as <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> but half its length</p>
 <p>(f)   <span class="math notranslate nohighlight">\(\overrightarrow{UV}\)</span></p>
 <p>(g)   <span class="math notranslate nohighlight">\(\overrightarrow{UW}\)</span></p>
 <p>(h)   <span class="math notranslate nohighlight">\(\mathbf{u} \cdot \mathbf{w}\)</span></p>
@@ -451,22 +451,22 @@ document.write(`
     -1 &amp; 2 &amp; 0 &amp; 7 \\
     0 &amp; 0 &amp; -1 &amp; 1
     \end{array} \right)
-    \begin{array}{l} \\ R_2 + R_1 \\ \phantom{x} \end{array} \\ \\
-    \longrightarrow \quad &amp;
+    \begin{array}{l} \\ R_2 + R_1 \\ \phantom{x} \end{array} &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
         1 &amp; 0 &amp; 1 &amp; 2 \\
         0 &amp; 2 &amp; 1 &amp; 9 \\
         0 &amp; 0 &amp; -1 &amp; 1
     \end{array} \right)
     \begin{array}{l} \\ \frac{1}{2} R_2 \\ -R_3 \phantom{x} \end{array} \\ \\
-    \longrightarrow \quad &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
         1 &amp; 0 &amp; 1 &amp; 2 \\
         0 &amp; 1 &amp; 1/2 &amp; 9/2 \\
         0 &amp; 0 &amp; 1 &amp; -1
     \end{array} \right)
-    \begin{array}{l} R_1 - R_3 \\ R_2 - \frac{1}{2} R_3 \\ \phantom{x} \end{array} \\ \\
-    \longrightarrow \quad &amp;
+    \begin{array}{l} R_1 - R_3 \\ R_2 - \frac{1}{2} R_3 \\ \phantom{x} \end{array} &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
         1 &amp; 0 &amp; 0 &amp; 3 \\
         0 &amp; 1 &amp; 0 &amp; 5 \\
