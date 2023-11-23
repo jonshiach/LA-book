@@ -701,7 +701,7 @@ document.write(`
     \begin{matrix} R_1 - R_3 \\ R_2 - R_3 \\ \phantom{x} \\ \phantom{x} \end{matrix} \\ \\
     \longrightarrow &amp;
     \left( \begin{array}{ccccc|c}
-        1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+        1 &amp; 0 &amp; 0 &amp; 3 &amp; 4 &amp; 0 \\
         0 &amp; 1 &amp; 0 &amp; 4 &amp; 5 &amp; 0 \\
         0 &amp; 0 &amp; 1 &amp; -3 &amp; -4 &amp; 0 \\
         0 &amp; 0 &amp; 0 &amp; -2 &amp; -2 &amp; 0 
@@ -709,27 +709,19 @@ document.write(`
     \begin{matrix} \\  \\  \\ -\frac{1}{2}R_4 \end{matrix}  &amp;
     \longrightarrow &amp;
     \left( \begin{array}{ccccc|c}
-        1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+        1 &amp; 0 &amp; 0 &amp; 3 &amp; 4 &amp; 0 \\
         0 &amp; 1 &amp; 0 &amp; 4 &amp; 5 &amp; 0 \\
         0 &amp; 0 &amp; 1 &amp; -3 &amp; -4 &amp; 0 \\
         0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 0 
     \end{array} \right)
-    \begin{matrix} \\ R_2 - 4R_4 \\ R_3 + 3R_4 \\ \phantom{x} \end{matrix} \\ \\
+    \begin{matrix} R_1 - 3 R_4 \\ R_2 - 4R_4 \\ R_3 + 3R_4 \\ \phantom{x} \end{matrix} \\ \\
     \longrightarrow &amp;
     \left( \begin{array}{ccccc|c}
-        1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
-        0 &amp; 1 &amp; 0 &amp; 4 &amp; 5 &amp; 0 \\
-        0 &amp; 0 &amp; 1 &amp; -3 &amp; -4 &amp; 0 \\
-        0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 0 
-    \end{array} \right)
-    \begin{matrix} \\ R_2 - 4R_4 \\ R_3 + 3R_4 \\ \phantom{x} \end{matrix}  &amp;
-    \longrightarrow &amp;
-    \left( \begin{array}{ccccc|c}
-        1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+        1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
         0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
         0 &amp; 0 &amp; 1 &amp; 0 &amp; -1 &amp; 0 \\
         0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 0 
-\end{array} \right)
+    \end{array} \right)
 \end{align*} \end{split}\]</div>
 <p>The fifth column does not have a pivot element so <span class="math notranslate nohighlight">\(\mathbf{y}\)</span> is linearly dependent on the other vectors, therefore a basis for <span class="math notranslate nohighlight">\(W\)</span> is <span class="math notranslate nohighlight">\(\{ \mathbf{u}, \mathbf{v}, \mathbf{w}, \mathbf{x}\}\)</span> and <span class="math notranslate nohighlight">\(\dim(W) = 4\)</span>.</p>
 </section>
