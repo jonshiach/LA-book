@@ -384,9 +384,9 @@ document.write(`
   <span class="target" id="composite-linear-transformations-section"></span><section class="tex2jax_ignore mathjax_ignore" id="composite-linear-transformations">
 <span id="index-0"></span><h1><span class="section-number">6.4. </span>Composite linear transformations<a class="headerlink" href="#composite-linear-transformations" title="Permalink to this heading">#</a></h1>
 <div class="proof definition admonition" id="composite-transformation-definition">
-<p class="admonition-title"><span class="caption-number">Definition 6.4 </span> (Composite transformations)</p>
+<p class="admonition-title"><span class="caption-number">Definition 6.5 </span> (Composite transformations)</p>
 <section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(S : V \to W\)</span> and <span class="math notranslate nohighlight">\(T: W \to X\)</span> be two linear transformations over the vector spaces <span class="math notranslate nohighlight">\(V, W\)</span> and <span class="math notranslate nohighlight">\(X\)</span>. The <strong>composition</strong> of <span class="math notranslate nohighlight">\(S\)</span> and <span class="math notranslate nohighlight">\(T\)</span> is the transformation <span class="math notranslate nohighlight">\(S \circ T: V \to X\)</span> defined by</p>
+<p>Let <span class="math notranslate nohighlight">\(T : V \to W\)</span> and <span class="math notranslate nohighlight">\(S: W \to X\)</span> be two linear transformations over the vector spaces <span class="math notranslate nohighlight">\(V, W\)</span> and <span class="math notranslate nohighlight">\(X\)</span>. The <strong>composition</strong> of <span class="math notranslate nohighlight">\(S\)</span> and <span class="math notranslate nohighlight">\(T\)</span> is the transformation <span class="math notranslate nohighlight">\(S \circ T: V \to X\)</span> defined by</p>
 <div class="math notranslate nohighlight">
 \[ (S \circ T)(\mathbf{u}) = S(T(\mathbf{u})), \]</div>
 <p>for all vectors <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span>.</p>
@@ -394,7 +394,7 @@ document.write(`
 </div><div class="proof example admonition" id="composite-transformation-example">
 <p class="admonition-title"><span class="caption-number">Example 6.5 </span></p>
 <section class="example-content" id="proof-content">
-<p>Two linear transformations is defined as <span class="math notranslate nohighlight">\(T:(x, y, z)^\mathsf{T} \mapsto (2 x + 4 y, -x + 3 y, x + 2 y)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(S:(x, y)^\mathsf{T} \mapsto (2x + y - z, 3x + z, y - 2z)^\mathsf{T}\)</span>, determine the composite linear transformation <span class="math notranslate nohighlight">\(S \circ T(\mathbf{u})\)</span> for <span class="math notranslate nohighlight">\(\mathbf{u} = (x, y, z)^\mathsf{T}\)</span>.</p>
+<p>Two linear transformations is defined as <span class="math notranslate nohighlight">\(T:(x, y, z)^\mathsf{T} \mapsto (2 x + 4 y, -x + 3 y, x + 2 y)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(S:(x, y, z)^\mathsf{T} \mapsto (2x + y - z, 3x + z, y - 2z)^\mathsf{T}\)</span>, determine the composite linear transformation <span class="math notranslate nohighlight">\(S \circ T(\mathbf{u})\)</span> for <span class="math notranslate nohighlight">\(\mathbf{u} = (x, y, z)^\mathsf{T}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution (click to show)<div class="sd-summary-down docutils">
@@ -445,7 +445,7 @@ Solution (click to show)<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The transformations are <span class="math notranslate nohighlight">\(T:(x, y, z)^\mathsf{T} \mapsto (2 x + 4 y, -x + 3 y, x + 2 y)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(S:(x, y)^\mathsf{T} \mapsto (2x + y - z, 3x + z, y - 2z)^\mathsf{T}\)</span> which have the transformation matrices</p>
+<p class="sd-card-text">The transformations are <span class="math notranslate nohighlight">\(T:(x, y, z)^\mathsf{T} \mapsto (2 x + 4 y, -x + 3 y, x + 2 y)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(S:(x, y, z)^\mathsf{T} \mapsto (2x + y - z, 3x + z, y - 2z)^\mathsf{T}\)</span> which have the transformation matrices</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     A &amp;= \begin{pmatrix} 2 &amp; 4 \\ -1 &amp; 3 \\ 1 &amp; 2 \end{pmatrix}, &amp;

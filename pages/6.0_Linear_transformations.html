@@ -399,26 +399,34 @@ document.write(`
 </ul>
 <p>The result of applying a linear transformation to an object is known as the <strong>image</strong>.</p>
 </section>
-</div><p>For example, let <span class="math notranslate nohighlight">\(V = \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(W = \mathbb{R}^3\)</span> then <span class="math notranslate nohighlight">\(T : V \to W\)</span> defined by <span class="math notranslate nohighlight">\(T : (x, y)^\mathsf{T} \mapsto (x, y, 0)^\mathsf{T}\)</span> is a linear transformation. Let <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2)^\mathsf{T}, \mathbf{v} = (v_1, v_2)^\mathsf{T} \in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span> then</p>
+</div><p>For example, let <span class="math notranslate nohighlight">\(V = \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(W = \mathbb{R}^3\)</span> then <span class="math notranslate nohighlight">\(T : V \to W\)</span> defined by <span class="math notranslate nohighlight">\(T : (x, y)^\mathsf{T} \mapsto (x, y, 0)^\mathsf{T}\)</span> is a linear transformation. Let <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2)^\mathsf{T}, \mathbf{v} = (v_1, v_2)^\mathsf{T} \in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    T \left( \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} + \begin{pmatrix} v_1 \\ v_2 \end{pmatrix} \right)
+    T (\mathbf{u} + \mathbf{v}) 
     &amp;= T \begin{pmatrix} u_1 + v_1 \\ u_2 + v_2 \end{pmatrix}
-    = \begin{pmatrix} u_1 + v_1 \\ u_2 + v_2 \\ 0 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} u_1 \\ v_1 \\ 0 \end{pmatrix} + \begin{pmatrix} u_2 \\ v_2 \\ 0 \end{pmatrix}
-    = T \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} + T \begin{pmatrix} v_1 \\ v_2 \end{pmatrix}.
+    = \begin{pmatrix} u_1 + v_1 \\ u_2 + v_2 \\ 0 \end{pmatrix}, \\
+    T (\mathbf{u}) + T(\mathbf{v}) &amp;= 
+    \begin{pmatrix} u_1 \\ u_2 \\ 0 \end{pmatrix} + \begin{pmatrix} v_1 \\ v_2 \\ 0 \end{pmatrix}
+    = \begin{pmatrix} u_1 + v_1 \\ u_2 + v_2 \\ 0 \end{pmatrix},
 \end{align*} \end{split}\]</div>
-<p>Similarly</p>
+<p>so <span class="math notranslate nohighlight">\(T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})\)</span> and the addition condition is satisfied. Similarly</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} T \left( \alpha \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} \right)
-    = T \begin{pmatrix} \alpha u_1 \\ \alpha u_2 \end{pmatrix} 
-    = \begin{pmatrix} \alpha u_1 \\ \alpha u_2 \\ 0 \end{pmatrix}
-    = \alpha \begin{pmatrix} u_1 \\ u_2 \\ 0 \end{pmatrix}
-    = \alpha T \begin{pmatrix} u_1 \\ u_2 \end{pmatrix}. \end{split}\]</div>
-<p>To show whether a transformation is a linear transformation can combine both conditions from the <a class="reference internal" href="#linear-transformation-definition">definition of a linear transformation</a> to show that</p>
+\[\begin{split} \begin{align*} 
+    T(\alpha \mathbf{u})
+    &amp;= T \begin{pmatrix} \alpha u_1 \\ \alpha u_2 \end{pmatrix} 
+    = \begin{pmatrix} \alpha u_1 \\ \alpha u_2 \\ 0 \end{pmatrix}, \\
+    \alpha T(\mathbf{u}) &amp;= \alpha \begin{pmatrix} u_1 \\ u_2 \\ 0 \end{pmatrix}
+    = \begin{pmatrix} \alpha u_1 \\ \alpha u_2 \\ 0 \end{pmatrix},
+\end{align*} \end{split}\]</div>
+<p>so <span class="math notranslate nohighlight">\(T(\alpha \mathbf{u}) = \alpha T(\mathbf{u})\)</span> and the scalar multiplication condition is satisfied and combined with the addition condition we have shown that <span class="math notranslate nohighlight">\(T\)</span> is a linear transformation. We can combine the addition and scalar multiplication conditions to give a single condition.</p>
+<div class="proof definition admonition" id="linear-transformation-condition -definition">
+<p class="admonition-title"><span class="caption-number">Definition 6.2 </span> (Linear transformation condition)</p>
+<section class="definition-content" id="proof-content">
+<p>A transformation <span class="math notranslate nohighlight">\(T : V \to W\)</span> is a linear transformation if the following condition is satisfied for any <span class="math notranslate nohighlight">\(\mathbf{u}, \mathbf{v} \in V\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span></p>
 <div class="math notranslate nohighlight" id="equation-linear-transformation-condition-equation">
 <span class="eqno">(6.1)<a class="headerlink" href="#equation-linear-transformation-condition-equation" title="Permalink to this equation">#</a></span>\[ T(\mathbf{u} + \alpha \mathbf{v}) = T(\mathbf{u}) + \alpha T(\mathbf{v}). \]</div>
-<div class="proof example admonition" id="linear-transformation-example">
+</section>
+</div><div class="proof example admonition" id="linear-transformation-example">
 <p class="admonition-title"><span class="caption-number">Example 6.1 </span></p>
 <section class="example-content" id="proof-content">
 <p>Determine which of the following transformations are linear transformations</p>
@@ -430,7 +438,7 @@ Solution (click to show)<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2, u_3)^\mathsf{T}, \mathbf{v} = (v_1, v_2, v_3)^\mathsf{T} \in \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span> then</p>
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2, u_3)^\mathsf{T}, \mathbf{v} = (v_1, v_2, v_3)^\mathsf{T} \in \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     T(\mathbf{u} + \alpha \mathbf{v}) &amp;= T\left(
@@ -456,7 +464,7 @@ Solution (click to show)<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2, u_3)^\mathsf{T}, \mathbf{v} = (v_1, v_2, v_3)^\mathsf{T} \in \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span> then</p>
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2, u_3)^\mathsf{T}, \mathbf{v} = (v_1, v_2, v_3)^\mathsf{T} \in \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     T(\mathbf{u} + \alpha \mathbf{v}) &amp;= T 
@@ -520,7 +528,7 @@ Solution (click to show)<div class="sd-summary-down docutils">
 \end{align*} \end{split}\]</div>
 <p>In other words we can apply a linear transformation simply by multiplying <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> by a matrix <span class="math notranslate nohighlight">\(A\)</span>.</p>
 <div class="proof definition admonition" id="transformation-matrix-definition">
-<p class="admonition-title"><span class="caption-number">Definition 6.2 </span> (Transformation matrix)</p>
+<p class="admonition-title"><span class="caption-number">Definition 6.3 </span> (Transformation matrix)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(T : V \to W\)</span> be a linear transformation and <span class="math notranslate nohighlight">\(A\)</span> be a matrix such that</p>
 <div class="math notranslate nohighlight">
@@ -651,7 +659,7 @@ Solution (click to show)<div class="sd-summary-down docutils">
 <section id="inverse-linear-transformation">
 <span id="index-2"></span><h2><span class="section-number">6.3. </span>Inverse linear transformation<a class="headerlink" href="#inverse-linear-transformation" title="Permalink to this heading">#</a></h2>
 <div class="proof definition admonition" id="inverse-transformation-definition">
-<p class="admonition-title"><span class="caption-number">Definition 6.3 </span> (Inverse linear transformation)</p>
+<p class="admonition-title"><span class="caption-number">Definition 6.4 </span> (Inverse linear transformation)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(T: V \to W\)</span> be a linear transformation with the transformation matrix <span class="math notranslate nohighlight">\(A\)</span> then <span class="math notranslate nohighlight">\(T\)</span> has an inverse transformation denoted by <span class="math notranslate nohighlight">\(T^{-1}: W \to V\)</span> which reverses the affects of <span class="math notranslate nohighlight">\(T\)</span>. If <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v} \in W\)</span> then</p>
 <div class="math notranslate nohighlight">
