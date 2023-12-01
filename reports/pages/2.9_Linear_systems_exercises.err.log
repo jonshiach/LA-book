@@ -1,165 +1,204 @@
 Traceback (most recent call last):
-  File "/Users/55093290/anaconda3/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+  File "C:\Users\Jon\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
     executenb(
-  File "/Users/55093290/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 1204, in execute
+  File "C:\Users\Jon\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\nbclient\client.py", line 1305, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/55093290/anaconda3/lib/python3.11/site-packages/nbclient/util.py", line 84, in wrapped
-    return just_run(coro(*args, **kwargs))
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/55093290/anaconda3/lib/python3.11/site-packages/nbclient/util.py", line 62, in just_run
-    return loop.run_until_complete(coro)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/55093290/anaconda3/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+  File "C:\Users\Jon\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\jupyter_core\utils\__init__.py", line 166, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 653, in run_until_complete
     return future.result()
            ^^^^^^^^^^^^^^^
-  File "/Users/55093290/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 663, in async_execute
+  File "C:\Users\Jon\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\nbclient\client.py", line 705, in async_execute
     await self.async_execute_cell(
-  File "/Users/55093290/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 965, in async_execute_cell
+  File "C:\Users\Jon\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\nbclient\client.py", line 1058, in async_execute_cell
     await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "/Users/55093290/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+  File "C:\Users\Jon\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\nbclient\client.py", line 914, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-def print_augmented_matrix(A):
-    m, n = A.shape
-    cols = "c" * m + "|" + "c" * m
-    print(rf"    \left( \begin{{array}}{{{cols}}}")
-    for i in range(m):
-        print("        ", end="")
-        for j in range(n - 1):
-            print(rf" {sp.latex(A[i,j])} &", end="")
-        print(rf" {sp.latex(A[i,-1])} \\")
-    print(r"    \end{array} \right)")
- 
-  
-def print_standalone_matrix(A):
-    m, n = A.shape
-    cols = "c" * m
-    print(r"$$ \begin{align*}")
-    print(rf"    \left( \begin{{array}}{{{cols}}}")
-    for i in range(m):
-        print("        ", end="")
-        for j in range(n - 1):
-            print(rf" {sp.latex(A[i,j])} &", end="")
-        print(rf" {sp.latex(A[i,-1])} \\")
-    print(r"    \end{array} \right)")
-    print(r"\end{align*} $$")
-          
-def gjelim_inverse(A):
-    m, n = A.shape
-    
-    A = A.row_join(eye(A.shape[0]))
+import sympy as sp
+import subprocess
 
-    print(r"::::{dropdown} Solution (click to show)")
-    print(r"$$ \begin{align*}")
-    print(r"&", end="")
-    print_augmented_matrix(A)
-    
-    for i in range(m):
-        for j in range(i, n):
-            if A[i,j] != 0:
-                pivot = j
-                break
-    
-        if A[i,pivot] != 1:
-            print(r"    \begin{matrix}", end="")
-            for j in range(m):
-                if j == i:
-                    if A[i,pivot] == -1:
-                        print(rf" - R_{{{j+1}}}", end="")
-                    elif A[i,pivot] != 1:
-                        print(rf" {sp.latex(1 / A[i,pivot])} R_{{{j+1}}}", end="")
-                else:
-                    print(r" \phantom{x}", end="")
-                if j < m - 1:
-                    print(r" \\", end="")
-            print(r" \end{matrix} \\ \\")
-            print(r"    \longrightarrow &")
-            
-            A[i,:] /= A[i,pivot]
-            print_augmented_matrix(A)
-         
-        print(r"    \begin{matrix}", end="")
-        for j in range(m):
-            if i != j:
-                if A[j,pivot] > 0:
-                    if A[j,pivot] == 1:
-                        print(rf" R_{{{j+1}}} - R_{{{i + 1}}}", end="")
-                    else:
-                        print(rf" R_{{{j+1}}} - {sp.latex(A[j,pivot])} R_{{{i + 1}}}", end="")    
-                elif A[j,pivot] < 0:
-                    if A[j,pivot] == -1:
-                        print(rf" R_{{{j+1}}} + R_{{{i + 1}}}", end="")
-                    else:
-                        print(rf" R_{{{j+1}}} + {sp.latex(-A[j,pivot])} R_{{{i + 1}}}", end="")
-                elif A[j,pivot] == 0:
-                    print(r" \phantom{x}", end="")
-                A[j,:] -= A[j, pivot] * A[i,:]
-            if i == j:
-                print(r" \phantom{x}", end="")
-            if j < m - 1:
-                print(r" \\", end="")
-        print(r" \end{matrix} \\ \\")
-        print(r"    \longrightarrow &")
-        print_augmented_matrix(A)
-    print(r"\end{align*} $$")
-    print()
-    print(rf"therefore ")
-    print(r"$$ \begin{align*}")
-    print(r"A^{{-1}} = ")
-    print_matrix(A[:,n:])
-    print(r". \end{align*} $$")
-    print("::::")
+class System:
 
-    return A
+    def __init__(self, A, b, label):
+        self.A = A
+        self.b = b
+        self.label = label
 
 
-print(":::::{admonition} Exercise 2.6")
-print(":class: note")
-print(":name: ex2.6")
-print()
-print("Use Gauss-Jordan elimination to calculate the inverse of the coefficient matrices from [exercise 2.1](ex2.1).")
-print()    
-print("\n(a)")
-A = sp.Matrix([[-4, 2], [3, 4]])
-print_standalone_matrix(A)
-AI = gjelim_inverse(A)
+def inverseSolve(system, string):
 
-print("\n(b)")
-A = sp.Matrix([[-4, 2], [-1, -3]])
-print_standalone_matrix(A)
-AI = gjelim_inverse(A)
+    A, b, label = system.A, system.b, system.label
+    x = A.inv() * b
+    string += f"{label}\n\n"
+    string += "$$ \\begin{align*}\n"
+    string += f"    \\det{sp.latex(A, mat_delim='(', mat_str='matrix')} &= {A.det()}, \\\ \n"
+    string += f"    \\operatorname{{adj}}{sp.latex(A, mat_delim='(', mat_str='matrix')} &= {sp.latex(A.inv() * A.det(), mat_delim='(', mat_str='matrix')}, \\\ \n"
+    string += f"    \\therefore A^{{-1}} &= {sp.latex(1/A.det())}{sp.latex(A.inv() * A.det(), mat_delim='(', mat_str='matrix')} = {sp.latex(A.inv(), mat_delim='(', mat_str='matrix')} \n"
+    string += "\\end{align*} $$ \n\ntherefore \n\n$$\\begin{align*}\n"
+    string += f"    \\mathbf{{x}} &= {sp.latex(A.inv(), mat_delim='(', mat_str='matrix')}\n"
+    string += f"    {sp.latex(b, mat_delim='(', mat_str='matrix')} = \n"
+    string += f"    {sp.latex(A.inv() * b, mat_delim='(', mat_str='matrix')}\n"
+    string += "\\end{align*} $$\n\nso the solution is "
+    for i in range(len(x)):
+        string += f"$x_{i+1} = {sp.latex(x[i])}$"
+        if i < len(x) - 2:
+            string += ", "
+        elif i == len(x) - 2:
+            string += " and "
+    string+= ".\n\n"
 
-print("\n(c)")
-A = sp.Matrix([[-4, -4, -2], [3, 0, 4], [1, 0, 0]])
-print_standalone_matrix(A)
-AI = gjelim_inverse(A)
+    return string
 
-print("\n(d)")
-A = sp.Matrix([[4, 0, -4], [4, -1, 1], [3, 1, 2]])
-print_standalone_matrix(A)
-AI = gjelim_inverse(A)
+systems = []
+systems.append(System(sp.Matrix([[-4, 2], [3, 4]]), sp.Matrix([-22, 11]), "(a)"))
+systems.append(System(sp.Matrix([[-4, 2], [-1, -3]]), sp.Matrix([6, -2]), "(b)"))
+systems.append(System(sp.Matrix([[-4, -4, -2], [3, 0, 4], [1, 0, 0]]), sp.Matrix([16, -8, 0]), "(c)"))
+systems.append(System(sp.Matrix([[4, 0, -4], [4, -1, 1], [3, 1, 2]]), sp.Matrix([8, -4, -12]), "(d)"))
 
-print(":::::")
+string = ":::{solution} systems-ex-inverse-sol\n:class: dropdown \n\n"
+for i in range(len(systems)):
+    string = inverseSolve(systems[i], string)
+
+string += ":::"
+
+print(string)
+subprocess.run("pbcopy", text=True, input=string)
 ------------------
 
-[0;31m---------------------------------------------------------------------------[0m
-[0;31mNameError[0m                                 Traceback (most recent call last)
-Cell [0;32mIn[7], line 104[0m
-[1;32m    102[0m A [38;5;241m=[39m sp[38;5;241m.[39mMatrix([[[38;5;241m-[39m[38;5;241m4[39m, [38;5;241m2[39m], [[38;5;241m3[39m, [38;5;241m4[39m]])
-[1;32m    103[0m print_standalone_matrix(A)
-[0;32m--> 104[0m AI [38;5;241m=[39m gjelim_inverse(A)
-[1;32m    106[0m [38;5;28mprint[39m([38;5;124m"[39m[38;5;130;01m\n[39;00m[38;5;124m(b)[39m[38;5;124m"[39m)
-[1;32m    107[0m A [38;5;241m=[39m sp[38;5;241m.[39mMatrix([[[38;5;241m-[39m[38;5;241m4[39m, [38;5;241m2[39m], [[38;5;241m-[39m[38;5;241m1[39m, [38;5;241m-[39m[38;5;241m3[39m]])
+----- stdout -----
+:::{solution} systems-ex-inverse-sol
+:class: dropdown 
 
-Cell [0;32mIn[7], line 29[0m, in [0;36mgjelim_inverse[0;34m(A)[0m
-[1;32m     26[0m [38;5;28;01mdef[39;00m [38;5;21mgjelim_inverse[39m(A):
-[1;32m     27[0m     m, n [38;5;241m=[39m A[38;5;241m.[39mshape
-[0;32m---> 29[0m     A [38;5;241m=[39m A[38;5;241m.[39mrow_join(eye(A[38;5;241m.[39mshape[[38;5;241m0[39m]))
-[1;32m     31[0m     [38;5;28mprint[39m([38;5;124mr[39m[38;5;124m"[39m[38;5;124m::::[39m[38;5;132;01m{dropdown}[39;00m[38;5;124m Solution (click to show)[39m[38;5;124m"[39m)
-[1;32m     32[0m     [38;5;28mprint[39m([38;5;124mr[39m[38;5;124m"[39m[38;5;124m$$ [39m[38;5;124m\[39m[38;5;124mbegin[39m[38;5;124m{[39m[38;5;124malign*}[39m[38;5;124m"[39m)
+(a)
 
-[0;31mNameError[0m: name 'eye' is not defined
-NameError: name 'eye' is not defined
+$$ \begin{align*}
+    \det\left(\begin{matrix}-4 & 2\\3 & 4\end{matrix}\right) &= -22, \\ 
+    \operatorname{adj}\left(\begin{matrix}-4 & 2\\3 & 4\end{matrix}\right) &= \left(\begin{matrix}4 & -2\\-3 & -4\end{matrix}\right), \\ 
+    \therefore A^{-1} &= - \frac{1}{22}\left(\begin{matrix}4 & -2\\-3 & -4\end{matrix}\right) = \left(\begin{matrix}- \frac{2}{11} & \frac{1}{11}\\\frac{3}{22} & \frac{2}{11}\end{matrix}\right) 
+\end{align*} $$ 
+
+therefore 
+
+$$\begin{align*}
+    \mathbf{x} &= \left(\begin{matrix}- \frac{2}{11} & \frac{1}{11}\\\frac{3}{22} & \frac{2}{11}\end{matrix}\right)
+    \left(\begin{matrix}-22\\11\end{matrix}\right) = 
+    \left(\begin{matrix}5\\-1\end{matrix}\right)
+\end{align*} $$
+
+so the solution is $x_1 = 5$ and $x_2 = -1$.
+
+(b)
+
+$$ \begin{align*}
+    \det\left(\begin{matrix}-4 & 2\\-1 & -3\end{matrix}\right) &= 14, \\ 
+    \operatorname{adj}\left(\begin{matrix}-4 & 2\\-1 & -3\end{matrix}\right) &= \left(\begin{matrix}-3 & -2\\1 & -4\end{matrix}\right), \\ 
+    \therefore A^{-1} &= \frac{1}{14}\left(\begin{matrix}-3 & -2\\1 & -4\end{matrix}\right) = \left(\begin{matrix}- \frac{3}{14} & - \frac{1}{7}\\\frac{1}{14} & - \frac{2}{7}\end{matrix}\right) 
+\end{align*} $$ 
+
+therefore 
+
+$$\begin{align*}
+    \mathbf{x} &= \left(\begin{matrix}- \frac{3}{14} & - \frac{1}{7}\\\frac{1}{14} & - \frac{2}{7}\end{matrix}\right)
+    \left(\begin{matrix}6\\-2\end{matrix}\right) = 
+    \left(\begin{matrix}-1\\1\end{matrix}\right)
+\end{align*} $$
+
+so the solution is $x_1 = -1$ and $x_2 = 1$.
+
+(c)
+
+$$ \begin{align*}
+    \det\left(\begin{matrix}-4 & -4 & -2\\3 & 0 & 4\\1 & 0 & 0\end{matrix}\right) &= -16, \\ 
+    \operatorname{adj}\left(\begin{matrix}-4 & -4 & -2\\3 & 0 & 4\\1 & 0 & 0\end{matrix}\right) &= \left(\begin{matrix}0 & 0 & -16\\4 & 2 & 10\\0 & -4 & 12\end{matrix}\right), \\ 
+    \therefore A^{-1} &= - \frac{1}{16}\left(\begin{matrix}0 & 0 & -16\\4 & 2 & 10\\0 & -4 & 12\end{matrix}\right) = \left(\begin{matrix}0 & 0 & 1\\- \frac{1}{4} & - \frac{1}{8} & - \frac{5}{8}\\0 & \frac{1}{4} & - \frac{3}{4}\end{matrix}\right) 
+\end{align*} $$ 
+
+therefore 
+
+$$\begin{align*}
+    \mathbf{x} &= \left(\begin{matrix}0 & 0 & 1\\- \frac{1}{4} & - \frac{1}{8} & - \frac{5}{8}\\0 & \frac{1}{4} & - \frac{3}{4}\end{matrix}\right)
+    \left(\begin{matrix}16\\-8\\0\end{matrix}\right) = 
+    \left(\begin{matrix}0\\-3\\-2\end{matrix}\right)
+\end{align*} $$
+
+so the solution is $x_1 = 0$, $x_2 = -3$ and $x_3 = -2$.
+
+(d)
+
+$$ \begin{align*}
+    \det\left(\begin{matrix}4 & 0 & -4\\4 & -1 & 1\\3 & 1 & 2\end{matrix}\right) &= -40, \\ 
+    \operatorname{adj}\left(\begin{matrix}4 & 0 & -4\\4 & -1 & 1\\3 & 1 & 2\end{matrix}\right) &= \left(\begin{matrix}-3 & -4 & -4\\-5 & 20 & -20\\7 & -4 & -4\end{matrix}\right), \\ 
+    \therefore A^{-1} &= - \frac{1}{40}\left(\begin{matrix}-3 & -4 & -4\\-5 & 20 & -20\\7 & -4 & -4\end{matrix}\right) = \left(\begin{matrix}\frac{3}{40} & \frac{1}{10} & \frac{1}{10}\\\frac{1}{8} & - \frac{1}{2} & \frac{1}{2}\\- \frac{7}{40} & \frac{1}{10} & \frac{1}{10}\end{matrix}\right) 
+\end{align*} $$ 
+
+therefore 
+
+$$\begin{align*}
+    \mathbf{x} &= \left(\begin{matrix}\frac{3}{40} & \frac{1}{10} & \frac{1}{10}\\\frac{1}{8} & - \frac{1}{2} & \frac{1}{2}\\- \frac{7}{40} & \frac{1}{10} & \frac{1}{10}\end{matrix}\right)
+    \left(\begin{matrix}8\\-4\\-12\end{matrix}\right) = 
+    \left(\begin{matrix}-1\\-3\\-3\end{matrix}\right)
+\end{align*} $$
+
+so the solution is $x_1 = -1$, $x_2 = -3$ and $x_3 = -3$.
+
+:::
+------------------
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mFileNotFoundError[0m                         Traceback (most recent call last)
+Cell [1;32mIn[1], line 49[0m
+[0;32m     46[0m string [38;5;241m+[39m[38;5;241m=[39m [38;5;124m"[39m[38;5;124m:::[39m[38;5;124m"[39m
+[0;32m     48[0m [38;5;28mprint[39m(string)
+[1;32m---> 49[0m [43msubprocess[49m[38;5;241;43m.[39;49m[43mrun[49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43mpbcopy[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[43mtext[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m[43m [49m[38;5;28;43minput[39;49m[38;5;241;43m=[39;49m[43mstring[49m[43m)[49m
+
+File [1;32mC:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\Lib\subprocess.py:548[0m, in [0;36mrun[1;34m(input, capture_output, timeout, check, *popenargs, **kwargs)[0m
+[0;32m    545[0m     kwargs[[38;5;124m'[39m[38;5;124mstdout[39m[38;5;124m'[39m] [38;5;241m=[39m PIPE
+[0;32m    546[0m     kwargs[[38;5;124m'[39m[38;5;124mstderr[39m[38;5;124m'[39m] [38;5;241m=[39m PIPE
+[1;32m--> 548[0m [38;5;28;01mwith[39;00m [43mPopen[49m[43m([49m[38;5;241;43m*[39;49m[43mpopenargs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m [38;5;28;01mas[39;00m process:
+[0;32m    549[0m     [38;5;28;01mtry[39;00m:
+[0;32m    550[0m         stdout, stderr [38;5;241m=[39m process[38;5;241m.[39mcommunicate([38;5;28minput[39m, timeout[38;5;241m=[39mtimeout)
+
+File [1;32mC:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\Lib\subprocess.py:1026[0m, in [0;36mPopen.__init__[1;34m(self, args, bufsize, executable, stdin, stdout, stderr, preexec_fn, close_fds, shell, cwd, env, universal_newlines, startupinfo, creationflags, restore_signals, start_new_session, pass_fds, user, group, extra_groups, encoding, errors, text, umask, pipesize, process_group)[0m
+[0;32m   1022[0m         [38;5;28;01mif[39;00m [38;5;28mself[39m[38;5;241m.[39mtext_mode:
+[0;32m   1023[0m             [38;5;28mself[39m[38;5;241m.[39mstderr [38;5;241m=[39m io[38;5;241m.[39mTextIOWrapper([38;5;28mself[39m[38;5;241m.[39mstderr,
+[0;32m   1024[0m                     encoding[38;5;241m=[39mencoding, errors[38;5;241m=[39merrors)
+[1;32m-> 1026[0m     [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_execute_child[49m[43m([49m[43margs[49m[43m,[49m[43m [49m[43mexecutable[49m[43m,[49m[43m [49m[43mpreexec_fn[49m[43m,[49m[43m [49m[43mclose_fds[49m[43m,[49m
+[0;32m   1027[0m [43m                        [49m[43mpass_fds[49m[43m,[49m[43m [49m[43mcwd[49m[43m,[49m[43m [49m[43menv[49m[43m,[49m
+[0;32m   1028[0m [43m                        [49m[43mstartupinfo[49m[43m,[49m[43m [49m[43mcreationflags[49m[43m,[49m[43m [49m[43mshell[49m[43m,[49m
+[0;32m   1029[0m [43m                        [49m[43mp2cread[49m[43m,[49m[43m [49m[43mp2cwrite[49m[43m,[49m
+[0;32m   1030[0m [43m                        [49m[43mc2pread[49m[43m,[49m[43m [49m[43mc2pwrite[49m[43m,[49m
+[0;32m   1031[0m [43m                        [49m[43merrread[49m[43m,[49m[43m [49m[43merrwrite[49m[43m,[49m
+[0;32m   1032[0m [43m                        [49m[43mrestore_signals[49m[43m,[49m
+[0;32m   1033[0m [43m                        [49m[43mgid[49m[43m,[49m[43m [49m[43mgids[49m[43m,[49m[43m [49m[43muid[49m[43m,[49m[43m [49m[43mumask[49m[43m,[49m
+[0;32m   1034[0m [43m                        [49m[43mstart_new_session[49m[43m,[49m[43m [49m[43mprocess_group[49m[43m)[49m
+[0;32m   1035[0m [38;5;28;01mexcept[39;00m:
+[0;32m   1036[0m     [38;5;66;03m# Cleanup if the child failed starting.[39;00m
+[0;32m   1037[0m     [38;5;28;01mfor[39;00m f [38;5;129;01min[39;00m [38;5;28mfilter[39m([38;5;28;01mNone[39;00m, ([38;5;28mself[39m[38;5;241m.[39mstdin, [38;5;28mself[39m[38;5;241m.[39mstdout, [38;5;28mself[39m[38;5;241m.[39mstderr)):
+
+File [1;32mC:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.1776.0_x64__qbz5n2kfra8p0\Lib\subprocess.py:1538[0m, in [0;36mPopen._execute_child[1;34m(self, args, executable, preexec_fn, close_fds, pass_fds, cwd, env, startupinfo, creationflags, shell, p2cread, p2cwrite, c2pread, c2pwrite, errread, errwrite, unused_restore_signals, unused_gid, unused_gids, unused_uid, unused_umask, unused_start_new_session, unused_process_group)[0m
+[0;32m   1536[0m [38;5;66;03m# Start the process[39;00m
+[0;32m   1537[0m [38;5;28;01mtry[39;00m:
+[1;32m-> 1538[0m     hp, ht, pid, tid [38;5;241m=[39m [43m_winapi[49m[38;5;241;43m.[39;49m[43mCreateProcess[49m[43m([49m[43mexecutable[49m[43m,[49m[43m [49m[43margs[49m[43m,[49m
+[0;32m   1539[0m [43m                             [49m[38;5;66;43;03m# no special security[39;49;00m
+[0;32m   1540[0m [43m                             [49m[38;5;28;43;01mNone[39;49;00m[43m,[49m[43m [49m[38;5;28;43;01mNone[39;49;00m[43m,[49m
+[0;32m   1541[0m [43m                             [49m[38;5;28;43mint[39;49m[43m([49m[38;5;129;43;01mnot[39;49;00m[43m [49m[43mclose_fds[49m[43m)[49m[43m,[49m
+[0;32m   1542[0m [43m                             [49m[43mcreationflags[49m[43m,[49m
+[0;32m   1543[0m [43m                             [49m[43menv[49m[43m,[49m
+[0;32m   1544[0m [43m                             [49m[43mcwd[49m[43m,[49m
+[0;32m   1545[0m [43m                             [49m[43mstartupinfo[49m[43m)[49m
+[0;32m   1546[0m [38;5;28;01mfinally[39;00m:
+[0;32m   1547[0m     [38;5;66;03m# Child is launched. Close the parent's copy of those pipe[39;00m
+[0;32m   1548[0m     [38;5;66;03m# handles that only the child should have open.  You need[39;00m
+[1;32m   (...)[0m
+[0;32m   1551[0m     [38;5;66;03m# pipe will not close when the child process exits and the[39;00m
+[0;32m   1552[0m     [38;5;66;03m# ReadFile will hang.[39;00m
+[0;32m   1553[0m     [38;5;28mself[39m[38;5;241m.[39m_close_pipe_fds(p2cread, p2cwrite,
+[0;32m   1554[0m                          c2pread, c2pwrite,
+[0;32m   1555[0m                          errread, errwrite)
+
+[1;31mFileNotFoundError[0m: [WinError 2] The system cannot find the file specified
 
