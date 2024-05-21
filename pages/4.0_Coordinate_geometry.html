@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'pages/4.0_Coordinate_geometry';</script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/4.0_Coordinate_geometry.html" />
@@ -72,7 +72,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="4.2. Lines" href="4.1_Lines.html" />
-    <link rel="prev" title="3.8. Vectors exercises" href="3.7_Vectors_exercises.html" />
+    <link rel="prev" title="3.8. Vectors Exercises" href="3.5_Vectors_exercises.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -177,7 +177,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="1.3_Determinants.html">1.5. Determinants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.4_Inverse_matrix.html">1.6. Inverse matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.5_Matrix_algebra.html">1.7. Matrix algebra</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.9_Matrices_exercises.html">1.8. Matrices exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.6_Matrices_exercises.html">1.8. Matrices Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -188,7 +188,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.6. Gauss-Jordan elimination</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.7. Consistent, inconsistent and indeterminate systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.8. Homogeneous systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.9. Systems of linear equations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8_Linear_systems_exercises.html">2.9. Systems of Linear Equations Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -196,14 +196,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.5_Vectors_exercises.html">3.8. Vectors Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">4. Co-ordinate Geometry</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="4.1_Lines.html">4.2. Lines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.2_Planes.html">4.3. Planes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.3_Shortest_distance_problems.html">4.4. Shortest distance problems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate geometry exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate Geometry Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -220,6 +220,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.7. Transformations exercises</a></li>
 </ul>
 </li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercises Solutions</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -394,7 +401,7 @@ document.write(`
 <span id="index-1"></span><h2><span class="section-number">4.1. </span>Points<a class="headerlink" href="#points" title="Permalink to this heading">#</a></h2>
 <p>In his works the <em>Elements</em>, Euclid described a <em>point</em> as <em>“that which has no part”</em>. A point has position only, it has no length, width or thickness, and thus no area or volume. As we have <a class="reference internal" href="3.0_Vectors.html#euclidean-space-section"><span class="std std-ref">already seen</span></a>, a typical point in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> is described by its co-ordinates <span class="math notranslate nohighlight">\((a_1,a_2,\dots,a_n)\)</span>, where the <span class="math notranslate nohighlight">\(a_i \in \mathbb{R}\)</span>. We also think of <span class="math notranslate nohighlight">\(\mathbb{R}^0\)</span> as a single point. This might seem a bit strange because what does a <span class="math notranslate nohighlight">\(0\)</span>-tuple even mean? However, it makes sense for us to adopt this absolutely standard convention.</p>
 <figure class="align-default" id="point-in-r3-figure">
-<a class="reference internal image-reference" href="../_images/R3.svg"><img alt="../_images/R3.svg" src="../_images/R3.svg" width="250" /></a>
+<a class="reference internal image-reference" href="../_images/3_R3.svg"><img alt="../_images/3_R3.svg" src="../_images/3_R3.svg" width="250" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.2 </span><span class="caption-text">The position of a point in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> can be defined by its co-ordinates <span class="math notranslate nohighlight">\((x, y, z)\)</span>.</span><a class="headerlink" href="#point-in-r3-figure" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -436,12 +443,12 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="3.7_Vectors_exercises.html"
+       href="3.5_Vectors_exercises.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3.8. </span>Vectors exercises</p>
+        <p class="prev-next-title"><span class="section-number">3.8. </span>Vectors Exercises</p>
       </div>
     </a>
     <a class="right-next"

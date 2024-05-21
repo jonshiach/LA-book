@@ -1,0 +1,737 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Co-ordinate Geometry Exercises Solutions &#8212; Linear Algebra Lecture Notes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/A4_Coordinate_geometry_exercises_solutions';</script>
+    <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/A4_Coordinate_geometry_exercises_solutions.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Index" href="../genindex.html" />
+    <link rel="prev" title="Vectors Exercises Solutions" href="A3_Vectors_exercises_solutions.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Linear Algebra Lecture Notes
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preliminaries</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0.1_Teaching_schedule.html">Teaching schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0.3_Mathematical_preliminaries.html">Mathematical preliminaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0.5_How_to_pass.html">How to pass the unit</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="1.0_Matrices.html">1. Matrices</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="1.1_Matrix_multiplication.html">1.3. Matrix multiplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.2_Special_matrices.html">1.4. Special matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.3_Determinants.html">1.5. Determinants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.4_Inverse_matrix.html">1.6. Inverse matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.5_Matrix_algebra.html">1.7. Matrix algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.6_Matrices_exercises.html">1.8. Matrices Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="2.1_Solving_using_inverse_matrix.html">2.2. Solving systems of linear equations using the inverse matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_Cramers_rule.html">2.3. Cramer’s rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_Gaussian_elimination.html">2.4. Gaussian elimination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4_Partial_pivoting.html">2.5. Partial pivoting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.6. Gauss-Jordan elimination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.7. Consistent, inconsistent and indeterminate systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.8. Homogeneous systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8_Linear_systems_exercises.html">2.9. Systems of Linear Equations Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.5_Vectors_exercises.html">3.8. Vectors Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="4.0_Coordinate_geometry.html">4. Co-ordinate Geometry</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="4.1_Lines.html">4.2. Lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.2_Planes.html">4.3. Planes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.3_Shortest_distance_problems.html">4.4. Shortest distance problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate Geometry Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="5.1_Subspaces.html">5.3. Subspaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.2_Linear_dependence.html">5.4. Linear dependence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.3_Basis.html">5.5. Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.5_Vector_spaces_exercises.html">5.6. Vector spaces exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="6.0_Linear_transformations.html">6. Linear Transformations</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="6.1_Composite_transformations.html">6.4. Composite linear transformations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.2_Rotation_reflection_and_translation.html">6.5. Rotation, reflection and scaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.3_Translation.html">6.6. Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.7. Transformations exercises</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercises Solutions</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Co-ordinate Geometry Exercises Solutions</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/pages/A4_Coordinate_geometry_exercises_solutions.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Co-ordinate Geometry Exercises Solutions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="co-ordinate-geometry-exercises-solutions">
+<h1>Co-ordinate Geometry Exercises Solutions<a class="headerlink" href="#co-ordinate-geometry-exercises-solutions" title="Permalink to this heading">#</a></h1>
+<div class="solution admonition" id="pages/A4_Coordinate_geometry_exercises_solutions-solution-0">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="4.4_Coordinate_geometry_exercises.html#geometry-ex-line-plane-equations"> Exercise 4.1</a></p>
+<section id="solution-content">
+<p>(a)   Using the <a class="reference internal" href="4.1_Lines.html#vector-equation-of-a-line-definition">vector equation of a line</a> we have <span class="math notranslate nohighlight">\(\vec{r} = \vec{a} + t\vec{d}_1\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \vec{d}_1 &amp;= \vec{b} - \vec{a} =
+    \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} -
+    \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} = 
+    \begin{pmatrix} -1 \\ 0 \\ 0 \end{pmatrix}, \\
+    \therefore \vec{r} &amp;= \vec{a} + t\vec{d}_1 =
+    \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} + t 
+    \begin{pmatrix} -1 \\ 0 \\ 0 \end{pmatrix} = 
+    \begin{pmatrix} 2 - t \\ 1 \\ 0 \end{pmatrix}
+\end{align*} \end{split}\]</div>
+<p>(b)   Using the <a class="reference internal" href="4.1_Lines.html#vector-equation-of-a-line-definition">vector equation of a line</a> we have <span class="math notranslate nohighlight">\(\vec{r} = \vec{c} + t\vec{d}_2\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \vec{d}_2 &amp;= \vec{d} - \vec{c} =
+    \begin{pmatrix} 5 \\ 2 \\ 6 \end{pmatrix} -
+    \begin{pmatrix} 3 \\ -1 \\ 4 \end{pmatrix} = 
+    \begin{pmatrix} 2 \\ 3 \\ 2 \end{pmatrix}, \\
+    \therefore \vec{r} &amp;= \vec{c} + t\vec{d}_2 =
+    \begin{pmatrix} 3 \\ -1 \\ 4 \end{pmatrix} + t 
+    \begin{pmatrix} 2 \\ 3 \\ 2 \end{pmatrix} = 
+    \begin{pmatrix} 3 + 2 t \\ -1 + 3 t \\ 4 + 2 t \end{pmatrix}
+\end{align*} \end{split}\]</div>
+<p>(c)   Calculate the normal vector to the plane</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \vec{b} - \vec{a} &amp;= \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} - 
+    \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} = 
+    \begin{pmatrix} -1 \\ 0 \\ 0 \end{pmatrix}, \\
+    \vec{c} - \vec{a} &amp;= \begin{pmatrix} 3 \\ -1 \\ 4 \end{pmatrix} -
+    \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} =
+    \begin{pmatrix} 1 \\ -2 \\ 4 \end{pmatrix}, \\
+    \therefore \vec{n} &amp;= (\vec{b} - \vec{a}) \times (\vec{c} - \vec{a}) = 
+    \begin{vmatrix} 
+        \vec{i} &amp; \vec{j} &amp; \vec{k} \\
+        -1 &amp; 0 &amp; 0 \\
+        1 &amp; -2 &amp; 4 
+    \end{vmatrix} =
+    \begin{pmatrix} 0 \\ 4 \\ 2 \end{pmatrix},
+\end{align*} \end{split}\]</div>
+<p>Using the <a class="reference internal" href="4.2_Planes.html#point-normal-definition">point normal definition of a plane</a></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    n_x(x - a_x) + n_y(y - a_y) + n_z(z - a_z) &amp;= 0 \\
+    0(x - 2) + 4(y - 1) + 2(z - 0) &amp;= 0 \\
+    4 y + 2 z - 4 &amp;= 0.
+\end{align*} \end{split}\]</div>
+<p>(d)   Calculate the normal vector to the plane</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \vec{c} - \vec{b} &amp;= \begin{pmatrix} 3 \\ -1 \\ 4 \end{pmatrix} - 
+    \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} =
+    \begin{pmatrix} 2 \\ -2 \\ 4 \end{pmatrix}, \\
+    \vec{d} - \vec{b} &amp;= \begin{pmatrix} 5 \\ 2 \\ 6 \end{pmatrix} -
+    \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} =
+    \begin{pmatrix} 4 \\ 1 \\ 6 \end{pmatrix}, \\
+    \vec{n} &amp;= (\vec{c} - \vec{b}) \times (\vec{d} - \vec{b}) = 
+    \begin{vmatrix}
+        \vec{i} &amp; \vec{j} &amp; \vec{k} \\
+        2 &amp; -2 &amp; 4 \\
+        4 &amp; 1 &amp; 6
+    \end{vmatrix} =
+    \begin{pmatrix} -16 \\ 4 \\ 10 \end{pmatrix},
+\end{align*} \end{split}\]</div>
+<p>Using the <a class="reference internal" href="4.2_Planes.html#point-normal-definition">point normal definition of a plane</a></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    n_x(x - b_x) + n_y(y - b_y) + n_z(z - b_z) &amp;= 0 \\
+    -16(x - 1) + 4(y - 1) + 10(z - 0) &amp;= 0\\
+    -16 x + 4 y + 10 z + 12 &amp;= 0.
+\end{align*} \end{split}\]</div>
+</section>
+</div>
+<div class="solution admonition" id="pages/A4_Coordinate_geometry_exercises_solutions-solution-1">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="4.4_Coordinate_geometry_exercises.html#geometry-ex-line-equation-1"> Exercise 4.2</a></p>
+<section id="solution-content">
+<div class="math notranslate nohighlight">
+\[\begin{split} \vec{r} = \begin{pmatrix} 3 \\ 2 \\ 1 \end{pmatrix} + t \begin{pmatrix} 2 \\ 1 \\ 3 \end{pmatrix}  = \begin{pmatrix} 3 + 2 t \\ 2 + t \\ 1 + 3 t \end{pmatrix} \end{split}\]</div>
+</section>
+</div>
+<div class="solution admonition" id="pages/A4_Coordinate_geometry_exercises_solutions-solution-2">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="4.4_Coordinate_geometry_exercises.html#geometry-ex-plane-equation-1"> Exercise 4.3</a></p>
+<section id="solution-content">
+<p>Using the <a class="reference internal" href="4.2_Planes.html#point-normal-definition">point normal definition of a plane</a></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \vec{n} \cdot \begin{pmatrix} x - x_0 \\ y - y_0 \\ z - z_0 \end{pmatrix} &amp;= 0 \\
+    \begin{pmatrix} 2 \\ 1 \\ 3 \end{pmatrix} \cdot
+    \begin{pmatrix} x - 3 \\ y - 2 \\ z - 5 \end{pmatrix} \\
+    2(x - 3) + (y - 2) + 3(z - 5) &amp;= 0 \\
+    2 x + y + 3 z - 23 &amp;= 0
+\end{align*} \end{split}\]</div>
+</section>
+</div>
+<div class="solution admonition" id="pages/A4_Coordinate_geometry_exercises_solutions-solution-3">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="4.4_Coordinate_geometry_exercises.html#geometry-ex-plane-1"> Exercise 4.4</a></p>
+<section id="solution-content">
+<p><span class="math notranslate nohighlight">\(\vec{n} = (3, -2, 1)\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(x=0\)</span> then <span class="math notranslate nohighlight">\(3(0) - 2 y + 2 = 10\)</span> so <span class="math notranslate nohighlight">\(y = -4\)</span> and a point on the plane has co-ordinates <span class="math notranslate nohighlight">\((0, -4, 2)\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(x = 2\)</span> then <span class="math notranslate nohighlight">\(3(2) - 2 y + 2 = 10\)</span> so <span class="math notranslate nohighlight">\(y = -1\)</span> and a point on the plane has co-ordinates <span class="math notranslate nohighlight">\((2, -1, 2)\)</span>.</p>
+</section>
+</div>
+<div class="solution admonition" id="pages/A4_Coordinate_geometry_exercises_solutions-solution-4">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="4.4_Coordinate_geometry_exercises.html#geometry-ex-line-point-distance"> Exercise 4.5</a></p>
+<section id="solution-content">
+<p>(a)   Equating <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> and attempting to solve for <span class="math notranslate nohighlight">\(t\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    1 + 2t_1 &amp;= 1 + 2t_2 \\
+    -t_1 &amp;= 4 \\
+    1 + 3t_1 &amp;= 7 - t_2
+\end{align*} \end{split}\]</div>
+<p>From the second equation <span class="math notranslate nohighlight">\(t_1 = -4\)</span> which when substituted into the third equation gives <span class="math notranslate nohighlight">\(t_2 = 18\)</span>. Substituting these into the first equation gives <span class="math notranslate nohighlight">\(-7 = 37\)</span> which is a contradiction so <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> do not intersect.</p>
+<p>We also need to show that they are not parallel, i.e., there is no value <span class="math notranslate nohighlight">\(k\)</span> such that <span class="math notranslate nohighlight">\(\vec{d}_1 = k \vec{d}_2\)</span>. The direction vectors for <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> are <span class="math notranslate nohighlight">\(\vec{d}_1 = (2, -1, 3)\)</span> and <span class="math notranslate nohighlight">\(\vec{d}_2 = (2, 0, -1)\)</span> so</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix} &amp;= k \begin{pmatrix} 2 \\ 0 \\ -1 \end{pmatrix}, \end{split}\]</div>
+<p>which gives the system</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    2 &amp;= 2k ,\\
+    -1 &amp;= 0, \\
+    3 &amp;= -k.
+\end{align*} \end{split}\]</div>
+<p>The second equation is a contradiction so <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> are not parallel, and since they do not intersect then they must be skew.</p>
+<p>(b)   Using the <a class="reference internal" href="4.3_Shortest_distance_problems.html#point-line-distance-theorem">shortest distance between a point and a line</a></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    t &amp;= \frac{(\vec{p} - \vec{p}_1)\cdot \vec{d}_1}{\vec{d}_1 \cdot \vec{d}_1} = \frac{ 
+    \left( \begin{pmatrix} 0 \\ -1 \\ 3 \end{pmatrix} -
+    \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} \right) \cdot
+    \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix}}{
+        \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix} \cdot
+        \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix}
+    } 
+    = \frac{5}{14}, \\
+    \therefore \vec{r} &amp;= \vec{p}_1 + t\vec{d}_1 = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} + \frac{5}{14} 
+    \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix} = 
+    \begin{pmatrix} \frac{12}{7} \\ - \frac{5}{14} \\ \frac{29}{14} \end{pmatrix}, \\
+    \overrightarrow{\vec{rp}} &amp;= \begin{pmatrix} 0 \\ -1 \\ 3 \end{pmatrix} - 
+    \begin{pmatrix} \frac{12}{7} \\ -\frac{5}{14} \\ \frac{29}{14} \end{pmatrix} =
+    \begin{pmatrix} -\frac{12}{7} \\ -\frac{9}{14} \\ \frac{13}{14} \end{pmatrix}, \\
+    \therefore d &amp;= |\overrightarrow{\vec{rp}}| = 
+    \sqrt{\left(-\frac{12}{7}\right)^2 + \left(-\frac{9}{14}\right)^2 + \left(\frac{13}{14}\right)^2} 
+    = \frac{\sqrt{826}}{14}.
+\end{align*} \end{split}\]</div>
+<p>(c)   The direction vectors for lines <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> are <span class="math notranslate nohighlight">\(\vec{d}_1 = (2, -1, 3)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\vec{d}_2 = (2, -, -1)^\mathsf{T}\)</span> respectively. Calculating a vector perpendicular to both <span class="math notranslate nohighlight">\(\vec{d}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{d}_2\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \vec{n} &amp;= \vec{d}_1 \times \vec{d_1} = \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix} \times
+    \begin{pmatrix} 2 \\ 0 \\ -1 \end{pmatrix} =
+    \begin{vmatrix}
+        \vec{i} &amp; \vec{j} &amp; \vec{k} \\
+        2 &amp; -1 &amp; 3 \\
+        2 &amp; 0 &amp; -1 
+    \end{vmatrix} = 
+    \begin{pmatrix} 1 \\ 8 \\ 2 \end{pmatrix}, \\
+\end{align*} \end{split}\]</div>
+<p>and normalising gives</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \hat{\vec{n}} = \frac{\vec{n}}{|\vec{n}|} = \frac{1}{\sqrt{69}} 
+    \begin{pmatrix} 1 \\ 8 \\ 2 \end{pmatrix} =
+    \begin{pmatrix} \frac{\sqrt{69}}{69} \\ \frac{8\sqrt{69}}{69} \\ \frac{2\sqrt{69}}{69} \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+<p>Using <a class="reference internal" href="4.3_Shortest_distance_problems.html#line-line-distance-theorem">the distance between two lines</a></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    d &amp;= (\vec{p}_2 - \vec{p}_1) \cdot \hat{\vec{n}} \\
+    &amp;= \left( \begin{pmatrix} 1 \\ 4 \\ 7 \end{pmatrix} -
+    \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} \right) \cdot
+    \begin{pmatrix} \frac{\sqrt{69}}{69} \\ \frac{8\sqrt{69}}{69} \\ \frac{2\sqrt{69}}{69} \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 0 \\ 4 \\ 6 \end{pmatrix} \cdot
+    \begin{pmatrix} \frac{\sqrt{69}}{69} \\ \frac{8\sqrt{69}}{69} \\ \frac{2\sqrt{69}}{69} \end{pmatrix} \\
+    &amp;= \frac{44\sqrt{69}}{69}.
+\end{align*} \end{split}\]</div>
+</section>
+</div>
+<div class="solution admonition" id="pages/A4_Coordinate_geometry_exercises_solutions-solution-5">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="4.4_Coordinate_geometry_exercises.html#geometry-ex-line-plane-intersection"> Exercise 4.6</a></p>
+<section id="solution-content">
+<p>First we need to find the position vector of a point, <span class="math notranslate nohighlight">\(\vec{r}\)</span> say, that lies on the plane. Let <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(y=1\)</span> then <span class="math notranslate nohighlight">\(z=-1\)</span> so we know that <span class="math notranslate nohighlight">\(\vec{r} = (0, 1, -1)^\mathsf{T}\)</span> lies on the plane. Using the <a class="reference internal" href="4.2_Planes.html#point-normal-definition">point normal definition of a plane</a></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \vec{n} \cdot \begin{pmatrix} x - x_0 \\ y - y_0 \\ z - z_0 \end{pmatrix} &amp;= 0 \\
+    \begin{pmatrix} 6 \\ -1 \\ -4 \end{pmatrix} \cdot
+    \begin{pmatrix} 0 - (1 + 2 t) \\ 1 - (2 + t) \\ -1 - (-1 + 4 t) \end{pmatrix} &amp;= 0 \\
+    \begin{pmatrix} 6 \\ -1 \\ -4 \end{pmatrix} \cdot
+    \begin{pmatrix} - 1 - 2 t \\ -1 - t \\  -4 t \end{pmatrix} &amp;= 0 \\
+    -6 - 12 t + 1 + t + 16 t &amp;= 0 \\
+    5 t - 5 &amp;= 0 \\
+    \therefore t = 1.
+\end{align*} \end{split}\]</div>
+<p>So the line intersects with the plane at</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \vec{p} + t \vec{d} = 
+    \begin{pmatrix} 1 \\ 2 \\ -1 \end{pmatrix} + 
+    \begin{pmatrix} 2 \\ 1 \\ 4 \end{pmatrix} =
+    \begin{pmatrix} 3 \\ 3 \\ 3 \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+</section>
+</div>
+<div class="solution admonition" id="pages/A4_Coordinate_geometry_exercises_solutions-solution-6">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="4.4_Coordinate_geometry_exercises.html#geometry-ex-point-plane-distance"> Exercise 4.7</a></p>
+<section id="solution-content">
+<p>Using the <a class="reference internal" href="3.3_Dot_and_cross_products.html#dot-product-definition">geometric definition of a dot product</a></p>
+<div class="math notranslate nohighlight">
+\[ \begin{align*}
+    (\vec{q} - \vec{p})\cdot \vec{n} &amp;= |\vec{n}||\vec{q} - \vec{p}| \cos(\theta).
+\end{align*} \]</div>
+<p>Since <span class="math notranslate nohighlight">\(d\)</span> is the length of the adjacent side of the right-angled triangle then</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align*}
+    \cos(\theta) &amp;= \frac{d}{|\vec{q} - \vec{p}|},
+\end{align*} \]</div>
+<p>so</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    (\vec{q} - \vec{p}) \cdot \vec{n} &amp;= |\vec{n}| |\vec{q} - \vec{p}| \frac{d}{|\vec{q} - \vec{p}|} \\
+    \therefore d &amp;= (\vec{q} - \vec{p})\cdot \frac{\vec{n}}{|\vec{n}|}.
+\end{align*} \end{split}\]</div>
+<p>The equation of the plane is <span class="math notranslate nohighlight">\(6 x-y-4 z=3\)</span> so letting <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(y=1\)</span> then <span class="math notranslate nohighlight">\(z = 1\)</span> so we know that <span class="math notranslate nohighlight">\(\vec{p} = (0, 1, -1)\)</span> lies on the plane. Since <span class="math notranslate nohighlight">\(\vec{q} = (2, 4, -3)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\vec{n} = (6, -1, -4)^\mathsf{T}\)</span> then applying the above formula gives</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    d &amp;= \left( \begin{pmatrix} 2 \\ 4 \\ -3 \end{pmatrix} -
+    \begin{pmatrix} 0 \\ 1 \\ -1 \end{pmatrix} \right) \cdot 
+    \begin{pmatrix} 6 \\ -1 \\ -4 \end{pmatrix} / \left|
+    \begin{pmatrix} 6 \\ -1 \\ -4 \end{pmatrix} \right| \\
+    &amp;= \begin{pmatrix} 2 \\ 3 \\ -2 \end{pmatrix} \cdot \frac{1}{\sqrt{53}} 
+    \begin{pmatrix} 6 \\ -1 \\ -4 \end{pmatrix} \\
+    &amp;= \frac{12 - 3 + 8}{\sqrt{53}} = \frac{17}{\sqrt{53}}
+\end{align*} \end{split}\]</div>
+</section>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./pages"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="A3_Vectors_exercises_solutions.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Vectors Exercises Solutions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../genindex.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Index</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Jon Shiach
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

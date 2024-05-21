@@ -64,14 +64,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'pages/6.5_Linear_transformations_exercises';</script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/6.5_Linear_transformations_exercises.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6.8. Transformations exercises" href="6.5_Linear_transformations_exercises-DESKTOP-FANJU3D.html" />
+    <link rel="next" title="Matrices Exercise Solutions" href="A1_Matrices_exercises_solutions.html" />
     <link rel="prev" title="6.6. Translation" href="6.3_Translation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -177,7 +177,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="1.3_Determinants.html">1.5. Determinants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.4_Inverse_matrix.html">1.6. Inverse matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.5_Matrix_algebra.html">1.7. Matrix algebra</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.9_Matrices_exercises.html">1.8. Matrices exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.6_Matrices_exercises.html">1.8. Matrices Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -188,7 +188,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.6. Gauss-Jordan elimination</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.7. Consistent, inconsistent and indeterminate systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.8. Homogeneous systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.9. Systems of linear equations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8_Linear_systems_exercises.html">2.9. Systems of Linear Equations Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -196,14 +196,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.5_Vectors_exercises.html">3.8. Vectors Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="4.0_Coordinate_geometry.html">4. Co-ordinate Geometry</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="4.1_Lines.html">4.2. Lines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.2_Planes.html">4.3. Planes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.3_Shortest_distance_problems.html">4.4. Shortest distance problems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate geometry exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate Geometry Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -218,9 +218,15 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="6.2_Rotation_reflection_and_translation.html">6.5. Rotation, reflection and scaling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.3_Translation.html">6.6. Translation</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">6.7. Transformations exercises</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises-DESKTOP-FANJU3D.html">6.8. Transformations exercises</a></li>
 </ul>
 </li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercises Solutions</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -411,41 +417,34 @@ document.write(`
 <div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
 <p>(g)   <span class="math notranslate nohighlight">\(T: f(x) \mapsto xf(x)\)</span></p>
 </div>
-<!-- :::{grid-item}
-:columns: 6
-(h) &emsp; $T: \mathbb{C}^2 \to \mathbb{C}$ where $T: (x, y)^\mathsf{T} \mapsto x + y$
-:::
-
-:::{grid-item}
-:columns: 12
-&emsp;
-:::
-
-:::{grid-item}
-:columns: 6
-(i) &emsp; $T: \mathbb{C}^2 \to \mathbb{C}$ where $T: (x, y)^\mathsf{T} \mapsto x y$
-:::
-
-:::{grid-item}
-:columns: 6
-(j) &emsp; $T: \mathbb{C}^2 \to \mathbb{C}$ where $T: (x, y)^\mathsf{T} \mapsto \bar{y}$  -->
-<!-- ::: -->
+<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
+<p>(h)   <span class="math notranslate nohighlight">\(T: \mathbb{C}^2 \to \mathbb{C}\)</span> where <span class="math notranslate nohighlight">\(T: (x, y)^\mathsf{T} \mapsto x + y\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-12 sd-col-xs-12 sd-col-sm-12 sd-col-md-12 sd-col-lg-12 docutils">
+<p> </p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
+<p>(i)   <span class="math notranslate nohighlight">\(T: \mathbb{C}^2 \to \mathbb{C}\)</span> where <span class="math notranslate nohighlight">\(T: (x, y)^\mathsf{T} \mapsto x y\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
+<p>(j)   <span class="math notranslate nohighlight">\(T: \mathbb{C}^2 \to \mathbb{C}\)</span> where <span class="math notranslate nohighlight">\(T: (x, y)^\mathsf{T} \mapsto \bar{y}\)</span></p>
 </div>
 </div>
-<!-- ($\bar{x}$ is the complex conjugate of $x = a + bi$ defined by $\bar{x} = a - bi$.) -->
+</div>
+<p>(<span class="math notranslate nohighlight">\(\bar{x}\)</span> is the complex conjugate of <span class="math notranslate nohighlight">\(x = a + bi\)</span> defined by <span class="math notranslate nohighlight">\(\bar{x} = a - bi\)</span>.)</p>
 </section>
 </div>
 <div class="solution dropdown admonition" id="pages/6.5_Linear_transformations_exercises-solution-1">
 
 <p class="admonition-title">Solution to<a class="reference internal" href="#transformations-ex-linear-transformations"> Exercise 6.1</a></p>
 <section id="solution-content">
-<p>(a) Let <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2)^\mathsf{T}, \mathbf{v} = (v_1, v_2)^\mathsf{T} \in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span></p>
+<p>(a) Let <span class="math notranslate nohighlight">\(\vec{u} = (u_1, u_2)^\mathsf{T}, \vec{v} = (v_1, v_2)^\mathsf{T} \in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    T(\mathbf{u} + \alpha \mathbf{v}) 
+    T(\vec{u} + \alpha \vec{v}) 
     &amp;= T\begin{pmatrix} u_1 + \alpha v_1 \\ u_2 + \alpha v_2 \end{pmatrix} 
     = \begin{pmatrix} 0 \\ u_2 + \alpha v_2 \end{pmatrix}, \\
-    T(\mathbf{u}) + \alpha T(\mathbf{v})
+    T(\vec{u}) + \alpha T(\vec{v})
     &amp;= T\begin{pmatrix} u_1 \\ u_2 \end{pmatrix} + \alpha T \begin{pmatrix} v_1 \\ v_2 \end{pmatrix}
     = \begin{pmatrix} 0 \\ u_2 + \alpha v_2 \end{pmatrix},
 \end{align*} \end{split}\]</div>
@@ -456,24 +455,24 @@ document.write(`
     T\left( \begin{pmatrix} 1 \\ 0 \end{pmatrix} + \begin{pmatrix} 1 \\ 1 \end{pmatrix} \right) = \begin{pmatrix} 2 \\ 5 \end{pmatrix}, \\
     T\begin{pmatrix} 1 \\ 0 \end{pmatrix} + T\begin{pmatrix} 1 \\ 1 \end{pmatrix} = \begin{pmatrix} 2 \\ 10 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>(c) Let <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2)^\mathsf{T}, \mathbf{v} = (v_1, v_2)^\mathsf{T} \in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span></p>
+<p>(c) Let <span class="math notranslate nohighlight">\(\vec{u} = (u_1, u_2)^\mathsf{T}, \vec{v} = (v_1, v_2)^\mathsf{T} \in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    T(\mathbf{u} + \alpha \mathbf{v})
+    T(\vec{u} + \alpha \vec{v})
     &amp;= T\begin{pmatrix} u_1 + \alpha v_1 \\ u_2 + \alpha v_2 \end{pmatrix}
     = \begin{pmatrix} u_1 + \alpha v_1 \\ u_1 - u_2 + \alpha v_1 - \alpha v_2 \end{pmatrix}, \\
-    T(\mathbf{u}) + \alpha T(\mathbf{v})
+    T(\vec{u}) + \alpha T(\vec{v})
     &amp;= T\begin{pmatrix} u_1 \\ u_2 \end{pmatrix} + \alpha T\begin{pmatrix} v_1 \\ v_2 \end{pmatrix}
     = \begin{pmatrix} u_1 + \alpha v_1 \\ u_1 + \alpha v_1 - u_2 - \alpha v_2\end{pmatrix},
 \end{align*} \end{split}\]</div>
 <p>therefore <span class="math notranslate nohighlight">\(T\)</span> is a linear transformation.</p>
-<p>(d) Let <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2, v_3)^\mathsf{T},\mathbf{v} = (v_1, v_2, v_3)^\mathsf{T}\in \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span></p>
+<p>(d) Let <span class="math notranslate nohighlight">\(\vec{u} = (u_1, u_2, v_3)^\mathsf{T},\vec{v} = (v_1, v_2, v_3)^\mathsf{T}\in \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    T(\mathbf{u} + \alpha \mathbf{v}) 
+    T(\vec{u} + \alpha \vec{v}) 
     &amp;= T\begin{pmatrix} u_1 + \alpha v_1 \\ u_2 + \alpha v_2 \\ u_3 + \alpha v_3 \end{pmatrix}
     = \begin{pmatrix} u_1 + u_2 + \alpha v_1 + \alpha v_2 \\  u_3 + \alpha v_3 \end{pmatrix} , \\
-    T(\mathbf{u}) + \alpha T(\mathbf{v}) 
+    T(\vec{u}) + \alpha T(\vec{v}) 
     &amp;= T\begin{pmatrix} u_1 \\ u_2 \\ u_3 \end{pmatrix} + \alpha \begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix}
     = \begin{pmatrix} u_1 + \alpha v_1 + u_2 + \alpha v_2 \\  u_3 + \alpha v_3 \end{pmatrix}
 \end{align*} \end{split}\]</div>
@@ -534,7 +533,7 @@ document.write(`
 
 <p class="admonition-title"><span class="caption-number">Exercise 6.3 </span></p>
 <section id="exercise-content">
-<p>A linear transformation <span class="math notranslate nohighlight">\(T: \mathbb{R}^2 \to \mathbb{R}^2\)</span> is defined by <span class="math notranslate nohighlight">\(T: (x, y)^\mathsf{T} \mapsto (x - 2y, 2x + 3y)^\mathsf{T}\)</span>. Given <span class="math notranslate nohighlight">\(T(\mathbf{u}) = (-1, 5)^\mathsf{T}\)</span> determine <span class="math notranslate nohighlight">\(\mathbf{u}\)</span>.</p>
+<p>A linear transformation <span class="math notranslate nohighlight">\(T: \mathbb{R}^2 \to \mathbb{R}^2\)</span> is defined by <span class="math notranslate nohighlight">\(T: (x, y)^\mathsf{T} \mapsto (x - 2y, 2x + 3y)^\mathsf{T}\)</span>. Given <span class="math notranslate nohighlight">\(T(\vec{u}) = (-1, 5)^\mathsf{T}\)</span> determine <span class="math notranslate nohighlight">\(\vec{u}\)</span>.</p>
 </section>
 </div>
 <div class="solution dropdown admonition" id="pages/6.5_Linear_transformations_exercises-solution-5">
@@ -553,7 +552,7 @@ document.write(`
 \end{pmatrix}. \end{split}\]</div>
 <p>Therefore</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \mathbf{u} = A^{-1} 
+\[\begin{split} \vec{u} = A^{-1} 
 \begin{pmatrix} -1 \\ 5 \end{pmatrix} =  \frac{1}{7}
 \begin{pmatrix} 
     3 &amp; 2 \\
@@ -583,9 +582,9 @@ document.write(`
 <section id="solution-content">
 <p>The transformation matrix is determined using equation <a class="reference internal" href="6.0_Linear_transformations.html#equation-determining-the-transformation-matrix">(6.2)</a> which is</p>
 <div class="math notranslate nohighlight">
-\[A = \begin{pmatrix} T(\mathbf{u}_1) &amp; T(\mathbf{u}_2) &amp; \cdots &amp; T(\mathbf{u}_n) \end{pmatrix}
-\begin{pmatrix} \mathbf{u}_1 &amp; \mathbf{u}_2 &amp; \cdots &amp; \mathbf{u}_n \end{pmatrix}^{-1}.\]</div>
-<p>Using Gauss-Jordan elimination to calculate the inverse of <span class="math notranslate nohighlight">\((\mathbf{u}_1, \mathbf{u}_2, \mathbf{u}_3)^{-1}\)</span></p>
+\[A = \begin{pmatrix} T(\vec{u}_1) &amp; T(\vec{u}_2) &amp; \cdots &amp; T(\vec{u}_n) \end{pmatrix}
+\begin{pmatrix} \vec{u}_1 &amp; \vec{u}_2 &amp; \cdots &amp; \vec{u}_n \end{pmatrix}^{-1}.\]</div>
+<p>Using Gauss-Jordan elimination to calculate the inverse of <span class="math notranslate nohighlight">\((\vec{u}_1, \vec{u}_2, \vec{u}_3)^{-1}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     &amp; \left( \begin{array}{rrr|rrr}
@@ -615,7 +614,7 @@ document.write(`
        0 &amp; 0 &amp; 1 &amp; -2 &amp; -2 &amp; 1
     \end{array} \right)
 \end{align*} \end{split}\]</div>
-<p>So <span class="math notranslate nohighlight">\((\mathbf{u}_1, \mathbf{u}_2, \mathbf{u}_3)^{-1} = \begin{pmatrix}  -1 &amp; -2 &amp; 1 \\ 1 &amp; 1 &amp; 0 \\ -2 &amp; -2 &amp; 1 \end{pmatrix}\)</span> and</p>
+<p>So <span class="math notranslate nohighlight">\((\vec{u}_1, \vec{u}_2, \vec{u}_3)^{-1} = \begin{pmatrix}  -1 &amp; -2 &amp; 1 \\ 1 &amp; 1 &amp; 0 \\ -2 &amp; -2 &amp; 1 \end{pmatrix}\)</span> and</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     A &amp;= \begin{pmatrix} 1 &amp; 6 &amp; 2 \\ -2 &amp; 5 &amp; 4 \\ -4 &amp; 10 &amp; 7 \end{pmatrix}
@@ -758,7 +757,7 @@ Re\!f \left(\pi/3\right)
         0 &amp; 0 &amp; 1
     \end{pmatrix}
 \end{align*} \end{split}\]</div>
-<p>Translate by <span class="math notranslate nohighlight">\((3, 2)^\mathsf{T}\)</span> so that the centre of the square is back to <span class="math notranslate nohighlight">\(\mathbf{c}\)</span></p>
+<p>Translate by <span class="math notranslate nohighlight">\((3, 2)^\mathsf{T}\)</span> so that the centre of the square is back to <span class="math notranslate nohighlight">\(\vec{c}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     T \begin{pmatrix} 3 \\ 2 \end{pmatrix} &amp;= 
@@ -871,11 +870,11 @@ Re\!f \left(\pi/3\right)
       </div>
     </a>
     <a class="right-next"
-       href="6.5_Linear_transformations_exercises-DESKTOP-FANJU3D.html"
+       href="A1_Matrices_exercises_solutions.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6.8. </span>Transformations exercises</p>
+        <p class="prev-next-title">Matrices Exercise Solutions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

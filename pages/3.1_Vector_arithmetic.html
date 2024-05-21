@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'pages/3.1_Vector_arithmetic';</script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/3.1_Vector_arithmetic.html" />
@@ -177,7 +177,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="1.3_Determinants.html">1.5. Determinants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.4_Inverse_matrix.html">1.6. Inverse matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.5_Matrix_algebra.html">1.7. Matrix algebra</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.9_Matrices_exercises.html">1.8. Matrices exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.6_Matrices_exercises.html">1.8. Matrices Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -188,7 +188,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.6. Gauss-Jordan elimination</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.7. Consistent, inconsistent and indeterminate systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.8. Homogeneous systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.9. Systems of linear equations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8_Linear_systems_exercises.html">2.9. Systems of Linear Equations Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
@@ -196,14 +196,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.5_Vectors_exercises.html">3.8. Vectors Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="4.0_Coordinate_geometry.html">4. Co-ordinate Geometry</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="4.1_Lines.html">4.2. Lines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.2_Planes.html">4.3. Planes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.3_Shortest_distance_problems.html">4.4. Shortest distance problems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate geometry exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate Geometry Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -220,6 +220,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.7. Transformations exercises</a></li>
 </ul>
 </li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercises Solutions</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -390,41 +397,41 @@ document.write(`
 <div class="proof definition admonition" id="vector-equality-definition">
 <p class="admonition-title"><span class="caption-number">Definition 3.1 </span> (Vector equality)</p>
 <section class="definition-content" id="proof-content">
-<p>Two vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> are said to be equal their corresponding elements are equal. In other words <span class="math notranslate nohighlight">\(\mathbf{a},\mathbf{b}\in \mathbb{R}^n\)</span> where  <span class="math notranslate nohighlight">\(\mathbf{a} = (a_1, a_2, \ldots, a_n)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b} = (b_1, b_2, \ldots, b_n)^\mathsf{T}\)</span> respectively, are equal if and only if the elements which correspond co-ordinate-wise are equal, i.e.,</p>
+<p>Two vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> are said to be equal their corresponding elements are equal. In other words <span class="math notranslate nohighlight">\(\vec{a},\vec{b}\in \mathbb{R}^n\)</span> where  <span class="math notranslate nohighlight">\(\vec{a} = (a_1, a_2, \ldots, a_n)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\vec{b} = (b_1, b_2, \ldots, b_n)^\mathsf{T}\)</span> respectively, are equal if and only if the elements which correspond co-ordinate-wise are equal, i.e.,</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align*}
     a_i = b_i, \qquad i = 1, \ldots, n.
 \end{align*} \]</div>
 <p>Informally this happens if and only if they have the same magnitude and they point in the same direction.</p>
 </section>
-</div><p>It follows from the definition of vector equality that a vector can be moved parallel to itself and still represent the same vector, i.e., the position of the vector does not matter when considering vector equality. Consider <a class="reference internal" href="#vector-equality-figure"><span class="std std-numref">Fig. 3.6</span></a> which shows four vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>. The vectors <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> point in the same direction and have the same magnitude so we can say that <span class="math notranslate nohighlight">\(\mathbf{a}=\mathbf{b}\)</span>. The vector <span class="math notranslate nohighlight">\(\mathbf{c}\)</span> has the same magnitude as <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> but points in the opposite direction so <span class="math notranslate nohighlight">\(\mathbf{c}\neq \mathbf{a}\)</span>. The vector <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> points in the same direction as <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> but has a larger magnitude so <span class="math notranslate nohighlight">\(\mathbf{d} \neq \mathbf{a}\)</span>.</p>
+</div><p>It follows from the definition of vector equality that a vector can be moved parallel to itself and still represent the same vector, i.e., the position of the vector does not matter when considering vector equality. Consider <a class="reference internal" href="#vector-equality-figure"><span class="std std-numref">Fig. 3.6</span></a> which shows four vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>. The vectors <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span> point in the same direction and have the same magnitude so we can say that <span class="math notranslate nohighlight">\(\vec{a}=\vec{b}\)</span>. The vector <span class="math notranslate nohighlight">\(\vec{c}\)</span> has the same magnitude as <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span> but points in the opposite direction so <span class="math notranslate nohighlight">\(\vec{c}\neq \vec{a}\)</span>. The vector <span class="math notranslate nohighlight">\(\vec{d}\)</span> points in the same direction as <span class="math notranslate nohighlight">\(\vec{a}\)</span> but has a larger magnitude so <span class="math notranslate nohighlight">\(\vec{d} \neq \vec{a}\)</span>.</p>
 <figure class="align-default" id="vector-equality-figure">
-<a class="reference internal image-reference" href="../_images/vector_equality.svg"><img alt="../_images/vector_equality.svg" src="../_images/vector_equality.svg" width="450" /></a>
+<a class="reference internal image-reference" href="../_images/3_vector_equality.svg"><img alt="../_images/3_vector_equality.svg" src="../_images/3_vector_equality.svg" width="450" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.6 </span><span class="caption-text">Of these four vectors only <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> are equal.</span><a class="headerlink" href="#vector-equality-figure" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.6 </span><span class="caption-text">Of these four vectors only <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span> are equal.</span><a class="headerlink" href="#vector-equality-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3-LCn_dGzaY?si=cVYwoonebowFvY9c&amp;start=193" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </section>
 <section id="vector-addition">
 <span id="index-2"></span><h2><span class="section-number">3.4.2. </span>Vector addition<a class="headerlink" href="#vector-addition" title="Permalink to this heading">#</a></h2>
-<p>Given three points with position vectors <span class="math notranslate nohighlight">\(\mathbf{a}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{c}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> it is natural to ask how we might express the vector <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{ac}}\)</span> in terms of <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{ab}}\)</span> and <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{bc}}.\)</span> The answer is given by vector addition. In other words <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{ac}} = \overrightarrow{\mathbf{ab}} + \overrightarrow{\mathbf{bc}}\)</span> where addition of two vectors is defined below.</p>
+<p>Given three points with position vectors <span class="math notranslate nohighlight">\(\vec{a}\)</span>, <span class="math notranslate nohighlight">\(\vec{b}\)</span> and <span class="math notranslate nohighlight">\(\vec{c}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> it is natural to ask how we might express the vector <span class="math notranslate nohighlight">\(\overrightarrow{\vec{ac}}\)</span> in terms of <span class="math notranslate nohighlight">\(\overrightarrow{\vec{ab}}\)</span> and <span class="math notranslate nohighlight">\(\overrightarrow{\vec{bc}}.\)</span> The answer is given by vector addition. In other words <span class="math notranslate nohighlight">\(\overrightarrow{\vec{ac}} = \overrightarrow{\vec{ab}} + \overrightarrow{\vec{bc}}\)</span> where addition of two vectors is defined below.</p>
 <div class="proof definition admonition" id="vector-addition-definition">
 <p class="admonition-title"><span class="caption-number">Definition 3.2 </span> (Addition of two vectors)</p>
 <section class="definition-content" id="proof-content">
-<p>The addition of two vectors <span class="math notranslate nohighlight">\(\mathbf{a},\mathbf{b}\in\mathbb{R}^n\)</span> is calculated using</p>
+<p>The addition of two vectors <span class="math notranslate nohighlight">\(\vec{a},\vec{b}\in\mathbb{R}^n\)</span> is calculated using</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \mathbf{a} + \mathbf{b} = 
+    \vec{a} + \vec{b} = 
     \begin{pmatrix} a_1 \\ a_2 \\ \vdots \\ a_n \end{pmatrix} + 
     \begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{pmatrix} =
     \begin{pmatrix} a_1 + b_1 \\ a_2 + b_2 \\ \vdots \\ a_n + b_n \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 </section>
-</div><p>Intuitively this makes sense, the displacement from <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> to <span class="math notranslate nohighlight">\(\mathbf{c}\)</span> in any coordinate direction is just the displacement from <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> to <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> plus the displacement from <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> to <span class="math notranslate nohighlight">\(\mathbf{c}\)</span> in the relevant coordinate direction.</p>
-<p>The geometric representation of <span class="math notranslate nohighlight">\(\mathbf{a}+\mathbf{b}\)</span> is represented in <a class="reference internal" href="#vector-addition-figure"><span class="std std-numref">Fig. 3.7</span></a>. Note that <span class="math notranslate nohighlight">\(\mathbf{a}+\mathbf{b}\)</span> is the same as placing the tail of <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> at the head of <span class="math notranslate nohighlight">\(\mathbf{a}\)</span>. Note also, as the figure demonstrates, that the order in which one adds the two vectors is unimportant. This is known as the <strong>parallelogram law of addition</strong>.</p>
+</div><p>Intuitively this makes sense, the displacement from <span class="math notranslate nohighlight">\(\vec{a}\)</span> to <span class="math notranslate nohighlight">\(\vec{c}\)</span> in any coordinate direction is just the displacement from <span class="math notranslate nohighlight">\(\vec{a}\)</span> to <span class="math notranslate nohighlight">\(\vec{b}\)</span> plus the displacement from <span class="math notranslate nohighlight">\(\vec{b}\)</span> to <span class="math notranslate nohighlight">\(\vec{c}\)</span> in the relevant coordinate direction.</p>
+<p>The geometric representation of <span class="math notranslate nohighlight">\(\vec{a}+\vec{b}\)</span> is represented in <a class="reference internal" href="#vector-addition-figure"><span class="std std-numref">Fig. 3.7</span></a>. Note that <span class="math notranslate nohighlight">\(\vec{a}+\vec{b}\)</span> is the same as placing the tail of <span class="math notranslate nohighlight">\(\vec{b}\)</span> at the head of <span class="math notranslate nohighlight">\(\vec{a}\)</span>. Note also, as the figure demonstrates, that the order in which one adds the two vectors is unimportant. This is known as the <strong>parallelogram law of addition</strong>.</p>
 <figure class="align-default" id="vector-addition-figure">
-<a class="reference internal image-reference" href="../_images/vector_addition.svg"><img alt="../_images/vector_addition.svg" src="../_images/vector_addition.svg" width="500" /></a>
+<a class="reference internal image-reference" href="../_images/3_vector_addition.svg"><img alt="../_images/3_vector_addition.svg" src="../_images/3_vector_addition.svg" width="500" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 3.7 </span><span class="caption-text">The addition of two vectors.</span><a class="headerlink" href="#vector-addition-figure" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -436,28 +443,28 @@ document.write(`
 <div class="proof definition admonition" id="scalar-multiplication-of-a-vector-definition">
 <p class="admonition-title"><span class="caption-number">Definition 3.3 </span> (Scalar multiplication of a vector)</p>
 <section class="definition-content" id="proof-content">
-<p>The multiplication of a vector <span class="math notranslate nohighlight">\(\mathbf{a}\in \mathbb{R}^n\)</span> by a scalar <span class="math notranslate nohighlight">\(k \in \mathbb{R}\)</span> is defined by</p>
+<p>The multiplication of a vector <span class="math notranslate nohighlight">\(\vec{a}\in \mathbb{R}^n\)</span> by a scalar <span class="math notranslate nohighlight">\(k \in \mathbb{R}\)</span> is defined by</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} k \mathbf{a} = k\begin{pmatrix} a_1 \\ a_2 \\ \vdots \\ a_n \end{pmatrix} =
+\[\begin{split} k \vec{a} = k\begin{pmatrix} a_1 \\ a_2 \\ \vdots \\ a_n \end{pmatrix} =
 \begin{pmatrix} k a_1 \\ k a_2 \\ \vdots \\ k a_n \end{pmatrix}. \end{split}\]</div>
 </section>
-</div><p>Multiplying a vector by a scalar has the effect of <strong>scaling</strong> the vector <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> to produce a vector <strong>parallel</strong> to <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> with a magnitude of <span class="math notranslate nohighlight">\(k|\mathbf{a}|\)</span>. In general if two vectors <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> are parallel then we write <span class="math notranslate nohighlight">\(\mathbf{u} \parallel \mathbf{v}\)</span>.</p>
+</div><p>Multiplying a vector by a scalar has the effect of <strong>scaling</strong> the vector <span class="math notranslate nohighlight">\(\vec{a}\)</span> to produce a vector <strong>parallel</strong> to <span class="math notranslate nohighlight">\(\vec{a}\)</span> with a magnitude of <span class="math notranslate nohighlight">\(k|\vec{a}|\)</span>. In general if two vectors <span class="math notranslate nohighlight">\(\vec{u}\)</span> and <span class="math notranslate nohighlight">\(\vec{v}\)</span> are parallel then we write <span class="math notranslate nohighlight">\(\vec{u} \parallel \vec{v}\)</span>.</p>
 <div class="proof theorem admonition" id="properties-of-scalar-multiplication-of-vectors">
 <p class="admonition-title"><span class="caption-number">Theorem 3.1 </span> (Properties of scalar multiplication of vectors)</p>
 <section class="theorem-content" id="proof-content">
-<p>The scalar multiplication of a vector <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> by a scalar <span class="math notranslate nohighlight">\(k\)</span> has the following properties:</p>
+<p>The scalar multiplication of a vector <span class="math notranslate nohighlight">\(\vec{a}\)</span> by a scalar <span class="math notranslate nohighlight">\(k\)</span> has the following properties:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(k\mathbf{a}\)</span> = <span class="math notranslate nohighlight">\(\mathbf{a}k\)</span>  is a vector parallel to <span class="math notranslate nohighlight">\(\mathbf{a}\)</span>;</p></li>
-<li><p><span class="math notranslate nohighlight">\(0\mathbf{a} = (0, 0, \ldots, 0)^\mathsf{T} = \mathbf{0}\)</span>;</p></li>
-<li><p><span class="math notranslate nohighlight">\(1\mathbf{a} = \mathbf{a}\)</span>;</p></li>
-<li><p><span class="math notranslate nohighlight">\(|k\mathbf{a}| = |k||\mathbf{a}|\)</span>   (<span class="math notranslate nohighlight">\(|\mathbf{a}|\)</span> is the length of the vector <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> - see <a class="reference internal" href="3.2_Vector_magnitude.html#magnitude-definition">vector magnitude</a>);</p></li>
-<li><p>if <span class="math notranslate nohighlight">\(k&gt;0\)</span> then <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(k\mathbf{a}\)</span> point in the same direction, whereas if <span class="math notranslate nohighlight">\(k&lt;0\)</span> then <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(k\mathbf{a}\)</span> point in opposite directions.</p></li>
+<li><p><span class="math notranslate nohighlight">\(k\vec{a}\)</span> = <span class="math notranslate nohighlight">\(\vec{a}k\)</span>  is a vector parallel to <span class="math notranslate nohighlight">\(\vec{a}\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(0\vec{a} = (0, 0, \ldots, 0)^\mathsf{T} = \vec{0}\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(1\vec{a} = \vec{a}\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(|k\vec{a}| = |k||\vec{a}|\)</span>   (<span class="math notranslate nohighlight">\(|\vec{a}|\)</span> is the length of the vector <span class="math notranslate nohighlight">\(\vec{a}\)</span> - see <a class="reference internal" href="3.2_Vector_magnitude.html#magnitude-definition">vector magnitude</a>);</p></li>
+<li><p>if <span class="math notranslate nohighlight">\(k&gt;0\)</span> then <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(k\vec{a}\)</span> point in the same direction, whereas if <span class="math notranslate nohighlight">\(k&lt;0\)</span> then <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(k\vec{a}\)</span> point in opposite directions.</p></li>
 </ul>
 </section>
 </div><figure class="align-default" id="scalar-multiplication-of-a-vector-figure">
-<a class="reference internal image-reference" href="../_images/scalar_multiplication_of_a_vector.svg"><img alt="../_images/scalar_multiplication_of_a_vector.svg" src="../_images/scalar_multiplication_of_a_vector.svg" width="500" /></a>
+<a class="reference internal image-reference" href="../_images/3_scalar_multiplication_of_a_vector.svg"><img alt="../_images/3_scalar_multiplication_of_a_vector.svg" src="../_images/3_scalar_multiplication_of_a_vector.svg" width="500" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.8 </span><span class="caption-text">Scaled variations of the vector <span class="math notranslate nohighlight">\(\mathbf{a}\)</span>.</span><a class="headerlink" href="#scalar-multiplication-of-a-vector-figure" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.8 </span><span class="caption-text">Scaled variations of the vector <span class="math notranslate nohighlight">\(\vec{a}\)</span>.</span><a class="headerlink" href="#scalar-multiplication-of-a-vector-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3-LCn_dGzaY?si=GddwhVCdc0fnfd2P&amp;start=317" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></section>

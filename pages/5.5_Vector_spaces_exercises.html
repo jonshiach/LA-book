@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'pages/5.5_Vector_spaces_exercises';</script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/5.5_Vector_spaces_exercises.html" />
@@ -177,7 +177,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="1.3_Determinants.html">1.5. Determinants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.4_Inverse_matrix.html">1.6. Inverse matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.5_Matrix_algebra.html">1.7. Matrix algebra</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.9_Matrices_exercises.html">1.8. Matrices exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.6_Matrices_exercises.html">1.8. Matrices Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -188,7 +188,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.6. Gauss-Jordan elimination</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.7. Consistent, inconsistent and indeterminate systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.8. Homogeneous systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.9. Systems of linear equations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8_Linear_systems_exercises.html">2.9. Systems of Linear Equations Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -196,14 +196,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.5_Vectors_exercises.html">3.8. Vectors Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="4.0_Coordinate_geometry.html">4. Co-ordinate Geometry</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="4.1_Lines.html">4.2. Lines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.2_Planes.html">4.3. Planes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.3_Shortest_distance_problems.html">4.4. Shortest distance problems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate geometry exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate Geometry Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
@@ -220,6 +220,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.7. Transformations exercises</a></li>
 </ul>
 </li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercises Solutions</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -384,16 +391,16 @@ document.write(`
 
 <p class="admonition-title">Solution to<a class="reference internal" href="#vector-spaces-ex-R3-axioms"> Exercise 5.1</a></p>
 <section id="solution-content">
-<p>Let <span class="math notranslate nohighlight">\(\mathbf{u}, \mathbf{v}, \mathbf{w} \in \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\alpha, \beta \in \mathbb{R}\)</span> then</p>
+<p>Let <span class="math notranslate nohighlight">\(\vec{u}, \vec{v}, \vec{w} \in \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\alpha, \beta \in \mathbb{R}\)</span> then</p>
 <ul class="simple">
-<li><p>A1: <span class="math notranslate nohighlight">\(\mathbf{u} + (\mathbf{v} + \mathbf{w}) = (\mathbf{u} + \mathbf{v}) + \mathbf{w} \checkmark\)</span></p></li>
-<li><p>A2: <span class="math notranslate nohighlight">\(\mathbf{u} + \mathbf{v} = \mathbf{v} + \mathbf{u} \checkmark\)</span></p></li>
-<li><p>A3: <span class="math notranslate nohighlight">\(\mathbf{u} + \mathbf{0} = \mathbf{u} \checkmark\)</span></p></li>
-<li><p>A4: <span class="math notranslate nohighlight">\(\mathbf{u} + (-\mathbf{u}) = \mathbf{0} \checkmark\)</span></p></li>
-<li><p>M1: <span class="math notranslate nohighlight">\(\alpha(\beta \mathbf{u}) = (\alpha \beta) \mathbf{u} \checkmark\)</span></p></li>
-<li><p>M2: <span class="math notranslate nohighlight">\(1 \mathbf{u} = \mathbf{u} \checkmark\)</span></p></li>
-<li><p>M3: <span class="math notranslate nohighlight">\(\alpha(\mathbf{u} + \mathbf{v}) = \alpha\mathbf{u} + \alpha \mathbf{v} \checkmark\)</span></p></li>
-<li><p>M4: <span class="math notranslate nohighlight">\((\alpha + \beta) \mathbf{u} = \alpha \mathbf{u} + \beta \mathbf{u} \checkmark\)</span></p></li>
+<li><p>A1: <span class="math notranslate nohighlight">\(\vec{u} + (\vec{v} + \vec{w}) = (\vec{u} + \vec{v}) + \vec{w} \checkmark\)</span></p></li>
+<li><p>A2: <span class="math notranslate nohighlight">\(\vec{u} + \vec{v} = \vec{v} + \vec{u} \checkmark\)</span></p></li>
+<li><p>A3: <span class="math notranslate nohighlight">\(\vec{u} + \vec{0} = \vec{u} \checkmark\)</span></p></li>
+<li><p>A4: <span class="math notranslate nohighlight">\(\vec{u} + (-\vec{u}) = \vec{0} \checkmark\)</span></p></li>
+<li><p>M1: <span class="math notranslate nohighlight">\(\alpha(\beta \vec{u}) = (\alpha \beta) \vec{u} \checkmark\)</span></p></li>
+<li><p>M2: <span class="math notranslate nohighlight">\(1 \vec{u} = \vec{u} \checkmark\)</span></p></li>
+<li><p>M3: <span class="math notranslate nohighlight">\(\alpha(\vec{u} + \vec{v}) = \alpha\vec{u} + \alpha \vec{v} \checkmark\)</span></p></li>
+<li><p>M4: <span class="math notranslate nohighlight">\((\alpha + \beta) \vec{u} = \alpha \vec{u} + \beta \vec{u} \checkmark\)</span></p></li>
 </ul>
 <p>All of the axioms of vector spaces hold for <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
 </section>
@@ -425,9 +432,9 @@ document.write(`
 
 <p class="admonition-title">Solution to<a class="reference internal" href="#vector-spaces-ex-R3-subspaces"> Exercise 5.2</a></p>
 <section id="solution-content">
-<p>(a)   <span class="math notranslate nohighlight">\(U\)</span> is non-empty since <span class="math notranslate nohighlight">\(\mathbf{0} \in U\)</span>. Let <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2, 0)^\mathsf{T}, \mathbf{v} = (v_1, v_2, 0)^\mathsf{T} \in U\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
+<p>(a)   <span class="math notranslate nohighlight">\(U\)</span> is non-empty since <span class="math notranslate nohighlight">\(\vec{0} \in U\)</span>. Let <span class="math notranslate nohighlight">\(\vec{u} = (u_1, u_2, 0)^\mathsf{T}, \vec{v} = (v_1, v_2, 0)^\mathsf{T} \in U\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \mathbf{u} + \alpha \mathbf{v} = 
+\[\begin{split} \vec{u} + \alpha \vec{v} = 
     \begin{pmatrix} u_1 \\ u_2 \\ 0 \end{pmatrix} + \alpha 
     \begin{pmatrix} v_1 \\ v_2 \\ 0 \end{pmatrix} = 
     \begin{pmatrix} 
@@ -437,14 +444,14 @@ document.write(`
     \end{pmatrix} \in U, \end{split}\]</div>
 <p>therefore <span class="math notranslate nohighlight">\(U\)</span> is a subspace.</p>
 <p>(b)   <span class="math notranslate nohighlight">\(V\)</span> is non-empty since <span class="math notranslate nohighlight">\((1,2,0)^\mathsf{T} \in V\)</span>. However <span class="math notranslate nohighlight">\(\alpha (1, 2, 0)^\mathsf{T} = (\alpha , 2\alpha , 0)^\mathsf{T} \notin V\)</span> for <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> so <span class="math notranslate nohighlight">\(V\)</span> is not a subspace.</p>
-<p>(c)   <span class="math notranslate nohighlight">\(W\)</span> is non-empty since <span class="math notranslate nohighlight">\(\mathbf{0} \in W\)</span>. Let <span class="math notranslate nohighlight">\(\mathbf{u} = (0, u_2, 0)^\mathsf{T}, \mathbf{v} = (0, v_2, 0)^\mathsf{T} \in U\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
+<p>(c)   <span class="math notranslate nohighlight">\(W\)</span> is non-empty since <span class="math notranslate nohighlight">\(\vec{0} \in W\)</span>. Let <span class="math notranslate nohighlight">\(\vec{u} = (0, u_2, 0)^\mathsf{T}, \vec{v} = (0, v_2, 0)^\mathsf{T} \in U\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \mathbf{u} + \alpha \mathbf{v} = 
+\[\begin{split} \vec{u} + \alpha \vec{v} = 
     \begin{pmatrix} 0 \\ u_2 \\ 0 \end{pmatrix} + \alpha 
     \begin{pmatrix} 0 \\ v_2 \\ 0 \end{pmatrix} = 
     \begin{pmatrix} 0 \\ u_2 + \alpha v_2 \\ 0 \end{pmatrix} \in W, \end{split}\]</div>
 <p>therefore <span class="math notranslate nohighlight">\(W\)</span> is a subspace. Note that <span class="math notranslate nohighlight">\(W \subseteq U\)</span> so since we showed <span class="math notranslate nohighlight">\(U\)</span> is a subspace then <span class="math notranslate nohighlight">\(W\)</span> must also be a subspace.</p>
-<p>(d)   <span class="math notranslate nohighlight">\(X\)</span> is not a subspace since if <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 1, 0)^\mathsf{T}, \mathbf{v} = (-1, 1, 0)^\mathsf{T} \in X\)</span> then <span class="math notranslate nohighlight">\(\mathbf{u} + \mathbf{v} = (0, 2, 0)^\mathsf{T} \notin X\)</span>.</p>
+<p>(d)   <span class="math notranslate nohighlight">\(X\)</span> is not a subspace since if <span class="math notranslate nohighlight">\(\vec{u} = (1, 1, 0)^\mathsf{T}, \vec{v} = (-1, 1, 0)^\mathsf{T} \in X\)</span> then <span class="math notranslate nohighlight">\(\vec{u} + \vec{v} = (0, 2, 0)^\mathsf{T} \notin X\)</span>.</p>
 </section>
 </div>
 <div class="exercise admonition" id="vector-spaces-ex-M2-subspaces">
@@ -636,11 +643,11 @@ document.write(`
 <p>Suppose that <span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> generated by the vectors</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \left\{ \mathbf{u} = \begin{pmatrix} 1 \\ 2 \\ 3 \\ 4 \end{pmatrix}, 
-    \mathbf{v} = \begin{pmatrix} 1 \\ -1 \\ 2 \\ 0 \end{pmatrix}, 
-    \mathbf{w} = \begin{pmatrix} 2 \\ 1 \\ 5 \\ 3 \end{pmatrix}, 
-    \mathbf{x} = \begin{pmatrix} 1 \\ -1 \\ 0 \\ 3 \end{pmatrix}, 
-    \mathbf{y} = \begin{pmatrix} 1 \\ -1 \\ 0 \\ 4 \end{pmatrix} \right\}.
+    \left\{ \vec{u} = \begin{pmatrix} 1 \\ 2 \\ 3 \\ 4 \end{pmatrix}, 
+    \vec{v} = \begin{pmatrix} 1 \\ -1 \\ 2 \\ 0 \end{pmatrix}, 
+    \vec{w} = \begin{pmatrix} 2 \\ 1 \\ 5 \\ 3 \end{pmatrix}, 
+    \vec{x} = \begin{pmatrix} 1 \\ -1 \\ 0 \\ 3 \end{pmatrix}, 
+    \vec{y} = \begin{pmatrix} 1 \\ -1 \\ 0 \\ 4 \end{pmatrix} \right\}.
 \end{align*} \end{split}\]</div>
 <p>Find a basis for <span class="math notranslate nohighlight">\(W\)</span> and determine <span class="math notranslate nohighlight">\(\dim(W)\)</span>.</p>
 </section>
@@ -649,7 +656,7 @@ document.write(`
 
 <p class="admonition-title">Solution to<a class="reference internal" href="#vector-spaces-ex-R4-basis-2"> Exercise 5.6</a></p>
 <section id="solution-content">
-<p>We need to find which of the vectors <span class="math notranslate nohighlight">\(\mathbf{u}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{w}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{y}\)</span> are linearly dependent (and therefore remove them to from the basis).</p>
+<p>We need to find which of the vectors <span class="math notranslate nohighlight">\(\vec{u}\)</span>, <span class="math notranslate nohighlight">\(\vec{v}\)</span>, <span class="math notranslate nohighlight">\(\vec{w}\)</span>, <span class="math notranslate nohighlight">\(\vec{x}\)</span> and <span class="math notranslate nohighlight">\(\vec{y}\)</span> are linearly dependent (and therefore remove them to from the basis).</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     &amp; \left( \begin{array}{ccccc|c}
@@ -723,7 +730,7 @@ document.write(`
         0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 0 
     \end{array} \right)
 \end{align*} \end{split}\]</div>
-<p>The fifth column does not have a pivot element so <span class="math notranslate nohighlight">\(\mathbf{y}\)</span> is linearly dependent on the other vectors, therefore a basis for <span class="math notranslate nohighlight">\(W\)</span> is <span class="math notranslate nohighlight">\(\{ \mathbf{u}, \mathbf{v}, \mathbf{w}, \mathbf{x}\}\)</span> and <span class="math notranslate nohighlight">\(\dim(W) = 4\)</span>.</p>
+<p>The fifth column does not have a pivot element so <span class="math notranslate nohighlight">\(\vec{y}\)</span> is linearly dependent on the other vectors, therefore a basis for <span class="math notranslate nohighlight">\(W\)</span> is <span class="math notranslate nohighlight">\(\{ \vec{u}, \vec{v}, \vec{w}, \vec{x}\}\)</span> and <span class="math notranslate nohighlight">\(\dim(W) = 4\)</span>.</p>
 </section>
 </div>
 </section>

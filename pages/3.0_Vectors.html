@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'pages/3.0_Vectors';</script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/3.0_Vectors.html" />
@@ -72,7 +72,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3.4. Arithmetic operations on vectors" href="3.1_Vector_arithmetic.html" />
-    <link rel="prev" title="2.9. Systems of linear equations exercises" href="2.9_Linear_systems_exercises.html" />
+    <link rel="prev" title="2.9. Systems of Linear Equations Exercises" href="2.8_Linear_systems_exercises.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -177,7 +177,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="1.3_Determinants.html">1.5. Determinants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.4_Inverse_matrix.html">1.6. Inverse matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.5_Matrix_algebra.html">1.7. Matrix algebra</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.9_Matrices_exercises.html">1.8. Matrices exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.6_Matrices_exercises.html">1.8. Matrices Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -188,7 +188,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.6. Gauss-Jordan elimination</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.7. Consistent, inconsistent and indeterminate systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.8. Homogeneous systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.9. Systems of linear equations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8_Linear_systems_exercises.html">2.9. Systems of Linear Equations Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">3. Vectors</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -196,14 +196,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.5_Vectors_exercises.html">3.8. Vectors Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="4.0_Coordinate_geometry.html">4. Co-ordinate Geometry</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="4.1_Lines.html">4.2. Lines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.2_Planes.html">4.3. Planes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.3_Shortest_distance_problems.html">4.4. Shortest distance problems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate geometry exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate Geometry Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -220,6 +220,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.7. Transformations exercises</a></li>
 </ul>
 </li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercises Solutions</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -397,7 +404,7 @@ document.write(`
 <p>Before we discuss vectors it is useful to first define <a href="https://en.wikipedia.org/wiki/Euclidean_space" target="_blank"><strong>Euclidean space</strong></a> which is the mathematical system which vectors are most commonly applied. Attributed to the Greek mathematician <a href="https://en.wikipedia.org/wiki/Euclid" target="_blank">Euclid</a>, Euclidean space is a representation of physical space where the position of a point in the space can be described by the signed distance along perpendicular real numbers lines called <strong>axes</strong> (singular: axis).</p>
 <p>An <span class="math notranslate nohighlight">\(n\)</span>-dimensional Euclidean space is defined by <span class="math notranslate nohighlight">\(n\)</span> perpendicular real axes and is referred to as <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>. For example, consider the diagram of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> in <a class="reference internal" href="#r3-figure"><span class="std std-numref">Fig. 3.2</span></a>. Here we have a representation of a 3-dimensional Euclidean space defined by the 3 axes labelled <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span>. This representation uses the <a href="https://en.wikipedia.org/wiki/Right-hand_rule" target="_blank"><strong>right-hand rule</strong></a> so-called because if we use the thumb on our right hand to represent the <span class="math notranslate nohighlight">\(x\)</span> axis, the index finger for the <span class="math notranslate nohighlight">\(y\)</span> axis and the middle finger for the <span class="math notranslate nohighlight">\(z\)</span> axis then holding out the right hand palm up with the thumb and index finger at right-angles and the middle finger pointing up then we have the axis configuration shown in <a class="reference internal" href="#r3-figure"><span class="std std-numref">Fig. 3.2</span></a>. Doing similar with the left hand gives the <strong>left-hand rule</strong> where the <span class="math notranslate nohighlight">\(x\)</span> axis is pointing in the opposite direction than in the right-hand rule.</p>
 <figure class="align-default" id="r3-figure">
-<a class="reference internal image-reference" href="../_images/R3.svg"><img alt="../_images/R3.svg" src="../_images/R3.svg" width="250" /></a>
+<a class="reference internal image-reference" href="../_images/3_R3.svg"><img alt="../_images/3_R3.svg" src="../_images/3_R3.svg" width="250" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 3.2 </span><span class="caption-text">The position of a point in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> can be defined by its co-ordinates <span class="math notranslate nohighlight">\((x, y, z)\)</span>.</span><a class="headerlink" href="#r3-figure" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -408,16 +415,16 @@ document.write(`
 <span id="vectors-definition-section"></span><h2><span class="section-number">3.2. </span>Definition<a class="headerlink" href="#definition" title="Permalink to this heading">#</a></h2>
 <p>In Euclidean space, a <strong>vector</strong> represents a <strong>displacement</strong> from a point <span class="math notranslate nohighlight">\(A\)</span> to a point <span class="math notranslate nohighlight">\(B\)</span> (<a class="reference internal" href="#vector-figure"><span class="std std-numref">Fig. 3.3</span></a>). The vector <span class="math notranslate nohighlight">\(\overrightarrow{AB}\)</span> is an object that has a <strong>magnitude</strong> (length) and a <strong>direction</strong>. The magnitude of the vector is the distance between the two points and the direction refers to the direction of displacement from <span class="math notranslate nohighlight">\(A\)</span> to <span class="math notranslate nohighlight">\(B\)</span>, with respect to the given Euclidean space. Note that the actual points <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are not important for the definition of the vector, only the way of getting from <span class="math notranslate nohighlight">\(A\)</span> to <span class="math notranslate nohighlight">\(B\)</span> is. Pictorially, vectors are represented by arrows. The start of the vector is called the <strong>tail</strong> and the end of the vector is called the <strong>head</strong>.</p>
 <figure class="align-default" id="vector-figure">
-<a class="reference internal image-reference" href="../_images/vector.svg"><img alt="../_images/vector.svg" src="../_images/vector.svg" width="250" /></a>
+<a class="reference internal image-reference" href="../_images/3_vector.svg"><img alt="../_images/3_vector.svg" src="../_images/3_vector.svg" width="250" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 3.3 </span><span class="caption-text">The vector <span class="math notranslate nohighlight">\(\overrightarrow{AB}\)</span> points from its tail at <span class="math notranslate nohighlight">\(A\)</span> to its head at <span class="math notranslate nohighlight">\(B\)</span>.</span><a class="headerlink" href="#vector-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Vectors in mathematical notation are usually denoted by a single lowercase character. To distinguish vectors from other mathematical objects such as scalars and variables, the character representing a vector is written in boldface when typeset, e.g., <span class="math notranslate nohighlight">\(\mathbf{a}\)</span>; underlined when written by hand, e.g., <span class="math notranslate nohighlight">\(\underline{a}\)</span>; or a small right arrow over the vector name, e.g., <span class="math notranslate nohighlight">\(\vec{a}\)</span>.</p>
+<p>Vectors in mathematical notation are usually denoted by a single lowercase character. To distinguish vectors from other mathematical objects such as scalars and variables, the character representing a vector is written in boldface when typeset, e.g., <span class="math notranslate nohighlight">\(\vec{a}\)</span>; underlined when written by hand, e.g., <span class="math notranslate nohighlight">\(\underline{a}\)</span>; or a small right arrow over the vector name, e.g., <span class="math notranslate nohighlight">\(\vec{a}\)</span>.</p>
 <p>A vector in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> can be represented by a single column or row matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \mathbf{a} = \begin{pmatrix} a_1 \\ a_2 \\ \vdots \\ a_n\end{pmatrix} = \begin{pmatrix} a_1 &amp; a_2 &amp; \cdots &amp; a_n \end{pmatrix},
+    \vec{a} = \begin{pmatrix} a_1 \\ a_2 \\ \vdots \\ a_n\end{pmatrix} = \begin{pmatrix} a_1 &amp; a_2 &amp; \cdots &amp; a_n \end{pmatrix},
 \end{align*} \end{split}\]</div>
 <p>where each element represents the signed difference between the tail and head of the vector in the Cartesian coordinate system. The choice whether to use row or column vectors is arbitrary, however here we will express vectors as column matrices as it makes it easier when dealing with <a class="reference internal" href="3.4_Linear_combinations.html#linear-combination-of-vectors-section"><span class="std std-ref">linear combination of vectors</span></a> and <a class="reference internal" href="6.0_Linear_transformations.html#linear-transformations-chapter"><span class="std std-ref">linear transformations</span></a>.</p>
 <div class="proof example admonition" id="vector-example">
@@ -446,29 +453,29 @@ Solution (click to show)<div class="sd-summary-down docutils">
     \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/vector-example.svg"><img alt="../_images/vector-example.svg" src="../_images/vector-example.svg" width="400" /></a>
+<a class="reference internal image-reference" href="../_images/3_vector_example.svg"><img alt="../_images/3_vector_example.svg" src="../_images/3_vector_example.svg" width="400" /></a>
 </figure>
 </div>
 </details></section>
-</div><p>Consider the vector <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> as given in the <a class="reference internal" href="#r3-vector-figure"><span class="std std-numref">Fig. 3.4</span></a>. Here the displacement along the <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> axes are <span class="math notranslate nohighlight">\(a_1\)</span>, <span class="math notranslate nohighlight">\(a_2\)</span> and <span class="math notranslate nohighlight">\(a_3\)</span> respectively, therefore <span class="math notranslate nohighlight">\(\mathbf{a} = (a_1, a_2, a_3)^\mathsf{T}\)</span>.</p>
+</div><p>Consider the vector <span class="math notranslate nohighlight">\(\vec{a}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> as given in the <a class="reference internal" href="#r3-vector-figure"><span class="std std-numref">Fig. 3.4</span></a>. Here the displacement along the <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> axes are <span class="math notranslate nohighlight">\(a_1\)</span>, <span class="math notranslate nohighlight">\(a_2\)</span> and <span class="math notranslate nohighlight">\(a_3\)</span> respectively, therefore <span class="math notranslate nohighlight">\(\vec{a} = (a_1, a_2, a_3)^\mathsf{T}\)</span>.</p>
 <figure class="align-default" id="r3-vector-figure">
-<a class="reference internal image-reference" href="../_images/R3_vector.svg"><img alt="../_images/R3_vector.svg" src="../_images/R3_vector.svg" width="500" /></a>
+<a class="reference internal image-reference" href="../_images/3_R3_vector.svg"><img alt="../_images/3_R3_vector.svg" src="../_images/3_R3_vector.svg" width="500" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.4 </span><span class="caption-text">The vector <span class="math notranslate nohighlight">\(\mathbf{a} = (a_1, a_2, a_3)^\mathsf{T}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</span><a class="headerlink" href="#r3-vector-figure" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.4 </span><span class="caption-text">The vector <span class="math notranslate nohighlight">\(\vec{a} = (a_1, a_2, a_3)^\mathsf{T}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</span><a class="headerlink" href="#r3-vector-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>We use <span class="math notranslate nohighlight">\(\mathbf{0}\)</span> to denote the <strong>zero vector</strong> <span class="math notranslate nohighlight">\((0, 0, \ldots, 0)^\mathsf{T}\)</span>. This can be thought of as the vector <span class="math notranslate nohighlight">\(\overrightarrow{AA}\)</span>, for any point <span class="math notranslate nohighlight">\(A\)</span>. In this chapter we introduce vectors in Euclidean space, therefore the coefficients <span class="math notranslate nohighlight">\(a_i\)</span> are necessarily real numbers. In <a class="reference internal" href="5.0_Vector_spaces.html#vector-spaces-chapter"><span class="std std-ref">vector spaces</span></a> we generalise the notion of a vector and allow its coefficients to be any elements coming from a field.</p>
+<p>We use <span class="math notranslate nohighlight">\(\vec{0}\)</span> to denote the <strong>zero vector</strong> <span class="math notranslate nohighlight">\((0, 0, \ldots, 0)^\mathsf{T}\)</span>. This can be thought of as the vector <span class="math notranslate nohighlight">\(\overrightarrow{AA}\)</span>, for any point <span class="math notranslate nohighlight">\(A\)</span>. In this chapter we introduce vectors in Euclidean space, therefore the coefficients <span class="math notranslate nohighlight">\(a_i\)</span> are necessarily real numbers. In <a class="reference internal" href="5.0_Vector_spaces.html#vector-spaces-chapter"><span class="std std-ref">vector spaces</span></a> we generalise the notion of a vector and allow its coefficients to be any elements coming from a field.</p>
 <span class="target" id="position-vector-section"></span></section>
 <section id="position-vectors">
 <span id="index-4"></span><h2><span class="section-number">3.3. </span>Position vectors<a class="headerlink" href="#position-vectors" title="Permalink to this heading">#</a></h2>
-<p>A <strong>position vector</strong> <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> is a vector with tail located at the origin <span class="math notranslate nohighlight">\(O\)</span> and head located at a point <span class="math notranslate nohighlight">\(P\)</span>. So <span class="math notranslate nohighlight">\(\mathbf{p} = \overrightarrow{OP}.\)</span></p>
+<p>A <strong>position vector</strong> <span class="math notranslate nohighlight">\(\vec{p}\)</span> is a vector with tail located at the origin <span class="math notranslate nohighlight">\(O\)</span> and head located at a point <span class="math notranslate nohighlight">\(P\)</span>. So <span class="math notranslate nohighlight">\(\vec{p} = \overrightarrow{OP}.\)</span></p>
 <figure class="align-default" id="position-vector-figure">
-<a class="reference internal image-reference" href="../_images/position_vector.svg"><img alt="../_images/position_vector.svg" src="../_images/position_vector.svg" width="300" /></a>
+<a class="reference internal image-reference" href="../_images/3_position_vector.svg"><img alt="../_images/3_position_vector.svg" src="../_images/3_position_vector.svg" width="300" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.5 </span><span class="caption-text">The position vector <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> points from the origin <span class="math notranslate nohighlight">\(O\)</span> to the point <span class="math notranslate nohighlight">\(P\)</span>.</span><a class="headerlink" href="#position-vector-figure" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.5 </span><span class="caption-text">The position vector <span class="math notranslate nohighlight">\(\vec{p}\)</span> points from the origin <span class="math notranslate nohighlight">\(O\)</span> to the point <span class="math notranslate nohighlight">\(P\)</span>.</span><a class="headerlink" href="#position-vector-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Since the co-ordinates of the origin are <span class="math notranslate nohighlight">\(O = (0, 0, \ldots, 0)\)</span>, the position vector <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> is similar to the tuple for co-ordinates of <span class="math notranslate nohighlight">\(P\)</span>.</p>
+<p>Since the co-ordinates of the origin are <span class="math notranslate nohighlight">\(O = (0, 0, \ldots, 0)\)</span>, the position vector <span class="math notranslate nohighlight">\(\vec{p}\)</span> is similar to the tuple for co-ordinates of <span class="math notranslate nohighlight">\(P\)</span>.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3-LCn_dGzaY?si=83mL-se8kta0pqFL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></section>
 <div class="toctree-wrapper compound">
 </div>
@@ -506,12 +513,12 @@ Solution (click to show)<div class="sd-summary-down docutils">
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="2.9_Linear_systems_exercises.html"
+       href="2.8_Linear_systems_exercises.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.9. </span>Systems of linear equations exercises</p>
+        <p class="prev-next-title"><span class="section-number">2.9. </span>Systems of Linear Equations Exercises</p>
       </div>
     </a>
     <a class="right-next"

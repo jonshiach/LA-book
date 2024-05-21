@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'pages/5.1_Subspaces';</script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/5.1_Subspaces.html" />
@@ -177,7 +177,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="1.3_Determinants.html">1.5. Determinants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.4_Inverse_matrix.html">1.6. Inverse matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.5_Matrix_algebra.html">1.7. Matrix algebra</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.9_Matrices_exercises.html">1.8. Matrices exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.6_Matrices_exercises.html">1.8. Matrices Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -188,7 +188,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.6. Gauss-Jordan elimination</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.7. Consistent, inconsistent and indeterminate systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.8. Homogeneous systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.9. Systems of linear equations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8_Linear_systems_exercises.html">2.9. Systems of Linear Equations Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -196,14 +196,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.5_Vectors_exercises.html">3.8. Vectors Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="4.0_Coordinate_geometry.html">4. Co-ordinate Geometry</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="4.1_Lines.html">4.2. Lines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.2_Planes.html">4.3. Planes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.3_Shortest_distance_problems.html">4.4. Shortest distance problems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate geometry exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate Geometry Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
@@ -220,6 +220,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.7. Transformations exercises</a></li>
 </ul>
 </li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercises Solutions</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -391,7 +398,7 @@ document.write(`
 </section>
 </div><p>Most of the <a class="reference internal" href="5.0_Vector_spaces.html#vector-space-axioms">axioms</a> A1 – A4 and M1 – M4 are automatically satisfied, simply because they’re satisfied in <span class="math notranslate nohighlight">\(V\)</span>. The only things we really need to check are that addition and scalar multiplication are well-defined. In other words we need to check that when we ‘add’ or ‘multiply’ in <span class="math notranslate nohighlight">\(W\)</span> we are not taken outside of <span class="math notranslate nohighlight">\(W\)</span> (<a class="reference internal" href="#subspaces-figure"><span class="std std-numref">Fig. 5.1</span></a>). This idea is formalised in <a class="reference internal" href="#subspace-condition-theorem">the subspace condition</a>.</p>
 <figure class="align-default" id="subspaces-figure">
-<a class="reference internal image-reference" href="../_images/subspaces.svg"><img alt="../_images/subspaces.svg" src="../_images/subspaces.svg" width="350" /></a>
+<a class="reference internal image-reference" href="../_images/5_subspaces.svg"><img alt="../_images/5_subspaces.svg" src="../_images/5_subspaces.svg" width="350" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 5.1 </span><span class="caption-text">Illustration of a subspace <span class="math notranslate nohighlight">\(W\)</span> of a vector space <span class="math notranslate nohighlight">\(V\)</span>.</span><a class="headerlink" href="#subspaces-figure" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -404,10 +411,10 @@ document.write(`
 <span class="eqno">(5.1)<a class="headerlink" href="#equation-subspace-condition-equation" title="Permalink to this equation">#</a></span>\[ u + \alpha w \in W,\]</div>
 <p>where <span class="math notranslate nohighlight">\(u, w \in W\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span>.</p>
 </section>
-</div><p>To demonstrate the use of <a class="reference internal" href="#subspace-condition-theorem">the subspace condition</a> let’s check whether <span class="math notranslate nohighlight">\(W = \{(x, y, z)^\mathsf{T} : x + 2y - 3z = 0\}\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. First we need to verify that <span class="math notranslate nohighlight">\(W\)</span> is non-empty. To do this we simply need to find an element of <span class="math notranslate nohighlight">\(W\)</span>, e.g., <span class="math notranslate nohighlight">\(\mathbf{0} \in W\)</span> so <span class="math notranslate nohighlight">\(W\)</span> is non-empty.</p>
-<p>Next we need to take two arbitrary vectors in <span class="math notranslate nohighlight">\(W\)</span>, <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2, u_3)^\mathsf{T}, \mathbf{v} = (v_1, v_2, v_3)^\mathsf{T} \in W\)</span> say and a scalar <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
+</div><p>To demonstrate the use of <a class="reference internal" href="#subspace-condition-theorem">the subspace condition</a> let’s check whether <span class="math notranslate nohighlight">\(W = \{(x, y, z)^\mathsf{T} : x + 2y - 3z = 0\}\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. First we need to verify that <span class="math notranslate nohighlight">\(W\)</span> is non-empty. To do this we simply need to find an element of <span class="math notranslate nohighlight">\(W\)</span>, e.g., <span class="math notranslate nohighlight">\(\vec{0} \in W\)</span> so <span class="math notranslate nohighlight">\(W\)</span> is non-empty.</p>
+<p>Next we need to take two arbitrary vectors in <span class="math notranslate nohighlight">\(W\)</span>, <span class="math notranslate nohighlight">\(\vec{u} = (u_1, u_2, u_3)^\mathsf{T}, \vec{v} = (v_1, v_2, v_3)^\mathsf{T} \in W\)</span> say and a scalar <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \mathbf{u} + \alpha \mathbf{v} =
+\[\begin{split} \vec{u} + \alpha \vec{v} =
     \begin{pmatrix} u_1 \\ u_2 \\ u_3 \end{pmatrix} + \alpha 
     \begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix} 
     = \begin{pmatrix} u_1 + \alpha v_1 \\ u_2 + \alpha v_2 \\ u_3 + \alpha v_3 \end{pmatrix}. \end{split}\]</div>
@@ -418,7 +425,7 @@ document.write(`
     &amp;= (u_1 + 2u_2 - 3u_3) + \alpha (v_1 + 2v_2 - 3v_3) \\
     &amp;= 0 + \alpha \cdot 0 = 0,
 \end{align*} \end{split}\]</div>
-<p>therefore <span class="math notranslate nohighlight">\(\mathbf{u} + \alpha \mathbf{v} \in W\)</span> and <span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span></p>
+<p>therefore <span class="math notranslate nohighlight">\(\vec{u} + \alpha \vec{v} \in W\)</span> and <span class="math notranslate nohighlight">\(W\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span></p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GubzENhwfAs?si=c0uMY2cjhtKNIL_V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <div class="proof example admonition" id="subspace-example">
 <p class="admonition-title"><span class="caption-number">Example 5.3 </span></p>
@@ -436,7 +443,7 @@ Solution (click to show)<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Clearly <span class="math notranslate nohighlight">\(\mathbf{0}_{2\times 2} \in W\)</span> so <span class="math notranslate nohighlight">\(W\)</span> is non-empty. Let <span class="math notranslate nohighlight">\(U, V \in W\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>. Then</p>
+<p class="sd-card-text">Clearly <span class="math notranslate nohighlight">\(\vec{0}_{2\times 2} \in W\)</span> so <span class="math notranslate nohighlight">\(W\)</span> is non-empty. Let <span class="math notranslate nohighlight">\(U, V \in W\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>. Then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     U + \alpha V = 
@@ -520,7 +527,7 @@ Solution (click to show)<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 2, 2)^\mathsf{T} \in W\)</span> and <span class="math notranslate nohighlight">\(\mathbf{v} = (2, 1, 2)^\mathsf{T} \in W\)</span>, then <span class="math notranslate nohighlight">\(\mathbf{u} + \mathbf{v} = (3, 3, 4) \notin W\)</span>. We could’ve also just noted that <span class="math notranslate nohighlight">\(\mathbf{0} \notin W\)</span>.</p>
+<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(\vec{u} = (1, 2, 2)^\mathsf{T} \in W\)</span> and <span class="math notranslate nohighlight">\(\vec{v} = (2, 1, 2)^\mathsf{T} \in W\)</span>, then <span class="math notranslate nohighlight">\(\vec{u} + \vec{v} = (3, 3, 4) \notin W\)</span>. We could’ve also just noted that <span class="math notranslate nohighlight">\(\vec{0} \notin W\)</span>.</p>
 </div>
 </details></section>
 </div></section>

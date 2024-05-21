@@ -64,14 +64,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'pages/3.4_Linear_combinations';</script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/3.4_Linear_combinations.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3.8. Vectors exercises" href="3.7_Vectors_exercises.html" />
+    <link rel="next" title="3.8. Vectors Exercises" href="3.5_Vectors_exercises.html" />
     <link rel="prev" title="3.6. Dot and cross products" href="3.3_Dot_and_cross_products.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -177,7 +177,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="1.3_Determinants.html">1.5. Determinants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.4_Inverse_matrix.html">1.6. Inverse matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.5_Matrix_algebra.html">1.7. Matrix algebra</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.9_Matrices_exercises.html">1.8. Matrices exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.6_Matrices_exercises.html">1.8. Matrices Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -188,7 +188,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.6. Gauss-Jordan elimination</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.7. Consistent, inconsistent and indeterminate systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.8. Homogeneous systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.9. Systems of linear equations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8_Linear_systems_exercises.html">2.9. Systems of Linear Equations Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
@@ -196,14 +196,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">3.7. Linear combination of vectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.5_Vectors_exercises.html">3.8. Vectors Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="4.0_Coordinate_geometry.html">4. Co-ordinate Geometry</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="4.1_Lines.html">4.2. Lines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.2_Planes.html">4.3. Planes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.3_Shortest_distance_problems.html">4.4. Shortest distance problems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate geometry exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate Geometry Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -220,6 +220,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.7. Transformations exercises</a></li>
 </ul>
 </li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercises Solutions</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -386,9 +393,9 @@ document.write(`
 <div class="proof definition admonition" id="linear-combination-of-vectors-definition">
 <span id="index-0"></span><p class="admonition-title"><span class="caption-number">Definition 3.8 </span> (Linear combination of vectors)</p>
 <section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(\mathbf{v},\mathbf{u}_1,\dots,\mathbf{u}_m\in\mathbb{R}^n\)</span> such that</p>
+<p>Let <span class="math notranslate nohighlight">\(\vec{v},\vec{u}_1,\dots,\vec{u}_m\in\mathbb{R}^n\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-linear-combination-equation">
-<span class="eqno">(3.6)<a class="headerlink" href="#equation-linear-combination-equation" title="Permalink to this equation">#</a></span>\[ \mathbf{v}=\alpha_1\mathbf{u}_1+\alpha_2\mathbf{u}_2+\dots+\alpha_m\mathbf{u}_m, \]</div>
+<span class="eqno">(3.6)<a class="headerlink" href="#equation-linear-combination-equation" title="Permalink to this equation">#</a></span>\[ \vec{v}=\alpha_1\vec{u}_1+\alpha_2\vec{u}_2+\dots+\alpha_m\vec{u}_m, \]</div>
 <p>for some <span class="math notranslate nohighlight">\(\alpha_1,\alpha_2,\dots,\alpha_m\in \mathbb{R}\)</span> <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. Such a sum is called a <strong>linear combination of vectors</strong>.</p>
 </section>
 </div><p>For example</p>
@@ -398,17 +405,17 @@ document.write(`
     2\begin{pmatrix} 1 \\ 5 \\ -1 \end{pmatrix} +
     \begin{pmatrix} 0 \\ -10 \\ 9 \end{pmatrix},
 \end{align*} \end{split}\]</div>
-<p>and so we have expressed <span class="math notranslate nohighlight">\((2,0,7)^\mathsf{T}\)</span> as a linear combination of the vectors <span class="math notranslate nohighlight">\((1,5,-1)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\((0,-10,9)^\mathsf{T}\)</span>. To write a vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> as a linear combination of vectors <span class="math notranslate nohighlight">\(\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_m\)</span> we need to calculate the values of the coefficients <span class="math notranslate nohighlight">\(\alpha_1, \alpha_2, \ldots, \alpha_m\)</span> from equation <a class="reference internal" href="#equation-linear-combination-equation">(3.6)</a>. To do this we need to solve the system of linear equations</p>
+<p>and so we have expressed <span class="math notranslate nohighlight">\((2,0,7)^\mathsf{T}\)</span> as a linear combination of the vectors <span class="math notranslate nohighlight">\((1,5,-1)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\((0,-10,9)^\mathsf{T}\)</span>. To write a vector <span class="math notranslate nohighlight">\(\vec{v}\)</span> as a linear combination of vectors <span class="math notranslate nohighlight">\(\vec{u}_1, \vec{u}_2, \ldots, \vec{u}_m\)</span> we need to calculate the values of the coefficients <span class="math notranslate nohighlight">\(\alpha_1, \alpha_2, \ldots, \alpha_m\)</span> from equation <a class="reference internal" href="#equation-linear-combination-equation">(3.6)</a>. To do this we need to solve the system of linear equations</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \begin{pmatrix} \uparrow \\ \mathbf{u}_1 \\ \downarrow \end{pmatrix} \alpha_1 +
-\begin{pmatrix} \uparrow \\ \mathbf{u}_2 \\ \downarrow \end{pmatrix} \alpha_2 + \cdots +
-\begin{pmatrix} \uparrow \\ \mathbf{u}_m \\ \downarrow \end{pmatrix} \alpha_m = 
-\begin{pmatrix} \uparrow \\ \mathbf{v} \\ \downarrow \end{pmatrix}\end{split}\]</div>
+\[\begin{split} \begin{pmatrix} \uparrow \\ \vec{u}_1 \\ \downarrow \end{pmatrix} \alpha_1 +
+\begin{pmatrix} \uparrow \\ \vec{u}_2 \\ \downarrow \end{pmatrix} \alpha_2 + \cdots +
+\begin{pmatrix} \uparrow \\ \vec{u}_m \\ \downarrow \end{pmatrix} \alpha_m = 
+\begin{pmatrix} \uparrow \\ \vec{v} \\ \downarrow \end{pmatrix}\end{split}\]</div>
 <p>which can be written as the augmented matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \left( \begin{array}{cccc|c}
     \uparrow &amp; \uparrow &amp; &amp; \uparrow &amp; \uparrow \\
-    \mathbf{u}_1 &amp; \mathbf{u}_2 &amp; \cdots &amp; \mathbf{u}_m &amp; \mathbf{v} \\
+    \vec{u}_1 &amp; \vec{u}_2 &amp; \cdots &amp; \vec{u}_m &amp; \vec{v} \\
     \downarrow &amp; \downarrow &amp; &amp; \downarrow &amp; \downarrow
 \end{array} \right)\end{split}\]</div>
 <p>and the values of the coefficients <span class="math notranslate nohighlight">\(\alpha_1, \alpha_2, \ldots, \alpha_m\)</span> can be calculated using <a class="reference internal" href="2.3_Gaussian_elimination.html#gaussian-elimination-section"><span class="std std-ref">Gaussian elimination</span></a>.</p>
@@ -416,12 +423,12 @@ document.write(`
 <div class="proof example admonition" id="linear-combination-of-vectors-example">
 <p class="admonition-title"><span class="caption-number">Example 3.6 </span></p>
 <section class="example-content" id="proof-content">
-<p>Express the vector <span class="math notranslate nohighlight">\(\mathbf{v} = (7, -2, -11)^\mathsf{T}\)</span> as a linear combination of the vectors</p>
+<p>Express the vector <span class="math notranslate nohighlight">\(\vec{v} = (7, -2, -11)^\mathsf{T}\)</span> as a linear combination of the vectors</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \mathbf{u}_1 &amp;= \begin{pmatrix} 1 \\ 0 \\ 7 \end{pmatrix}, &amp;
-    \mathbf{u}_2 &amp;= \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix}, &amp;
-    \mathbf{u}_3 &amp;= \begin{pmatrix} 5 \\ -2 \\ -6 \end{pmatrix}.
+    \vec{u}_1 &amp;= \begin{pmatrix} 1 \\ 0 \\ 7 \end{pmatrix}, &amp;
+    \vec{u}_2 &amp;= \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix}, &amp;
+    \vec{u}_3 &amp;= \begin{pmatrix} 5 \\ -2 \\ -6 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -489,10 +496,10 @@ Solution (click to show)<div class="sd-summary-down docutils">
         0 &amp; 0 &amp; 1 &amp; 2
     \end{array} \right),
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">so <span class="math notranslate nohighlight">\(\alpha_1 = 1\)</span>, <span class="math notranslate nohighlight">\(\alpha_2 = -2\)</span> and <span class="math notranslate nohighlight">\(\alpha_3 = 2\)</span>. Therefore <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> can be expressed as the linear combination of vectors</p>
+<p class="sd-card-text">so <span class="math notranslate nohighlight">\(\alpha_1 = 1\)</span>, <span class="math notranslate nohighlight">\(\alpha_2 = -2\)</span> and <span class="math notranslate nohighlight">\(\alpha_3 = 2\)</span>. Therefore <span class="math notranslate nohighlight">\(\vec{v}\)</span> can be expressed as the linear combination of vectors</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \mathbf{v} = \mathbf{u}_1 - 2\mathbf{u}_2 + 2\mathbf{u}_3
+    \vec{v} = \vec{u}_1 - 2\vec{u}_2 + 2\vec{u}_3
     =  \begin{pmatrix} 1 \\ 0 \\ 7 \end{pmatrix} 
     - 2 \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix} 
     + 2 \begin{pmatrix} 5 \\ -2 \\ -6 \end{pmatrix}
@@ -502,23 +509,23 @@ Solution (click to show)<div class="sd-summary-down docutils">
 </details></section>
 </div><span class="target" id="basis-vectors-section"></span><section id="basis-vectors">
 <span id="index-1"></span><h2><span class="section-number">3.7.1. </span>Basis vectors<a class="headerlink" href="#basis-vectors" title="Permalink to this heading">#</a></h2>
-<p>A special type of vector is a <strong>basis vector</strong> which all other vectors in the space can be represented as a linear combination of the basis vectors (we will cover basis in more detail <a class="reference internal" href="5.3_Basis.html#basis-section"><span class="std std-ref">later</span></a>). In a Cartesian space the simplest basis vectors are unit vectors that point in the co-ordinate directions. In <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> we use the basis vectors <span class="math notranslate nohighlight">\(\mathbf{i} = (1, 0, 0)^\mathsf{T}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{j} = (0, 1, 0)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{k} = (0, 0, 1)^\mathsf{T}\)</span> (<a class="reference internal" href="#basis-vectors-figure"><span class="std std-numref">Fig. 3.11</span></a>).</p>
+<p>A special type of vector is a <strong>basis vector</strong> which all other vectors in the space can be represented as a linear combination of the basis vectors (we will cover basis in more detail <a class="reference internal" href="5.3_Basis.html#basis-section"><span class="std std-ref">later</span></a>). In a Cartesian space the simplest basis vectors are unit vectors that point in the co-ordinate directions. In <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> we use the basis vectors <span class="math notranslate nohighlight">\(\vec{i} = (1, 0, 0)^\mathsf{T}\)</span>, <span class="math notranslate nohighlight">\(\vec{j} = (0, 1, 0)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\vec{k} = (0, 0, 1)^\mathsf{T}\)</span> (<a class="reference internal" href="#basis-vectors-figure"><span class="std std-numref">Fig. 3.11</span></a>).</p>
 <figure class="align-default" id="basis-vectors-figure">
-<a class="reference internal image-reference" href="../_images/basis_vectors.svg"><img alt="../_images/basis_vectors.svg" src="../_images/basis_vectors.svg" width="150" /></a>
+<a class="reference internal image-reference" href="../_images/3_basis_vectors.svg"><img alt="../_images/3_basis_vectors.svg" src="../_images/3_basis_vectors.svg" width="150" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 3.11 </span><span class="caption-text">The three basis vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</span><a class="headerlink" href="#basis-vectors-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Using basis vectors we can represent any vector, <span class="math notranslate nohighlight">\(\mathbf{a} = (a_1, a_2, a_3)^\mathsf{T}\)</span> say, as a linear combination of <span class="math notranslate nohighlight">\(\mathbf{i}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{j}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{k}\)</span>, i.e.,</p>
+<p>Using basis vectors we can represent any vector, <span class="math notranslate nohighlight">\(\vec{a} = (a_1, a_2, a_3)^\mathsf{T}\)</span> say, as a linear combination of <span class="math notranslate nohighlight">\(\vec{i}\)</span>, <span class="math notranslate nohighlight">\(\vec{j}\)</span> and <span class="math notranslate nohighlight">\(\vec{k}\)</span>, i.e.,</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}a_1 \mathbf{i} + a_2 \mathbf{j} + a_3 \mathbf{k}
+\[\begin{split} \begin{align*}a_1 \vec{i} + a_2 \vec{j} + a_3 \vec{k}
     = a_1 \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} + a_2 \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix} + a_3
     \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}
-    = \begin{pmatrix} a_1 \\ a_2 \\ a_3 \end{pmatrix} = \mathbf{a}.
+    = \begin{pmatrix} a_1 \\ a_2 \\ a_3 \end{pmatrix} = \vec{a}.
 \end{align*} \end{split}\]</div>
 <p>For example</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \begin{pmatrix} 2 \\ 5 \\ 3 \end{pmatrix} = 2 \mathbf{i} + 5 \mathbf{j} + 3 \mathbf{k}. \end{split}\]</div>
+\[\begin{split} \begin{pmatrix} 2 \\ 5 \\ 3 \end{pmatrix} = 2 \vec{i} + 5 \vec{j} + 3 \vec{k}. \end{split}\]</div>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="id2" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
@@ -568,11 +575,11 @@ Solution (click to show)<div class="sd-summary-down docutils">
       </div>
     </a>
     <a class="right-next"
-       href="3.7_Vectors_exercises.html"
+       href="3.5_Vectors_exercises.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.8. </span>Vectors exercises</p>
+        <p class="prev-next-title"><span class="section-number">3.8. </span>Vectors Exercises</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
