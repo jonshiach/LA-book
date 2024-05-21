@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'pages/2.2_Cramers_rule';</script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/2.2_Cramers_rule.html" />
@@ -177,7 +177,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="1.3_Determinants.html">1.5. Determinants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.4_Inverse_matrix.html">1.6. Inverse matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.5_Matrix_algebra.html">1.7. Matrix algebra</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.9_Matrices_exercises.html">1.8. Matrices exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.6_Matrices_exercises.html">1.8. Matrices Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
@@ -188,22 +188,22 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.6. Gauss-Jordan elimination</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.7. Consistent, inconsistent and indeterminate systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.8. Homogeneous systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.9. Systems of linear equations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8_Linear_systems_exercises.html">2.9. Systems of Linear Equations Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.5_Vectors_exercises.html">3.8. Vectors Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="4.0_Coordinate_geometry.html">4. Co-ordinate Geometry</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="4.1_Lines.html">4.2. Lines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.2_Planes.html">4.3. Planes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.3_Shortest_distance_problems.html">4.4. Shortest distance problems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate geometry exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate Geometry Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -220,6 +220,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.7. Transformations exercises</a></li>
 </ul>
 </li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercises Solutions</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -404,18 +411,18 @@ document.write(`
 <div class="proof theorem admonition" id="cramers-rule-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 2.2 </span> (Cramer’s rule)</p>
 <section class="theorem-content" id="proof-content">
-<p>The solution to a non-singular linear system of equations of the form <span class="math notranslate nohighlight">\(A\mathbf{x}=\mathbf{b}\)</span> can be calculated using Cramer’s rule which is</p>
+<p>The solution to a non-singular linear system of equations of the form <span class="math notranslate nohighlight">\(A\vec{x}=\vec{b}\)</span> can be calculated using Cramer’s rule which is</p>
 <div class="math notranslate nohighlight" id="equation-cramers-rule-equation">
 <span class="eqno">(2.1)<a class="headerlink" href="#equation-cramers-rule-equation" title="Permalink to this equation">#</a></span>\[ x_i = \frac{\det(A_i)}{\det(A)}, \]</div>
-<p>where <span class="math notranslate nohighlight">\(A_i\)</span> is a matrix obtained by replacing column <span class="math notranslate nohighlight">\(i\)</span> of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</p>
+<p>where <span class="math notranslate nohighlight">\(A_i\)</span> is a matrix obtained by replacing column <span class="math notranslate nohighlight">\(i\)</span> of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\vec{b}\)</span>.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. The solution to a system of linear equations <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span> can be calculated using <span class="math notranslate nohighlight">\(\mathbf{x} = A^{-1} \mathbf{b}\)</span> where <span class="math notranslate nohighlight">\(A^{-1}\)</span> is the inverse of the coefficient matrix <span class="math notranslate nohighlight">\(A\)</span>. The <a class="reference internal" href="1.4_Inverse_matrix.html#adjoint-determinant-formula-theorem">adjoint-determinant formula</a> for calculating the inverse is</p>
+<p>Proof. The solution to a system of linear equations <span class="math notranslate nohighlight">\(A \vec{x} = \vec{b}\)</span> can be calculated using <span class="math notranslate nohighlight">\(\vec{x} = A^{-1} \vec{b}\)</span> where <span class="math notranslate nohighlight">\(A^{-1}\)</span> is the inverse of the coefficient matrix <span class="math notranslate nohighlight">\(A\)</span>. The <a class="reference internal" href="1.4_Inverse_matrix.html#adjoint-determinant-formula-theorem">adjoint-determinant formula</a> for calculating the inverse is</p>
 <div class="math notranslate nohighlight">
 \[ A^{-1} = \frac{\operatorname{adj}(A)}{\det(A)}, \]</div>
 <p>so</p>
 <div class="math notranslate nohighlight">
-\[ \mathbf{x} = \frac{1}{\det(A)} \operatorname{adj}(A) \mathbf{b}. \]</div>
+\[ \vec{x} = \frac{1}{\det(A)} \operatorname{adj}(A) \vec{b}. \]</div>
 <p>Since <span class="math notranslate nohighlight">\(\operatorname{adj}(A) = C^\mathsf{T}\)</span> where <span class="math notranslate nohighlight">\(C\)</span> is the matrix of <a class="reference internal" href="1.3_Determinants.html#cofactor-definition">co-factors</a></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} C^\mathsf{T} = \begin{pmatrix} 
@@ -424,10 +431,10 @@ document.write(`
     \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
     C_{1n} &amp; C_{2n} &amp; \cdots &amp; C_{nn}
 \end{pmatrix}. \end{split}\]</div>
-<p>then for the <span class="math notranslate nohighlight">\(i\)</span>th element of <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> using the <a class="reference internal" href="1.1_Matrix_multiplication.html#matrix-multiplication-definition">definition of matrix multiplication</a> we have</p>
+<p>then for the <span class="math notranslate nohighlight">\(i\)</span>th element of <span class="math notranslate nohighlight">\(\vec{x}\)</span> using the <a class="reference internal" href="1.1_Matrix_multiplication.html#matrix-multiplication-definition">definition of matrix multiplication</a> we have</p>
 <div class="math notranslate nohighlight">
 \[ x_i = \frac{1}{\det(A)} \sum_{j=1}^n C_{ji} b_j \]</div>
-<p>In Cramer’s rule, <span class="math notranslate nohighlight">\(A_i\)</span> is the matrix formed by replacing the <span class="math notranslate nohighlight">\(i\)</span>th column of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\mathbf{b}\)</span></p>
+<p>In Cramer’s rule, <span class="math notranslate nohighlight">\(A_i\)</span> is the matrix formed by replacing the <span class="math notranslate nohighlight">\(i\)</span>th column of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\vec{b}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} A_i = \begin{pmatrix}
         a_{11} &amp; \cdots &amp; a_{1,i-1} &amp; b_1 &amp; a_{1,i+1} &amp; \cdots &amp; a_{1n} \\
@@ -440,6 +447,7 @@ document.write(`
 \[ \det(A_i) = b_1 C_{1i} + b_2 C_{2i} + \cdots + b_n C_{ni} = \sum_{j=1}^n C_{ji} b_j, \]</div>
 <p>so <span class="math notranslate nohighlight">\(x_i = \dfrac{\det(A_i)}{\det(A)}\)</span>.</p>
 </div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A4eghvWJwL0?si=TEHoBgFCx22xKWQK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <div class="proof example admonition" id="cramers-rule-example">
 <p class="admonition-title"><span class="caption-number">Example 2.2 </span></p>
 <section class="example-content" id="proof-content">
@@ -450,12 +458,12 @@ document.write(`
 \end{array}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Here <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 3 &amp; -2 \\ 1 &amp; -3 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b} = \begin{pmatrix} -4 \\ 1 \end{pmatrix}\)</span></p>
+<p class="sd-card-text">Here <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 3 &amp; -2 \\ 1 &amp; -3 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\vec{b} = \begin{pmatrix} -4 \\ 1 \end{pmatrix}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     x_1 &amp;= \frac{
@@ -468,9 +476,9 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <p class="sd-card-text">Checking the solution</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    A\mathbf{x} = \begin{pmatrix} 3 &amp; -2 \\ 1 &amp; -3 \end{pmatrix}
+    A\vec{x} = \begin{pmatrix} 3 &amp; -2 \\ 1 &amp; -3 \end{pmatrix}
     \begin{pmatrix} -2 \\ -1 \end{pmatrix} =
-    \begin{pmatrix} -4 \\ 1 \end{pmatrix} = \mathbf{b} \qquad \checkmark
+    \begin{pmatrix} -4 \\ 1 \end{pmatrix} = \vec{b} \qquad \checkmark
 \end{align*} \end{split}\]</div>
 </div>
 </details><p>(ii)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
@@ -480,12 +488,12 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 \end{array}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Here <span class="math notranslate nohighlight">\(A = \begin{pmatrix} -2 &amp; -3 &amp; -1 \\ -4 &amp; 4 &amp; 3 \\ -3 &amp; 0 &amp; 0 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b} = \begin{pmatrix} -5 \\ -20 \\ -12 \end{pmatrix}\)</span></p>
+<p class="sd-card-text">Here <span class="math notranslate nohighlight">\(A = \begin{pmatrix} -2 &amp; -3 &amp; -1 \\ -4 &amp; 4 &amp; 3 \\ -3 &amp; 0 &amp; 0 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\vec{b} = \begin{pmatrix} -5 \\ -20 \\ -12 \end{pmatrix}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     x_1 &amp;= \frac{
@@ -509,10 +517,10 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <p class="sd-card-text">Checking the solution</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    A\mathbf{x} = 
+    A\vec{x} = 
     \begin{pmatrix} -2 &amp; -3 &amp; -1 \\ -4 &amp; 4 &amp; 3 \\ -3 &amp; 0 &amp; 0 \end{pmatrix}
     \begin{pmatrix} 4 \\ -1 \\ 0 \end{pmatrix} =
-    \begin{pmatrix} -5 \\ -20 \\ -12 \end{pmatrix} = \mathbf{b} \qquad \checkmark
+    \begin{pmatrix} -5 \\ -20 \\ -12 \end{pmatrix} = \vec{b} \qquad \checkmark
 \end{align*} \end{split}\]</div>
 </div>
 </details></section>

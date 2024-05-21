@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'pages/4.2_Planes';</script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/4.2_Planes.html" />
@@ -177,7 +177,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="1.3_Determinants.html">1.5. Determinants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.4_Inverse_matrix.html">1.6. Inverse matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.5_Matrix_algebra.html">1.7. Matrix algebra</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.9_Matrices_exercises.html">1.8. Matrices exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.6_Matrices_exercises.html">1.8. Matrices Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -188,22 +188,22 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.6. Gauss-Jordan elimination</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.7. Consistent, inconsistent and indeterminate systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.8. Homogeneous systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.9. Systems of linear equations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8_Linear_systems_exercises.html">2.9. Systems of Linear Equations Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.5_Vectors_exercises.html">3.8. Vectors Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="4.0_Coordinate_geometry.html">4. Co-ordinate Geometry</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="4.1_Lines.html">4.2. Lines</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">4.3. Planes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.3_Shortest_distance_problems.html">4.4. Shortest distance problems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate geometry exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate Geometry Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -220,6 +220,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.7. Transformations exercises</a></li>
 </ul>
 </li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercises Solutions</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -387,33 +394,33 @@ document.write(`
 <div class="proof definition admonition" id="plane-vector-equation">
 <p class="admonition-title"><span class="caption-number">Definition 4.6 </span> (Vector equation of a plane)</p>
 <section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> be a point in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}_2\)</span> are two non-zero vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> which are not parallel. The plane which passes through <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> in the directions of <span class="math notranslate nohighlight">\(\mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}_2\)</span> has the equation</p>
+<p>Let <span class="math notranslate nohighlight">\(\vec{p}\)</span> be a point in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> and <span class="math notranslate nohighlight">\(\vec{d}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{d}_2\)</span> are two non-zero vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> which are not parallel. The plane which passes through <span class="math notranslate nohighlight">\(\vec{p}\)</span> in the directions of <span class="math notranslate nohighlight">\(\vec{d}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{d}_2\)</span> has the equation</p>
 <div class="math notranslate nohighlight">
-\[ \mathbf{r} = \mathbf{p} + t_1 \mathbf{d}_1 + t_2 \mathbf{d}_2, \]</div>
-<p>where <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> is a general point on the plane and <span class="math notranslate nohighlight">\(t_1,t_2 \in \mathbb{R}\)</span> are parameters (<a class="reference internal" href="#plane-1-figure"><span class="std std-numref">Fig. 4.7</span></a>).</p>
+\[ \vec{r} = \vec{p} + t_1 \vec{d}_1 + t_2 \vec{d}_2, \]</div>
+<p>where <span class="math notranslate nohighlight">\(\vec{r}\)</span> is a general point on the plane and <span class="math notranslate nohighlight">\(t_1,t_2 \in \mathbb{R}\)</span> are parameters (<a class="reference internal" href="#plane-1-figure"><span class="std std-numref">Fig. 4.7</span></a>).</p>
 <figure class="align-default" id="plane-1-figure">
-<a class="reference internal image-reference" href="../_images/plane_1.svg"><img alt="../_images/plane_1.svg" src="../_images/plane_1.svg" width="400" /></a>
+<a class="reference internal image-reference" href="../_images/4_plane.svg"><img alt="../_images/4_plane.svg" src="../_images/4_plane.svg" width="400" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.7 </span><span class="caption-text">The position of a point <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> on a plane can be obtained by adding scalar multiples of the direction vectors <span class="math notranslate nohighlight">\(\mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}_2\)</span> to <span class="math notranslate nohighlight">\(\mathbf{p}\)</span>.</span><a class="headerlink" href="#plane-1-figure" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.7 </span><span class="caption-text">The position of a point <span class="math notranslate nohighlight">\(\vec{r}\)</span> on a plane can be obtained by adding scalar multiples of the direction vectors <span class="math notranslate nohighlight">\(\vec{d}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{d}_2\)</span> to <span class="math notranslate nohighlight">\(\vec{p}\)</span>.</span><a class="headerlink" href="#plane-1-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
-</div><p>In other words, every point on a plane is obtained by adding some scalar multiples of any two vectors on the plane, <span class="math notranslate nohighlight">\(\mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}_2\)</span>,  to the position vector of a point on the plane <span class="math notranslate nohighlight">\(\mathbf{p}\)</span>. So the plane which passes through <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> in the directions of <span class="math notranslate nohighlight">\(\mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}_2\)</span>. Note we need <span class="math notranslate nohighlight">\(\mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}_2\)</span> not to be parallel else we would have only described a line again.</p>
+</div><p>In other words, every point on a plane is obtained by adding some scalar multiples of any two vectors on the plane, <span class="math notranslate nohighlight">\(\vec{d}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{d}_2\)</span>,  to the position vector of a point on the plane <span class="math notranslate nohighlight">\(\vec{p}\)</span>. So the plane which passes through <span class="math notranslate nohighlight">\(\vec{p}\)</span> in the directions of <span class="math notranslate nohighlight">\(\vec{d}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{d}_2\)</span>. Note we need <span class="math notranslate nohighlight">\(\vec{d}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{d}_2\)</span> not to be parallel else we would have only described a line again.</p>
 <div class="proof definition note admonition" id="normal-vector-definition">
 <span id="index-1"></span><p class="admonition-title"><span class="caption-number">Definition 4.7 </span> (The normal vector)</p>
 <section class="definition-content" id="proof-content">
-<p>The <strong>normal vector</strong> to a plane is a vector that is perpendicular to that plane. If <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> are two vectors that lie on a plane then the normal vector is calculated using <span class="math notranslate nohighlight">\(\mathbf{n} = \mathbf{a} \times \mathbf{b}\)</span>.</p>
+<p>The <strong>normal vector</strong> to a plane is a vector that is perpendicular to that plane. If <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span> are two vectors that lie on a plane then the normal vector is calculated using <span class="math notranslate nohighlight">\(\vec{n} = \vec{a} \times \vec{b}\)</span>.</p>
 <figure class="align-default" id="plane-2-figure">
-<a class="reference internal image-reference" href="../_images/plane_2.svg"><img alt="../_images/plane_2.svg" src="../_images/plane_2.svg" width="400" /></a>
+<a class="reference internal image-reference" href="../_images/4_normal_vector.svg"><img alt="../_images/4_normal_vector.svg" src="../_images/4_normal_vector.svg" width="400" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.8 </span><span class="caption-text">The normal vector <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> is perpendicular to the plane that the vectors <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> lie on.</span><a class="headerlink" href="#plane-2-figure" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.8 </span><span class="caption-text">The normal vector <span class="math notranslate nohighlight">\(\vec{n}\)</span> is perpendicular to the plane that the vectors <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span> lie on.</span><a class="headerlink" href="#plane-2-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
-</div><p>Recall that <a class="reference internal" href="3.3_Vector_products.html#dot-product-definition">the dot product</a> between two perpendicular vectors is zero. So if a plane is defined by the normal vector <span class="math notranslate nohighlight">\(\mathbf{n} = (n_x, n_y, n_z)^\mathsf{T}\)</span> and a point with position vector <span class="math notranslate nohighlight">\(\mathbf{p}=(p_x, p_y, p_z)^\mathsf{T}\)</span> which lies on the plane and if <span class="math notranslate nohighlight">\((x,y,z)^\mathsf{T}\)</span> is the position vector of another point the plane then</p>
+</div><p>Recall that <a class="reference internal" href="3.3_Dot_and_cross_products.html#dot-product-definition">the dot product</a> between two perpendicular vectors is zero. So if a plane is defined by the normal vector <span class="math notranslate nohighlight">\(\vec{n} = (n_x, n_y, n_z)^\mathsf{T}\)</span> and a point with position vector <span class="math notranslate nohighlight">\(\vec{p}=(p_x, p_y, p_z)^\mathsf{T}\)</span> which lies on the plane and if <span class="math notranslate nohighlight">\((x,y,z)^\mathsf{T}\)</span> is the position vector of another point the plane then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \mathbf{n} \cdot (\mathbf{r} - \mathbf{p}) &amp;= 0 \\
+    \vec{n} \cdot (\vec{r} - \vec{p}) &amp;= 0 \\
     \begin{pmatrix} n_x \\ n_y \\ n_z \end{pmatrix}
     \cdot \left( 
         \begin{pmatrix} x \\ y \\ z \end{pmatrix} -
@@ -425,87 +432,97 @@ document.write(`
 <div class="proof definition note admonition" id="point-normal-definition">
 <span id="index-2"></span><p class="admonition-title"><span class="caption-number">Definition 4.8 </span> (Point-normal form of a plane)</p>
 <section class="definition-content" id="proof-content">
-<p>The point-normal form of the plane in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> which passes through the point with position vector <span class="math notranslate nohighlight">\(\mathbf{p} = (p_x, p_y, p_z)^\mathsf{T}\)</span> with normal vector <span class="math notranslate nohighlight">\(\mathbf{n} = (n_x, n_y, n_z)^\mathsf{T}\)</span> is</p>
+<p>The point-normal form of the plane in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> which passes through the point with position vector <span class="math notranslate nohighlight">\(\vec{p} = (p_x, p_y, p_z)^\mathsf{T}\)</span> with normal vector <span class="math notranslate nohighlight">\(\vec{n} = (n_x, n_y, n_z)^\mathsf{T}\)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-point-normal-equation">
-<span class="eqno">(4.2)<a class="headerlink" href="#equation-point-normal-equation" title="Permalink to this equation">#</a></span>\[ n_x(x - p_x) + n_y(y - p_y) + n_z(z - p_z) = 0.\]</div>
+<span class="eqno">(4.2)<a class="headerlink" href="#equation-point-normal-equation" title="Permalink to this equation">#</a></span>\[ \vec{n} \cdot (\vec{r} - \vec{p}) = 0,\]</div>
+<p>where <span class="math notranslate nohighlight">\(\vec{r} = (x, y, z)^\mathsf{T}\)</span> is the position vector of an arbitrary point on the plane.</p>
 <figure class="align-default" id="point-normal-figure">
-<a class="reference internal image-reference" href="../_images/plane_3.svg"><img alt="../_images/plane_3.svg" src="../_images/plane_3.svg" width="400" /></a>
+<a class="reference internal image-reference" href="../_images/4_point_normal.svg"><img alt="../_images/4_point_normal.svg" src="../_images/4_point_normal.svg" width="400" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.9 </span><span class="caption-text">A plane can be defined by a point on the plane and the normal vector to the plane.</span><a class="headerlink" href="#point-normal-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
-</div><div class="proof example admonition" id="point-normal-example">
+</div><iframe width="560" height="315" src="https://www.youtube.com/embed/i4SLZv7ZKgw?si=Na8m0zJpuQG0rHVW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="proof example admonition" id="point-normal-example">
 <p class="admonition-title"><span class="caption-number">Example 4.6 </span></p>
 <section class="example-content" id="proof-content">
-<p>A plane in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> passes through the three points with position vectors <span class="math notranslate nohighlight">\(\mathbf{p}_1 = (2, 3, 1)^\mathsf{T}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{p}_2 = (1, 0, -1)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{p}_3 = (2, 1, 3)^\mathsf{T}\)</span>.</p>
+<p>A plane in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> passes through the three points with position vectors <span class="math notranslate nohighlight">\(\vec{p}_1 = (2, 3, 1)^\mathsf{T}\)</span>, <span class="math notranslate nohighlight">\(\vec{p}_2 = (1, 0, -1)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\vec{p}_3 = (2, 1, 3)^\mathsf{T}\)</span>.</p>
 <p>(i)   Find the point-normal form of the plane;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">First we need to calculate the normal vector to the plane. We can do this by calculating the cross product of any two vectors that line on the plane, since we know <span class="math notranslate nohighlight">\(\mathbf{p}_1\)</span>, <span class="math notranslate nohighlight">\(\mathbf{p}_2\)</span> and <span class="math notranslate nohighlight">\(\mathbf{p}_3\)</span> lie on the plane then so must the vectors <span class="math notranslate nohighlight">\(\mathbf{p}_2 - \mathbf{p}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{p}_3 - \mathbf{p}_2\)</span> (or any other combination of these points)</p>
+<p class="sd-card-text">First we need to calculate the normal vector to the plane. We can do this by calculating the cross product of any two vectors that line on the plane, since we know <span class="math notranslate nohighlight">\(\vec{p}_1\)</span>, <span class="math notranslate nohighlight">\(\vec{p}_2\)</span> and <span class="math notranslate nohighlight">\(\vec{p}_3\)</span> lie on the plane then so must the vectors <span class="math notranslate nohighlight">\(\vec{p}_2 - \vec{p}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{p}_3 - \vec{p}_2\)</span> (or any other combination of these points)</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \mathbf{p}_2 - \mathbf{p}_1 &amp;= 
+    \vec{p}_2 - \vec{p}_1 &amp;= 
     \begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix} - 
     \begin{pmatrix} 2 \\ 3 \\ 1 \end{pmatrix} =
     \begin{pmatrix} -1 \\ -3 \\ -2 \end{pmatrix}, \\
-    \mathbf{p}_3 - \mathbf{p}_2 &amp;=
+    \vec{p}_3 - \vec{p}_2 &amp;=
     \begin{pmatrix} 2 \\ 1 \\ 3 \end{pmatrix} -
     \begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix} =
     \begin{pmatrix} 1 \\ 1 \\ 4 \end{pmatrix}, \\
-    \therefore \mathbf{n} &amp;= (\mathbf{p}_2 - \mathbf{p}_1) \times (\mathbf{p}_3 - \mathbf{p}_2) =
+    \therefore \vec{n} &amp;= (\vec{p}_2 - \vec{p}_1) \times (\vec{p}_3 - \vec{p}_2) =
     \begin{pmatrix} -1 \\ -3 \\ -2 \end{pmatrix} \times
     \begin{pmatrix} 1 \\ 1 \\ 4 \end{pmatrix} \\
     &amp;=
     \begin{vmatrix} 
-        \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+        \vec{i} &amp; \vec{j} &amp; \vec{k} \\
         -1 &amp; -3 &amp; -2 \\
         1 &amp; 1 &amp; 4
     \end{vmatrix} = 
     \begin{pmatrix} -10 \\ 2 \\ 2 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Using equation <a class="reference internal" href="#equation-point-normal-equation">(4.2)</a> with <span class="math notranslate nohighlight">\(\mathbf{p} = \mathbf{p}_1\)</span></p>
+<p class="sd-card-text">Using equation <a class="reference internal" href="#equation-point-normal-equation">(4.2)</a> with <span class="math notranslate nohighlight">\(\vec{p} = \vec{p}_1\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    n_x(x - p_x) + n_y(y - p_y) + n_z(z - p_z) &amp;= 0 \\
+    \vec{n} \cdot (\vec{r} - \vec{p}_1) &amp;= 0 \\
+    \begin{pmatrix} -10 \\ 2 \\ 2 \end{pmatrix} \cdot \left(
+        \begin{pmatrix} x \\ y \\ z \end{pmatrix} -
+        \begin{pmatrix} 2 \\ 3 \\ 1 \end{pmatrix}
+    \right) &amp;= 0 \\
     -10(x - 2) + 2(y - 3) + 2(z - 1) &amp;= 0 \\
     -10x + 2y + 2z + 12 &amp;= 0. 
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">If we had chosen <span class="math notranslate nohighlight">\(\mathbf{p} = \mathbf{p}_2\)</span> instead</p>
+<p class="sd-card-text">If we had chosen <span class="math notranslate nohighlight">\(\vec{p} = \vec{p}_2\)</span> instead</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    n_x(x - p_x) + n_y(y - p_y) + n_z(z - p_z) &amp;= 0 \\
+\vec{n} \cdot (\vec{r} - \vec{p}_2) &amp;= 0 \\
+    \begin{pmatrix} -10 \\ 2 \\ 2 \end{pmatrix} \cdot \left(
+        \begin{pmatrix} x \\ y \\ z \end{pmatrix} -
+        \begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix}
+    \right) &amp;= 0 \\
     -10(x - 1) + 2(y - 0) + 2(z + 1) &amp;= 0 \\
     -10x + 2y + 2z + 12 &amp;= 0.
 \end{align*} \end{split}\]</div>
 <p class="sd-card-text">which was the same answer as before. The same applies for any other point on the plane.</p>
 </div>
-</details><p>(ii)   Do the points with position vectors <span class="math notranslate nohighlight">\(\mathbf{p}_4 = (1, 2, 1)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{p}_5 = (2, 4, 0)^\mathsf{T}\)</span> lie on the plane?</p>
+</details><p>(ii)   Do the points with position vectors <span class="math notranslate nohighlight">\(\vec{p}_4 = (1, 2, 1)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\vec{p}_5 = (2, 4, 0)^\mathsf{T}\)</span> lie on the plane?</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Checking <span class="math notranslate nohighlight">\(\mathbf{p}_4\)</span></p>
+<p class="sd-card-text">Checking <span class="math notranslate nohighlight">\(\vec{p}_4\)</span></p>
 <div class="math notranslate nohighlight">
 \[ -10(1) + 2(2) + 2(1) + 12 = 8 \neq 0, \]</div>
-<p class="sd-card-text">so <span class="math notranslate nohighlight">\(\mathbf{p}_4\)</span> does not lie on the plane.</p>
-<p class="sd-card-text">Checking <span class="math notranslate nohighlight">\(\mathbf{p}_5\)</span></p>
+<p class="sd-card-text">so <span class="math notranslate nohighlight">\(\vec{p}_4\)</span> does not lie on the plane.</p>
+<p class="sd-card-text">Checking <span class="math notranslate nohighlight">\(\vec{p}_5\)</span></p>
 <div class="math notranslate nohighlight">
 \[ -10(2) + 2(4) + 2(0) + 12 = 0,  \]</div>
-<p class="sd-card-text">so <span class="math notranslate nohighlight">\(\mathbf{p}_5\)</span> does lie on the plane.</p>
+<p class="sd-card-text">so <span class="math notranslate nohighlight">\(\vec{p}_5\)</span> does lie on the plane.</p>
 </div>
 </details></section>
 </div><span class="target" id="intersection-of-planes-section"></span><section id="intersection-of-planes-in-mathbb-r-3">
 <span id="index-3"></span><h2><span class="section-number">4.3.1. </span>Intersection of planes in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span><a class="headerlink" href="#intersection-of-planes-in-mathbb-r-3" title="Permalink to this heading">#</a></h2>
-<p>We distinguish between various arrangements of planes, which are defined in terms of their normal vectors. We saw that a plane is perpendicular to its normal vector <span class="math notranslate nohighlight">\(\mathbf{n}\)</span>. Now, any other plane that for which <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> lies on will be described as a plane <strong>perpendicular</strong> to the plane. This is equivalent to the two normal vectors being perpendicular. In a similar way if two distinct planes have the same normal vector then they are <strong>parallel</strong>.</p>
+<p>We distinguish between various arrangements of planes, which are defined in terms of their normal vectors. We saw that a plane is perpendicular to its normal vector <span class="math notranslate nohighlight">\(\vec{n}\)</span>. Now, any other plane that for which <span class="math notranslate nohighlight">\(\vec{n}\)</span> lies on will be described as a plane <strong>perpendicular</strong> to the plane. This is equivalent to the two normal vectors being perpendicular. In a similar way if two distinct planes have the same normal vector then they are <strong>parallel</strong>.</p>
 <p>Often we would like to know when and how two or more objects in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> meet. Similar to the lines in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> we present a finite list of arrangements for three planes meeting in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
@@ -513,7 +530,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <figure class="align-default">
-<img alt="../_images/intersecting_planes_1.svg" src="../_images/intersecting_planes_1.svg" /></figure>
+<img alt="../_images/4_intersecting_planes_1.svg" src="../_images/4_intersecting_planes_1.svg" /></figure>
 <p class="sd-card-text">3 planes intersect at a single point: a unique solution</p>
 </div>
 </div>
@@ -522,7 +539,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <figure class="align-default">
-<img alt="../_images/intersecting_planes_2.svg" src="../_images/intersecting_planes_2.svg" /></figure>
+<img alt="../_images/4_intersecting_planes_2.svg" src="../_images/4_intersecting_planes_2.svg" /></figure>
 <p class="sd-card-text">3 planes intersect on a single line: infinite solutions</p>
 </div>
 </div>
@@ -531,7 +548,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <figure class="align-default">
-<img alt="../_images/intersecting_planes_3.svg" src="../_images/intersecting_planes_3.svg" /></figure>
+<img alt="../_images/4_intersecting_planes_3.svg" src="../_images/4_intersecting_planes_3.svg" /></figure>
 <p class="sd-card-text">2 planes coincide and intersect a third: infinite solutions</p>
 </div>
 </div>
@@ -540,7 +557,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <figure class="align-default">
-<img alt="../_images/intersecting_planes_4.svg" src="../_images/intersecting_planes_4.svg" /></figure>
+<img alt="../_images/4_intersecting_planes_4.svg" src="../_images/4_intersecting_planes_4.svg" /></figure>
 <p class="sd-card-text">2 parallel planes intersect another: no solutions</p>
 </div>
 </div>
@@ -550,7 +567,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-card-body docutils">
 <br>
 <figure class="align-default">
-<img alt="../_images/intersecting_planes_5.svg" src="../_images/intersecting_planes_5.svg" /></figure>
+<img alt="../_images/4_intersecting_planes_5.svg" src="../_images/4_intersecting_planes_5.svg" /></figure>
 <p class="sd-card-text">Each plane intersects with 2 others: no solutions</p>
 </div>
 </div>
@@ -559,7 +576,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <figure class="align-default">
-<img alt="../_images/intersecting_planes_6.svg" src="../_images/intersecting_planes_6.svg" /></figure>
+<img alt="../_images/4_intersecting_planes_6.svg" src="../_images/4_intersecting_planes_6.svg" /></figure>
 <p class="sd-card-text">3 parallel planes: no solutions</p>
 </div>
 </div>
@@ -568,7 +585,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <figure class="align-default">
-<img alt="../_images/intersecting_planes_7.svg" src="../_images/intersecting_planes_7.svg" /></figure>
+<img alt="../_images/4_intersecting_planes_7.svg" src="../_images/4_intersecting_planes_7.svg" /></figure>
 <p class="sd-card-text">2 coincident planes parallel to another: no solutions</p>
 </div>
 </div>
@@ -578,7 +595,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <div class="sd-card-body docutils">
 <br>
 <figure class="align-default">
-<img alt="../_images/intersecting_planes_8.svg" src="../_images/intersecting_planes_8.svg" /></figure>
+<img alt="../_images/4_intersecting_planes_8.svg" src="../_images/4_intersecting_planes_8.svg" /></figure>
 <br>
 All 3 planes coincide: infinite solutions
 </div>
@@ -593,17 +610,17 @@ All 3 planes coincide: infinite solutions
 <p>Two non-parallel planes in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> are defined by the point-normal forms <span class="math notranslate nohighlight">\(3x - 4y + z - 5 = 0\)</span> and <span class="math notranslate nohighlight">\(x + y - z - 2 = 0\)</span> respectively. Find the intersection of these two planes</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The normal vectors for these planes is given by the coefficients of <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span>, therefore <span class="math notranslate nohighlight">\(\mathbf{n}_1 = (3, -4, 1)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{n}_2 = (1, 1, -1)^\mathsf{T}\)</span>. The direction vector of the line of intersection must be parallel to both <span class="math notranslate nohighlight">\(\mathbf{n}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{n}_2\)</span> (the intersecting line must lie in both planes), therefore we need to construct a vector perpendicular to both of these. A vector perpendicular to <span class="math notranslate nohighlight">\(\mathbf{n}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{n}_2\)</span> can be found using <span class="math notranslate nohighlight">\(\mathbf{n}_1 \times \mathbf{n}_2\)</span></p>
+<p class="sd-card-text">The normal vectors for these planes is given by the coefficients of <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span>, therefore <span class="math notranslate nohighlight">\(\vec{n}_1 = (3, -4, 1)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\vec{n}_2 = (1, 1, -1)^\mathsf{T}\)</span>. The direction vector of the line of intersection must be parallel to both <span class="math notranslate nohighlight">\(\vec{n}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{n}_2\)</span> (the intersecting line must lie in both planes), therefore we need to construct a vector perpendicular to both of these. A vector perpendicular to <span class="math notranslate nohighlight">\(\vec{n}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{n}_2\)</span> can be found using <span class="math notranslate nohighlight">\(\vec{n}_1 \times \vec{n}_2\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \mathbf{d} = \mathbf{n}_1 \times \mathbf{n}_2 =
+    \vec{d} = \vec{n}_1 \times \vec{n}_2 =
     \begin{vmatrix} 
-        \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\ 
+        \vec{i} &amp; \vec{j} &amp; \vec{k} \\ 
         3 &amp; -4 &amp; 1 \\ 
         1 &amp; 1 &amp; -1 
     \end{vmatrix} =
@@ -625,7 +642,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <p class="sd-card-text">Let <span class="math notranslate nohighlight">\(x = 1\)</span> then <span class="math notranslate nohighlight">\(y = -1\)</span> and <span class="math notranslate nohighlight">\(z = -2\)</span> so the line of intersection between the two planes is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \mathbf{r} = \begin{pmatrix} 1 \\ -1 \\ -2 \end{pmatrix} + t
+    \vec{r} = \begin{pmatrix} 1 \\ -1 \\ -2 \end{pmatrix} + t
     \begin{pmatrix} 3 \\ 4 \\ 7 \end{pmatrix} = 
     \begin{pmatrix} 1 + 3t \\ -1 + 4t \\ -2 + 7t \end{pmatrix}.
 \end{align*} \end{split}\]</div>

@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'pages/6.1_Composite_transformations';</script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/6.1_Composite_transformations.html" />
@@ -177,7 +177,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="1.3_Determinants.html">1.5. Determinants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.4_Inverse_matrix.html">1.6. Inverse matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.5_Matrix_algebra.html">1.7. Matrix algebra</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.9_Matrices_exercises.html">1.8. Matrices exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.6_Matrices_exercises.html">1.8. Matrices Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -188,22 +188,22 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.6. Gauss-Jordan elimination</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.7. Consistent, inconsistent and indeterminate systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.8. Homogeneous systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.9. Systems of linear equations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8_Linear_systems_exercises.html">2.9. Systems of Linear Equations Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.5_Vectors_exercises.html">3.8. Vectors Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="4.0_Coordinate_geometry.html">4. Co-ordinate Geometry</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="4.1_Lines.html">4.2. Lines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.2_Planes.html">4.3. Planes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.3_Shortest_distance_problems.html">4.4. Shortest distance problems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate geometry exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate Geometry Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -220,6 +220,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.7. Transformations exercises</a></li>
 </ul>
 </li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercises Solutions</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -384,20 +391,20 @@ document.write(`
   <span class="target" id="composite-linear-transformations-section"></span><section class="tex2jax_ignore mathjax_ignore" id="composite-linear-transformations">
 <span id="index-0"></span><h1><span class="section-number">6.4. </span>Composite linear transformations<a class="headerlink" href="#composite-linear-transformations" title="Permalink to this heading">#</a></h1>
 <div class="proof definition admonition" id="composite-transformation-definition">
-<p class="admonition-title"><span class="caption-number">Definition 6.4 </span> (Composite transformations)</p>
+<p class="admonition-title"><span class="caption-number">Definition 6.5 </span> (Composite transformations)</p>
 <section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(S : V \to W\)</span> and <span class="math notranslate nohighlight">\(T: W \to X\)</span> be two linear transformations over the vector spaces <span class="math notranslate nohighlight">\(V, W\)</span> and <span class="math notranslate nohighlight">\(X\)</span>. The <strong>composition</strong> of <span class="math notranslate nohighlight">\(S\)</span> and <span class="math notranslate nohighlight">\(T\)</span> is the transformation <span class="math notranslate nohighlight">\(S \circ T: V \to X\)</span> defined by</p>
+<p>Let <span class="math notranslate nohighlight">\(T : V \to W\)</span> and <span class="math notranslate nohighlight">\(S: W \to X\)</span> be two linear transformations over the vector spaces <span class="math notranslate nohighlight">\(V, W\)</span> and <span class="math notranslate nohighlight">\(X\)</span>. The <strong>composition</strong> of <span class="math notranslate nohighlight">\(S\)</span> and <span class="math notranslate nohighlight">\(T\)</span> is the transformation <span class="math notranslate nohighlight">\(S \circ T: V \to X\)</span> defined by</p>
 <div class="math notranslate nohighlight">
-\[ (S \circ T)(\mathbf{u}) = S(T(\mathbf{u})), \]</div>
-<p>for all vectors <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span>.</p>
+\[ (S \circ T)(\vec{u}) = S(T(\vec{u})), \]</div>
+<p>for all vectors <span class="math notranslate nohighlight">\(\vec{u} \in V\)</span>.</p>
 </section>
 </div><div class="proof example admonition" id="composite-transformation-example">
 <p class="admonition-title"><span class="caption-number">Example 6.5 </span></p>
 <section class="example-content" id="proof-content">
-<p>Two linear transformations is defined as <span class="math notranslate nohighlight">\(T:(x, y, z)^\mathsf{T} \mapsto (2 x + 4 y, -x + 3 y, x + 2 y)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(S:(x, y)^\mathsf{T} \mapsto (2x + y - z, 3x + z, y - 2z)^\mathsf{T}\)</span>, determine the composite linear transformation <span class="math notranslate nohighlight">\(S \circ T(\mathbf{u})\)</span> for <span class="math notranslate nohighlight">\(\mathbf{u} = (x, y, z)^\mathsf{T}\)</span>.</p>
+<p>Two linear transformations is defined as <span class="math notranslate nohighlight">\(T:(x, y, z)^\mathsf{T} \mapsto (2 x + 4 y, -x + 3 y, x + 2 y)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(S:(x, y, z)^\mathsf{T} \mapsto (2x + y - z, 3x + z, y - 2z)^\mathsf{T}\)</span>, determine the composite linear transformation <span class="math notranslate nohighlight">\(S \circ T(\vec{u})\)</span> for <span class="math notranslate nohighlight">\(\vec{u} = (x, y, z)^\mathsf{T}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -418,21 +425,21 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 </details></section>
 </div><section id="composite-transformation-matrices">
 <h2><span class="section-number">6.4.1. </span>Composite transformation matrices<a class="headerlink" href="#composite-transformation-matrices" title="Permalink to this heading">#</a></h2>
-<p>We have seen that a linear transformation <span class="math notranslate nohighlight">\(T: V \to W\)</span> can be represented by a <a class="reference internal" href="6.0_Linear_transformations.html#transformation-matrix-definition">transformation matrix</a> so that given a vector <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> the image is calculated using</p>
+<p>We have seen that a linear transformation <span class="math notranslate nohighlight">\(T: V \to W\)</span> can be represented by a <a class="reference internal" href="6.0_Linear_transformations.html#transformation-matrix-definition">transformation matrix</a> so that given a vector <span class="math notranslate nohighlight">\(\vec{u} \in V\)</span> the image is calculated using</p>
 <div class="math notranslate nohighlight" id="equation-composite-transformation-matrix-equation-1">
-<span class="eqno">(6.3)<a class="headerlink" href="#equation-composite-transformation-matrix-equation-1" title="Permalink to this equation">#</a></span>\[ T(\mathbf{u}) = A \mathbf{u}. \]</div>
+<span class="eqno">(6.3)<a class="headerlink" href="#equation-composite-transformation-matrix-equation-1" title="Permalink to this equation">#</a></span>\[ T(\vec{u}) = A \vec{u}. \]</div>
 <p>Consider the composition of <span class="math notranslate nohighlight">\(T\)</span> with another linear transformation <span class="math notranslate nohighlight">\(S: W \to X\)</span> with a transformation matrix <span class="math notranslate nohighlight">\(B\)</span></p>
 <div class="math notranslate nohighlight" id="equation-composite-transformation-matrix-equation-2">
-<span class="eqno">(6.4)<a class="headerlink" href="#equation-composite-transformation-matrix-equation-2" title="Permalink to this equation">#</a></span>\[ S \circ T(\mathbf{u}) = B \cdot T(\mathbf{u}) \]</div>
+<span class="eqno">(6.4)<a class="headerlink" href="#equation-composite-transformation-matrix-equation-2" title="Permalink to this equation">#</a></span>\[ S \circ T(\vec{u}) = B \cdot T(\vec{u}) \]</div>
 <p>Substituting equation <a class="reference internal" href="#equation-composite-transformation-matrix-equation-1">(6.3)</a> into equation <a class="reference internal" href="#equation-composite-transformation-matrix-equation-1">(6.3)</a> gives</p>
 <div class="math notranslate nohighlight">
-\[ S \circ T (\mathbf{u}) = B \cdot A \mathbf{u}. \]</div>
+\[ S \circ T (\vec{u}) = B \cdot A \vec{u}. \]</div>
 <div class="proof theorem admonition" id="composite-transformation-matrices-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 6.2 </span> (Composite transformation matrices)</p>
 <section class="theorem-content" id="proof-content">
-<p>Given two linear transformations <span class="math notranslate nohighlight">\(T:V \to W\)</span> and <span class="math notranslate nohighlight">\(S:W \to X\)</span> with transformation matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> respectively then the composition <span class="math notranslate nohighlight">\(S \circ T\)</span> of the vector <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> is<a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<p>Given two linear transformations <span class="math notranslate nohighlight">\(T:V \to W\)</span> and <span class="math notranslate nohighlight">\(S:W \to X\)</span> with transformation matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> respectively then the composition <span class="math notranslate nohighlight">\(S \circ T\)</span> of the vector <span class="math notranslate nohighlight">\(\vec{u} \in V\)</span> is<a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <div class="math notranslate nohighlight" id="equation-composite-transformation-matrices-theorem-equation">
-<span class="eqno">(6.5)<a class="headerlink" href="#equation-composite-transformation-matrices-theorem-equation" title="Permalink to this equation">#</a></span>\[ S \circ T (\mathbf{u}) = B \cdot A \cdot \mathbf{u}. \]</div>
+<span class="eqno">(6.5)<a class="headerlink" href="#equation-composite-transformation-matrices-theorem-equation" title="Permalink to this equation">#</a></span>\[ S \circ T (\vec{u}) = B \cdot A \cdot \vec{u}. \]</div>
 </section>
 </div><div class="proof example admonition" id="composite-transformation-matrix-example">
 <p class="admonition-title"><span class="caption-number">Example 6.6 </span></p>
@@ -440,20 +447,25 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <p>Calculate the transformation matrices, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, for the transformations <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(S\)</span> from <a class="reference internal" href="#composite-transformation-example">Example 6.5</a> and use them to calculate the transformation matrix <span class="math notranslate nohighlight">\(C\)</span> for <span class="math notranslate nohighlight">\(S\circ T\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The transformations are <span class="math notranslate nohighlight">\(T:(x, y, z)^\mathsf{T} \mapsto (2 x + 4 y, -x + 3 y, x + 2 y)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(S:(x, y, z)^\mathsf{T} \mapsto (2x + y - z, 3x + z, y - 2z)^\mathsf{T}\)</span> which have the transformation matrices</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    A &amp;= \begin{pmatrix} 2 &amp; 4 \\ -1 &amp; 3 \\ 1 &amp; 2 \end{pmatrix}, \\
-    B &amp;= \begin{pmatrix} 2 &amp; 1 &amp; - 1 \\ 3 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; -2 \end{pmatrix}, \\ 
-    \therefore C &amp;= BA = \begin{pmatrix} 2 &amp; 1 &amp; - 1 \\ 3 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; -2 \end{pmatrix}
-    \begin{pmatrix} 2 &amp; 4 \\ -1 &amp; 3 \\ 1 &amp; 2 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 2 &amp; 9 \\ 7 &amp; 14 \\ -3 &amp; 1 \end{pmatrix}.
+    A &amp;= \begin{pmatrix} 2 &amp; 4 \\ -1 &amp; 3 \\ 1 &amp; 2 \end{pmatrix}, &amp;
+    B &amp;= \begin{pmatrix} 2 &amp; 1 &amp; - 1 \\ 3 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; -2 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Checking that <span class="math notranslate nohighlight">\(C \mathbf{u}\)</span> gives the answer from <a class="reference internal" href="#composite-transformation-example">Example 6.5</a></p>
+<p class="sd-card-text">Calculate the composite transformation matrix for <span class="math notranslate nohighlight">\(S \circ T\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    C &amp;= BA = \begin{pmatrix} 2 &amp; 1 &amp; - 1 \\ 3 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; -2 \end{pmatrix}
+    \begin{pmatrix} 2 &amp; 4 \\ -1 &amp; 3 \\ 1 &amp; 2 \end{pmatrix} 
+    = \begin{pmatrix} 2 &amp; 9 \\ 7 &amp; 14 \\ -3 &amp; -1 \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+<p class="sd-card-text">Checking that <span class="math notranslate nohighlight">\(C \vec{u}\)</span> gives the answer from <a class="reference internal" href="#composite-transformation-example">Example 6.5</a></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     C \cdot \begin{pmatrix} x \\ y \\ z \end{pmatrix} = 

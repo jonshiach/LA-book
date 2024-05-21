@@ -64,14 +64,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'pages/3.2_Vector_magnitude';</script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/3.2_Vector_magnitude.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3.6. Dot and cross products" href="3.3_Vector_products.html" />
+    <link rel="next" title="3.6. Dot and cross products" href="3.3_Dot_and_cross_products.html" />
     <link rel="prev" title="3.4. Arithmetic operations on vectors" href="3.1_Vector_arithmetic.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -177,7 +177,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="1.3_Determinants.html">1.5. Determinants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.4_Inverse_matrix.html">1.6. Inverse matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.5_Matrix_algebra.html">1.7. Matrix algebra</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.9_Matrices_exercises.html">1.8. Matrices exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.6_Matrices_exercises.html">1.8. Matrices Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -188,22 +188,22 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.6. Gauss-Jordan elimination</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.7. Consistent, inconsistent and indeterminate systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.8. Homogeneous systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.9. Systems of linear equations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8_Linear_systems_exercises.html">2.9. Systems of Linear Equations Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.5_Vectors_exercises.html">3.8. Vectors Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="4.0_Coordinate_geometry.html">4. Co-ordinate Geometry</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="4.1_Lines.html">4.2. Lines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.2_Planes.html">4.3. Planes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.3_Shortest_distance_problems.html">4.4. Shortest distance problems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate geometry exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate Geometry Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -220,6 +220,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.7. Transformations exercises</a></li>
 </ul>
 </li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercises Solutions</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -383,56 +390,56 @@ document.write(`
                   
   <span class="target" id="vector-magnitude-section"></span><section class="tex2jax_ignore mathjax_ignore" id="vector-magnitude">
 <span id="index-0"></span><h1><span class="section-number">3.5. </span>Vector magnitude<a class="headerlink" href="#vector-magnitude" title="Permalink to this heading">#</a></h1>
-<p>The <strong>magnitude</strong> of a vector <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> is the distance between the head and tail of <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> which we can calculate using an extension of Pythagoras’ theorem.</p>
+<p>The <strong>magnitude</strong> of a vector <span class="math notranslate nohighlight">\(\vec{a}\)</span> is the distance between the head and tail of <span class="math notranslate nohighlight">\(\vec{a}\)</span> which we can calculate using an extension of Pythagoras’ theorem.</p>
 <div class="proof definition note admonition" id="magnitude-definition">
 <p class="admonition-title"><span class="caption-number">Definition 3.4 </span> (Vector magnitude)</p>
 <section class="definition-content" id="proof-content">
-<p>The <strong>magnitude</strong> of a vector <span class="math notranslate nohighlight">\(\mathbf{a} = (a_1, a_2, \ldots, a_n)^\mathsf{T}\)</span> denoted by <span class="math notranslate nohighlight">\(|\mathbf{a}|\)</span> is calculated using</p>
+<p>The <strong>magnitude</strong> of a vector <span class="math notranslate nohighlight">\(\vec{a} = (a_1, a_2, \ldots, a_n)^\mathsf{T}\)</span> denoted by <span class="math notranslate nohighlight">\(|\vec{a}|\)</span> is calculated using</p>
 <div class="math notranslate nohighlight" id="equation-magnitude-equation">
-<span class="eqno">(3.1)<a class="headerlink" href="#equation-magnitude-equation" title="Permalink to this equation">#</a></span>\[ |\mathbf{a}| = \sqrt{\sum_{i=1}^n a_i^2} = \sqrt{a_1^2 + a_2^2 + \cdots + a_n^2}. \]</div>
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-magnitude-equation" title="Permalink to this equation">#</a></span>\[ |\vec{a}| = \sqrt{\sum_{i=1}^n a_i^2} = \sqrt{a_1^2 + a_2^2 + \cdots + a_n^2}. \]</div>
 </section>
-</div><p>Vector magnitude is also known as the <a href="https://en.wikipedia.org/wiki/Norm_(mathematics)" target="_blank"><strong>Euclidean norm</strong></a>. Note that <span class="math notranslate nohighlight">\(|\mathbf{a}|=0\)</span> if and only if <span class="math notranslate nohighlight">\(\mathbf{a}=(0, 0, \ldots, 0)\)</span>.</p>
+</div><p>Vector magnitude is also known as the <a href="https://en.wikipedia.org/wiki/Norm_(mathematics)" target="_blank"><strong>Euclidean norm</strong></a>. Note that <span class="math notranslate nohighlight">\(|\vec{a}|=0\)</span> if and only if <span class="math notranslate nohighlight">\(\vec{a}=(0, 0, \ldots, 0)^\mathsf{T}\)</span>.</p>
 <div class="proof example admonition" id="magnitude-example">
 <p class="admonition-title"><span class="caption-number">Example 3.2 </span></p>
 <section class="example-content" id="proof-content">
 <p>Calculate the magnitudes of the following vectors</p>
-<p>(i)   <span class="math notranslate nohighlight">\(\mathbf{u} = \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix}\)</span>;</p>
+<p>(i)   <span class="math notranslate nohighlight">\(\vec{u} = \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
-\[ |\mathbf{u}| = \sqrt{1^2 + 2^2 + 3^2} = \sqrt{1+4+9} = \sqrt{14} \]</div>
+\[ |\vec{u}| = \sqrt{1^2 + 2^2 + 3^2} = \sqrt{1+4+9} = \sqrt{14} \]</div>
 </div>
-</details><p>(ii)   <span class="math notranslate nohighlight">\(\mathbf{v} = \begin{pmatrix} 5 \\ -12 \\ 0 \end{pmatrix}\)</span>;</p>
+</details><p>(ii)   <span class="math notranslate nohighlight">\(\vec{v} = \begin{pmatrix} 5 \\ -12 \\ 0 \end{pmatrix}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
-\[ |\mathbf{v}| = \sqrt{5^2 + (-12)^2 + 0^2} = \sqrt{25+144+0} = \sqrt{169} = 13\]</div>
+\[ |\vec{v}| = \sqrt{5^2 + (-12)^2 + 0^2} = \sqrt{25+144+0} = \sqrt{169} = 13\]</div>
 </div>
-</details><p>(iii)   <span class="math notranslate nohighlight">\(\mathbf{w} = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}\)</span>.</p>
+</details><p>(iii)   <span class="math notranslate nohighlight">\(\vec{w} = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
-\[|\mathbf{w}| = \sqrt{1^2 + 0^2 + 1^2} = \sqrt{1+0+1} = \sqrt{2}\]</div>
+\[|\vec{w}| = \sqrt{1^2 + 0^2 + 1^2} = \sqrt{1+0+1} = \sqrt{2}\]</div>
 </div>
 </details></section>
 </div><section id="unit-vectors">
 <span id="index-1"></span><h2><span class="section-number">3.5.1. </span>Unit vectors<a class="headerlink" href="#unit-vectors" title="Permalink to this heading">#</a></h2>
-<p>For every non-zero vector <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> there exist a unique <strong>unit vector</strong> which is a vector in the same direction as <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and whose magnitude is 1.</p>
+<p>For every non-zero vector <span class="math notranslate nohighlight">\(\vec{a}\)</span> there exist a unique <strong>unit vector</strong> which is a vector in the same direction as <span class="math notranslate nohighlight">\(\vec{a}\)</span> and whose magnitude is 1.</p>
 <div class="proof definition admonition" id="unit-vector-definition">
 <p class="admonition-title"><span class="caption-number">Definition 3.5 </span> (Unit vectors)</p>
 <section class="definition-content" id="proof-content">
@@ -443,65 +450,66 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 <section class="theorem-content" id="proof-content">
 <p>Any non-zero vector can be scaled to transform it into a unit vector by dividing all its coordinates by its magnitude</p>
 <div class="math notranslate nohighlight" id="equation-normalising-a-vector-equation">
-<span class="eqno">(3.2)<a class="headerlink" href="#equation-normalising-a-vector-equation" title="Permalink to this equation">#</a></span>\[ \hat{\mathbf{a}} = \frac{\mathbf{a}}{|\mathbf{a}|}. \]</div>
-<p>This process is called <strong>normalising a vector</strong>. Unit vectors are denoted with a caret above the vector name, i.e., <span class="math notranslate nohighlight">\(\hat{\mathbf{a}}\)</span> which is read as <em>‘a hat’</em>.</p>
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-normalising-a-vector-equation" title="Permalink to this equation">#</a></span>\[ \hat{\vec{a}} = \frac{\vec{a}}{|\vec{a}|}. \]</div>
+<p>This process is called <strong>normalising a vector</strong>. Unit vectors are denoted with a caret above the vector name, i.e., <span class="math notranslate nohighlight">\(\hat{\vec{a}}\)</span> which is read as <em>‘a hat’</em>.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Let <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> be a non-zero vector</p>
+<p>Proof. Let <span class="math notranslate nohighlight">\(\vec{a}\)</span> be a non-zero vector</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \left|\frac{1}{|\mathbf{a}|}\mathbf{a}\right| &amp;= \left|\frac{1}{|\mathbf{a}|}\right| |\mathbf{a}| \\
-    &amp;= \frac{1}{|\mathbf{a}|} |\mathbf{a}| \qquad \text{(since $|\mathbf{a}|&gt;0$)}\\
+    \left|\frac{1}{|\vec{a}|}\vec{a}\right| &amp;= \left|\frac{1}{|\vec{a}|}\right| |\vec{a}| \\
+    &amp;= \frac{1}{|\vec{a}|} |\vec{a}| \qquad \text{(since $|\vec{a}|&gt;0$)}\\
     &amp;= 1.
 \end{align*} \end{split}\]</div>
 </div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3-LCn_dGzaY?si=vLdzzaq7grb2XNfV&amp;start=381" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <div class="proof example admonition" id="normalising-a-vector-example">
 <p class="admonition-title"><span class="caption-number">Example 3.3 </span></p>
 <section class="example-content" id="proof-content">
 <p>Find the unit vector parallel to the following:</p>
-<p>(i)   <span class="math notranslate nohighlight">\(\mathbf{u} = \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix}\)</span>;</p>
+<p>(i)   <span class="math notranslate nohighlight">\(\vec{u} = \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
-\[\begin{split} \hat{\mathbf{u}} = \dfrac{\mathbf{u}}{|\mathbf{u}|} = \dfrac{1}{\sqrt{14}} \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix} = \begin{pmatrix} \frac{\sqrt{14}}{14} \\ \frac{\sqrt{14}}{7} \\ \frac{3\sqrt{14}}{14} \end{pmatrix} \end{split}\]</div>
-<p class="sd-card-text">Check magnitude of <span class="math notranslate nohighlight">\(\hat{\mathbf{u}}\)</span></p>
+\[\begin{split} \hat{\vec{u}} = \dfrac{\vec{u}}{|\vec{u}|} = \dfrac{1}{\sqrt{14}} \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix} = \begin{pmatrix} \frac{\sqrt{14}}{14} \\ \frac{\sqrt{14}}{7} \\ \frac{3\sqrt{14}}{14} \end{pmatrix} \end{split}\]</div>
+<p class="sd-card-text">Check magnitude of <span class="math notranslate nohighlight">\(\hat{\vec{u}}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    |\hat{\mathbf{u}}| &amp;= \sqrt{ \left( \frac{\sqrt{14}}{14} \right)^2 + \left( \frac{\sqrt{14}}{7} \right)^2 + \left(\frac{3\sqrt{14}}{14} \right)^2} \\
+    |\hat{\vec{u}}| &amp;= \sqrt{ \left( \frac{\sqrt{14}}{14} \right)^2 + \left( \frac{\sqrt{14}}{7} \right)^2 + \left(\frac{3\sqrt{14}}{14} \right)^2} \\
     &amp;= \sqrt{ \frac{14}{196} +\frac{14}{49} + \frac{126}{196}} = \sqrt{1} = 1 \qquad \checkmark
 \end{align*} \end{split}\]</div>
 </div>
-</details><p>(ii)   <span class="math notranslate nohighlight">\(\mathbf{v} = \begin{pmatrix} 5 \\ -12 \\ 0 \end{pmatrix}\)</span>.</p>
+</details><p>(ii)   <span class="math notranslate nohighlight">\(\vec{v} = \begin{pmatrix} 5 \\ -12 \\ 0 \end{pmatrix}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
-\[\begin{split} \hat{\mathbf{v}} = \dfrac{\mathbf{v}}{|\mathbf{v}|} = \dfrac{1}{13} \begin{pmatrix} 5 \\ -12 \\ 0 \end{pmatrix} = \begin{pmatrix} \frac{5}{13} \\ -\frac{12}{13} \\ 0 \end{pmatrix} \end{split}\]</div>
-<p class="sd-card-text">Check magnitude of <span class="math notranslate nohighlight">\(\hat{\mathbf{v}}\)</span></p>
+\[\begin{split} \hat{\vec{v}} = \dfrac{\vec{v}}{|\vec{v}|} = \dfrac{1}{13} \begin{pmatrix} 5 \\ -12 \\ 0 \end{pmatrix} = \begin{pmatrix} \frac{5}{13} \\ -\frac{12}{13} \\ 0 \end{pmatrix} \end{split}\]</div>
+<p class="sd-card-text">Check magnitude of <span class="math notranslate nohighlight">\(\hat{\vec{v}}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    |\hat{\mathbf{v}}| &amp;= \sqrt{ \left(\frac{5}{13} \right)^2 + \left( -\frac{12}{13} \right)^2 + 0^2} \\
+    |\hat{\vec{v}}| &amp;= \sqrt{ \left(\frac{5}{13} \right)^2 + \left( -\frac{12}{13} \right)^2 + 0^2} \\
     &amp;= \sqrt{ \frac{25}{169} + \frac{144}{169} + 0} = \sqrt{1} = 1 \qquad \checkmark
 \end{align*} \end{split}\]</div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-(iii) &amp;emsp; $\mathbf{w} = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}$.
+(iii) &amp;emsp; $\vec{w} = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}$.
 
-::::{dropdown} Solution (click to reveal)
-$$ \hat{\mathbf{w}} = \dfrac{\mathbf{w}}{|\mathbf{w}|} = \dfrac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} = \begin{pmatrix} \frac{\sqrt{2}}{2} \\ 0 \\ \frac{\sqrt{2}}{2} \end{pmatrix} $$
+````{dropdown} Solution (click to show)
+$$ \hat{\vec{w}} = \dfrac{\vec{w}}{|\vec{w}|} = \dfrac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} = \begin{pmatrix} \frac{\sqrt{2}}{2} \\ 0 \\ \frac{\sqrt{2}}{2} \end{pmatrix} $$
 
-Check magnitude of $\hat{\mathbf{w}}$
+Check magnitude of $\hat{\vec{w}}$
 
 $$ \begin{align*}
-    |\hat{\mathbf{w}}| &amp;= \sqrt{ \left( \frac{\sqrt{2}}{2} \right)^2 + 0^2 + \left( \frac{\sqrt{2}}{2} \right)^2 } \\
+    |\hat{\vec{w}}| &amp;= \sqrt{ \left( \frac{\sqrt{2}}{2} \right)^2 + 0^2 + \left( \frac{\sqrt{2}}{2} \right)^2 } \\
     &amp;= \sqrt{ \frac{2}{4} + 0 + \frac{2}{4} } = \sqrt{1} = 1 \qquad \checkmark
 \end{align*} $$
 </pre></div>
@@ -552,7 +560,7 @@ $$ \begin{align*}
       </div>
     </a>
     <a class="right-next"
-       href="3.3_Vector_products.html"
+       href="3.3_Dot_and_cross_products.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>

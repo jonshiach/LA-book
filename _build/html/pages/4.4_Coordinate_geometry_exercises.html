@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>4.5. Co-ordinate geometry exercises &#8212; Linear Algebra Lecture Notes</title>
+    <title>4.5. Co-ordinate Geometry Exercises &#8212; Linear Algebra Lecture Notes</title>
   
   
   
@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'pages/4.4_Coordinate_geometry_exercises';</script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/4.4_Coordinate_geometry_exercises.html" />
@@ -177,7 +177,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="1.3_Determinants.html">1.5. Determinants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.4_Inverse_matrix.html">1.6. Inverse matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.5_Matrix_algebra.html">1.7. Matrix algebra</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.9_Matrices_exercises.html">1.8. Matrices exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.6_Matrices_exercises.html">1.8. Matrices Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -188,22 +188,22 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.6. Gauss-Jordan elimination</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.7. Consistent, inconsistent and indeterminate systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.8. Homogeneous systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.9. Systems of linear equations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8_Linear_systems_exercises.html">2.9. Systems of Linear Equations Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.5_Vectors_exercises.html">3.8. Vectors Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="4.0_Coordinate_geometry.html">4. Co-ordinate Geometry</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="4.1_Lines.html">4.2. Lines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.2_Planes.html">4.3. Planes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.3_Shortest_distance_problems.html">4.4. Shortest distance problems</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.5. Co-ordinate geometry exercises</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.5. Co-ordinate Geometry Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -220,6 +220,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.7. Transformations exercises</a></li>
 </ul>
 </li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercises Solutions</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -277,7 +284,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/pages/4.4_Coordinate_geometry_exercises.ipynb" target="_blank"
+      <li><a href="../_sources/pages/4.4_Coordinate_geometry_exercises.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -287,7 +294,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -357,7 +364,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Co-ordinate geometry exercises</h1>
+    <h1>Co-ordinate Geometry Exercises</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -372,7 +379,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="co-ordinate-geometry-exercises">
-<span id="co-ordinate-geometry-exercises-section"></span><h1><span class="section-number">4.5. </span>Co-ordinate geometry exercises<a class="headerlink" href="#co-ordinate-geometry-exercises" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">4.5. </span>Co-ordinate Geometry Exercises<a class="headerlink" href="#co-ordinate-geometry-exercises" title="Permalink to this heading">#</a></h1>
 <div class="exercise admonition" id="geometry-ex-line-plane-equations">
 
 <p class="admonition-title"><span class="caption-number">Exercise 4.1 </span></p>
@@ -380,233 +387,47 @@ document.write(`
 <p>Given the following position vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*} 
-    \mathbf{a} &amp;= \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix}, &amp;
-    \mathbf{b} &amp;= \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}, &amp;
-    \mathbf{c} &amp;= \begin{pmatrix} 3 \\ -1 \\ 4 \end{pmatrix}, &amp;
-    \mathbf{d} &amp;= \begin{pmatrix} 5 \\ 2 \\ 6 \end{pmatrix}.
+    \vec{a} &amp;= \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix}, &amp;
+    \vec{b} &amp;= \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}, &amp;
+    \vec{c} &amp;= \begin{pmatrix} 3 \\ -1 \\ 4 \end{pmatrix}, &amp;
+    \vec{d} &amp;= \begin{pmatrix} 5 \\ 2 \\ 6 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 <p>find:</p>
-<p>(a) the equation of the line that passes through <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>;</p>
-<p>(b) the equation of the line that passes through <span class="math notranslate nohighlight">\(\mathbf{c}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}\)</span>;</p>
-<p>(c) the equation of the plane which passes through <span class="math notranslate nohighlight">\(\mathbf{a}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{c}\)</span> lie;</p>
-<p>(d) the equation of the plane upon which passes through <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{c}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}\)</span>.</p>
-</section>
-</div>
-<div class="solution dropdown admonition" id="pages/4.4_Coordinate_geometry_exercises-solution-1">
-
-<p class="admonition-title">Solution to<a class="reference internal" href="#geometry-ex-line-plane-equations"> Exercise 4.1</a></p>
-<section id="solution-content">
-<p>(a) Using the <a class="reference internal" href="4.1_Lines.html#vector-equation-of-a-line-definition">vector equation of a line</a> we have <span class="math notranslate nohighlight">\(\mathbf{r} = \mathbf{a} + t\mathbf{d}_1\)</span></p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    \mathbf{d}_1 &amp;= \mathbf{b} - \mathbf{a} =
-    \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} -
-    \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} = 
-    \begin{pmatrix} -1 \\ 0 \\ 0 \end{pmatrix}, \\
-    \therefore \mathbf{r} &amp;= \mathbf{a} + t\mathbf{d}_1 =
-    \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} + t 
-    \begin{pmatrix} -1 \\ 0 \\ 0 \end{pmatrix} = 
-    \begin{pmatrix} 2 - t \\ 1 \\ 1 \end{pmatrix}
-\end{align*} \end{split}\]</div>
-<p>(b) Using the <a class="reference internal" href="4.1_Lines.html#vector-equation-of-a-line-definition">vector equation of a line</a> we have <span class="math notranslate nohighlight">\(\mathbf{r} = \mathbf{c} + t\mathbf{d}_2\)</span></p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    \mathbf{d}_2 &amp;= \mathbf{d} - \mathbf{c} =
-    \begin{pmatrix} 5 \\ 2 \\ 6 \end{pmatrix} -
-    \begin{pmatrix} 3 \\ -1 \\ 4 \end{pmatrix} = 
-    \begin{pmatrix} 2 \\ 3 \\ 2 \end{pmatrix}, \\
-    \therefore \mathbf{r} &amp;= \mathbf{c} + t\mathbf{d}_2 =
-    \begin{pmatrix} 3 \\ -1 \\ 4 \end{pmatrix} + t 
-    \begin{pmatrix} 2 \\ 3 \\ 2 \end{pmatrix} = 
-    \begin{pmatrix} 3 + 2 t \\ -1 + 3 t \\ 4 + 2 t \end{pmatrix}
-\end{align*} \end{split}\]</div>
-<p>(c) Calculate the normal vector to the plane</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    \mathbf{b} - \mathbf{a} &amp;= \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} - 
-    \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} = 
-    \begin{pmatrix} -1 \\ 0 \\ 0 \end{pmatrix}, \\
-    \mathbf{c} - \mathbf{a} &amp;= \begin{pmatrix} 3 \\ -1 \\ 4 \end{pmatrix} -
-    \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} =
-    \begin{pmatrix} 1 \\ -2 \\ 4 \end{pmatrix}, \\
-    \therefore \mathbf{n} &amp;= (\mathbf{b} - \mathbf{a}) \times (\mathbf{c} - \mathbf{a}) = 
-    \begin{vmatrix} 
-        \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
-        -1 &amp; 0 &amp; 0 \\
-        1 &amp; -2 &amp; 4 
-    \end{vmatrix} =
-    \begin{pmatrix} 0 \\ 4 \\ 2 \end{pmatrix},
-\end{align*} \end{split}\]</div>
-<p>Using the <a class="reference internal" href="4.2_Planes.html#point-normal-definition">point normal definition of a plane</a></p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    n_x(x - a_x) + n_y(y - a_y) + n_z(z - a_z) &amp;= 0 \\
-    0(x - 2) + 4(y - 1) + 2(z - 0) &amp;= 0 \\
-    4 y + 2 z - 4 &amp;= 0.
-\end{align*} \end{split}\]</div>
-<p>(d) Calculate the normal vector to the plane</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    \mathbf{c} - \mathbf{b} &amp;= \begin{pmatrix} 3 \\ -1 \\ 4 \end{pmatrix} - 
-    \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} =
-    \begin{pmatrix} 2 \\ -2 \\ 4 \end{pmatrix}, \\
-    \mathbf{d} - \mathbf{b} &amp;= \begin{pmatrix} 5 \\ 2 \\ 6 \end{pmatrix} -
-    \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} =
-    \begin{pmatrix} 4 \\ 1 \\ 6 \end{pmatrix}, \\
-    \mathbf{n} &amp;= (\mathbf{c} - \mathbf{b}) \times (\mathbf{d} - \mathbf{b}) = 
-    \begin{vmatrix}
-        \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
-        2 &amp; -2 &amp; 4 \\
-        4 &amp; 1 &amp; 6
-    \end{vmatrix} =
-    \begin{pmatrix} -16 \\ 4 \\ 10 \end{pmatrix},
-\end{align*} \end{split}\]</div>
-<p>Using the <a class="reference internal" href="4.2_Planes.html#point-normal-definition">point normal definition of a plane</a></p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    n_x(x - b_x) + n_y(y - b_y) + n_z(z - b_z) &amp;= 0 \\
-    -16(x - 1) + 4(y - 1) + 10(z - 0) &amp;= 0\\
-    -16 x + 4 y + 10 z + 12 &amp;= 0.
-\end{align*} \end{split}\]</div>
+<p>(a)   the equation of the line that passes through <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span>;</p>
+<p>(b)   the equation of the line that passes through <span class="math notranslate nohighlight">\(\vec{c}\)</span> and <span class="math notranslate nohighlight">\(\vec{d}\)</span>;</p>
+<p>(c)   the equation of the plane which passes through <span class="math notranslate nohighlight">\(\vec{a}\)</span>, <span class="math notranslate nohighlight">\(\vec{b}\)</span> and <span class="math notranslate nohighlight">\(\vec{c}\)</span> lie;</p>
+<p>(d)   the equation of the plane upon which passes through <span class="math notranslate nohighlight">\(\vec{b}\)</span>, <span class="math notranslate nohighlight">\(\vec{c}\)</span> and <span class="math notranslate nohighlight">\(\vec{d}\)</span>.</p>
 </section>
 </div>
 <div class="exercise admonition" id="geometry-ex-line-equation-1">
 
 <p class="admonition-title"><span class="caption-number">Exercise 4.2 </span></p>
 <section id="exercise-content">
-<p>Find the equation of the line that passes through the point with position vector <span class="math notranslate nohighlight">\((3, 2, 1)^\mathsf{T}\)</span> which is parallel to <span class="math notranslate nohighlight">\(2 \mathbf{i} + \mathbf{j} + 3 \mathbf{k}\)</span>.</p>
-</section>
-</div>
-<div class="solution dropdown admonition" id="pages/4.4_Coordinate_geometry_exercises-solution-3">
-
-<p class="admonition-title">Solution to<a class="reference internal" href="#geometry-ex-line-equation-1"> Exercise 4.2</a></p>
-<section id="solution-content">
-<div class="math notranslate nohighlight">
-\[\begin{split} \mathbf{r} = \begin{pmatrix} 3 \\ 2 \\ 1 \end{pmatrix} + t \begin{pmatrix} 2 \\ 3 \\ 1 \end{pmatrix}  = \begin{pmatrix} 3 + 2 t \\ 2 + 3 t \\ 1 + 3 t \end{pmatrix} \end{split}\]</div>
+<p>Find the equation of the line that passes through the point with position vector <span class="math notranslate nohighlight">\((3, 2, 1)^\mathsf{T}\)</span> which is parallel to <span class="math notranslate nohighlight">\(2 \vec{i} + \vec{j} + 3 \vec{k}\)</span>.</p>
 </section>
 </div>
 <div class="exercise admonition" id="geometry-ex-plane-equation-1">
 
 <p class="admonition-title"><span class="caption-number">Exercise 4.3 </span></p>
 <section id="exercise-content">
-<p>Find the equation of the plane that passes through the point with position vector <span class="math notranslate nohighlight">\((3, 2, 5)^\mathsf{T}\)</span> which has a normal vector <span class="math notranslate nohighlight">\(\mathbf{n} = (2, 1, 3)^\mathsf{T}\)</span>.</p>
-</section>
-</div>
-<div class="solution dropdown admonition" id="pages/4.4_Coordinate_geometry_exercises-solution-5">
-
-<p class="admonition-title">Solution to<a class="reference internal" href="#geometry-ex-plane-equation-1"> Exercise 4.3</a></p>
-<section id="solution-content">
-<p>Using the <a class="reference internal" href="4.2_Planes.html#point-normal-definition">point normal definition of a plane</a></p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    \mathbf{n} \cdot \begin{pmatrix} x - x_0 \\ y - y_0 \\ z - z_0 \end{pmatrix} &amp;= 0 \\
-    \begin{pmatrix} 2 \\ 1 \\ 3 \end{pmatrix} \cdot
-    \begin{pmatrix} x - 3 \\ y - 2 \\ z - 5 \end{pmatrix} \\
-    2(x - 3) + (y - 2) + 3(z - 5) &amp;= 0 \\
-    2 x + y + 3 z - 23 &amp;= 0
-\end{align*} \end{split}\]</div>
-</section>
-</div>
-<div class="exercise admonition" id="geometry-ex-line-point-distance">
-
-<p class="admonition-title"><span class="caption-number">Exercise 4.4 </span></p>
-<section id="exercise-content">
-<p>Two lines in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> are defined by <span class="math notranslate nohighlight">\(\ell_1: (1 + 2t, -t, 1 + 3t)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\ell_2: (1 + 2t, 4, 7 - t)^\mathsf{T}\)</span> respectively.</p>
-<p>(a) find the intersection of the lines or show they are skew;</p>
-<p>(b) find the shortest distance between the lines;</p>
-<p>(c) find the distance between the point with position vector <span class="math notranslate nohighlight">\(\mathbf{p} = (0, -1, 3)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\ell_1\)</span>.</p>
-</section>
-</div>
-<div class="solution dropdown admonition" id="pages/4.4_Coordinate_geometry_exercises-solution-7">
-
-<p class="admonition-title">Solution to<a class="reference internal" href="#geometry-ex-line-point-distance"> Exercise 4.4</a></p>
-<section id="solution-content">
-<p>(a) Equating <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> and attempting to solve for <span class="math notranslate nohighlight">\(t\)</span></p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    1 + 2t_1 &amp;= 1 + 2t_2 \\
-    -t_1 &amp;= 4 \\
-    1 + 3t_1 &amp;= 7 - t_2
-\end{align*} \end{split}\]</div>
-<p>From the second equation <span class="math notranslate nohighlight">\(t_1 = -4\)</span> which when substituted into the third equation gives <span class="math notranslate nohighlight">\(t_2 = 18\)</span>. Substituting these into the first equation gives <span class="math notranslate nohighlight">\(-7 = 37\)</span> which is a contradiction so <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> do not intersect.</p>
-<p>We also need to show that they are not parallel, i.e., there is no value <span class="math notranslate nohighlight">\(k\)</span> such that <span class="math notranslate nohighlight">\(\mathbf{d}_1 = k \mathbf{d}_2\)</span>. The direction vectors for <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> are <span class="math notranslate nohighlight">\(\mathbf{d}_1 = (2, -1, 3)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}_2 = (2, 0, -1)\)</span> so</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix} &amp;= k \begin{pmatrix} 2 \\ 0 \\ -1 \end{pmatrix}, \end{split}\]</div>
-<p>which gives the system</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    2 &amp;= 2k ,\\
-    -1 &amp;= 0, \\
-    3 &amp;= -k.
-\end{align*} \end{split}\]</div>
-<p>The second equation is a contradiction so <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> are not parallel, and since they do not intersect then they must be skew.</p>
-<p>(b) The direction vectors for lines <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> are <span class="math notranslate nohighlight">\(\mathbf{d}_1 = (2, -1, 3)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}_2 = (2, -, -1)^\mathsf{T}\)</span> respectively. Calculating a vector perpendicular to both <span class="math notranslate nohighlight">\(\mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}_2\)</span></p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    \mathbf{n} &amp;= \mathbf{d}_1 \times \mathbf{d_1} = \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix} \times
-    \begin{pmatrix} 2 \\ 0 \\ -1 \end{pmatrix} =
-    \begin{vmatrix}
-        \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
-        2 &amp; -1 &amp; 3 \\
-        2 &amp; 0 &amp; -1 
-    \end{vmatrix} = 
-    \begin{pmatrix} 1 \\ 8 \\ 2 \end{pmatrix}, \\
-\end{align*} \end{split}\]</div>
-<p>and normalising gives</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    \hat{\mathbf{n}} = \frac{\mathbf{n}}{|\mathbf{n}|} = \frac{1}{\sqrt{69}} 
-    \begin{pmatrix} 1 \\ 8 \\ 2 \end{pmatrix} =
-    \begin{pmatrix} \frac{\sqrt{69}}{69} \\ \frac{8\sqrt{69}}{69} \\ \frac{2\sqrt{69}}{69} \end{pmatrix}.
-\end{align*} \end{split}\]</div>
-<p>Using <a class="reference internal" href="4.3_Shortest_distance_problems.html#line-line-distance-theorem">the distance between two lines</a></p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    d &amp;= (\mathbf{p}_2 - \mathbf{p}_1) \cdot \hat{\mathbf{n}} \\
-    &amp;= \left( \begin{pmatrix} 1 \\ 4 \\ 7 \end{pmatrix} -
-    \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} \right) \cdot
-    \begin{pmatrix} \frac{\sqrt{69}}{69} \\ \frac{8\sqrt{69}}{69} \\ \frac{2\sqrt{69}}{69} \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 0 \\ 4 \\ 6 \end{pmatrix} \cdot
-    \begin{pmatrix} \frac{\sqrt{69}}{69} \\ \frac{8\sqrt{69}}{69} \\ \frac{2\sqrt{69}}{69} \end{pmatrix} \\
-    &amp;= \frac{44\sqrt{69}}{69}.
-\end{align*} \end{split}\]</div>
-<p>(c) Using the <a class="reference internal" href="4.3_Shortest_distance_problems.html#point-line-distance-theorem">shortest distance between a point and a line</a></p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    t &amp;= \frac{(\mathbf{p} - \mathbf{p}_1)\cdot \mathbf{d}_1}{\mathbf{d}_1 \cdot \mathbf{d}_1} = \frac{ 
-    \left( \begin{pmatrix} 0 \\ -1 \\ 3 \end{pmatrix} -
-    \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} \right) \cdot
-    \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix}}{
-        \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix} \cdot
-        \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix}
-    } 
-    = \frac{5}{14}, \\
-    \therefore \mathbf{r} &amp;= \mathbf{p}_1 + t\mathbf{d}_1 = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} + \frac{5}{14} 
-    \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix} = 
-    \begin{pmatrix} \frac{12}{7} \\ - \frac{5}{14} \\ \frac{29}{14} \end{pmatrix}, \\
-    \overrightarrow{\mathbf{rp}} &amp;= \begin{pmatrix} 0 \\ -1 \\ 3 \end{pmatrix} - 
-    \begin{pmatrix} \frac{12}{7} \\ -\frac{5}{14} \\ \frac{29}{14} \end{pmatrix} =
-    \begin{pmatrix} -\frac{12}{7} \\ -\frac{9}{14} \\ \frac{13}{14} \end{pmatrix}, \\
-    \therefore d &amp;= |\overrightarrow{\mathbf{rp}}| = 
-    \sqrt{\left(-\frac{12}{7}\right)^2 + \left(-\frac{9}{14}\right)^2 + \left(\frac{13}{14}\right)^2} 
-    = \frac{\sqrt{826}}{14}.
-\end{align*} \end{split}\]</div>
+<p>Find the equation of the plane that passes through the point with position vector <span class="math notranslate nohighlight">\((3, 2, 5)^\mathsf{T}\)</span> which has a normal vector <span class="math notranslate nohighlight">\(\vec{n} = (2, 1, 3)^\mathsf{T}\)</span>.</p>
 </section>
 </div>
 <div class="exercise admonition" id="geometry-ex-plane-1">
 
-<p class="admonition-title"><span class="caption-number">Exercise 4.5 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 4.4 </span></p>
 <section id="exercise-content">
 <p>A plane has the equation <span class="math notranslate nohighlight">\(3x - 2y + z = 10\)</span>. Identify the normal to the plane and find the co-ordinates of 2 points on the plane having <span class="math notranslate nohighlight">\(z = 2\)</span>.</p>
 </section>
 </div>
-<div class="solution dropdown admonition" id="pages/4.4_Coordinate_geometry_exercises-solution-9">
+<div class="exercise admonition" id="geometry-ex-line-point-distance">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="#geometry-ex-plane-1"> Exercise 4.5</a></p>
-<section id="solution-content">
-<p><span class="math notranslate nohighlight">\(\mathbf{n} = (3, -2, 1)\)</span>.</p>
-<p>Let <span class="math notranslate nohighlight">\(x=0\)</span> then <span class="math notranslate nohighlight">\(3(0) - 2 y + 2 = 10\)</span> so <span class="math notranslate nohighlight">\(y = -4\)</span> and a point on the plane has co-ordinates <span class="math notranslate nohighlight">\((0, -4, 2)\)</span>.</p>
-<p>Let <span class="math notranslate nohighlight">\(x = 2\)</span> then <span class="math notranslate nohighlight">\(3(2) - 2 y + 2 = 10\)</span> so <span class="math notranslate nohighlight">\(y = -1\)</span> and a point on the plane has co-ordinates <span class="math notranslate nohighlight">\((2, -1, 2)\)</span>.</p>
+<p class="admonition-title"><span class="caption-number">Exercise 4.5 </span></p>
+<section id="exercise-content">
+<p>Two lines in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> are defined by <span class="math notranslate nohighlight">\(\ell_1: (1 + 2t, -t, 1 + 3t)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\ell_2: (1 + 2t, 4, 7 - t)^\mathsf{T}\)</span> respectively.</p>
+<p>(a)   find the intersection of the lines or show they are skew;</p>
+<p>(b)   find the distance between the point with position vector <span class="math notranslate nohighlight">\(\vec{p} = (0, -1, 3)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\ell_1\)</span>.</p>
+<p>(c)   find the shortest distance between the lines;</p>
 </section>
 </div>
 <div class="exercise admonition" id="geometry-ex-line-plane-intersection">
@@ -616,74 +437,15 @@ document.write(`
 <p>Find the point where the line <span class="math notranslate nohighlight">\(\ell:(1 + 2t, 2 + t, -1 + 4t)^\mathsf{T}\)</span> meets the plane <span class="math notranslate nohighlight">\(6x - y - 4z = 3\)</span>.</p>
 </section>
 </div>
-<div class="solution dropdown admonition" id="pages/4.4_Coordinate_geometry_exercises-solution-11">
-
-<p class="admonition-title">Solution to<a class="reference internal" href="#geometry-ex-line-plane-intersection"> Exercise 4.6</a></p>
-<section id="solution-content">
-<p>First we need to find the position vector of a point, <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> say, that lies on the plane. Let <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(y=1\)</span> then <span class="math notranslate nohighlight">\(z=-1\)</span> so we know that <span class="math notranslate nohighlight">\(\mathbf{r} = (0, 1, -1)^\mathsf{T}\)</span> lies on the plane. Using the <a class="reference internal" href="4.2_Planes.html#point-normal-definition">point normal definition of a plane</a></p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    \mathbf{n} \cdot \begin{pmatrix} x - x_0 \\ y - y_0 \\ z - z_0 \end{pmatrix} &amp;= 0 \\
-    \begin{pmatrix} 6 \\ -1 \\ -4 \end{pmatrix} \cdot
-    \begin{pmatrix} 0 - (1 + 2 t) \\ 1 - (2 + t) \\ -1 - (-1 + 4 t) \end{pmatrix} &amp;= 0 \\
-    \begin{pmatrix} 6 \\ -1 \\ -4 \end{pmatrix} \cdot
-    \begin{pmatrix} - 1 - 2 t \\ -1 - t \\  -4 t \end{pmatrix} &amp;= 0 \\
-    -6 - 12 t + 1 + t + 16 t &amp;= 0 \\
-    5 t - 5 &amp;= 0 \\
-    \therefore t = 1.
-\end{align*} \end{split}\]</div>
-<p>So the line intersects with the plane at</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    \mathbf{p} + t \mathbf{d} = 
-    \begin{pmatrix} 1 \\ 2 \\ -1 \end{pmatrix} + 
-    \begin{pmatrix} 2 \\ 1 \\ 4 \end{pmatrix} =
-    \begin{pmatrix} 3 \\ 3 \\ 3 \end{pmatrix}.
-\end{align*} \end{split}\]</div>
-</section>
-</div>
 <div class="exercise admonition" id="geometry-ex-point-plane-distance">
 
 <p class="admonition-title"><span class="caption-number">Exercise 4.7 </span></p>
 <section id="exercise-content">
-<p>Consider the diagram below that shows a plane that passes through the point <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> and has normal vector <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> and the point with position <span class="math notranslate nohighlight">\(\mathbf{q}\)</span> not on the plane.</p>
+<p>Consider the diagram below that shows a plane that passes through the point <span class="math notranslate nohighlight">\(\vec{p}\)</span> and has normal vector <span class="math notranslate nohighlight">\(\vec{n}\)</span> and the point with position <span class="math notranslate nohighlight">\(\vec{q}\)</span> not on the plane.</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/point_plane_distance.svg"><img alt="../_images/point_plane_distance.svg" src="../_images/point_plane_distance.svg" width="350" /></a>
+<a class="reference internal image-reference" href="../_images/4_point_plane_distance.svg"><img alt="../_images/4_point_plane_distance.svg" src="../_images/4_point_plane_distance.svg" width="350" /></a>
 </figure>
-<p>Using the <a class="reference internal" href="3.3_Vector_products.html#dot-product-definition">geometric definition of a dot product</a> derive an expression for calculating the shortest distance between a point and a plane. Use your expression to find the shortest distance from the point with position vector <span class="math notranslate nohighlight">\((2, 4, -3)^\mathsf{T}\)</span> to the plane <span class="math notranslate nohighlight">\(6x - y - 4z = 3\)</span>.</p>
-</section>
-</div>
-<div class="solution dropdown admonition" id="pages/4.4_Coordinate_geometry_exercises-solution-13">
-
-<p class="admonition-title">Solution to<a class="reference internal" href="#geometry-ex-point-plane-distance"> Exercise 4.7</a></p>
-<section id="solution-content">
-<p>Using the <a class="reference internal" href="3.3_Vector_products.html#dot-product-definition">geometric definition of a dot product</a></p>
-<div class="math notranslate nohighlight">
-\[ \begin{align*}
-    (\mathbf{q} - \mathbf{p})\cdot \mathbf{n} &amp;= |\mathbf{n}||\mathbf{q} - \mathbf{p}| \cos(\theta).
-\end{align*} \]</div>
-<p>Since <span class="math notranslate nohighlight">\(d\)</span> is the length of the adjacent side of the right-angled triangle then</p>
-<div class="math notranslate nohighlight">
-\[ \begin{align*}
-    \cos(\theta) &amp;= \frac{d}{|\mathbf{q} - \mathbf{p}|},
-\end{align*} \]</div>
-<p>so</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    (\mathbf{q} - \mathbf{p}) \cdot \mathbf{n} &amp;= |\mathbf{n}| |\mathbf{q} - \mathbf{p}| \frac{d}{|\mathbf{q} - \mathbf{p}|} \\
-    \therefore d &amp;= (\mathbf{q} - \mathbf{p})\cdot \frac{\mathbf{n}}{|\mathbf{n}|}.
-\end{align*} \end{split}\]</div>
-<p>The equation of the plane is <span class="math notranslate nohighlight">\(6 x-y-4 z=3\)</span> so letting <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(y=1\)</span> then <span class="math notranslate nohighlight">\(z = 1\)</span> so we know that <span class="math notranslate nohighlight">\(\mathbf{p} = (0, 1, -1)\)</span> lies on the plane. Since <span class="math notranslate nohighlight">\(\mathbf{q} = (2, 4, -3)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{n} = (6, -1, -4)^\mathsf{T}\)</span> then applying the above formula gives</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    d &amp;= \left( \begin{pmatrix} 2 \\ 4 \\ -3 \end{pmatrix} -
-    \begin{pmatrix} 0 \\ 1 \\ -1 \end{pmatrix} \right) \cdot 
-    \begin{pmatrix} 6 \\ -1 \\ -4 \end{pmatrix} / \left|
-    \begin{pmatrix} 6 \\ -1 \\ -4 \end{pmatrix} \right| \\
-    &amp;= \begin{pmatrix} 2 \\ 3 \\ -2 \end{pmatrix} \cdot \frac{1}{\sqrt{53}} 
-    \begin{pmatrix} 6 \\ -1 \\ -4 \end{pmatrix} \\
-    &amp;= \frac{12 - 3 + 8}{\sqrt{53}} = \frac{17}{\sqrt{53}}
-\end{align*} \end{split}\]</div>
+<p>Using the <a class="reference internal" href="3.3_Dot_and_cross_products.html#dot-product-definition">geometric definition of a dot product</a> derive an expression for calculating the shortest distance between a point and a plane. Use your expression to find the shortest distance from the point with position vector <span class="math notranslate nohighlight">\((2, 4, -3)^\mathsf{T}\)</span> to the plane <span class="math notranslate nohighlight">\(6x - y - 4z = 3\)</span>.</p>
 </section>
 </div>
 </section>

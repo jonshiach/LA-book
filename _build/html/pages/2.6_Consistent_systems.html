@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'pages/2.6_Consistent_systems';</script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/2.6_Consistent_systems.html" />
@@ -177,7 +177,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="1.3_Determinants.html">1.5. Determinants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.4_Inverse_matrix.html">1.6. Inverse matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.5_Matrix_algebra.html">1.7. Matrix algebra</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.9_Matrices_exercises.html">1.8. Matrices exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.6_Matrices_exercises.html">1.8. Matrices Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
@@ -188,22 +188,22 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.6. Gauss-Jordan elimination</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">2.7. Consistent, inconsistent and indeterminate systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.8. Homogeneous systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.9. Systems of linear equations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8_Linear_systems_exercises.html">2.9. Systems of Linear Equations Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.5_Vectors_exercises.html">3.8. Vectors Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="4.0_Coordinate_geometry.html">4. Co-ordinate Geometry</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="4.1_Lines.html">4.2. Lines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.2_Planes.html">4.3. Planes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.3_Shortest_distance_problems.html">4.4. Shortest distance problems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate geometry exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate Geometry Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -220,6 +220,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.7. Transformations exercises</a></li>
 </ul>
 </li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercises Solutions</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -408,7 +415,7 @@ document.write(`
 \end{align*} \end{split}\]</div>
 <p>The lines for these two equations have been plotted in <a class="reference internal" href="#consistent-system-plot"><span class="std std-numref">Fig. 2.4</span></a> below.</p>
 <figure class="align-default" id="consistent-system-plot" style="width: 500px">
-<img alt="../_images/dc25a46d14fcde655bd66b52c76ffada486b639ad90224a7fd29ab4c3fd64c57.png" src="../_images/dc25a46d14fcde655bd66b52c76ffada486b639ad90224a7fd29ab4c3fd64c57.png" />
+<img alt="../_images/fa82d989b3d05301f6307207e2bd705bf3484040b797935cf19d609b041967fc.png" src="../_images/fa82d989b3d05301f6307207e2bd705bf3484040b797935cf19d609b041967fc.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Plots of the lines <span class="math notranslate nohighlight">\(x_1 + x_2 = 3\)</span> and <span class="math notranslate nohighlight">\(x_1 - x_2 = .1\)</span></span><a class="headerlink" href="#consistent-system-plot" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -421,7 +428,7 @@ document.write(`
         1 &amp; 1 &amp; 3
     \end{array} \right)
     \begin{array}{l} \\ R_2 - R_1 \end{array}
-    \quad \longrightarrow  \quad &amp;
+    \longrightarrow  &amp;
     \left( \begin{array}{cc|c}
         1 &amp; -1 &amp; 1 \\
         0 &amp; 2 &amp; 2
@@ -431,7 +438,7 @@ document.write(`
 <div class="proof theorem admonition" id="consistent-system-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 2.4 </span> (Consistent systems)</p>
 <section class="theorem-content" id="proof-content">
-<p>A system of linear equations <span class="math notranslate nohighlight">\(A\mathbf{x} = \mathbf{b}\)</span> is consistent if <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = \operatorname{rank}(A \mid \mathbf{b})\)</span>.</p>
+<p>A system of linear equations <span class="math notranslate nohighlight">\(A\vec{x} = \vec{b}\)</span> is consistent if <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = \operatorname{rank}(A \mid \vec{b})\)</span>.</p>
 </section>
 </div></section>
 <section id="inconsistent-systems">
@@ -444,7 +451,7 @@ document.write(`
 \end{align*} \end{split}\]</div>
 <p>The lines for these two equations have been plotted in <a class="reference internal" href="#inconsistent-system-plot"><span class="std std-numref">Fig. 2.5</span></a> below.</p>
 <figure class="align-default" id="inconsistent-system-plot" style="width: 500px">
-<img alt="../_images/56350ddfb6b90bc3d32ec258e4f1351331461d22e7d5912d6103a6a71ca4f0c7.png" src="../_images/56350ddfb6b90bc3d32ec258e4f1351331461d22e7d5912d6103a6a71ca4f0c7.png" />
+<img alt="../_images/3e14b888f6629bbe52c81ce740c559d93cb7cea83e20d0e032f415b0d5f1f462.png" src="../_images/3e14b888f6629bbe52c81ce740c559d93cb7cea83e20d0e032f415b0d5f1f462.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Plots of the lines <span class="math notranslate nohighlight">\(x_1 - x_2 = 1\)</span> and <span class="math notranslate nohighlight">\(x_1 - x_2 = -1\)</span>.</span><a class="headerlink" href="#inconsistent-system-plot" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -457,7 +464,7 @@ document.write(`
         1 &amp; -1 &amp; -1
     \end{array} \right)
     \begin{array}{l} \\ R_2 - R_1 \end{array} &amp;
-    \longrightarrow \quad &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{cc|c}
         1 &amp; -1 &amp; 1 \\
         0 &amp; 0 &amp; -2
@@ -467,7 +474,7 @@ document.write(`
 <div class="proof theorem admonition" id="inconsistent-system-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 2.5 </span> (Inconsistent systems)</p>
 <section class="theorem-content" id="proof-content">
-<p>A system of linear equations is inconsistent if <span class="math notranslate nohighlight">\(A\mathbf{x} = \mathbf{b}\)</span> is inconsistent if <span class="math notranslate nohighlight">\(\operatorname{rank}(A) &lt; \operatorname{rank}(A \mid \mathbf{b})\)</span>.</p>
+<p>A system of linear equations is inconsistent if <span class="math notranslate nohighlight">\(A\vec{x} = \vec{b}\)</span> is inconsistent if <span class="math notranslate nohighlight">\(\operatorname{rank}(A) &lt; \operatorname{rank}(A \mid \vec{b})\)</span>.</p>
 </section>
 </div></section>
 <section id="indeterminate-systems">
@@ -480,7 +487,7 @@ document.write(`
 \end{align*} \end{split}\]</div>
 <p>The lines for these two equations have been plotted in <a class="reference internal" href="#indeterminate-system-plot"><span class="std std-numref">Fig. 2.6</span></a> below.</p>
 <figure class="align-default" id="indeterminate-system-plot" style="width: 500px">
-<img alt="../_images/18557376999e7201abe378b17c21bc3def078f168e76534747a14ea04e514da3.png" src="../_images/18557376999e7201abe378b17c21bc3def078f168e76534747a14ea04e514da3.png" />
+<img alt="../_images/f37a82331b0c1f21d77bc4989b59fb74bdb82a61765bdbd8bf7ab8ff18b09c90.png" src="../_images/f37a82331b0c1f21d77bc4989b59fb74bdb82a61765bdbd8bf7ab8ff18b09c90.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 2.6 </span><span class="caption-text">Plots of the lines <span class="math notranslate nohighlight">\(x_1 - x_2 = 1\)</span> and <span class="math notranslate nohighlight">\(2x_1 - 2x_2 = 2\)</span>.</span><a class="headerlink" href="#indeterminate-system-plot" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -503,12 +510,13 @@ document.write(`
 <div class="proof theorem admonition" id="indeterminate-system-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 2.6 </span> (indeterminate systems)</p>
 <section class="theorem-content" id="proof-content">
-<p>A system of linear equations with <span class="math notranslate nohighlight">\(n\)</span> unknowns <span class="math notranslate nohighlight">\(A\mathbf{x} = \mathbf{b}\)</span> is indeterminate if <span class="math notranslate nohighlight">\(\operatorname{rank}(A) &lt; n\)</span>.</p>
+<p>A system of linear equations with <span class="math notranslate nohighlight">\(n\)</span> unknowns <span class="math notranslate nohighlight">\(A\vec{x} = \vec{b}\)</span> is indeterminate if <span class="math notranslate nohighlight">\(\operatorname{rank}(A) &lt; n\)</span>.</p>
 </section>
 </div><p>If we have an indeterminate system, the variables that correspond to columns in coefficient matrix without pivots (i.e., we cannot solve for these variables) are called <strong>free variables</strong>. We express the solution of indeterminate systems by assigning a parameter (<span class="math notranslate nohighlight">\(s\)</span>, <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(r\)</span> etc.) to the free variables and proceed is normal. For example, in our system <span class="math notranslate nohighlight">\(x_2\)</span> is a free variable so let <span class="math notranslate nohighlight">\(x_2 = r\)</span> where <span class="math notranslate nohighlight">\(r \in \mathbb{R}\)</span> and</p>
 <div class="math notranslate nohighlight">
 \[ x_1 - r = 1, \]</div>
 <p>so the solution is <span class="math notranslate nohighlight">\(x_1 = 1 + r\)</span> and <span class="math notranslate nohighlight">\(x_2 = r\)</span>. Choosing any value of <span class="math notranslate nohighlight">\(r\)</span> gives a solution to the system. For example, if <span class="math notranslate nohighlight">\(r=1\)</span> then <span class="math notranslate nohighlight">\(x_1 = 2\)</span> and <span class="math notranslate nohighlight">\(x_2 = 1\)</span>. Alternatively if <span class="math notranslate nohighlight">\(r = -1\)</span> then <span class="math notranslate nohighlight">\(x_1 = 0\)</span> and <span class="math notranslate nohighlight">\(x_2 = -1\)</span>.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-WUEheyo32U?si=ziLlqBPEcWcaG6O0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <div class="proof example admonition" id="rank-example">
 <p class="admonition-title"><span class="caption-number">Example 2.7 </span></p>
 <section class="example-content" id="proof-content">
@@ -520,7 +528,7 @@ document.write(`
 \end{array}\)</span>;</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -532,29 +540,29 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
         1 &amp; -1 &amp; 2 &amp; 3 \\
         2 &amp; -3 &amp; 7 &amp; 4
     \end{array} \right)
-    \begin{array}{l} R_1 \leftrightarrow R_2 \\ \phantom{x} \\ \phantom{x} \end{array} \\[1em]
-    \longrightarrow \quad &amp;
+    \begin{array}{l} R_1 \leftrightarrow R_2 \\ \phantom{x} \\ \phantom{x} \end{array} &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
         1 &amp; -1 &amp; 2 &amp; 3 \\
         3 &amp; 1 &amp; -2 &amp; 1 \\
         2 &amp; -3 &amp; 7 &amp; 4
     \end{array} \right)
-    \begin{array}{l} \\ R_2 - 3R_1 \\ R_3 - 2R_1 \end{array} \\[1em]
-    \longrightarrow \quad &amp;
+    \begin{array}{l} \\ R_2 - 3R_1 \\ R_3 - 2R_1 \end{array} \\ \\
+    \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
         1 &amp; -1 &amp; 2 &amp; 3 \\
         0 &amp; 4 &amp; -8 &amp; -8 \\
         0 &amp; -1 &amp; 3 &amp; -2
     \end{array} \right)
-    \begin{array}{l} \\ \\ R_3 + \frac{1}{4}R_2 \end{array} \\[1em]
-    \longrightarrow \quad &amp;
+    \begin{array}{l} \\ \\ R_3 + \frac{1}{4}R_2 \end{array} &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
         1 &amp; -1 &amp; 2 &amp; 3 \\
         0 &amp; 4 &amp; -8 &amp; -8 \\
         0 &amp; 0 &amp; 1 &amp; -4
     \end{array} \right)
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">The augmented matrix is now in reduced row echelon form. Since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = \operatorname{rank}(A \mid \mathbf{b}) = 3\)</span> then this is a consistent system by the <a class="reference internal" href="#consistent-system-theorem">theorem for consistent systems</a>. Using back substitution the solution is <span class="math notranslate nohighlight">\(x_1 = 1\)</span>, <span class="math notranslate nohighlight">\(x_2 = -10\)</span> and <span class="math notranslate nohighlight">\(x_3 = -4\)</span>.</p>
+<p class="sd-card-text">The augmented matrix is now in reduced row echelon form. Since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = \operatorname{rank}(A \mid \vec{b}) = 3\)</span> then this is a consistent system by the <a class="reference internal" href="#consistent-system-theorem">theorem for consistent systems</a>. Using back substitution the solution is <span class="math notranslate nohighlight">\(x_1 = 1\)</span>, <span class="math notranslate nohighlight">\(x_2 = -10\)</span> and <span class="math notranslate nohighlight">\(x_3 = -4\)</span>.</p>
 </div>
 </details><p>(ii)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
     x_1 - x_2 + 2x_3  \!\!\!\! &amp;= 3, \\
@@ -563,7 +571,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 \end{array}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -575,22 +583,22 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
         2 &amp; -3 &amp; 7 &amp; 4 \\
         -1 &amp; 3 &amp; -8 &amp; 1 
     \end{array} \right)
-    \begin{array}{l} \\ R_2 - 2R_1 \\ R_3 + R_1 \end{array} \\[1em]
-    \longrightarrow \quad &amp;
+    \begin{array}{l} \\ R_2 - 2R_1 \\ R_3 + R_1 \end{array} &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
         1 &amp; -1 &amp; 2 &amp; 3 \\
         0 &amp; -1 &amp; 3 &amp; -2 \\
         0 &amp; 2 &amp; -6 &amp; 4 
     \end{array} \right)
-    \begin{array}{l} \\ \\ R_3 + 2R_2  \end{array} \\[1em]
-    \longrightarrow \quad &amp;
+    \begin{array}{l} \\ \\ R_3 + 2R_2  \end{array} \\ \\
+    \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
         1 &amp; -1 &amp; 2 &amp; 3 \\
         0 &amp; -1 &amp; 3 &amp; -2 \\
         0 &amp; 0 &amp; 0 &amp; 0
     \end{array} \right)
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">The augmented matrix is now in reduced row echelon form. Since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = \operatorname{rank}(A \mid \mathbf{b}) = 2\)</span> then this is a consistent system by the <a class="reference internal" href="#consistent-system-theorem">theorem for consistent systems</a>. Furthermore, since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) \)</span> is less that the number of unknowns then this is an indeterminate system by the <a class="reference internal" href="#indeterminate-system-theorem">theorem for indeterminate systems</a>. Let <span class="math notranslate nohighlight">\(x_3 = r\)</span> then using back substitution we have <span class="math notranslate nohighlight">\(x_1 = 5 + r\)</span> and <span class="math notranslate nohighlight">\(x_2 = 2 + 3r\)</span>.</p>
+<p class="sd-card-text">The augmented matrix is now in reduced row echelon form. Since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = \operatorname{rank}(A \mid \vec{b}) = 2\)</span> then this is a consistent system by the <a class="reference internal" href="#consistent-system-theorem">theorem for consistent systems</a>. Furthermore, since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) \)</span> is less that the number of unknowns then this is an indeterminate system by the <a class="reference internal" href="#indeterminate-system-theorem">theorem for indeterminate systems</a>. Let <span class="math notranslate nohighlight">\(x_3 = r\)</span> then using back substitution we have <span class="math notranslate nohighlight">\(x_1 = 5 + r\)</span> and <span class="math notranslate nohighlight">\(x_2 = 2 + 3r\)</span>.</p>
 </div>
 </details><p>(iii)    <span class="math notranslate nohighlight">\(\begin{array}{rcl}
     x_1 + x_2 - 2x_3  \!\!\!\! &amp;= 1, \\
@@ -599,7 +607,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 \end{array}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -611,22 +619,22 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
         2 &amp; -1 &amp; 1 &amp; 9 \\
         1 &amp; 4 &amp; -7 &amp; 2 
     \end{array} \right) 
-    \begin{array}{l} \\ R_2 - 2R_1 \\ R_3 - R_1 \end{array} \\ \\
-    \longrightarrow \quad &amp;
+    \begin{array}{l} \\ R_2 - 2R_1 \\ R_3 - R_1 \end{array} &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
         1 &amp; 1 &amp; -2 &amp; 1 \\
         0 &amp; -3 &amp; 5 &amp; 7 \\
         0 &amp; 3 &amp; -5 &amp; 1 
     \end{array} \right)
     \begin{array}{l} \\ \\ R_3 + R_2 \end{array} \\ \\
-    \longrightarrow \quad &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
         1 &amp; 1 &amp; -2 &amp; 1 \\
         0 &amp; -3 &amp; 5 &amp; 7 \\
         0 &amp; 0 &amp; 0 &amp; 8
     \end{array} \right)
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">The augmented matrix is now in reduced row echelon form and <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = 2\)</span> and <span class="math notranslate nohighlight">\(\operatorname{rank}(A \mid \mathbf{b}) = 3\)</span>. Since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) &lt; \operatorname{rank}(A \mid \mathbf{b})\)</span> then this is an inconsistent system by the <a class="reference internal" href="#inconsistent-system-theorem">theorem for inconsistent systems</a> and does not have a solution.</p>
+<p class="sd-card-text">The augmented matrix is now in reduced row echelon form and <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = 2\)</span> and <span class="math notranslate nohighlight">\(\operatorname{rank}(A \mid \vec{b}) = 3\)</span>. Since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) &lt; \operatorname{rank}(A \mid \vec{b})\)</span> then this is an inconsistent system by the <a class="reference internal" href="#inconsistent-system-theorem">theorem for inconsistent systems</a> and does not have a solution.</p>
 </div>
 </details></section>
 </div></section>

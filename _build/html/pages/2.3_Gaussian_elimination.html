@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'pages/2.3_Gaussian_elimination';</script>
     <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/2.3_Gaussian_elimination.html" />
@@ -177,7 +177,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="1.3_Determinants.html">1.5. Determinants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.4_Inverse_matrix.html">1.6. Inverse matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.5_Matrix_algebra.html">1.7. Matrix algebra</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.9_Matrices_exercises.html">1.8. Matrices exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.6_Matrices_exercises.html">1.8. Matrices Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
@@ -188,22 +188,22 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.6. Gauss-Jordan elimination</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.7. Consistent, inconsistent and indeterminate systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.8. Homogeneous systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.9. Systems of linear equations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8_Linear_systems_exercises.html">2.9. Systems of Linear Equations Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Vector_products.html">3.6. Dot and cross products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.7_Vectors_exercises.html">3.8. Vectors exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.5_Vectors_exercises.html">3.8. Vectors Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="4.0_Coordinate_geometry.html">4. Co-ordinate Geometry</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="4.1_Lines.html">4.2. Lines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.2_Planes.html">4.3. Planes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.3_Shortest_distance_problems.html">4.4. Shortest distance problems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate geometry exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate Geometry Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -220,6 +220,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.7. Transformations exercises</a></li>
 </ul>
 </li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercises Solutions</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -444,13 +451,13 @@ document.write(`
 </ul>
 </section>
 </div><p>In the solution to the linear system of equations shown above we used a type I row operation in step 1, a type II row operation in step 3 and type III row operations in steps 2 and 4.</p>
-<p>We can represent the linear system using matrices for convenience. We begin by expressing the linear system using an augmented matrix consisting of the concatenation of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> so any EROs that are applied to the augmented matrix are applied to the coefficients and the constant terms at the same time.</p>
+<p>We can represent the linear system using matrices for convenience. We begin by expressing the linear system using an augmented matrix consisting of the concatenation of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(\vec{x}\)</span> so any EROs that are applied to the augmented matrix are applied to the coefficients and the constant terms at the same time.</p>
 <div class="proof definition admonition" id="augmented-matrix-definition">
 <span id="index-2"></span><p class="admonition-title"><span class="caption-number">Definition 2.3 </span> (Augmented matrix)</p>
 <section class="definition-content" id="proof-content">
-<p>The <strong>augmented matrix</strong> is a representation of a system of linear equations <span class="math notranslate nohighlight">\(A\mathbf{x}=\mathbf{b}\)</span> such that the <span class="math notranslate nohighlight">\(m\times n\)</span> coefficient matrix <span class="math notranslate nohighlight">\(A\)</span> and right-hand side constant vector <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> are combined into a single <span class="math notranslate nohighlight">\(m\times (n+1)\)</span> matrix <span class="math notranslate nohighlight">\((A \mid \mathbf{b})\)</span>.</p>
+<p>The <strong>augmented matrix</strong> is a representation of a system of linear equations <span class="math notranslate nohighlight">\(A\vec{x}=\vec{b}\)</span> such that the <span class="math notranslate nohighlight">\(m\times n\)</span> coefficient matrix <span class="math notranslate nohighlight">\(A\)</span> and right-hand side constant vector <span class="math notranslate nohighlight">\(\vec{b}\)</span> are combined into a single <span class="math notranslate nohighlight">\(m\times (n+1)\)</span> matrix <span class="math notranslate nohighlight">\((A \mid \vec{b})\)</span>.</p>
 </section>
-</div><p>When writing the augmented matrix we often draw a partition separating <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> (although this is not strictly necessary), i.e.,</p>
+</div><p>When writing the augmented matrix we often draw a partition separating <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span> (although this is not strictly necessary), i.e.,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \left(
 \begin{array}{cccc|c}
@@ -587,29 +594,29 @@ document.write(`
         1 &amp; -1 &amp; 2 &amp; 3 \\
         2 &amp; -3 &amp; 7 &amp; 4
     \end{array} \right)
-    \begin{array}{l} R_1 \leftrightarrow R_2 \\ \phantom{x} \\ \phantom{x} \end{array} \\ \\
-    \longrightarrow \quad &amp;
+    \begin{array}{l} R_1 \leftrightarrow R_2 \\ \phantom{x} \\ \phantom{x} \end{array} &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
         1 &amp; -1 &amp; 2 &amp; 3 \\
         3 &amp; 1 &amp; -2 &amp; 1 \\
         2 &amp; -3 &amp; 7 &amp; 4
     \end{array} \right) 
     \begin{array}{l} \\ R_2 - 3 R_1 \\ R_3 - 2 R_1 \end{array} \\ \\
-    \longrightarrow \quad &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
         1 &amp; -1 &amp; 2 &amp; 3 \\
         0 &amp; 4 &amp; -8 &amp; -8 \\
         0 &amp; -1 &amp; 3 &amp; -2
     \end{array} \right) 
-    \begin{array}{l} \\ \dfrac{1}{4}R_2 \\ \phantom{x} \end{array}  \\ \\
-    \longrightarrow \quad &amp;
+    \begin{array}{l} \\ \dfrac{1}{4}R_2 \\ \phantom{x} \end{array}  &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
         1 &amp; -1 &amp; 2 &amp; 3 \\
         0 &amp; 1 &amp; -2 &amp; -2 \\
         0 &amp; -1 &amp; 3 &amp; -2
     \end{array} \right) 
     \begin{array}{l} \\ \\ R_3 + R_2 \end{array} \\ \\
-    \longrightarrow \quad &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
         1 &amp; -1 &amp; 2 &amp; 3 \\
         0 &amp; 1 &amp; -2 &amp; -2 \\
@@ -638,7 +645,8 @@ document.write(`
 <li><p>Return <span class="math notranslate nohighlight">\(A\)</span></p></li>
 </ul>
 </section>
-</div><div class="proof example admonition" id="ge-example">
+</div><iframe width="560" height="315" src="https://www.youtube.com/embed/iBp-ZUE-G4w?si=SWn6VXnJTyFlNhJ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="proof example admonition" id="ge-example">
 <p class="admonition-title"><span class="caption-number">Example 2.3 </span></p>
 <section class="example-content" id="proof-content">
 <p>Use Gaussian-elimination to solve the following systems of linear equations:</p>
@@ -648,7 +656,7 @@ document.write(`
     \end{align*} \)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -657,7 +665,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 \[\begin{split} \begin{align*}
     &amp; \left( \begin{array}{cc|c} 1 &amp; 2 &amp; 7 \\ 3 &amp; -4 &amp; 1 \end{array} \right)
     \begin{array}{l} \\ R_2 - 3R_1 \end{array} &amp;
-    \longrightarrow \quad &amp;
+    \longrightarrow &amp;
     &amp; \left( \begin{array}{cc|c} 1 &amp; 2 &amp; 7 \\ 0 &amp; -10 &amp; -20 \end{array} \right)
 \end{align*} \end{split}\]</div>
 <p class="sd-card-text">Solving for <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span> using back substitution</p>
@@ -675,7 +683,7 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
 \end{align*}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to reveal)<div class="sd-summary-down docutils">
+Solution (click to show)<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -687,15 +695,15 @@ Solution (click to reveal)<div class="sd-summary-down docutils">
         -2 &amp; 1 &amp; 3 &amp; 3 \\
         -1 &amp; 2 &amp; 4 &amp; 5
     \end{array} \right)
-    \begin{array}{l} \\ R_2 + 2R_1 \\ R_3 + R_1 \end{array} \\ \\
-    \longrightarrow \quad &amp;
+    \begin{array}{l} \\ R_2 + 2R_1 \\ R_3 + R_1 \end{array} &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
         1 &amp; 0 &amp; 1 &amp; 3 \\
         0 &amp; 1 &amp; 5 &amp; 9 \\
         0 &amp; 2 &amp; 5 &amp; 8
     \end{array} \right)
     \begin{array}{l} \\ \\ R_3 - 2R_2 \end{array} \\ \\
-    \longrightarrow \quad &amp;
+    \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
         1 &amp; 0 &amp; 1 &amp; 3 \\
         0 &amp; 1 &amp; 5 &amp; 9 \\

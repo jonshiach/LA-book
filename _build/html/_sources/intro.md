@@ -2,11 +2,11 @@
 
 These are the lecture notes that accompany the teaching of linear algebra on the first year of the Mathematics course at the Manchester Metropolitan university. They can be accessed through a standard web browser on a computer or mobile device. Whilst these notes cover all of the material necessary for students to successfully pass the unit, it is advisable to seek out other sources of information either on the internet or textbooks. Mathematical notation can differ between authors and these notes have been written to use notation that is most commonly found online.
 
-:::::{grid} 1 1 2 3
+`````{grid} 1 1 2 3
 :class-container: text-center
 :gutter: 3
 
-::::{grid-item-card}
+````{grid-item-card}
 :link: pages/1.0_Matrices
 :link-type: doc
 :class-header: bg-light
@@ -15,11 +15,11 @@ These are the lecture notes that accompany the teaching of linear algebra on the
 Matrices
 ^^^
 
-:::{figure} /images/matrix.svg
-:::
-::::
+```{figure} /_images/0_matrix.svg
+```
+````
 
-::::{grid-item-card}
+````{grid-item-card}
 :link: pages/2.0_Linear_systems
 :link-type: doc
 :class-header: bg-light
@@ -28,11 +28,11 @@ Matrices
 Systems of Linear Equations
 ^^^
 
-:::{figure} /images/system.svg
-:::
-::::
+```{figure} /_images/0_linear_system.svg
+```
+````
 
-::::{grid-item-card}
+````{grid-item-card}
 :link: pages/3.0_Vectors
 :link-type: doc
 :class-header: bg-light
@@ -41,11 +41,11 @@ Systems of Linear Equations
 Vectors
 ^^^
 
-:::{figure} /images/dot_product.svg
-:::
-::::
+```{figure} /_images/3_dot_product.svg
+```
+````
 
-::::{grid-item-card}
+````{grid-item-card}
 :link: pages/4.0_Coordinate_geometry
 :link-type: doc
 :class-header: bg-light
@@ -54,11 +54,11 @@ Vectors
 Co-ordinate Geometry
 ^^^
 
-:::{figure} /images/line_line_distance.svg
-:::
-::::
+```{figure} /_images/4_line_line_distance.svg
+```
+````
 
-::::{grid-item-card}
+````{grid-item-card}
 :link: pages/5.0_Vector_spaces
 :link-type: doc
 :class-header: bg-light
@@ -67,11 +67,11 @@ Co-ordinate Geometry
 Vector Spaces
 ^^^
 
-:::{figure} /images/subspaces.svg
-:::
-::::
+```{figure} /_images/5_subspaces.svg
+```
+````
 
-::::{grid-item-card}
+````{grid-item-card}
 :link: pages/6.0_Linear_transformations
 :link-type: doc
 :class-header: bg-light
@@ -80,10 +80,10 @@ Vector Spaces
 Linear Transformations
 ^^^
 
-:::{figure} /images/rotation.svg
-:::
-::::
-:::::
+```{figure} /_images/6_rotation.svg
+```
+````
+`````
 
 Students are advised to read through the relevant section of the lecture notes prior to attending the lecture. Do not worry about trying to understand everything when you first read through them. Reading mathematics is not like reading a novel, it often requires repeated reading of a passage before you fully grasp the concepts that are being explained. In the lectures we will explain the various topics and provide more insight than what is written in the notes.
 
@@ -91,11 +91,11 @@ The examples and exercises contained in this book have the solutions hidden from
 
 ---
 
-:::{image} ./images/jon_Shiach.jpeg
+```{image} ./_images/jon_Shiach.jpeg
 :width: 125px
 :align: left
 :alt: Jon Shiach
-:::
+```
 
 Dr Jon Shiach <br>
 Homepage: <a href="https://jonshiach.github.io/" target="_blank">jonshiach.github.io</a> <br>

@@ -37,6 +37,10 @@ parts:
     sections:
     - glob: pages/6*
 
+- caption: "Appendices"
+  chapters:  
+  - glob: pages/A*
+
 - caption: ""
   numbered: false
   chapters:
