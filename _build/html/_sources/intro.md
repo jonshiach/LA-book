@@ -1,4 +1,4 @@
-# Linear Algebra Lecture Notes
+
 
 These are the lecture notes that accompany the teaching of linear algebra on the first year of the Mathematics course at the Manchester Metropolitan university. They can be accessed through a standard web browser on a computer or mobile device. Whilst these notes cover all of the material necessary for students to successfully pass the unit, it is advisable to seek out other sources of information either on the internet or textbooks. Mathematical notation can differ between authors and these notes have been written to use notation that is most commonly found online.
 
@@ -7,7 +7,7 @@ These are the lecture notes that accompany the teaching of linear algebra on the
 :gutter: 3
 
 ````{grid-item-card}
-:link: pages/1.0_Matrices
+:link: _pages/1.0_Matrices
 :link-type: doc
 :class-header: bg-light
 :columns: 4
@@ -20,7 +20,7 @@ Matrices
 ````
 
 ````{grid-item-card}
-:link: pages/2.0_Linear_systems
+:link: _pages/2.0_Linear_systems
 :link-type: doc
 :class-header: bg-light
 :columns: 4
@@ -28,12 +28,13 @@ Matrices
 Systems of Linear Equations
 ^^^
 
-```{figure} /_images/0_linear_system.svg
+```{figure} _images/2_consistent_systems.png
+:width: 250
 ```
 ````
 
 ````{grid-item-card}
-:link: pages/3.0_Vectors
+:link: _pages/3.0_Vectors
 :link-type: doc
 :class-header: bg-light
 :columns: 4
@@ -42,11 +43,12 @@ Vectors
 ^^^
 
 ```{figure} /_images/3_dot_product.svg
+:width: 250
 ```
 ````
 
 ````{grid-item-card}
-:link: pages/4.0_Coordinate_geometry
+:link: _pages/4.0_Coordinate_geometry
 :link-type: doc
 :class-header: bg-light
 :columns: 4
@@ -55,11 +57,12 @@ Co-ordinate Geometry
 ^^^
 
 ```{figure} /_images/4_line_line_distance.svg
+:width: 250
 ```
 ````
 
 ````{grid-item-card}
-:link: pages/5.0_Vector_spaces
+:link: _pages/5.0_Vector_spaces
 :link-type: doc
 :class-header: bg-light
 :columns: 4
@@ -68,11 +71,12 @@ Vector Spaces
 ^^^
 
 ```{figure} /_images/5_subspaces.svg
+:width: 250
 ```
 ````
 
 ````{grid-item-card}
-:link: pages/6.0_Linear_transformations
+:link: _pages/6.0_Linear_transformations
 :link-type: doc
 :class-header: bg-light
 :columns: 4
@@ -80,7 +84,8 @@ Vector Spaces
 Linear Transformations
 ^^^
 
-```{figure} /_images/6_rotation.svg
+```{figure} _images/6_linear_transformation.svg
+:width: 250
 ```
 ````
 `````
@@ -101,4 +106,4 @@ Dr Jon Shiach <br>
 Homepage: <a href="https://jonshiach.github.io/" target="_blank">jonshiach.github.io</a> <br>
 Email: <a href="mailto:j.shiach@mmu.ac.uk">j.shiach@mmu.ac.uk</a> <br>
 Tel: 0161 247 1515 <br>
-Office: E115b
+Office: 3.27 (Dalton Building)

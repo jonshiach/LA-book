@@ -4,42 +4,46 @@
 # To publish online: ghp-import -n -p -f _build/html
 
 format: jb-book
-root: intro
+root: _pages/0_intro
 parts:
 - caption: "Preliminaries"
   chapters:  
-  - glob: pages/0*
+  - glob: _pages/0.*
 
 - caption: Chapters
   numbered: true
   chapters:
-  - file: pages/1.0_Matrices
+  - file: _pages/1.0_Matrices
     sections:
-    - glob: pages/1*
+    - glob: _pages/1*
 
-  - file: pages/2.0_Linear_systems
+  - file: _pages/2.0_Linear_systems
     sections:
-    - glob: pages/2*
+    - glob: _pages/2*
 
-  - file: pages/3.0_Vectors
+  - file: _pages/3.0_Vectors
     sections:
-    - glob: pages/3*
+    - glob: _pages/3*
 
-  - file: pages/4.0_Coordinate_geometry
+  - file: _pages/4.0_Coordinate_geometry
     sections:
-    - glob: pages/4*
+    - glob: _pages/4*
 
-  - file: pages/5.0_Vector_spaces
+  - file: _pages/5.0_Vector_spaces
     sections:
-    - glob: pages/5*
+    - glob: _pages/5*
 
-  - file: pages/6.0_Linear_transformations
+  - file: _pages/6.0_Linear_transformations
     sections:
-    - glob: pages/6*
+    - glob: _pages/6*
 
 - caption: "Appendices"
   chapters:  
-  - glob: pages/A*
+  - glob: _pages/A*
+  - glob: _pages/B*
+  - glob: _pages/C*
+  - glob: _pages/D*
+  - glob: _pages/E*
 
 - caption: ""
   numbered: false

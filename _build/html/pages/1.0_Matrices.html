@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1. Matrices &#8212; Linear Algebra Lecture Notes</title>
+    <title>1. Matrices &#8212; Linear Algebra</title>
   
   
   
@@ -66,12 +66,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/1.0_Matrices';</script>
-    <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/1.0_Matrices.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = '_pages/1.0_Matrices';</script>
+    <link rel="canonical" href="https://jonshiach.github.io/LA-book/_pages/1.0_Matrices.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1.3. Matrix multiplication" href="1.1_Matrix_multiplication.html" />
+    <link rel="next" title="1.2. Arithmetic operations on matrices" href="1.1_Matrix_operations.html" />
     <link rel="prev" title="How to pass the unit" href="0.5_How_to_pass.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -138,19 +138,13 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
   
 
-<a class="navbar-brand logo" href="../intro.html">
+<a class="navbar-brand logo" href="0_intro.html">
   
   
   
   
-    
-    
-      
-    
-    
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
+    <p class="title logo__title">Linear Algebra</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -158,8 +152,8 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../intro.html">
-                    Linear Algebra Lecture Notes
+                <a class="reference internal" href="0_intro.html">
+                    <no title>
                 </a>
             </li>
         </ul>
@@ -172,23 +166,24 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">1. Matrices</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="1.1_Matrix_multiplication.html">1.3. Matrix multiplication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.2_Special_matrices.html">1.4. Special matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.3_Determinants.html">1.5. Determinants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.4_Inverse_matrix.html">1.6. Inverse matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.5_Matrix_algebra.html">1.7. Matrix algebra</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.6_Matrices_exercises.html">1.8. Matrices Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.1_Matrix_operations.html">1.2. Arithmetic operations on matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.2_Matrix_multiplication.html">1.3. Matrix multiplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.3_Special_matrices.html">1.4. Special matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.4_Determinants.html">1.5. Determinants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.5_Inverse_matrix.html">1.6. Inverse matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.6_Matrix_algebra.html">1.7. Matrix algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.7_Matrices_exercises.html">1.8. Matrices Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="2.1_Solving_using_inverse_matrix.html">2.2. Solving systems of linear equations using the inverse matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.2_Cramers_rule.html">2.3. Cramer’s rule</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3_Gaussian_elimination.html">2.4. Gaussian elimination</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.4_Partial_pivoting.html">2.5. Partial pivoting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.6. Gauss-Jordan elimination</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.7. Consistent, inconsistent and indeterminate systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.8. Homogeneous systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.8_Linear_systems_exercises.html">2.9. Systems of Linear Equations Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1_Solving_using_inverse_matrix.html">2.3. Solving systems of linear equations using the inverse matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_Cramers_rule.html">2.4. Cramer’s rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_Gaussian_elimination.html">2.5. Gaussian elimination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4_Partial_pivoting.html">2.6. Partial pivoting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.7. Gauss-Jordan elimination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.8. Consistent, inconsistent and indeterminate systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.9. Homogeneous systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8_Linear_systems_exercises.html">2.10. Systems of Linear Equations Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -207,26 +202,29 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="5.1_Subspaces.html">5.3. Subspaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5.2_Linear_dependence.html">5.4. Linear dependence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5.3_Basis.html">5.5. Basis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5.5_Vector_spaces_exercises.html">5.6. Vector spaces exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.1_Vector_spaces_definitions.html">5.1. Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.2_Subspaces.html">5.2. Subspaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.3_Linear_dependence.html">5.3. Linear dependence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.4_Basis.html">5.4. Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.5_Vector_spaces_exercises.html">5.5. Vector spaces exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="6.0_Linear_transformations.html">6. Linear Transformations</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="6.1_Composite_transformations.html">6.4. Composite linear transformations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.2_Rotation_reflection_and_translation.html">6.5. Rotation, reflection and scaling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.3_Translation.html">6.6. Translation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.7. Transformations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.1_Transformation_matrices.html">6.1. Transformation matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.2_Composite_transformations.html">6.2. Composite linear transformations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.3_Rotation_reflection_and_translation.html">6.3. Rotation, reflection and scaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.4_Translation.html">6.4. Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.5. Transformations exercises</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A_Matrices_exercises_solutions.html">A. Matrices Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B_Linear_systems_exercises_solutions.html">B. Systems of Linear Equations Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C_Vectors_exercises_solutions.html">C. Vectors Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="D_Coordinate_geometry_exercises_solutions.html">D. Co-ordinate Geometry Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="E_Vector_spaces_exercises_solutions.ipynb.html">E. Vector Spaces Exercises Solutions</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -284,7 +282,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/pages/1.0_Matrices.md" target="_blank"
+      <li><a href="../_sources/_pages/1.0_Matrices.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -377,13 +375,6 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-a-matrix">1.1. Indexing a matrix</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-operations">1.2. Matrix operations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-equality">1.2.1. Matrix equality</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-addition">1.2.2. Matrix addition</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scalar-multiplication">1.2.3. Scalar multiplication</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-transpose">1.2.4. Matrix transpose</a></li>
-</ul>
-</li>
 </ul>
             </nav>
         </div>
@@ -397,18 +388,28 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="matrices">
 <span id="matrices-chapter"></span><h1><span class="section-number">1. </span>Matrices<a class="headerlink" href="#matrices" title="Permalink to this heading">#</a></h1>
-<p id="index-0">Matrices are a set of numbers or other mathematical object that are arranged in a rectangular array. They provide us with a convenient way to represent systems of equations, sets of co-ordinates, collections of vectors and transformations. They are fundamental to the field of linear algebra which is why we are going to begin with studying them.</p>
-<p id="definition-of-a-matrix-section">A <strong>matrix</strong> (plural <strong>matrices</strong>) is a rectangular array of elements which can be numbers, mathematical expressions, symbols, or even other matrices. Matrices are arranged in rows and columns and enclosed by parentheses (or sometimes square brackets), for example</p>
+<p id="index-0">A <strong>matrix</strong> (plural <strong>matrices</strong>) is a rectangular array of elements which can be numbers, mathematical expressions, symbols, or even other matrices. Matrices are arranged in rows and columns and enclosed by parentheses, for example</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{pmatrix}
     1 &amp; 2 &amp; 3 \\
     4 &amp; 5 &amp; 6
 \end{pmatrix}.\end{split}\]</div>
-<p>This matrix contains 6 elements arranged in 2 (horizontal) rows and 3 (vertical) columns.</p>
+<p>This matrix contains 6 elements arranged in 2 (horizontal) rows and 3 (vertical) columns. Alternate representations of matrices include using square brackets or even no brackets at all (which isn’t recommended), i.e.,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    &amp;\begin{bmatrix}
+        1 &amp; 2 &amp; 3 \\
+        4 &amp; 5 &amp; 6
+    \end{bmatrix}, &amp;
+    &amp;\begin{matrix}
+        1 &amp; 2 &amp; 3 \\
+        4 &amp; 5 &amp; 6
+    \end{matrix}
+\end{align*} \end{split}\]</div>
 <div class="proof definition admonition" id="matrix-dimension-definition">
 <span id="index-1"></span><p class="admonition-title"><span class="caption-number">Definition 1.1 </span> (Dimension of a matrix)</p>
 <section class="definition-content" id="proof-content">
-<p>The dimension or size of a matrix is defined to be <strong>rows</strong> <span class="math notranslate nohighlight">\(\times\)</span> <strong>columns</strong>, where ‘rows’ is the number of horizontal rows and ‘columns’ the number of vertical columns of said matrix. If rows <span class="math notranslate nohighlight">\(=\)</span> columns we say that the matrix is a square matrix.</p>
+<p>The dimension or size of a matrix is expressed using <span class="math notranslate nohighlight">\(m \times n\)</span> where <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(n\)</span> are the number of <strong>rows</strong> and <strong>columns</strong> of the matrix respectively. If <span class="math notranslate nohighlight">\(m = n\)</span> columns we say that the matrix is a square matrix.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     &amp;\,\,\,\begin{matrix} \leftarrow &amp; \!\!\text{columns}\!\! &amp; \rightarrow \end{matrix} \\
@@ -421,14 +422,15 @@ document.write(`
     \end{pmatrix}
 \end{align*} \end{split}\]</div>
 </section>
-</div><div class="proof example admonition" id="matrix-dimension-example">
+</div><p>We will now look at our first worked example. These will be used throughout these materials to help you understand the concepts being covered. The solutions to these will be talked through in the lectures but can also be seen by clicking on the dropdown links.</p>
+<div class="proof example admonition" id="matrix-dimension-example">
 <p class="admonition-title"><span class="caption-number">Example 1.1 </span></p>
 <section class="example-content" id="proof-content">
 <p>Determine the dimensions of the following matrices:</p>
 <p>(i)   <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to show)<div class="sd-summary-down docutils">
+Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -438,32 +440,32 @@ Solution (click to show)<div class="sd-summary-down docutils">
 </details><p>(ii)   <span class="math notranslate nohighlight">\(B = \begin{pmatrix} a &amp; b \\ c &amp; d \\ e &amp; f \end{pmatrix}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to show)<div class="sd-summary-down docutils">
+Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(3\times 2\)</span></p>
 </div>
-</details><p>(iii)   <span class="math notranslate nohighlight">\(C = \begin{pmatrix} \sin(x) &amp; \ln(x) &amp; \cos(x+1) \end{pmatrix}\)</span></p>
+</details><p>(iii)   <span class="math notranslate nohighlight">\(C = \begin{pmatrix} x &amp; y &amp; z &amp; w \end{pmatrix}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to show)<div class="sd-summary-down docutils">
+Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(1 \times 3\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(1 \times 4\)</span></p>
 </div>
-</details><p>(iv)   <span class="math notranslate nohighlight">\(D = \begin{pmatrix} 0 \end{pmatrix}\)</span>.</p>
+</details><p>(iv)   <span class="math notranslate nohighlight">\(D = \begin{pmatrix} \alpha &amp; \beta &amp; \gamma \\ \delta &amp;  \epsilon &amp; \zeta \end{pmatrix}\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to show)<div class="sd-summary-down docutils">
+Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(1 \times 1\)</span></p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(2 \times 3\)</span></p>
 </div>
 </details></section>
 </div><span class="target" id="indexing-a-matrix-section"></span><section id="indexing-a-matrix">
@@ -485,40 +487,40 @@ Solution (click to show)<div class="sd-summary-down docutils">
 <p class="admonition-title"><span class="caption-number">Example 1.2 </span></p>
 <section class="example-content" id="proof-content">
 <p>Given the matrix <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 2 &amp; 0 &amp; -3 \\ 1 &amp; 7 &amp; 4 \end{pmatrix}\)</span>, write down the following elements:</p>
-<p>(i)   <span class="math notranslate nohighlight">\(a_{12}\)</span>;</p>
+<p>(i)   <span class="math notranslate nohighlight">\(a_{12}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to show)<div class="sd-summary-down docutils">
+Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(a_{12} = 0\)</span></p>
 </div>
-</details><p>(ii)   <span class="math notranslate nohighlight">\(a_{21}\)</span>;</p>
+</details><p>(ii)   <span class="math notranslate nohighlight">\(a_{21}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to show)<div class="sd-summary-down docutils">
+Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><span class="math notranslate nohighlight">\(a_{21} = -1\)</span></p>
 </div>
-</details><p>(iii)   <span class="math notranslate nohighlight">\([A]_{13}\)</span>;</p>
+</details><p>(iii)   <span class="math notranslate nohighlight">\([A]_{13}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to show)<div class="sd-summary-down docutils">
+Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><span class="math notranslate nohighlight">\([A]_{13} = -3\)</span></p>
 </div>
-</details><p>(iv)   <span class="math notranslate nohighlight">\(A(2,2)\)</span>.</p>
+</details><p>(iv)   <span class="math notranslate nohighlight">\(A(2,2)\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to show)<div class="sd-summary-down docutils">
+Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -527,275 +529,6 @@ Solution (click to show)<div class="sd-summary-down docutils">
 </div>
 </details></section>
 </div></section>
-<section id="matrix-operations">
-<span id="matrix-operations-section"></span><h2><span class="section-number">1.2. </span>Matrix operations<a class="headerlink" href="#matrix-operations" title="Permalink to this heading">#</a></h2>
-<p>So far, we have given a fancy name to a rectangular array of objects and showed how we can index its elements. Now we are going to fully develop an algebra for matrices. A system, where there are operations of addition and multiplication and necessarily rules that accompany them. This system resembles that of real numbers but we will see some differences and new concepts. For simplicity, we are going to assume that the entries of our matrices are numbers, however the developed theory applies to a broader range of objects.</p>
-<section id="matrix-equality">
-<span id="index-3"></span><h3><span class="section-number">1.2.1. </span>Matrix equality<a class="headerlink" href="#matrix-equality" title="Permalink to this heading">#</a></h3>
-<div class="proof definition admonition" id="matrix-equality-definition">
-<p class="admonition-title"><span class="caption-number">Definition 1.2 </span> (Matrix equality)</p>
-<section class="definition-content" id="proof-content">
-<p>We say that an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> and an <span class="math notranslate nohighlight">\(p \times q\)</span> matrix <span class="math notranslate nohighlight">\(B\)</span> are <strong>equal</strong> and write <span class="math notranslate nohighlight">\(A = B\)</span> if and only if <strong>both</strong> of the following conditions are satisfied:</p>
-<ul class="simple">
-<li><p>they have the same dimensions, in other words <span class="math notranslate nohighlight">\(m = p\)</span> and <span class="math notranslate nohighlight">\(n = q\)</span>;</p></li>
-<li><p>for all <span class="math notranslate nohighlight">\(1 \leq i \leq m\)</span> and <span class="math notranslate nohighlight">\(1 \leq j \leq n\)</span>, <span class="math notranslate nohighlight">\(a_{ij} = b_{ij}\)</span>.</p></li>
-</ul>
-</section>
-</div><p>For example, consider the following matrices</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    A &amp;= \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}, &amp;
-    B &amp;= \begin{pmatrix} 1 &amp; 2 &amp; 5 \\ 3 &amp; 4 &amp; 6 \end{pmatrix}, &amp;
-    C &amp;= \begin{pmatrix} 3^0 &amp; \sqrt{4} \\ 1 + 2 &amp; 2^2 \end{pmatrix}.
-\end{align*} \end{split}\]</div>
-<p>Here <span class="math notranslate nohighlight">\(A \neq B\)</span> since <span class="math notranslate nohighlight">\(A\)</span> has 2 columns and <span class="math notranslate nohighlight">\(B\)</span> has 3 columns. However, <span class="math notranslate nohighlight">\(A=C\)</span> because both <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(C\)</span> have the same number of rows and columns and all of the corresponding elements are equal.</p>
-<span class="target" id="matrix-addition-section"></span></section>
-<section id="matrix-addition">
-<span id="index-4"></span><h3><span class="section-number">1.2.2. </span>Matrix addition<a class="headerlink" href="#matrix-addition" title="Permalink to this heading">#</a></h3>
-<div class="proof definition admonition" id="matrix-addition-definition">
-<p class="admonition-title"><span class="caption-number">Definition 1.3 </span> (Matrix addition and subtraction )</p>
-<section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> be two <span class="math notranslate nohighlight">\(m \times n\)</span> matrices. The addition or subtraction of two <span class="math notranslate nohighlight">\(m \times n\)</span> matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> is an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A \pm B\)</span> defined by:</p>
-<div class="math notranslate nohighlight">
-\[ [A \pm B]_{ij} = a_{ij} \pm b_{ij}, \]</div>
-<p>where <span class="math notranslate nohighlight">\(1 \leq i \leq m\)</span> and <span class="math notranslate nohighlight">\(1 \leq j \leq n\)</span>. For example, the addition or subtraction of two <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrices is</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    \begin{pmatrix}
-        a_{11} &amp; a_{12} \\
-        a_{21} &amp; a_{22}
-    \end{pmatrix} \pm
-    \begin{pmatrix}
-        b_{11} &amp; b_{12} \\
-        b_{21} &amp; b_{22}
-    \end{pmatrix} = 
-    \begin{pmatrix}
-        a_{11} \pm b_{11} &amp; a_{12} \pm b_{12} \\
-        a_{21} \pm b_{21} &amp; a_{22} \pm b_{22}
-    \end{pmatrix}.
-\end{align*} \end{split}\]</div>
-</section>
-</div><p>The addition and subtraction of two matrices of different sizes is <strong>not defined</strong>.</p>
-<div class="proof theorem admonition" id="properties-of-matrix-addition-theorem">
-<p class="admonition-title"><span class="caption-number">Theorem 1.1 </span> (Properties of matrix addition)</p>
-<section class="theorem-content" id="proof-content">
-<p>For all <span class="math notranslate nohighlight">\(m \times n\)</span> matrices <span class="math notranslate nohighlight">\(A,B\)</span> and <span class="math notranslate nohighlight">\(C\)</span>, the following conditions are satisfied:</p>
-<ul class="simple">
-<li><p>matrix addition is commutative, i.e., <span class="math notranslate nohighlight">\(A + B = B + A\)</span>;</p></li>
-<li><p>matrix addition is associative, i.e., <span class="math notranslate nohighlight">\(A + (B + C) = (A + B) + C\)</span>.</p></li>
-</ul>
-</section>
-</div><div class="proof example admonition" id="matrix-addition-example">
-<p class="admonition-title"><span class="caption-number">Example 1.3 </span></p>
-<section class="example-content" id="proof-content">
-<p>Evaluate the following:</p>
-<p>(i)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} + \begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}\)</span>;</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution (click to show)<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} + \begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix} = \begin{pmatrix} 1 + 5 &amp; 2 + 6 \\ 3 + 7 &amp; 4 + 8 \end{pmatrix}= \begin{pmatrix}6 &amp; 8 \\ 10 &amp; 12 \end{pmatrix} \end{split}\]</div>
-</div>
-</details><p>(ii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix} - \begin{pmatrix} 7 \\ -11 \\ -13 \end{pmatrix}\)</span>;</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution (click to show)<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix} - \begin{pmatrix} 7 \\ -11 \\ -13 \end{pmatrix} = \begin{pmatrix}2 - 7 \\ 3 + 11 \\ 5 + 13 \end{pmatrix} = \begin{pmatrix} -5 \\ 14 \\ 18\end{pmatrix} \end{split}\]</div>
-</div>
-</details><p>(iii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 3 &amp; 5 \\ 7 &amp; 9 &amp; 11 \end{pmatrix} + \begin{pmatrix}2 &amp; 3 \\ 5 &amp; 7 \end{pmatrix}\)</span>.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution (click to show)<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Undefined since the left matrix is <span class="math notranslate nohighlight">\(2\times 3\)</span> and the right matrix is <span class="math notranslate nohighlight">\(2\times 2\)</span></p>
-</div>
-</details></section>
-</div></section>
-<section id="scalar-multiplication">
-<span id="index-5"></span><h3><span class="section-number">1.2.3. </span>Scalar multiplication<a class="headerlink" href="#scalar-multiplication" title="Permalink to this heading">#</a></h3>
-<div class="proof definition admonition" id="scalar-multiplication-definition">
-<p class="admonition-title"><span class="caption-number">Definition 1.4 </span> (Scalar multiplication)</p>
-<section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be a matrix and <span class="math notranslate nohighlight">\(k \in \mathbb{R}\)</span> be a scalar. The <strong>scalar multiplcation</strong> <span class="math notranslate nohighlight">\(kA\)</span> is defined by</p>
-<div class="math notranslate nohighlight">
-\[ [kA]_{ij} = ka_{ij}, \]</div>
-<p>i.e.,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    k
-    \begin{pmatrix}
-        a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
-        a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
-        \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-        a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
-    \end{pmatrix} =
-    \begin{pmatrix}
-        ka_{11} &amp; ka_{12} &amp; \cdots &amp; ka_{1n} \\
-        ka_{21} &amp; ka_{22} &amp; \cdots &amp; ka_{2n} \\
-        \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-        ka_{m1} &amp; ka_{m2} &amp; \cdots &amp; ka_{mn}
-    \end{pmatrix}.
-\end{align*} \end{split}\]</div>
-</section>
-</div><div class="proof theorem admonition" id="theorem-8">
-<p class="admonition-title"><span class="caption-number">Theorem 1.2 </span> (Properties of scalar multiplication)</p>
-<section class="theorem-content" id="proof-content">
-<p>label: properties-of-scalar-multiplication-theorem</p>
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> be two <span class="math notranslate nohighlight">\(m \times n\)</span> matrices and <span class="math notranslate nohighlight">\(k\)</span> and <span class="math notranslate nohighlight">\(\ell\)</span> are scalars then</p>
-<ul class="simple">
-<li><p>scalar multiplication is commutative: <span class="math notranslate nohighlight">\(kA = Ak\)</span>;</p></li>
-<li><p>scalar multiplication is distributive over matrix addition: <span class="math notranslate nohighlight">\(k (A + B) = kA + kB\)</span>;</p></li>
-<li><p>scalar multiplication is distributive over scalar addition: <span class="math notranslate nohighlight">\((k + \ell)A = kA +\ell A\)</span>;</p></li>
-<li><p>scalar multiplication is associative: <span class="math notranslate nohighlight">\(k(\ell A) = (k \ell) A = \ell(kA)\)</span>;</p></li>
-<li><p>multiplication by <span class="math notranslate nohighlight">\(-1\)</span> gives the additive inverse: <span class="math notranslate nohighlight">\(-1 \cdot A = -A\)</span>.</p></li>
-</ul>
-</section>
-</div><div class="proof example admonition" id="scalar-multiplication-example">
-<p class="admonition-title"><span class="caption-number">Example 1.4 </span></p>
-<section class="example-content" id="proof-content">
-<p>Evaluate the following:</p>
-<p>(i)   <span class="math notranslate nohighlight">\(2 \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}\)</span>;</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution (click to show)<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[\begin{split} 2 \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} = 
-\begin{pmatrix} 2 &amp; 4 \\ 6 &amp; 8 \end{pmatrix} \end{split}\]</div>
-</div>
-</details><p>(ii)   <span class="math notranslate nohighlight">\(\dfrac{1}{2} \begin{pmatrix} 0 &amp; -1 \\ 3 &amp; 2 \\ 4  &amp;-2  \end{pmatrix}\)</span>;</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution (click to show)<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[\begin{split} \dfrac{1}{2} \begin{pmatrix} 0 &amp; -1 \\ 3 &amp; 2 \\ 4  &amp;-2  \end{pmatrix} =
-\begin{pmatrix} 0 &amp; -1/2 \\ 3/2 &amp; 1 \\ 2 &amp; -1 \end{pmatrix} \end{split}\]</div>
-</div>
-</details><p>(iii)   <span class="math notranslate nohighlight">\(a \begin{pmatrix} 1 &amp; 6 &amp; 4 \\ 0 &amp; 3 &amp; -1 \end{pmatrix}\)</span>;</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution (click to show)<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[\begin{split} a \begin{pmatrix} 1 &amp; 6 &amp; 4 \\ 0 &amp; 3 &amp; -1 \end{pmatrix} = 
-\begin{pmatrix} a &amp; 6a &amp; 4a \\ 0 &amp; 3a &amp; -a \end{pmatrix} \end{split}\]</div>
-</div>
-</details><p>(iv)   <span class="math notranslate nohighlight">\(101 \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix} - 99 \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix}\)</span>.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution (click to show)<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[\begin{split} 101 \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix} - 99 \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix}
-= (101 - 99) \begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix} =
-\begin{pmatrix} 2 &amp; 4 \\ 0 &amp; 2 \end{pmatrix}\end{split}\]</div>
-</div>
-</details></section>
-</div></section>
-<section id="matrix-transpose">
-<span id="index-6"></span><h3><span class="section-number">1.2.4. </span>Matrix transpose<a class="headerlink" href="#matrix-transpose" title="Permalink to this heading">#</a></h3>
-<div class="proof definition admonition" id="matrix-transpose-definition">
-<p class="admonition-title"><span class="caption-number">Definition 1.5 </span> (Matrix transpose)</p>
-<section class="definition-content" id="proof-content">
-<p>The <strong>transpose</strong> of an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> is a <span class="math notranslate nohighlight">\(n \times m\)</span> matrix denoted by <span class="math notranslate nohighlight">\(A^\mathsf{T}\)</span> formed by switching the rows and columns of <span class="math notranslate nohighlight">\(A\)</span>, i.e.,</p>
-<div class="math notranslate nohighlight">
-\[ [A^\mathsf{T}]_{ij}=a_{ji}. \]</div>
-</section>
-</div><p>Transposing a matrix switches the rows and columns around so that row <span class="math notranslate nohighlight">\(i\)</span> becomes column <span class="math notranslate nohighlight">\(i\)</span> and column <span class="math notranslate nohighlight">\(j\)</span> becomes row <span class="math notranslate nohighlight">\(j\)</span>, i.e.,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    \begin{pmatrix}
-        a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
-        a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
-        \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-        a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
-    \end{pmatrix}^\mathsf{T} =
-    \begin{pmatrix}
-        a_{11} &amp; a_{21} &amp; \cdots &amp; a_{m1} \\
-        a_{12} &amp; a_{22} &amp; \cdots &amp; a_{m2} \\
-        \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-        a_{1n} &amp; a_{2n} &amp; \cdots &amp; a_{mn}
-    \end{pmatrix}.
-\end{align*} \end{split}\]</div>
-<div class="proof theorem admonition" id="properties-of-matrix-transpose-theorem">
-<p class="admonition-title"><span class="caption-number">Theorem 1.3 </span> (Properties of matrix transpose)</p>
-<section class="theorem-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> be two square <span class="math notranslate nohighlight">\(n \times n\)</span> matrices and <span class="math notranslate nohighlight">\(k\)</span> a scalar, then</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\((A^\mathsf{T})^\mathsf{T} = A\)</span>;</p></li>
-<li><p><span class="math notranslate nohighlight">\((A + B)^\mathsf{T} = A^\mathsf{T} + B^\mathsf{T}\)</span>;</p></li>
-<li><p><span class="math notranslate nohighlight">\((k A)^\mathsf{T} = k (A^\mathsf{T})\)</span>;</p></li>
-<li><p><span class="math notranslate nohighlight">\((AB)^\mathsf{T} = B^\mathsf{T}A^\mathsf{T}\)</span> (the product of two matrices is defined in the <a class="reference internal" href="1.1_Matrix_multiplication.html#matrix-multiplication-section"><span class="std std-ref">following section</span></a>)</p></li>
-</ul>
-</section>
-</div><div class="proof example admonition" id="matrix-transpose-example">
-<p class="admonition-title"><span class="caption-number">Example 1.5 </span></p>
-<section class="example-content" id="proof-content">
-<p>Evaluate the following:</p>
-<p>(i)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 3 \\ 2 &amp; 4 \end{pmatrix}^\mathsf{T}\)</span>;</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution (click to show)<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{pmatrix} 1 &amp; 3 \\ 2 &amp; 4 \end{pmatrix}^\mathsf{T} = 
-    \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} \end{split}\]</div>
-</div>
-</details><p>(ii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 0 &amp; -2 \\ 3 &amp; -4 &amp; 1 \end{pmatrix}^\mathsf{T}\)</span>;</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution (click to show)<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{pmatrix} 1 &amp; 0 &amp; -2 \\ 3 &amp; -4 &amp; 1 \end{pmatrix}^\mathsf{T} =
-    \begin{pmatrix} 1 &amp; 3 \\ 0 &amp; -4 \\ -2 &amp; 1 \end{pmatrix} \end{split}\]</div>
-</div>
-</details><p>(iii)   <span class="math notranslate nohighlight">\(\begin{pmatrix}2 &amp; 3 &amp; 5 \end{pmatrix}^\mathsf{T}\)</span>.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution (click to show)<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{pmatrix}2 &amp; 3 &amp; 5 \end{pmatrix}^\mathsf{T} = 
-    \begin{pmatrix} 2 \\ 3 \\ 5 \end{pmatrix} \end{split}\]</div>
-</div>
-</details></section>
-</div></section>
-</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -841,11 +574,11 @@ Solution (click to show)<div class="sd-summary-down docutils">
       </div>
     </a>
     <a class="right-next"
-       href="1.1_Matrix_multiplication.html"
+       href="1.1_Matrix_operations.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.3. </span>Matrix multiplication</p>
+        <p class="prev-next-title"><span class="section-number">1.2. </span>Arithmetic operations on matrices</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -868,13 +601,6 @@ Solution (click to show)<div class="sd-summary-down docutils">
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-a-matrix">1.1. Indexing a matrix</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-operations">1.2. Matrix operations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-equality">1.2.1. Matrix equality</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-addition">1.2.2. Matrix addition</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scalar-multiplication">1.2.3. Scalar multiplication</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-transpose">1.2.4. Matrix transpose</a></li>
-</ul>
-</li>
 </ul>
   </nav></div>
 

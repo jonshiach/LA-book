@@ -34,8 +34,7 @@
 <g fill="rgb(100%, 0%, 0%)" fill-opacity="1">
 <use xlink:href="#glyph-0-1" x="23.216" y="29.581"/>
 </g>
-<path fill="none" stroke-width="0.3985" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 28.346688 0.00015625 C 28.346688 7.515781 25.358406 14.730625 20.370125 19.718906 " transform="matrix(1, 0, 0, -1, 3.333, 63.465)"/>
-<path fill="none" stroke-width="0.31879" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M -1.195467 1.596119 C -1.096029 0.993967 0.000549781 0.101789 0.298863 0.00235115 C -0.00221238 -0.0998489 -1.096029 -0.994789 -1.195467 -1.591417 " transform="matrix(-0.7071, -0.7071, -0.7071, 0.7071, 23.70127, 43.74482)"/>
+<path fill="none" stroke-width="0.3985" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 28.346688 0.00015625 C 28.346688 7.515781 25.358406 14.730625 20.045906 20.043125 " transform="matrix(1, 0, 0, -1, 3.333, 63.465)"/>
 <g fill="rgb(0%, 0%, 0%)" fill-opacity="1">
 <use xlink:href="#glyph-1-0" x="18.402" y="59.657"/>
 </g>

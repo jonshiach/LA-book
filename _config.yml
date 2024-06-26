@@ -1,9 +1,9 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Linear Algebra Lecture Notes
+title: Linear Algebra
 author: Dr Jon Shiach
-logo: _images/logo.png
+# logo: _images/logo.png
 copyright : "2023"  # Copyright year to be placed in the footer
 
 # Force re-execution of notebooks on each build.

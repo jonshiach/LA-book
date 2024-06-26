@@ -84,7 +84,7 @@
 %     \draw [axis] (0,0) -- ++(\z:\al) node at (\z:\al+0.2) {$z$};
 %     \node [below] at (0, 0) (O) {$(0,0,0)$};
 %     \node [point,label=right:{$(x,y,z)$}] at (30:4) (P) {};
-%     \draw [vector]  (0, 0) -- node [below right] {$\vec{p}=(x,y,z)$} (P);
+%     \draw [vector]  (0, 0) --  (P) node [pos=0.5,below right] {$\vec{p}$};
 % \end{tikzpicture}
 
 % % Vector equality
@@ -133,12 +133,12 @@
 % \end{tikzpicture}
 
 % Dot product
-% \begin{tikzpicture}
-%     \draw [vector] (0, 0) -- node [below] {$\vec{a}$} ++(0:3);
-%     \draw [vector, red] (0, 0) -- node [above left] {$\vec{b}$} ++(45:3);
-%     \draw [->] (0:1) arc (0:45:1);
-%     \node at (22.5:0.67) {$\theta$};
-% \end{tikzpicture}
+\begin{tikzpicture}
+    \draw [vector] (0, 0) -- node [below] {$\vec{a}$} ++(0:3);
+    \draw [vector, red] (0, 0) -- node [above left] {$\vec{b}$} ++(45:3);
+    \draw (0:1) arc (0:45:1);
+    \node at (22.5:0.67) {$\theta$};
+\end{tikzpicture}
 
 % % Cross product
 % \begin{tikzpicture}
