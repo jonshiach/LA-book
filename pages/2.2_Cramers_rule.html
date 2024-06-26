@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2.3. Cramer’s rule &#8212; Linear Algebra Lecture Notes</title>
+    <title>2.4. Cramer’s rule &#8212; Linear Algebra</title>
   
   
   
@@ -66,13 +66,13 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/2.2_Cramers_rule';</script>
-    <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/2.2_Cramers_rule.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = '_pages/2.2_Cramers_rule';</script>
+    <link rel="canonical" href="https://jonshiach.github.io/LA-book/_pages/2.2_Cramers_rule.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.4. Gaussian elimination" href="2.3_Gaussian_elimination.html" />
-    <link rel="prev" title="2.2. Solving systems of linear equations using the inverse matrix" href="2.1_Solving_using_inverse_matrix.html" />
+    <link rel="next" title="2.5. Gaussian elimination" href="2.3_Gaussian_elimination.html" />
+    <link rel="prev" title="2.3. Solving systems of linear equations using the inverse matrix" href="2.1_Solving_using_inverse_matrix.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -138,19 +138,13 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
   
 
-<a class="navbar-brand logo" href="../intro.html">
+<a class="navbar-brand logo" href="0_intro.html">
   
   
   
   
-    
-    
-      
-    
-    
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
+    <p class="title logo__title">Linear Algebra</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -158,8 +152,8 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../intro.html">
-                    Linear Algebra Lecture Notes
+                <a class="reference internal" href="0_intro.html">
+                    <no title>
                 </a>
             </li>
         </ul>
@@ -172,23 +166,24 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="1.0_Matrices.html">1. Matrices</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="1.1_Matrix_multiplication.html">1.3. Matrix multiplication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.2_Special_matrices.html">1.4. Special matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.3_Determinants.html">1.5. Determinants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.4_Inverse_matrix.html">1.6. Inverse matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.5_Matrix_algebra.html">1.7. Matrix algebra</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.6_Matrices_exercises.html">1.8. Matrices Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.1_Matrix_operations.html">1.2. Arithmetic operations on matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.2_Matrix_multiplication.html">1.3. Matrix multiplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.3_Special_matrices.html">1.4. Special matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.4_Determinants.html">1.5. Determinants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.5_Inverse_matrix.html">1.6. Inverse matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.6_Matrix_algebra.html">1.7. Matrix algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.7_Matrices_exercises.html">1.8. Matrices Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="2.1_Solving_using_inverse_matrix.html">2.2. Solving systems of linear equations using the inverse matrix</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.3. Cramer’s rule</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3_Gaussian_elimination.html">2.4. Gaussian elimination</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.4_Partial_pivoting.html">2.5. Partial pivoting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.6. Gauss-Jordan elimination</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.7. Consistent, inconsistent and indeterminate systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.8. Homogeneous systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.8_Linear_systems_exercises.html">2.9. Systems of Linear Equations Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1_Solving_using_inverse_matrix.html">2.3. Solving systems of linear equations using the inverse matrix</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.4. Cramer’s rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_Gaussian_elimination.html">2.5. Gaussian elimination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4_Partial_pivoting.html">2.6. Partial pivoting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.7. Gauss-Jordan elimination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.8. Consistent, inconsistent and indeterminate systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.9. Homogeneous systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8_Linear_systems_exercises.html">2.10. Systems of Linear Equations Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -207,26 +202,29 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="5.1_Subspaces.html">5.3. Subspaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5.2_Linear_dependence.html">5.4. Linear dependence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5.3_Basis.html">5.5. Basis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5.5_Vector_spaces_exercises.html">5.6. Vector spaces exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.1_Vector_spaces_definitions.html">5.1. Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.2_Subspaces.html">5.2. Subspaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.3_Linear_dependence.html">5.3. Linear dependence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.4_Basis.html">5.4. Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.5_Vector_spaces_exercises.html">5.5. Vector spaces exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="6.0_Linear_transformations.html">6. Linear Transformations</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="6.1_Composite_transformations.html">6.4. Composite linear transformations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.2_Rotation_reflection_and_translation.html">6.5. Rotation, reflection and scaling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.3_Translation.html">6.6. Translation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.7. Transformations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.1_Transformation_matrices.html">6.1. Transformation matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.2_Composite_transformations.html">6.2. Composite linear transformations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.3_Rotation_reflection_and_translation.html">6.3. Rotation, reflection and scaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.4_Translation.html">6.4. Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.5. Transformations exercises</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A_Matrices_exercises_solutions.html">A. Matrices Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B_Linear_systems_exercises_solutions.html">B. Systems of Linear Equations Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C_Vectors_exercises_solutions.html">C. Vectors Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="D_Coordinate_geometry_exercises_solutions.html">D. Co-ordinate Geometry Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="E_Vector_spaces_exercises_solutions.ipynb.html">E. Vector Spaces Exercises Solutions</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -284,7 +282,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/pages/2.2_Cramers_rule.md" target="_blank"
+      <li><a href="../_sources/_pages/2.2_Cramers_rule.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -379,14 +377,14 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <span class="target" id="cramers-rule-section"></span><section class="tex2jax_ignore mathjax_ignore" id="cramer-s-rule">
-<span id="index-0"></span><h1><span class="section-number">2.3. </span>Cramer’s rule<a class="headerlink" href="#cramer-s-rule" title="Permalink to this heading">#</a></h1>
+<span id="index-0"></span><h1><span class="section-number">2.4. </span>Cramer’s rule<a class="headerlink" href="#cramer-s-rule" title="Permalink to this heading">#</a></h1>
 <figure class="margin align-default" id="id1">
 <a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Gabriel_Cramer.jpg/220px-Gabriel_Cramer.jpg"><img alt="Gabriel Cramer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Gabriel_Cramer.jpg/220px-Gabriel_Cramer.jpg" style="width: 200px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 2.1 </span><span class="caption-text"><a href="https://en.wikipedia.org/wiki/Gabriel_Cramer" target="_blank">Gabriel Cramer (1704 - 1752)</a></span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p><strong>Cramer’s rule</strong>, named after Swiss mathematician <a href="https://en.wikipedia.org/wiki/Gabriel_Cramer" target="_blank">Gabriel Cramer</a>, is an explicit rule for calculating the solution to a system of linear equations using determinants. We saw in the section on <a class="reference internal" href="1.3_Determinants.html#determinant-section"><span class="std std-ref">determinants</span></a> that the solution to the system of linear equations</p>
+<p><strong>Cramer’s rule</strong>, named after Swiss mathematician <a href="https://en.wikipedia.org/wiki/Gabriel_Cramer" target="_blank">Gabriel Cramer</a>, is an explicit rule for calculating the solution to a system of linear equations using determinants. We saw in the section on <a class="reference internal" href="1.4_Determinants.html#determinant-section"><span class="std std-ref">determinants</span></a> that the solution to the system of linear equations</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}
     \begin{pmatrix} x_1 \\ x_2 \end{pmatrix} =
@@ -417,13 +415,13 @@ document.write(`
 <p>where <span class="math notranslate nohighlight">\(A_i\)</span> is a matrix obtained by replacing column <span class="math notranslate nohighlight">\(i\)</span> of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\vec{b}\)</span>.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. The solution to a system of linear equations <span class="math notranslate nohighlight">\(A \vec{x} = \vec{b}\)</span> can be calculated using <span class="math notranslate nohighlight">\(\vec{x} = A^{-1} \vec{b}\)</span> where <span class="math notranslate nohighlight">\(A^{-1}\)</span> is the inverse of the coefficient matrix <span class="math notranslate nohighlight">\(A\)</span>. The <a class="reference internal" href="1.4_Inverse_matrix.html#adjoint-determinant-formula-theorem">adjoint-determinant formula</a> for calculating the inverse is</p>
+<p>Proof. The solution to a system of linear equations <span class="math notranslate nohighlight">\(A \vec{x} = \vec{b}\)</span> can be calculated using <span class="math notranslate nohighlight">\(\vec{x} = A^{-1} \vec{b}\)</span> where <span class="math notranslate nohighlight">\(A^{-1}\)</span> is the inverse of the coefficient matrix <span class="math notranslate nohighlight">\(A\)</span>. The <a class="reference internal" href="1.5_Inverse_matrix.html#adjoint-determinant-formula-theorem">adjoint-determinant formula</a> for calculating the inverse is</p>
 <div class="math notranslate nohighlight">
 \[ A^{-1} = \frac{\operatorname{adj}(A)}{\det(A)}, \]</div>
 <p>so</p>
 <div class="math notranslate nohighlight">
 \[ \vec{x} = \frac{1}{\det(A)} \operatorname{adj}(A) \vec{b}. \]</div>
-<p>Since <span class="math notranslate nohighlight">\(\operatorname{adj}(A) = C^\mathsf{T}\)</span> where <span class="math notranslate nohighlight">\(C\)</span> is the matrix of <a class="reference internal" href="1.3_Determinants.html#cofactor-definition">co-factors</a></p>
+<p>Since <span class="math notranslate nohighlight">\(\operatorname{adj}(A) = C^\mathsf{T}\)</span> where <span class="math notranslate nohighlight">\(C\)</span> is the matrix of <a class="reference internal" href="1.4_Determinants.html#cofactor-definition">co-factors</a></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} C^\mathsf{T} = \begin{pmatrix} 
     C_{11} &amp; C_{21} &amp; \cdots &amp; C_{n1} \\
@@ -431,7 +429,7 @@ document.write(`
     \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
     C_{1n} &amp; C_{2n} &amp; \cdots &amp; C_{nn}
 \end{pmatrix}. \end{split}\]</div>
-<p>then for the <span class="math notranslate nohighlight">\(i\)</span>th element of <span class="math notranslate nohighlight">\(\vec{x}\)</span> using the <a class="reference internal" href="1.1_Matrix_multiplication.html#matrix-multiplication-definition">definition of matrix multiplication</a> we have</p>
+<p>then for the <span class="math notranslate nohighlight">\(i\)</span>th element of <span class="math notranslate nohighlight">\(\vec{x}\)</span> using the <a class="reference internal" href="1.2_Matrix_multiplication.html#matrix-multiplication-definition">definition of matrix multiplication</a> we have</p>
 <div class="math notranslate nohighlight">
 \[ x_i = \frac{1}{\det(A)} \sum_{j=1}^n C_{ji} b_j \]</div>
 <p>In Cramer’s rule, <span class="math notranslate nohighlight">\(A_i\)</span> is the matrix formed by replacing the <span class="math notranslate nohighlight">\(i\)</span>th column of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\vec{b}\)</span></p>
@@ -458,7 +456,7 @@ document.write(`
 \end{array}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to show)<div class="sd-summary-down docutils">
+Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -488,7 +486,7 @@ Solution (click to show)<div class="sd-summary-down docutils">
 \end{array}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to show)<div class="sd-summary-down docutils">
+Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -563,7 +561,7 @@ Solution (click to show)<div class="sd-summary-down docutils">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.2. </span>Solving systems of linear equations using the inverse matrix</p>
+        <p class="prev-next-title"><span class="section-number">2.3. </span>Solving systems of linear equations using the inverse matrix</p>
       </div>
     </a>
     <a class="right-next"
@@ -571,7 +569,7 @@ Solution (click to show)<div class="sd-summary-down docutils">
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.4. </span>Gaussian elimination</p>
+        <p class="prev-next-title"><span class="section-number">2.5. </span>Gaussian elimination</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

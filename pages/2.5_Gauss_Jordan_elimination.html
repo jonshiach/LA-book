@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2.6. Gauss-Jordan elimination &#8212; Linear Algebra Lecture Notes</title>
+    <title>2.7. Gauss-Jordan elimination &#8212; Linear Algebra</title>
   
   
   
@@ -66,13 +66,13 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/2.5_Gauss_Jordan_elimination';</script>
-    <link rel="canonical" href="https://jonshiach.github.io/LA-book/pages/2.5_Gauss_Jordan_elimination.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = '_pages/2.5_Gauss_Jordan_elimination';</script>
+    <link rel="canonical" href="https://jonshiach.github.io/LA-book/_pages/2.5_Gauss_Jordan_elimination.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.7. Consistent, inconsistent and indeterminate systems" href="2.6_Consistent_systems.html" />
-    <link rel="prev" title="2.5. Partial pivoting" href="2.4_Partial_pivoting.html" />
+    <link rel="next" title="2.8. Consistent, inconsistent and indeterminate systems" href="2.6_Consistent_systems.html" />
+    <link rel="prev" title="2.6. Partial pivoting" href="2.4_Partial_pivoting.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -138,19 +138,13 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
   
 
-<a class="navbar-brand logo" href="../intro.html">
+<a class="navbar-brand logo" href="0_intro.html">
   
   
   
   
-    
-    
-      
-    
-    
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
+    <p class="title logo__title">Linear Algebra</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -158,8 +152,8 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../intro.html">
-                    Linear Algebra Lecture Notes
+                <a class="reference internal" href="0_intro.html">
+                    <no title>
                 </a>
             </li>
         </ul>
@@ -172,23 +166,24 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="1.0_Matrices.html">1. Matrices</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="1.1_Matrix_multiplication.html">1.3. Matrix multiplication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.2_Special_matrices.html">1.4. Special matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.3_Determinants.html">1.5. Determinants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.4_Inverse_matrix.html">1.6. Inverse matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.5_Matrix_algebra.html">1.7. Matrix algebra</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.6_Matrices_exercises.html">1.8. Matrices Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.1_Matrix_operations.html">1.2. Arithmetic operations on matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.2_Matrix_multiplication.html">1.3. Matrix multiplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.3_Special_matrices.html">1.4. Special matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.4_Determinants.html">1.5. Determinants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.5_Inverse_matrix.html">1.6. Inverse matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.6_Matrix_algebra.html">1.7. Matrix algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.7_Matrices_exercises.html">1.8. Matrices Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="2.1_Solving_using_inverse_matrix.html">2.2. Solving systems of linear equations using the inverse matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.2_Cramers_rule.html">2.3. Cramer’s rule</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3_Gaussian_elimination.html">2.4. Gaussian elimination</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.4_Partial_pivoting.html">2.5. Partial pivoting</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.6. Gauss-Jordan elimination</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.7. Consistent, inconsistent and indeterminate systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.8. Homogeneous systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.8_Linear_systems_exercises.html">2.9. Systems of Linear Equations Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1_Solving_using_inverse_matrix.html">2.3. Solving systems of linear equations using the inverse matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_Cramers_rule.html">2.4. Cramer’s rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_Gaussian_elimination.html">2.5. Gaussian elimination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4_Partial_pivoting.html">2.6. Partial pivoting</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.7. Gauss-Jordan elimination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.8. Consistent, inconsistent and indeterminate systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.9. Homogeneous systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8_Linear_systems_exercises.html">2.10. Systems of Linear Equations Exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -207,26 +202,29 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="5.1_Subspaces.html">5.3. Subspaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5.2_Linear_dependence.html">5.4. Linear dependence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5.3_Basis.html">5.5. Basis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5.5_Vector_spaces_exercises.html">5.6. Vector spaces exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.1_Vector_spaces_definitions.html">5.1. Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.2_Subspaces.html">5.2. Subspaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.3_Linear_dependence.html">5.3. Linear dependence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.4_Basis.html">5.4. Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.5_Vector_spaces_exercises.html">5.5. Vector spaces exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="6.0_Linear_transformations.html">6. Linear Transformations</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="6.1_Composite_transformations.html">6.4. Composite linear transformations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.2_Rotation_reflection_and_translation.html">6.5. Rotation, reflection and scaling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.3_Translation.html">6.6. Translation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.7. Transformations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.1_Transformation_matrices.html">6.1. Transformation matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.2_Composite_transformations.html">6.2. Composite linear transformations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.3_Rotation_reflection_and_translation.html">6.3. Rotation, reflection and scaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.4_Translation.html">6.4. Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.5. Transformations exercises</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A_Matrices_exercises_solutions.html">A. Matrices Exercise Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B_Linear_systems_exercises_solutions.html">B. Systems of Linear Equations Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C_Vectors_exercises_solutions.html">C. Vectors Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="D_Coordinate_geometry_exercises_solutions.html">D. Co-ordinate Geometry Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="E_Vector_spaces_exercises_solutions.ipynb.html">E. Vector Spaces Exercises Solutions</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -284,7 +282,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/pages/2.5_Gauss_Jordan_elimination.md" target="_blank"
+      <li><a href="../_sources/_pages/2.5_Gauss_Jordan_elimination.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -376,7 +374,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-inverse-of-a-matrix-using-gauss-jordan-elimination">2.6.1. Calculating the inverse of a matrix using Gauss-Jordan elimination</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elementary-matrices">2.7.1. Elementary matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-inverse-of-a-matrix-using-gauss-jordan-elimination">2.7.2. Calculating the inverse of a matrix using Gauss-Jordan elimination</a></li>
 </ul>
             </nav>
         </div>
@@ -389,7 +388,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <span class="target" id="gauss-jordan-elimination-section"></span><section class="tex2jax_ignore mathjax_ignore" id="gauss-jordan-elimination">
-<span id="index-0"></span><h1><span class="section-number">2.6. </span>Gauss-Jordan elimination<a class="headerlink" href="#gauss-jordan-elimination" title="Permalink to this heading">#</a></h1>
+<span id="index-0"></span><h1><span class="section-number">2.7. </span>Gauss-Jordan elimination<a class="headerlink" href="#gauss-jordan-elimination" title="Permalink to this heading">#</a></h1>
 <figure class="margin align-default" id="id1">
 <a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/7/70/Wilhelm_Jordan.png"><img alt="Wilhelm Jordan" src="https://upload.wikimedia.org/wikipedia/commons/7/70/Wilhelm_Jordan.png" style="width: 200px;" /></a>
 <figcaption>
@@ -398,13 +397,13 @@ document.write(`
 </figure>
 <p><strong>Gauss-Jordan elimination (GJE)</strong>, named after <a href="https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss" target="_blank">Gauss</a> and German geodesist <a href="https://en.wikipedia.org/wiki/Wilhelm_Jordan_(geodesist)" target="_blank">Wilhelm Jordan</a>, is similar to <a class="reference internal" href="2.3_Gaussian_elimination.html#gaussian-elimination-section"><span class="std std-ref">Gaussian elimination</span></a> with the difference that the augmented matrix is reduced using elementary row operations so that the values of the pivot elements are 1 and are the only non-zero element in the column. This allows the solution to be read from the final augmented matrix without the need to perform back substitution. A matrix in this form is said to be in reduced row echelon form.</p>
 <div class="proof definition admonition" id="rref-definition">
-<span id="index-1"></span><p class="admonition-title"><span class="caption-number">Definition 2.5 </span> (Reduced Row Echelon Form (RREF))</p>
+<span id="index-1"></span><p class="admonition-title"><span class="caption-number">Definition 2.6 </span> (Reduced Row Echelon Form (RREF))</p>
 <section class="definition-content" id="proof-content">
-<p>A matrix is said to be in <strong>Reduced Row Echelon Form (RREF)</strong> if it satisfies the following conditions</p>
+<p>A matrix is said to be in <strong>Reduced Row Echelon Form (RREF)</strong> if it satisfies the following conditions:</p>
 <ul class="simple">
-<li><p>it is in row echelon form;</p></li>
-<li><p>the leading entry in each non-zero row has a value of 1;</p></li>
-<li><p>the leading entry in each non-zero row is the only non-zero element in its column.</p></li>
+<li><p>It is in row echelon form</p></li>
+<li><p>The leading entry in each non-zero row has a value of 1</p></li>
+<li><p>The leading entry in each non-zero row is the only non-zero element in its column</p></li>
 </ul>
 </section>
 </div><p>For example the following matrices are in reduced row echelon form:</p>
@@ -431,7 +430,7 @@ document.write(`
 <p><strong>Inputs:</strong> An <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span></p>
 <p><strong>Outputs:</strong> The matrix <span class="math notranslate nohighlight">\(A\)</span> expressed in reduced row echelon form</p>
 <ul class="simple">
-<li><p>Start with the pivot element as the element in the first row and column of <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
+<li><p>The first pivot element is in row 1 and column 1 of <span class="math notranslate nohighlight">\(A\)</span></p></li>
 <li><p>For each column of <span class="math notranslate nohighlight">\(A\)</span></p>
 <ul>
 <li><p>If partial pivoting is not used</p>
@@ -441,16 +440,16 @@ document.write(`
 </li>
 <li><p>Else if partial pivoting is used</p>
 <ul>
-<li><p>Perform a row swap with the row beneath the pivot row that has the largest absolute value element in the pivot column which is greater than the absolute value fo the pivot element.</p></li>
+<li><p>Perform a row swap with the row beneath the pivot row that has the largest value in the pivot column which is greater than the value fo the pivot element (ignoring the signs)</p></li>
 </ul>
 </li>
 <li><p>If the pivot element is zero move to the next column</p></li>
 <li><p>For each row of <span class="math notranslate nohighlight">\(A\)</span> except the pivot row</p>
 <ul>
-<li><p>Subtract the pivot row multiplied by the value in the pivot column of the row divided by the pivot element from the current row.</p></li>
+<li><p>Subtract the pivot row multiplied by the value in the pivot column of the row divided by the pivot element from the current row</p></li>
 </ul>
 </li>
-<li><p>Divide the pivot row by the pivot element.</p></li>
+<li><p>Divide the pivot row by the pivot element</p></li>
 </ul>
 </li>
 <li><p>Return <span class="math notranslate nohighlight">\(A\)</span></p></li>
@@ -469,7 +468,7 @@ document.write(`
 \end{align*} \end{split}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to show)<div class="sd-summary-down docutils">
+Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -520,49 +519,101 @@ Solution (click to show)<div class="sd-summary-down docutils">
 <p class="sd-card-text">Therefore the solution is <span class="math notranslate nohighlight">\(x_1 = 1\)</span>, <span class="math notranslate nohighlight">\(x_2 = -10\)</span> and <span class="math notranslate nohighlight">\(x_3 = -4\)</span>.</p>
 </div>
 </details></section>
-</div><section id="calculating-the-inverse-of-a-matrix-using-gauss-jordan-elimination">
-<h2><span class="section-number">2.6.1. </span>Calculating the inverse of a matrix using Gauss-Jordan elimination<a class="headerlink" href="#calculating-the-inverse-of-a-matrix-using-gauss-jordan-elimination" title="Permalink to this heading">#</a></h2>
-<p>Gauss-Jordan elimination allows us to calculate the inverse of matrices which is much more computationally efficient than the <a class="reference internal" href="1.4_Inverse_matrix.html#adjoint-definition">adjoint-determinant formula</a>. To show how we can use ERO to calculate an inverse of a matrix we first need to consider elementary matrices.</p>
+</div><section id="elementary-matrices">
+<h2><span class="section-number">2.7.1. </span>Elementary matrices<a class="headerlink" href="#elementary-matrices" title="Permalink to this heading">#</a></h2>
+<p>Gauss-Jordan elimination allows us to calculate the inverse of matrices which is much more computationally efficient than the <a class="reference internal" href="1.5_Inverse_matrix.html#adjoint-definition">adjoint-determinant formula</a>. To show how we can use ERO to calculate an inverse of a matrix we first need to consider elementary matrices.</p>
 <div class="proof definition admonition" id="elementary-matrices-definition">
-<p class="admonition-title"><span class="caption-number">Definition 2.6 </span> (Elementary matrices)</p>
+<p class="admonition-title"><span class="caption-number">Definition 2.7 </span> (Elementary matrices)</p>
 <section class="definition-content" id="proof-content">
 <p>An <strong>elementary matrix</strong> is an <span class="math notranslate nohighlight">\(n \times n\)</span> square matrix obtained by performing a single elementary row operation to the identity matrix <span class="math notranslate nohighlight">\(I_n\)</span></p>
 </section>
-</div><p>Since we have <a class="reference internal" href="2.3_Gaussian_elimination.html#ero-definition">three types</a> of elementary row operations there are three types of elementary matrices. Consider the examples of the three type for <span class="math notranslate nohighlight">\(I_3\)</span>:</p>
-<ul class="simple">
-<li><p>swap row 1 and row 2:   <span class="math notranslate nohighlight">\(E_1 = \begin{pmatrix} 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}\)</span>;</p></li>
-<li><p>multiply row 2 by <span class="math notranslate nohighlight">\(k\)</span>:   <span class="math notranslate nohighlight">\(E_2 = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; k &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}\)</span>;</p></li>
-<li><p>add <span class="math notranslate nohighlight">\(k\)</span> multiplies of row 1 from row 3:   <span class="math notranslate nohighlight">\(E_3 = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ k &amp; 0 &amp; 1 \end{pmatrix}\)</span>.</p></li>
-</ul>
-<p>Elementary matrices have an inverse which is obtained by inverting the elementary row operation and applying it to the identity matrix. Consider the inverse operations to those shown above:</p>
-<ul class="simple">
-<li><p>swap row 1 and row 2:   <span class="math notranslate nohighlight">\(E_1 = \begin{pmatrix} 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}\)</span>;</p></li>
-<li><p>divide row 2 by <span class="math notranslate nohighlight">\(k\)</span>:   <span class="math notranslate nohighlight">\(E_2 = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1/k &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}\)</span>;</p></li>
-<li><p>subtract <span class="math notranslate nohighlight">\(k\)</span> multiplies of row 1 from row 3:   <span class="math notranslate nohighlight">\(E_3 = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ -k &amp; 0 &amp; 1 \end{pmatrix}\)</span>.</p></li>
-</ul>
-<p>Since the inverse of an elementary matrix is obtained by applying an elementary row operation to the identity matrix, by definition it must also be an elementary matrix.</p>
+</div><p>Since we have <a class="reference internal" href="2.3_Gaussian_elimination.html#ero-definition">three types</a> of elementary row operations there are three types of elementary matrices. Consider the examples of the three type for <span class="math notranslate nohighlight">\(I_3\)</span> in <a class="reference internal" href="#elementary-matrices-table"><span class="std std-numref">Table 2.1</span></a>.</p>
+<table class="table" id="elementary-matrices-table">
+<caption><span class="caption-number">Table 2.1 </span><span class="caption-text"><span class="math notranslate nohighlight">\(3\times 3\)</span> elementary matrices</span><a class="headerlink" href="#elementary-matrices-table" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Row operation</p></th>
+<th class="head"><p>Elementary matrix</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Swap row 1 and row 2</p></td>
+<td><p><span class="math notranslate nohighlight">\(\begin{pmatrix} 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Multiply row 2 by <span class="math notranslate nohighlight">\(k\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; k &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Add <span class="math notranslate nohighlight">\(k\)</span> multiples of row 1 to row 3</p></td>
+<td><p><span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ k &amp; 0 &amp; 1 \end{pmatrix}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Elementary matrices have an inverse which is obtained by inverting the elementary row operation and applying it to the identity matrix. Consider the inverse operations in <a class="reference internal" href="#inverse-elementary-matrices-table"><span class="std std-numref">Table 2.2</span></a> to those from <a class="reference internal" href="#elementary-matrices-table"><span class="std std-numref">Table 2.1</span></a>.</p>
+<table class="table" id="inverse-elementary-matrices-table">
+<caption><span class="caption-number">Table 2.2 </span><span class="caption-text"><span class="math notranslate nohighlight">\(3\times 3\)</span> inverse elementary matrices</span><a class="headerlink" href="#inverse-elementary-matrices-table" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Row operation</p></th>
+<th class="head"><p>Inverse elementary matrix</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Swap row 1 and row 2</p></td>
+<td><p><span class="math notranslate nohighlight">\(\begin{pmatrix} 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Multiply row 2 by <span class="math notranslate nohighlight">\(k\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1/k &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Add <span class="math notranslate nohighlight">\(k\)</span> multiples of row 1 to row 3</p></td>
+<td><p><span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ -k &amp; 0 &amp; 1 \end{pmatrix}\)</span></p></td>
+</tr>
+</tbody>
+</table>
 <div class="proof theorem admonition" id="elementary-matrix-multiplication-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 2.3 </span> (Multiplying by an elementary matrix)</p>
 <section class="theorem-content" id="proof-content">
 <p>IF <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix and <span class="math notranslate nohighlight">\(E\)</span> is an elementary matrix the product <span class="math notranslate nohighlight">\(EA\)</span> is equivalent to performing the elementary row operation used to obtain <span class="math notranslate nohighlight">\(E\)</span> on <span class="math notranslate nohighlight">\(A\)</span>.</p>
 </section>
-</div><p>For example, let <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 0 &amp; 4 \\ 2 &amp; -1 &amp; 3 \\ 0 &amp; 5 &amp; 1 \end{pmatrix}\)</span> and consider the following row operations:</p>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Since the inverse of an elementary matrix is obtained by applying an elementary row operation to the identity matrix, by definition it must also be an elementary matrix.</p>
+</div>
+<p>For example, let <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 0 &amp; 4 \\ 2 &amp; -1 &amp; 3 \\ 0 &amp; 5 &amp; 1 \end{pmatrix}\)</span> and consider the following row operations:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(R_1 \leftrightarrow R_2\)</span>:   <span class="math notranslate nohighlight">\(E_1 = \begin{pmatrix} 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}\)</span> so <span class="math notranslate nohighlight">\(E_1A = \begin{pmatrix} 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} \begin{pmatrix} 1 &amp; 0 &amp; 4 \\ 2 &amp; -1 &amp; 3 \\ 0 &amp; 5 &amp; 1 \end{pmatrix} =  \begin{pmatrix} 2 &amp; -1 &amp; 3 \\ 1 &amp; 0 &amp; 4 \\ 0 &amp; 5 &amp; 1 \end{pmatrix}\)</span>;</p></li>
-<li><p><span class="math notranslate nohighlight">\(-2R_2\)</span>:   <span class="math notranslate nohighlight">\(E_2 = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; -2 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}\)</span> so <span class="math notranslate nohighlight">\(E_2A = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; -2 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} \begin{pmatrix} 1 &amp; 0 &amp; 4 \\ 2 &amp; -1 &amp; 3 \\ 0 &amp; 5 &amp; 1 \end{pmatrix}=\begin{pmatrix} 1 &amp; 0 &amp; 4 \\ -4 &amp; 2 &amp; -6 \\ 0 &amp; 5 &amp; 1 \end{pmatrix}\)</span>;</p></li>
-<li><p><span class="math notranslate nohighlight">\(R_3 + 3R_2\)</span>:   <span class="math notranslate nohighlight">\(E_3 = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 3 &amp; 1 \end{pmatrix}\)</span> so <span class="math notranslate nohighlight">\(E_3A = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 3 &amp; 1 \end{pmatrix} \begin{pmatrix} 1 &amp; 0 &amp; 4 \\ 2 &amp; -1 &amp; 3 \\ 0 &amp; 5 &amp; 1 \end{pmatrix} = \begin{pmatrix} 1 &amp; 0 &amp; 4 \\ 2 &amp; -1 &amp; 3 \\ 6 &amp; 2 &amp; 10 \end{pmatrix}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(R_1 \leftrightarrow R_2\)</span>:   <span class="math notranslate nohighlight">\(E_1 = \begin{pmatrix} 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}\)</span> so</p></li>
 </ul>
-<p>Consider a matrix <span class="math notranslate nohighlight">\(A\)</span> that has been reduced to reduced row echelon form, i.e., <span class="math notranslate nohighlight">\(I\)</span>, by applying <span class="math notranslate nohighlight">\(k\)</span> elementary row operations with corresponding elementary matrices <span class="math notranslate nohighlight">\(E_1, E_2, \ldots, E_k\)</span> then</p>
 <div class="math notranslate nohighlight">
-\[ I = E_k E_{k-1} \cdots E_2 E_1 A. \]</div>
-<p>Right-mutiplying both sides by <span class="math notranslate nohighlight">\(A^{-1}\)</span>gives</p>
+\[\begin{split}E_1A = \begin{pmatrix} 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} \begin{pmatrix} 1 &amp; 0 &amp; 4 \\ 2 &amp; -1 &amp; 3 \\ 0 &amp; 5 &amp; 1 \end{pmatrix} =  \begin{pmatrix} 2 &amp; -1 &amp; 3 \\ 1 &amp; 0 &amp; 4 \\ 0 &amp; 5 &amp; 1 \end{pmatrix}\end{split}\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(-2R_2\)</span>:   <span class="math notranslate nohighlight">\(E_2 = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; -2 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}\)</span> so</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}E_2A = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; -2 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} \begin{pmatrix} 1 &amp; 0 &amp; 4 \\ 2 &amp; -1 &amp; 3 \\ 0 &amp; 5 &amp; 1 \end{pmatrix}=\begin{pmatrix} 1 &amp; 0 &amp; 4 \\ -4 &amp; 2 &amp; -6 \\ 0 &amp; 5 &amp; 1 \end{pmatrix}\end{split}\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(R_3 + 3R_2\)</span>:   <span class="math notranslate nohighlight">\(E_3 = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 3 &amp; 1 \end{pmatrix}\)</span> so</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}E_3A = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 3 &amp; 1 \end{pmatrix} \begin{pmatrix} 1 &amp; 0 &amp; 4 \\ 2 &amp; -1 &amp; 3 \\ 0 &amp; 5 &amp; 1 \end{pmatrix} = \begin{pmatrix} 1 &amp; 0 &amp; 4 \\ 2 &amp; -1 &amp; 3 \\ 6 &amp; 2 &amp; 10 \end{pmatrix}\end{split}\]</div>
+</section>
+<section id="calculating-the-inverse-of-a-matrix-using-gauss-jordan-elimination">
+<h2><span class="section-number">2.7.2. </span>Calculating the inverse of a matrix using Gauss-Jordan elimination<a class="headerlink" href="#calculating-the-inverse-of-a-matrix-using-gauss-jordan-elimination" title="Permalink to this heading">#</a></h2>
+<div class="proof theorem admonition" id="theorem-5">
+<p class="admonition-title"><span class="caption-number">Theorem 2.4 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(A\)</span> is a non-singular square matrix then the inverse of <span class="math notranslate nohighlight">\(A\)</span> can be calculated using</p>
+<div class="math notranslate nohighlight">
+\[A^{-1} = E_kE_{k-1}\cdots E_2E_1.\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Applying <span class="math notranslate nohighlight">\(k\)</span> elementary row operations with corresponding elementary matrices <span class="math notranslate nohighlight">\(E_1, E_2, \ldots, E_k\)</span> to row reduce <span class="math notranslate nohighlight">\(A\)</span> to reduced row echelon form then</p>
+<div class="math notranslate nohighlight">
+\[ I = E_k E_{k-1} \cdots E_2 E_1 A\]</div>
+<p>Multiplying <span class="math notranslate nohighlight">\(A^{-1}\)</span> to the right of both sides gives</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
 I A^{-1} &amp;= E_k E_{k-1} \cdots E_2 E_1 A A^{-1} \\
-A^{-1} &amp;= E_k E_{k-1} \cdots E_2 E_1 I.
+A^{-1} &amp;= E_k E_{k-1} \cdots E_2 E_1.
 \end{align*} \end{split}\]</div>
-<p>In other words, we can calculate the inverse of <span class="math notranslate nohighlight">\(A\)</span> by applying the same row operations to the identity matrix as we do when we reduce <span class="math notranslate nohighlight">\(A\)</span> to reduced row echelon form. For brevity we do this by forming an augmented matrix <span class="math notranslate nohighlight">\((A \mid I)\)</span> and perform Gauss-Jordan elimination on the augmented matrix. Once this has been reduced to reduced row echelon form the matrix to the right of the partition is the inverse of <span class="math notranslate nohighlight">\(A\)</span>.</p>
-<p>The calculation of a matrix inverse using Gauss-Jordan elimination is more efficient that using the adjoint- determinant formula when dealing with larger matrices (i.e., when <span class="math notranslate nohighlight">\(n &gt; 3\)</span>) since the steps can be easily programmed into a computer and it does not require the calculation of determinants which can be computationally expensive.</p>
+</div>
+<p>So we can calculate the inverse of <span class="math notranslate nohighlight">\(A\)</span> by applying the same row operations to the identity matrix as we do when we reduce <span class="math notranslate nohighlight">\(A\)</span> to reduced row echelon form. For brevity we do this by forming an augmented matrix <span class="math notranslate nohighlight">\((A \mid I)\)</span> and perform Gauss-Jordan elimination on the augmented matrix. Once this has been reduced to reduced row echelon form the matrix to the right of the partition is the inverse of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>The calculation of a matrix inverse using Gauss-Jordan elimination is more efficient that using the adjoint-determinant formula when dealing with larger matrices (i.e., when <span class="math notranslate nohighlight">\(n &gt; 3\)</span>) since the steps can be easily programmed into a computer and it does not require the calculation of determinants which can be computationally expensive.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WKz40mnevwE?si=xLZZRR2JT9TeQa8m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <div class="proof example admonition" id="gauss-jordan-inverse-example">
 <p class="admonition-title"><span class="caption-number">Example 2.6 </span></p>
@@ -577,7 +628,7 @@ A^{-1} &amp;= E_k E_{k-1} \cdots E_2 E_1 I.
 \end{pmatrix}.\end{split}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Solution (click to show)<div class="sd-summary-down docutils">
+Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -691,7 +742,7 @@ Solution (click to show)<div class="sd-summary-down docutils">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.5. </span>Partial pivoting</p>
+        <p class="prev-next-title"><span class="section-number">2.6. </span>Partial pivoting</p>
       </div>
     </a>
     <a class="right-next"
@@ -699,7 +750,7 @@ Solution (click to show)<div class="sd-summary-down docutils">
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.7. </span>Consistent, inconsistent and indeterminate systems</p>
+        <p class="prev-next-title"><span class="section-number">2.8. </span>Consistent, inconsistent and indeterminate systems</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -721,7 +772,8 @@ Solution (click to show)<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-inverse-of-a-matrix-using-gauss-jordan-elimination">2.6.1. Calculating the inverse of a matrix using Gauss-Jordan elimination</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elementary-matrices">2.7.1. Elementary matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-inverse-of-a-matrix-using-gauss-jordan-elimination">2.7.2. Calculating the inverse of a matrix using Gauss-Jordan elimination</a></li>
 </ul>
   </nav></div>
 
