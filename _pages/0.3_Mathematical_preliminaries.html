@@ -67,8 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/0.3_Mathematical_preliminaries';</script>
-    <link rel="canonical" href="https://jonshiach.github.io/LA-book/_pages/0.3_Mathematical_preliminaries.html" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="How to pass the unit" href="0.5_How_to_pass.html" />
@@ -153,7 +152,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="0_intro.html">
-                    <no title>
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -224,7 +223,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="B_Linear_systems_exercises_solutions.html">B. Systems of Linear Equations Exercises Solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="C_Vectors_exercises_solutions.html">C. Vectors Exercises Solutions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="D_Coordinate_geometry_exercises_solutions.html">D. Co-ordinate Geometry Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="E_Vector_spaces_exercises_solutions.ipynb.html">E. Vector Spaces Exercises Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="E_Vector_spaces_exercises_solutions.html">E. Vector Spaces Exercises Solutions</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -399,19 +398,53 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="mathematical-preliminaries">
 <h1>Mathematical preliminaries<a class="headerlink" href="#mathematical-preliminaries" title="Permalink to this heading">#</a></h1>
 <p>It is assumed that readers are familiar with the following.</p>
+<hr class="docutils" />
 <section id="sets-of-numbers">
 <h2>Sets of numbers<a class="headerlink" href="#sets-of-numbers" title="Permalink to this heading">#</a></h2>
-<p>The following notation is used to denote the <a href="https://en.wikipedia.org/wiki/Set_(mathematics)#Special_sets_of_numbers_in_mathematics" target="_target">sets of numbers</a>:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\mathbb{N}\)</span> is the set of natural numbers: <span class="math notranslate nohighlight">\(\mathbb{N} = \{1, 2, \ldots\}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is the set of integer numbers: <span class="math notranslate nohighlight">\(\mathbb{Z} = \{\ldots, 2, 1, 0, 1, 2, \ldots \}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is the set of rational numbers: <span class="math notranslate nohighlight">\(\mathbb{Q} = \left\{ \dfrac{a}{b} : a, b \in \mathbb{Z} \right\}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is the set of real numbers: <span class="math notranslate nohighlight">\(\mathbb{R} = \{ -\infty, \ldots, \infty\}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\mathbb{C}\)</span> is the set of complex numbers: <span class="math notranslate nohighlight">\(\mathbb{C} = \{ a + bi : a, b \in \mathbb{R}, i = \sqrt{-1} \}\)</span></p></li>
-</ul>
+<p>Numbers are classified into different sets based on their properties.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Type</p></th>
+<th class="head text-center"><p>Symbol</p></th>
+<th class="head text-left"><p>Explanation</p></th>
+<th class="head text-left"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Natural</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathbb{N}\)</span></p></td>
+<td class="text-left"><p>Positive whole numbers</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(0, 1, 2\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Integer</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathbb{Z}\)</span></p></td>
+<td class="text-left"><p>All whole numbers including negatives</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(-1, 0, 1, 2\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Rational</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathbb{Q}\)</span></p></td>
+<td class="text-left"><p>Numbers expressed as a fraction of two integers, <span class="math notranslate nohighlight">\(\dfrac{a}{b}\)</span> where <span class="math notranslate nohighlight">\(b \neq 0\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\dfrac{1}{2}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Real</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathbb{R}\)</span></p></td>
+<td class="text-left"><p>Any number that can be expressed on a number line</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\sqrt{2}, \pi\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Complex</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\mathbb{C}\)</span></p></td>
+<td class="text-left"><p>A real number added to a multiply of an <a class="reference internal" href="#imaginary-numbers-section"><span class="std std-ref">imaginary number</span></a></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(1 + 2i\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>The sets of numbers are related by</p>
+<div class="math notranslate nohighlight">
+\[ \mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R} \subset \mathbb{C}. \]</div>
 </section>
+<hr class="docutils" id="axioms-of-addition-and-multiplication-section" />
 <section id="axioms-of-addition-and-multiplication">
-<span id="axioms-of-addition-and-multiplication-section"></span><h2>Axioms of addition and multiplication<a class="headerlink" href="#axioms-of-addition-and-multiplication" title="Permalink to this heading">#</a></h2>
+<h2>Axioms of addition and multiplication<a class="headerlink" href="#axioms-of-addition-and-multiplication" title="Permalink to this heading">#</a></h2>
 <p>An <strong>axiom</strong> is a rule that we assume is true for a starting point for further reasoning and arguments. The following nine axioms apply to addition and multiplication, denoted by <span class="math notranslate nohighlight">\(+\)</span> and <span class="math notranslate nohighlight">\(\times\)</span> respectively, over a field <span class="math notranslate nohighlight">\(F\)</span> (e.g., <span class="math notranslate nohighlight">\(F\)</span> could be the set of all numbers). For every <span class="math notranslate nohighlight">\(x,y,z \in F\)</span>:</p>
 <ul class="simple">
 <li><p><strong>Commutativity of addition</strong>: <span class="math notranslate nohighlight">\(x + y = y + x\)</span></p></li>
@@ -425,6 +458,7 @@ document.write(`
 <li><p><strong>Distributive law</strong>: <span class="math notranslate nohighlight">\(x(y + z) = xy + xz\)</span></p></li>
 </ul>
 </section>
+<hr class="docutils" id="imaginary-numbers-section" />
 <section id="imaginary-numbers">
 <h2>Imaginary numbers<a class="headerlink" href="#imaginary-numbers" title="Permalink to this heading">#</a></h2>
 <p>The <a href="https://en.wikipedia.org/wiki/Imaginary_number" target="_blank">imaginary number</a> is denoted by <span class="math notranslate nohighlight">\(i\)</span> (some disciplines use <span class="math notranslate nohighlight">\(j\)</span> to denote the imaginary number) and defined to be <span class="math notranslate nohighlight">\(i^2 = -1\)</span>. <a href="https://en.wikipedia.org/wiki/Complex_number" target="_blank">Complex numbers</a> are numbers of the form <span class="math notranslate nohighlight">\(a + bi\)</span> where <span class="math notranslate nohighlight">\(a,b\in \mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(a\)</span> is called the <strong>real part</strong> and <span class="math notranslate nohighlight">\(b\)</span> is called the <strong>imaginary part</strong>.</p>
@@ -436,19 +470,23 @@ document.write(`
 <li><p>complex conjugate: if <span class="math notranslate nohighlight">\(z = a + bi\)</span> then the complex conjugate of <span class="math notranslate nohighlight">\(z\)</span> is <span class="math notranslate nohighlight">\(\bar{z} = a - bi\)</span>;</p></li>
 </ul>
 </section>
+<hr class="docutils" />
 <section id="summation">
 <h2>Summation<a class="headerlink" href="#summation" title="Permalink to this heading">#</a></h2>
 <p>The <a href="https://en.wikipedia.org/wiki/Summation" target="_blank">summuation</a> of a set of objects <span class="math notranslate nohighlight">\(a_1, a_2, \ldots, a_n\)</span> is denoted using</p>
 <div class="math notranslate nohighlight">
 \[\sum_{i=1}^n a_i = a_1 + a_2 + \cdots + a_n,\]</div>
-<p>where the uppercase Greek letter sigma <span class="math notranslate nohighlight">\(\sum\)</span> denotes the summation, bottom delimiter <span class="math notranslate nohighlight">\(i=1\)</span> indicates that the summation begins at the element indexed <span class="math notranslate nohighlight">\(i=1\)</span>, and the top delimiter <span class="math notranslate nohighlight">\(n\)</span> indicates that the summation end at the element indexed <span class="math notranslate nohighlight">\(i=n\)</span>.</p>
+<p>where the uppercase Greek letter sigma <span class="math notranslate nohighlight">\(\Sigma\)</span> denotes the summation, the lower delimiter <span class="math notranslate nohighlight">\(i=1\)</span> indicates that the summation begins at the element <span class="math notranslate nohighlight">\(i=1\)</span>, and the upper delimiter <span class="math notranslate nohighlight">\(n\)</span> indicates that the summation end at the element indexed <span class="math notranslate nohighlight">\(i=n\)</span>. For example,</p>
+<div class="math notranslate nohighlight">
+\[ \sum_{i=1}^5 i = 1 + 2 + 3 + 4 + 5 = 15. \]</div>
 </section>
+<hr class="docutils" />
 <section id="definitions-theorems-proofs-and-examples">
 <h2>Definitions, theorems, proofs and examples<a class="headerlink" href="#definitions-theorems-proofs-and-examples" title="Permalink to this heading">#</a></h2>
 <p>These notes use standard constructs to present mathematical ideas.</p>
 <section id="definitions">
 <h3>Definitions<a class="headerlink" href="#definitions" title="Permalink to this heading">#</a></h3>
-<p>A <strong>definition</strong> is a statement that precisely describes the meaning of a mathematical concept or term. It provides clarity and establishes a common understanding of a specific mathematical object, property, or relationship. In these notes definitions are presented like the following:</p>
+<p>A <strong>definition</strong> is a statement that precisely describes the meaning of a mathematical concept or term. It provides clarity and establishes a common understanding of a specific mathematical object, property, or relationship. Here definitions are presented like the following:</p>
 <div class="proof definition admonition" id="definition-0">
 <p class="admonition-title"><span>Definition </span></p>
 <section class="definition-content" id="proof-content">
@@ -457,7 +495,7 @@ document.write(`
 </div></section>
 <section id="theorems">
 <h3>Theorems<a class="headerlink" href="#theorems" title="Permalink to this heading">#</a></h3>
-<p>A mathematical <strong>theorem</strong> is a statement that has been proven to be true based on a set of axioms and previously established results or assumptions. In these notes theorems are presented like the following:</p>
+<p>A mathematical <strong>theorem</strong> is a statement that has been proven to be true based on a set of axioms and previously established results or assumptions. Here theorems are presented like the following:</p>
 <div class="proof theorem admonition" id="theorem-1">
 <p class="admonition-title"><span>Theorem </span></p>
 <section class="theorem-content" id="proof-content">
@@ -466,7 +504,7 @@ document.write(`
 </div></section>
 <section id="proofs">
 <h3>Proofs<a class="headerlink" href="#proofs" title="Permalink to this heading">#</a></h3>
-<p>A mathematical <strong>proof</strong> is a logical argument or demonstration that establishes the truth or validity of a mathematical statement or theorem. It is a rigorous and systematic process used to justify mathematical claims and establish certainty about mathematical assertions. In these notes proofs are presented like the following</p>
+<p>A mathematical <strong>proof</strong> is a logical argument or demonstration that establishes the truth or validity of a mathematical statement or theorem. It is a rigorous and systematic process used to justify mathematical claims and establish certainty about mathematical assertions. Here proofs are presented like the following</p>
 <div class="proof admonition" id="proof">
 <p>Proof. Assume there are a finite number of primes <span class="math notranslate nohighlight">\(p_1, p_2, \ldots, p_n\)</span>. Let</p>
 <div class="math notranslate nohighlight">
@@ -481,7 +519,7 @@ document.write(`
 </section>
 <section id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h3>
-<p>A mathematical <strong>example</strong> refers to an instance or case that illustrates a concept, property, or theorem in mathematics. It serves as a specific instance that helps to understand and apply mathematical ideas and principles. These notes make extensive use of examples to help you understand and apply the concepts that have been covered. These are designed for you to following in class but the solutions of which are also given in a dropdown box.</p>
+<p>A mathematical <strong>example</strong> refers to an instance or case that illustrates a concept, property, or theorem in mathematics. It serves as a specific instance that helps to understand and apply mathematical ideas and principles. Here examples are used to help you understand and apply the concepts that have been covered. These are designed for you to following in class but the solutions of which are also given in a dropdown box.</p>
 <div class="proof example admonition" id="example-2">
 <p class="admonition-title"><span>Example </span></p>
 <section class="example-content" id="proof-content">
@@ -614,7 +652,7 @@ By Dr Jon Shiach
     
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2024.
       <br/>
     
   </p>

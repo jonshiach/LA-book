@@ -1,6 +1,7 @@
 
+# Introduction
 
-These are the lecture notes that accompany the teaching of linear algebra on the first year of the Mathematics course at the Manchester Metropolitan university. They can be accessed through a standard web browser on a computer or mobile device. Whilst these notes cover all of the material necessary for students to successfully pass the unit, it is advisable to seek out other sources of information either on the internet or textbooks. Mathematical notation can differ between authors and these notes have been written to use notation that is most commonly found online.
+These are the materials that accompany the teaching of linear algebra on the first year of the Mathematics course at the Manchester Metropolitan University. Whilst these notes cover all of the material necessary for students to successfully pass the unit, it is advisable to seek out other sources of information either on the internet or textbooks. Mathematical notation can differ between authors and these notes have been written to use notation that is most commonly found online.
 
 `````{grid} 1 1 2 3
 :class-container: text-center
