@@ -1,74 +1,91 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Linear Algebra
-author: Dr Jon Shiach
-# logo: _images/logo.png
-copyright : "2023"  # Copyright year to be placed in the footer
+# ghp-import -n -p -f _build/html
 
-# Force re-execution of notebooks on each build.
-# See https://jupyterbook.org/content/execute.html
+#######################################################################################
+# Book settings
+title                 : Linear Algebra
+author                : Dr Jon Shiach
+copyright             : "2024"
+logo                  : ""
+only_build_toc_files  : true
+
+#######################################################################################
+# Execution settings
 execute:
-  execute_notebooks: force
+  execute_notebooks: auto
 
-# Define the name of the latex output file for PDF builds
-latex:
-  latex_documents:
-    targetname: book.tex
+#######################################################################################
+# Parse and render settings
+parse:
+  myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
+    - amsmath
+    - colon_fence
+    # - deflist
+    - dollarmath
+    # - html_admonition
+    # - html_image
+    - linkify
+    # - replacements
+    # - smartquotes
+    - substitution
+    - tasklist
+  myst_url_schemes: [mailto, http, https] # URI schemes that will be recognised as external URLs in Markdown links
+  myst_dmath_double_inline: true  # Allow display math ($$) within an inline context
+  
 
-# Add a bibtex file so that we can create citations
-# bibtex_bibfiles:
-#   - references.bib
-
-# Information about where the book exists on the web
-repository:
-  url: https://github.com/jonshiach/LA-book  # Online location of your book
-  path_to_book: /  # Optional path to your book, relative to the repository root
-  branch: main  # Which branch of the repository should be used when creating links (optional)
-
-# Add GitHub buttons to your book
-# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+#######################################################################################
+# HTML-specific settings
 html:
-  favicon                   : "_images/favicon.ico"  # A path to a favicon image
+  favicon                   : "_images/favicon.png"  # A path to a favicon image
   use_edit_page_button      : false  # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
   use_repository_button     : false  # Whether to add a link to your repository button
   use_issues_button         : false  # Whether to add an "open an issue" button
   use_multitoc_numbering    : true   # Continuous numbering across parts/chapters
-  extra_navbar              : Powered by <a href="https://jupyterbook.org">Jupyter Book</a>  # Will be displayed underneath the left navbar.
   extra_footer              : ""  # Will be displayed underneath the footer.
   google_analytics_id       : ""  # A GA id that can be used to track book views.
   home_page_in_navbar       : true  # Whether to include your home page in the left Navigation Bar
-  baseurl                   : "https://jonshiach.github.io/LA-book/"  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
+  baseurl                   : ""  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
+  analytics:
+    plausible_analytics_url: https://plausible.io/js/script.js
+
   comments:
     hypothesis              : false
     utterances              : false
   announcement              : "" # A banner announcement at the top of the site.
 
+
+#######################################################################################
+# LaTeX-specific settings
+latex:
+  latex_engine              : pdflatex  # one of 'pdflatex', 'xelatex' (recommended for unicode), 'luatex', 'platex', 'uplatex'
+  use_jupyterbook_latex     : true # use sphinx-jupyterbook-latex for pdf builds as default
+
+#######################################################################################
+# Launch button settings
 launch_buttons:
+  notebook_interface        : classic  # The interface interactive links will activate ["classic", "jupyterlab"]
   binderhub_url             : ""  # The URL of the BinderHub (e.g., https://mybinder.org)
+  jupyterhub_url            : ""  # The URL of the JupyterHub (e.g., https://datahub.berkeley.edu)
+  thebe                     : false  # Add a thebe button to pages (requires the repository to run on Binder)
+  colab_url                 : "" # The URL of Google Colab (https://colab.research.google.com)
 
-parse:
-  myst_enable_extensions:
-     - dollarmath
-     - linkify
-     - substitution
-     - colon_fence
-     - amsmath
-     - html_admonition
+repository:
+  url                       : https://github.com/jonshiach/LA-book  # The URL to your book's repository
+  path_to_book              : ""  # A path to your book's folder, relative to the repository root.
+  branch                    : master  # Which branch of the repository should be used when creating links
 
+#######################################################################################
+# Advanced and power-user settings
 sphinx:
   config:
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-    # bibtex_reference_style: author_year
-    # html_favicon: "_images/favicon.ico"   
     mathjax3_config:
       tex:
         macros:
           "vec": ["\\mathbf{#1}", 1]
+          "adj": ["\\operatorname{adj}(#1)", 1]
   extra_extensions:
     - sphinx_proof
     - sphinx_exercise
-
-only_build_toc_files: true
-
-exclude_patterns: [README.md]

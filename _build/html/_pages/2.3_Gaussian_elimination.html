@@ -64,11 +64,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}(#1)", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/2.3_Gaussian_elimination';</script>
-    <link rel="canonical" href="https://jonshiach.github.io/LA-book/_pages/2.3_Gaussian_elimination.html" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2.6. Partial pivoting" href="2.4_Partial_pivoting.html" />
@@ -153,7 +152,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="0_intro.html">
-                    <no title>
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -214,17 +213,21 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="6.2_Composite_transformations.html">6.2. Composite linear transformations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.3_Rotation_reflection_and_translation.html">6.3. Rotation, reflection and scaling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.4_Translation.html">6.4. Translation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.5. Transformations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transforation_exercises.html">6.5. Transformations exercises</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="A_Matrices_exercises_solutions.html">A. Matrices Exercise Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B_Linear_systems_exercises_solutions.html">B. Systems of Linear Equations Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="C_Vectors_exercises_solutions.html">C. Vectors Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="D_Coordinate_geometry_exercises_solutions.html">D. Co-ordinate Geometry Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="E_Vector_spaces_exercises_solutions.ipynb.html">E. Vector Spaces Exercises Solutions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="A_Exercise_solutions.html">Exercise Solutions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations Exercise Solutions</a></li>
+</ul>
+</li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -415,7 +418,7 @@ document.write(`
     4x_2 - 8x_3 &amp;= -8, \\
     - x_2 + 3x_3 &amp;= -2.
 \end{align*} \end{split}\]</div>
-<p>Multiply the second equation by <span class="math notranslate nohighlight">\(1/4\)</span></p>
+<p>Multiply the second equation by <span class="math notranslate nohighlight">\(\dfrac{1}{4}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     x_1 - x_2 + 2x_3 &amp;= 3, \\
@@ -432,10 +435,10 @@ document.write(`
 <p>Here the third equation gives the solution to <span class="math notranslate nohighlight">\(x_3=-4\)</span>. We can substitute the value of <span class="math notranslate nohighlight">\(x_3\)</span> into the other two to find the solutions of <span class="math notranslate nohighlight">\(x_2\)</span> and <span class="math notranslate nohighlight">\(x_1\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    x_2 - 2(-4) &amp;= -2 &amp;
-    \implies x_2 &amp;= -10, \\
-    x_1 - (-10) + 2(-4) &amp;= 3 &amp;
-    \implies x_1 &amp;= 1.
+    x_2 - 2(-4) &amp;= -2, \\
+    \therefore x_2 &amp;= -2 + 2(-4) = -10, \\
+    x_1 - (-10) + 2(-4) &amp;= 3 \\
+    \therefore x_1 &amp;= 3 + (-10) - 2(-4) = 1.
 \end{align*} \end{split}\]</div>
 <p>In this method, we used three types of operations on the equations in the system. These operations are known as elementary row operations.</p>
 <div class="proof definition admonition" id="ero-definition">
@@ -466,18 +469,13 @@ document.write(`
 \end{array}
 \right). \end{split}\]</div>
 <p>Elementary row operations are applied to the augmented matrix so that we reduce it to what is known as row echelon form where the solution of the system can be easily calculated.</p>
-<div class="proof definition admonition" id="definition-2">
-<span id="index-3"></span><p class="admonition-title"><span class="caption-number">Definition 2.4 </span> (Pivot element)</p>
-<section class="definition-content" id="proof-content">
-<p>The <strong>pivot element</strong> is the first non zero element in a row.</p>
-</section>
-</div><div class="proof definition admonition" id="ref-definition">
-<span id="index-4"></span><p class="admonition-title"><span class="caption-number">Definition 2.5 </span> (Row Echelon Form (REF))</p>
+<span class="target" id="index-3"></span><div class="proof definition admonition" id="ref-definition">
+<span id="index-4"></span><p class="admonition-title"><span class="caption-number">Definition 2.4 </span> (Row Echelon Form (REF))</p>
 <section class="definition-content" id="proof-content">
 <p>A matrix is said to be in <strong>Row Echelon Form (REF)</strong> if the following conditions are satisfied:</p>
 <ul class="simple">
 <li><p>Any non-zero rows are above any all-zero rows</p></li>
-<li><p>In each non-zero row (with the exception of the first row) the pivot element is to the right of the pivot element in the row above</p></li>
+<li><p>In each non-zero row the <strong>pivot element</strong>, the first non-zero element in the row, is to the right of the pivot element in the row above</p></li>
 </ul>
 </section>
 </div><p>For example, the following matrices are in row echelon form and the red numbers are the pivot elements</p>
@@ -504,7 +502,7 @@ document.write(`
         \color{blue}{1} &amp; -1 &amp; 2 &amp; 3 \\
         \color{blue}{2} &amp; -3 &amp; 7 &amp; 4
     \end{array} \right). \end{split}\]</div>
-<p>The first pivot element is in row 1 column 1 which has a value of 3. We need to apply row operations so that the elements in the column beneath the pivot element are zero. To do so we add a multiple of the pivot row to each of the rows beneath (a <a class="reference internal" href="#ero-definition">type III</a> row operation). Since the pivot element is 3 and the first non-zero element in row 2 is 1, to reduce this to zero we subtract row 1 multiplied by <span class="math notranslate nohighlight">\(1/3\)</span> from row 2.</p>
+<p>The first pivot element is in row 1 column 1 which has a value of 3. We need to apply row operations so that the elements in the column beneath the pivot element are zero. To do so we add a multiple of the pivot row to each of the rows beneath (a <a class="reference internal" href="#ero-definition">type III</a> row operation). Since the pivot element is 3 and the first non-zero element in row 2 is 1, to reduce this to zero we subtract row 1 multiplied by <span class="math notranslate nohighlight">\(\dfrac{1}{3}\)</span> from row 2.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
   \left( \begin{array}{ccc|c}
@@ -519,7 +517,7 @@ document.write(`
       \color{blue}{ 2} &amp; -3 &amp; 7 &amp; 4
   \end{array} \right).
 \end{align*} \end{split}\]</div>
-<p>We also need to do the same to row 3. Since the element row 3 column 1 has a value of 2, we need to subtract row 1 multiplied by <span class="math notranslate nohighlight">\(2/3\)</span> from row 3.</p>
+<p>We also need to do the same to row 3. Since the element row 3 column 1 has a value of 2, we need to subtract row 1 multiplied by <span class="math notranslate nohighlight">\(\dfrac{2}{3}\)</span> from row 3.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \left( \begin{array}{ccc|c}
     \color{red}{3} &amp; 1 &amp; -2 &amp; 1 \\
@@ -532,14 +530,14 @@ document.write(`
     \color{blue}{0} &amp; -4/3 &amp; 8/3 &amp; 8/3 \\
     \color{blue}{0} &amp; -11/3 &amp; 25/3 &amp; 10/3
 \end{array} \right). \end{split}\]</div>
-<p>Note that these two row operations could have been done simultaneously since changing the values in row 2 does not affect row 3 and vice-versa. Column 1 is now in row echelon form so we move to the next pivot element in row 2 which is <span class="math notranslate nohighlight">\(-4/3\)</span>.</p>
+<p>Note that these two row operations could have been done simultaneously since changing the values in row 2 does not affect row 3 and vice-versa. Column 1 is now in row echelon form so we move to the next pivot element in row 2 which is <span class="math notranslate nohighlight">\(-\dfrac{4}{3}\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \left( \begin{array}{ccc|c}
     3 &amp; 1 &amp; -2 &amp; 1 \\
     0 &amp; \color{red}{-4/3} &amp; 8/3 &amp; 8/3 \\
     0 &amp; \color{blue}{-11/3} &amp; 25/3 &amp; 10/3
 \end{array} \right). \end{split}\]</div>
-<p>The element in row 3 column 2 has a value of <span class="math notranslate nohighlight">\(-11/3\)</span> and the pivot element has a value of <span class="math notranslate nohighlight">\(-4/3\)</span> so we need to subtract row 2 multiplied by <span class="math notranslate nohighlight">\((-11/3) / (-4/3) = 11/4\)</span> from row 3.</p>
+<p>The element in row 3 column 2 has a value of <span class="math notranslate nohighlight">\(-\dfrac{11}{3}\)</span> and the pivot element has a value of <span class="math notranslate nohighlight">\(-\dfrac{4}{3}\)</span> so we need to subtract row 2 multiplied by <span class="math notranslate nohighlight">\(-\dfrac{11}{3} \div \left(-\dfrac{4}{3}\right) = \dfrac{11}{4}\)</span> from row 3.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \left( \begin{array}{ccc|c}
     3 &amp; 1 &amp; -2 &amp; 1 \\
@@ -565,7 +563,7 @@ document.write(`
   &amp;&amp; \implies &amp;&amp;
   \begin{array}{rcl}
       3 x_1 + x_2 - 2 x_2 &amp;=&amp; 1, \\
-      -\frac{4}{3} x_2 - \frac{8}{3} x_3 &amp;=&amp; \frac{8}{3}, \\
+      -\dfrac{4}{3} x_2 - \dfrac{8}{3} x_3 &amp;=&amp; \dfrac{8}{3}, \\
       x_3 &amp;=&amp; -4.
   \end{array}
 \end{align*} \end{split}\]</div>
@@ -640,26 +638,39 @@ document.write(`
     \end{array} \right)
 \end{align*} \end{split}\]</div>
 <p>Solving using back substitution gives <span class="math notranslate nohighlight">\(x_1 = 1\)</span>, <span class="math notranslate nohighlight">\(x_2 = -10\)</span> and <span class="math notranslate nohighlight">\(x_3 = -4\)</span> which was the same solution as we saw before.</p>
-<p>The steps used in Gaussian elimination is written in pseudocode in <a class="reference internal" href="#ge-algorithm">Algorithm 2.1</a>.</p>
+<p>The steps used in Gaussian elimination are summarised in <a class="reference internal" href="#ge-algorithm">Algorithm 2.1</a>.</p>
 <div class="proof algorithm admonition" id="ge-algorithm">
 <span id="index-6"></span><p class="admonition-title"><span class="caption-number">Algorithm 2.1 </span> (Gaussian elimination)</p>
 <section class="algorithm-content" id="proof-content">
-<p><strong>Inputs:</strong> An <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span>.</p>
-<p><strong>Outputs:</strong> The matrix <span class="math notranslate nohighlight">\(A\)</span> in row echelon form</p>
+<p><strong>Inputs:</strong> An <span class="math notranslate nohighlight">\(m \times n\)</span> coefficient matrix <span class="math notranslate nohighlight">\(A\)</span> and an <span class="math notranslate nohighlight">\(m\)</span>-element constant vector <span class="math notranslate nohighlight">\(\vec{b}\)</span>.</p>
+<p><strong>Outputs:</strong> An augmented matrix in row echelon form.</p>
+<ol class="arabic simple">
+<li><p>Form the augmented matrix <span class="math notranslate nohighlight">\([ A \mid \vec{b}]\)</span></p></li>
+<li><p>Set pivot row <span class="math notranslate nohighlight">\(k\)</span> to 1</p></li>
+<li><p>For each column <span class="math notranslate nohighlight">\(j\)</span> from 1 to <span class="math notranslate nohighlight">\(n\)</span>:</p>
+<ol class="arabic simple">
+<li><p>Check pivot element:</p>
 <ul class="simple">
-<li><p>The first pivot element is in row 1 and column 1 of <span class="math notranslate nohighlight">\(A\)</span></p></li>
-<li><p>For each column of <span class="math notranslate nohighlight">\(A\)</span></p>
+<li><p>If the pivot element <span class="math notranslate nohighlight">\(a_{kj} = 0\)</span></p>
 <ul>
-<li><p>If the pivot element is zero, perform a row swap with a row beneath the pivot row that has a non-zero element in the pivot column. If no such row exists then move to the next column</p></li>
-<li><p>For each row beneath the pivot row</p>
-<ul>
-<li><p>Subtract the pivot row multiplied by the value in the pivot column of the row divided by the pivot element from the current row</p></li>
+<li><p>Identify a row <span class="math notranslate nohighlight">\(i\)</span> where <span class="math notranslate nohighlight">\(i &gt; j\)</span> and <span class="math notranslate nohighlight">\(a_{ij} \neq 0\)</span>, if no such row exists skip to the next column</p></li>
+<li><p>Swap row <span class="math notranslate nohighlight">\(i\)</span> with row <span class="math notranslate nohighlight">\(k\)</span></p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>Return <span class="math notranslate nohighlight">\(A\)</span></p></li>
+<li><p>Eliminate elements below pivot:</p>
+<ul class="simple">
+<li><p>For each row <span class="math notranslate nohighlight">\(i\)</span> from <span class="math notranslate nohighlight">\(k+1\)</span> to <span class="math notranslate nohighlight">\(m\)</span>:</p>
+<ul>
+<li><p>Subtract <span class="math notranslate nohighlight">\(\dfrac{a_{ij}}{a_{jj}}\)</span> times row <span class="math notranslate nohighlight">\(j\)</span> from row <span class="math notranslate nohighlight">\(i\)</span></p></li>
 </ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
 </section>
 </div><iframe width="560" height="315" src="https://www.youtube.com/embed/iBp-ZUE-G4w?si=SWn6VXnJTyFlNhJ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <div class="proof example admonition" id="ge-example">
@@ -829,7 +840,7 @@ By Dr Jon Shiach
     
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2024.
       <br/>
     
   </p>

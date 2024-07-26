@@ -20,7 +20,7 @@
 
 % R3
 % \begin{tikzpicture}
-%     \tikzmath{\x=0;\y=45;\z=90;\al=3;\lx=2;\ly=1;\lz=1;}
+%     \tikzmath{\x=-30;\y=-\x;\z=90;\al=3;\lx=2;\ly=1;\lz=1;}
 %     \draw [axis] (0,0) -- ++(\x:\al) node at (\x:\al+0.2) {$x$};
 %     \draw [axis] (0,0) -- ++(\y:\al) node at (\y:\al+0.2) {$y$};
 %     \draw [axis] (0,0) -- ++(\z:\al) node at (\z:\al+0.2) {$z$};
@@ -39,11 +39,11 @@
 
 % R3 vector
 % \begin{tikzpicture}
-%     \tikzmath{\x=0;\y=45;\z=90;\al=2;\lx=2;\ly=1;\lz=1;}
+%     \tikzmath{\x=-30;\y=-\x;\z=90;\al=2;\lx=2;\ly=2;\lz=1;}
 %     \draw [axis] (0,0) -- ++(\x:\al) node at (\x:\al+0.2) {$x$};
 %     \draw [axis] (0,0) -- ++(\y:\al) node at (\y:\al+0.2) {$y$};
 %     \draw [axis] (0,0) -- ++(\z:\al) node at (\z:\al+0.2) {$z$};
-%     \coordinate (1) at ($(\x:2)+(\y:1)$);
+%     \coordinate (1) at (0:3);
 %     \coordinate (2) at ($(1)+(\x:\lx)$);
 %     \coordinate (3) at ($(2)+(\y:\ly)$);
 %     \coordinate (4) at ($(1)+(\y:\ly)$);
@@ -78,13 +78,18 @@
 
 % % Position vector
 % \begin{tikzpicture}
-%     \tikzmath{\x=0;\y=45;\z=90;\al=2;\lx=2;\ly=2;\lz=1;}
+%     \tikzmath{\x=-30;\y=-\x;\z=90;\al=2;\lx=2;\ly=2;\lz=1;}
 %     \draw [axis] (0,0) -- ++(\x:\al) node at (\x:\al+0.2) {$x$};
 %     \draw [axis] (0,0) -- ++(\y:\al) node at (\y:\al+0.2) {$y$};
 %     \draw [axis] (0,0) -- ++(\z:\al) node at (\z:\al+0.2) {$z$};
-%     \node [below] at (0, 0) (O) {$(0,0,0)$};
-%     \node [point,label=right:{$(x,y,z)$}] at (30:4) (P) {};
+%     \node [below left] at (0, 0) (O) {$(0,0,0)$};
+%     \node [point,label=right:{$(x,y,z)$}] at (15:4) (P) {};
 %     \draw [vector]  (0, 0) --  (P) node [pos=0.5,below right] {$\vec{p}$};
+% \end{tikzpicture}
+
+% \begin{tikzpicture}
+%     \draw [vector] (0,0) -- ++(20:4) node [pos=0.5,above] {$\vec{a}$};
+%     \draw [<->] ($(0,0)+(-70:0.5)$) -- ++(20:4) node [pos=0.5,below,rotate=20] {$|\vec{a}|$};
 % \end{tikzpicture}
 
 % % Vector equality
@@ -133,27 +138,27 @@
 % \end{tikzpicture}
 
 % Dot product
-\begin{tikzpicture}
-    \draw [vector] (0, 0) -- node [below] {$\vec{a}$} ++(0:3);
-    \draw [vector, red] (0, 0) -- node [above left] {$\vec{b}$} ++(45:3);
-    \draw (0:1) arc (0:45:1);
-    \node at (22.5:0.67) {$\theta$};
-\end{tikzpicture}
+% \begin{tikzpicture}
+%     \draw [vector] (0, 0) -- node [below] {$\vec{a}$} ++(0:3);
+%     \draw [vector, red] (0, 0) -- node [above left] {$\vec{b}$} ++(45:3);
+%     \draw (0:1) arc (0:45:1);
+%     \node at (22.5:0.67) {$\theta$};
+% \end{tikzpicture}
 
 % % Cross product
 % \begin{tikzpicture}
-%     \tikzmath{\a=0;\b=45;\axb=90;\bxa=\axb+180;}
-%     \draw [vector] (0,0) -- (\a:3) node [pos=0.75,below left] {$\vec{a}$} ;
-%     \draw [vector, red] (0,0) -- (\b:3) node [pos=0.75,above left] {$\vec{b}$};
+%     \tikzmath{\a=-30;\b=-\a;\axb=90;\bxa=\axb+180;}
+%     \draw [vector] (0,0) -- (\a:2) node [pos=0.75,below left] {$\vec{a}$} ;
+%     \draw [vector, red] (0,0) -- (\b:2) node [pos=0.75,above left] {$\vec{b}$};
 %     \draw [vector, green!75!black] (0, 0) -- node [left] {$\vec{a}\times \vec{b}$} ++(\axb:2);
-%     \draw [vector, black] (0, 0) -- node [left] {$\vec{b}\times \vec{a}$} ++(\bxa:2);
+%     % \draw [vector, black] (0, 0) -- node [left] {$\vec{b}\times \vec{a}$} ++(\bxa:1.5);
 %     \draw (\a:0.3) -- ++(90:0.3) -- ++(\a:-0.3);
 %     \draw (\b:0.3) -- ++(90:0.3) -- ++(\b:-0.3);
 % \end{tikzpicture}
 
 % Basis vectors
 % \begin{tikzpicture}
-%     \tikzmath{\x=0;\y=45;\z=90;\al=3;\lx=1.5;\ly=1;\lz=2;}
+%     \tikzmath{\x=-30;\y=-\x;\z=90;\al=3;\lx=1.5;\ly=1;\lz=2;}
 %     \draw [axis] (0,0) -- ++(\x:\al) node at (\x:\al+0.2) {$x$};
 %     \draw [axis] (0,0) -- ++(\y:\al) node at (\y:\al+0.2) {$y$};
 %     \draw [axis] (0,0) -- ++(\z:\al) node at (\z:\al+0.2) {$z$};
@@ -167,8 +172,8 @@
 
 % Vector equation of a line
 % \begin{tikzpicture}
-%     \tikzmath{\x=0;\y=45;\z=90;\al=2;}
-%     \coordinate (P) at (4, 1.5);
+%     \tikzmath{\x=30;\y=-\x;\z=90;\al=2;}
+%     \coordinate (P) at (4, 1);
 %     \draw [axis] (0,0) -- ++(\x:\al) node at ++(\x:0.2) {$x$};
 %     \draw [axis] (0,0) -- ++(\y:\al) node at ++(\y:0.2) {$y$};
 %     \draw [axis] (0,0) -- ++(\z:\al) node at ++(\z:0.2) {$z$};
@@ -182,11 +187,11 @@
 
 % Intersecting lines
 % \begin{tikzpicture}
-%     \tikzmath{\x=0;\y=45;\z=90;\a1=30;\a2=140;}
+%     \tikzmath{\x=-30;\y=-\x;\z=90;\a1=30;\a2=140;}
 %     \draw [axis] (0,0) -- ++(\x:2) node at ++(\x:0.2) {$x$};
 %     \draw [axis] (0,0) -- ++(\y:2) node at ++(\y:0.2) {$y$};
 %     \draw [axis] (0,0) -- ++(\z:2) node at ++(\z:0.2) {$z$};
-%     \coordinate (P) at (3,1.5);
+%     \coordinate (P) at (3,1);
 %     \coordinate (Q) at ($(P)+(3,0)+(\a2:-1)$);
 %     \draw [line width=1pt] ($(P)+(\a1:-1)$) -- ++(\a1:4) node [pos=0, below left] {$\ell_1$};
 %     \draw [line width=1pt] ($(Q)+(\a2:-1)$) -- ++(\a2:4) node [pos=0, below right] {$\ell_2$};
@@ -201,11 +206,11 @@
 
 % Parallel lines
 % \begin{tikzpicture}
-%     \tikzmath{\x=0;\y=45;\z=90;\a1=30;}
+%     \tikzmath{\x=-30;\y=-\x;\z=90;\a1=30;}
 %     \draw [axis] (0,0) -- ++(\x:2) node at ++(\x:0.2) {$x$};
 %     \draw [axis] (0,0) -- ++(\y:2) node at ++(\y:0.2) {$y$};
 %     \draw [axis] (0,0) -- ++(\z:2) node at ++(\z:0.2) {$z$};
-%     \coordinate (P) at (3,1);
+%     \coordinate (P) at (3,0.5);
 %     \coordinate (Q) at ($(P)+(3,0)$);
 %     \draw ($(P)+(\a1:-1)$) -- ++(\a1:4) node [right] {$\ell_1$};
 %     \draw ($(Q)+(\a1:-1)$) -- ++(\a1:4) node [right] {$\ell_2$};
@@ -215,7 +220,7 @@
 
 % Skew lines
 % \begin{tikzpicture}
-%     \tikzmath{\x=-30;\y=30;\z=90;\al=3;}
+%     \tikzmath{\x=-30;\y=-\x;\z=90;\al=3;}
 %     \coordinate (O1) at (0,0);
 %     \coordinate (O2) at (\y:3.5);
 %     \filldraw [draw=red,fill=red!20,opacity=0.5] ($(O1)+(\x:-2)+(\z:-2)$) -- ++(\x:4) -- ++(\z:4) -- ++(\x:-4) -- ++(\z:-4);
@@ -230,7 +235,7 @@
 % Planes
 % \begin{tikzpicture}
 %     \tikzmath{\a1=330;\a2=30;\l1=4;\l2=4;}
-%     \draw [green,fill=green!20,opacity=0.5] (0,0) -- ++(\a1:\l1) -- ++(\a2:\l2) -- ++(\a1+180:\l1) -- cycle;
+%     \fill [gray!50,opacity=0.5] (0,0) -- ++(\a1:\l1) -- ++(\a2:\l2) -- ++(\a1+180:\l1) -- cycle;
 %     \node [point,label={90:$\vec{p}$}] at ($(\a1:1)+(\a2:1)$) (P) {};
 %     \node [point,label={0:$\vec{r}$}] at ($(\a1:3)+(\a2:3)$) (Q) {};
 %     \draw [vector] (P) -- node [below left] {$t_1 \vec{d}_1$} ++(\a1:2);
@@ -239,7 +244,7 @@
 
 % \begin{tikzpicture}
 %     \tikzmath{\x=0;\y=45;\z=90;\l1=4;\l2=4;}
-%     \draw [green,fill=green!20,opacity=0.5] ($(0,0)+(\x:-1.5)+(\y:-1.5)$) -- ++(\x:4) -- ++(\y:4) -- ++(\x:-4) -- ++(\y:-4);
+%     \fill [gray!50,opacity=0.5] ($(0,0)+(\x:-1.5)+(\y:-1.5)$) -- ++(\x:5) -- ++(\y:4) -- ++(\x:-5) -- ++(\y:-4);
 %     \draw [vector,black] (0,0) coordinate (1) -- ++(\z:2) node [above] {$\vec{n} = \vec{a} \times \vec{b}$};
 %     \draw [vector] (1) -- ++(\x:2) node [pos=0.5,below] {$\vec{a}$};
 %     \draw [vector,red] (1) -- ++(30:2) node [pos=0.5,above left] {$\vec{b}$};
@@ -247,15 +252,15 @@
 %     \draw (\y:0.2) -- ++(\z:0.2) -- ++(\y:-0.2);
 % \end{tikzpicture}
 
-% \begin{tikzpicture}
-%     \tikzmath{\x=0;\y=45;\z=90;\a=20;}
-%     \draw [green,fill=green!20,opacity=0.5] ($(0,0)+(\x:-2)+(\y:-2)$) -- ++(\x:4) -- ++(\y:4) -- ++(\x:-4) -- ++(\y:-4);
-%     \node [point,label=below:$\vec{p}$] (p) {};
-%     \node [point,label=below:$\vec{r}$] (r) at (\a:2) {};
-%     \draw [vector,black] (0,0) coordinate (1) -- ++(\z:2) node [above] {$\vec{n}$};
-%     \draw [vector] (p) -- (r);
-%     \draw (\a:0.2) -- ++(\z:0.2) -- ++(\a:-0.2);
-% \end{tikzpicture}
+\begin{tikzpicture}
+    \tikzmath{\x=0;\y=45;\z=90;\a=15;}
+    \fill [gray!50,opacity=0.5] ($(0,0)+(\x:-2)+(\y:-2)$) -- ++(\x:6) -- ++(\y:4) -- ++(\x:-6) -- ++(\y:-4);
+    \node [point,label=below:$\vec{p}$] (p) {};
+    \node [point,label=below:$\vec{r}$] (r) at (\a:3) {};
+    \draw [vector,black] (0,0) coordinate (1) -- ++(\z:2) node [above] {$\vec{n}$};
+    \draw [vector] (p) -- (r);
+    \draw (\a:0.2) -- ++(\z:0.2) -- ++(\a:-0.2);
+\end{tikzpicture}
 
 % Intersecting planes
 % \begin{tikzpicture}

@@ -64,11 +64,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}(#1)", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/1.2_Matrix_multiplication';</script>
-    <link rel="canonical" href="https://jonshiach.github.io/LA-book/_pages/1.2_Matrix_multiplication.html" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1.4. Special matrices" href="1.3_Special_matrices.html" />
@@ -153,7 +152,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="0_intro.html">
-                    <no title>
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -214,17 +213,21 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="6.2_Composite_transformations.html">6.2. Composite linear transformations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.3_Rotation_reflection_and_translation.html">6.3. Rotation, reflection and scaling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.4_Translation.html">6.4. Translation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.5. Transformations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transforation_exercises.html">6.5. Transformations exercises</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="A_Matrices_exercises_solutions.html">A. Matrices Exercise Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B_Linear_systems_exercises_solutions.html">B. Systems of Linear Equations Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="C_Vectors_exercises_solutions.html">C. Vectors Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="D_Coordinate_geometry_exercises_solutions.html">D. Co-ordinate Geometry Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="E_Vector_spaces_exercises_solutions.ipynb.html">E. Vector Spaces Exercises Solutions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="A_Exercise_solutions.html">Exercise Solutions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations Exercise Solutions</a></li>
+</ul>
+</li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -393,8 +396,8 @@ document.write(`
 <p class="admonition-title"><span class="caption-number">Definition 1.6 </span> (Matrix multiplication)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\(m \times  n\)</span> matrix and <span class="math notranslate nohighlight">\(B\)</span> a <span class="math notranslate nohighlight">\(p \times q\)</span> matrix. The product <span class="math notranslate nohighlight">\(AB\)</span> is only defined if <span class="math notranslate nohighlight">\(n = p\)</span> and the resulting matrix has dimension <span class="math notranslate nohighlight">\(m \times q\)</span> (i.e., the number of columns in <span class="math notranslate nohighlight">\(A\)</span> has to equal the number of rows in <span class="math notranslate nohighlight">\(B\)</span>). The product of an <span class="math notranslate nohighlight">\(m \times p\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> and a <span class="math notranslate nohighlight">\(p \times n\)</span> matrix <span class="math notranslate nohighlight">\(B\)</span> is defined as</p>
-<div class="math notranslate nohighlight">
-\[ [AB]_{ij} = \sum_{k=1}^n a_{ik}b_{kj}. \]</div>
+<div class="math notranslate nohighlight" id="equation-matrix-multiplication-equation">
+<span class="eqno">(1.4)<a class="headerlink" href="#equation-matrix-multiplication-equation" title="Permalink to this equation">#</a></span>\[ [AB]_{ij} = \sum_{k=1}^n a_{ik}b_{kj}. \]</div>
 <p>i.e., if <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are two <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{pmatrix} 
@@ -422,7 +425,10 @@ document.write(`
     AB = \underset{2 \times \vec{\textcolor{red}{2}}}{\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}}
     \underset{\textcolor{red}{2} \times 2}{\begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}}.
 \end{align*} \end{split}\]</div>
-<p>Here the two inside numbers are the same so this matrix multiplication is defined. Futhermore the dimensions of the product of these two matrices is given by the two outside numbers. To calculate the value of the element in row 1 and column 1 of <span class="math notranslate nohighlight">\(AB\)</span>, i.e., <span class="math notranslate nohighlight">\([AB]_{11}\)</span>, we use the elements from row 1 of <span class="math notranslate nohighlight">\(A\)</span> and column 1 of <span class="math notranslate nohighlight">\(B\)</span> multiplying corresponding elements and summing the result</p>
+<p>Here the two inside numbers are the same so this matrix multiplication is defined. Futhermore the dimensions of the product of these two matrices is given by the two outside numbers. Using equation <a class="reference internal" href="#equation-matrix-multiplication-equation">(1.4)</a>, to calculate <span class="math notranslate nohighlight">\([AB]_{11}\)</span> we have <span class="math notranslate nohighlight">\(i=1\)</span> and <span class="math notranslate nohighlight">\(j=1\)</span> so move through the elements from row 1 of <span class="math notranslate nohighlight">\(A\)</span> and column 1 of <span class="math notranslate nohighlight">\(B\)</span>,  multiplying the corresponding values and summing the result</p>
+<div class="math notranslate nohighlight">
+\[ [AB]_{11} = a_{11}b_{11} + a_{12}b_{21} = 1 \times 5 + 2 \times 7 = 5 + 14 = 19. \]</div>
+<p>So we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} 
@@ -440,7 +446,10 @@ document.write(`
     = \begin{pmatrix} 5 + 14 &amp; \textcolor{lightgray}{\square} \\ \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square} \end{pmatrix}
     = \begin{pmatrix} 19 &amp; \textcolor{lightgray}{\square} \\ \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square} \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>The value of <span class="math notranslate nohighlight">\([AB]_{12}\)</span> is calculated using elements from row 1 of <span class="math notranslate nohighlight">\(A\)</span> and column 2 of <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<p>Moving across the top row we then need to calculate the value of <span class="math notranslate nohighlight">\([AB]_{12}\)</span>. Now <span class="math notranslate nohighlight">\(i = 1\)</span> and <span class="math notranslate nohighlight">\(j = 2\)</span> so we multiply the values from row 1 of <span class="math notranslate nohighlight">\(A\)</span> and column 2 of <span class="math notranslate nohighlight">\(B\)</span> and sum the result</p>
+<div class="math notranslate nohighlight">
+\[ [AB]_{12} = a_{11}b_{12} + a_{12}b_{22} = 1 \times 6 + 2 \times 8 = 6 + 16 = 22. \]</div>
+<p>So we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix}
@@ -458,11 +467,14 @@ document.write(`
     = \begin{pmatrix} 19 &amp; 6 + 16 \\ \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square} \end{pmatrix}
     = \begin{pmatrix} 19 &amp; 22 \\ \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square} \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>Now that we have finished the first row of <span class="math notranslate nohighlight">\(AB\)</span> we now move to the second row. The value of <span class="math notranslate nohighlight">\([AB]_{21}\)</span> is calculated using elements from row 2 of <span class="math notranslate nohighlight">\(A\)</span> and column 1 of <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<p>Now that we have finished the first row of <span class="math notranslate nohighlight">\(AB\)</span> we now move down to the second row and back to the first column to calculate <span class="math notranslate nohighlight">\([AB]_{21}\)</span>. Now <span class="math notranslate nohighlight">\(i = 2\)</span> and <span class="math notranslate nohighlight">\(j = 1\)</span> so we multiply the values from row 2 of <span class="math notranslate nohighlight">\(A\)</span> and column 1 of <span class="math notranslate nohighlight">\(B\)</span> and sum the result</p>
+<div class="math notranslate nohighlight">
+\[[AB]_{21} = a_{21} b_{11} + a_{22} b_{21} = 3 \times 5 + 4 \times 7 = 15 + 28 = 43.\]</div>
+<p>So we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} 
-        \textcolor{lightgray}{1} &amp; \textcolor{lightgray}{2} \\ 
+        \textcolor{lightgray}{1} &amp; \textcolor{lightgray}{2} \\
         \textcolor{blue}{3} &amp; \textcolor{blue}{4} 
     \end{pmatrix}
     \begin{pmatrix} 
@@ -476,7 +488,10 @@ document.write(`
     = \begin{pmatrix} 19 &amp; 22 \\ 15 + 28 &amp; \textcolor{lightgray}{\square} \end{pmatrix}
     = \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; \textcolor{lightgray}{\square} \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>Finally the value of <span class="math notranslate nohighlight">\([AB]_{22}\)</span> is calculated using elements from row 2 of <span class="math notranslate nohighlight">\(A\)</span> and column 2 of <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<p>Moving across we now need to calculate the final element <span class="math notranslate nohighlight">\([AB]_{22}\)</span>. Now <span class="math notranslate nohighlight">\(i = 2\)</span> and <span class="math notranslate nohighlight">\(j = 2\)</span> so we multiply the values from row 2 of <span class="math notranslate nohighlight">\(A\)</span> and column 2 of <span class="math notranslate nohighlight">\(B\)</span> and sum the result</p>
+<div class="math notranslate nohighlight">
+\[[AB]_{22} = a_{21} b_{12} + a_{22} b_{22} = 3 \times 6 + 4 \times 8 = 18 + 32 = 50.\]</div>
+<p>So we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} 
@@ -500,7 +515,7 @@ document.write(`
 <p><span class="caption-number">Fig. 1.1 </span><span class="caption-text"><a href="https://en.wikipedia.org/wiki/Arthur_Cayley" target="_blank">Arthur Cayley (1821 - 1895)</a></span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>This method of multiplying matrices together may seem unnecessarily convoluted when first encountered. The reason we perform matrix multiplication in this way is because English mathematician Arthur Cayley found that it allows for a convenient way to represent <a class="reference internal" href="6.2_Composite_transformations.html#composite-linear-transformations-section"><span class="std std-ref">composite linear transformations</span></a>.</p>
+<p>This method of multiplying matrices together may seem unnecessarily convoluted when first encountered. The reason we perform matrix multiplication in this way is because English mathematician Arthur Cayley found that it allows for a convenient way to represent <a class="reference internal" href="6.2_Composite_transformations.html#composite-linear-transformations-section"><span class="std std-ref">composite linear transformations</span></a> which we will study towards the end of the semester.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dPot7peK1NI?si=vOwVpAVNjFKxvuqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <div class="proof example admonition" id="matrix-multiplication-example">
 <p class="admonition-title"><span class="caption-number">Example 1.6 </span></p>
@@ -597,8 +612,8 @@ Solution<div class="sd-summary-down docutils">
 <p class="admonition-title"><span class="caption-number">Definition 1.7 </span> (Matrix exponents)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be a square <span class="math notranslate nohighlight">\(n \times n\)</span> matrix. Then we write <span class="math notranslate nohighlight">\(A^2=AA\)</span> and more generally:</p>
-<div class="math notranslate nohighlight">
-\[ \begin{align*}
+<div class="math notranslate nohighlight" id="equation-matrix-exponent-equation">
+<span class="eqno">(1.5)<a class="headerlink" href="#equation-matrix-exponent-equation" title="Permalink to this equation">#</a></span>\[ \begin{align*}
     A^n = \underbrace{A A \cdots A}_{n \textsf{ times}}.
 \end{align*} \]</div>
 </section>
@@ -619,7 +634,7 @@ Solution<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    A^2 &amp;= AA = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}
+    A^2 = AA &amp;= \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}
     \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} \\
     &amp;= \begin{pmatrix} 1 + 6 &amp; 2 + 8 \\ 3 + 12 &amp; 6 + 16 \end{pmatrix} \\
     &amp;= \begin{pmatrix} 7 &amp; 10 \\ 15 &amp; 22 \end{pmatrix}
@@ -635,7 +650,7 @@ Solution<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    A^3 &amp;= AA^2 =
+    A^3 = AA^2 &amp;=
     \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}
     \begin{pmatrix} 7 &amp; 10 \\ 15 &amp; 22 \end{pmatrix} \\
     &amp;= \begin{pmatrix} 7 + 30 &amp; 10 + 44 \\ 21 + 60 &amp; 30 + 88 \end{pmatrix} \\
@@ -652,7 +667,7 @@ Solution<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    A^5 &amp;= A^2A^3 = 
+    A^5 = A^2A^3 &amp;= 
     \begin{pmatrix} 7 &amp; 10 \\ 15 &amp; 22 \end{pmatrix}
     \begin{pmatrix} 37 &amp; 54 \\ 81 &amp; 118 \end{pmatrix} \\
     &amp;= \begin{pmatrix} 259 + 810 &amp; 378 + 1180 \\ 555 + 1782 &amp; 810 + 2596 \end{pmatrix} \\
@@ -754,7 +769,7 @@ By Dr Jon Shiach
     
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2024.
       <br/>
     
   </p>

@@ -38,12 +38,11 @@ parts:
     - glob: _pages/6*
 
 - caption: "Appendices"
+  numbered: false
   chapters:  
-  - glob: _pages/A*
-  - glob: _pages/B*
-  - glob: _pages/C*
-  - glob: _pages/D*
-  - glob: _pages/E*
+  - file: _pages/A_Exercise_solutions
+    sections:
+    - glob: _pages/A*
 
 - caption: ""
   numbered: false

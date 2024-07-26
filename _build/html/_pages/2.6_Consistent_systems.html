@@ -64,11 +64,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}(#1)", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/2.6_Consistent_systems';</script>
-    <link rel="canonical" href="https://jonshiach.github.io/LA-book/_pages/2.6_Consistent_systems.html" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2.9. Homogeneous systems" href="2.7_Homogeneous_systems.html" />
@@ -153,7 +152,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="0_intro.html">
-                    <no title>
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -214,17 +213,21 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="6.2_Composite_transformations.html">6.2. Composite linear transformations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.3_Rotation_reflection_and_translation.html">6.3. Rotation, reflection and scaling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.4_Translation.html">6.4. Translation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.5. Transformations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transforation_exercises.html">6.5. Transformations exercises</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="A_Matrices_exercises_solutions.html">A. Matrices Exercise Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B_Linear_systems_exercises_solutions.html">B. Systems of Linear Equations Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="C_Vectors_exercises_solutions.html">C. Vectors Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="D_Coordinate_geometry_exercises_solutions.html">D. Co-ordinate Geometry Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="E_Vector_spaces_exercises_solutions.ipynb.html">E. Vector Spaces Exercises Solutions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="A_Exercise_solutions.html">Exercise Solutions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations Exercise Solutions</a></li>
+</ul>
+</li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -390,16 +393,15 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="consistent-inconsistent-and-indeterminate-systems">
 <span id="consistent-inconsistent-and-indeterminate-systems-section"></span><h1><span class="section-number">2.8. </span>Consistent, inconsistent and indeterminate systems<a class="headerlink" href="#consistent-inconsistent-and-indeterminate-systems" title="Permalink to this heading">#</a></h1>
-<p>So far all of the examples of solving systems of linear equations have had a single unique solution. This will not always be the case and it is important that we consider the different situations that can arise when dealing with systems of equations.</p>
-<p>A useful measure of a system that is used to determine the number of solutions to a system of linear equations is the rank of a matrix.</p>
+<p>So far all of the examples of solving systems of linear equations have had a single unique solution. This will not always be the case and it is important that we consider the different situations that can arise when dealing with systems of equations. A useful measure of a system that is used to determine the number of solutions to a system of linear equations is the rank of a matrix.</p>
 <span class="target" id="index-0"></span><div class="proof definition admonition" id="rank-definition">
-<span id="index-1"></span><p class="admonition-title"><span class="caption-number">Definition 2.8 </span> (Rank of a matrix)</p>
+<span id="index-1"></span><p class="admonition-title"><span class="caption-number">Definition 2.7 </span> (Rank of a matrix)</p>
 <section class="definition-content" id="proof-content">
 <p>The <strong>rank</strong> of a matrix <span class="math notranslate nohighlight">\(A\)</span> denoted by <span class="math notranslate nohighlight">\(\operatorname{rank}(A)\)</span> is the number of non-zero rows of the row echelon form of <span class="math notranslate nohighlight">\(A\)</span>.</p>
 </section>
 </div><p>To compute the rank of a matrix we simply use elementary row operations to row reduce to row echelon form and count the number of non-zero rows.</p>
 <div class="proof definition admonition" id="consistent-inconsistent-and-indeterminate-systems-definition">
-<p class="admonition-title"><span class="caption-number">Definition 2.9 </span> (Consistent, inconsistent and indeterminate systems)</p>
+<p class="admonition-title"><span class="caption-number">Definition 2.8 </span> (Consistent, inconsistent and indeterminate systems)</p>
 <section class="definition-content" id="proof-content">
 <p>A system of equations is said to be <strong>consistent</strong> if it has a solution, otherwise it is said to be an <strong>inconsistent</strong>. If a system of equations has more than one solution then it is said to be <strong>indeterminate</strong>.</p>
 </section>
@@ -731,7 +733,7 @@ By Dr Jon Shiach
     
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2024.
       <br/>
     
   </p>
