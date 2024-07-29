@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}(#1)", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/3.3_Dot_and_cross_products';</script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
@@ -213,17 +213,21 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="6.2_Composite_transformations.html">6.2. Composite linear transformations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.3_Rotation_reflection_and_translation.html">6.3. Rotation, reflection and scaling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.4_Translation.html">6.4. Translation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.5. Transformations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transforation_exercises.html">6.5. Transformations exercises</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="A_Matrices_exercises_solutions.html">A. Matrices Exercise Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B_Linear_systems_exercises_solutions.html">B. Systems of Linear Equations Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="C_Vectors_exercises_solutions.html">C. Vectors Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="D_Coordinate_geometry_exercises_solutions.html">D. Co-ordinate Geometry Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="E_Vector_spaces_exercises_solutions.html">E. Vector Spaces Exercises Solutions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="A_Exercise_solutions.html">Exercise Solutions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations Exercise Solutions</a></li>
+</ul>
+</li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -374,7 +378,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dot-product">3.6.1. Dot product</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-multiplication-revisited">3.6.1.1. Matrix multiplication revisited</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-multiplication">3.6.1.1. Matrix multiplication</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-cross-product">3.6.2. The cross product</a></li>
@@ -465,8 +469,8 @@ Solution<div class="sd-summary-down docutils">
 </div>
 </details></section>
 </div><p>Note: angles should be expressed in radians at all times.</p>
-<section id="matrix-multiplication-revisited">
-<h3><span class="section-number">3.6.1.1. </span>Matrix multiplication revisited<a class="headerlink" href="#matrix-multiplication-revisited" title="Permalink to this heading">#</a></h3>
+<section id="matrix-multiplication">
+<h3><span class="section-number">3.6.1.1. </span>Matrix multiplication<a class="headerlink" href="#matrix-multiplication" title="Permalink to this heading">#</a></h3>
 <p>We have already seen that the <a class="reference internal" href="1.2_Matrix_multiplication.html#matrix-multiplication-definition">multiplication of two matrices</a> is defined by</p>
 <div class="math notranslate nohighlight">
 \[ [AB]_{ij} = \sum_{k = 1}^n a_{ik}b_{kj}. \]</div>
@@ -489,9 +493,9 @@ Solution<div class="sd-summary-down docutils">
     a_1 &amp; a_2 &amp; a_3 \\
     b_1 &amp; b_2 &amp; b_3
 \end{pmatrix}. \end{split}\]</div>
-<p>and <span class="math notranslate nohighlight">\(\vec{i} = (1, 0, 0)^\mathsf{T}\)</span>, <span class="math notranslate nohighlight">\(\vec{j} = (0, 1, 0)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\vec{k} = (0, 0, 1)^\mathsf{T}\)</span>. The cross product between two vectors <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span> returns a vector that is perpendicular to both <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span>. Futhermore <span class="math notranslate nohighlight">\(\vec{a} \times \vec{b} = -\vec{b} \times \vec{a}\)</span>, i.e., <span class="math notranslate nohighlight">\(\vec{b} \times \vec{a}\)</span> is a vector pointing in the exact opposite direction to <span class="math notranslate nohighlight">\(\vec{a} \times \vec{b}\)</span> (<a class="reference internal" href="#cross-product-figure"><span class="std std-numref">Fig. 3.10</span></a>).</p>
+<p>and <span class="math notranslate nohighlight">\(\vec{i} = (1, 0, 0)^\mathsf{T}\)</span>, <span class="math notranslate nohighlight">\(\vec{j} = (0, 1, 0)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\vec{k} = (0, 0, 1)^\mathsf{T}\)</span>. The cross product between two vectors <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span> returns a vector that is perpendicular to both <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span>.</p>
 <figure class="align-default" id="cross-product-figure">
-<a class="reference internal image-reference" href="../_images/3_cross_product.svg"><img alt="../_images/3_cross_product.svg" src="../_images/3_cross_product.svg" width="250" /></a>
+<a class="reference internal image-reference" href="../_images/3_cross_product.svg"><img alt="../_images/3_cross_product.svg" src="../_images/3_cross_product.svg" width="175" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 3.10 </span><span class="caption-text">The cross product <span class="math notranslate nohighlight">\(\vec{a} \times \vec{b}\)</span> is another vector perpendicular to both <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span>.</span><a class="headerlink" href="#cross-product-figure" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -617,7 +621,7 @@ Solution<div class="sd-summary-down docutils">
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dot-product">3.6.1. Dot product</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-multiplication-revisited">3.6.1.1. Matrix multiplication revisited</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-multiplication">3.6.1.1. Matrix multiplication</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-cross-product">3.6.2. The cross product</a></li>

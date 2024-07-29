@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}(#1)", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/2.4_Partial_pivoting';</script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
@@ -213,17 +213,21 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="6.2_Composite_transformations.html">6.2. Composite linear transformations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.3_Rotation_reflection_and_translation.html">6.3. Rotation, reflection and scaling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.4_Translation.html">6.4. Translation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.5. Transformations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transforation_exercises.html">6.5. Transformations exercises</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="A_Matrices_exercises_solutions.html">A. Matrices Exercise Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B_Linear_systems_exercises_solutions.html">B. Systems of Linear Equations Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="C_Vectors_exercises_solutions.html">C. Vectors Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="D_Coordinate_geometry_exercises_solutions.html">D. Co-ordinate Geometry Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="E_Vector_spaces_exercises_solutions.html">E. Vector Spaces Exercises Solutions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="A_Exercise_solutions.html">Exercise Solutions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations Exercise Solutions</a></li>
+</ul>
+</li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -395,7 +399,7 @@ document.write(`
         0.0001 &amp; 1 &amp; 1 \\
         0 &amp; -9999 &amp; -9998 
     \end{array} \right)
-    \begin{array}{l} \\  -\frac{1}{9999}R_2 \end{array} \\ \\
+    \begin{array}{l} \\  -\dfrac{1}{9999}R_2 \end{array} \\ \\
     \longrightarrow &amp;
     \left( \begin{array}{cc|c} 
         0.0001 &amp; 1 &amp; 1 \\
@@ -427,23 +431,36 @@ document.write(`
 <div class="proof algorithm admonition" id="ge-pp-algorithm">
 <span id="index-1"></span><p class="admonition-title"><span class="caption-number">Algorithm 2.2 </span> (Gaussian elimination with partial pivoting)</p>
 <section class="algorithm-content" id="proof-content">
-<p><strong>Inputs:</strong> An <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span></p>
-<p><strong>Outputs:</strong> The matrix <span class="math notranslate nohighlight">\(A\)</span> in row echelon form</p>
+<p><strong>Inputs:</strong> An <span class="math notranslate nohighlight">\(m \times n\)</span> coefficient matrix <span class="math notranslate nohighlight">\(A\)</span> and an <span class="math notranslate nohighlight">\(m\)</span>-element constant vector <span class="math notranslate nohighlight">\(\vec{b}\)</span>.</p>
+<p><strong>Outputs:</strong> An augmented matrix in row echelon form.</p>
+<ol class="arabic simple">
+<li><p>Form the augmented matrix <span class="math notranslate nohighlight">\([ A \mid \vec{b}]\)</span></p></li>
+<li><p>Set pivot row <span class="math notranslate nohighlight">\(k\)</span> to 1</p></li>
+<li><p>For each column <span class="math notranslate nohighlight">\(j\)</span> from 1 to <span class="math notranslate nohighlight">\(n\)</span>:</p>
+<ol class="arabic simple">
+<li><p>Find the pivot row:</p>
 <ul class="simple">
-<li><p>The first pivot element is in row 1 and column 1 of <span class="math notranslate nohighlight">\(A\)</span></p></li>
-<li><p>For each column of <span class="math notranslate nohighlight">\(A\)</span></p>
+<li><p>Identify the row <span class="math notranslate nohighlight">\(i\)</span> where <span class="math notranslate nohighlight">\(i \geq k\)</span> with the largest absolute value in column <span class="math notranslate nohighlight">\(j\)</span></p></li>
+<li><p>If the largest absolute value is zero skip to next column</p></li>
+</ul>
+</li>
+<li><p>Swap rows:</p>
+<ul class="simple">
+<li><p>Swap row <span class="math notranslate nohighlight">\(i\)</span> with row <span class="math notranslate nohighlight">\(k\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Eliminate elements below pivot:</p>
+<ul class="simple">
+<li><p>For each row <span class="math notranslate nohighlight">\(i\)</span> from <span class="math notranslate nohighlight">\(k+1\)</span> to <span class="math notranslate nohighlight">\(m\)</span>:</p>
 <ul>
-<li><p>Perform a row swap with the row beneath the pivot row that has the largest absolute value element in the pivot column which is greater than the absolute value fo the pivot element</p></li>
-<li><p>If the pivot element is zero move to the next column</p></li>
-<li><p>For each row beneath the pivot row</p>
-<ul>
-<li><p>Subtract the pivot row multiplied by the value in the pivot column of the row divided by the pivot element from the current row</p></li>
+<li><p>Subtract <span class="math notranslate nohighlight">\(\dfrac{a_{ij}}{a_{jj}}\)</span> times row <span class="math notranslate nohighlight">\(j\)</span> from row <span class="math notranslate nohighlight">\(i\)</span></p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>Return <span class="math notranslate nohighlight">\(A\)</span></p></li>
-</ul>
+</ol>
+</li>
+</ol>
 </section>
 </div><iframe width="560" height="315" src="https://www.youtube.com/embed/5I8roRpQy1M?si=IaYVdjZ9mulpUWmJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <div class="proof example admonition" id="partial-pivoting-example">

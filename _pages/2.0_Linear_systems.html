@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}(#1)", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/2.0_Linear_systems';</script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
@@ -213,17 +213,21 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="6.2_Composite_transformations.html">6.2. Composite linear transformations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.3_Rotation_reflection_and_translation.html">6.3. Rotation, reflection and scaling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.4_Translation.html">6.4. Translation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.5. Transformations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transforation_exercises.html">6.5. Transformations exercises</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="A_Matrices_exercises_solutions.html">A. Matrices Exercise Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B_Linear_systems_exercises_solutions.html">B. Systems of Linear Equations Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="C_Vectors_exercises_solutions.html">C. Vectors Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="D_Coordinate_geometry_exercises_solutions.html">D. Co-ordinate Geometry Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="E_Vector_spaces_exercises_solutions.html">E. Vector Spaces Exercises Solutions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="A_Exercise_solutions.html">Exercise Solutions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations Exercise Solutions</a></li>
+</ul>
+</li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -389,7 +393,7 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="systems-of-linear-equations">
 <span id="systems-of-linear-equations-chapter"></span><span id="index-0"></span><h1><span class="section-number">2. </span>Systems of Linear Equations<a class="headerlink" href="#systems-of-linear-equations" title="Permalink to this heading">#</a></h1>
 <p>Systems of linear equations and the methods used to solve them is a fundamental part of linear algebra. They are used to describe relationships between sets of variables and have many applications including co-ordinate geometry, numerical methods, computer science, engineering and statistics. There are many techniques we can use to compute the solutions to systems of linear equations and we will be covering the most common of these.</p>
-<p>A linear equation is an equation formed using a set of <strong>variables</strong> multiplied by scalar <strong>coefficients</strong> which sum to be equal to some <strong>constant</strong> scalar value. For example if <span class="math notranslate nohighlight">\(x_1, x_2, \ldots, x_n\)</span> are variables, <span class="math notranslate nohighlight">\(a_1, a_2, \ldots, a_n\)</span> are coefficients and <span class="math notranslate nohighlight">\(b\)</span> is a constant value then a linear equation can take the form</p>
+<p>A linear equation is an equation formed using a set of <strong>variables</strong> multiplied by scalar <strong>coefficients</strong> where the sum is of these is equal to some <strong>constant</strong> scalar value. For example if <span class="math notranslate nohighlight">\(x_1, x_2, \ldots, x_n\)</span> are variables, <span class="math notranslate nohighlight">\(a_1, a_2, \ldots, a_n\)</span> are coefficients and <span class="math notranslate nohighlight">\(b\)</span> is a constant value then a linear equation can take the form</p>
 <div class="math notranslate nohighlight">
 \[ a_1 x_1 + a_2 x_2 + \cdots + a_n x_n = b. \]</div>
 <p>A nonlinear equation is an equation formed where one or more of the variables have exponents not equal to 1 (e.g., a polynomial equation) or two or more of the variables are multiplied by each other. The field of linear algebra is only concerned with linear equations.</p>

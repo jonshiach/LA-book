@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}(#1)", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/1.4_Determinants';</script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
@@ -213,17 +213,21 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="6.2_Composite_transformations.html">6.2. Composite linear transformations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.3_Rotation_reflection_and_translation.html">6.3. Rotation, reflection and scaling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.4_Translation.html">6.4. Translation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.5. Transformations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transforation_exercises.html">6.5. Transformations exercises</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="A_Matrices_exercises_solutions.html">A. Matrices Exercise Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B_Linear_systems_exercises_solutions.html">B. Systems of Linear Equations Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="C_Vectors_exercises_solutions.html">C. Vectors Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="D_Coordinate_geometry_exercises_solutions.html">D. Co-ordinate Geometry Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="E_Vector_spaces_exercises_solutions.html">E. Vector Spaces Exercises Solutions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="A_Exercise_solutions.html">Exercise Solutions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations Exercise Solutions</a></li>
+</ul>
+</li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -394,7 +398,7 @@ document.write(`
     a x + b y &amp;= e, \\
     c x + d y &amp;= f.
 \end{align*} \end{split}\]</div>
-<p>To solve for <span class="math notranslate nohighlight">\(x\)</span> we could multiply the second equation by <span class="math notranslate nohighlight">\(b/d\)</span> and subtract from first equation and rearrange to make <span class="math notranslate nohighlight">\(x\)</span> the subject</p>
+<p>To solve for <span class="math notranslate nohighlight">\(x\)</span> we could multiply the second equation by <span class="math notranslate nohighlight">\(\dfrac{b}{d}\)</span> and subtract from first equation and rearrange to make <span class="math notranslate nohighlight">\(x\)</span> the subject</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     a x - \frac{b c}{d} x + b y - \frac{b d}{d} y &amp;= e - \frac{b}{d} f \\
@@ -402,7 +406,7 @@ document.write(`
     (a d - b c) x &amp;= d e - b f \\
     x &amp;= \frac{d e - b f}{a d - b c}.
 \end{align*} \end{split}\]</div>
-<p>We can also solve for <span class="math notranslate nohighlight">\(y\)</span> by multiplying the first equation by <span class="math notranslate nohighlight">\(c/a\)</span> and subtract from the second equation and rearrange to make <span class="math notranslate nohighlight">\(y\)</span> the subject</p>
+<p>We can also solve for <span class="math notranslate nohighlight">\(y\)</span> by multiplying the first equation by <span class="math notranslate nohighlight">\(\dfrac{c}{a}\)</span> and subtract from the second equation and rearrange to make <span class="math notranslate nohighlight">\(y\)</span> the subject</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     c x - \frac{c a}{a} x + d y - \frac{b c}{a} y &amp;= f - \frac{c}{a} e \\
@@ -428,14 +432,11 @@ document.write(`
 <div class="proof definition admonition" id="2x2-determinant-definition">
 <p class="admonition-title"><span class="caption-number">Definition 1.16 </span> (Determinant of a <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix)</p>
 <section class="definition-content" id="proof-content">
-<p>The determinant of the <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{pmatrix}a &amp; b \\ c &amp; d \end{pmatrix},\end{split}\]</div>
-<p>is</p>
+<p>The determinant of the <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix <span class="math notranslate nohighlight">\(\begin{pmatrix}a &amp; b \\ c &amp; d \end{pmatrix}\)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-2x2-determinant-equation">
-<span class="eqno">(1.1)<a class="headerlink" href="#equation-2x2-determinant-equation" title="Permalink to this equation">#</a></span>\[\begin{split} \det \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} =
+<span class="eqno">(1.8)<a class="headerlink" href="#equation-2x2-determinant-equation" title="Permalink to this equation">#</a></span>\[\begin{split} \det \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} =
 \begin{vmatrix} a &amp; b \\ c &amp; d \end{vmatrix} = ad - bc, \end{split}\]</div>
-<p>i.e., the product of the elements on the main diagonal minus the product of the other two elements. Note that the vertical bars denoting a determinant is different from brackets that denote a matrix.</p>
+<p>i.e., the product of the elements on the main diagonal minus the product of the other two elements. Note that the determinant of the matrix <span class="math notranslate nohighlight">\(A\)</span> is denoted by either <span class="math notranslate nohighlight">\(\det(A)\)</span> or <span class="math notranslate nohighlight">\(|A|\)</span>.</p>
 </section>
 </div><div class="proof example admonition" id="2x2-determinant-example">
 <p class="admonition-title"><span class="caption-number">Example 1.9 </span></p>
@@ -489,20 +490,20 @@ Solution<div class="sd-summary-down docutils">
 </div></section>
 <section id="calculating-the-determinant-of-an-n-times-n-matrix">
 <span id="index-3"></span><h2><span class="section-number">1.5.2. </span>Calculating the determinant of an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix<a class="headerlink" href="#calculating-the-determinant-of-an-n-times-n-matrix" title="Permalink to this heading">#</a></h2>
-<p>To compute the determinant of a matrix larger than <span class="math notranslate nohighlight">\(2\times 2\)</span> we need to split the matrix up into multiple <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices so we can use equation <a class="reference internal" href="#equation-2x2-determinant-equation">(1.1)</a>. This is done in a specific way explained below which using things called <strong>minors</strong> and <strong>cofactors</strong>.</p>
+<p>To compute the determinant of a matrix larger than <span class="math notranslate nohighlight">\(2\times 2\)</span> we need to split the matrix up into multiple <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices so we can use equation <a class="reference internal" href="#equation-2x2-determinant-equation">(1.8)</a>. This is done in a specific way explained below which using <strong>minors</strong> and <strong>cofactors</strong>.</p>
 <div class="proof definition admonition" id="minor-definition">
 <span id="index-4"></span><p class="admonition-title"><span class="caption-number">Definition 1.17 </span> (Minor)</p>
 <section class="definition-content" id="proof-content">
 <p>The <strong>minor</strong> of an element of an <span class="math notranslate nohighlight">\(n \times n\)</span> square matrix is denoted by <span class="math notranslate nohighlight">\(M_{ij}\)</span> and is the determinant of the <span class="math notranslate nohighlight">\((n-1) \times (n-1)\)</span> square matrix that is formed by removing row <span class="math notranslate nohighlight">\(i\)</span> and column <span class="math notranslate nohighlight">\(j\)</span> from <span class="math notranslate nohighlight">\(A\)</span>.</p>
 </section>
-</div><p>For example, if</p>
+</div><p>For example, given the matrix <span class="math notranslate nohighlight">\(A\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A = \begin{pmatrix}
     a_{11} &amp; a_{12} &amp; a_{13} \\
     a_{21} &amp; a_{22} &amp; a_{23} \\
     a_{31} &amp; a_{32} &amp; a_{33}
 \end{pmatrix}, \end{split}\]</div>
-<p>then the minor of the element <span class="math notranslate nohighlight">\(a_{21}\)</span> is</p>
+<p>then the minor <span class="math notranslate nohighlight">\(M_{21}\)</span> is the determinant of the matrix <span class="math notranslate nohighlight">\(A\)</span> with row 2 and column 1 removed</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} M_{21} = \begin{vmatrix}
     \textcolor{lightgray}{\square} &amp; a_{12} &amp; a_{13} \\
@@ -560,9 +561,9 @@ Solution<div class="sd-summary-down docutils">
 <section class="definition-content" id="proof-content">
 <p>The <strong>cofactor</strong> of an element of a square matrix is denoted by <span class="math notranslate nohighlight">\(C_{ij}\)</span> and is defined by</p>
 <div class="math notranslate nohighlight" id="equation-cofactor-equation">
-<span class="eqno">(1.2)<a class="headerlink" href="#equation-cofactor-equation" title="Permalink to this equation">#</a></span>\[ C_{ij} = (-1)^{i+j}M_{ij}. \]</div>
+<span class="eqno">(1.9)<a class="headerlink" href="#equation-cofactor-equation" title="Permalink to this equation">#</a></span>\[ C_{ij} = (-1)^{i+j}M_{ij}. \]</div>
 </section>
-</div><p>The <span class="math notranslate nohighlight">\((-1)^{i+j}\)</span> in equation <a class="reference internal" href="#equation-cofactor-equation">(1.2)</a> is positive when <span class="math notranslate nohighlight">\(i + j\)</span> is even and negative when <span class="math notranslate nohighlight">\(i+j\)</span> is odd which results in the following pattern of signs</p>
+</div><p>The <span class="math notranslate nohighlight">\((-1)^{i+j}\)</span> term in equation <a class="reference internal" href="#equation-cofactor-equation">(1.9)</a> is positive when <span class="math notranslate nohighlight">\(i + j\)</span> is even and negative when <span class="math notranslate nohighlight">\(i + j\)</span> is odd which results in the following pattern of signs</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{pmatrix}
         + &amp; - &amp; + &amp; \cdots \\
@@ -575,14 +576,14 @@ Solution<div class="sd-summary-down docutils">
 <section class="definition-content" id="proof-content">
 <p>The determinant of an <span class="math notranslate nohighlight">\(n\times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> is defined by</p>
 <div class="math notranslate nohighlight" id="equation-nxn-determinant-equation">
-<span class="eqno">(1.3)<a class="headerlink" href="#equation-nxn-determinant-equation" title="Permalink to this equation">#</a></span>\[ \det(A) = \sum_{i=1}^n a_{ik} C_{ik} = \sum_{j=1}^n a_{kj} C_{kj}, \]</div>
+<span class="eqno">(1.10)<a class="headerlink" href="#equation-nxn-determinant-equation" title="Permalink to this equation">#</a></span>\[ \det(A) = \sum_{i=1}^n a_{ik} C_{ik} = \sum_{j=1}^n a_{kj} C_{kj}, \]</div>
 <p>for some fixed value in the range <span class="math notranslate nohighlight">\(1 \leq k \leq n\)</span> which represents a single row or column of <span class="math notranslate nohighlight">\(A\)</span>.</p>
 </section>
-</div><p>Equation <a class="reference internal" href="#equation-nxn-determinant-equation">(1.3)</a> allows us to express the determinant of an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix in terms of determinants of <span class="math notranslate nohighlight">\((n-1) \times (n-1)\)</span> matrices. We can then if needed, apply the formula again to the sub-matrices. Continuing in this fashion we will eventually just be calculating <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices, which we know how to do from equation <a class="reference internal" href="#equation-2x2-determinant-equation">(1.1)</a>.</p>
-<p>To calculate the determinant of the matrix</p>
+</div><p>Equation <a class="reference internal" href="#equation-nxn-determinant-equation">(1.10)</a> allows us to express the determinant of an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix in terms of determinants of <span class="math notranslate nohighlight">\((n-1) \times (n-1)\)</span> matrices. We can then apply the formula again to the sub-matrices. Continuing in this fashion we will eventually just be calculating <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices, which we know how to do from equation <a class="reference internal" href="#equation-2x2-determinant-equation">(1.8)</a>.</p>
+<p>For example, to calculate the determinant of the matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} A = \begin{pmatrix} a &amp; b &amp; c \\ d &amp; e &amp; f \\ g &amp; h &amp; i \end{pmatrix}, \end{split}\]</div>
-<p>we can expand across row 1 using <span class="math notranslate nohighlight">\(k = 1\)</span> in the first summation in equation <a class="reference internal" href="#equation-nxn-determinant-equation">(1.3)</a></p>
+<p>we can expand across row 1 using <span class="math notranslate nohighlight">\(k = 1\)</span> in the first summation in equation <a class="reference internal" href="#equation-nxn-determinant-equation">(1.10)</a></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \det(A) &amp;= a C_{11} + b C_{12} + c C_{13} \\
@@ -592,7 +593,7 @@ Solution<div class="sd-summary-down docutils">
     &amp;= a(ei - fh) - b(di - fg) + c(dh - eg) \\
     &amp;= aei - afh - bdi + bfg + cdh - ceg.
 \end{align*} \end{split}\]</div>
-<p>We could also had chosen to expand along column 2 using <span class="math notranslate nohighlight">\(k = 2\)</span> and the second summation in equation <a class="reference internal" href="#equation-nxn-determinant-equation">(1.3)</a>.</p>
+<p>We could also had chosen to expand along column 2 using <span class="math notranslate nohighlight">\(k = 2\)</span> in equation <a class="reference internal" href="#equation-nxn-determinant-equation">(1.10)</a> and the second summation in equation <a class="reference internal" href="#equation-nxn-determinant-equation">(1.10)</a>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \det(A) &amp;= b C_{12} + e C_{22} + h C_{32} \\
@@ -644,7 +645,7 @@ Solution<div class="sd-summary-down docutils">
 \end{align*} \end{split}\]</div>
 </div>
 </details></section>
-</div><p>For larger matrices we have to apply equation <a class="reference internal" href="#equation-nxn-determinant-equation">(1.3)</a> recursively until we get to <span class="math notranslate nohighlight">\(2 \times 2\)</span> determinants where we can use <a class="reference internal" href="#equation-2x2-determinant-equation">(1.1)</a>.</p>
+</div><p>For larger matrices we have to apply equation <a class="reference internal" href="#equation-nxn-determinant-equation">(1.10)</a> recursively until we get to <span class="math notranslate nohighlight">\(2 \times 2\)</span> determinants where we can use <a class="reference internal" href="#equation-2x2-determinant-equation">(1.8)</a>.</p>
 <div class="proof example admonition" id="4x4-determinant-example">
 <p class="admonition-title"><span class="caption-number">Example 1.12 </span></p>
 <section class="example-content" id="proof-content">

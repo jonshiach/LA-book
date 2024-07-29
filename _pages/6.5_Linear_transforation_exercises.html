@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>3.5. Vector magnitude &#8212; Linear Algebra</title>
+    <title>6.5. Transformations exercises &#8212; Linear Algebra</title>
   
   
   
@@ -66,12 +66,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}(#1)", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '_pages/3.2_Vector_magnitude';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_pages/6.5_Linear_transforation_exercises';</script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3.6. Dot and cross products" href="3.3_Dot_and_cross_products.html" />
-    <link rel="prev" title="3.4. Arithmetic operations on vectors" href="3.1_Vector_arithmetic.html" />
+    <link rel="next" title="Exercise Solutions" href="A_Exercise_solutions.html" />
+    <link rel="prev" title="6.4. Translation" href="6.4_Translation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -185,9 +185,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="2.8_Linear_systems_exercises.html">2.10. Systems of Linear Equations Exercises</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.5. Vector magnitude</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.5_Vectors_exercises.html">3.8. Vectors Exercises</a></li>
@@ -208,12 +208,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="5.5_Vector_spaces_exercises.html">5.5. Vector spaces exercises</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="6.0_Linear_transformations.html">6. Linear Transformations</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="6.0_Linear_transformations.html">6. Linear Transformations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="6.1_Transformation_matrices.html">6.1. Transformation matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.2_Composite_transformations.html">6.2. Composite linear transformations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.3_Rotation_reflection_and_translation.html">6.3. Rotation, reflection and scaling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.4_Translation.html">6.4. Translation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transforation_exercises.html">6.5. Transformations exercises</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.5. Transformations exercises</a></li>
 </ul>
 </li>
 </ul>
@@ -285,7 +285,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/_pages/3.2_Vector_magnitude.md" target="_blank"
+      <li><a href="../_sources/_pages/6.5_Linear_transforation_exercises.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -354,9 +354,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -367,19 +365,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Vector magnitude</h1>
+    <h1>Transformations exercises</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-vectors">3.5.1. Unit vectors</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -389,138 +379,115 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <span class="target" id="vector-magnitude-section"></span><section class="tex2jax_ignore mathjax_ignore" id="vector-magnitude">
-<span id="index-0"></span><h1><span class="section-number">3.5. </span>Vector magnitude<a class="headerlink" href="#vector-magnitude" title="Permalink to this heading">#</a></h1>
-<p>The <strong>magnitude</strong> of a vector <span class="math notranslate nohighlight">\(\vec{a}\)</span> is the distance between the head and tail of <span class="math notranslate nohighlight">\(\vec{a}\)</span> which we can calculate using an extension of Pythagoras’ theorem.</p>
-<div class="proof definition note admonition" id="magnitude-definition">
-<p class="admonition-title"><span class="caption-number">Definition 3.4 </span> (Vector magnitude)</p>
-<section class="definition-content" id="proof-content">
-<p>The <strong>magnitude</strong> of a vector <span class="math notranslate nohighlight">\(\vec{a} = (a_1, a_2, \ldots, a_n)^\mathsf{T}\)</span> denoted by <span class="math notranslate nohighlight">\(|\vec{a}|\)</span> is calculated using</p>
-<div class="math notranslate nohighlight" id="equation-magnitude-equation">
-<span class="eqno">(3.1)<a class="headerlink" href="#equation-magnitude-equation" title="Permalink to this equation">#</a></span>\[ |\vec{a}| = \sqrt{\sum_{i=1}^n a_i^2} = \sqrt{a_1^2 + a_2^2 + \cdots + a_n^2}. \]</div>
-<figure class="align-default">
-<a class="reference internal image-reference" href="../_images/3_magnitude.svg"><img alt="../_images/3_magnitude.svg" src="../_images/3_magnitude.svg" width="250" /></a>
-</figure>
-</section>
-</div><p>Vector magnitude is also known as the <a href="https://en.wikipedia.org/wiki/Norm_(mathematics)" target="_blank"><strong>Euclidean norm</strong></a>. Note that <span class="math notranslate nohighlight">\(|\vec{a}|=0\)</span> if and only if <span class="math notranslate nohighlight">\(\vec{a}=(0, 0, \ldots, 0)^\mathsf{T}\)</span>.</p>
-<div class="proof example admonition" id="magnitude-example">
-<p class="admonition-title"><span class="caption-number">Example 3.2 </span></p>
-<section class="example-content" id="proof-content">
-<p>Calculate the magnitudes of the following vectors</p>
-<p>(i)   <span class="math notranslate nohighlight">\(\vec{u} = \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix}\)</span></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[ |\vec{u}| = \sqrt{1^2 + 2^2 + 3^2} = \sqrt{1+4+9} = \sqrt{14} \]</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="transformations-exercises">
+<span id="transformations-exercises-section"></span><h1><span class="section-number">6.5. </span>Transformations exercises<a class="headerlink" href="#transformations-exercises" title="Permalink to this heading">#</a></h1>
+<p>Answer the following exercises based on the content from this chapter. The solutions can be found in the <a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html#vector-spaces-exercises-solutions-section"><span class="std std-ref">appendices</span></a>.</p>
+<div class="exercise admonition" id="transformations-ex-linear-transformations">
+
+<p class="admonition-title"><span class="caption-number">Exercise 6.1 </span></p>
+<section id="exercise-content">
+<p>Which of the following transformations are linear transformations?</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
+<p>(a)   <span class="math notranslate nohighlight">\(T: (x, y)^\mathsf{T} \mapsto (0, y)^\mathsf{T}\)</span></p>
 </div>
-</details><p>(ii)   <span class="math notranslate nohighlight">\(\vec{v} = \begin{pmatrix} 5 \\ -12 \\ 0 \end{pmatrix}\)</span></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[ |\vec{v}| = \sqrt{5^2 + (-12)^2 + 0^2} = \sqrt{25+144+0} = \sqrt{169} = 13\]</div>
+<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
+<p>(b)   <span class="math notranslate nohighlight">\(T: (x, y)^\mathsf{T} \mapsto (x, 5)^\mathsf{T}\)</span></p>
 </div>
-</details><p>(iii)   <span class="math notranslate nohighlight">\(\vec{w} = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}\)</span></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[|\vec{w}| = \sqrt{1^2 + 0^2 + 1^2} = \sqrt{1+0+1} = \sqrt{2}\]</div>
+<div class="sd-col sd-d-flex-column sd-col-12 sd-col-xs-12 sd-col-sm-12 sd-col-md-12 sd-col-lg-12 docutils">
+<p> </p>
 </div>
-</details></section>
-</div><section id="unit-vectors">
-<span id="index-1"></span><h2><span class="section-number">3.5.1. </span>Unit vectors<a class="headerlink" href="#unit-vectors" title="Permalink to this heading">#</a></h2>
-<p>For every non-zero vector <span class="math notranslate nohighlight">\(\vec{a}\)</span> there exist a unique <strong>unit vector</strong> which is a vector in the same direction as <span class="math notranslate nohighlight">\(\vec{a}\)</span> and whose magnitude is 1.</p>
-<div class="proof definition admonition" id="unit-vector-definition">
-<p class="admonition-title"><span class="caption-number">Definition 3.5 </span> (Unit vectors)</p>
-<section class="definition-content" id="proof-content">
-<p>A unit vector is a vector with a magnitude of 1.</p>
+<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
+<p>(c)   <span class="math notranslate nohighlight">\(T: (x, y, z)^\mathsf{T} \mapsto (x, x - y)^\mathsf{T}\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
+<p>(d)   <span class="math notranslate nohighlight">\(T: (x, y, z)^\mathsf{T} \mapsto \begin{pmatrix} x + y \\ z \end{pmatrix}\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-12 sd-col-xs-12 sd-col-sm-12 sd-col-md-12 sd-col-lg-12 docutils">
+<p> </p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
+<p>(e)   <span class="math notranslate nohighlight">\(T: (x, y)^\mathsf{T} \mapsto (3x + 1, y)^\mathsf{T}\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
+<p>(f)   <span class="math notranslate nohighlight">\(T: f(x) \mapsto \dfrac{\mathrm{d}}{\mathrm{d}x} f(x)\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-12 sd-col-xs-12 sd-col-sm-12 sd-col-md-12 sd-col-lg-12 docutils">
+<p> </p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
+<p>(g)   <span class="math notranslate nohighlight">\(T: f(x) \mapsto xf(x)\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
+<p>(h)   <span class="math notranslate nohighlight">\(T: \mathbb{C}^2 \to \mathbb{C}\)</span> where <span class="math notranslate nohighlight">\(T: (x, y)^\mathsf{T} \mapsto x + y\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-12 sd-col-xs-12 sd-col-sm-12 sd-col-md-12 sd-col-lg-12 docutils">
+<p> </p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
+<p>(i)   <span class="math notranslate nohighlight">\(T: \mathbb{C}^2 \to \mathbb{C}\)</span> where <span class="math notranslate nohighlight">\(T: (x, y)^\mathsf{T} \mapsto x y\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
+<p>(j)   <span class="math notranslate nohighlight">\(T: \mathbb{C}^2 \to \mathbb{C}\)</span> where <span class="math notranslate nohighlight">\(T: (x, y)^\mathsf{T} \mapsto \bar{y}\)</span></p>
+</div>
+</div>
+</div>
+<p>(<span class="math notranslate nohighlight">\(\bar{x}\)</span> is the complex conjugate of <span class="math notranslate nohighlight">\(x = a + bi\)</span> defined by <span class="math notranslate nohighlight">\(\bar{x} = a - bi\)</span>.)</p>
 </section>
-</div><div class="proof theorem admonition" id="normalising-a-vector-proposition">
-<span id="index-2"></span><p class="admonition-title"><span class="caption-number">Theorem 3.2 </span> (Normalising a vector)</p>
-<section class="theorem-content" id="proof-content">
-<p>Any non-zero vector can be scaled to transform it into a unit vector by dividing all its coordinates by its magnitude</p>
-<div class="math notranslate nohighlight" id="equation-normalising-a-vector-equation">
-<span class="eqno">(3.2)<a class="headerlink" href="#equation-normalising-a-vector-equation" title="Permalink to this equation">#</a></span>\[ \hat{\vec{a}} = \frac{\vec{a}}{|\vec{a}|}. \]</div>
-<p>This process is called <strong>normalising a vector</strong>. Unit vectors are denoted with a caret above the vector name, i.e., <span class="math notranslate nohighlight">\(\hat{\vec{a}}\)</span> which is read as <em>‘a hat’</em>.</p>
+</div>
+<div class="exercise admonition" id="transformations-ex-transformation-matrix">
+
+<p class="admonition-title"><span class="caption-number">Exercise 6.2 </span></p>
+<section id="exercise-content">
+<p>A linear transformation <span class="math notranslate nohighlight">\(T: \mathbb{R}^2 \to \mathbb{R}^2\)</span> is defined by <span class="math notranslate nohighlight">\(T: (x, y)^\mathsf{T} \mapsto (-x + 3y, x - 4y)^\mathsf{T}\)</span>. Determine the transformation matrix for <span class="math notranslate nohighlight">\(T\)</span> and hence calculate <span class="math notranslate nohighlight">\(T (2, 5)^\mathsf{T}\)</span>.</p>
 </section>
-</div><div class="proof admonition" id="proof">
-<p>Proof. Let <span class="math notranslate nohighlight">\(\vec{a}\)</span> be a non-zero vector</p>
+</div>
+<div class="exercise admonition" id="transformations-ex-R2">
+
+<p class="admonition-title"><span class="caption-number">Exercise 6.3 </span></p>
+<section id="exercise-content">
+<p>A linear transformation <span class="math notranslate nohighlight">\(T: \mathbb{R}^2 \to \mathbb{R}^2\)</span> is defined by <span class="math notranslate nohighlight">\(T: (x, y)^\mathsf{T} \mapsto (x - 2y, 2x + 3y)^\mathsf{T}\)</span>. Given <span class="math notranslate nohighlight">\(T(\vec{u}) = (-1, 5)^\mathsf{T}\)</span> determine <span class="math notranslate nohighlight">\(\vec{u}\)</span>.</p>
+</section>
+</div>
+<div class="exercise admonition" id="transformations-ex-R3">
+
+<p class="admonition-title"><span class="caption-number">Exercise 6.4 </span></p>
+<section id="exercise-content">
+<p><span class="math notranslate nohighlight">\(T: \mathbb{R}^3 \to \mathbb{R}^3\)</span> is a linear transformation such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \left|\frac{1}{|\vec{a}|}\vec{a}\right| &amp;= \left|\frac{1}{|\vec{a}|}\right| |\vec{a}| \\
-    &amp;= \frac{1}{|\vec{a}|} |\vec{a}| \qquad \text{(since $|\vec{a}|&gt;0$)}\\
-    &amp;= 1.
+    T\begin{pmatrix} 1 \\ -1 \\ 0 \end{pmatrix} &amp;= \begin{pmatrix} 1 \\ -2 \\ -4 \end{pmatrix}, &amp;
+    T\begin{pmatrix} 0 \\ 1 \\ 2 \end{pmatrix} &amp;= \begin{pmatrix} 6 \\ 5 \\ 10 \end{pmatrix}, &amp;
+    T\begin{pmatrix} -1 \\ 1 \\ 1 \end{pmatrix} &amp;= \begin{pmatrix} 2 \\ 4 \\ 7 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
+<p>Find the transformation matrix for <span class="math notranslate nohighlight">\(T\)</span>.</p>
+</section>
 </div>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3-LCn_dGzaY?si=vLdzzaq7grb2XNfV&amp;start=381" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<div class="proof example admonition" id="normalising-a-vector-example">
-<p class="admonition-title"><span class="caption-number">Example 3.3 </span></p>
-<section class="example-content" id="proof-content">
-<p>Find the unit vector parallel to the following:</p>
-<p>(i)   <span class="math notranslate nohighlight">\(\vec{u} = \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix}\)</span></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[\begin{split} \hat{\vec{u}} = \dfrac{\vec{u}}{|\vec{u}|} = \dfrac{1}{\sqrt{14}} \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix} = \begin{pmatrix} \frac{\sqrt{14}}{14} \\ \frac{\sqrt{14}}{7} \\ \frac{3\sqrt{14}}{14} \end{pmatrix} \end{split}\]</div>
-<p class="sd-card-text">Check magnitude of <span class="math notranslate nohighlight">\(\hat{\vec{u}}\)</span></p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    |\hat{\vec{u}}| &amp;= \sqrt{ \left( \frac{\sqrt{14}}{14} \right)^2 + \left( \frac{\sqrt{14}}{7} \right)^2 + \left(\frac{3\sqrt{14}}{14} \right)^2} \\
-    &amp;= \sqrt{ \frac{14}{196} +\frac{14}{49} + \frac{126}{196}} = \sqrt{1} = 1 \qquad \checkmark
-\end{align*} \end{split}\]</div>
-</div>
-</details><p>(ii)   <span class="math notranslate nohighlight">\(\vec{v} = \begin{pmatrix} 5 \\ -12 \\ 0 \end{pmatrix}\)</span></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[\begin{split} \hat{\vec{v}} = \dfrac{\vec{v}}{|\vec{v}|} = \dfrac{1}{13} \begin{pmatrix} 5 \\ -12 \\ 0 \end{pmatrix} = \begin{pmatrix} \frac{5}{13} \\ -\frac{12}{13} \\ 0 \end{pmatrix} \end{split}\]</div>
-<p class="sd-card-text">Check magnitude of <span class="math notranslate nohighlight">\(\hat{\vec{v}}\)</span></p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    |\hat{\vec{v}}| &amp;= \sqrt{ \left(\frac{5}{13} \right)^2 + \left( -\frac{12}{13} \right)^2 + 0^2} \\
-    &amp;= \sqrt{ \frac{25}{169} + \frac{144}{169} + 0} = \sqrt{1} = 1 \qquad \checkmark
-\end{align*} \end{split}\]</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-(iii) &amp;emsp; $\vec{w} = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}$
+<div class="exercise admonition" id="transformations-ex-rotation">
 
-````{dropdown} Solution
-$$ \hat{\vec{w}} = \dfrac{\vec{w}}{|\vec{w}|} = \dfrac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} = \begin{pmatrix} \frac{\sqrt{2}}{2} \\ 0 \\ \frac{\sqrt{2}}{2} \end{pmatrix} $$
-
-Check magnitude of $\hat{\vec{w}}$
-
-$$ \begin{align*}
-    |\hat{\vec{w}}| &amp;= \sqrt{ \left( \frac{\sqrt{2}}{2} \right)^2 + 0^2 + \left( \frac{\sqrt{2}}{2} \right)^2 } \\
-    &amp;= \sqrt{ \frac{2}{4} + 0 + \frac{2}{4} } = \sqrt{1} = 1 \qquad \checkmark
-\end{align*} $$
-</pre></div>
+<p class="admonition-title"><span class="caption-number">Exercise 6.5 </span></p>
+<section id="exercise-content">
+<p>Rotate the position vector <span class="math notranslate nohighlight">\((2, 1)^\mathsf{T} \in \mathbb{R}^2\)</span> by angle <span class="math notranslate nohighlight">\(\pi/6\)</span> anti-clockwise about the origin.</p>
+</section>
 </div>
+<div class="exercise admonition" id="transformations-ex-reflection">
+
+<p class="admonition-title"><span class="caption-number">Exercise 6.6 </span></p>
+<section id="exercise-content">
+<p>Reflect the position vector <span class="math notranslate nohighlight">\((5, 3)^\mathsf{T} \in \mathbb{R}^2\)</span> about the line that passes through <span class="math notranslate nohighlight">\((0, 0)\)</span> and makes an angle <span class="math notranslate nohighlight">\(\pi/3\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis.</p>
+</section>
 </div>
-</details></section>
-</div></section>
+<div class="exercise admonition" id="transformations-ex-transform-square">
+
+<p class="admonition-title"><span class="caption-number">Exercise 6.7 </span></p>
+<section id="exercise-content">
+<p>A square with side lengths 2 is centred at the co-ordinates <span class="math notranslate nohighlight">\((3, 2)\)</span>. It is to be translated so the centre is at the origin, rotated by an angle <span class="math notranslate nohighlight">\(\pi/3\)</span> clockwise about the origin and then translated back to its initial position.</p>
+<p>(a)   Write down a matrix containing the homogeneous co-ordinates for the vertices of the square.</p>
+<p>(b)   Determine the transformation matrices that perform the three transformations.</p>
+<p>(c)   Calculate the composite transformation matrix and apply with to the co-ordinate matrix from part (a).</p>
+</section>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -555,20 +522,20 @@ $$ \begin{align*}
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="3.1_Vector_arithmetic.html"
+       href="6.4_Translation.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3.4. </span>Arithmetic operations on vectors</p>
+        <p class="prev-next-title"><span class="section-number">6.4. </span>Translation</p>
       </div>
     </a>
     <a class="right-next"
-       href="3.3_Dot_and_cross_products.html"
+       href="A_Exercise_solutions.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.6. </span>Dot and cross products</p>
+        <p class="prev-next-title">Exercise Solutions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -581,20 +548,6 @@ $$ \begin{align*}
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-vectors">3.5.1. Unit vectors</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

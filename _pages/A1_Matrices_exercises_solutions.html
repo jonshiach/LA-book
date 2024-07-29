@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>A. Matrices Exercise Solutions &#8212; Linear Algebra</title>
+    <title>Matrices &#8212; Linear Algebra</title>
   
   
   
@@ -64,14 +64,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}(#1)", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '_pages/A_Matrices_exercises_solutions';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_pages/A1_Matrices_exercises_solutions';</script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="B. Systems of Linear Equations Exercises Solutions" href="B_Linear_systems_exercises_solutions.html" />
-    <link rel="prev" title="6.5. Transformations exercises" href="6.5_Linear_transformations_exercises.html" />
+    <link rel="next" title="Systems of Linear Equations" href="A2_Linear_systems_exercises_solutions.html" />
+    <link rel="prev" title="Exercise Solutions" href="A_Exercise_solutions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -213,17 +213,21 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="6.2_Composite_transformations.html">6.2. Composite linear transformations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.3_Rotation_reflection_and_translation.html">6.3. Rotation, reflection and scaling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.4_Translation.html">6.4. Translation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transformations_exercises.html">6.5. Transformations exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transforation_exercises.html">6.5. Transformations exercises</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">A. Matrices Exercise Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B_Linear_systems_exercises_solutions.html">B. Systems of Linear Equations Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="C_Vectors_exercises_solutions.html">C. Vectors Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="D_Coordinate_geometry_exercises_solutions.html">D. Co-ordinate Geometry Exercises Solutions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="E_Vector_spaces_exercises_solutions.html">E. Vector Spaces Exercises Solutions</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="A_Exercise_solutions.html">Exercise Solutions</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations</a></li>
+</ul>
+</li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
@@ -281,7 +285,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/_pages/A_Matrices_exercises_solutions.ipynb" target="_blank"
+      <li><a href="../_sources/_pages/A1_Matrices_exercises_solutions.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -361,7 +365,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>A. Matrices Exercise Solutions</h1>
+    <h1>Matrices</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -375,9 +379,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="a-matrices-exercise-solutions">
-<span id="matrices-exercises-solutions"></span><h1>A. Matrices Exercise Solutions<a class="headerlink" href="#a-matrices-exercise-solutions" title="Permalink to this heading">#</a></h1>
-<div class="solution admonition" id="_pages/A_Matrices_exercises_solutions-solution-0">
+  <section class="tex2jax_ignore mathjax_ignore" id="matrices">
+<span id="matrices-exercises-solutions"></span><h1>Matrices<a class="headerlink" href="#matrices" title="Permalink to this heading">#</a></h1>
+<div class="solution admonition" id="_pages/A1_Matrices_exercises_solutions-solution-0">
 
 <p class="admonition-title">Solution to<a class="reference internal" href="1.7_Matrices_exercises.html#matrices-ex1"> Exercise 1.1</a></p>
 <section id="solution-content">
@@ -400,7 +404,7 @@ document.write(`
     \end{pmatrix} \)</span></p>
 </section>
 </div>
-<div class="solution admonition" id="_pages/A_Matrices_exercises_solutions-solution-1">
+<div class="solution admonition" id="_pages/A1_Matrices_exercises_solutions-solution-1">
 
 <p class="admonition-title">Solution to<a class="reference internal" href="1.7_Matrices_exercises.html#matrices-ex2"> Exercise 1.2</a></p>
 <section id="solution-content">
@@ -414,7 +418,7 @@ document.write(`
 <p>(h)   <span class="math notranslate nohighlight">\((A + B)^\mathsf{T} = \begin{pmatrix} 4 &amp; -3 \\ 3 &amp; 7 \end{pmatrix}^\mathsf{T} = \begin{pmatrix} 4 &amp; 3 \\ -3 &amp; 7 \end{pmatrix}\)</span></p>
 </section>
 </div>
-<div class="solution admonition" id="_pages/A_Matrices_exercises_solutions-solution-2">
+<div class="solution admonition" id="_pages/A1_Matrices_exercises_solutions-solution-2">
 
 <p class="admonition-title">Solution to<a class="reference internal" href="1.7_Matrices_exercises.html#matrices-ex3"> Exercise 1.3</a></p>
 <section id="solution-content">
@@ -488,7 +492,7 @@ document.write(`
 \end{align*} \end{split}\]</div>
 </section>
 </div>
-<div class="solution admonition" id="_pages/A_Matrices_exercises_solutions-solution-3">
+<div class="solution admonition" id="_pages/A1_Matrices_exercises_solutions-solution-3">
 
 <p class="admonition-title">Solution to<a class="reference internal" href="1.7_Matrices_exercises.html#matrices-ex4"> Exercise 1.4</a></p>
 <section id="solution-content">
@@ -592,7 +596,7 @@ document.write(`
 <p>Check: <span class="math notranslate nohighlight">\((DE)(DE)^{-1} = \begin{pmatrix} -5 &amp; 17 \\ -2 &amp; 5 \end{pmatrix} \begin{pmatrix} \frac{5}{9} &amp; -\frac{17}{9} \\ \frac{2}{9} &amp; -\frac{5}{9} \end{pmatrix} = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix} \quad \checkmark\)</span></p>
 </section>
 </div>
-<div class="solution admonition" id="_pages/A_Matrices_exercises_solutions-solution-4">
+<div class="solution admonition" id="_pages/A1_Matrices_exercises_solutions-solution-4">
 
 <p class="admonition-title">Solution to<a class="reference internal" href="1.7_Matrices_exercises.html#matrices-ex5"> Exercise 1.5</a></p>
 <section id="solution-content">
@@ -604,7 +608,7 @@ document.write(`
 <p>(f)   This is the same as the matrix <span class="math notranslate nohighlight">\(B\)</span> from above with 2 times column 1 added to column 2. Therefore the determinant of this matrix is <span class="math notranslate nohighlight">\(\det(B) = 15\)</span>.</p>
 </section>
 </div>
-<div class="solution admonition" id="_pages/A_Matrices_exercises_solutions-solution-5">
+<div class="solution admonition" id="_pages/A1_Matrices_exercises_solutions-solution-5">
 
 <p class="admonition-title">Solution to<a class="reference internal" href="1.7_Matrices_exercises.html#matrices-ex6"> Exercise 1.6</a></p>
 <section id="solution-content">
@@ -634,7 +638,7 @@ document.write(`
 <div style="text-align: right"> &#9633; </div>
 </section>
 </div>
-<div class="solution admonition" id="_pages/A_Matrices_exercises_solutions-solution-6">
+<div class="solution admonition" id="_pages/A1_Matrices_exercises_solutions-solution-6">
 
 <p class="admonition-title">Solution to<a class="reference internal" href="1.7_Matrices_exercises.html#matrices-ex7"> Exercise 1.7</a></p>
 <section id="solution-content">
@@ -760,20 +764,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="6.5_Linear_transformations_exercises.html"
+       href="A_Exercise_solutions.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">6.5. </span>Transformations exercises</p>
+        <p class="prev-next-title">Exercise Solutions</p>
       </div>
     </a>
     <a class="right-next"
-       href="B_Linear_systems_exercises_solutions.html"
+       href="A2_Linear_systems_exercises_solutions.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">B. Systems of Linear Equations Exercises Solutions</p>
+        <p class="prev-next-title">Systems of Linear Equations</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
