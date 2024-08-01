@@ -220,12 +220,12 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="A_Exercise_solutions.html">Exercise Solutions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations</a></li>
 </ul>
 </li>
 </ul>
@@ -391,27 +391,14 @@ document.write(`
                   
   <span class="target" id="matrix-multiplication-section"></span><section class="tex2jax_ignore mathjax_ignore" id="matrix-multiplication">
 <span id="index-0"></span><h1><span class="section-number">1.3. </span>Matrix multiplication<a class="headerlink" href="#matrix-multiplication" title="Permalink to this heading">#</a></h1>
-<p>We can multiply any two real numbers together but multiplication of two or more matrices is a much more complicated idea. Similarly to addition, which is only defined for matrices of the same size, matrix multiplication has constrains on the sizes of the multipliers:</p>
+<p>We saw in the <a class="reference internal" href="1.1_Matrix_operations.html#matrix-operations-section"><span class="std std-ref">previous section</span></a> that we can perform the arithmetic operations of addition, subtraction and multiplication by a scalar on matrices. Here we will look at multiplication of two matrices.</p>
 <div class="proof definition admonition" id="matrix-multiplication-definition">
 <p class="admonition-title"><span class="caption-number">Definition 1.6 </span> (Matrix multiplication)</p>
 <section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\(m \times  n\)</span> matrix and <span class="math notranslate nohighlight">\(B\)</span> a <span class="math notranslate nohighlight">\(p \times q\)</span> matrix. The product <span class="math notranslate nohighlight">\(AB\)</span> is only defined if <span class="math notranslate nohighlight">\(n = p\)</span> and the resulting matrix has dimension <span class="math notranslate nohighlight">\(m \times q\)</span> (i.e., the number of columns in <span class="math notranslate nohighlight">\(A\)</span> has to equal the number of rows in <span class="math notranslate nohighlight">\(B\)</span>). The product of an <span class="math notranslate nohighlight">\(m \times p\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> and a <span class="math notranslate nohighlight">\(p \times n\)</span> matrix <span class="math notranslate nohighlight">\(B\)</span> is defined as</p>
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\(m \times  n\)</span> matrix and <span class="math notranslate nohighlight">\(B\)</span> a <span class="math notranslate nohighlight">\(p \times q\)</span> matrix, the product <span class="math notranslate nohighlight">\(AB\)</span> is defined as</p>
 <div class="math notranslate nohighlight" id="equation-matrix-multiplication-equation">
 <span class="eqno">(1.4)<a class="headerlink" href="#equation-matrix-multiplication-equation" title="Permalink to this equation">#</a></span>\[ [AB]_{ij} = \sum_{k=1}^n a_{ik}b_{kj}. \]</div>
-<p>i.e., if <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are two <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{pmatrix} 
-    a_{11} &amp; a_{12} \\
-    a_{21} &amp; a_{22} 
-\end{pmatrix}
-\begin{pmatrix} 
-    b_{11} &amp; b_{12} \\
-    b_{21} &amp; b_{22}
-\end{pmatrix} =
-\begin{pmatrix}
-    a_{11} b_{11} + a_{12}b_{21} &amp; a_{11}b_{12} + a_{12} b_{22} \\
-    a_{21} b_{11} + a_{22}b_{21} &amp; a_{21}b_{12} + a_{22} b_{22}
-\end{pmatrix}. \end{split}\]</div>
+<p>The product <span class="math notranslate nohighlight">\(AB\)</span> is only defined if the number of columns in the first matrix is the same as the number of rows in the second matrix, i.e., <span class="math notranslate nohighlight">\(n = p\)</span>, and the resulting matrix has the same number of rows as the first matrix and the same number of columnbs of the second matrix, i.e., a <span class="math notranslate nohighlight">\(m \times q\)</span> matrix.</p>
 </section>
 </div><p>The technique used to multiply two matrices together requires us to move across the horizontal rows of the first matrix (the <span class="math notranslate nohighlight">\(i\)</span> index) and down the vertical columns of the second matrix (the <span class="math notranslate nohighlight">\(j\)</span> index). We multiply corresponding elements together and sum the result. For example, consider the multiplication of the two <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> given below</p>
 <div class="math notranslate nohighlight">

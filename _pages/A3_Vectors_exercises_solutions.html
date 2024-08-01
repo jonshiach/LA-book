@@ -390,9 +390,9 @@ document.write(`
 = \begin{pmatrix} 5 \\ 12 \end{pmatrix}\)</span></p>
 <p>(b)   <span class="math notranslate nohighlight">\(\vec{w} - \vec{u} = \begin{pmatrix} 1 \\ 6 \end{pmatrix} - \begin{pmatrix} 2 \\ 3 \end{pmatrix} 
 = \begin{pmatrix} 1 - 2 \\ 6 - 3 \end{pmatrix} = \begin{pmatrix} -1 \\ 3 \end{pmatrix}\)</span></p>
-<p>(c)   <span class="math notranslate nohighlight">\(\hat{\vec{u}} = \dfrac{\vec{u}}{|\vec{u}|} = \dfrac{1}{\sqrt{13}} \begin{pmatrix} 2 \\ 3 \end{pmatrix} 
+<p>(c)   <span class="math notranslate nohighlight">\(\hat{\vec{u}} = \dfrac{\vec{u}}{\|\vec{u}\|} = \dfrac{1}{\sqrt{13}} \begin{pmatrix} 2 \\ 3 \end{pmatrix} 
 = \begin{pmatrix} \frac{2}{\sqrt{13}} \\ \frac{3}{\sqrt{13}} \end{pmatrix}\)</span></p>
-<p>(d)   <span class="math notranslate nohighlight">\(-\hat{\vec{v}} = -\dfrac{\vec{v}}{|\vec{v}|} = -\dfrac{1}{\sqrt{13}} \begin{pmatrix} 3 \\ -2 \end{pmatrix} = \begin{pmatrix} -\frac{3}{\sqrt{13}} \\ \frac{2}{\sqrt{13}} \end{pmatrix}\)</span></p>
+<p>(d)   <span class="math notranslate nohighlight">\(-\hat{\vec{v}} = -\dfrac{\vec{v}}{\|\vec{v}\|} = -\dfrac{1}{\sqrt{13}} \begin{pmatrix} 3 \\ -2 \end{pmatrix} = \begin{pmatrix} -\frac{3}{\sqrt{13}} \\ \frac{2}{\sqrt{13}} \end{pmatrix}\)</span></p>
 <p>(e)   <span class="math notranslate nohighlight">\(\dfrac{1}{2}\vec{v} = \dfrac{1}{2} \begin{pmatrix} 3 \\ -2 \end{pmatrix} 
 = \begin{pmatrix} 3 / 2 \\ -2 / 2 \end{pmatrix}\)</span></p>
 <p>(f)   <span class="math notranslate nohighlight">\(\vec{v} - \vec{u} = \begin{pmatrix} 3 \\ -2 \end{pmatrix} - \begin{pmatrix} 2 \\ 3 \end{pmatrix}= \begin{pmatrix} 1 \\ -5 \end{pmatrix}\)</span></p>
@@ -401,10 +401,10 @@ document.write(`
 <p>(i)   Using equation <a class="reference internal" href="3.3_Dot_and_cross_products.html#equation-geometric-dot-product-equation">(3.4)</a></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \overrightarrow{UV} \cdot \overrightarrow{UW} &amp;= |\overrightarrow{UV}||\overrightarrow{UW}| \cos(\theta) \\
+    (\vec{v} - \vec{u}) \cdot (\vec{w} - \vec{u}) &amp;= \|(\vec{v} - \vec{u})\|\|(\vec{w} - \vec{u})\| \cos(\theta) \\
     \begin{pmatrix} 1 \\ -5 \end{pmatrix} \cdot \begin{pmatrix} -1 \\ 3 \end{pmatrix} &amp;=
-    \left| \begin{pmatrix} 1 \\ -5 \end{pmatrix} \right|
-    \left| \begin{pmatrix} -1 \\ 3 \end{pmatrix} \right| \cos(\theta) \\
+    \left\| \begin{pmatrix} 1 \\ -5 \end{pmatrix} \right\|
+    \left\| \begin{pmatrix} -1 \\ 3 \end{pmatrix} \right\| \cos(\theta) \\
     -16 &amp;= \sqrt{26} \sqrt{10} \cos(\theta) \\
     \theta &amp;= \cos^{-1} \left( \frac{-16}{\sqrt{260}} \right) \approx 3.0172
 \end{align*} \end{split}\]</div>
@@ -420,28 +420,28 @@ document.write(`
 <p>(b)</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    &amp; \left( \begin{array}{ccc|c}
+    &amp; \left( \begin{array}{ccc\|c}
     1 &amp; 0 &amp; 1 &amp; 2 \\
     -1 &amp; 2 &amp; 0 &amp; 7 \\
     0 &amp; 0 &amp; -1 &amp; 1
     \end{array} \right)
     \begin{array}{l} \\ R_2 + R_1 \\ \phantom{x} \end{array} &amp;
     \longrightarrow &amp;
-    \left( \begin{array}{ccc|c}
+    \left( \begin{array}{ccc\|c}
         1 &amp; 0 &amp; 1 &amp; 2 \\
         0 &amp; 2 &amp; 1 &amp; 9 \\
         0 &amp; 0 &amp; -1 &amp; 1
     \end{array} \right)
     \begin{array}{l} \\ \frac{1}{2} R_2 \\ -R_3 \phantom{x} \end{array} \\ \\
     \longrightarrow &amp;
-    \left( \begin{array}{ccc|c}
+    \left( \begin{array}{ccc\|c}
         1 &amp; 0 &amp; 1 &amp; 2 \\
         0 &amp; 1 &amp; 1/2 &amp; 9/2 \\
         0 &amp; 0 &amp; 1 &amp; -1
     \end{array} \right)
     \begin{array}{l} R_1 - R_3 \\ R_2 - \frac{1}{2} R_3 \\ \phantom{x} \end{array} &amp;
     \longrightarrow &amp;
-    \left( \begin{array}{ccc|c}
+    \left( \begin{array}{ccc\|c}
         1 &amp; 0 &amp; 0 &amp; 3 \\
         0 &amp; 1 &amp; 0 &amp; 5 \\
         0 &amp; 0 &amp; 1 &amp; -1
@@ -493,14 +493,14 @@ document.write(`
 <p>Therefore <span class="math notranslate nohighlight">\(\vec{u} \perp \vec{v}\)</span>. The angle between <span class="math notranslate nohighlight">\(\vec{u}\)</span> and <span class="math notranslate nohighlight">\(\vec{w}\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \theta &amp;= \cos^{-1} \left( \frac{\vec{u} \cdot \vec{w}}{|\vec{u} ||\vec{w}|} \right) \\
+    \theta &amp;= \cos^{-1} \left( \frac{\vec{u} \cdot \vec{w}}{\|\vec{u} \|\|\vec{w}\|} \right) \\
     &amp;= \cos^{-1} \left( \frac{-1}{\sqrt{14}\sqrt{14}}\right) \\
     &amp;= \cos^{-1}\left(\frac{-1}{14}\right) \approx 1.6423,
 \end{align*} \end{split}\]</div>
 <p>and the angle between <span class="math notranslate nohighlight">\(\vec{v}\)</span> and <span class="math notranslate nohighlight">\(\vec{w}\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \theta &amp;= \cos^{-1} \left( \frac{\vec{v} \cdot \vec{w}}{|\vec{v} ||\vec{w}|} \right) \\
+    \theta &amp;= \cos^{-1} \left( \frac{\vec{v} \cdot \vec{w}}{\|\vec{v} \|\|\vec{w}\|} \right) \\
     &amp;= \cos^{-1} \left( \frac{-9}{\sqrt{6}\sqrt{14}} \right) \approx 2.9515.
 \end{align*} \end{split}\]</div>
 </section>

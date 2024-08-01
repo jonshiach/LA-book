@@ -531,7 +531,7 @@ document.write(`
     \overrightarrow{\vec{rp}} &amp;= \begin{pmatrix} 0 \\ -1 \\ 3 \end{pmatrix} - 
     \begin{pmatrix} \frac{12}{7} \\ -\frac{5}{14} \\ \frac{29}{14} \end{pmatrix} =
     \begin{pmatrix} -\frac{12}{7} \\ -\frac{9}{14} \\ \frac{13}{14} \end{pmatrix}, \\
-    \therefore d &amp;= |\overrightarrow{\vec{rp}}| = 
+    \therefore d &amp;= \|\overrightarrow{\vec{rp}}\| = 
     \sqrt{\left(-\frac{12}{7}\right)^2 + \left(-\frac{9}{14}\right)^2 + \left(\frac{13}{14}\right)^2} 
     = \frac{\sqrt{826}}{14}.
 \end{align*} \end{split}\]</div>
@@ -550,7 +550,7 @@ document.write(`
 <p>and normalising gives</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \hat{\vec{n}} = \frac{\vec{n}}{|\vec{n}|} = \frac{1}{\sqrt{69}} 
+    \hat{\vec{n}} = \frac{\vec{n}}{\|\vec{n}\|} = \frac{1}{\sqrt{69}} 
     \begin{pmatrix} 1 \\ 8 \\ 2 \end{pmatrix} =
     \begin{pmatrix} \frac{\sqrt{69}}{69} \\ \frac{8\sqrt{69}}{69} \\ \frac{2\sqrt{69}}{69} \end{pmatrix}.
 \end{align*} \end{split}\]</div>
@@ -600,26 +600,26 @@ document.write(`
 <p>Using the <a class="reference internal" href="3.3_Dot_and_cross_products.html#dot-product-definition">geometric definition of a dot product</a></p>
 <div class="math notranslate nohighlight">
 \[ \begin{align*}
-    (\vec{q} - \vec{p})\cdot \vec{n} &amp;= |\vec{n}||\vec{q} - \vec{p}| \cos(\theta).
+    (\vec{q} - \vec{p})\cdot \vec{n} &amp;= \|\vec{n}\|\|\vec{q} - \vec{p}\| \cos(\theta).
 \end{align*} \]</div>
 <p>Since <span class="math notranslate nohighlight">\(d\)</span> is the length of the adjacent side of the right-angled triangle then</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align*}
-    \cos(\theta) &amp;= \frac{d}{|\vec{q} - \vec{p}|},
+    \cos(\theta) &amp;= \frac{d}{\|\vec{q} - \vec{p}\|},
 \end{align*} \]</div>
 <p>so</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    (\vec{q} - \vec{p}) \cdot \vec{n} &amp;= |\vec{n}| |\vec{q} - \vec{p}| \frac{d}{|\vec{q} - \vec{p}|} \\
-    \therefore d &amp;= (\vec{q} - \vec{p})\cdot \frac{\vec{n}}{|\vec{n}|}.
+    (\vec{q} - \vec{p}) \cdot \vec{n} &amp;= \|\vec{n}\| \|\vec{q} - \vec{p}\| \frac{d}{\|\vec{q} - \vec{p}\|} \\
+    \therefore d &amp;= (\vec{q} - \vec{p})\cdot \frac{\vec{n}}{\|\vec{n}\|}.
 \end{align*} \end{split}\]</div>
 <p>The equation of the plane is <span class="math notranslate nohighlight">\(6 x-y-4 z=3\)</span> so letting <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(y=1\)</span> then <span class="math notranslate nohighlight">\(z = 1\)</span> so we know that <span class="math notranslate nohighlight">\(\vec{p} = (0, 1, -1)\)</span> lies on the plane. Since <span class="math notranslate nohighlight">\(\vec{q} = (2, 4, -3)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\vec{n} = (6, -1, -4)^\mathsf{T}\)</span> then applying the above formula gives</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     d &amp;= \left( \begin{pmatrix} 2 \\ 4 \\ -3 \end{pmatrix} -
     \begin{pmatrix} 0 \\ 1 \\ -1 \end{pmatrix} \right) \cdot 
-    \begin{pmatrix} 6 \\ -1 \\ -4 \end{pmatrix} / \left|
-    \begin{pmatrix} 6 \\ -1 \\ -4 \end{pmatrix} \right| \\
+    \begin{pmatrix} 6 \\ -1 \\ -4 \end{pmatrix} / \left\|
+    \begin{pmatrix} 6 \\ -1 \\ -4 \end{pmatrix} \right\| \\
     &amp;= \begin{pmatrix} 2 \\ 3 \\ -2 \end{pmatrix} \cdot \frac{1}{\sqrt{53}} 
     \begin{pmatrix} 6 \\ -1 \\ -4 \end{pmatrix} \\
     &amp;= \frac{12 - 3 + 8}{\sqrt{53}} = \frac{17}{\sqrt{53}}
