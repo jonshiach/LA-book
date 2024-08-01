@@ -87,9 +87,10 @@
 %     \draw [vector]  (0, 0) --  (P) node [pos=0.5,below right] {$\vec{p}$};
 % \end{tikzpicture}
 
+% Vector magnitude
 % \begin{tikzpicture}
 %     \draw [vector] (0,0) -- ++(20:4) node [pos=0.5,above] {$\vec{a}$};
-%     \draw [<->] ($(0,0)+(-70:0.5)$) -- ++(20:4) node [pos=0.5,below,rotate=20] {$|\vec{a}|$};
+%     \draw [<->] ($(0,0)+(-70:0.5)$) -- ++(20:4) node [pos=0.5,below,rotate=20] {$\|\vec{a}\|$};
 % \end{tikzpicture}
 
 % % Vector equality
@@ -242,22 +243,24 @@
 %     \draw [vector, red] ($(P)+(\a1:2)$) -- node [below right] {$t_2 \vec{d}_2$} (Q);
 % \end{tikzpicture}
 
+% Normal vector
 % \begin{tikzpicture}
-%     \tikzmath{\x=0;\y=45;\z=90;\l1=4;\l2=4;}
+%     \tikzmath{\x=-15;\y=45;\z=90;\l1=4;\l2=4;}
 %     \fill [gray!50,opacity=0.5] ($(0,0)+(\x:-1.5)+(\y:-1.5)$) -- ++(\x:5) -- ++(\y:4) -- ++(\x:-5) -- ++(\y:-4);
-%     \draw [vector,black] (0,0) coordinate (1) -- ++(\z:2) node [above] {$\vec{n} = \vec{a} \times \vec{b}$};
+%     \draw [vector,black] (0,0) coordinate (1) -- ++(\z:2.5) node [above] {$\vec{n} = \vec{a} \times \vec{b}$};
 %     \draw [vector] (1) -- ++(\x:2) node [pos=0.5,below] {$\vec{a}$};
 %     \draw [vector,red] (1) -- ++(30:2) node [pos=0.5,above left] {$\vec{b}$};
 %     \draw (\x:0.2) -- ++(\z:0.2) -- ++(\x:-0.2);
 %     \draw (\y:0.2) -- ++(\z:0.2) -- ++(\y:-0.2);
 % \end{tikzpicture}
 
+% Point-normal
 \begin{tikzpicture}
-    \tikzmath{\x=0;\y=45;\z=90;\a=15;}
-    \fill [gray!50,opacity=0.5] ($(0,0)+(\x:-2)+(\y:-2)$) -- ++(\x:6) -- ++(\y:4) -- ++(\x:-6) -- ++(\y:-4);
+    \tikzmath{\x=-15;\y=45;\z=90;\a=0;}
+    \fill [gray!50,opacity=0.5] ($(0,0)+(\x:-1)+(\y:-2)$) -- ++(\x:4) -- ++(\y:4) -- ++(\x:-5) -- ++(\y:-4);
     \node [point,label=below:$\vec{p}$] (p) {};
-    \node [point,label=below:$\vec{r}$] (r) at (\a:3) {};
-    \draw [vector,black] (0,0) coordinate (1) -- ++(\z:2) node [above] {$\vec{n}$};
+    \node [point,label=below:$\vec{r}$] (r) at (\a:2) {};
+    \draw [vector,black] (0,0) coordinate (1) -- ++(\z:2.5) node [above] {$\vec{n}$};
     \draw [vector] (p) -- (r);
     \draw (\a:0.2) -- ++(\z:0.2) -- ++(\a:-0.2);
 \end{tikzpicture}
@@ -470,7 +473,7 @@
 %     \node [point, red] at (\a2:\l1) (2) {};
 %     \draw [vector] (0, 0) -- (1) node [pos=0.75,below] {$\vec{u}$};
 %     \draw [vector, red] (0, 0) -- (2) node [pos=0.6,left] {$\vec{v}$};
-%     \draw [vector] (0, 0) -- (0:\l1) node [pos=0.6,below] {$|\vec{u}|\vec{e}_1$};
+%     \draw [vector] (0, 0) -- (0:\l1) node [pos=0.6,below] {$\|\vec{u}\|\vec{e}_1$};
 %     \draw [vector,black] (0, 0) -- (0:1) node [pos=0.5,below] {$\vec{e}_1$};
 %     \draw [-latex'] (\a1:\l2) arc (\a1 : \a2 : \l2);
 %     \draw [-latex'] (0:{\l2+0.5}) arc (0 : \a1 : {\l2+0.5});
@@ -641,23 +644,23 @@
 %     \node [point,red,label={above:\textcolor{red}{$(-2\sqrt{2},2\sqrt{2})$}}] at (6) {};
 % \end{tikzpicture}
 
-\begin{tikzpicture}
-    \draw [axis] (-4, 0) -- (10, 0) node [right] {$x$};
-    \draw [axis] (0, -4) -- (0, 8) node [above] {$y$};
-    \coordinate (1) at (0, -2.83);
-    \coordinate (2) at (2.83, 0);
-    \coordinate (3) at (-2.83, 2.83);    
-    \coordinate (4) at ($(1)+(6,4)$);
-    \coordinate (5) at ($(2)+(6,4)$);
-    \coordinate (6) at ($(3)+(6,4)$);
-    \draw [blue,line width=1pt,fill=blue!20, opacity=0.5] (1) -- (2) -- (3) -- cycle;
-    \draw [red,line width=1pt,fill=red!20, opacity=0.5] (4) -- (5) -- (6) -- cycle;
-    \node [point,blue,label={below right:\textcolor{blue}{$(0,-2\sqrt{2})$}}] at (1) {};
-    \node [point,blue,label={above right:\textcolor{blue}{$(2\sqrt{2},0)$}}] at (2) {};
-    \node [point,blue,label={above:\textcolor{blue}{$(-2\sqrt{2},2\sqrt{2})$}}] at (3) {};
-    \node [point,red,label={below:\textcolor{red}{$(6, 4 - 2\sqrt{2})$}}] at (4) {};
-    \node [point,red,label={above right:\textcolor{red}{$(6 + 2\sqrt{2},4)$}}] at (5) {};
-    \node [point,red,label={above:\textcolor{red}{$(6-2\sqrt{2},4+2\sqrt{2})$}}] at (6) {};
-\end{tikzpicture}
+% \begin{tikzpicture}
+%     \draw [axis] (-4, 0) -- (10, 0) node [right] {$x$};
+%     \draw [axis] (0, -4) -- (0, 8) node [above] {$y$};
+%     \coordinate (1) at (0, -2.83);
+%     \coordinate (2) at (2.83, 0);
+%     \coordinate (3) at (-2.83, 2.83);    
+%     \coordinate (4) at ($(1)+(6,4)$);
+%     \coordinate (5) at ($(2)+(6,4)$);
+%     \coordinate (6) at ($(3)+(6,4)$);
+%     \draw [blue,line width=1pt,fill=blue!20, opacity=0.5] (1) -- (2) -- (3) -- cycle;
+%     \draw [red,line width=1pt,fill=red!20, opacity=0.5] (4) -- (5) -- (6) -- cycle;
+%     \node [point,blue,label={below right:\textcolor{blue}{$(0,-2\sqrt{2})$}}] at (1) {};
+%     \node [point,blue,label={above right:\textcolor{blue}{$(2\sqrt{2},0)$}}] at (2) {};
+%     \node [point,blue,label={above:\textcolor{blue}{$(-2\sqrt{2},2\sqrt{2})$}}] at (3) {};
+%     \node [point,red,label={below:\textcolor{red}{$(6, 4 - 2\sqrt{2})$}}] at (4) {};
+%     \node [point,red,label={above right:\textcolor{red}{$(6 + 2\sqrt{2},4)$}}] at (5) {};
+%     \node [point,red,label={above:\textcolor{red}{$(6-2\sqrt{2},4+2\sqrt{2})$}}] at (6) {};
+% \end{tikzpicture}
 
 \end{document}

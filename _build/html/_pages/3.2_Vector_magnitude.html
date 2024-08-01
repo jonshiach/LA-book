@@ -220,12 +220,12 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="A_Exercise_solutions.html">Exercise Solutions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations</a></li>
 </ul>
 </li>
 </ul>
@@ -395,14 +395,14 @@ document.write(`
 <div class="proof definition note admonition" id="magnitude-definition">
 <p class="admonition-title"><span class="caption-number">Definition 3.4 </span> (Vector magnitude)</p>
 <section class="definition-content" id="proof-content">
-<p>The <strong>magnitude</strong> of a vector <span class="math notranslate nohighlight">\(\vec{a} = (a_1, a_2, \ldots, a_n)^\mathsf{T}\)</span> denoted by <span class="math notranslate nohighlight">\(|\vec{a}|\)</span> is calculated using</p>
+<p>The <strong>magnitude</strong> of a vector <span class="math notranslate nohighlight">\(\vec{a} = (a_1, a_2, \ldots, a_n)^\mathsf{T}\)</span> denoted by <span class="math notranslate nohighlight">\(\|\vec{a}\|\)</span> is calculated using</p>
 <div class="math notranslate nohighlight" id="equation-magnitude-equation">
-<span class="eqno">(3.1)<a class="headerlink" href="#equation-magnitude-equation" title="Permalink to this equation">#</a></span>\[ |\vec{a}| = \sqrt{\sum_{i=1}^n a_i^2} = \sqrt{a_1^2 + a_2^2 + \cdots + a_n^2}. \]</div>
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-magnitude-equation" title="Permalink to this equation">#</a></span>\[ \|\vec{a}\| = \sqrt{\sum_{i=1}^n a_i^2} = \sqrt{a_1^2 + a_2^2 + \cdots + a_n^2}. \]</div>
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/3_magnitude.svg"><img alt="../_images/3_magnitude.svg" src="../_images/3_magnitude.svg" width="250" /></a>
 </figure>
 </section>
-</div><p>Vector magnitude is also known as the <a href="https://en.wikipedia.org/wiki/Norm_(mathematics)" target="_blank"><strong>Euclidean norm</strong></a>. Note that <span class="math notranslate nohighlight">\(|\vec{a}|=0\)</span> if and only if <span class="math notranslate nohighlight">\(\vec{a}=(0, 0, \ldots, 0)^\mathsf{T}\)</span>.</p>
+</div><p>Vector magnitude is also known as the <a href="https://en.wikipedia.org/wiki/Norm_(mathematics)" target="_blank"><strong>Euclidean norm</strong></a>.</p>
 <div class="proof example admonition" id="magnitude-example">
 <p class="admonition-title"><span class="caption-number">Example 3.2 </span></p>
 <section class="example-content" id="proof-content">
@@ -416,7 +416,7 @@ Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
-\[ |\vec{u}| = \sqrt{1^2 + 2^2 + 3^2} = \sqrt{1+4+9} = \sqrt{14} \]</div>
+\[ \|\vec{u}\| = \sqrt{1^2 + 2^2 + 3^2} = \sqrt{1+4+9} = \sqrt{14} \]</div>
 </div>
 </details><p>(ii)   <span class="math notranslate nohighlight">\(\vec{v} = \begin{pmatrix} 5 \\ -12 \\ 0 \end{pmatrix}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -427,7 +427,7 @@ Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
-\[ |\vec{v}| = \sqrt{5^2 + (-12)^2 + 0^2} = \sqrt{25+144+0} = \sqrt{169} = 13\]</div>
+\[ \|\vec{v}\| = \sqrt{5^2 + (-12)^2 + 0^2} = \sqrt{25+144+0} = \sqrt{169} = 13\]</div>
 </div>
 </details><p>(iii)   <span class="math notranslate nohighlight">\(\vec{w} = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -438,9 +438,33 @@ Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
-\[|\vec{w}| = \sqrt{1^2 + 0^2 + 1^2} = \sqrt{1+0+1} = \sqrt{2}\]</div>
+\[\|\vec{w}\| = \sqrt{1^2 + 0^2 + 1^2} = \sqrt{1+0+1} = \sqrt{2}\]</div>
 </div>
 </details></section>
+</div><div class="proof theorem admonition" id="theorem-2">
+<p class="admonition-title"><span class="caption-number">Theorem 3.2 </span> (Properties of vector magnitude)</p>
+<section class="theorem-content" id="proof-content">
+<ul class="simple">
+<li><p>The magnitude of a vector <span class="math notranslate nohighlight">\(\vec{v}\)</span> is always non-negative.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\| \vec{v} \| \geq 0\]</div>
+<ul class="simple">
+<li><p>The magnitude of a vector <span class="math notranslate nohighlight">\(\vec{v}\)</span> is zero if and only if the vector is the zero vector.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\|\vec{v}\| = 0 \Leftrightarrow \vec{v} = \vec{0}.\]</div>
+<ul class="simple">
+<li><p>If a vector <span class="math notranslate nohighlight">\(\vec{v}\)</span> is multiplied by a scalar <span class="math notranslate nohighlight">\(k\)</span> then the magnitude of the resulting vector is the absolute value of <span class="math notranslate nohighlight">\(k\)</span> multiplied by the magnitude of <span class="math notranslate nohighlight">\(\vec{v}\)</span>.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\|k\vec{v}\| = |k| \| \vec{v} \|\]</div>
+<ul class="simple">
+<li><p>For any two vectors <span class="math notranslate nohighlight">\(\vec{u}\)</span> and <span class="math notranslate nohighlight">\(\vec{v}\)</span> the magnitude of their sum is less than or equal to the sum of their magnitudes.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\| \vec{u} + \vec{v} \| \leq \|\vec{u}\| + \| \vec{v} \|\]</div>
+</section>
 </div><section id="unit-vectors">
 <span id="index-1"></span><h2><span class="section-number">3.5.1. </span>Unit vectors<a class="headerlink" href="#unit-vectors" title="Permalink to this heading">#</a></h2>
 <p>For every non-zero vector <span class="math notranslate nohighlight">\(\vec{a}\)</span> there exist a unique <strong>unit vector</strong> which is a vector in the same direction as <span class="math notranslate nohighlight">\(\vec{a}\)</span> and whose magnitude is 1.</p>
@@ -450,19 +474,19 @@ Solution<div class="sd-summary-down docutils">
 <p>A unit vector is a vector with a magnitude of 1.</p>
 </section>
 </div><div class="proof theorem admonition" id="normalising-a-vector-proposition">
-<span id="index-2"></span><p class="admonition-title"><span class="caption-number">Theorem 3.2 </span> (Normalising a vector)</p>
+<span id="index-2"></span><p class="admonition-title"><span class="caption-number">Theorem 3.3 </span> (Normalising a vector)</p>
 <section class="theorem-content" id="proof-content">
 <p>Any non-zero vector can be scaled to transform it into a unit vector by dividing all its coordinates by its magnitude</p>
 <div class="math notranslate nohighlight" id="equation-normalising-a-vector-equation">
-<span class="eqno">(3.2)<a class="headerlink" href="#equation-normalising-a-vector-equation" title="Permalink to this equation">#</a></span>\[ \hat{\vec{a}} = \frac{\vec{a}}{|\vec{a}|}. \]</div>
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-normalising-a-vector-equation" title="Permalink to this equation">#</a></span>\[ \hat{\vec{a}} = \frac{\vec{a}}{\|\vec{a}\|}. \]</div>
 <p>This process is called <strong>normalising a vector</strong>. Unit vectors are denoted with a caret above the vector name, i.e., <span class="math notranslate nohighlight">\(\hat{\vec{a}}\)</span> which is read as <em>‘a hat’</em>.</p>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Let <span class="math notranslate nohighlight">\(\vec{a}\)</span> be a non-zero vector</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \left|\frac{1}{|\vec{a}|}\vec{a}\right| &amp;= \left|\frac{1}{|\vec{a}|}\right| |\vec{a}| \\
-    &amp;= \frac{1}{|\vec{a}|} |\vec{a}| \qquad \text{(since $|\vec{a}|&gt;0$)}\\
+    \left\|\frac{1}{\|\vec{a}\|}\vec{a}\right\| &amp;= \left\|\frac{1}{\|\vec{a}\|}\right\| \|\vec{a}\| \\
+    &amp;= \frac{1}{\|\vec{a}\|} \|\vec{a}\| \qquad \text{(since $\|\vec{a}\|&gt;0$)}\\
     &amp;= 1.
 \end{align*} \end{split}\]</div>
 </div>
@@ -480,11 +504,11 @@ Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
-\[\begin{split} \hat{\vec{u}} = \dfrac{\vec{u}}{|\vec{u}|} = \dfrac{1}{\sqrt{14}} \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix} = \begin{pmatrix} \frac{\sqrt{14}}{14} \\ \frac{\sqrt{14}}{7} \\ \frac{3\sqrt{14}}{14} \end{pmatrix} \end{split}\]</div>
+\[\begin{split} \hat{\vec{u}} = \dfrac{\vec{u}}{\|\vec{u}\|} = \dfrac{1}{\sqrt{14}} \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix} = \begin{pmatrix} \frac{\sqrt{14}}{14} \\ \frac{\sqrt{14}}{7} \\ \frac{3\sqrt{14}}{14} \end{pmatrix} \end{split}\]</div>
 <p class="sd-card-text">Check magnitude of <span class="math notranslate nohighlight">\(\hat{\vec{u}}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    |\hat{\vec{u}}| &amp;= \sqrt{ \left( \frac{\sqrt{14}}{14} \right)^2 + \left( \frac{\sqrt{14}}{7} \right)^2 + \left(\frac{3\sqrt{14}}{14} \right)^2} \\
+    \|\hat{\vec{u}}\| &amp;= \sqrt{ \left( \frac{\sqrt{14}}{14} \right)^2 + \left( \frac{\sqrt{14}}{7} \right)^2 + \left(\frac{3\sqrt{14}}{14} \right)^2} \\
     &amp;= \sqrt{ \frac{14}{196} +\frac{14}{49} + \frac{126}{196}} = \sqrt{1} = 1 \qquad \checkmark
 \end{align*} \end{split}\]</div>
 </div>
@@ -497,27 +521,30 @@ Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
-\[\begin{split} \hat{\vec{v}} = \dfrac{\vec{v}}{|\vec{v}|} = \dfrac{1}{13} \begin{pmatrix} 5 \\ -12 \\ 0 \end{pmatrix} = \begin{pmatrix} \frac{5}{13} \\ -\frac{12}{13} \\ 0 \end{pmatrix} \end{split}\]</div>
+\[\begin{split} \hat{\vec{v}} = \dfrac{\vec{v}}{\|\vec{v}\|} = \dfrac{1}{13} \begin{pmatrix} 5 \\ -12 \\ 0 \end{pmatrix} = \begin{pmatrix} \frac{5}{13} \\ -\frac{12}{13} \\ 0 \end{pmatrix} \end{split}\]</div>
 <p class="sd-card-text">Check magnitude of <span class="math notranslate nohighlight">\(\hat{\vec{v}}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    |\hat{\vec{v}}| &amp;= \sqrt{ \left(\frac{5}{13} \right)^2 + \left( -\frac{12}{13} \right)^2 + 0^2} \\
+    \|\hat{\vec{v}}\| &amp;= \sqrt{ \left(\frac{5}{13} \right)^2 + \left( -\frac{12}{13} \right)^2 + 0^2} \\
     &amp;= \sqrt{ \frac{25}{169} + \frac{144}{169} + 0} = \sqrt{1} = 1 \qquad \checkmark
 \end{align*} \end{split}\]</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-(iii) &amp;emsp; $\vec{w} = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}$
-
-````{dropdown} Solution
-$$ \hat{\vec{w}} = \dfrac{\vec{w}}{|\vec{w}|} = \dfrac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} = \begin{pmatrix} \frac{\sqrt{2}}{2} \\ 0 \\ \frac{\sqrt{2}}{2} \end{pmatrix} $$
-
-Check magnitude of $\hat{\vec{w}}$
-
-$$ \begin{align*}
-    |\hat{\vec{w}}| &amp;= \sqrt{ \left( \frac{\sqrt{2}}{2} \right)^2 + 0^2 + \left( \frac{\sqrt{2}}{2} \right)^2 } \\
-    &amp;= \sqrt{ \frac{2}{4} + 0 + \frac{2}{4} } = \sqrt{1} = 1 \qquad \checkmark
-\end{align*} $$
-</pre></div>
 </div>
+</details><p>(iii)   <span class="math notranslate nohighlight">\(\vec{w} = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}\)</span></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split} \hat{\vec{w}} = \dfrac{\vec{w}}{\|\vec{w}\|} = \dfrac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} = \begin{pmatrix} \frac{\sqrt{2}}{2} \\ 0 \\ \frac{\sqrt{2}}{2} \end{pmatrix} \end{split}\]</div>
+<p class="sd-card-text">Check magnitude of <span class="math notranslate nohighlight">\(\hat{\vec{w}}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \|\hat{\vec{w}}| &amp;= \sqrt{ \left( \frac{\sqrt{2}}{2} \right)^2 + 0^2 + \left( \frac{\sqrt{2}}{2} \right)^2 } \\
+    &amp;= \sqrt{ \frac{2}{4} + 0 + \frac{2}{4} } = \sqrt{1} = 1 \qquad \checkmark
+\end{align*} \end{split}\]</div>
 </div>
 </details></section>
 </div></section>

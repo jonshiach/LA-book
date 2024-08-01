@@ -220,12 +220,12 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="A_Exercise_solutions.html">Exercise Solutions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations</a></li>
 </ul>
 </li>
 </ul>
@@ -398,14 +398,14 @@ document.write(`
 <span id="id2"></span><h2><span class="section-number">4.4.1. </span>Shortest distance between two points<a class="headerlink" href="#index-1" title="Permalink to this heading">#</a></h2>
 <p>In <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> the shortest distance, <span class="math notranslate nohighlight">\(d\)</span>, between two points with position vectors <span class="math notranslate nohighlight">\(\vec{p}=(p_1, p_2, \ldots, p_n)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\vec{q} = (q_1, q_2, \ldots, q_n)^\mathsf{T}\)</span> is the length of a straight line segment connecting them. If we think about this segment as of a vector, then</p>
 <div class="math notranslate nohighlight">
-\[ d = |\vec{p} - \vec{q}| = \sqrt{\displaystyle\sum_{i=1}^n (p_i-q_i)^2}. \]</div>
-<p>Note that <span class="math notranslate nohighlight">\(|\vec{p} - \vec{q}| = |\vec{q} - \vec{p}|\)</span>.</p>
+\[ d = \|\vec{p} - \vec{q}\| = \sqrt{\displaystyle\sum_{i=1}^n (p_i-q_i)^2}. \]</div>
+<p>Note that <span class="math notranslate nohighlight">\(\|\vec{p} - \vec{q}\| = \|\vec{q} - \vec{p}\|\)</span>.</p>
 </section>
 <section id="shortest-distance-between-a-line-and-a-point">
 <span id="index-2"></span><h2><span class="section-number">4.4.2. </span>Shortest distance between a line and a point<a class="headerlink" href="#shortest-distance-between-a-line-and-a-point" title="Permalink to this heading">#</a></h2>
 <p>To the shortest distance, <span class="math notranslate nohighlight">\(d\)</span>, between a line <span class="math notranslate nohighlight">\(\vec{r} = \vec{p} + t\vec{d}\)</span> and a point with position vector <span class="math notranslate nohighlight">\(\vec{q}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> is the length of the vector <span class="math notranslate nohighlight">\(\vec{q} - \vec{r}\)</span> which is perpendicular to <span class="math notranslate nohighlight">\(\vec{d}\)</span> (<a class="reference internal" href="#line-point-distance-figure"><span class="std std-numref">Fig. 4.10</span></a>).</p>
 <figure class="align-default" id="line-point-distance-figure">
-<a class="reference internal image-reference" href="../_images/4_line_point_distance.svg"><img alt="../_images/4_line_point_distance.svg" src="../_images/4_line_point_distance.svg" width="450" /></a>
+<a class="reference internal image-reference" href="../_images/4_line_point_distance.svg"><img alt="../_images/4_line_point_distance.svg" src="../_images/4_line_point_distance.svg" width="425" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4.10 </span><span class="caption-text">The shortest distance of a point <span class="math notranslate nohighlight">\(\vec{q}\)</span> from the line <span class="math notranslate nohighlight">\(\vec{r} = \vec{p} + t \vec{d}\)</span> is the length of the vector <span class="math notranslate nohighlight">\(\vec{q} - \vec{r}\)</span> which is perpendicular to <span class="math notranslate nohighlight">\(\vec{d}\)</span>.</span><a class="headerlink" href="#line-point-distance-figure" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -421,11 +421,11 @@ document.write(`
     \vec{d} \cdot \vec{p} + t \vec{d} \cdot \vec{d} - \vec{d} \cdot \vec{q} &amp;= 0 \\
     \therefore t &amp;= \frac{\vec{d} \cdot \vec{q} - \vec{d} \cdot \vec{p}}{\vec{d} \cdot \vec{d}}.
 \end{align*} \end{split}\]</div>
-<p>This gives the value of the parameter <span class="math notranslate nohighlight">\(t\)</span> that can be used to calculate the position vector <span class="math notranslate nohighlight">\(\vec{r}\)</span> and therefore the shortest distance between the point <span class="math notranslate nohighlight">\(\vec{q}\)</span> and the line is <span class="math notranslate nohighlight">\(|\vec{q} - \vec{r}|\)</span><a class="footnote-reference brackets" href="#id4" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
+<p>This gives the value of the parameter <span class="math notranslate nohighlight">\(t\)</span> that can be used to calculate the position vector <span class="math notranslate nohighlight">\(\vec{r}\)</span> and therefore the shortest distance between the point <span class="math notranslate nohighlight">\(\vec{q}\)</span> and the line is <span class="math notranslate nohighlight">\(\|\vec{q} - \vec{r}\|\)</span><a class="footnote-reference brackets" href="#id4" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
 <div class="proof theorem admonition" id="point-line-distance-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 4.1 </span> (The shortest distance between a point and a line)</p>
 <section class="theorem-content" id="proof-content">
-<p>The shortest distance between the point with position vector <span class="math notranslate nohighlight">\(\vec{q}\)</span> and a line that passes through the point with position vector <span class="math notranslate nohighlight">\(\vec{p}\)</span> in the direction <span class="math notranslate nohighlight">\(\vec{d}\)</span> is <span class="math notranslate nohighlight">\(|\vec{q} - \vec{r}|\)</span> where <span class="math notranslate nohighlight">\(\vec{r} = \vec{p} + t \vec{d}\)</span> and</p>
+<p>The shortest distance between the point with position vector <span class="math notranslate nohighlight">\(\vec{q}\)</span> and a line that passes through the point with position vector <span class="math notranslate nohighlight">\(\vec{p}\)</span> in the direction <span class="math notranslate nohighlight">\(\vec{d}\)</span> is <span class="math notranslate nohighlight">\(\|\vec{q} - \vec{r}\|\)</span> where <span class="math notranslate nohighlight">\(\vec{r} = \vec{p} + t \vec{d}\)</span> and</p>
 <div class="math notranslate nohighlight" id="equation-point-line-t-equation">
 <span class="eqno">(4.3)<a class="headerlink" href="#equation-point-line-t-equation" title="Permalink to this equation">#</a></span>\[ t = \frac{\vec{d} \cdot \vec{q} - \vec{d} \cdot \vec{p}}{\vec{d} \cdot \vec{d}}. \]</div>
 </section>
@@ -468,7 +468,7 @@ Solution<div class="sd-summary-down docutils">
     \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix} =
     \begin{pmatrix} 7/3 \\ 1/3 \\ 10/3 \end{pmatrix},
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">and the shortest distance is <span class="math notranslate nohighlight">\(|\vec{q} - \vec{r}|\)</span> so</p>
+<p class="sd-card-text">and the shortest distance is <span class="math notranslate nohighlight">\(\|\vec{q} - \vec{r}\|\)</span> so</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \vec{q} - \vec{r} &amp;= \begin{pmatrix} 2 \\ 2 \\ 2 \end{pmatrix} - 
@@ -496,8 +496,8 @@ Solution<div class="sd-summary-down docutils">
 </figure>
 <p>If <span class="math notranslate nohighlight">\(\vec{r}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{r}_2\)</span> are points on the lines <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> respectively then the chord <span class="math notranslate nohighlight">\(\vec{r}_1 \to  \vec{r}_2\)</span> which is perpendicular to both lines has the direction vector <span class="math notranslate nohighlight">\(\vec{n} = \vec{d}_1 \times \vec{d}_2\)</span>. If <span class="math notranslate nohighlight">\(d\)</span> is the distance between <span class="math notranslate nohighlight">\(\vec{r}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{r}_2\)</span> then</p>
 <div class="math notranslate nohighlight" id="equation-line-line-distance-equation-1">
-<span class="eqno">(4.4)<a class="headerlink" href="#equation-line-line-distance-equation-1" title="Permalink to this equation">#</a></span>\[ \vec{r}_2 - \vec{r}_1 = d \left( \frac{\vec{d}_1 \times \vec{d}_2}{| \vec{d}_1 \times \vec{d}_2|} \right), \]</div>
-<p>Let <span class="math notranslate nohighlight">\(\hat{\vec{n}} = \dfrac{\vec{d}_1 \times \vec{d}_2}{|\vec{d}_1 \times \vec{d}_2|}\)</span> and substituting the equations of <span class="math notranslate nohighlight">\(\vec{r}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{r}_2\)</span> equation <a class="reference internal" href="#equation-line-line-distance-equation-1">(4.4)</a> gives</p>
+<span class="eqno">(4.4)<a class="headerlink" href="#equation-line-line-distance-equation-1" title="Permalink to this equation">#</a></span>\[ \vec{r}_2 - \vec{r}_1 = d \left( \frac{\vec{d}_1 \times \vec{d}_2}{\| \vec{d}_1 \times \vec{d}_2\|} \right), \]</div>
+<p>Let <span class="math notranslate nohighlight">\(\hat{\vec{n}} = \dfrac{\vec{d}_1 \times \vec{d}_2}{\|\vec{d}_1 \times \vec{d}_2\|}\)</span> and substituting the equations of <span class="math notranslate nohighlight">\(\vec{r}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{r}_2\)</span> equation <a class="reference internal" href="#equation-line-line-distance-equation-1">(4.4)</a> gives</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \vec{r}_2 - \vec{r}_1 &amp;= d \hat{\vec{n}}\\
@@ -520,7 +520,7 @@ Solution<div class="sd-summary-down docutils">
 <p>The shortest distance between two skew lines <span class="math notranslate nohighlight">\(\vec{r}_1 = \vec{p}_1 + t_1 \vec{d}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{r}_2 = \vec{p}_2 + t_2 \vec{d}_2\)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-line-line-distance-equation">
 <span class="eqno">(4.5)<a class="headerlink" href="#equation-line-line-distance-equation" title="Permalink to this equation">#</a></span>\[ d = (\vec{p}_2 - \vec{p}_1) \cdot \hat{\vec{n}}.\]</div>
-<p>where <span class="math notranslate nohighlight">\(\hat{\vec{n}} = \dfrac{\vec{d}_1 \times \vec{d}_2}{|\vec{d}_1 \times \vec{d}_2|}\)</span>.</p>
+<p>where <span class="math notranslate nohighlight">\(\hat{\vec{n}} = \dfrac{\vec{d}_1 \times \vec{d}_2}{\|\vec{d}_1 \times \vec{d}_2\|}\)</span>.</p>
 </section>
 </div><iframe width="560" height="315" src="https://www.youtube.com/embed/4cj0TIBLM4M?si=-VjP5H3OCMDD_zOp&amp;start=304" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <div class="proof example admonition" id="line-line-distance-example">
@@ -552,8 +552,8 @@ Solution<div class="sd-summary-down docutils">
         0 &amp; 2 &amp; 4
     \end{vmatrix} = 
     \begin{pmatrix} 12 \\ -4 \\ 2 \end{pmatrix}, \\
-    |\vec{n}| &amp;= \sqrt{12^2 + (-4)^2 + 2^2} = \sqrt{164} = 2\sqrt{41}, \\
-    \therefore \hat{\vec{n}} &amp;= \frac{\vec{n}}{|\vec{n}|} 
+    \|\vec{n}\| &amp;= \sqrt{12^2 + (-4)^2 + 2^2} = \sqrt{164} = 2\sqrt{41}, \\
+    \therefore \hat{\vec{n}} &amp;= \frac{\vec{n}}{\|\vec{n}\|} 
     = \frac{1}{2\sqrt{41}}
     \begin{pmatrix} 12 \\ -4 \\ 2 \end{pmatrix} 
     = 

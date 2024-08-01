@@ -220,12 +220,12 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="A_Exercise_solutions.html">Exercise Solutions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations</a></li>
 </ul>
 </li>
 </ul>
@@ -406,7 +406,7 @@ document.write(`
 <span class="eqno">(3.3)<a class="headerlink" href="#equation-arithmetic-dot-product-equation" title="Permalink to this equation">#</a></span>\[ \vec{a} \cdot \vec{b} = \sum_{i=1}^n a_ib_i = a_1b_1 + a_2b_2 + \cdots + a_nb_n. \]</div>
 <p>The <strong>dot product</strong> of two vectors <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span>, can be defined in geometric terms by</p>
 <div class="math notranslate nohighlight" id="equation-geometric-dot-product-equation">
-<span class="eqno">(3.4)<a class="headerlink" href="#equation-geometric-dot-product-equation" title="Permalink to this equation">#</a></span>\[ \vec{a} \cdot \vec{b} = |\vec{a}| |\vec{b}| \cos(\theta), \]</div>
+<span class="eqno">(3.4)<a class="headerlink" href="#equation-geometric-dot-product-equation" title="Permalink to this equation">#</a></span>\[ \vec{a} \cdot \vec{b} = \|\vec{a}\| \|\vec{b}\| \cos(\theta), \]</div>
 <p>where <span class="math notranslate nohighlight">\(\theta\)</span> is the angle between <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span> (<a class="reference internal" href="#dot-product-figure"><span class="std std-numref">Fig. 3.9</span></a>).</p>
 <figure class="align-default" id="dot-product-figure">
 <a class="reference internal image-reference" href="../_images/3_dot_product.svg"><img alt="../_images/3_dot_product.svg" src="../_images/3_dot_product.svg" width="175" /></a>
@@ -419,17 +419,17 @@ document.write(`
 <ul class="simple">
 <li><p>The dot product produces is a scalar quantity (an element of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>)</p></li>
 <li><p>The dot product of two perpendicular vectors is zero, we write <span class="math notranslate nohighlight">\(\vec{a}\perp\vec{b}\)</span> if <span class="math notranslate nohighlight">\(\vec{a}\cdot\vec{b}=0\)</span></p></li>
-<li><p>The dot product of two co-directional (parallel) vectors <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span> is equal to <span class="math notranslate nohighlight">\(|\vec{a}| |\vec{b}|\)</span></p></li>
+<li><p>The dot product of two co-directional (parallel) vectors <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span> is equal to <span class="math notranslate nohighlight">\(\|\vec{a}\| \|\vec{b}\|\)</span></p></li>
 </ul>
 <div class="proof theorem admonition" id="dot-product-properties-theorem">
-<p class="admonition-title"><span class="caption-number">Theorem 3.3 </span> (Properties of the dot product)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 3.4 </span> (Properties of the dot product)</p>
 <section class="theorem-content" id="proof-content">
 <p>For any vectors <span class="math notranslate nohighlight">\(\vec{a},\vec{b},\vec{c}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> and any scalar <span class="math notranslate nohighlight">\(k\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>:</p>
 <ul class="simple">
 <li><p>The dot product is distributive over vector addition, i.e., <span class="math notranslate nohighlight">\((\vec{a} + \vec{b})\cdot \vec{c} = \vec{a} \cdot \vec{c} + \vec{b} \cdot \vec{c}\)</span></p></li>
 <li><p>For any scalar <span class="math notranslate nohighlight">\(k\)</span>, <span class="math notranslate nohighlight">\((k \vec{a})\cdot \vec{b} = \vec{a} \cdot (k \vec{b})= k (\vec{a} \cdot \vec{b})\)</span></p></li>
 <li><p>The dot product is commutative, i.e., <span class="math notranslate nohighlight">\(\vec{a} \cdot \vec{b} = \vec{b} \cdot \vec{a}\)</span>;</p></li>
-<li><p><span class="math notranslate nohighlight">\(\vec{a} \cdot \vec{a} = |\vec{a}|^2 \geq 0 \text{ and } \vec{a} \cdot \vec{a} = 0 \iff \vec{a} = \vec{0}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{a} \cdot \vec{a} = \|\vec{a}\|^2 \geq 0 \text{ and } \vec{a} \cdot \vec{a} = 0 \iff \vec{a} = \vec{0}\)</span></p></li>
 </ul>
 </section>
 </div><iframe width="560" height="315" src="https://www.youtube.com/embed/y4h-vZfuNCM?si=w0nM__33kfansojn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -462,8 +462,8 @@ Solution<div class="sd-summary-down docutils">
 <p class="sd-card-text">Using equation <a class="reference internal" href="#equation-geometric-dot-product-equation">(3.4)</a></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \vec{a} \cdot \vec{b} &amp;= |\vec{a}| |\vec{b}| \cos(\theta) \\
-    \therefore \theta &amp;= \cos^{-1} \left( \frac{\vec{a} \cdot \vec{b}}{|\vec{a}||\vec{b}|}\right) \\
+    \vec{a} \cdot \vec{b} &amp;= \|\vec{a}\| \|\vec{b}\| \cos(\theta) \\
+    \therefore \theta &amp;= \cos^{-1} \left( \frac{\vec{a} \cdot \vec{b}}{\|\vec{a}\|\|\vec{b}\|}\right) \\
     &amp;= \cos^{-1} \left( \frac{1}{\sqrt{14}\sqrt{10}}\right) \approx 1.4862.
 \end{align*} \end{split}\]</div>
 </div>
@@ -502,7 +502,7 @@ Solution<div class="sd-summary-down docutils">
 </figure>
 </section>
 </div><div class="proof theorem admonition" id="cross-product-properties-theorem">
-<p class="admonition-title"><span class="caption-number">Theorem 3.4 </span> (Properties of the cross product)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 3.5 </span> (Properties of the cross product)</p>
 <section class="theorem-content" id="proof-content">
 <p>The cross product has the following properties:</p>
 <ul class="simple">

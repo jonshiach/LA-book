@@ -220,12 +220,12 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="A_Exercise_solutions.html">Exercise Solutions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations</a></li>
 </ul>
 </li>
 </ul>
@@ -582,24 +582,11 @@ document.write(`
     \therefore x_1 &amp;= 1.
 \end{align*} \end{split}\]</div>
 <p>In the interest of brevity, the following notation is used to denote the three types of EROs</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Row operation</p></th>
-<th class="head"><p>Notation</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Swap row <span class="math notranslate nohighlight">\(i\)</span> and row <span class="math notranslate nohighlight">\(j\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(R_i \leftrightarrow R_j\)</span></p></td>
-</tr>
-<tr class="row-odd"><td><p>Multiply row <span class="math notranslate nohighlight">\(i\)</span> by the scalar <span class="math notranslate nohighlight">\(k\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(kR_i\)</span></p></td>
-</tr>
-<tr class="row-even"><td><p>Add <span class="math notranslate nohighlight">\(k\)</span> multiples of row <span class="math notranslate nohighlight">\(j\)</span> to row <span class="math notranslate nohighlight">\(i\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(R_i + kR_j\)</span></p></td>
-</tr>
-</tbody>
-</table>
+<ul class="simple">
+<li><p>Swap row <span class="math notranslate nohighlight">\(i\)</span> and row <span class="math notranslate nohighlight">\(j\)</span>:   <span class="math notranslate nohighlight">\(R_i \leftrightarrow R_j\)</span></p></li>
+<li><p>Multiply row <span class="math notranslate nohighlight">\(i\)</span> by the scalar <span class="math notranslate nohighlight">\(k\)</span>:     <span class="math notranslate nohighlight">\(kR_i\)</span></p></li>
+<li><p>Add <span class="math notranslate nohighlight">\(k\)</span> multiples of row <span class="math notranslate nohighlight">\(j\)</span> to row <span class="math notranslate nohighlight">\(i\)</span>:    <span class="math notranslate nohighlight">\(R_i + kR_j\)</span></p></li>
+</ul>
 <p>Since the EROs do not change the solution to the system of equations, it does not matter which EROs are applied to row reduce the augmented matrix. A common approach is to ensure the pivot elements have a value of 1 which can decrease the number of fractional values thus simplifying the calculations. For example, consider the following row reduction of the same augmented matrix as before.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -645,7 +632,7 @@ document.write(`
 <p><strong>Inputs:</strong> An <span class="math notranslate nohighlight">\(m \times n\)</span> coefficient matrix <span class="math notranslate nohighlight">\(A\)</span> and an <span class="math notranslate nohighlight">\(m\)</span>-element constant vector <span class="math notranslate nohighlight">\(\vec{b}\)</span>.</p>
 <p><strong>Outputs:</strong> An augmented matrix in row echelon form.</p>
 <ol class="arabic simple">
-<li><p>Form the augmented matrix <span class="math notranslate nohighlight">\([ A \mid \vec{b}]\)</span></p></li>
+<li><p>Form the augmented matrix <span class="math notranslate nohighlight">\(( A \mid \vec{b} )\)</span></p></li>
 <li><p>Set pivot row <span class="math notranslate nohighlight">\(k\)</span> to 1</p></li>
 <li><p>For each column <span class="math notranslate nohighlight">\(j\)</span> from 1 to <span class="math notranslate nohighlight">\(n\)</span>:</p>
 <ol class="arabic simple">

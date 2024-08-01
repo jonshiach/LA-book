@@ -220,12 +220,12 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="A_Exercise_solutions.html">Exercise Solutions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations</a></li>
 </ul>
 </li>
 </ul>
@@ -383,58 +383,57 @@ document.write(`
 <span id="index-0"></span><h1><span class="section-number">2.6. </span>Partial pivoting<a class="headerlink" href="#partial-pivoting" title="Permalink to this heading">#</a></h1>
 <p>In most practical applications of row reduction to solve a linear system we use computers to perform the calculations. Computers use floating point numbers to compute arithmetic operations which are not exact and can be prone to rounding errors. Consider the following linear system of equations</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \begin{pmatrix}0.0001 &amp; 1 \\ 1 &amp; 1 \end{pmatrix}
+\[\begin{split} \begin{pmatrix}0.01 &amp; 1 \\ 1 &amp; 1 \end{pmatrix}
 \begin{pmatrix} x_1 \\ x_2 \end{pmatrix} =
 \begin{pmatrix}1 \\ 2 \end{pmatrix}. \end{split}\]</div>
 <p>Using Gaussian elimination to solve this system</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     &amp; \left( \begin{array}{cc|c}
-        0.0001 &amp; 1 &amp; 1 \\
-        1 &amp; 1 &amp; 2 
+        0.01 &amp; 1 &amp; 1 \\
+        1 &amp; 1 &amp; 2
     \end{array} \right)
-    \begin{array}{l} \\  R_2 - 1000R_1 \end{array} &amp;
+    \begin{array}{l} \\  R_2 - 100R_1 \end{array} &amp;
     \longrightarrow &amp;
-    \left( \begin{array}{cc|c} 
-        0.0001 &amp; 1 &amp; 1 \\
-        0 &amp; -9999 &amp; -9998 
+    \left( \begin{array}{cc|c}
+        0.01 &amp; 1 &amp; 1 \\
+        0 &amp; -99 &amp; -98
     \end{array} \right)
-    \begin{array}{l} \\  -\dfrac{1}{9999}R_2 \end{array} \\ \\
+    \begin{array}{l} \\  -\dfrac{1}{99}R_2 \end{array} \\ \\
     \longrightarrow &amp;
-    \left( \begin{array}{cc|c} 
-        0.0001 &amp; 1 &amp; 1 \\
-        0 &amp; 1 &amp; 0.9998\dot{9}
+    \left( \begin{array}{cc|c}
+        0.01 &amp; 1 &amp; 1 \\
+        0 &amp; 1 &amp; 0.9898\ldots
     \end{array} \right).
 \end{align*} \end{split}\]</div>
-<p>So <span class="math notranslate nohighlight">\(x_2 = 0.9998\dot{9}\)</span>. If we were to round this to four decimal places then <span class="math notranslate nohighlight">\(x_2 = 1.0000\)</span> and using back substitution we have <span class="math notranslate nohighlight">\(x_1 = (1 - 1) / 0.0001 = 0\)</span>. However, checking our solution with the original system we see that this does not satisfy the second equation <span class="math notranslate nohighlight">\(x_1 + x_2 = 2\)</span>. The problem is that our first pivot element of 0.0001 was small compared with the value beneath it which produced large values when adding multiples of the pivot row to the other rows.</p>
-<p>To overcome this we can perform a row swap so that the pivot element is larger than the value below</p>
+<p>So <span class="math notranslate nohighlight">\(x_2 = 0.9898\ldots\)</span> which is rounded to <span class="math notranslate nohighlight">\(x_2 = 1\)</span> and using back substitution we have <span class="math notranslate nohighlight">\(x_1 = \dfrac{1 - 1(1)}{0.01} = 0\)</span>. However, checking our solution with the original system we see that this does not satisfy the second equation <span class="math notranslate nohighlight">\(x_1 + x_2 = 2\)</span>. To overcome this we can perform a row swap so that the pivot element is larger than the value below</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     &amp; \left(\begin{array}{cc|c}
-        0.0001 &amp; 1 &amp; 1 \\
+        0.01 &amp; 1 &amp; 1 \\
         1 &amp; 1 &amp; 2
     \end{array} \right)
     \begin{array}{l} R_1 \leftrightarrow R_2  \\ \phantom{x} \end{array}&amp;
     \longrightarrow &amp;
-    \left( \begin{array}{cc|c} 
+    \left( \begin{array}{cc|c}
         1 &amp; 1 &amp; 2 \\
-        0.0001 &amp; 1 &amp; 1 
+        0.01 &amp; 1 &amp; 1 
     \end{array} \right)
-    \begin{array}{l} \\  R_2 - 0.0001 R_1 \end{array} \\ \\
+    \begin{array}{l} \\  R_2 - 0.001 R_1 \end{array} \\ \\
     \longrightarrow &amp;
-    \left( \begin{array}{cc|c} 
+    \left( \begin{array}{cc|c}
         1 &amp; 1 &amp; 2 \\
-        0 &amp; 0.9999 &amp; 0.9998
+        0 &amp; 0.99 &amp; 0.98
     \end{array} \right)
 \end{align*} \end{split}\]</div>
-<p>Solving using back substitution we have <span class="math notranslate nohighlight">\(x_2 = 0.9998 / 0.9999 = 0.9998\dot{9}\)</span> which rounded to four decimal places is <span class="math notranslate nohighlight">\(x_2 = 1.0000\)</span> as before. However, this time using back substitution we now have <span class="math notranslate nohighlight">\(x_1 = 2 - 1.0000 = 1.0000\)</span> which is consistent with the original system. This process is called <strong>partial pivoting</strong> and it’s where we perform a row swap to ensure that the pivot element has a larger absolute value from the elements in the column beneath the pivot.</p>
+<p>Solving using back substitution we have <span class="math notranslate nohighlight">\(x_2 = \dfrac{0.98}{0.99} = 0.9898\ldots \approx 1\)</span> as before and using back substitution we now have <span class="math notranslate nohighlight">\(x_1 = 2 - 1(1) = 1\)</span> which is consistent with the original system. This process is called <strong>partial pivoting</strong> and it’s where we perform a row swap to ensure that the pivot element has a larger absolute value from the elements in the column beneath the pivot.</p>
 <div class="proof algorithm admonition" id="ge-pp-algorithm">
 <span id="index-1"></span><p class="admonition-title"><span class="caption-number">Algorithm 2.2 </span> (Gaussian elimination with partial pivoting)</p>
 <section class="algorithm-content" id="proof-content">
 <p><strong>Inputs:</strong> An <span class="math notranslate nohighlight">\(m \times n\)</span> coefficient matrix <span class="math notranslate nohighlight">\(A\)</span> and an <span class="math notranslate nohighlight">\(m\)</span>-element constant vector <span class="math notranslate nohighlight">\(\vec{b}\)</span>.</p>
 <p><strong>Outputs:</strong> An augmented matrix in row echelon form.</p>
 <ol class="arabic simple">
-<li><p>Form the augmented matrix <span class="math notranslate nohighlight">\([ A \mid \vec{b}]\)</span></p></li>
+<li><p>Form the augmented matrix <span class="math notranslate nohighlight">\(( A \mid \vec{b} )\)</span></p></li>
 <li><p>Set pivot row <span class="math notranslate nohighlight">\(k\)</span> to 1</p></li>
 <li><p>For each column <span class="math notranslate nohighlight">\(j\)</span> from 1 to <span class="math notranslate nohighlight">\(n\)</span>:</p>
 <ol class="arabic simple">
