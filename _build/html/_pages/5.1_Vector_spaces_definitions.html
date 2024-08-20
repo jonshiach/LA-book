@@ -402,7 +402,7 @@ document.write(`
 </div><p>We have already met examples of binary operations in addition, multiplication, subtraction and division of real numbers. If <span class="math notranslate nohighlight">\(a,b \in \mathbb{R}\)</span> then the following operations all output real numbers</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(f(a,b) = a + b\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(f(a,b) = a \times b\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f(a,b) = a \cdot b\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(f(a,b) = a - b\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(f(a,b) = a \div b\)</span></p></li>
 </ul>
@@ -419,7 +419,7 @@ document.write(`
 <p>A <strong>vector space</strong> over a field <span class="math notranslate nohighlight">\(F\)</span> is a non-empty set <span class="math notranslate nohighlight">\(V\)</span> of objects called vectors on which the binary operations below are defined</p>
 <ul class="simple">
 <li><p><strong>addition</strong> <span class="math notranslate nohighlight">\((+)\)</span>: <span class="math notranslate nohighlight">\(V \times V \to V\)</span>. For example, given two elements <span class="math notranslate nohighlight">\(u, v \in V\)</span> we can ‘add’ them together to obtain another element <span class="math notranslate nohighlight">\(u + v \in V\)</span>.</p></li>
-<li><p><strong>scalar multiplication</strong> <span class="math notranslate nohighlight">\((\times )\)</span>: <span class="math notranslate nohighlight">\(F \times V \to V\)</span>. For example given <span class="math notranslate nohighlight">\(\alpha \in F\)</span> and <span class="math notranslate nohighlight">\(u \in V\)</span> we can ‘multiply’ <span class="math notranslate nohighlight">\(u\)</span> by <span class="math notranslate nohighlight">\(\alpha\)</span> to obtain another element <span class="math notranslate nohighlight">\(\alpha \times u \in V\)</span></p></li>
+<li><p><strong>scalar multiplication</strong> <span class="math notranslate nohighlight">\((\cdot)\)</span>: <span class="math notranslate nohighlight">\(F \times V \to V\)</span>. For example given <span class="math notranslate nohighlight">\(\alpha \in F\)</span> and <span class="math notranslate nohighlight">\(u \in V\)</span> we can ‘multiply’ <span class="math notranslate nohighlight">\(u\)</span> by <span class="math notranslate nohighlight">\(\alpha\)</span> to obtain another element <span class="math notranslate nohighlight">\(\alpha \cdot u \in V\)</span></p></li>
 </ul>
 </section>
 </div><p>For example, a field could be the set of all real numbers <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> and a vector space be the set of all vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> since we can add two vectors and multiply a vector by a scalar. Not all subsets of a field can be classified as a vector space, to do so the set <span class="math notranslate nohighlight">\(V\)</span> must satisfy the following axioms.</p>
@@ -445,8 +445,8 @@ document.write(`
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(u \in V,\alpha\in F\)</span>. Then the following hold:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\alpha \times 0 = 0\)</span>;</p></li>
-<li><p><span class="math notranslate nohighlight">\(0 \times u = 0\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha \cdot 0 = 0\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(0 \cdot u = 0\)</span>;</p></li>
 <li><p>if <span class="math notranslate nohighlight">\(\alpha u = 0\)</span> then either <span class="math notranslate nohighlight">\(\alpha = 0\)</span> or <span class="math notranslate nohighlight">\(u = 0\)</span>;</p></li>
 <li><p><span class="math notranslate nohighlight">\(-(\alpha u) = (-\alpha)u = \alpha (-u)\)</span>.</p></li>
 </ul>
@@ -503,7 +503,7 @@ Solution<div class="sd-summary-down docutils">
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    k \times u(x) &amp;= ku_0x^0 + ku_1x^1 + \cdots + ku_nx^n \\
+    k \cdot u(x) &amp;= ku_0x^0 + ku_1x^1 + \cdots + ku_nx^n \\
     &amp;= \sum_{i=0}^n ku_ix^i.
 \end{align*} \end{split}\]</div>
 <ul class="simple">
@@ -572,7 +572,7 @@ Solution<div class="sd-summary-down docutils">
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    1 \times u(x) &amp;= \displaystyle \sum_{i=0}^n 1 u_i x^i \\
+    1 \cdot u(x) &amp;= \displaystyle \sum_{i=0}^n 1 u_i x^i \\
     &amp;= \displaystyle \sum_{i=0}^n u_i x^i \\
     &amp;= u(x) \quad \checkmark
 \end{align*} \end{split}\]</div>
@@ -598,7 +598,7 @@ Solution<div class="sd-summary-down docutils">
 </details></section>
 </div><section id="examples-of-non-vector-spaces">
 <h2><span class="section-number">5.1.1. </span>Examples of non-vector spaces<a class="headerlink" href="#examples-of-non-vector-spaces" title="Permalink to this heading">#</a></h2>
-<p>Of course not all sets are vector spaces. For example, consider the set of integers <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> over the field <span class="math notranslate nohighlight">\(F=\mathbb{R}\)</span>. It is easy to show that the <a class="reference internal" href="#vector-space-axioms">axioms A1 to A4</a> are satisfied for the set of integers. The problem comes when one tries to define scalar multiplication. From the <a class="reference internal" href="#vector-space-definition">definition of scalar multiplication</a>, <span class="math notranslate nohighlight">\(\mathbb{R} \times \mathbb{Z} \to \mathbb{Z}\)</span> so for <span class="math notranslate nohighlight">\(u \in \mathbb{Z}\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(\alpha x\in \mathbb{Z}\)</span>. However, this is not always the case, for example, when <span class="math notranslate nohighlight">\(u=1\)</span> and <span class="math notranslate nohighlight">\(\alpha = \frac{1}{2}\)</span> we have <span class="math notranslate nohighlight">\(\frac{1}{2} \times 1 = \frac{1}{2} \notin \mathbb{Z}\)</span>. This was an example of a proof by counterexample where we just need to show 1 instance where the axioms are not satisfied to prove that we do not have a vector space.</p>
+<p>Of course not all sets are vector spaces. For example, consider the set of integers <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> over the field <span class="math notranslate nohighlight">\(F=\mathbb{R}\)</span>. It is easy to show that the <a class="reference internal" href="#vector-space-axioms">axioms A1 to A4</a> are satisfied for the set of integers. The problem comes when one tries to define scalar multiplication. From the <a class="reference internal" href="#vector-space-definition">definition of scalar multiplication</a>, <span class="math notranslate nohighlight">\(\mathbb{R} \times \mathbb{Z} \to \mathbb{Z}\)</span> so for <span class="math notranslate nohighlight">\(u \in \mathbb{Z}\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(\alpha x\in \mathbb{Z}\)</span>. However, this is not always the case, for example, when <span class="math notranslate nohighlight">\(u=1\)</span> and <span class="math notranslate nohighlight">\(\alpha = \frac{1}{2}\)</span> we have <span class="math notranslate nohighlight">\(\frac{1}{2} \cdot 1 = \frac{1}{2} \notin \mathbb{Z}\)</span>. This was an example of a proof by counterexample where we just need to show 1 instance where the axioms are not satisfied to prove that we do not have a vector space.</p>
 <div class="proof example admonition" id="non-vector-space-example">
 <p class="admonition-title"><span class="caption-number">Example 5.2 </span></p>
 <section class="example-content" id="proof-content">
