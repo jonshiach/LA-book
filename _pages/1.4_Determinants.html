@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}(#1)", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/1.4_Determinants';</script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
@@ -220,12 +220,12 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="A_Exercise_solutions.html">Exercise Solutions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations</a></li>
 </ul>
 </li>
 </ul>
@@ -451,7 +451,7 @@ Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
-\[\begin{split} \begin{vmatrix} 5 &amp; 2 \\ 3 &amp; 4 \end{vmatrix} = 5 \cdot 4 - 2 \cdot 3 = 20 - 6 = 14 \end{split}\]</div>
+\[\begin{split} \begin{vmatrix} 5 &amp; 2 \\ 3 &amp; 4 \end{vmatrix} = 5(4) - 2(3) = 20 - 6 = 14 \end{split}\]</div>
 </div>
 </details><p>(ii)   <span class="math notranslate nohighlight">\(\det \begin{pmatrix} a &amp; b \\ ka &amp; kb \end{pmatrix}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -464,18 +464,7 @@ Solution<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \det \begin{pmatrix} a &amp; b \\ ka &amp; kb \end{pmatrix} = akb - akb = 0 \end{split}\]</div>
 </div>
-</details><p>(iii)   <span class="math notranslate nohighlight">\(\begin{vmatrix} 5 &amp; 0 \\ 0 &amp; 2 \end{vmatrix}\)</span></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{vmatrix} 5 &amp; 0 \\ 0 &amp; 2 \end{vmatrix} = 5 \cdot 2 - 0 \cdot 0 = 10 - 0 = 10 \end{split}\]</div>
-</div>
-</details><p>(iv)   <span class="math notranslate nohighlight">\(\begin{vmatrix} 2-\lambda &amp; 3 \\ 5 &amp; 6 - \lambda \end{vmatrix}\)</span></p>
+</details><p>(iii)   <span class="math notranslate nohighlight">\(\begin{vmatrix} 2-\lambda &amp; 3 \\ 5 &amp; 6 - \lambda \end{vmatrix}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -531,7 +520,7 @@ Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
-\[\begin{split} M_{11} = \begin{vmatrix} 5 &amp; 6 \\ 8 &amp; 9 \end{vmatrix} = 5 \cdot 9 - 6 \cdot 8 = 45 - 48 = -3 \end{split}\]</div>
+\[\begin{split} M_{11} = \begin{vmatrix} 5 &amp; 6 \\ 8 &amp; 9 \end{vmatrix} = 5(9) - 6(8) = 45 - 48 = -3 \end{split}\]</div>
 </div>
 </details><p>(ii)   <span class="math notranslate nohighlight">\(M_{12}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -542,7 +531,7 @@ Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
-\[\begin{split} M_{12} = \begin{vmatrix} 4 &amp; 6 \\ 7 &amp; 9 \end{vmatrix} = 4 \cdot 9 - 6 \cdot 7 = 36 - 42 = -6 \end{split}\]</div>
+\[\begin{split} M_{12} = \begin{vmatrix} 4 &amp; 6 \\ 7 &amp; 9 \end{vmatrix} = 4(9) - 6(7) = 36 - 42 = -6 \end{split}\]</div>
 </div>
 </details><p>(iii)   <span class="math notranslate nohighlight">\(M_{13}\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -553,7 +542,7 @@ Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
-\[\begin{split} M_{13} = \begin{vmatrix} 4 &amp; 5 \\ 7 &amp; 8 \end{vmatrix} = 4 \cdot 8 - 5 \cdot 7 = 32 - 35 = -3 \end{split}\]</div>
+\[\begin{split} M_{13} = \begin{vmatrix} 4 &amp; 5 \\ 7 &amp; 8 \end{vmatrix} = 4(8) - 5(7) = 32 - 35 = -3 \end{split}\]</div>
 </div>
 </details></section>
 </div><div class="proof definition admonition" id="cofactor-definition">
@@ -682,7 +671,7 @@ Solution<div class="sd-summary-down docutils">
 </div>
 </details></section>
 </div><div class="proof theorem admonition" id="properties-of-determinants-theorem">
-<span id="index-6"></span><p class="admonition-title"><span class="caption-number">Theorem 1.6 </span> (Properties of determinants)</p>
+<span id="index-6"></span><p class="admonition-title"><span class="caption-number">Theorem 1.7 </span> (Properties of determinants)</p>
 <section class="theorem-content" id="proof-content">
 <p>Determinants have the following properties:</p>
 <ul class="simple">

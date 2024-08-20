@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}(#1)", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/3.1_Vector_arithmetic';</script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
@@ -220,12 +220,12 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="A_Exercise_solutions.html">Exercise Solutions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations</a></li>
 </ul>
 </li>
 </ul>
@@ -447,7 +447,7 @@ document.write(`
 \[\begin{split} k \vec{a} = k\begin{pmatrix} a_1 \\ a_2 \\ \vdots \\ a_n \end{pmatrix} =
 \begin{pmatrix} k a_1 \\ k a_2 \\ \vdots \\ k a_n \end{pmatrix}. \end{split}\]</div>
 </section>
-</div><p>Multiplying a vector by a scalar has the effect of <strong>scaling</strong> the vector <span class="math notranslate nohighlight">\(\vec{a}\)</span> to produce a vector <strong>parallel</strong> to <span class="math notranslate nohighlight">\(\vec{a}\)</span> with a magnitude of <span class="math notranslate nohighlight">\(k|\vec{a}|\)</span>. In general if two vectors <span class="math notranslate nohighlight">\(\vec{u}\)</span> and <span class="math notranslate nohighlight">\(\vec{v}\)</span> are parallel then we write <span class="math notranslate nohighlight">\(\vec{u} \parallel \vec{v}\)</span>.</p>
+</div><p>Multiplying a vector by a scalar has the effect of <strong>scaling</strong> the vector <span class="math notranslate nohighlight">\(\vec{a}\)</span> to produce a vector <strong>parallel</strong> to <span class="math notranslate nohighlight">\(\vec{a}\)</span> with a magnitude of <span class="math notranslate nohighlight">\(k\|\vec{a}\|\)</span>. In general if two vectors <span class="math notranslate nohighlight">\(\vec{u}\)</span> and <span class="math notranslate nohighlight">\(\vec{v}\)</span> are parallel then we write <span class="math notranslate nohighlight">\(\vec{u} \parallel \vec{v}\)</span>.</p>
 <div class="proof theorem admonition" id="properties-of-scalar-multiplication-of-vectors">
 <p class="admonition-title"><span class="caption-number">Theorem 3.1 </span> (Properties of scalar multiplication of vectors)</p>
 <section class="theorem-content" id="proof-content">
@@ -456,7 +456,7 @@ document.write(`
 <li><p><span class="math notranslate nohighlight">\(k\vec{a}\)</span> = <span class="math notranslate nohighlight">\(\vec{a}k\)</span>  is a vector parallel to <span class="math notranslate nohighlight">\(\vec{a}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(0\vec{a} = (0, 0, \ldots, 0)^\mathsf{T} = \vec{0}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(1\vec{a} = \vec{a}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(|k\vec{a}| = |k||\vec{a}|\)</span>   (<span class="math notranslate nohighlight">\(|\vec{a}|\)</span> is the length of the vector <span class="math notranslate nohighlight">\(\vec{a}\)</span> - see <a class="reference internal" href="3.2_Vector_magnitude.html#magnitude-definition">vector magnitude</a>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\|k\vec{a}\| = |k|\|\vec{a}\|\)</span>   (<span class="math notranslate nohighlight">\(\|\vec{a}\|\)</span> is the length of the vector <span class="math notranslate nohighlight">\(\vec{a}\)</span> - see <a class="reference internal" href="3.2_Vector_magnitude.html#magnitude-definition">vector magnitude</a>)</p></li>
 <li><p>If <span class="math notranslate nohighlight">\(k&gt;0\)</span> then <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(k\vec{a}\)</span> point in the same direction, whereas if <span class="math notranslate nohighlight">\(k&lt;0\)</span> then <span class="math notranslate nohighlight">\(\vec{a}\)</span> and <span class="math notranslate nohighlight">\(k\vec{a}\)</span> point in opposite directions</p></li>
 </ul>
 </section>
