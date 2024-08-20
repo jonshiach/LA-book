@@ -85,7 +85,7 @@ sphinx:
       tex:
         macros:
           "vec": ["\\mathbf{#1}", 1]
-          "adj": ["\\operatorname{adj}(#1)", 1]
+          "adj": ["\\operatorname{adj}", 0]
   extra_extensions:
     - sphinx_proof
     - sphinx_exercise

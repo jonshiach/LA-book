@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}(#1)", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/1.5_Inverse_matrix';</script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
@@ -220,12 +220,12 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="A_Exercise_solutions.html">Exercise Solutions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces Exercise Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations Exercise Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A1_Matrices_exercises_solutions.html">Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A2_Linear_systems_exercises_solutions.html">Systems of Linear Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A3_Vectors_exercises_solutions.html">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A4_Coordinate_geometry_exercises_solutions.html">Co-ordinate Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A5_Vector_spaces_exercises_solutions.html">Vector Spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="A6_Linear_transformations_exercises_solutions.html">Linear Transformations</a></li>
 </ul>
 </li>
 </ul>
@@ -435,7 +435,7 @@ Solution<div class="sd-summary-down docutils">
 <p>The <strong>adjoint</strong> (also known as the <strong>adjugate</strong>) of a square matrix <span class="math notranslate nohighlight">\(A\)</span> is denoted by <span class="math notranslate nohighlight">\(\operatorname{adj}(A)\)</span> and is the transpose of the matrix of <a class="reference internal" href="1.4_Determinants.html#cofactor-definition">cofactors</a> of <span class="math notranslate nohighlight">\(A\)</span></p>
 <div class="math notranslate nohighlight" id="equation-adjoint-equation">
 <span class="eqno">(1.11)<a class="headerlink" href="#equation-adjoint-equation" title="Permalink to this equation">#</a></span>\[ \begin{align*}
-    \operatorname{adj}(A) &amp;= C^\mathrm{T}.
+    \operatorname{adj}(A) &amp;= C^\mathsf{T}.
 \end{align*} \]</div>
 </section>
 </div><div class="proof example seealso admonition" id="adjoint-example">
@@ -452,7 +452,7 @@ Solution<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \operatorname{adj}\begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} = \begin{pmatrix} d &amp; -c \\ -b &amp; a \end{pmatrix}^\mathrm{T}
+    \operatorname{adj}\begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} = \begin{pmatrix} d &amp; -c \\ -b &amp; a \end{pmatrix}^\mathsf{T}
 = \begin{pmatrix} d &amp; -b \\ -c &amp; a \end{pmatrix}
 \end{align*} \end{split}\]</div>
 </div>
@@ -466,7 +466,7 @@ Solution<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \operatorname{adj}\begin{pmatrix} 5 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} = \begin{pmatrix} 4 &amp; -3 \\ -2 &amp; 5 \end{pmatrix}^\mathrm{T}
+    \operatorname{adj}\begin{pmatrix} 5 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} = \begin{pmatrix} 4 &amp; -3 \\ -2 &amp; 5 \end{pmatrix}^\mathsf{T}
 = \begin{pmatrix} 4 &amp; -2 \\ -3 &amp; 5 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 </div>
@@ -491,8 +491,8 @@ Solution<div class="sd-summary-down docutils">
         \begin{vmatrix} 0 &amp; 3 \\ -2 &amp; 1 \end{vmatrix} &amp;
         -\begin{vmatrix} 1 &amp; 3 \\ 4 &amp; 1 \end{vmatrix} &amp;
         \begin{vmatrix} 1 &amp; 0 \\ 4 &amp; -2 \end{vmatrix}
-    \end{pmatrix}^\mathrm{T} \\
-    &amp;= \begin{pmatrix} -7 &amp; -10 &amp; 8 \\ 3 &amp; -3 &amp; -1 \\ 6 &amp; 11 &amp; -2 \end{pmatrix}^\mathrm{T} \\
+    \end{pmatrix}^\mathsf{T} \\
+    &amp;= \begin{pmatrix} -7 &amp; -10 &amp; 8 \\ 3 &amp; -3 &amp; -1 \\ 6 &amp; 11 &amp; -2 \end{pmatrix}^\mathsf{T} \\
     &amp;= \begin{pmatrix} -7 &amp; 3 &amp; 6 \\ -10 &amp; -3 &amp; 11 \\ 8 &amp; -1 &amp; -2 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 </div>
@@ -502,7 +502,7 @@ Solution<div class="sd-summary-down docutils">
 <span id="index-2"></span><h2><span class="section-number">1.6.2. </span>Calculating a matrix inverse using the adjoint-determinant formula<a class="headerlink" href="#calculating-a-matrix-inverse-using-the-adjoint-determinant-formula" title="Permalink to this heading">#</a></h2>
 <p>There are several methods used to calculate the inverse of a matrix. For smaller matrices we can use the adjoint-determinant formula.</p>
 <div class="proof theorem admonition" id="adjoint-determinant-formula-theorem">
-<p class="admonition-title"><span class="caption-number">Theorem 1.7 </span> (Adjoint-determinant formula)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 1.8 </span> (Adjoint-determinant formula)</p>
 <section class="theorem-content" id="proof-content">
 <p>The inverse of a non-singular square matrix <span class="math notranslate nohighlight">\(A\)</span> can be calculated using</p>
 <div class="math notranslate nohighlight" id="equation-adjoint-determinant-formula-equation">
@@ -512,7 +512,7 @@ Solution<div class="sd-summary-down docutils">
 </div><p>It is useful to calculate the determinant first to check that it is non-zero before calculating the adjoint. For example, lets calculate the inverse of</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} A = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}. \end{split}\]</div>
-<p>Here <span class="math notranslate nohighlight">\(\det(A) = 1 \times 4 - 2 \times 3 = 4 - 6 = -2\)</span> which is non-zero so we know that an inverse exists for <span class="math notranslate nohighlight">\(A\)</span>. Next we calculate the adjoint</p>
+<p>Here <span class="math notranslate nohighlight">\(\det(A) = 1(4) - 2(3) = 4 - 6 = -2\)</span> which is non-zero so we know that an inverse exists for <span class="math notranslate nohighlight">\(A\)</span>. Next we calculate the adjoint</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \adj{A} = 
@@ -554,7 +554,7 @@ Solution<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \det(A) &amp;= 2, \\
-    \operatorname{adj}(A) &amp;= \begin{pmatrix} 2 &amp; -3 \\ 0 &amp; 1 \end{pmatrix}^\mathrm{T}  = \begin{pmatrix} 2 &amp; 0 \\ -3 &amp; 1\end{pmatrix} \\
+    \operatorname{adj}(A) &amp;= \begin{pmatrix} 2 &amp; -3 \\ 0 &amp; 1 \end{pmatrix}^\mathsf{T}  = \begin{pmatrix} 2 &amp; 0 \\ -3 &amp; 1\end{pmatrix} \\
     \therefore A^{-1} &amp;= \frac{1}{2}\begin{pmatrix} 2 &amp; 0 \\ -3 &amp; 1\end{pmatrix}.
 \end{align*} \end{split}\]</div>
 <p class="sd-card-text">Check answer:</p>
@@ -577,7 +577,7 @@ Solution<div class="sd-summary-down docutils">
     \begin{vmatrix} 1 &amp; 1 \\ 0 &amp; 3 \end{vmatrix}  - 2 \begin{vmatrix}-2 &amp; 1 \\ 1 &amp; 3 \end{vmatrix} =
     3 - 2(-7) = 17, \\
     \operatorname{adj}\begin{pmatrix} 1 &amp; 2 &amp; 0 \\ -2 &amp; 1 &amp; 1 \\ 1 &amp; 0 &amp; 3 \end{pmatrix} &amp;= 
-    \begin{pmatrix} 3 &amp; 7 &amp; -1 \\ -6 &amp; 3 &amp; 2 \\ 2 &amp; -1 &amp; 5 \end{pmatrix}^\mathrm{T} =
+    \begin{pmatrix} 3 &amp; 7 &amp; -1 \\ -6 &amp; 3 &amp; 2 \\ 2 &amp; -1 &amp; 5 \end{pmatrix}^\mathsf{T} =
     \begin{pmatrix} 3 &amp; -6 &amp; 2 \\ 7 &amp; 3 &amp; -1 \\ -1 &amp; 2 &amp; 5 \end{pmatrix}, \\
     \therefore B^{-1} &amp;= \frac{1}{17}\begin{pmatrix} 3 &amp; -6 &amp; 2 \\ 7 &amp; 3 &amp; -1 \\ -1 &amp; 2 &amp; 5 \end{pmatrix}
 \end{align*} \end{split}\]</div>
@@ -610,13 +610,13 @@ Solution<div class="sd-summary-down docutils">
 </div>
 </details></section>
 </div><div class="proof theorem admonition" id="inverse-matrix-properties-theorem">
-<span id="index-3"></span><p class="admonition-title"><span class="caption-number">Theorem 1.8 </span> (Properties of inverse matrices)</p>
+<span id="index-3"></span><p class="admonition-title"><span class="caption-number">Theorem 1.9 </span> (Properties of inverse matrices)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> be two invertible <span class="math notranslate nohighlight">\(n \times n\)</span> matrices, then the following hold:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(AB\)</span> is also invertible and <span class="math notranslate nohighlight">\((AB)^{-1} = B^{-1}A^{-1}.\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\((A^m)^{-1} = (A^{-1})^m\)</span> for all positive integers <span class="math notranslate nohighlight">\(m\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(A^\mathrm{T}\)</span> is also invertible and <span class="math notranslate nohighlight">\((A^\mathrm{T})^{-1} = (A^{-1})^\mathrm{T}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(A^\mathsf{T}\)</span> is also invertible and <span class="math notranslate nohighlight">\((A^\mathsf{T})^{-1} = (A^{-1})^\mathsf{T}\)</span>.</p></li>
 </ul>
 </section>
 </div></section>

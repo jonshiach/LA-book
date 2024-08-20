@@ -19,16 +19,16 @@
 \begin{document}
 
 % R3
-% \begin{tikzpicture}
-%     \tikzmath{\x=-30;\y=-\x;\z=90;\al=3;\lx=2;\ly=1;\lz=1;}
-%     \draw [axis] (0,0) -- ++(\x:\al) node at (\x:\al+0.2) {$x$};
-%     \draw [axis] (0,0) -- ++(\y:\al) node at (\y:\al+0.2) {$y$};
-%     \draw [axis] (0,0) -- ++(\z:\al) node at (\z:\al+0.2) {$z$};
-%     \draw [help lines] (\x:\lx) -- ++(\y:\ly) -- ++(\x+180:\lx) -- ++(\y+180:\ly)
-%         (\z:\lz) -- ++(\x:\lx) -- ++(\y:\ly) -- ++(\x+180:\lx) -- ++(\y+180:\ly)
-%         (\x:\lx) -- ++(\z:\lz) (\y:\ly) -- ++(\z:\lz) ($(\x:\lx)+(\y:\ly)$) -- ++(\z:\lz) coordinate (1);
-%     \node [point,blue,label={45:$(x,y,z)$}] at (1) {};
-% \end{tikzpicture}
+\begin{tikzpicture}
+    \tikzmath{\x=-30;\y=-\x;\z=90;\al=3;\lx=2;\ly=1.5;\lz=1;}
+    \draw [axis] (0,0) -- ++(\x:\al) node at (\x:\al+0.2) {$x$};
+    \draw [axis] (0,0) -- ++(\y:\al) node at (\y:\al+0.2) {$y$};
+    \draw [axis] (0,0) -- ++(\z:\al) node at (\z:\al+0.2) {$z$};
+    \draw [help lines] (\x:\lx) -- ++(\y:\ly) -- ++(\x+180:\lx) -- ++(\y+180:\ly)
+        (\z:\lz) -- ++(\x:\lx) -- ++(\y:\ly) -- ++(\x+180:\lx) -- ++(\y+180:\ly)
+        (\x:\lx) -- ++(\z:\lz) (\y:\ly) -- ++(\z:\lz) ($(\x:\lx)+(\y:\ly)$) -- ++(\z:\lz) coordinate (1);
+    \node [point,blue,label={45:$(x,y,z)$}] at (1) {};
+\end{tikzpicture}
 
 % Vector
 % \begin{tikzpicture}

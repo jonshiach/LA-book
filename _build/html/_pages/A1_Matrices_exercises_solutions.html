@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}(#1)", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/A1_Matrices_exercises_solutions';</script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
@@ -406,7 +406,25 @@ document.write(`
 </div>
 <div class="solution admonition" id="_pages/A1_Matrices_exercises_solutions-solution-1">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="1.7_Matrices_exercises.html#matrices-ex2"> Exercise 1.2</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="1.7_Matrices_exercises.html#matrices-ex-hilbert"> Exercise 1.2</a></p>
+<section id="solution-content">
+<p>(a)   The <span class="math notranslate nohighlight">\(4 \times 4\)</span> Hilbert matrix is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    H = 
+    \begin{pmatrix}
+        1   &amp; 1/2 &amp; 1/3 &amp; 1/4 \\
+        1/2 &amp; 1/3 &amp; 1/4 &amp; 1/5 \\
+        1/3 &amp; 1/4 &amp; 1/5 &amp; 1/6 \\
+        1/4 &amp; 1/5 &amp; 1/6 &amp; 1/7
+    \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+<p>(b)   Since addition of two numbers is commutative, i.e., <span class="math notranslate nohighlight">\(i + j = j + i\)</span> then <span class="math notranslate nohighlight">\(h_{ij} = h_{ji}\)</span> for all <span class="math notranslate nohighlight">\(i, j = 1, 2, \ldots, n\)</span> then the <span class="math notranslate nohighlight">\(n \times n\)</span> Hilbert matrix is symmetric.</p>
+</section>
+</div>
+<div class="solution admonition" id="_pages/A1_Matrices_exercises_solutions-solution-2">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="1.7_Matrices_exercises.html#matrices-ex2"> Exercise 1.3</a></p>
 <section id="solution-content">
 <p>(a)   <span class="math notranslate nohighlight">\(A + B = \begin{pmatrix} 1 + 3 &amp; -3 + 0 \\ 4 + (-1) &amp; 2 + 5 \end{pmatrix} = \begin{pmatrix} 4 &amp; -3 \\ 3 &amp; 7 \end{pmatrix}\)</span></p>
 <p>(b)   <span class="math notranslate nohighlight">\(B + C\)</span> is undefined since <span class="math notranslate nohighlight">\(B\)</span> is <span class="math notranslate nohighlight">\(2\times 2\)</span> and <span class="math notranslate nohighlight">\(C\)</span> is <span class="math notranslate nohighlight">\(2\times 1\)</span></p>
@@ -418,9 +436,9 @@ document.write(`
 <p>(h)   <span class="math notranslate nohighlight">\((A + B)^\mathsf{T} = \begin{pmatrix} 4 &amp; -3 \\ 3 &amp; 7 \end{pmatrix}^\mathsf{T} = \begin{pmatrix} 4 &amp; 3 \\ -3 &amp; 7 \end{pmatrix}\)</span></p>
 </section>
 </div>
-<div class="solution admonition" id="_pages/A1_Matrices_exercises_solutions-solution-2">
+<div class="solution admonition" id="_pages/A1_Matrices_exercises_solutions-solution-3">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="1.7_Matrices_exercises.html#matrices-ex3"> Exercise 1.3</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="1.7_Matrices_exercises.html#matrices-ex3"> Exercise 1.4</a></p>
 <section id="solution-content">
 <p>(a)   <span class="math notranslate nohighlight">\(AB = \begin{pmatrix} 1 &amp; -3 \\ 4 &amp; 2 \end{pmatrix} \begin{pmatrix} 3 &amp; 0 \\ -1 &amp; 5 \end{pmatrix} = \begin{pmatrix} 3 + 3 &amp; 0 - 15 \\ 7 - 2 &amp; 0 + 10 \end{pmatrix} = \begin{pmatrix}6 &amp; -15 \\ 10 &amp; 10 \end{pmatrix}\)</span></p>
 <p>(b)   <span class="math notranslate nohighlight">\(BA = \begin{pmatrix} 3 &amp; 0 \\ -1 &amp; 5 \end{pmatrix}\begin{pmatrix} 1 &amp; -3 \\ 4 &amp; 2 \end{pmatrix} = \begin{pmatrix} 3 + 0 &amp; -9 + 0 \\ -1 + 20 &amp; 3 + 10 \end{pmatrix} = \begin{pmatrix} 3 &amp; -9 \\ 19 &amp; 13 \end{pmatrix}\)</span></p>
@@ -492,155 +510,328 @@ document.write(`
 \end{align*} \end{split}\]</div>
 </section>
 </div>
-<div class="solution admonition" id="_pages/A1_Matrices_exercises_solutions-solution-3">
-
-<p class="admonition-title">Solution to<a class="reference internal" href="1.7_Matrices_exercises.html#matrices-ex4"> Exercise 1.4</a></p>
-<section id="solution-content">
-<p>(a)    <span class="math notranslate nohighlight">\(\det(A) = 1(2) - (-3)4 = 2 + 12 = 14\)</span></p>
-<p>(b)    <span class="math notranslate nohighlight">\(|B| = 3(5) - 0(-1) = 15\)</span></p>
-<p>(c)    <span class="math notranslate nohighlight">\(\det(3A) = 3\begin{vmatrix} 3 &amp; -9 \\ 12 &amp; 6 \end{vmatrix} = 3(6) - (-9)(12) = 126\)</span>.</p>
-<p>Alternatively since each row of <span class="math notranslate nohighlight">\(A\)</span> is multiplied by 3 then we could simply multiply <span class="math notranslate nohighlight">\(\det(A)=14\)</span> by <span class="math notranslate nohighlight">\(3 \times 3 = 9\)</span> to give <span class="math notranslate nohighlight">\(\det(3A) = 126\)</span>.</p>
-<p>(d)  </p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    \det(G) &amp;= \begin{vmatrix} 4 &amp; 2 &amp; 3 \\ -2 &amp; 6 &amp; 0 \\ 0 &amp; 7 &amp; 1 \end{vmatrix} \\
-    &amp;= 4 \begin{vmatrix} 6 &amp; 0 \\ 7 &amp; 1 \end{vmatrix} - (-2)
-    \begin{vmatrix} 2 &amp; 3 \\ 7 &amp; 1 \end{vmatrix} \\
-    &amp;= 4(6) + 2(2 - 21) = -14
-\end{align*} \end{split}\]</div>
-<p>(e)    <span class="math notranslate nohighlight">\(\operatorname{adj}(B) = \begin{pmatrix} 5 &amp; -(-1) \\ 0 &amp; 3 \end{pmatrix} = \begin{pmatrix} 5 &amp; 0 \\ 1 &amp; 3 \end{pmatrix}\)</span></p>
-<p>(f)  </p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    \operatorname{adj}(H) &amp;= 
-    \begin{pmatrix}
-        \begin{vmatrix} 2 &amp; -2 \\ -3 &amp; 4 \end{vmatrix} &amp;
-        - \begin{vmatrix} 5 &amp; -2 \\ 2 &amp; 4 \end{vmatrix} &amp;
-        \begin{vmatrix} 5 &amp; 2 \\ 2 &amp; -3 \end{vmatrix} \\
-        - \begin{vmatrix} 0 &amp; 1 \\ -3 &amp; 4 \end{vmatrix} &amp;
-        \begin{vmatrix} 1 &amp; 1 \\ 2 &amp; 4 \end{vmatrix} &amp;
-        - \begin{vmatrix} 1 &amp; 0 \\ 2 &amp; -3 \end{vmatrix} \\
-        \begin{vmatrix} 0 &amp; 1 \\ 2 &amp; -2 \end{vmatrix} &amp;
-        - \begin{vmatrix} 1 &amp; 1 \\ 5 &amp; -2 \end{vmatrix} &amp;
-        \begin{vmatrix} 1 &amp; 0 \\ 5 &amp; 2 \end{vmatrix}
-    \end{pmatrix}^T \\
-    &amp;= \begin{pmatrix} 2 &amp; -24 &amp; -19 \\ -3 &amp; 2 &amp; 3 \\ -2 &amp; 7 &amp; 2 \end{pmatrix}^T \\
-    &amp;= \begin{pmatrix} 2 &amp; -3 &amp; -2 \\ -24 &amp; 2 &amp; 7 \\ -19 &amp; 3 &amp; 2 \end{pmatrix}
-\end{align*} \end{split}\]</div>
-<p>(g)  </p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    \operatorname{adj}(A) &amp;= \begin{pmatrix} 2 &amp; 3 \\ -4 &amp; 1 \end{pmatrix}, \qquad
-    \det(A) = 14, \\
-    \therefore A^{-1} &amp;= \frac{\operatorname{adj}(A)}{\det(A)} 
-    = \frac{1}{14}\begin{pmatrix} 2 &amp; 3 \\ -4 &amp; 1 \end{pmatrix}
-    = \begin{pmatrix} \frac{1}{7} &amp; \frac{3}{14} \\ -\frac{2}{7} &amp; \frac{1}{14} \end{pmatrix} 
-\end{align*} \end{split}\]</div>
-<p>Check: <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; -3 \\ 4 &amp; 2 \end{pmatrix}\begin{pmatrix} \frac{1}{7} &amp; \frac{3}{14} \\ -\frac{2}{7} &amp; \frac{1}{14} \end{pmatrix} = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix} \quad \checkmark\)</span></p>
-<p>(h)  </p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    \operatorname{adj}(B) &amp;= \begin{pmatrix} 5 &amp; 0 \\ 1 &amp; 3 \end{pmatrix}, \qquad
-    \det(B) = 15, \\
-    \therefore B^{-1} &amp;= \frac{\operatorname{adj}(B)}{\det(A)} 
-    = \frac{1}{15} \begin{pmatrix} 5 &amp; 0 \\ 1 &amp; 3 \end{pmatrix} 
-    = \begin{pmatrix} \frac{1}{3} &amp; 0 \\ \frac{1}{15} &amp; \frac{1}{5} \end{pmatrix}
-\end{align*} \end{split}\]</div>
-<p>Check: <span class="math notranslate nohighlight">\(BB^{-1} = \begin{pmatrix} 3 &amp; 0 \\ -1 &amp; 5 \end{pmatrix}\begin{pmatrix} \frac{1}{3} &amp; 0 \\ \frac{1}{15} &amp; \frac{1}{5} \end{pmatrix} = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix} \quad \checkmark\)</span></p>
-<p>(i)    <span class="math notranslate nohighlight">\(G^{-1}\)</span></p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    \operatorname{adj}(G) &amp;= 
-    \begin{pmatrix}  6 &amp; 2 &amp; -14 \\ 19 &amp; 4 &amp; -28 \\ -18 &amp; -6 &amp; 28 \end{pmatrix}^T
-    = \begin{pmatrix} 6 &amp; 19 &amp; -18 \\ 2 &amp; 4 &amp; -6 \\ -14 &amp; -28 &amp; 28 \end{pmatrix}, \\
-    \det(G) &amp;= -14, \\
-    \therefore G^{-1} &amp;= \frac{\operatorname{adj}(G)}{\det(G)} = -\frac{1}{14}
-    \begin{pmatrix} 6 &amp; 19 &amp; -18 \\ 2 &amp; 4 &amp; -6 \\ -14 &amp; -28 &amp; 28 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 
-        -\frac{3}{7} &amp; -\frac{19}{14} &amp; \frac{9}{7} \\
-        -\frac{1}{7} &amp; -\frac{2}{7} &amp; \frac{3}{7} \\
-        1 &amp; 2 &amp; -2
-    \end{pmatrix}
-\end{align*} \end{split}\]</div>
-<p>Check: <span class="math notranslate nohighlight">\(GG^{-1} = \begin{pmatrix} 4 &amp; 2 &amp; 3 \\ -2 &amp; 6 &amp; 0 \\ 0 &amp; 7 &amp; 1 \end{pmatrix} 
-    \begin{pmatrix} 
-        -\frac{3}{7} &amp; -\frac{19}{14} &amp; \frac{9}{7} \\
-        -\frac{1}{7} &amp; -\frac{2}{7} &amp; \frac{3}{7} \\
-        1 &amp; 2 &amp; -2
-    \end{pmatrix} =
-    \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} \quad  \checkmark\)</span></p>
-<p>(j)    <span class="math notranslate nohighlight">\((AB)^{-1}\)</span></p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    \operatorname{adj}(AB) &amp;= \begin{pmatrix} 10 &amp; -15 \\ 10 &amp; 6 \end{pmatrix}, \qquad
-    \det(AB) = 60 + 150 = 210, \\
-    \therefore (AB)^{-1} &amp;= \frac{\operatorname{adj}(AB)}{\det(AB)} = \frac{1}{210}
-    \begin{pmatrix} 10 &amp; -15 \\ 10 &amp; 6 \end{pmatrix} =
-    \begin{pmatrix} \frac{1}{21} &amp; \frac{1}{14} \\ -\frac{1}{21} &amp; \frac{1}{35} \end{pmatrix}
-\end{align*} \end{split}\]</div>
-<p>Check <span class="math notranslate nohighlight">\((AB)(AB)^{-1} = \begin{pmatrix} 6 &amp; -15 \\ 10 &amp; 10 \end{pmatrix} \begin{pmatrix} \frac{1}{21} &amp; \frac{1}{14} \\ -\frac{1}{21} &amp; \frac{1}{35} \end{pmatrix} = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix} \quad \checkmark\)</span></p>
-<p>(k)   Using the <a class="reference internal" href="1.5_Inverse_matrix.html#inverse-matrix-definition">properties of inverse matrices</a> we know that <span class="math notranslate nohighlight">\((AB)^{-1} = B^{-1}A^{-1}\)</span> so</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    B^{-1}A^{-1} = \begin{pmatrix} \frac{1}{21} &amp; \frac{1}{14} \\ -\frac{1}{21} &amp; \frac{1}{35} \end{pmatrix}
-\end{align*} \end{split}\]</div>
-<p>(l)  </p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    \operatorname{adj}(DE) &amp;= \begin{pmatrix} 5 &amp; -17 \\ 2 &amp; -5 \end{pmatrix}, \qquad
-    \det(DE) = -25 + 34 = 9, \\
-    \therefore (DE)^{-1} &amp;= \frac{\operatorname{adj}(DE)}{\det(DE)} 
-    = \frac{1}{9} \begin{pmatrix} 5 &amp; -17 \\ 2 &amp; -5 \end{pmatrix}
-    = \begin{pmatrix} \frac{5}{9} &amp; -\frac{17}{9} \\ \frac{2}{9} &amp; -\frac{5}{9} \end{pmatrix}
-\end{align*} \end{split}\]</div>
-<p>Check: <span class="math notranslate nohighlight">\((DE)(DE)^{-1} = \begin{pmatrix} -5 &amp; 17 \\ -2 &amp; 5 \end{pmatrix} \begin{pmatrix} \frac{5}{9} &amp; -\frac{17}{9} \\ \frac{2}{9} &amp; -\frac{5}{9} \end{pmatrix} = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix} \quad \checkmark\)</span></p>
-</section>
-</div>
 <div class="solution admonition" id="_pages/A1_Matrices_exercises_solutions-solution-4">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="1.7_Matrices_exercises.html#matrices-ex5"> Exercise 1.5</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="1.7_Matrices_exercises.html#matrices-ex-determinants"> Exercise 1.5</a></p>
 <section id="solution-content">
-<p>(a)   Row 2 is 2 times row 1 so the determinant is 0.</p>
-<p>(b)   This is the same as the matrix <span class="math notranslate nohighlight">\(A\)</span> above but with rows 1 and 2 swapped. Therefore the determinant of this matrix is <span class="math notranslate nohighlight">\(-\det(A) = -14\)</span>.</p>
-<p>(c)   Column 2 is all zeros so the determinant is 0.</p>
-<p>(d)   This it the same as the matrix <span class="math notranslate nohighlight">\(G\)</span> from above with row 2 multiplied by 2. Therefore the determinant of this matrix is <span class="math notranslate nohighlight">\(2\det(G) = 2(-14) = -28\)</span>.</p>
-<p>(e)   Column 2 is 2 times column 1 so the determinant is 0.</p>
-<p>(f)   This is the same as the matrix <span class="math notranslate nohighlight">\(B\)</span> from above with 2 times column 1 added to column 2. Therefore the determinant of this matrix is <span class="math notranslate nohighlight">\(\det(B) = 15\)</span>.</p>
+<p>(a)   <span class="math notranslate nohighlight">\(\det(A) = \begin{vmatrix} 1 &amp; -3 \\ 4 &amp; 2 \end{vmatrix} = 1 \times 2 - (-3) \times 4 = 14\)</span></p>
+<p>(b)   <span class="math notranslate nohighlight">\(\det(B) = \begin{vmatrix} 3 &amp; 0 \\ -1 &amp; 5 \end{vmatrix} = 3 \times 5 - 0 \times (-1) = 15\)</span></p>
+<p>(c)  
+<span class="math notranslate nohighlight">\(\begin{align*}
+    \det(G) &amp;= 
+    \begin{vmatrix}
+         4 &amp; 2 &amp; 3 \\
+        -2 &amp; 6 &amp; 0 \\
+         0 &amp; 7 &amp; 1
+    \end{vmatrix}
+    = 4
+    \begin{vmatrix} 6 &amp; 0 \\ 7 &amp; 1 \end{vmatrix} 
+    - (-2)
+    \begin{vmatrix} 2 &amp; 3 \\ 7 &amp; 1 \end{vmatrix}
+    = 4(6 - 0) + 2(2 - 21) = -14
+\end{align*} \)</span></p>
+<p>(d)  
+<span class="math notranslate nohighlight">\(\begin{align*}
+    \det(H) &amp;=
+    \begin{vmatrix}
+        1 &amp;  0 &amp;  1 \\
+        5 &amp;  2 &amp; -2 \\ 
+        2 &amp; -3 &amp;  4
+    \end{vmatrix}
+    =
+    \begin{vmatrix} 2 &amp; -2 \\ -3 &amp;  4 \end{vmatrix} +
+    \begin{vmatrix} 5 &amp;  2 \\  2 &amp; -3 \end{vmatrix}
+    = (8 - 6) + (-15 - 4) = -17
+\end{align*} \)</span></p>
 </section>
 </div>
 <div class="solution admonition" id="_pages/A1_Matrices_exercises_solutions-solution-5">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="1.7_Matrices_exercises.html#matrices-ex6"> Exercise 1.6</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="1.7_Matrices_exercises.html#matrices-ex-inverse"> Exercise 1.6</a></p>
 <section id="solution-content">
-<p>Let</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}A = \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}\end{split}\]</div>
-<p>which has the determinant <span class="math notranslate nohighlight">\(\det(A) = ad - bc\)</span>. Also let <span class="math notranslate nohighlight">\(k\)</span> be a scalar then adding <span class="math notranslate nohighlight">\(k\)</span> multiplied by row 1 to row 2 of <span class="math notranslate nohighlight">\(A\)</span> gives</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{pmatrix} a &amp; b \\ c + ka &amp; d + kb \end{pmatrix}. \end{split}\]</div>
-<p>Calculating the determinant of this matrix</p>
+<p><span class="math notranslate nohighlight">\(A\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \begin{vmatrix} a &amp; b \\ c + ka &amp; d + kb \end{vmatrix} &amp;= ad + abk - bc - abk = ad - bc,
+    \adj(A) &amp;=
+    \begin{pmatrix} 2 &amp; -4 \\ 3 &amp; 1 \end{pmatrix}^\mathsf{T}
+    = 
+    \begin{pmatrix} 2 &amp; 3 \\ -4 &amp; 1 \end{pmatrix},  \\
+    \therefore A^{-1} &amp;= \frac{1}{14} \begin{pmatrix} 2 &amp; 3 \\ -4 &amp; 1 \end{pmatrix}
+    = \begin{pmatrix} 1/7 &amp; 3/14 \\ -2/7 &amp; 1/14 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>which is equal to <span class="math notranslate nohighlight">\(\det(A)\)</span>. Doing similar for adding <span class="math notranslate nohighlight">\(k\)</span> multiples of row 2 to row 1 of <span class="math notranslate nohighlight">\(A\)</span></p>
+<p>Check:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \begin{vmatrix} a + kc &amp; b + kd \\ c &amp; d \end{vmatrix}
-    = ad + kcd - bc - kcd = ad - bc,
+    AA^{-1} &amp;=
+    \begin{pmatrix} 1 &amp; -3 \\ 4 &amp; 2 \end{pmatrix}
+    \begin{pmatrix} 1/7 &amp; 3/14 \\ -2/7 &amp; 1/14 \end{pmatrix}
+    =
+    \begin{pmatrix} 1/7 + 6/7 &amp; 3/14 - 3/14 \\ 4/7 - 4/7 &amp; 12/14 + 2/14 \end{pmatrix}
+    = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>which is also equal to <span class="math notranslate nohighlight">\(\det(A)\)</span>. Doing similar for the columns of <span class="math notranslate nohighlight">\(A\)</span></p>
+<p><span class="math notranslate nohighlight">\(B\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \begin{vmatrix} a &amp; b + ak \\ c &amp; d + ck \end{vmatrix} &amp;= ad + ack - bc - ack = ad - bc, \\
-    \begin{vmatrix} a + kb &amp; b \\ c + kd &amp; d \end{vmatrix} &amp;= ad + kbd - bc - kbd = ad - bc.
+    \adj{B} &amp;=
+    \begin{pmatrix} 5 &amp; 1 \\ 0 &amp; 3 \end{pmatrix}^\mathsf{T}
+    =
+    \begin{pmatrix} 5 &amp; 0 \\ 1 &amp; 3 \end{pmatrix}, \\
+    \therefore B^{-1} &amp;= \frac{1}{15} \begin{pmatrix} 5 &amp; 0 \\ 1 &amp; 3 \end{pmatrix} 
+    =
+    \begin{pmatrix} 1/3 &amp; 0 \\ 1/15 &amp; 1/5 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<div style="text-align: right"> &#9633; </div>
+<p>Check:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    BB^{-1} &amp;=
+    \begin{pmatrix} 3 &amp; 0 \\ -1 &amp; 5 \end{pmatrix}
+    \begin{pmatrix} 1/3 &amp; 0 \\ 1/15 &amp; 1/5 \end{pmatrix}
+    =
+    \begin{pmatrix} 1 + 0 &amp; 0 + 0 \\ -1/3 + 5/15 &amp; 0 + 1 \end{pmatrix}
+    =
+    \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(G\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \adj{G} &amp;= 
+    \begin{pmatrix}
+          \begin{vmatrix} 6 &amp; 0 \\ 7 &amp; 1 \end{vmatrix} 
+        &amp;
+        - \begin{vmatrix} -2 &amp; 0 \\ 0 &amp; 1 \end{vmatrix}
+        &amp;
+          \begin{vmatrix} -2 &amp; 6 \\ 0 &amp; 7 \end{vmatrix}
+        \\
+        - \begin{vmatrix} 2 &amp; 3 \\ 7 &amp; 1 \end{vmatrix}
+        &amp;
+          \begin{vmatrix} 4 &amp; 3 \\ 0 &amp; 1 \end{vmatrix}
+        &amp;
+        - \begin{vmatrix} 4 &amp; 2 \\ 0 &amp; 7 \end{vmatrix}
+        \\
+          \begin{vmatrix} 2 &amp; 3 \\ 6 &amp; 0 \end{vmatrix}
+        &amp;
+        - \begin{vmatrix} 4 &amp; 3 \\ -2 &amp; 0 \end{vmatrix}
+        &amp;
+          \begin{vmatrix} 4 &amp; 2 \\ -2 &amp; 6 \end{vmatrix}
+    \end{pmatrix}^\mathsf{T} \\   
+    &amp;=
+    \begin{pmatrix}
+          6 &amp;  2 &amp; -14 \\
+         19 &amp;  4 &amp; -28 \\
+        -18 &amp; -6 &amp;  28 
+    \end{pmatrix}^\mathsf{T}
+    =
+    \begin{pmatrix}
+          6 &amp;  19 &amp; -18 \\
+          2 &amp;   4 &amp;  -6 \\
+        -14 &amp; -28 &amp;  28
+    \end{pmatrix}, \\
+    \therefore G^{-1} 
+    &amp;= -\frac{1}{14}
+    \begin{pmatrix}
+          6 &amp;  19 &amp; -18 \\
+          2 &amp;   4 &amp;  -6 \\
+        -14 &amp; -28 &amp;  28
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        -3/7 &amp; -19/14 &amp;  9/7 \\
+        -1/7 &amp;  -2/7  &amp;  3/7 \\
+         1   &amp;   2    &amp; -2
+    \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+<p>Check:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    GG^{-1} &amp;=
+    \begin{pmatrix}
+         4 &amp; 2 &amp; 3 \\
+        -2 &amp; 6 &amp; 0 \\
+         0 &amp; 7 &amp; 1 
+    \end{pmatrix}
+    \begin{pmatrix}
+        -3/7 &amp; -19/14 &amp;  9/7 \\
+        -1/7 &amp;  -2/7  &amp;  3/7 \\
+         1   &amp;   2    &amp; -2
+    \end{pmatrix} \\
+    &amp;=
+    \begin{pmatrix}
+        -12/7 - 2/7 + 3 &amp; -76/14 -  4/7 + 6 &amp;  36/7 +  6/7 - 6 \\
+          6/7 - 6/7 + 0 &amp;  38/14 - 12/7 + 0 &amp; -18/7 + 18/7 + 0 \\
+          0   - 7/7 + 1 &amp;   0    - 14/7 + 2 &amp;   0   + 21/7 - 2
+    \end{pmatrix} \\
+    &amp;=
+    \begin{pmatrix}
+        1 &amp; 0 &amp; 0 \\
+        0 &amp; 1 &amp; 0 \\
+        0 &amp; 0 &amp; 1
+    \end{pmatrix}
+\end{align*} \end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(H\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \adj(H) &amp;=
+    \begin{pmatrix}
+          \begin{vmatrix} 2 &amp; -2 \\ -3 &amp; 4 \end{vmatrix}
+        &amp;
+        - \begin{vmatrix} 5 &amp; -2 \\ 2 &amp; 4 \end{vmatrix}
+        &amp;
+          \begin{vmatrix} 5 &amp; 2 \\ 2 &amp; -3 \end{vmatrix}
+        \\
+        - \begin{vmatrix} 0 &amp; 1 \\ -3 &amp; 4 \end{vmatrix}
+        &amp;
+          \begin{vmatrix} 1 &amp; 1 \\ 2 &amp; 4 \end{vmatrix}
+        &amp;
+        - \begin{vmatrix} 1 &amp; 0 \\ 2 &amp; -3 \end{vmatrix}
+        \\
+          \begin{vmatrix} 0 &amp; 1 \\ 2 &amp; -2 \end{vmatrix}
+        &amp;
+        - \begin{vmatrix} 1 &amp; 1 \\ 5 &amp; -2 \end{vmatrix}
+        &amp;
+          \begin{vmatrix} 1 &amp; 0 \\ 5 &amp; 2 \end{vmatrix}
+    \end{pmatrix}^\mathsf{T} \\
+    &amp;=
+    \begin{pmatrix}
+        2 &amp; -24 &amp; -19 \\
+        -3 &amp; 2 &amp; 3 \\
+        -2 &amp; 7 &amp; 2 
+    \end{pmatrix}^\mathsf{T}
+    =
+    \begin{pmatrix}
+         2  &amp; -3 &amp; -2 \\
+        -24 &amp;  2 &amp;  7 \\
+        -19 &amp;  3 &amp;  2 
+    \end{pmatrix}, \\
+    \therefore H^{-1}
+    &amp;= -\frac{1}{17}
+    \begin{pmatrix}
+         2  &amp; -3 &amp; -2 \\
+        -24 &amp;  2 &amp;  7 \\
+        -19 &amp;  3 &amp;  2 
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        -2/17 &amp;  3/17 &amp;  2/17 \\
+        24/17 &amp; -2/17 &amp; -7/17 \\
+        19/17 &amp; -3/17 &amp; -2/17
+    \end{pmatrix} .
+\end{align*} \end{split}\]</div>
+<p>Check:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    HH^{-1} &amp;=
+    \begin{pmatrix}
+        1 &amp;  0 &amp;  1 \\
+        5 &amp;  2 &amp; -2 \\
+        2 &amp; -3 &amp;  4 
+    \end{pmatrix}
+    \begin{pmatrix}
+        -2/17 &amp;  3/17 &amp;  2/17 \\
+        24/17 &amp; -2/17 &amp; -7/17 \\
+        19/17 &amp; -3/17 &amp; -2/17
+    \end{pmatrix}
+    \\
+    &amp;=
+    \begin{pmatrix}
+        -2/17 +  0    + 19/17 &amp;  3/17 - 3/17         &amp;  2/17 - 2/17 \\
+        -5/17 + 48/17 - 38/17 &amp; 15/17 - 4/17 +  6/17 &amp; 10/17 - 14/17 + 4/17 \\ 
+        -4/17 - 72/17 + 76/17 &amp;  6/17 + 6/17 - 12/17 &amp;  4/17 + 21/17 - 8/17
+    \end{pmatrix}
+    \\
+    &amp;=
+    \begin{pmatrix}
+        1 &amp; 0 &amp; 0 \\
+        0 &amp; 1 &amp; 0 \\
+        0 &amp; 0 &amp; 1
+    \end{pmatrix}
+\end{align*} \end{split}\]</div>
 </section>
 </div>
 <div class="solution admonition" id="_pages/A1_Matrices_exercises_solutions-solution-6">
 
-<p class="admonition-title">Solution to<a class="reference internal" href="1.7_Matrices_exercises.html#matrices-ex7"> Exercise 1.7</a></p>
+<p class="admonition-title">Solution to<a class="reference internal" href="1.7_Matrices_exercises.html#matrices-ex-AAT-symmetric"> Exercise 1.7</a></p>
+<section id="solution-content">
+<p>For <span class="math notranslate nohighlight">\(AA^\mathsf{T}\)</span> to be symmetric we need to show that <span class="math notranslate nohighlight">\(AA^{T} = (AA^\mathsf{T})^\mathsf{T}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    (AA^\mathsf{T})^\mathsf{T} &amp;= 
+    (A^\mathsf{T})^\mathsf{T}A^\mathsf{T} &amp;&amp; \textsf{since $(AB)^\mathsf{T} = B^\mathsf{T}A^\mathsf{T}$} \\
+    &amp;= AA^\mathsf{T} &amp;&amp; \textsf{since $(A^\mathsf{T})^\mathsf{T}$.}
+\end{align*} \end{split}\]</div>
+<p>So <span class="math notranslate nohighlight">\(AA^\mathsf{T}\)</span> is symmetric</p>
+</section>
+</div>
+<div class="solution admonition" id="_pages/A1_Matrices_exercises_solutions-solution-7">
+
+<p class="admonition-title">Solution to</p>
+<section id="solution-content">
+<p>To prove that <span class="math notranslate nohighlight">\((AB)^{-1} = B^{-1}A^{-1}\)</span> we need to show that <span class="math notranslate nohighlight">\((AB)(B^{-1}A^{-1}) = I\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    (AB)(B^{-1}A^{-1}) 
+    &amp;= A(BB^{-1}A^{-1}) &amp;&amp; \textsf{associativity law} \\
+    &amp;= A(IA^{-1}) &amp;&amp; \textsf{since $BB^{-1} = I$} \\
+    &amp;= AA^{-1} &amp;&amp; \textsf{since $AI = IA = A$}\\
+    &amp;= I    &amp;&amp; \textsf{definition of $A^{-1}.$} 
+\end{align*} \end{split}\]</div>
+<p>Therefore <span class="math notranslate nohighlight">\((AB)^{-1} = B^{-1}A^{-1}\)</span>.</p>
+</section>
+</div>
+<div class="solution admonition" id="_pages/A1_Matrices_exercises_solutions-solution-8">
+
+<p class="admonition-title">Solution to</p>
+<section id="solution-content">
+<p>Expanding out <span class="math notranslate nohighlight">\((A + B)^2\)</span></p>
+<div class="math notranslate nohighlight">
+\[ (A + B)^2 = (A + B)(A + B) = A^2 + AB + BA + B^2, \]</div>
+<p>therefore <span class="math notranslate nohighlight">\((A + B)^2 \neq A^2 + 2AB + B^2\)</span>.</p>
+<p>This would be true if <span class="math notranslate nohighlight">\(AB = BA\)</span>, i.e., <span class="math notranslate nohighlight">\(A = B\)</span> or <span class="math notranslate nohighlight">\(A = I\)</span> or <span class="math notranslate nohighlight">\(B = I\)</span>.</p>
+</section>
+</div>
+<div class="solution admonition" id="_pages/A1_Matrices_exercises_solutions-solution-9">
+
+<p class="admonition-title">Solution to</p>
+<section id="solution-content">
+<p>We need to show that <span class="math notranslate nohighlight">\(A^2 = I\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    A^2 =
+    \begin{pmatrix} a &amp; b \\ c &amp; -a \end{pmatrix} 
+    \begin{pmatrix} a &amp; b \\ c &amp; -a \end{pmatrix} 
+    = 
+    \begin{pmatrix} a^2 + bc &amp; 0 \\ 0 &amp; a^2 + bc \end{pmatrix},
+\end{align*} \end{split}\]</div>
+<p>so <span class="math notranslate nohighlight">\(a^2 + bc = 1\)</span> for <span class="math notranslate nohighlight">\(A\)</span> to be an involutory matrix.</p>
+</section>
+</div>
+<div class="solution admonition" id="_pages/A1_Matrices_exercises_solutions-solution-10">
+
+<p class="admonition-title">Solution to</p>
+<section id="solution-content">
+<p>(a)   True</p>
+<p>Proof: Right multiply both sides of <span class="math notranslate nohighlight">\(A = B\)</span> by <span class="math notranslate nohighlight">\(C\)</span>.</p>
+<p>(b)   False, e.g., if <span class="math notranslate nohighlight">\(C = \begin{pmatrix} 0 &amp; 0 \\ 0 &amp; 0 \end{pmatrix}\)</span> then this would hold for any two matrices.</p>
+<p>(c)   False, e.g., if <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 0 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(B = \begin{pmatrix} 0 &amp; 0 \\ 1 &amp; 0 \end{pmatrix}\)</span> then <span class="math notranslate nohighlight">\(AB = O\)</span>.</p>
+<p>(d)   True</p>
+<p>Proof: Add <span class="math notranslate nohighlight">\(C\)</span> to both sides of <span class="math notranslate nohighlight">\(A = B\)</span>.</p>
+<p>(e)   False, e.g., if <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}\)</span> then <span class="math notranslate nohighlight">\(A^2 = I\)</span>.</p>
+<p>(f)   True</p>
+<p>Proof: If <span class="math notranslate nohighlight">\(B = A^2\)</span> then <span class="math notranslate nohighlight">\(b_{ii} = \sum_{k=1}^n a_{ik}a_{ki}\)</span> and since <span class="math notranslate nohighlight">\(A\)</span> is symmetric then <span class="math notranslate nohighlight">\(a_{ik} = a_{ki}\)</span> for <span class="math notranslate nohighlight">\(i = 1, 2, \ldots, n\)</span> so <span class="math notranslate nohighlight">\(b_{ii} = \sum{k=1}^n = a_{ij}^2\)</span> which is always greater than or equal to 0.</p>
+<p>(g)   True</p>
+<p>Proof:</p>
+<ul class="simple">
+<li><p>Let <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> be two <span class="math notranslate nohighlight">\(n \times n\)</span> matrices then <span class="math notranslate nohighlight">\(C\)</span> is also an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix.</p></li>
+<li><p>Let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix and <span class="math notranslate nohighlight">\(C\)</span> be an <span class="math notranslate nohighlight">\(m \times m\)</span> matrix and <span class="math notranslate nohighlight">\(B\)</span> is a <span class="math notranslate nohighlight">\(p \times q\)</span> matrix. <span class="math notranslate nohighlight">\(p = n\)</span> and <span class="math notranslate nohighlight">\(q = m\)</span> but <span class="math notranslate nohighlight">\(m = n\)</span> so <span class="math notranslate nohighlight">\(p = q = m\)</span> and <span class="math notranslate nohighlight">\(B\)</span> is a square matrix.</p></li>
+<li><p>Ley <span class="math notranslate nohighlight">\(B\)</span> be an <span class="math notranslate nohighlight">\(m \times m\)</span> matrix and <span class="math notranslate nohighlight">\(C\)</span> be an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix and <span class="math notranslate nohighlight">\(A\)</span> is a <span class="math notranslate nohighlight">\(p \times q\)</span> matrix. <span class="math notranslate nohighlight">\(p = n\)</span> and <span class="math notranslate nohighlight">\(q = m\)</span> but <span class="math notranslate nohighlight">\(m = n\)</span> so <span class="math notranslate nohighlight">\(p = q = m\)</span> and <span class="math notranslate nohighlight">\(A\)</span> is a square matrix.</p></li>
+</ul>
+<p>(h)   True</p>
+<p>Proof: Let <span class="math notranslate nohighlight">\(B\)</span> be a <span class="math notranslate nohighlight">\(p \times q\)</span> matrix then since <span class="math notranslate nohighlight">\(C\)</span> is an <span class="math notranslate nohighlight">\(m \times 1\)</span> matrix then <span class="math notranslate nohighlight">\(q = 1\)</span>.</p>
+<p>(i)   False, e.g., if <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix}\)</span> then <span class="math notranslate nohighlight">\(A^3 = A\)</span>.</p>
+</section>
+</div>
+<div class="solution admonition" id="_pages/A1_Matrices_exercises_solutions-solution-11">
+
+<p class="admonition-title">Solution to</p>
 <section id="solution-content">
 <p>(a)</p>
 <div class="math notranslate nohighlight">
