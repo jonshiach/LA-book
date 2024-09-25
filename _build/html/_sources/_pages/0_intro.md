@@ -97,14 +97,38 @@ The examples and exercises contained in this book have the solutions hidden from
 
 ---
 
+`````{grid}
+````{grid-item}
+:columns: 2
 ```{image} ../_images/jon_Shiach.jpeg
 :width: 125px
 :align: left
 :alt: Jon Shiach
 ```
+````
 
+````{grid-item}
 Dr Jon Shiach <br>
 Homepage: <a href="https://jonshiach.github.io/" target="_blank">jonshiach.github.io</a> <br>
 Email: <a href="mailto:j.shiach@mmu.ac.uk">j.shiach@mmu.ac.uk</a> <br>
 Tel: 0161 247 1515 <br>
 Office: 3.27 (Dalton Building)
+````
+
+````{grid-item}
+:columns: 2
+```{image} ../_images/0_Ling_Qian.jpeg
+:width: 125px
+:align: left
+:alt: Ling Qian
+```
+````
+
+````{grid-item}
+Prof. Ling Qian <br>
+Homepage: <a href="https://www.mmu.ac.uk/staff/profile/professor-ling-qian" target="_blank">https://www.mmu.ac.uk/staff/profile/professor-ling-qian</a><br>
+Email: <a href="mailto:l.qian@mmu.ac.uk">j.shiach@mmu.ac.uk</a> <br>
+Tel: 0161 247 1548 <br>
+Office: 4.38 (Dalton Building)
+````
+`````
