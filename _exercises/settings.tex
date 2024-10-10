@@ -1,0 +1,23 @@
+% Packages
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[margin=2cm]{geometry}
+\usepackage{enumitem}
+\usepackage{tasks}
+\usepackage{svg}
+
+% Title info
+\author{Dr Jon Shiach}
+\date{Semester 1}
+
+% Tasks package
+\usepackage{tasks}
+\DeclareInstance{tasks}{alphabetize-parens}{default}{
+    label = (\alph*),
+    label-width    = 2em,
+}
+\settasks{style=alphabetize-parens}
+
+% Commands
+\renewcommand{\vec}{\mathbf}

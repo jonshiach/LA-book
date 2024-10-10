@@ -1,0 +1,116 @@
+\documentclass[a4paper,11pt]{article}
+
+\input{settings.tex}
+
+\title{Matrices Exercises}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}[label=1.\arabic*]
+    \item
+    \begin{enumerate}
+        \item Write down the $3 \times 3$ matrix $A$ whose entries are given by $a_{ij} = i+j.$
+        \item Write down the $4 \times 4$ matrix $B$ whose entries are given by $b_{ij} = (-1)^{i+j}.$
+        \item Write down the $4 \times 4$ matrix $C$ whose entries are given by 
+        $$c_{ij} = 
+            \begin{cases}
+            -1, & i>j, \\
+            0, & i=j, \\
+            1, & i<j. \\
+            \end{cases} $$
+    \end{enumerate}
+
+    \item The Hilbert matrix is the $n \times n$ matrix $H$ where the value of its elements are $h_{ij} = \dfrac{1}{i + j - 1}$. 
+    \begin{enumerate}
+        \item Write down the $4 \times 4$ Hilbert matrix. 
+        \item Show that an $n \times n$ Hilbert matrix is symmetric. 
+    \end{enumerate}
+
+    \item Given the matrices
+    \begin{align*}
+        A &= \begin{pmatrix} 1 & -3 \\ 4 & 2 \end{pmatrix}, &
+        B &= \begin{pmatrix} 3 & 0 \\ -1 & 5 \end{pmatrix}, \\
+        C &= \begin{pmatrix} 5 \\ 9 \end{pmatrix}, &
+        D &= \begin{pmatrix} 1 & 1 & 3 \\ 4 & -2 & 3 \end{pmatrix}, \\
+        E &= \begin{pmatrix} 1 & 2 \\ 0 & 6 \\ -2 & 3 \end{pmatrix} &
+        F &= \begin{pmatrix} 1 & -2 & 4 \end{pmatrix}, \\
+        G &= \begin{pmatrix} 4 & 2 & 3 \\ -2 & 6 & 0 \\ 0 & 7 & 1 \end{pmatrix}, &
+        H &= \begin{pmatrix} 1 & 0 & 1 \\ 5 & 2 & -2 \\ 2 & -3 & 4 \end{pmatrix}.
+    \end{align*}
+    Calculate the following where possible:
+    \begin{tasks}(4)
+        \task $A + B$
+        \task $B + C$
+        \task $A^\mathsf{T}$
+        \task $C^\mathsf{T}$
+        \task $3B - A$
+        \task $(F^\mathsf{T})^\mathsf{T}$
+        \task $A^\mathsf{T} + B^\mathsf{T}$
+        \task $(A + B)^\mathsf{T}$
+    \end{tasks}
+
+    \item Using the matrices from exercise 1.3 calculate the following where possible:
+    \begin{tasks}(4)
+        \task $AB$
+        \task $BA$
+        \task $AC$
+        \task $CA$
+        \task $C^\mathsf{T}C$
+        \task $CC^\mathsf{T}$
+        \task $DE$
+        \task $GH$
+        \task $A(DE)$
+        \task $(AD)E$
+        \task $A^3$
+        \task $G^4$
+    \end{tasks}
+
+    \item Calculate the determinants of the square matrices from exercise 1.3.
+    
+    \item For each non-singular matrix from exercise 1.3 calculate its inverse. Show that your answers are correct.
+    \item Show that $AA^\mathsf{T}$ is a symmetric matrix. Hint: use the properties of matrix transpose.
+    
+    \item Show that $(AB)^{-1} = B^{-1}A^{-1}$. Hint: use the associativity law. 
+    
+    \item If $A$ and $B$ are $n \times n$ matrices is the following equation true?
+    $$(A + B)^2 = A^2 + 2AB + B^2$$
+    If not, under what conditions would it be true?
+
+    \item An involutory matrix is a matrix that is its own inverse, i.e., it satisfies the equation $A^2 = I$. Under what conditions is the following matrix an involutory matrix?
+    $$A = \begin{pmatrix} a & b \\ c & -a \end{pmatrix} $$
+
+    \item Which of the following statements are true? For the false statements, give one counter example where the statement doesn't hold.
+    \begin{enumerate}
+        \item If $A = B$ then $AC = BC$
+        \item If $AC = BC$ then $A = B$
+        \item For $[O]_{ij} = 0$, if $AB = O$ then $A = O$ or $B = O$
+        \item If $A + C = B + C$ then $A = B$
+        \item If $A^2 = I$ then $A = \pm I$
+        \item If $B = A^2$ and if $A$ is an $n \times n$ symmetric matrix then $b_{ii} \geq 0$ for $i = 1, 2, \ldots, n$
+        \item If $AB = C$ and if two of the matrices are square then so is the third
+        \item If $AB = C$ and if $C$ has a single column then so does $B$
+        \item If $A^2 = I$ then $A^n = I$ for all integers $n \geq 2$
+    \end{enumerate}
+
+    \item Given the matrices
+    \begin{align*}
+        A &= \begin{pmatrix} 1 & -3 \\ 4 & 2 \end{pmatrix}, &
+        B &= \begin{pmatrix} 3 & 0 \\ -1 & 5 \end{pmatrix},
+    \end{align*}
+    solve the following equations for $X$.
+    \begin{tasks}(4)
+        \task $5X = A$
+        \task $X + A = I$
+        \task $2X - B = A$
+        \task $XA = I$
+        \task $BX = A$
+        \task $A^2 = X$
+        \task $X^2 = B$
+        \task $(X + A)B = I$
+    \end{tasks}
+
+\end{enumerate}
+
+\end{document}

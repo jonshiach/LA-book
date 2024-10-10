@@ -1,0 +1,52 @@
+\documentclass[a4paper,11pt]{article}
+
+\input{settings.tex}
+
+\title{Linear Transformations Exercises}
+
+\begin{document}
+
+
+\maketitle
+
+\begin{enumerate}[label=6.\arabic*]
+    \item Which of the following transformations are linear transformations?
+    \begin{tasks}(2)
+        \task $T: (x, y)^\mathsf{T} \mapsto (0, y)^\mathsf{T}$
+        \task $T: (x, y)^\mathsf{T} \mapsto (x, 5)^\mathsf{T}$
+        \task $T: (x, y, z)^\mathsf{T} \mapsto (x, x - y)^\mathsf{T}$
+        \task $T: (x, y, z)^\mathsf{T} \mapsto \begin{pmatrix} x + y \\ z \end{pmatrix}$
+        \task $T: (x, y)^\mathsf{T} \mapsto (3x + 1, y)^\mathsf{T}$
+        \task $T: f(x) \mapsto \dfrac{\mathrm{d}}{\mathrm{d}x} f(x)$
+        \task $T: f(x) \mapsto xf(x)$
+        \task $T: \mathbb{C}^2 \to \mathbb{C}$ where $T: (x, y)^\mathsf{T} \mapsto x + y$
+        \task $T: \mathbb{C}^2 \to \mathbb{C}$ where $T: (x, y)^\mathsf{T} \mapsto x y$
+        \task $T: \mathbb{C}^2 \to \mathbb{C}$ where $T: (x, y)^\mathsf{T} \mapsto \bar{y}$
+    \end{tasks}
+    ($\bar{x}$ is the complex conjugate of $x = a + bi$ defined by $\bar{x} = a - bi$.)
+
+    \item A linear transformation $T: \mathbb{R}^2 \to \mathbb{R}^2$ is defined by $T: (x, y)^\mathsf{T} \mapsto (-x + 3y, x - 4y)^\mathsf{T}$. Determine the transformation matrix for $T$ and hence calculate $T (2, 5)^\mathsf{T}$.
+    
+    \item A linear transformation $T: \mathbb{R}^2 \to \mathbb{R}^2$ is defined by $T: (x, y)^\mathsf{T} \mapsto (x - 2y, 2x + 3y)^\mathsf{T}$. Given $T(\vec{u}) = (-1, 5)^\mathsf{T}$ determine $\vec{u}$.
+    
+    \item $T: \mathbb{R}^3 \to \mathbb{R}^3$ is a linear transformation such that
+    \begin{align*}
+        T\begin{pmatrix} 1 \\ -1 \\ 0 \end{pmatrix} &= \begin{pmatrix} 1 \\ -2 \\ -4 \end{pmatrix}, &
+        T\begin{pmatrix} 0 \\ 1 \\ 2 \end{pmatrix} &= \begin{pmatrix} 6 \\ 5 \\ 10 \end{pmatrix}, &
+        T\begin{pmatrix} -1 \\ 1 \\ 1 \end{pmatrix} &= \begin{pmatrix} 2 \\ 4 \\ 7 \end{pmatrix}.
+    \end{align*}
+    Find the transformation matrix for $T$.
+
+    \item Rotate the position vector $(2, 1)^\mathsf{T} \in \mathbb{R}^2$ by angle $\pi/6$ anti-clockwise about the origin.
+    
+    \item Reflect the position vector $(5, 3)^\mathsf{T} \in \mathbb{R}^2$ about the line that passes through $(0, 0)$ and makes an angle $\pi/3$ with the $x$-axis.
+    
+    \item A square with side lengths 2 is centred at the co-ordinates $(3, 2)$. It is to be translated so the centre is at the origin, rotated by an angle $\pi/3$ clockwise about the origin and then translated back to its initial position. 
+    \begin{enumerate}
+        \item Write down a matrix containing the homogeneous co-ordinates for the vertices of the square.
+        \item Determine the transformation matrices that perform the three transformations.
+        \item Calculate the composite transformation matrix and apply with to the co-ordinate matrix from part (a).
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}
