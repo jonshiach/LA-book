@@ -399,20 +399,25 @@ document.write(`
     c x + d y &amp;= f.
 \end{align*} \end{split}\]</div>
 <p>To solve for <span class="math notranslate nohighlight">\(x\)</span> we could multiply the second equation by <span class="math notranslate nohighlight">\(\dfrac{b}{d}\)</span> and subtract from first equation and rearrange to make <span class="math notranslate nohighlight">\(x\)</span> the subject</p>
+<p>To solve for <span class="math notranslate nohighlight">\(x\)</span> we could look to eliminate <span class="math notranslate nohighlight">\(y\)</span> by multiplying the second equation by <span class="math notranslate nohighlight">\(\dfrac{b}{d}\)</span> to give</p>
+<div class="math notranslate nohighlight">
+\[ \frac{b}{d}c x + by = \frac{b}{d}f,\]</div>
+<p>and subtract this from the first equation</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    a x - \frac{b c}{d} x + b y - \frac{b d}{d} y &amp;= e - \frac{b}{d} f \\
-    adx - bcx + bdy - bdy &amp;= de - bf \\
-    (a d - b c) x &amp;= d e - b f \\
-    x &amp;= \frac{d e - b f}{a d - b c}.
+    ax - \frac{b}{d}c x &amp;= e - \frac{b}{d}f \\
+    (ad - bc)x &amp;= (de - bf) \\
+    x &amp;= \frac{de - bf}{ad - bc}.
 \end{align*} \end{split}\]</div>
-<p>We can also solve for <span class="math notranslate nohighlight">\(y\)</span> by multiplying the first equation by <span class="math notranslate nohighlight">\(\dfrac{c}{a}\)</span> and subtract from the second equation and rearrange to make <span class="math notranslate nohighlight">\(y\)</span> the subject</p>
+<p>We can also solve for <span class="math notranslate nohighlight">\(y\)</span> by multiplying the first equation by <span class="math notranslate nohighlight">\(\dfrac{c}{a}\)</span> to give</p>
+<div class="math notranslate nohighlight">
+\[ c x + \frac{c}{a} b y = \frac{c}{a} e, \]</div>
+<p>and subtract this from the second equation</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    c x - \frac{c a}{a} x + d y - \frac{b c}{a} y &amp;= f - \frac{c}{a} e \\
-    acx - acx + ady - bcy &amp;= af - ce \\
-    (a d - b c) y &amp;= a f - c e \\
-    y &amp;= \frac{a f - c e}{a d - b c}.
+    d y - \frac{c}{a} b y &amp;= f - \frac{c}{a} e \\
+    (ad - bc) y &amp;= af - ce \\
+    y &amp;= \frac{af - ce}{ad - bc}.
 \end{align*} \end{split}\]</div>
 <p>The denominators in the solutions to <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are both <span class="math notranslate nohighlight">\(a d - b c\)</span> so if this value is zero then the system of equations does not have a solution. If we write the system using matrices (see the section on <a class="reference internal" href="2.0_Linear_systems.html#systems-of-linear-equations-chapter"><span class="std std-ref">systems of linear equations</span></a> for more detail on this), i.e.,</p>
 <div class="math notranslate nohighlight">
@@ -425,7 +430,7 @@ document.write(`
         cx + dy \!\!\! &amp;= f.
     \end{matrix}
 \end{align*} \end{split}\]</div>
-<p>then the expression <span class="math notranslate nohighlight">\(ad - bc\)</span> is known as the <strong>determinant</strong> of the <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix containing the coefficients of <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<p>then the expression <span class="math notranslate nohighlight">\(ad - bc\)</span> is known as the determinant of the <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix containing the coefficients of <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>.</p>
 <p>The determinant of a square matrix <span class="math notranslate nohighlight">\(A\)</span> is denoted by <span class="math notranslate nohighlight">\(\det(A)\)</span> or <span class="math notranslate nohighlight">\(|A|\)</span> and is a scalar value that can be computed from the values of its elements.</p>
 <section id="calculating-the-determinant-of-a-2-times-2-matrix">
 <span id="index-2"></span><h2><span class="section-number">1.5.1. </span>Calculating the determinant of a <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix<a class="headerlink" href="#calculating-the-determinant-of-a-2-times-2-matrix" title="Permalink to this heading">#</a></h2>
