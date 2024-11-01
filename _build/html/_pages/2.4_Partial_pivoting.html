@@ -383,50 +383,61 @@ document.write(`
 <span id="index-0"></span><h1><span class="section-number">2.6. </span>Partial pivoting<a class="headerlink" href="#partial-pivoting" title="Permalink to this heading">#</a></h1>
 <p>In most practical applications of row reduction to solve a linear system we use computers to perform the calculations. Computers use floating point numbers to compute arithmetic operations which are not exact and can be prone to rounding errors. Consider the following linear system of equations</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \begin{pmatrix}0.01 &amp; 1 \\ 1 &amp; 1 \end{pmatrix}
+\[\begin{split} \begin{pmatrix}0.001 &amp; 1 \\ 1 &amp; 1 \end{pmatrix}
 \begin{pmatrix} x_1 \\ x_2 \end{pmatrix} =
 \begin{pmatrix}1 \\ 2 \end{pmatrix}. \end{split}\]</div>
 <p>Using Gaussian elimination to solve this system</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     &amp; \left( \begin{array}{cc|c}
-        0.01 &amp; 1 &amp; 1 \\
+        0.001 &amp; 1 &amp; 1 \\
         1 &amp; 1 &amp; 2
     \end{array} \right)
-    \begin{array}{l} \\  R_2 - 100R_1 \end{array} &amp;
+    \begin{array}{l} \\  R_2 - 1000R_1 \end{array} &amp;
     \longrightarrow &amp;
     \left( \begin{array}{cc|c}
-        0.01 &amp; 1 &amp; 1 \\
-        0 &amp; -99 &amp; -98
+        0.001 &amp; 1 &amp; 1 \\
+        0 &amp; -999 &amp; -998
     \end{array} \right)
-    \begin{array}{l} \\  -\dfrac{1}{99}R_2 \end{array} \\ \\
+    \begin{array}{l} \\  -\dfrac{1}{999}R_2 \end{array} \\ \\
     \longrightarrow &amp;
     \left( \begin{array}{cc|c}
         0.01 &amp; 1 &amp; 1 \\
         0 &amp; 1 &amp; 0.9898\ldots
     \end{array} \right).
 \end{align*} \end{split}\]</div>
-<p>So <span class="math notranslate nohighlight">\(x_2 = 0.9898\ldots\)</span> which is rounded to <span class="math notranslate nohighlight">\(x_2 = 1\)</span> and using back substitution we have <span class="math notranslate nohighlight">\(x_1 = \dfrac{1 - 1(1)}{0.01} = 0\)</span>. However, checking our solution with the original system we see that this does not satisfy the second equation <span class="math notranslate nohighlight">\(x_1 + x_2 = 2\)</span>. To overcome this we can perform a row swap so that the pivot element is larger than the value below</p>
+<p>So <span class="math notranslate nohighlight">\(x_2 = 0.998998\ldots\)</span> which we can round to <span class="math notranslate nohighlight">\(x_2 = 1\)</span> and using back substitution we have <span class="math notranslate nohighlight">\(x_1 = \dfrac{1 - 1(1)}{0.001} = 0\)</span>. However, lets check our solution to see if we are correct</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    0.01(0) + 1(1) &amp;= 1, \\
+    1(0) + 1(1) &amp;= 1 \neq 2.
+\end{align*} \end{split}\]</div>
+<p>So the solution of <span class="math notranslate nohighlight">\(x_1 = 0\)</span> and <span class="math notranslate nohighlight">\(x_2 = 1\)</span> does not satisfy the original system and is clearly wrong. Lets solve the system again but perform a row swap on the two rows before eliminating the value beneath the pivot.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     &amp; \left(\begin{array}{cc|c}
-        0.01 &amp; 1 &amp; 1 \\
+        0.001 &amp; 1 &amp; 1 \\
         1 &amp; 1 &amp; 2
     \end{array} \right)
     \begin{array}{l} R_1 \leftrightarrow R_2  \\ \phantom{x} \end{array}&amp;
     \longrightarrow &amp;
     \left( \begin{array}{cc|c}
         1 &amp; 1 &amp; 2 \\
-        0.01 &amp; 1 &amp; 1 
+        0.001 &amp; 1 &amp; 1 
     \end{array} \right)
     \begin{array}{l} \\  R_2 - 0.001 R_1 \end{array} \\ \\
     \longrightarrow &amp;
     \left( \begin{array}{cc|c}
         1 &amp; 1 &amp; 2 \\
-        0 &amp; 0.99 &amp; 0.98
+        0 &amp; 0.999 &amp; 0.998
     \end{array} \right)
 \end{align*} \end{split}\]</div>
-<p>Solving using back substitution we have <span class="math notranslate nohighlight">\(x_2 = \dfrac{0.98}{0.99} = 0.9898\ldots \approx 1\)</span> as before and using back substitution we now have <span class="math notranslate nohighlight">\(x_1 = 2 - 1(1) = 1\)</span> which is consistent with the original system. This process is called <strong>partial pivoting</strong> and it’s where we perform a row swap to ensure that the pivot element has a larger absolute value from the elements in the column beneath the pivot.</p>
+<p>Solving using back substitution we have <span class="math notranslate nohighlight">\(x_2 = \dfrac{0.998}{0.999} = 0.998998\ldots \approx 1\)</span> as before and using back substitution we now have <span class="math notranslate nohighlight">\(x_1 = 2 - 1(1) = 1\)</span>. Lets check this solution to see if it is correct</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align*}
+    0.001(1) + 1(1) &amp;= 1.001 \approx 1,
+\end{align*} \]</div>
+<p>which is consistent with the original system when rounding is applied. This process is called <strong>partial pivoting</strong> and it’s where we perform a row swap to ensure that the pivot element has a larger absolute value from the elements in the column beneath the pivot.</p>
 <div class="proof algorithm admonition" id="ge-pp-algorithm">
 <span id="index-1"></span><p class="admonition-title"><span class="caption-number">Algorithm 2.2 </span> (Gaussian elimination with partial pivoting)</p>
 <section class="algorithm-content" id="proof-content">
@@ -468,9 +479,9 @@ document.write(`
 <p>Solve the system of linear equations using Gaussian elimination with partial pivoting.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-        x_1 - x_2 + 3x_3 &amp;= 13, \\
-        4x_1 - 2x_2 + x_3 &amp;= 15, \\
-        -3x_1 - x_2 + 4x_3 &amp;= 8.
+   x_1 - x_2 + 3x_3 &amp;= 13, \\
+   4x_1 - 2x_2 + x_3 &amp;= 15, \\
+   -3x_1 - x_2 + 4x_3 &amp;= 8.
 \end{align*} \end{split}\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
