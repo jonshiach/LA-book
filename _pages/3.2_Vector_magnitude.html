@@ -395,7 +395,7 @@ document.write(`
 <div class="proof definition note admonition" id="magnitude-definition">
 <p class="admonition-title"><span class="caption-number">Definition 3.4 </span> (Vector magnitude)</p>
 <section class="definition-content" id="proof-content">
-<p>The <strong>magnitude</strong> of a vector <span class="math notranslate nohighlight">\(\vec{a} = (a_1, a_2, \ldots, a_n)^\mathsf{T}\)</span> denoted by <span class="math notranslate nohighlight">\(\|\vec{a}\|\)</span> is calculated using</p>
+<p>The <strong>magnitude</strong> of a vector <span class="math notranslate nohighlight">\(\vec{a} = (a_1, a_2, \ldots, a_n)\)</span> denoted by <span class="math notranslate nohighlight">\(\|\vec{a}\|\)</span> is calculated using</p>
 <div class="math notranslate nohighlight" id="equation-magnitude-equation">
 <span class="eqno">(3.1)<a class="headerlink" href="#equation-magnitude-equation" title="Permalink to this equation">#</a></span>\[ \|\vec{a}\| = \sqrt{\sum_{i=1}^n a_i^2} = \sqrt{a_1^2 + a_2^2 + \cdots + a_n^2}. \]</div>
 <figure class="align-default">
@@ -407,7 +407,7 @@ document.write(`
 <p class="admonition-title"><span class="caption-number">Example 3.2 </span></p>
 <section class="example-content" id="proof-content">
 <p>Calculate the magnitudes of the following vectors</p>
-<p>(i)   <span class="math notranslate nohighlight">\(\vec{u} = \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix}\)</span></p>
+<p>(i)   <span class="math notranslate nohighlight">\(\vec{u} = (1, 2, 3)\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -418,7 +418,7 @@ Solution<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[ \|\vec{u}\| = \sqrt{1^2 + 2^2 + 3^2} = \sqrt{1+4+9} = \sqrt{14} \]</div>
 </div>
-</details><p>(ii)   <span class="math notranslate nohighlight">\(\vec{v} = \begin{pmatrix} 5 \\ -12 \\ 0 \end{pmatrix}\)</span></p>
+</details><p>(ii)   <span class="math notranslate nohighlight">\(\vec{v} = (5, -12, 0)\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -429,7 +429,7 @@ Solution<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[ \|\vec{v}\| = \sqrt{5^2 + (-12)^2 + 0^2} = \sqrt{25+144+0} = \sqrt{169} = 13\]</div>
 </div>
-</details><p>(iii)   <span class="math notranslate nohighlight">\(\vec{w} = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}\)</span></p>
+</details><p>(iii)   <span class="math notranslate nohighlight">\(\vec{w} = (1, 0, 1)\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -453,14 +453,14 @@ Solution<div class="sd-summary-down docutils">
 <li><p>The magnitude of a vector <span class="math notranslate nohighlight">\(\vec{v}\)</span> is zero if and only if the vector is the zero vector.</p></li>
 </ul>
 <div class="math notranslate nohighlight">
-\[\|\vec{v}\| = 0 \Leftrightarrow \vec{v} = \vec{0}.\]</div>
+\[\|\vec{v}\| = 0 \iff \vec{v} = \vec{0}.\]</div>
 <ul class="simple">
 <li><p>If a vector <span class="math notranslate nohighlight">\(\vec{v}\)</span> is multiplied by a scalar <span class="math notranslate nohighlight">\(k\)</span> then the magnitude of the resulting vector is the absolute value of <span class="math notranslate nohighlight">\(k\)</span> multiplied by the magnitude of <span class="math notranslate nohighlight">\(\vec{v}\)</span>.</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\|k\vec{v}\| = |k| \| \vec{v} \|\]</div>
 <ul class="simple">
-<li><p>For any two vectors <span class="math notranslate nohighlight">\(\vec{u}\)</span> and <span class="math notranslate nohighlight">\(\vec{v}\)</span> the magnitude of their sum is less than or equal to the sum of their magnitudes.</p></li>
+<li><p>For any two vectors <span class="math notranslate nohighlight">\(\vec{u}\)</span> and <span class="math notranslate nohighlight">\(\vec{v}\)</span> the magnitude of their sum is less than or equal to the sum of their magnitudes (known as the <a href="https://en.wikipedia.org/wiki/Triangle_inequality" target="_blank">triangle inequality</a>).</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\| \vec{u} + \vec{v} \| \leq \|\vec{u}\| + \| \vec{v} \|\]</div>
@@ -495,7 +495,7 @@ Solution<div class="sd-summary-down docutils">
 <p class="admonition-title"><span class="caption-number">Example 3.3 </span></p>
 <section class="example-content" id="proof-content">
 <p>Find the unit vector parallel to the following:</p>
-<p>(i)   <span class="math notranslate nohighlight">\(\vec{u} = \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix}\)</span></p>
+<p>(i)   <span class="math notranslate nohighlight">\(\vec{u} = (1, 2, 3)\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -512,7 +512,7 @@ Solution<div class="sd-summary-down docutils">
     &amp;= \sqrt{ \frac{14}{196} +\frac{14}{49} + \frac{126}{196}} = \sqrt{1} = 1 \qquad \checkmark
 \end{align*} \end{split}\]</div>
 </div>
-</details><p>(ii)   <span class="math notranslate nohighlight">\(\vec{v} = \begin{pmatrix} 5 \\ -12 \\ 0 \end{pmatrix}\)</span></p>
+</details><p>(ii)   <span class="math notranslate nohighlight">\((5, -12, 0)\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -529,7 +529,7 @@ Solution<div class="sd-summary-down docutils">
     &amp;= \sqrt{ \frac{25}{169} + \frac{144}{169} + 0} = \sqrt{1} = 1 \qquad \checkmark
 \end{align*} \end{split}\]</div>
 </div>
-</details><p>(iii)   <span class="math notranslate nohighlight">\(\vec{w} = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}\)</span></p>
+</details><p>(iii)   <span class="math notranslate nohighlight">\(\vec{w} = (1, 0, 1)\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
