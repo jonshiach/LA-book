@@ -385,7 +385,7 @@ document.write(`
 
 <p class="admonition-title">Solution to<a class="reference internal" href="6.5_Linear_transforation_exercises.html#transformations-ex-linear-transformations"> Exercise 6.1</a></p>
 <section id="solution-content">
-<p>(a) Let <span class="math notranslate nohighlight">\(\vec{u} = (u_1, u_2)^\mathsf{T}, \vec{v} = (v_1, v_2)^\mathsf{T} \in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span></p>
+<p>(a) Let <span class="math notranslate nohighlight">\(\vec{u} = (u_1, u_2), \vec{v} = (v_1, v_2) \in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     T(\vec{u} + \alpha \vec{v}) 
@@ -402,7 +402,7 @@ document.write(`
     T\left( \begin{pmatrix} 1 \\ 0 \end{pmatrix} + \begin{pmatrix} 1 \\ 1 \end{pmatrix} \right) = \begin{pmatrix} 2 \\ 5 \end{pmatrix}, \\
     T\begin{pmatrix} 1 \\ 0 \end{pmatrix} + T\begin{pmatrix} 1 \\ 1 \end{pmatrix} = \begin{pmatrix} 2 \\ 10 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>(c) Let <span class="math notranslate nohighlight">\(\vec{u} = (u_1, u_2)^\mathsf{T}, \vec{v} = (v_1, v_2)^\mathsf{T} \in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span></p>
+<p>(c) Let <span class="math notranslate nohighlight">\(\vec{u} = (u_1, u_2), \vec{v} = (v_1, v_2) \in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     T(\vec{u} + \alpha \vec{v})
@@ -413,7 +413,7 @@ document.write(`
     = \begin{pmatrix} u_1 + \alpha v_1 \\ u_1 + \alpha v_1 - u_2 - \alpha v_2\end{pmatrix},
 \end{align*} \end{split}\]</div>
 <p>therefore <span class="math notranslate nohighlight">\(T\)</span> is a linear transformation.</p>
-<p>(d) Let <span class="math notranslate nohighlight">\(\vec{u} = (u_1, u_2, v_3)^\mathsf{T},\vec{v} = (v_1, v_2, v_3)^\mathsf{T}\in \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span></p>
+<p>(d) Let <span class="math notranslate nohighlight">\(\vec{u} = (u_1, u_2, v_3),\vec{v} = (v_1, v_2, v_3)\in \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     T(\vec{u} + \alpha \vec{v}) 
@@ -459,14 +459,13 @@ document.write(`
 <p>The transformation matrix is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} A = \begin{pmatrix} -1 &amp; 3 \\ 1 &amp; -4 \end{pmatrix} \end{split}\]</div>
-<p>Calculating <span class="math notranslate nohighlight">\(T \begin{pmatrix} 2 \\ 5 \end{pmatrix}\)</span></p>
+<p>Calculating <span class="math notranslate nohighlight">\(T (2, 5)\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} T 
 \begin{pmatrix} 2 \\ 5 \end{pmatrix} = 
 \begin{pmatrix} -1 &amp; 3 \\ 1 &amp; -4 \end{pmatrix} 
 \begin{pmatrix} 2 \\ 5 \end{pmatrix}
-= \begin{pmatrix} 13 \\ -18 \end{pmatrix}, \end{split}\]</div>
-<p>therefore <span class="math notranslate nohighlight">\(T\begin{pmatrix} 2 \\ 5 \end{pmatrix} = \begin{pmatrix} 13 \\  -18 \end{pmatrix}\)</span>.</p>
+= \begin{pmatrix} 13 \\ -18 \end{pmatrix}. \end{split}\]</div>
 </section>
 </div>
 <div class="solution admonition" id="_pages/A6_Linear_transformations_exercises_solutions-solution-2">
@@ -622,7 +621,7 @@ Re\!f \left(\pi/3\right)
     1 &amp; 1 &amp; 3 &amp; 3 \\
     1 &amp; 1 &amp; 1 &amp; 1 
 \end{pmatrix} \)</span></p>
-<p>(b) Translate by <span class="math notranslate nohighlight">\((-3, -2)^\mathsf{T}\)</span> so that the centre of the square is at the origin:</p>
+<p>(b) Translate by <span class="math notranslate nohighlight">\((-3, -2)\)</span> so that the centre of the square is at the origin:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*} 
     T \begin{pmatrix} -3 \\ -2 \end{pmatrix} = 
@@ -652,7 +651,7 @@ Re\!f \left(\pi/3\right)
         0 &amp; 0 &amp; 1
     \end{pmatrix}
 \end{align*} \end{split}\]</div>
-<p>Translate by <span class="math notranslate nohighlight">\((3, 2)^\mathsf{T}\)</span> so that the centre of the square is back to <span class="math notranslate nohighlight">\(\vec{c}\)</span></p>
+<p>Translate by <span class="math notranslate nohighlight">\((3, 2)\)</span> so that the centre of the square is back to <span class="math notranslate nohighlight">\(\vec{c}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     T \begin{pmatrix} 3 \\ 2 \end{pmatrix} &amp;= 
