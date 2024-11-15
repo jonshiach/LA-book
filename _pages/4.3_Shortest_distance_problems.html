@@ -419,7 +419,8 @@ document.write(`
     \vec{d} \cdot (\vec{r} - \vec{q}) &amp;= 0 \\
     \vec{d} \cdot (\vec{p} + t \vec{d} - \vec{q}) &amp;= 0 \\
     \vec{d} \cdot \vec{p} + t \vec{d} \cdot \vec{d} - \vec{d} \cdot \vec{q} &amp;= 0 \\
-    \therefore t &amp;= \frac{\vec{d} \cdot \vec{q} - \vec{d} \cdot \vec{p}}{\vec{d} \cdot \vec{d}}.
+    t \vec{d} \cdot \vec{d} &amp;= (\vec{q} - \vec{p}) \cdot \vec{d} \\
+    \therefore t &amp;= \frac{(\vec{q} - \vec{p}) \cdot \vec{d}}{\vec{d} \cdot \vec{d}}.
 \end{align*} \end{split}\]</div>
 <p>This gives the value of the parameter <span class="math notranslate nohighlight">\(t\)</span> that can be used to calculate the position vector <span class="math notranslate nohighlight">\(\vec{r}\)</span> and therefore the shortest distance between the point <span class="math notranslate nohighlight">\(\vec{q}\)</span> and the line is <span class="math notranslate nohighlight">\(\|\vec{q} - \vec{r}\|\)</span><a class="footnote-reference brackets" href="#id4" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
 <div class="proof theorem admonition" id="point-line-distance-theorem">
@@ -427,7 +428,7 @@ document.write(`
 <section class="theorem-content" id="proof-content">
 <p>The shortest distance between the point with position vector <span class="math notranslate nohighlight">\(\vec{q}\)</span> and a line that passes through the point with position vector <span class="math notranslate nohighlight">\(\vec{p}\)</span> in the direction <span class="math notranslate nohighlight">\(\vec{d}\)</span> is <span class="math notranslate nohighlight">\(\|\vec{q} - \vec{r}\|\)</span> where <span class="math notranslate nohighlight">\(\vec{r} = \vec{p} + t \vec{d}\)</span> and</p>
 <div class="math notranslate nohighlight" id="equation-point-line-t-equation">
-<span class="eqno">(4.3)<a class="headerlink" href="#equation-point-line-t-equation" title="Permalink to this equation">#</a></span>\[ t = \frac{\vec{d} \cdot \vec{q} - \vec{d} \cdot \vec{p}}{\vec{d} \cdot \vec{d}}. \]</div>
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-point-line-t-equation" title="Permalink to this equation">#</a></span>\[ t = \frac{(\vec{q} - \vec{p}) \cdot \vec{d}}{\vec{d} \cdot \vec{d}}. \]</div>
 </section>
 </div><iframe width="560" height="315" src="https://www.youtube.com/embed/4cj0TIBLM4M?si=5cknsM4ka4Xe1YHg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <div class="proof example admonition" id="point-line-distance-example">

@@ -403,7 +403,7 @@ document.write(`
 
 <p class="admonition-title">Solution to<a class="reference internal" href="5.5_Vector_spaces_exercises.html#vector-spaces-ex-R3-subspaces"> Exercise 5.2</a></p>
 <section id="solution-content">
-<p>(a)   <span class="math notranslate nohighlight">\(U\)</span> is non-empty since <span class="math notranslate nohighlight">\(\vec{0} \in U\)</span>. Let <span class="math notranslate nohighlight">\(\vec{u} = (u_1, u_2, 0)^\mathsf{T}, \vec{v} = (v_1, v_2, 0)^\mathsf{T} \in U\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
+<p>(a)   <span class="math notranslate nohighlight">\(U\)</span> is non-empty since <span class="math notranslate nohighlight">\(\vec{0} \in U\)</span>. Let <span class="math notranslate nohighlight">\(\vec{u} = (u_1, u_2, 0), \vec{v} = (v_1, v_2, 0) \in U\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \vec{u} + \alpha \vec{v} = 
     \begin{pmatrix} u_1 \\ u_2 \\ 0 \end{pmatrix} + \alpha 
@@ -414,15 +414,15 @@ document.write(`
         0 
     \end{pmatrix} \in U, \end{split}\]</div>
 <p>therefore <span class="math notranslate nohighlight">\(U\)</span> is a subspace.</p>
-<p>(b)   <span class="math notranslate nohighlight">\(V\)</span> is non-empty since <span class="math notranslate nohighlight">\((1,2,0)^\mathsf{T} \in V\)</span>. However <span class="math notranslate nohighlight">\(\alpha (1, 2, 0)^\mathsf{T} = (\alpha , 2\alpha , 0)^\mathsf{T} \notin V\)</span> for <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> so <span class="math notranslate nohighlight">\(V\)</span> is not a subspace.</p>
-<p>(c)   <span class="math notranslate nohighlight">\(W\)</span> is non-empty since <span class="math notranslate nohighlight">\(\vec{0} \in W\)</span>. Let <span class="math notranslate nohighlight">\(\vec{u} = (0, u_2, 0)^\mathsf{T}, \vec{v} = (0, v_2, 0)^\mathsf{T} \in U\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
+<p>(b)   <span class="math notranslate nohighlight">\(V\)</span> is non-empty since <span class="math notranslate nohighlight">\((1,2,0) \in V\)</span>. However <span class="math notranslate nohighlight">\(\alpha (1, 2, 0) = (\alpha , 2\alpha , 0) \notin V\)</span> for <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> so <span class="math notranslate nohighlight">\(V\)</span> is not a subspace.</p>
+<p>(c)   <span class="math notranslate nohighlight">\(W\)</span> is non-empty since <span class="math notranslate nohighlight">\(\vec{0} \in W\)</span>. Let <span class="math notranslate nohighlight">\(\vec{u} = (0, u_2, 0), \vec{v} = (0, v_2, 0) \in U\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \vec{u} + \alpha \vec{v} = 
     \begin{pmatrix} 0 \\ u_2 \\ 0 \end{pmatrix} + \alpha 
     \begin{pmatrix} 0 \\ v_2 \\ 0 \end{pmatrix} = 
     \begin{pmatrix} 0 \\ u_2 + \alpha v_2 \\ 0 \end{pmatrix} \in W, \end{split}\]</div>
 <p>therefore <span class="math notranslate nohighlight">\(W\)</span> is a subspace. Note that <span class="math notranslate nohighlight">\(W \subseteq U\)</span> so since we showed <span class="math notranslate nohighlight">\(U\)</span> is a subspace then <span class="math notranslate nohighlight">\(W\)</span> must also be a subspace.</p>
-<p>(d)   <span class="math notranslate nohighlight">\(X\)</span> is not a subspace since if <span class="math notranslate nohighlight">\(\vec{u} = (1, 1, 0)^\mathsf{T}, \vec{v} = (-1, 1, 0)^\mathsf{T} \in X\)</span> then <span class="math notranslate nohighlight">\(\vec{u} + \vec{v} = (0, 2, 0)^\mathsf{T} \notin X\)</span>.</p>
+<p>(d)   <span class="math notranslate nohighlight">\(X\)</span> is not a subspace since if <span class="math notranslate nohighlight">\(\vec{u} = (1, 1, 0), \vec{v} = (-1, 1, 0) \in X\)</span> then <span class="math notranslate nohighlight">\(\vec{u} + \vec{v} = (0, 2, 0) \notin X\)</span>.</p>
 </section>
 </div>
 <div class="solution admonition" id="_pages/A5_Vector_spaces_exercises_solutions-solution-2">
@@ -501,13 +501,13 @@ document.write(`
     8 - 14 = -6, \\
     \operatorname{adj}
     \begin{pmatrix} 1 &amp; 0 &amp; -1 \\ 2 &amp; 5 &amp; 1 \\ 0 &amp; 7 &amp; 3 \end{pmatrix} &amp;=
-    \begin{pmatrix} 8 &amp; -6 &amp; 14 \\ -7 &amp; 3 &amp; -7 \\ 5 &amp; -3 &amp; 5 \end{pmatrix}^\mathsf{T} =
+    \begin{pmatrix} 8 &amp; -6 &amp; 14 \\ -7 &amp; 3 &amp; -7 \\ 5 &amp; -3 &amp; 5 \end{pmatrix} =
     \begin{pmatrix} 8 &amp; -7 &amp; 5 \\ -6 &amp; 3 &amp; -3 \\ 14 &amp; -7 &amp; 5 \end{pmatrix}, \\
     \therefore
     \begin{pmatrix} 1 &amp; 0 &amp; -1 \\ 2 &amp; 5 &amp; 1 \\ 0 &amp; 7 &amp; 3 \end{pmatrix}^{-1} &amp;=
     \frac{1}{6} \begin{pmatrix} -8 &amp; 7 &amp; -5 \\ 6 &amp; -3 &amp; 3 \\ -14 &amp; 7 &amp; -5 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>Let <span class="math notranslate nohighlight">\(U = \left\{ \begin{pmatrix} 1 \\ 2 \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ 5 \\ 7 \end{pmatrix}, \begin{pmatrix} -1 \\ 1 \\ 3 \end{pmatrix} \right\}\)</span> then</p>
+<p>Let <span class="math notranslate nohighlight">\(U = \{(1, 2, 0), (0, 5, 7), (-1, 1, 3)\}\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \left[ \begin{pmatrix} 0 \\ 13 \\ 17 \end{pmatrix} \right]_U &amp;= 
@@ -525,7 +525,7 @@ document.write(`
 
 <p class="admonition-title">Solution to<a class="reference internal" href="5.5_Vector_spaces_exercises.html#vector-spaces-ex-R4-basis"> Exercise 5.5</a></p>
 <section id="solution-content">
-<p>We need to find two vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span> that are linearly independent to <span class="math notranslate nohighlight">\((1, 1, 2, 4)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\((2, -1, -5, 2)^\mathsf{T}\)</span> and one another. Let’s choose <span class="math notranslate nohighlight">\((1, 0, 0, 0)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\((0, 1, 0, 0)^\mathsf{T}\)</span>  and check for linear dependence</p>
+<p>We need to find two vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span> that are linearly independent to <span class="math notranslate nohighlight">\((1, 1, 2, 4)\)</span> and <span class="math notranslate nohighlight">\((2, -1, -5, 2)\)</span> and one another. Let’s choose <span class="math notranslate nohighlight">\((1, 0, 0, 0)\)</span> and <span class="math notranslate nohighlight">\((0, 1, 0, 0)\)</span>  and check for linear dependence</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     &amp; \left( \begin{array}{cccc|c}
@@ -567,7 +567,7 @@ document.write(`
         0 &amp; 0 &amp; 0 &amp; 1 &amp; 0
     \end{array} \right)
 \end{align*} \end{split}\]</div>
-<p>Therefore <span class="math notranslate nohighlight">\(\left\{ \begin{pmatrix} 1 \\ 1 \\ 2 \\ 4 \end{pmatrix}, \begin{pmatrix} 2 \\ -1 \\ -5 \\ 2 \end{pmatrix} \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ 1 \\ 0 \\ 0 \end{pmatrix} \right\}\)</span> is a basis for <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span>. Note that we could have used any two vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span> that form a linearly independent set of vectors.</p>
+<p>Therefore <span class="math notranslate nohighlight">\(\{(1, 1, 2, 4), (2, -1, -5, 2), \vec{e}_1, \vec{e}_2 \}\)</span> is a basis for <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span>. Note that we could have used any two vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span> that form a linearly independent set of vectors.</p>
 </section>
 </div>
 <div class="solution admonition" id="_pages/A5_Vector_spaces_exercises_solutions-solution-5">

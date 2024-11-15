@@ -21,7 +21,7 @@ All of the axioms of vector spaces hold for $\mathbb{R}^3$.
 ```{solution} vector-spaces-ex-R3-subspaces
 
 
-(a) &emsp; $U$ is non-empty since $\vec{0} \in U$. Let $\vec{u} = (u_1, u_2, 0)^\mathsf{T}, \vec{v} = (v_1, v_2, 0)^\mathsf{T} \in U$ and $\alpha \in \mathbb{R}$ then
+(a) &emsp; $U$ is non-empty since $\vec{0} \in U$. Let $\vec{u} = (u_1, u_2, 0), \vec{v} = (v_1, v_2, 0) \in U$ and $\alpha \in \mathbb{R}$ then
 
 $$ \vec{u} + \alpha \vec{v} = 
     \begin{pmatrix} u_1 \\ u_2 \\ 0 \end{pmatrix} + \alpha 
@@ -33,9 +33,9 @@ $$ \vec{u} + \alpha \vec{v} =
     \end{pmatrix} \in U, $$
 therefore $U$ is a subspace.
 
-(b) &emsp; $V$ is non-empty since $(1,2,0)^\mathsf{T} \in V$. However $\alpha (1, 2, 0)^\mathsf{T} = (\alpha , 2\alpha , 0)^\mathsf{T} \notin V$ for $\alpha \in \mathbb{R}$ so $V$ is not a subspace.
+(b) &emsp; $V$ is non-empty since $(1,2,0) \in V$. However $\alpha (1, 2, 0) = (\alpha , 2\alpha , 0) \notin V$ for $\alpha \in \mathbb{R}$ so $V$ is not a subspace.
 
-(c) &emsp; $W$ is non-empty since $\vec{0} \in W$. Let $\vec{u} = (0, u_2, 0)^\mathsf{T}, \vec{v} = (0, v_2, 0)^\mathsf{T} \in U$ and $\alpha \in \mathbb{R}$ then
+(c) &emsp; $W$ is non-empty since $\vec{0} \in W$. Let $\vec{u} = (0, u_2, 0), \vec{v} = (0, v_2, 0) \in U$ and $\alpha \in \mathbb{R}$ then
 
 $$ \vec{u} + \alpha \vec{v} = 
     \begin{pmatrix} 0 \\ u_2 \\ 0 \end{pmatrix} + \alpha 
@@ -44,7 +44,7 @@ $$ \vec{u} + \alpha \vec{v} =
 
 therefore $W$ is a subspace. Note that $W \subseteq U$ so since we showed $U$ is a subspace then $W$ must also be a subspace.
 
-(d) &emsp; $X$ is not a subspace since if $\vec{u} = (1, 1, 0)^\mathsf{T}, \vec{v} = (-1, 1, 0)^\mathsf{T} \in X$ then $\vec{u} + \vec{v} = (0, 2, 0)^\mathsf{T} \notin X$.
+(d) &emsp; $X$ is not a subspace since if $\vec{u} = (1, 1, 0), \vec{v} = (-1, 1, 0) \in X$ then $\vec{u} + \vec{v} = (0, 2, 0) \notin X$.
 ```
 ```{solution} vector-spaces-ex-M2-subspaces
 
@@ -124,14 +124,14 @@ $$ \begin{align*}
     8 - 14 = -6, \\
     \operatorname{adj}
     \begin{pmatrix} 1 & 0 & -1 \\ 2 & 5 & 1 \\ 0 & 7 & 3 \end{pmatrix} &=
-    \begin{pmatrix} 8 & -6 & 14 \\ -7 & 3 & -7 \\ 5 & -3 & 5 \end{pmatrix}^\mathsf{T} =
+    \begin{pmatrix} 8 & -6 & 14 \\ -7 & 3 & -7 \\ 5 & -3 & 5 \end{pmatrix} =
     \begin{pmatrix} 8 & -7 & 5 \\ -6 & 3 & -3 \\ 14 & -7 & 5 \end{pmatrix}, \\
     \therefore
     \begin{pmatrix} 1 & 0 & -1 \\ 2 & 5 & 1 \\ 0 & 7 & 3 \end{pmatrix}^{-1} &=
     \frac{1}{6} \begin{pmatrix} -8 & 7 & -5 \\ 6 & -3 & 3 \\ -14 & 7 & -5 \end{pmatrix}.
 \end{align*} $$
 
-Let $U = \left\{ \begin{pmatrix} 1 \\ 2 \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ 5 \\ 7 \end{pmatrix}, \begin{pmatrix} -1 \\ 1 \\ 3 \end{pmatrix} \right\}$ then
+Let $U = \{(1, 2, 0), (0, 5, 7), (-1, 1, 3)\}$ then
 
 $$ \begin{align*}
     \left[ \begin{pmatrix} 0 \\ 13 \\ 17 \end{pmatrix} \right]_U &= 
@@ -147,7 +147,7 @@ $$ \begin{align*}
 ```{solution} vector-spaces-ex-R4-basis
 
 
-We need to find two vectors in $\mathbb{R}^4$ that are linearly independent to $(1, 1, 2, 4)^\mathsf{T}$ and $(2, -1, -5, 2)^\mathsf{T}$ and one another. Let's choose $(1, 0, 0, 0)^\mathsf{T}$ and $(0, 1, 0, 0)^\mathsf{T}$  and check for linear dependence
+We need to find two vectors in $\mathbb{R}^4$ that are linearly independent to $(1, 1, 2, 4)$ and $(2, -1, -5, 2)$ and one another. Let's choose $(1, 0, 0, 0)$ and $(0, 1, 0, 0)$  and check for linear dependence
 
 $$ \begin{align*}
     & \left( \begin{array}{cccc|c}
@@ -190,7 +190,7 @@ $$ \begin{align*}
     \end{array} \right)
 \end{align*} $$
 
-Therefore $\left\{ \begin{pmatrix} 1 \\ 1 \\ 2 \\ 4 \end{pmatrix}, \begin{pmatrix} 2 \\ -1 \\ -5 \\ 2 \end{pmatrix} \begin{pmatrix} 1 \\ 0 \\ 0 \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ 1 \\ 0 \\ 0 \end{pmatrix} \right\}$ is a basis for $\mathbb{R}^4$. Note that we could have used any two vectors in $\mathbb{R}^4$ that form a linearly independent set of vectors.
+Therefore $\{(1, 1, 2, 4), (2, -1, -5, 2), \vec{e}_1, \vec{e}_2 \}$ is a basis for $\mathbb{R}^4$. Note that we could have used any two vectors in $\mathbb{R}^4$ that form a linearly independent set of vectors.
 ```
 ```{solution} vector-spaces-ex-R4-basis-2
 
