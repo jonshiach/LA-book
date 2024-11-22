@@ -416,13 +416,13 @@ document.write(`
 <p><span class="caption-number">Fig. 6.2 </span><span class="caption-text">Rotation of the vector <span class="math notranslate nohighlight">\(\vec{u}\)</span> anti-clockwise about the origin.</span><a class="headerlink" href="#rotation-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Consider the diagram in <a class="reference internal" href="#rotation-figure"><span class="std std-numref">Fig. 6.2</span></a>. Here we have the vector <span class="math notranslate nohighlight">\(\vec{u}\)</span> which is rotated by angle <span class="math notranslate nohighlight">\(\theta\)</span> anti-clockwise about the origin to give the vector <span class="math notranslate nohighlight">\(\vec{v}\)</span>. To determine the linear mapping <span class="math notranslate nohighlight">\(Rot(\theta): \vec{u} \mapsto \vec{v}\)</span> we first consider the rotation from the vector <span class="math notranslate nohighlight">\(\vec{e}_1|\vec{u}|\)</span>, which points along the <span class="math notranslate nohighlight">\(x\)</span>-axis and has the same magnitude as <span class="math notranslate nohighlight">\(\vec{u}\)</span>, by angle <span class="math notranslate nohighlight">\(\phi\)</span> anti-clockwise about the original to <span class="math notranslate nohighlight">\(\vec{u}=(u_x, u_y)^\mathsf{T}\)</span>. Forming a right-angled triangle (the blue triangle) with the angle <span class="math notranslate nohighlight">\(\phi\)</span> and hypotenuse of length <span class="math notranslate nohighlight">\(|\vec{u}|\)</span> then</p>
+<p>Consider the diagram in <a class="reference internal" href="#rotation-figure"><span class="std std-numref">Fig. 6.2</span></a>. Here we have the vector <span class="math notranslate nohighlight">\(\vec{u}\)</span> which is rotated by angle <span class="math notranslate nohighlight">\(\theta\)</span> anti-clockwise about the origin to give the vector <span class="math notranslate nohighlight">\(\vec{v}\)</span>. To determine the linear mapping <span class="math notranslate nohighlight">\(Rot(\theta): \vec{u} \mapsto \vec{v}\)</span> we first consider the rotation from the vector <span class="math notranslate nohighlight">\(\vec{e}_1|\vec{u}|\)</span>, which points along the <span class="math notranslate nohighlight">\(x\)</span>-axis and has the same magnitude as <span class="math notranslate nohighlight">\(\vec{u}\)</span>, by angle <span class="math notranslate nohighlight">\(\phi\)</span> anti-clockwise about the original to <span class="math notranslate nohighlight">\(\vec{u}=(u_x, u_y)\)</span>. Forming a right-angled triangle (the blue triangle) with the angle <span class="math notranslate nohighlight">\(\phi\)</span> and hypotenuse of length <span class="math notranslate nohighlight">\(|\vec{u}|\)</span> then</p>
 <div class="math notranslate nohighlight" id="equation-rotation-equation-1">
 <span class="eqno">(6.6)<a class="headerlink" href="#equation-rotation-equation-1" title="Permalink to this equation">#</a></span>\[\begin{split} \begin{align*}
     \cos(\phi) &amp;= \frac{u_x}{|\vec{u}|} &amp; \therefore u_x &amp;= |\vec{u}| \cos(\phi), \\
     \sin(\phi) &amp;= \frac{u_y}{|\vec{u}|} &amp; \therefore u_y &amp;= |\vec{u}| \sin(\phi).
 \end{align*} \end{split}\]</div>
-<p>Doing similar for <span class="math notranslate nohighlight">\(\vec{v} = (v_x, v_y)^\mathsf{T}\)</span> (the red triangle) we have</p>
+<p>Doing similar for <span class="math notranslate nohighlight">\(\vec{v} = (v_x, v_y)\)</span> (the red triangle) we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     v_x &amp;= |\vec{u}| \cos(\phi + \theta), \\
@@ -458,7 +458,7 @@ document.write(`
 <div class="proof theorem admonition" id="rotation-in-R2-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 6.3 </span> (Rotation in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>)</p>
 <section class="theorem-content" id="proof-content">
-<p>The rotation of a vector <span class="math notranslate nohighlight">\(\vec{u} = (u_x, u_y)^\mathsf{T} \in \mathbb{R}^2\)</span> <strong>anti-clockwise</strong> by an angle <span class="math notranslate nohighlight">\(\theta\)</span> is the linear transformation <span class="math notranslate nohighlight">\(Rot(\theta): \mathbb{R}^2 \to \mathbb{R}^2\)</span> defined by</p>
+<p>The rotation of a vector <span class="math notranslate nohighlight">\(\vec{u} = (u_x, u_y) \in \mathbb{R}^2\)</span> <strong>anti-clockwise</strong> by an angle <span class="math notranslate nohighlight">\(\theta\)</span> is the linear transformation <span class="math notranslate nohighlight">\(Rot(\theta): \mathbb{R}^2 \to \mathbb{R}^2\)</span> defined by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} Rot(\theta) : 
     \begin{pmatrix} u_x \\ u_y \end{pmatrix} \mapsto 
@@ -498,7 +498,7 @@ document.write(`
 <div class="proof example admonition" id="rotation-example">
 <p class="admonition-title"><span class="caption-number">Example 6.7 </span></p>
 <section class="example-content" id="proof-content">
-<p>Rotate the vector <span class="math notranslate nohighlight">\(\vec{u} = (2, 1)^\mathsf{T}\)</span> by angle <span class="math notranslate nohighlight">\(\theta = \frac{\pi}{2}\)</span> anti-clockwise about the origin.</p>
+<p>Rotate the vector <span class="math notranslate nohighlight">\(\vec{u} = (2, 1)\)</span> by angle <span class="math notranslate nohighlight">\(\theta = \frac{\pi}{2}\)</span> anti-clockwise about the origin.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -517,7 +517,7 @@ Solution<div class="sd-summary-down docutils">
         0 &amp; -1 \\
         1 &amp; 0
     \end{pmatrix}. \end{split}\]</div>
-<p class="sd-card-text">Applying the transformation to <span class="math notranslate nohighlight">\(\vec{u} = (2, 1)^\mathsf{T}\)</span></p>
+<p class="sd-card-text">Applying the transformation to <span class="math notranslate nohighlight">\(\vec{u} = (2, 1)\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} Rot\left( \frac{\pi}{2} \right) \cdot \vec{u} = 
     \begin{pmatrix}
@@ -547,7 +547,7 @@ Solution<div class="sd-summary-down docutils">
 <p><span class="caption-number">Fig. 6.3 </span><span class="caption-text">The reflection of the vector <span class="math notranslate nohighlight">\(\vec{u}\)</span> about a line that passes through the origin.</span><a class="headerlink" href="#reflection-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The simplest reflection we can perform is to reflect a vector <span class="math notranslate nohighlight">\(\vec{u} =(u_x, u_y)^\mathsf{T}\)</span> about the <span class="math notranslate nohighlight">\(x\)</span>-axis or <span class="math notranslate nohighlight">\(y\)</span>-axis (<a class="reference internal" href="#reflection-about-x-figure"><span class="std std-numref">Fig. 6.4</span></a>).</p>
+<p>The simplest reflection we can perform is to reflect a vector <span class="math notranslate nohighlight">\(\vec{u} =(u_x, u_y)\)</span> about the <span class="math notranslate nohighlight">\(x\)</span>-axis or <span class="math notranslate nohighlight">\(y\)</span>-axis (<a class="reference internal" href="#reflection-about-x-figure"><span class="std std-numref">Fig. 6.4</span></a>).</p>
 <figure class="align-default" id="reflection-about-x-figure">
 <a class="reference internal image-reference" href="../_images/6_reflection_about_x.svg"><img alt="../_images/6_reflection_about_x.svg" src="../_images/6_reflection_about_x.svg" width="300" /></a>
 <figcaption>
@@ -614,7 +614,7 @@ Solution<div class="sd-summary-down docutils">
 <div class="proof theorem admonition" id="reflection-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 6.4 </span> (Reflection in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>)</p>
 <section class="theorem-content" id="proof-content">
-<p>The reflection of a vector <span class="math notranslate nohighlight">\(\vec{u} = (u_x, u_y)^\mathsf{T} \in \mathbb{R}^2\)</span> about a line which passes through the origin and makes an angle <span class="math notranslate nohighlight">\(\theta\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis (i.e., <span class="math notranslate nohighlight">\(y = \tan(\theta)x\)</span>) is the linear transformation <span class="math notranslate nohighlight">\(Re\!f(\theta) : \mathbb{R}^2 \to \mathbb{R}^2\)</span> defined by</p>
+<p>The reflection of a vector <span class="math notranslate nohighlight">\(\vec{u} = (u_x, u_y) \in \mathbb{R}^2\)</span> about a line which passes through the origin and makes an angle <span class="math notranslate nohighlight">\(\theta\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis (i.e., <span class="math notranslate nohighlight">\(y = \tan(\theta)x\)</span>) is the linear transformation <span class="math notranslate nohighlight">\(Re\!f(\theta) : \mathbb{R}^2 \to \mathbb{R}^2\)</span> defined by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     Re\!f(\theta) :
@@ -637,7 +637,7 @@ Solution<div class="sd-summary-down docutils">
 <div class="proof example admonition" id="reflection-example">
 <p class="admonition-title"><span class="caption-number">Example 6.8 </span></p>
 <section class="example-content" id="proof-content">
-<p>Reflect the vector <span class="math notranslate nohighlight">\(\vec{u} = (3, -1)^\mathsf{T}\)</span> about the line that passes through the origin and has gradient of 1.</p>
+<p>Reflect the vector <span class="math notranslate nohighlight">\(\vec{u} = (3, -1)\)</span> about the line that passes through the origin and has gradient of 1.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
@@ -684,7 +684,7 @@ Solution<div class="sd-summary-down docutils">
 <p><span class="caption-number">Fig. 6.8 </span><span class="caption-text">The scaling of the vector <span class="math notranslate nohighlight">\(\vec{u}\)</span> by the scaling vector <span class="math notranslate nohighlight">\(\vec{s}\)</span>.</span><a class="headerlink" href="#scaling-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The scaling of a vector <span class="math notranslate nohighlight">\(\vec{u} = (u_1, u_2, \ldots, u_n)^\mathsf{T} \in \mathbb{R}^n\)</span> by a scaling vector <span class="math notranslate nohighlight">\(\vec{s} = (s_1, s_2, \ldots, s_n)^\mathsf{T}\)</span> is achieved by multiplying the corresponding elements in <span class="math notranslate nohighlight">\(\vec{u}\)</span> and <span class="math notranslate nohighlight">\(\vec{s}\)</span>.</p>
+<p>The scaling of a vector <span class="math notranslate nohighlight">\(\vec{u} = (u_1, u_2, \ldots, u_n) \in \mathbb{R}^n\)</span> by a scaling vector <span class="math notranslate nohighlight">\(\vec{s} = (s_1, s_2, \ldots, s_n)\)</span> is achieved by multiplying the corresponding elements in <span class="math notranslate nohighlight">\(\vec{u}\)</span> and <span class="math notranslate nohighlight">\(\vec{s}\)</span>.</p>
 <div class="proof theorem admonition" id="scaling-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 6.5 </span> (Scaling transformation)</p>
 <section class="theorem-content" id="proof-content">
@@ -722,7 +722,7 @@ Solution<div class="sd-summary-down docutils">
 <div class="proof example admonition" id="scaling-example">
 <p class="admonition-title"><span class="caption-number">Example 6.9 </span></p>
 <section class="example-content" id="proof-content">
-<p>Scale the point with position vector <span class="math notranslate nohighlight">\(\vec{u} = (2, 1)^\mathsf{T}\)</span> by scaling scaling vector <span class="math notranslate nohighlight">\(\vec{s} = (2, 3)^\mathsf{T}\)</span>.</p>
+<p>Scale the point with position vector <span class="math notranslate nohighlight">\(\vec{u} = (2, 1)\)</span> by scaling scaling vector <span class="math notranslate nohighlight">\(\vec{s} = (2, 3)\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
