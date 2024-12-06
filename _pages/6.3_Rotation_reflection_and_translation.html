@@ -416,17 +416,17 @@ document.write(`
 <p><span class="caption-number">Fig. 6.2 </span><span class="caption-text">Rotation of the vector <span class="math notranslate nohighlight">\(\vec{u}\)</span> anti-clockwise about the origin.</span><a class="headerlink" href="#rotation-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Consider the diagram in <a class="reference internal" href="#rotation-figure"><span class="std std-numref">Fig. 6.2</span></a>. Here we have the vector <span class="math notranslate nohighlight">\(\vec{u}\)</span> which is rotated by angle <span class="math notranslate nohighlight">\(\theta\)</span> anti-clockwise about the origin to give the vector <span class="math notranslate nohighlight">\(\vec{v}\)</span>. To determine the linear mapping <span class="math notranslate nohighlight">\(Rot(\theta): \vec{u} \mapsto \vec{v}\)</span> we first consider the rotation from the vector <span class="math notranslate nohighlight">\(\vec{e}_1|\vec{u}|\)</span>, which points along the <span class="math notranslate nohighlight">\(x\)</span>-axis and has the same magnitude as <span class="math notranslate nohighlight">\(\vec{u}\)</span>, by angle <span class="math notranslate nohighlight">\(\phi\)</span> anti-clockwise about the original to <span class="math notranslate nohighlight">\(\vec{u}=(u_x, u_y)\)</span>. Forming a right-angled triangle (the blue triangle) with the angle <span class="math notranslate nohighlight">\(\phi\)</span> and hypotenuse of length <span class="math notranslate nohighlight">\(|\vec{u}|\)</span> then</p>
+<p>Consider the diagram in <a class="reference internal" href="#rotation-figure"><span class="std std-numref">Fig. 6.2</span></a>. Here we have the vector <span class="math notranslate nohighlight">\(\vec{u}\)</span> which is rotated by angle <span class="math notranslate nohighlight">\(\theta\)</span> anti-clockwise about the origin to give the vector <span class="math notranslate nohighlight">\(\vec{v}\)</span>. To determine the linear mapping <span class="math notranslate nohighlight">\(Rot(\theta): \vec{u} \mapsto \vec{v}\)</span> we first consider the rotation from the vector <span class="math notranslate nohighlight">\(\vec{e}_1\|\vec{u}\|\)</span>, which points along the <span class="math notranslate nohighlight">\(x\)</span>-axis and has the same magnitude as <span class="math notranslate nohighlight">\(\vec{u}\)</span>, by angle <span class="math notranslate nohighlight">\(\phi\)</span> anti-clockwise about the original to <span class="math notranslate nohighlight">\(\vec{u}=(u_x, u_y)\)</span>. Forming a right-angled triangle (the blue triangle) with the angle <span class="math notranslate nohighlight">\(\phi\)</span> and hypotenuse of length <span class="math notranslate nohighlight">\(\|\vec{u}\|\)</span> then</p>
 <div class="math notranslate nohighlight" id="equation-rotation-equation-1">
 <span class="eqno">(6.6)<a class="headerlink" href="#equation-rotation-equation-1" title="Permalink to this equation">#</a></span>\[\begin{split} \begin{align*}
-    \cos(\phi) &amp;= \frac{u_x}{|\vec{u}|} &amp; \therefore u_x &amp;= |\vec{u}| \cos(\phi), \\
-    \sin(\phi) &amp;= \frac{u_y}{|\vec{u}|} &amp; \therefore u_y &amp;= |\vec{u}| \sin(\phi).
+    \cos(\phi) &amp;= \frac{u_x}{\|\vec{u}\|} &amp; \therefore u_x &amp;= \|\vec{u}\| \cos(\phi), \\
+    \sin(\phi) &amp;= \frac{u_y}{\|\vec{u}\|} &amp; \therefore u_y &amp;= \|\vec{u}\| \sin(\phi).
 \end{align*} \end{split}\]</div>
 <p>Doing similar for <span class="math notranslate nohighlight">\(\vec{v} = (v_x, v_y)\)</span> (the red triangle) we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    v_x &amp;= |\vec{u}| \cos(\phi + \theta), \\
-    v_y &amp;= |\vec{u}| \sin(\phi + \theta),
+    v_x &amp;= \|\vec{u}\| \cos(\phi + \theta), \\
+    v_y &amp;= \|\vec{u}\| \sin(\phi + \theta),
 \end{align*} \end{split}\]</div>
 <p>using the <a href="https://en.wikipedia.org/wiki/List_of_trigonometric_identities#Angle_sum_and_difference_identities" target="_blank">angle sum identities</a></p>
 <div class="math notranslate nohighlight">
@@ -437,8 +437,8 @@ document.write(`
 <p>then</p>
 <div class="math notranslate nohighlight" id="equation-rotation-equation-2">
 <span class="eqno">(6.7)<a class="headerlink" href="#equation-rotation-equation-2" title="Permalink to this equation">#</a></span>\[\begin{split} \begin{align*}
-    v_x &amp;= |\vec{u}| \cos(\phi) \cos(\theta) - |\vec{u}|\sin(\phi) \sin(\theta) \\
-    v_y &amp;= |\vec{u}| \sin(\phi) \cos(\theta) + |\vec{u}|\cos(\phi) \sin(\theta).
+    v_x &amp;= \|\vec{u}\| \cos(\phi) \cos(\theta) - \|\vec{u}\|\sin(\phi) \sin(\theta) \\
+    v_y &amp;= \|\vec{u}\| \sin(\phi) \cos(\theta) + \|\vec{u}\|\cos(\phi) \sin(\theta).
 \end{align*} \end{split}\]</div>
 <p>Substituting equation <a class="reference internal" href="#equation-rotation-equation-1">(6.6)</a> into equation <a class="reference internal" href="#equation-rotation-equation-2">(6.7)</a></p>
 <div class="math notranslate nohighlight">

@@ -563,7 +563,7 @@ Solution<div class="sd-summary-down docutils">
 <p class="sd-card-text">Applying the scaling matrix to the homogeneous co-ordinates</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    V &amp;= S\begin{pmatrix} 2 \\ 2 \end{pmatrix} \cdot U \\
+    U_1 &amp;= S\begin{pmatrix} 2 \\ 2 \end{pmatrix} \cdot U \\
     &amp;= \begin{pmatrix} 2 &amp; 0 &amp; 0 \\ 0 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} 
     \begin{pmatrix} -1 &amp; 1 &amp; 0 \\ -1 &amp; -1 &amp; 2 \\ 1 &amp; 1 &amp; 1 \end{pmatrix}\\
     &amp;= \begin{pmatrix} -2 &amp; 2 &amp; 0 \\ -2 &amp; -2 &amp; 4 \\ 1 &amp; 1 &amp; 1 \end{pmatrix}.
@@ -586,10 +586,10 @@ Solution<div class="sd-summary-down docutils">
         0 &amp; 0 &amp; 1
     \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Applying the rotating matrix to <span class="math notranslate nohighlight">\(W\)</span></p>
+<p class="sd-card-text">Applying the rotating matrix to <span class="math notranslate nohighlight">\(U_1\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    W &amp;= Rot\left(\frac{\pi}{4}\right) \cdot V  \\
+    U_2 &amp;= Rot\left(\frac{\pi}{4}\right) \cdot U_1  \\
     &amp;= \begin{pmatrix} 
         \sqrt{2}/2 &amp; -\sqrt{2}/2 &amp; 0 \\
         \sqrt{2}/2 &amp; \sqrt{2}/2 &amp; 0 \\
@@ -618,10 +618,10 @@ Solution<div class="sd-summary-down docutils">
     0 &amp; 1 &amp; 4 \\
     0 &amp; 0 &amp; 1
 \end{pmatrix}. \end{split}\]</div>
-<p class="sd-card-text">Applying the translation matrix to <span class="math notranslate nohighlight">\(W\)</span></p>
+<p class="sd-card-text">Applying the translation matrix to <span class="math notranslate nohighlight">\(U_2\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    X &amp;= T\begin{pmatrix} 6 \\ 4 \end{pmatrix} \cdot W \\
+    U_3 &amp;= T\begin{pmatrix} 6 \\ 4 \end{pmatrix} \cdot U_2 \\
     &amp;= \begin{pmatrix} 1 &amp; 0 &amp; 6 \\ 0 &amp; 1 &amp; 4 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
     \begin{pmatrix}
         0 &amp; 2 \sqrt{2} &amp; -2\sqrt{2} \\
@@ -656,9 +656,13 @@ Solution<div class="sd-summary-down docutils">
         \sqrt{2}/2 &amp; \sqrt{2}/2 &amp; 0 \\
         0 &amp; 0 &amp; 1
     \end{pmatrix}
-    \begin{pmatrix} 2 &amp; 0 &amp; 0 \\ 0 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} \\
+    \begin{pmatrix} 
+        2 &amp; 0 &amp; 0 \\ 
+        0 &amp; 2 &amp; 0 \\ 
+        0 &amp; 0 &amp; 1
+    \end{pmatrix} \\
     &amp;= \begin{pmatrix}
-        \sqrt{2} &amp; -\sqrt{2} &amp; 6 \\
+        \sqrt{2} &amp; - \sqrt{2} &amp; 6 \\
         \sqrt{2} &amp; \sqrt{2} &amp; 4 \\
         0 &amp; 0 &amp; 1 
     \end{pmatrix} 
@@ -669,7 +673,7 @@ Solution<div class="sd-summary-down docutils">
         0 &amp; 0 &amp; 1
     \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Checking that <span class="math notranslate nohighlight">\(A \cdot V = X\)</span>:</p>
+<p class="sd-card-text">Checking that <span class="math notranslate nohighlight">\(A \cdot U = U_3\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     A \cdot V &amp;= \begin{pmatrix} 
@@ -686,7 +690,7 @@ Solution<div class="sd-summary-down docutils">
         6 &amp; 6 + 2\sqrt{2} &amp; 6 - 2\sqrt{2} \\
         4 - 2\sqrt{2} &amp; 4 &amp; 4 + 2\sqrt{2} \\
         1 &amp; 1 &amp; 1 
-    \end{pmatrix} = X \quad \checkmark
+    \end{pmatrix} = U_3 \quad \checkmark
 \end{align*} \end{split}\]</div>
 </div>
 </details></section>
