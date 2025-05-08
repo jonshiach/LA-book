@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/2.4_Partial_pivoting';</script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
@@ -160,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="0.1_Teaching_schedule.html">Teaching schedule</a></li>
 <li class="toctree-l1"><a class="reference internal" href="0.3_Mathematical_preliminaries.html">Mathematical preliminaries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0.5_How_to_pass.html">How to pass the unit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0.5_How_to_pass.html">How to Pass the Module</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul class="current nav bd-sidenav">
@@ -441,26 +441,16 @@ document.write(`
 <div class="proof algorithm admonition" id="ge-pp-algorithm">
 <span id="index-1"></span><p class="admonition-title"><span class="caption-number">Algorithm 2.2 </span> (Gaussian elimination with partial pivoting)</p>
 <section class="algorithm-content" id="proof-content">
-<p><strong>Inputs:</strong> An <span class="math notranslate nohighlight">\(m \times n\)</span> coefficient matrix <span class="math notranslate nohighlight">\(A\)</span> and an <span class="math notranslate nohighlight">\(m\)</span>-element constant vector <span class="math notranslate nohighlight">\(\vec{b}\)</span>.</p>
+<p><strong>Inputs:</strong> An <span class="math notranslate nohighlight">\(m \times n\)</span> coefficient matrix <span class="math notranslate nohighlight">\(A\)</span> and an <span class="math notranslate nohighlight">\(m\)</span>-element constant vector <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</p>
 <p><strong>Outputs:</strong> An augmented matrix in row echelon form.</p>
-<ol class="arabic simple">
-<li><p>Form the augmented matrix <span class="math notranslate nohighlight">\(( A \mid \vec{b} )\)</span></p></li>
+<ul class="simple">
+<li><p>Form the augmented matrix <span class="math notranslate nohighlight">\(( A \mid \mathbf{b} )\)</span></p></li>
 <li><p>Set pivot row <span class="math notranslate nohighlight">\(k\)</span> to 1</p></li>
 <li><p>For each column <span class="math notranslate nohighlight">\(j\)</span> from 1 to <span class="math notranslate nohighlight">\(n\)</span>:</p>
-<ol class="arabic simple">
-<li><p>Find the pivot row:</p>
-<ul class="simple">
+<ul>
 <li><p>Identify the row <span class="math notranslate nohighlight">\(i\)</span> where <span class="math notranslate nohighlight">\(i \geq k\)</span> with the largest absolute value in column <span class="math notranslate nohighlight">\(j\)</span></p></li>
 <li><p>If the largest absolute value is zero skip to next column</p></li>
-</ul>
-</li>
-<li><p>Swap rows:</p>
-<ul class="simple">
 <li><p>Swap row <span class="math notranslate nohighlight">\(i\)</span> with row <span class="math notranslate nohighlight">\(k\)</span>.</p></li>
-</ul>
-</li>
-<li><p>Eliminate elements below pivot:</p>
-<ul class="simple">
 <li><p>For each row <span class="math notranslate nohighlight">\(i\)</span> from <span class="math notranslate nohighlight">\(k+1\)</span> to <span class="math notranslate nohighlight">\(m\)</span>:</p>
 <ul>
 <li><p>Subtract <span class="math notranslate nohighlight">\(\dfrac{a_{ij}}{a_{jj}}\)</span> times row <span class="math notranslate nohighlight">\(j\)</span> from row <span class="math notranslate nohighlight">\(i\)</span></p></li>
@@ -468,9 +458,7 @@ document.write(`
 </li>
 </ul>
 </li>
-</ol>
-</li>
-</ol>
+</ul>
 </section>
 </div><iframe width="560" height="315" src="https://www.youtube.com/embed/5I8roRpQy1M?si=IaYVdjZ9mulpUWmJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <div class="proof example admonition" id="partial-pivoting-example">
@@ -483,24 +471,20 @@ document.write(`
    4x_1 - 2x_2 + x_3 &amp;= 15, \\
    -3x_1 - x_2 + 4x_3 &amp;= 8.
 \end{align*} \end{split}\]</div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<hr class="docutils" />
+<p><strong>Solution</strong></p>
+<p>Row reduce augmented matrix to row echelon form using partial pivoting</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    &amp; \left(\begin{array}{ccc|c} 
+    &amp; \left(\begin{array}{ccc|c}
         1 &amp; -1 &amp; 3 &amp; 13 \\
         4 &amp; -2 &amp; 1 &amp; 15\\
         -3 &amp; -1 &amp; 4 &amp; 8
-    \end{array} \right) 
+    \end{array} \right)
     \begin{array}{l} R_1 \leftrightarrow R_2 \end{array} &amp;
     \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
-        4 &amp; -2 &amp; 1 &amp; 15\\ 
+        4 &amp; -2 &amp; 1 &amp; 15\\
         1 &amp; -1 &amp; 3 &amp; 13 \\
         -3 &amp; -1 &amp; 4 &amp; 8
     \end{array} \right)
@@ -508,33 +492,32 @@ Solution<div class="sd-summary-down docutils">
     \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
         4 &amp; -2 &amp; 1 &amp; 15\\ 
-        0 &amp; -1/2 &amp; 11/4 &amp; 37/4 \\
-        0 &amp; -5/2 &amp; 19/4 &amp; 77/4
+        0 &amp; -\frac{1}{2} &amp; \frac{11}{4} &amp; \frac{37}{4} \\
+        0 &amp; -\frac{5}{2} &amp; \frac{19}{4} &amp; \frac{77}{4}
     \end{array} \right)
     \begin{array}{l} \\ R_2 \leftrightarrow R_3 \\ \phantom{x} \end{array} &amp;
     \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
-        4 &amp; -2 &amp; 1 &amp; 15\\ 
-        0 &amp; -5/2 &amp; 19/4 &amp; 77/4 \\
-        0 &amp; -1/2 &amp; 11/4 &amp; 37/4
+        4 &amp; -2 &amp; 1 &amp; 15\\
+        0 &amp; -\frac{5}{2} &amp; \frac{19}{4} &amp; \frac{77}{4} \\
+        0 &amp; -\frac{1}{2} &amp; \frac{11}{4} &amp; \frac{37}{4}
     \end{array} \right)
     \begin{array}{l} \\ \\ R_3 - \frac{1}{5}R_2 \end{array} \\ \\
     \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
         4 &amp; -2 &amp; 1 &amp; 15\\
-        0 &amp; -5/2 &amp; 19/4 &amp; 77/4 \\
-        0 &amp; 0 &amp; 9/5 &amp; 27/5
+        0 &amp; -\frac{5}{2} &amp; \frac{19}{4} &amp; \frac{77}{4} \\
+        0 &amp; 0 &amp; \frac{9}{5} &amp; \frac{27}{5}
     \end{array} \right)
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Solving for <span class="math notranslate nohighlight">\(x_3\)</span>, <span class="math notranslate nohighlight">\(x_2\)</span> and <span class="math notranslate nohighlight">\(x_1\)</span> using back substitution</p>
+<p>Solving for <span class="math notranslate nohighlight">\(x_3\)</span>, <span class="math notranslate nohighlight">\(x_2\)</span> and <span class="math notranslate nohighlight">\(x_1\)</span> using back substitution</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     x_3 &amp;= \frac{5}{9}\left( \frac{27}{5} \right) = 3, \\
     x_2 &amp;= -\frac{2}{5} \left( \frac{77}{4} - \frac{19}{4}(3)\right) = -2, \\
-    x_1 &amp;= \frac{1}{4}( 15 + 2(-2) - 3) = 2. 
+    x_1 &amp;= \frac{1}{4}( 15 + 2(-2) - 3) = 2.
 \end{align*} \end{split}\]</div>
-</div>
-</details></section>
+</section>
 </div></section>
 
     <script type="text/x-thebe-config">

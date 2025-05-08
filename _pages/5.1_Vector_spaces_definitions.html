@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/5.1_Vector_spaces_definitions';</script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
@@ -160,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="0.1_Teaching_schedule.html">Teaching schedule</a></li>
 <li class="toctree-l1"><a class="reference internal" href="0.3_Mathematical_preliminaries.html">Mathematical preliminaries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0.5_How_to_pass.html">How to pass the unit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0.5_How_to_pass.html">How to Pass the Module</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul class="current nav bd-sidenav">
@@ -391,30 +391,32 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="definitions">
 <span id="vector-spaces-definitions-section"></span><h1><span class="section-number">5.1. </span>Definitions<a class="headerlink" href="#definitions" title="Permalink to this heading">#</a></h1>
-<div class="proof definition admonition" id="binary-operation-definition">
-<p class="admonition-title"><span class="caption-number">Definition 5.1 </span> (Binary operation)</p>
-<section class="definition-content" id="proof-content">
-<p>A <strong>binary operation</strong> is a mapping of two elements of the same set <span class="math notranslate nohighlight">\(S\)</span> whose output is also an element of <span class="math notranslate nohighlight">\(S\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[ f: S \times S \to S\]</div>
-<p>The symbol <span class="math notranslate nohighlight">\(\times\)</span> is used to denote the <a href="https://en.wikipedia.org/wiki/Cartesian_product" target="_blank">Cartesian product</a> and <span class="math notranslate nohighlight">\(\to\)</span> denotes a mapping from one set to another.</p>
-</section>
-</div><p>We have already met examples of binary operations in addition, multiplication, subtraction and division of real numbers. If <span class="math notranslate nohighlight">\(a,b \in \mathbb{R}\)</span> then the following operations all output real numbers</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(f(a,b) = a + b\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(f(a,b) = a \cdot b\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(f(a,b) = a - b\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(f(a,b) = a \div b\)</span></p></li>
-</ul>
-<p>Another example is for the set of all <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrices <span class="math notranslate nohighlight">\(M_{2 \times 2}(\mathbb{R})\)</span>, <span class="math notranslate nohighlight">\(f(A, B) = AB\)</span> is a binary operation since <span class="math notranslate nohighlight">\(AB\)</span> is also a <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix.</p>
+<!-- ```{prf:definition} Binary operation
+:label: binary-operation-definition
+
+A **binary operation** is a mapping of two elements of the same set $S$ whose output is also an element of $S$. 
+
+$$ f: S \times S \to S$$
+
+The symbol $\times$ is used to denote the <a href="https://en.wikipedia.org/wiki/Cartesian_product" target="_blank">Cartesian product</a> and $\to$ denotes a mapping from one set to another.
+```
+
+We have already met examples of binary operations in addition, multiplication, subtraction and division of real numbers. If $a,b \in \mathbb{R}$ then the following operations all output real numbers
+
+- $f(a,b) = a + b$
+- $f(a,b) = a \cdot b$
+- $f(a,b) = a - b$
+- $f(a,b) = a \div b$
+
+Another example is for the set of all $2 \times 2$ matrices $M_{2 \times 2}(\mathbb{R})$, $f(A, B) = AB$ is a binary operation since $AB$ is also a $2 \times 2$ matrix. -->
 <div class="proof definition admonition" id="field-definition">
-<p class="admonition-title"><span class="caption-number">Definition 5.2 </span> (Field)</p>
+<p class="admonition-title"><span class="caption-number">Definition 5.1 </span> (Field)</p>
 <section class="definition-content" id="proof-content">
 <p>A <strong>field</strong> is a set <span class="math notranslate nohighlight">\(F\)</span> together with two binary operations on elements of <span class="math notranslate nohighlight">\(F\)</span> called <em>addition</em> and <em>multiplication</em>. If <span class="math notranslate nohighlight">\(a,b \in F\)</span> then addition is written as <span class="math notranslate nohighlight">\(a + b\)</span> and multiplication is written as <span class="math notranslate nohighlight">\(a \times b\)</span>.</p>
 </section>
 </div><p>The classic example of a field is a set of numbers which will suffice for what we will be doing here. However, a field can be any set of objects for which the above definition is satisfied and you may meet other examples of fields in your studies in the future.</p>
 <div class="proof definition admonition" id="vector-space-definition">
-<p class="admonition-title"><span class="caption-number">Definition 5.3 </span> (Vector space)</p>
+<p class="admonition-title"><span class="caption-number">Definition 5.2 </span> (Vector space)</p>
 <section class="definition-content" id="proof-content">
 <p>A <strong>vector space</strong> over a field <span class="math notranslate nohighlight">\(F\)</span> is a non-empty set <span class="math notranslate nohighlight">\(V\)</span> of objects called vectors on which the binary operations below are defined</p>
 <ul class="simple">
@@ -456,42 +458,29 @@ document.write(`
 <p class="admonition-title"><span class="caption-number">Example 5.1 </span></p>
 <section class="example-content" id="proof-content">
 <p>Show that the following are vector spaces:</p>
-<p>(i)   The set of real numbers over itself;</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">We need to check that all of the axioms of vector spaces are satisfied. Here <span class="math notranslate nohighlight">\(V = \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(F = \mathbb{R}\)</span> and let <span class="math notranslate nohighlight">\(u, v, w \in V\)</span> and <span class="math notranslate nohighlight">\(\alpha, \beta \in \mathbb{R}\)</span></p>
-<ul class="simple">
-<li><p class="sd-card-text">A1: <span class="math notranslate nohighlight">\(u + (v + w) = (u + v) + w \quad \checkmark\)</span></p></li>
-<li><p class="sd-card-text">A2: <span class="math notranslate nohighlight">\(u + v = v + u \quad \checkmark\)</span></p></li>
-<li><p class="sd-card-text">A3: <span class="math notranslate nohighlight">\(u + 0 = u \quad \checkmark\)</span> (i.e., 0 is the identity element of addition)</p></li>
-<li><p class="sd-card-text">A4: <span class="math notranslate nohighlight">\(u + (-u) = 0 \quad \checkmark\)</span> (i.e., the negative of any number is the additive inverse)</p></li>
-<li><p class="sd-card-text">M1: <span class="math notranslate nohighlight">\(\alpha(\beta u) = (\alpha \beta) u \quad \checkmark\)</span></p></li>
-<li><p class="sd-card-text">M2: <span class="math notranslate nohighlight">\(1 u = u \quad \checkmark\)</span> (i.e., 1 is the multiplicative identity of all numbers)</p></li>
-<li><p class="sd-card-text">M3: <span class="math notranslate nohighlight">\(\alpha(u + v) = \alpha u + \alpha v \quad \checkmark\)</span></p></li>
-<li><p class="sd-card-text">M4: <span class="math notranslate nohighlight">\((\alpha + \beta) u = \alpha u + \beta u \quad \checkmark\)</span></p></li>
-</ul>
-</div>
-</details><p>(ii)   The set of all polynomials of degree at most <span class="math notranslate nohighlight">\(n\)</span> with real coefficients <span class="math notranslate nohighlight">\(P_n(\mathbb{R})\)</span></p>
+<p>(i)   The set of real numbers over itself</p>
+<p>(ii)   The set of all polynomials of degree at most <span class="math notranslate nohighlight">\(n\)</span> with real coefficients <span class="math notranslate nohighlight">\(P_n(\mathbb{R})\)</span></p>
 <div class="math notranslate nohighlight">
 \[ \begin{align*}
-    p = p(x) := a_0x^0 + a_1x^1 + a_2x^2 + \cdots + a_nx^n = \sum_{i=0}^n a_ix^i,
+    p(x) := a_0x^0 + a_1x^1 + a_2x^2 + \cdots + a_nx^n = \sum_{i=0}^n a_ix^i,
 \end{align*} \]</div>
 <p>where <span class="math notranslate nohighlight">\(a_i \in \mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(x\)</span> is some variable. Show that <span class="math notranslate nohighlight">\(P(\mathbb{R}_n)\)</span> is a vector space.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(u(x), v(x), w(x) \in P_n(\mathbb{R})\)</span> where <span class="math notranslate nohighlight">\(u_i, v_i, w_i \in \mathbb{R}\)</span> are the coefficients for <span class="math notranslate nohighlight">\(u(x)\)</span>, <span class="math notranslate nohighlight">\(v(x)\)</span> and <span class="math notranslate nohighlight">\(w(x)\)</span> respectively and <span class="math notranslate nohighlight">\(k\in \mathbb{R}\)</span> is some scalar then we define</p>
+<hr class="docutils" />
+<p><strong>Solution</strong></p>
+<p>(i)   We need to check that all the axioms of vector spaces are satisfied. Here <span class="math notranslate nohighlight">\(V = \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(F = \mathbb{R}\)</span> and let <span class="math notranslate nohighlight">\(u, v, w \in V\)</span> and <span class="math notranslate nohighlight">\(\alpha, \beta \in \mathbb{R}\)</span></p>
 <ul class="simple">
-<li><p class="sd-card-text">Vector addition:</p></li>
+<li><p>A1: <span class="math notranslate nohighlight">\(u + (v + w) = (u + v) + w \quad \checkmark\)</span></p></li>
+<li><p>A2: <span class="math notranslate nohighlight">\(u + v = v + u \quad \checkmark\)</span></p></li>
+<li><p>A3: <span class="math notranslate nohighlight">\(u + 0 = u \quad \checkmark\)</span> (i.e., 0 is the identity element of addition)</p></li>
+<li><p>A4: <span class="math notranslate nohighlight">\(u + (-u) = 0 \quad \checkmark\)</span> (i.e., the negative of any number is the additive inverse)</p></li>
+<li><p>M1: <span class="math notranslate nohighlight">\(\alpha(\beta u) = (\alpha \beta) u \quad \checkmark\)</span></p></li>
+<li><p>M2: <span class="math notranslate nohighlight">\(1 u = u \quad \checkmark\)</span> (i.e., 1 is the multiplicative identity of all numbers)</p></li>
+<li><p>M3: <span class="math notranslate nohighlight">\(\alpha(u + v) = \alpha u + \alpha v \quad \checkmark\)</span></p></li>
+<li><p>M4: <span class="math notranslate nohighlight">\((\alpha + \beta) u = \alpha u + \beta u \quad \checkmark\)</span></p></li>
+</ul>
+<p>(ii)   Let <span class="math notranslate nohighlight">\(u(x), v(x), w(x) \in P_n(\mathbb{R})\)</span> where <span class="math notranslate nohighlight">\(u_i, v_i, w_i \in \mathbb{R}\)</span> are the coefficients for <span class="math notranslate nohighlight">\(u(x)\)</span>, <span class="math notranslate nohighlight">\(v(x)\)</span> and <span class="math notranslate nohighlight">\(w(x)\)</span> respectively and <span class="math notranslate nohighlight">\(k\in \mathbb{R}\)</span> is some scalar then we define</p>
+<ul class="simple">
+<li><p>Vector addition:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -499,7 +488,7 @@ Solution<div class="sd-summary-down docutils">
     &amp;= \sum_{i=0}^n (u_i + v_i)x^i.
 \end{align*} \end{split}\]</div>
 <ul class="simple">
-<li><p class="sd-card-text">Scalar multiplication:</p></li>
+<li><p>Scalar multiplication:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -507,14 +496,14 @@ Solution<div class="sd-summary-down docutils">
     &amp;= \sum_{i=0}^n ku_ix^i.
 \end{align*} \end{split}\]</div>
 <ul class="simple">
-<li><p class="sd-card-text">Additive identity element is the zero polynomial</p></li>
+<li><p>Additive identity element is the zero polynomial</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[ \begin{align*}
     0 = 0x^0 + 0x^1 + \cdots + 0x^n.
 \end{align*} \]</div>
 <ul class="simple">
-<li><p class="sd-card-text">The additive inverse to the polynomial <span class="math notranslate nohighlight">\(p\)</span> is</p></li>
+<li><p>The additive inverse to the polynomial <span class="math notranslate nohighlight">\(p\)</span> is</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -522,9 +511,9 @@ Solution<div class="sd-summary-down docutils">
     &amp;= \sum_{i=0}^n (-u_i)x^i \\
     &amp;= -\sum_{i=0}^n u_ix^i.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Checking the that axioms of vector spaces are satisfied</p>
+<p>Checking the that axioms of vector spaces are satisfied</p>
 <ul class="simple">
-<li><p class="sd-card-text">A1: Associativity of addition</p></li>
+<li><p>A1: Associativity of addition</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -533,7 +522,7 @@ Solution<div class="sd-summary-down docutils">
     &amp;= (u(x) + v(x)) + w(x) \quad \checkmark
 \end{align*} \end{split}\]</div>
 <ul class="simple">
-<li><p class="sd-card-text">A2: Commutativity of addition</p></li>
+<li><p>A2: Commutativity of addition</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -542,7 +531,7 @@ Solution<div class="sd-summary-down docutils">
     &amp;= v(x) + u(x) \quad \checkmark
 \end{align*} \end{split}\]</div>
 <ul class="simple">
-<li><p class="sd-card-text">A3: Identity element for addition</p></li>
+<li><p>A3: Identity element for addition</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -551,7 +540,7 @@ Solution<div class="sd-summary-down docutils">
     &amp;= u(x) \quad \checkmark
 \end{align*} \end{split}\]</div>
 <ul class="simple">
-<li><p class="sd-card-text">A4: Inverse element for addition</p></li>
+<li><p>A4: Inverse element for addition</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -559,7 +548,7 @@ Solution<div class="sd-summary-down docutils">
     &amp;= 0 \quad \checkmark
 \end{align*} \end{split}\]</div>
 <ul class="simple">
-<li><p class="sd-card-text">M1: Associativity of scalar multiplication</p></li>
+<li><p>M1: Associativity of scalar multiplication</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -568,7 +557,7 @@ Solution<div class="sd-summary-down docutils">
     &amp;= (\alpha \beta) u(x) \quad \checkmark
 \end{align*} \end{split}\]</div>
 <ul class="simple">
-<li><p class="sd-card-text">M2: Identity element for scalar multiplication</p></li>
+<li><p>M2: Identity element for scalar multiplication</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -577,7 +566,7 @@ Solution<div class="sd-summary-down docutils">
     &amp;= u(x) \quad \checkmark
 \end{align*} \end{split}\]</div>
 <ul class="simple">
-<li><p class="sd-card-text">M3: Distributivity of scalar multiplication</p></li>
+<li><p>M3: Distributivity of scalar multiplication</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -586,7 +575,7 @@ Solution<div class="sd-summary-down docutils">
     &amp;= \alpha u(x) + \alpha v(x) \quad \checkmark
 \end{align*} \end{split}\]</div>
 <ul class="simple">
-<li><p class="sd-card-text">M4: Distributivity of scalar multiplication over addition</p></li>
+<li><p>M4: Distributivity of scalar multiplication over addition</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -594,9 +583,9 @@ Solution<div class="sd-summary-down docutils">
     &amp;= \alpha \displaystyle \sum_{i=0}^n u_i x^i + \beta \displaystyle \sum_{i=0}^n u_i x^i \\
     &amp;= \alpha u(x) + \beta u(x) \quad \checkmark
 \end{align*} \end{split}\]</div>
-</div>
-</details></section>
-</div><section id="examples-of-non-vector-spaces">
+</section>
+</div><hr class="docutils" />
+<section id="examples-of-non-vector-spaces">
 <h2><span class="section-number">5.1.1. </span>Examples of non-vector spaces<a class="headerlink" href="#examples-of-non-vector-spaces" title="Permalink to this heading">#</a></h2>
 <p>Of course not all sets are vector spaces. For example, consider the set of integers <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> over the field <span class="math notranslate nohighlight">\(F=\mathbb{R}\)</span>. It is easy to show that the <a class="reference internal" href="#vector-space-axioms">axioms A1 to A4</a> are satisfied for the set of integers. The problem comes when one tries to define scalar multiplication. From the <a class="reference internal" href="#vector-space-definition">definition of scalar multiplication</a>, <span class="math notranslate nohighlight">\(\mathbb{R} \times \mathbb{Z} \to \mathbb{Z}\)</span> so for <span class="math notranslate nohighlight">\(u \in \mathbb{Z}\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(\alpha x\in \mathbb{Z}\)</span>. However, this is not always the case, for example, when <span class="math notranslate nohighlight">\(u=1\)</span> and <span class="math notranslate nohighlight">\(\alpha = \frac{1}{2}\)</span> we have <span class="math notranslate nohighlight">\(\frac{1}{2} \cdot 1 = \frac{1}{2} \notin \mathbb{Z}\)</span>. This was an example of a proof by counterexample where we just need to show 1 instance where the axioms are not satisfied to prove that we do not have a vector space.</p>
 <div class="proof example admonition" id="non-vector-space-example">
@@ -604,26 +593,12 @@ Solution<div class="sd-summary-down docutils">
 <section class="example-content" id="proof-content">
 <p>Show that the following a not vector spaces:</p>
 <p>(i)   The set of all positive real numbers, <span class="math notranslate nohighlight">\(\mathbb{R}_+\)</span> over itself;</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">We do not have an identity element for addition since <span class="math notranslate nohighlight">\(0 \notin \mathbb{R}_+\)</span> so axiom A3 is not satisfied. Also, by axiom A4, if <span class="math notranslate nohighlight">\(u, v \in \mathbb{R}_+\)</span> are two positive real numbers then <span class="math notranslate nohighlight">\(x + y &gt; 0\)</span> so no additive inverse exists.</p>
-</div>
-</details><p>(ii)   <span class="math notranslate nohighlight">\(V\)</span> is defined to be a parabola <span class="math notranslate nohighlight">\(y=x^2\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>, i.e., all the points in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(V = {(x, x^2)}\)</span>.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">If we take the example <span class="math notranslate nohighlight">\(\vec{u} \in V\)</span> such that <span class="math notranslate nohighlight">\(\vec{u} = (1, 1)^\mathsf{T}\)</span> then the additive inverse <span class="math notranslate nohighlight">\(-\vec{u}^\mathsf{T} = (-1, -1) \notin V\)</span> so <span class="math notranslate nohighlight">\(V\)</span> is not a vector space.</p>
-</div>
-</details></section>
+<p>(ii)   <span class="math notranslate nohighlight">\(V\)</span> is defined to be a parabola <span class="math notranslate nohighlight">\(y=x^2\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>, i.e., all the points in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(V = {(x, x^2)}\)</span>.</p>
+<hr class="docutils" />
+<p><strong>Solution</strong></p>
+<p>(i)   We do not have an identity element for addition since <span class="math notranslate nohighlight">\(0 \notin \mathbb{R}_+\)</span> so axiom A3 is not satisfied. Also, by axiom A4, if <span class="math notranslate nohighlight">\(u, v \in \mathbb{R}_+\)</span> are two positive real numbers then <span class="math notranslate nohighlight">\(x + y &gt; 0\)</span> so no additive inverse exists.</p>
+<p>(ii)   If we take the example <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> such that <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 1)\)</span> then the additive inverse <span class="math notranslate nohighlight">\(-\mathbf{u} = (-1, -1) \notin V\)</span> so <span class="math notranslate nohighlight">\(V\)</span> is not a vector space.</p>
+</section>
 </div><iframe width="560" height="315" src="https://www.youtube.com/embed/FBjz56gTkA4?si=QGstB_gRQBMAN_aQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></section>
 </section>
 

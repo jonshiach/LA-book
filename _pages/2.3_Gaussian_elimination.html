@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/2.3_Gaussian_elimination';</script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
@@ -160,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="0.1_Teaching_schedule.html">Teaching schedule</a></li>
 <li class="toctree-l1"><a class="reference internal" href="0.3_Mathematical_preliminaries.html">Mathematical preliminaries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0.5_How_to_pass.html">How to pass the unit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0.5_How_to_pass.html">How to Pass the Module</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul class="current nav bd-sidenav">
@@ -389,8 +389,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <span class="target" id="gaussian-elimination-section"></span><section class="tex2jax_ignore mathjax_ignore" id="gaussian-elimination">
-<span id="index-0"></span><h1><span class="section-number">2.5. </span>Gaussian elimination<a class="headerlink" href="#gaussian-elimination" title="Permalink to this heading">#</a></h1>
+  <span class="target" id="gaussian-elimination-section"></span><span class="target" id="index-0"></span><section class="tex2jax_ignore mathjax_ignore" id="gaussian-elimination">
+<span id="index-1"></span><h1><span class="section-number">2.5. </span>Gaussian elimination<a class="headerlink" href="#gaussian-elimination" title="Permalink to this heading">#</a></h1>
 <figure class="margin align-default" id="id1">
 <a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Carl_Friedrich_Gauss_1840_by_Jensen.jpg/220px-Carl_Friedrich_Gauss_1840_by_Jensen.jpg"><img alt="Carl Friedrich Gauss" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Carl_Friedrich_Gauss_1840_by_Jensen.jpg/220px-Carl_Friedrich_Gauss_1840_by_Jensen.jpg" style="width: 200px;" /></a>
 <figcaption>
@@ -442,7 +442,7 @@ document.write(`
 \end{align*} \end{split}\]</div>
 <p>In this method, we used three types of operations on the equations in the system. These operations are known as elementary row operations.</p>
 <div class="proof definition admonition" id="ero-definition">
-<span id="index-1"></span><p class="admonition-title"><span class="caption-number">Definition 2.2 </span> (Elementary Row Operations (EROs))</p>
+<span id="index-2"></span><p class="admonition-title"><span class="caption-number">Definition 2.2 </span> (Elementary Row Operations (EROs))</p>
 <section class="definition-content" id="proof-content">
 <p>The three <strong>elementary row operations</strong> that can be applied to a linear system of equations without changing the solution are</p>
 <ul class="simple">
@@ -452,13 +452,13 @@ document.write(`
 </ul>
 </section>
 </div><p>In the solution to the linear system of equations shown above we used a type I row operation in step 1, a type II row operation in step 3 and type III row operations in steps 2 and 4.</p>
-<p>We can represent the linear system using matrices for convenience. We begin by expressing the linear system using an augmented matrix consisting of the concatenation of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(\vec{x}\)</span> so any EROs that are applied to the augmented matrix are applied to the coefficients and the constant terms at the same time.</p>
+<p>We can represent the linear system using matrices for convenience. We begin by expressing the linear system using an augmented matrix consisting of the concatenation of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> so any EROs that are applied to the augmented matrix are applied to the coefficients and the constant terms at the same time.</p>
 <div class="proof definition admonition" id="augmented-matrix-definition">
-<span id="index-2"></span><p class="admonition-title"><span class="caption-number">Definition 2.3 </span> (Augmented matrix)</p>
+<span id="index-3"></span><p class="admonition-title"><span class="caption-number">Definition 2.3 </span> (Augmented matrix)</p>
 <section class="definition-content" id="proof-content">
-<p>The <strong>augmented matrix</strong> is a representation of a system of linear equations <span class="math notranslate nohighlight">\(A\vec{x}=\vec{b}\)</span> such that the <span class="math notranslate nohighlight">\(m\times n\)</span> coefficient matrix <span class="math notranslate nohighlight">\(A\)</span> and right-hand side constant vector <span class="math notranslate nohighlight">\(\vec{b}\)</span> are combined into a single <span class="math notranslate nohighlight">\(m\times (n+1)\)</span> matrix <span class="math notranslate nohighlight">\((A \mid \vec{b})\)</span>.</p>
+<p>The <strong>augmented matrix</strong> is a representation of a system of linear equations <span class="math notranslate nohighlight">\(A\mathbf{x}=\mathbf{b}\)</span> such that the <span class="math notranslate nohighlight">\(m\times n\)</span> coefficient matrix <span class="math notranslate nohighlight">\(A\)</span> and right-hand side constant vector <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> are combined into a single <span class="math notranslate nohighlight">\(m\times (n+1)\)</span> matrix <span class="math notranslate nohighlight">\((A \mid \mathbf{b})\)</span>.</p>
 </section>
-</div><p>When writing the augmented matrix we often draw a partition separating <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(\vec{b}\)</span> (although this is not strictly necessary), i.e.,</p>
+</div><p>When writing the augmented matrix we often draw a partition separating <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> (although this is not strictly necessary), i.e.,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \left(
 \begin{array}{cccc|c}
@@ -469,8 +469,8 @@ document.write(`
 \end{array}
 \right). \end{split}\]</div>
 <p>Elementary row operations are applied to the augmented matrix so that we reduce it to what is known as row echelon form where the solution of the system can be easily calculated.</p>
-<span class="target" id="index-3"></span><div class="proof definition admonition" id="ref-definition">
-<span id="index-4"></span><p class="admonition-title"><span class="caption-number">Definition 2.4 </span> (Row Echelon Form (REF))</p>
+<span class="target" id="index-4"></span><div class="proof definition admonition" id="ref-definition">
+<span id="index-5"></span><p class="admonition-title"><span class="caption-number">Definition 2.4 </span> (Row Echelon Form (REF))</p>
 <section class="definition-content" id="proof-content">
 <p>A matrix is said to be in <strong>Row Echelon Form (REF)</strong> if the following conditions are satisfied:</p>
 <ul class="simple">
@@ -486,8 +486,9 @@ document.write(`
     &amp;\begin{pmatrix} 0 &amp; \color{red}{1} &amp; 3\\ 0 &amp; 0 &amp; \color{red}{4} \\ 0 &amp; 0 &amp; 0\end{pmatrix}.
 \end{align*} \end{split}\]</div>
 <p>Note that the elements below the pivot elements are all zero.</p>
+<hr class="docutils" />
 <section id="row-reduction">
-<h2><span class="section-number">2.5.1. </span>Row reduction<a class="headerlink" href="#row-reduction" title="Permalink to this heading">#</a></h2>
+<span id="index-6"></span><h2><span class="section-number">2.5.1. </span>Row reduction<a class="headerlink" href="#row-reduction" title="Permalink to this heading">#</a></h2>
 <p>The process of transforming a matrix into row echelon form using elementary row operations is known as <strong>row reduction</strong>. For example, we will use Gaussian elimination to solve the following system of linear equations</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -513,7 +514,7 @@ document.write(`
   \longrightarrow
   \left( \begin{array}{ccc|c}
       \color{red}{ 3} &amp; 1 &amp; -2 &amp; 1 \\
-      \color{blue}{ 0} &amp; -4/3 &amp; 8/3 &amp; 8/3 \\
+      \color{blue}{ 0} &amp; -\frac{4}{3} &amp; \frac{8}{3} &amp; \frac{8}{3} \\
       \color{blue}{ 2} &amp; -3 &amp; 7 &amp; 4
   \end{array} \right).
 \end{align*} \end{split}\]</div>
@@ -521,33 +522,33 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\begin{split} \left( \begin{array}{ccc|c}
     \color{red}{3} &amp; 1 &amp; -2 &amp; 1 \\
-    \color{blue}{0} &amp; -4/3 &amp; 8/3 &amp; 8/3 \\
+    \color{blue}{0} &amp; -\frac{4}{3} &amp; \frac{8}{3} &amp; \frac{8}{3} \\
     \color{blue}{2 - \frac{2}{3}(3)} &amp; -3 - \frac{2}{3}(1) &amp; 7 - \frac{2}{3}(-2) &amp; 4 - \frac{2}{3}(1)
 \end{array} \right)
 \longrightarrow  
 \left( \begin{array}{ccc|c}
     \color{red}{3} &amp; 1 &amp; -2 &amp; 1 \\
-    \color{blue}{0} &amp; -4/3 &amp; 8/3 &amp; 8/3 \\
-    \color{blue}{0} &amp; -11/3 &amp; 25/3 &amp; 10/3
+    \color{blue}{0} &amp; -\frac{4}{3} &amp; \frac{8}{3} &amp; \frac{8}{3} \\
+    \color{blue}{0} &amp; -\frac{11}{3} &amp; \frac{25}{3} &amp; \frac{10}{3}
 \end{array} \right). \end{split}\]</div>
 <p>Note that these two row operations could have been done simultaneously since changing the values in row 2 does not affect row 3 and vice-versa. Column 1 is now in row echelon form so we move to the next pivot element in row 2 which is <span class="math notranslate nohighlight">\(-\dfrac{4}{3}\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \left( \begin{array}{ccc|c}
     3 &amp; 1 &amp; -2 &amp; 1 \\
-    0 &amp; \color{red}{-4/3} &amp; 8/3 &amp; 8/3 \\
-    0 &amp; \color{blue}{-11/3} &amp; 25/3 &amp; 10/3
+    0 &amp; \color{red}{-\frac{4}{3}} &amp; \frac{8}{3} &amp; \frac{8}{3} \\
+    0 &amp; \color{blue}{-\frac{11}{3}} &amp; \frac{25}{3} &amp; \frac{10}{3}
 \end{array} \right). \end{split}\]</div>
 <p>The element in row 3 column 2 has a value of <span class="math notranslate nohighlight">\(-\dfrac{11}{3}\)</span> and the pivot element has a value of <span class="math notranslate nohighlight">\(-\dfrac{4}{3}\)</span> so we need to subtract row 2 multiplied by <span class="math notranslate nohighlight">\(-\dfrac{11}{3} \div \left(-\dfrac{4}{3}\right) = \dfrac{11}{4}\)</span> from row 3.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \left( \begin{array}{ccc|c}
     3 &amp; 1 &amp; -2 &amp; 1 \\
-    0 &amp; \color{red}{-4/3} &amp; 8/3 &amp; 8/3 \\
+    0 &amp; \color{red}{-\frac{4}{3}} &amp; \frac{8}{3} &amp; \frac{8}{3} \\
     0 &amp; \color{blue}{-\frac{11}{3} - \frac{11}{4}(-\frac{4}{3})} &amp; \frac{25}{3} - \frac{11}{4}(\frac{8}{3}) &amp; \frac{10}{3} - \frac{11}{4}(\frac{8}{3})
 \end{array} \right)
 \longrightarrow
 \left( \begin{array}{ccc|c}
     3 &amp; 1 &amp; -2 &amp; 1 \\
-    0 &amp; \color{red}{-4/3} &amp; 8/3 &amp; 8/3 \\
+    0 &amp; \color{red}{-\frac{4}{3}} &amp; \frac{8}{3} &amp; \frac{8}{3} \\
     0 &amp; \color{blue}{0} &amp; 1 &amp; -4
 \end{array} \right). \end{split}\]</div>
 <p>Now the augmented matrix is in row echelon form. We can convert back to matrix form and express the linear system as three separate equations.</p>
@@ -555,19 +556,19 @@ document.write(`
 \[\begin{split} \begin{align*}
   \begin{pmatrix}
       3 &amp; 1 &amp; -2 \\
-      0 &amp; -4/3 &amp; 8/3 \\
+      0 &amp; -\frac{4}{3} &amp; \frac{8}{3} \\
       0 &amp; 0 &amp; 1
   \end{pmatrix}
   \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} 
-  = \begin{pmatrix} 1 \\ 8/3 \\ -4 \end{pmatrix}  
-  &amp;&amp; \implies &amp;&amp;
+  = \begin{pmatrix} 1 \\ \frac{8}{3} \\ -4 \end{pmatrix}  
+  &amp;&amp; \therefore &amp;&amp;
   \begin{array}{rcl}
       3 x_1 + x_2 - 2 x_2 &amp;=&amp; 1, \\
       -\dfrac{4}{3} x_2 - \dfrac{8}{3} x_3 &amp;=&amp; \dfrac{8}{3}, \\
       x_3 &amp;=&amp; -4.
   \end{array}
 \end{align*} \end{split}\]</div>
-<p id="index-5">Since we have reduced the coefficient matrix to row echelon form we have a solution for the final variable. We can then substitute known values of the variables into the preceding equation to solve for the preceding variable. We continue in this way until we have solutions for all of the variables in the system. This step is known as <strong>back substitution</strong>. So for our system the final equation gives <span class="math notranslate nohighlight">\(x_3=-4\)</span> so substitution into the second equation gives</p>
+<p id="index-7">Since we have reduced the coefficient matrix to row echelon form we have a solution for the final variable. We can then substitute known values of the variables into the preceding equation to solve for the preceding variable. We continue in this way until we have solutions for all of the variables in the system. This step is known as <strong>back substitution</strong>. So for our system the final equation gives <span class="math notranslate nohighlight">\(x_3=-4\)</span> so substitution into the second equation gives</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     -\frac{4}{3} x_2 + \frac{8}{3} (-4) &amp;= \frac{8}{3} \\
@@ -627,27 +628,21 @@ document.write(`
 <p>Solving using back substitution gives <span class="math notranslate nohighlight">\(x_1 = 1\)</span>, <span class="math notranslate nohighlight">\(x_2 = -10\)</span> and <span class="math notranslate nohighlight">\(x_3 = -4\)</span> which was the same solution as we saw before.</p>
 <p>The steps used in Gaussian elimination are summarised in <a class="reference internal" href="#ge-algorithm">Algorithm 2.1</a>.</p>
 <div class="proof algorithm admonition" id="ge-algorithm">
-<span id="index-6"></span><p class="admonition-title"><span class="caption-number">Algorithm 2.1 </span> (Gaussian elimination)</p>
+<span id="index-8"></span><p class="admonition-title"><span class="caption-number">Algorithm 2.1 </span> (Gaussian elimination)</p>
 <section class="algorithm-content" id="proof-content">
-<p><strong>Inputs:</strong> An <span class="math notranslate nohighlight">\(m \times n\)</span> coefficient matrix <span class="math notranslate nohighlight">\(A\)</span> and an <span class="math notranslate nohighlight">\(m\)</span>-element constant vector <span class="math notranslate nohighlight">\(\vec{b}\)</span>.</p>
+<p><strong>Inputs:</strong> An <span class="math notranslate nohighlight">\(m \times n\)</span> coefficient matrix <span class="math notranslate nohighlight">\(A\)</span> and an <span class="math notranslate nohighlight">\(m\)</span>-element constant vector <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</p>
 <p><strong>Outputs:</strong> An augmented matrix in row echelon form.</p>
-<ol class="arabic simple">
-<li><p>Form the augmented matrix <span class="math notranslate nohighlight">\(( A \mid \vec{b} )\)</span></p></li>
+<ul class="simple">
+<li><p>Form the augmented matrix <span class="math notranslate nohighlight">\(( A \mid \mathbf{b} )\)</span></p></li>
 <li><p>Set pivot row <span class="math notranslate nohighlight">\(k\)</span> to 1</p></li>
 <li><p>For each column <span class="math notranslate nohighlight">\(j\)</span> from 1 to <span class="math notranslate nohighlight">\(n\)</span>:</p>
-<ol class="arabic simple">
-<li><p>Check pivot element:</p>
-<ul class="simple">
+<ul>
 <li><p>If the pivot element <span class="math notranslate nohighlight">\(a_{kj} = 0\)</span></p>
 <ul>
 <li><p>Identify a row <span class="math notranslate nohighlight">\(i\)</span> where <span class="math notranslate nohighlight">\(i &gt; j\)</span> and <span class="math notranslate nohighlight">\(a_{ij} \neq 0\)</span>, if no such row exists skip to the next column</p></li>
 <li><p>Swap row <span class="math notranslate nohighlight">\(i\)</span> with row <span class="math notranslate nohighlight">\(k\)</span></p></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><p>Eliminate elements below pivot:</p>
-<ul class="simple">
 <li><p>For each row <span class="math notranslate nohighlight">\(i\)</span> from <span class="math notranslate nohighlight">\(k+1\)</span> to <span class="math notranslate nohighlight">\(m\)</span>:</p>
 <ul>
 <li><p>Subtract <span class="math notranslate nohighlight">\(\dfrac{a_{ij}}{a_{jj}}\)</span> times row <span class="math notranslate nohighlight">\(j\)</span> from row <span class="math notranslate nohighlight">\(i\)</span></p></li>
@@ -655,9 +650,7 @@ document.write(`
 </li>
 </ul>
 </li>
-</ol>
-</li>
-</ol>
+</ul>
 </section>
 </div><iframe width="560" height="315" src="https://www.youtube.com/embed/iBp-ZUE-G4w?si=SWn6VXnJTyFlNhJ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <div class="proof example admonition" id="ge-example">
@@ -667,14 +660,15 @@ document.write(`
 <p>(i)   <span class="math notranslate nohighlight">\( \begin{align*}
     x_1 + 2x_2 &amp;= 7, \\
     3x_1 - 4x_2 &amp;= 1.
-    \end{align*} \)</span></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+    \end{align*} \)</span>; &amp;\emsp;
+(ii)   <span class="math notranslate nohighlight">\(\begin{align*}
+    x_1 + x_3 &amp;= 3, \\ 
+    -2x_1 + x_2 + 3x_3 &amp;= 3, \\
+    -x_1 + 2x_2 + 4x_3 &amp;= 5.
+\end{align*}\)</span></p>
+<hr class="docutils" />
+<p><strong>Solution</strong></p>
+<p>(i)   Row reduce augmented matrix to row echelon form</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     &amp; \left( \begin{array}{cc|c} 1 &amp; 2 &amp; 7 \\ 3 &amp; -4 &amp; 1 \end{array} \right)
@@ -682,26 +676,14 @@ Solution<div class="sd-summary-down docutils">
     \longrightarrow &amp;
     &amp; \left( \begin{array}{cc|c} 1 &amp; 2 &amp; 7 \\ 0 &amp; -10 &amp; -20 \end{array} \right)
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Solving for <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span> using back substitution</p>
+<p>Solving for <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span> using back substitution</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    -10x_2 &amp;= -20 &amp; \implies x_2 &amp;= \frac{-20}{-10} = 2, \\
-    x_1 + 2x_2 &amp;= 7 &amp; \implies x_1 &amp;= 7 - 2x_2 = 7 - 2(2) = 3.
+    -10x_2 &amp;= -20 &amp; \therefore x_2 &amp;= \frac{-20}{-10} = 2, \\
+    x_1 + 2x_2 &amp;= 7 &amp; \therefore x_1 &amp;= 7 - 2x_2 = 7 - 2(2) = 3.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">This solution can be easily verified by substituting it back into the original system.</p>
-</div>
-</details><p>(ii)   <span class="math notranslate nohighlight">\(\begin{align*}
-    x_1 + x_3 &amp;= 3, \\ 
-    -2x_1 + x_2 + 3x_3 &amp;= 3, \\
-    -x_1 + 2x_2 + 4x_3 &amp;= 5.
-\end{align*}\)</span></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<p>This solution can be easily verified by substituting it back into the original system.</p>
+<p>(ii)   Row reduce augmented matrix to row echelon form</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     &amp; \left( \begin{array}{ccc|c}
@@ -724,15 +706,14 @@ Solution<div class="sd-summary-down docutils">
         0 &amp; 0 &amp; -5 &amp; -10
     \end{array} \right)
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Solving for <span class="math notranslate nohighlight">\(x_1\)</span>, <span class="math notranslate nohighlight">\(x_2\)</span> and <span class="math notranslate nohighlight">\(x_3\)</span> using back substitution</p>
+<p>Solving for <span class="math notranslate nohighlight">\(x_1\)</span>, <span class="math notranslate nohighlight">\(x_2\)</span> and <span class="math notranslate nohighlight">\(x_3\)</span> using back substitution</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    -5x_3 &amp;= -10 &amp; \implies x_3 &amp;= \frac{-10}{-5} = 2, \\
-    x_2 + 5x_3 &amp;= 9 &amp; \implies x_2 &amp;= 9 - 5x_3 = 9 - 5(2) = -1, \\
-    x_1 + x_3 &amp;= 3 &amp; \implies x_1 &amp;= 3 - x_3 = 3 - 2 = 1.
+    -5x_3 &amp;= -10 &amp; \therefore x_3 &amp;= \frac{-10}{-5} = 2, \\
+    x_2 + 5x_3 &amp;= 9 &amp; \therefore x_2 &amp;= 9 - 5x_3 = 9 - 5(2) = -1, \\
+    x_1 + x_3 &amp;= 3 &amp; \therefore x_1 &amp;= 3 - x_3 = 3 - 2 = 1.
 \end{align*} \end{split}\]</div>
-</div>
-</details></section>
+</section>
 </div></section>
 </section>
 

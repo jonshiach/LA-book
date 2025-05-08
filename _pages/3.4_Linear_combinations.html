@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/3.4_Linear_combinations';</script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
@@ -160,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="0.1_Teaching_schedule.html">Teaching schedule</a></li>
 <li class="toctree-l1"><a class="reference internal" href="0.3_Mathematical_preliminaries.html">Mathematical preliminaries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0.5_How_to_pass.html">How to pass the unit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0.5_How_to_pass.html">How to Pass the Module</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul class="current nav bd-sidenav">
@@ -394,9 +394,9 @@ document.write(`
 <div class="proof definition admonition" id="linear-combination-of-vectors-definition">
 <span id="index-0"></span><p class="admonition-title"><span class="caption-number">Definition 3.8 </span> (Linear combination of vectors)</p>
 <section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(\vec{v},\vec{u}_1,\dots,\vec{u}_m\in\mathbb{R}^n\)</span> such that</p>
+<p>Let <span class="math notranslate nohighlight">\(\mathbf{v},\mathbf{u}_1,\dots,\mathbf{u}_m\in\mathbb{R}^n\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-linear-combination-equation">
-<span class="eqno">(3.6)<a class="headerlink" href="#equation-linear-combination-equation" title="Permalink to this equation">#</a></span>\[ \vec{v}=\alpha_1\vec{u}_1+\alpha_2\vec{u}_2+\dots+\alpha_m\vec{u}_m, \]</div>
+<span class="eqno">(3.6)<a class="headerlink" href="#equation-linear-combination-equation" title="Permalink to this equation">#</a></span>\[ \mathbf{v}=\alpha_1\mathbf{u}_1+\alpha_2\mathbf{u}_2+\dots+\alpha_m\mathbf{u}_m, \]</div>
 <p>for some <span class="math notranslate nohighlight">\(\alpha_1,\alpha_2,\dots,\alpha_m\in \mathbb{R}\)</span> <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. Such a sum is called a <strong>linear combination of vectors</strong>.</p>
 </section>
 </div><p>For example</p>
@@ -406,35 +406,30 @@ document.write(`
     2\begin{pmatrix} 1 \\ 5 \\ -1 \end{pmatrix} +
     \begin{pmatrix} 0 \\ -10 \\ 9 \end{pmatrix},
 \end{align*} \end{split}\]</div>
-<p>and so we have expressed <span class="math notranslate nohighlight">\((2,0,7)\)</span> as a linear combination of the vectors <span class="math notranslate nohighlight">\((1,5,-1)\)</span> and <span class="math notranslate nohighlight">\((0,-10,9)\)</span>. To write a vector <span class="math notranslate nohighlight">\(\vec{v}\)</span> as a linear combination of vectors <span class="math notranslate nohighlight">\(\vec{u}_1, \vec{u}_2, \ldots, \vec{u}_m\)</span> we need to calculate the values of the coefficients <span class="math notranslate nohighlight">\(\alpha_1, \alpha_2, \ldots, \alpha_m\)</span> from equation <a class="reference internal" href="#equation-linear-combination-equation">(3.6)</a>. To do this we need to solve the system of linear equations</p>
+<p>and so we have expressed <span class="math notranslate nohighlight">\((2,0,7)\)</span> as a linear combination of the vectors <span class="math notranslate nohighlight">\((1,5,-1)\)</span> and <span class="math notranslate nohighlight">\((0,-10,9)\)</span>. To write a vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> as a linear combination of vectors <span class="math notranslate nohighlight">\(\mathbf{u}_1, \mathbf{u}_2, \ldots, \mathbf{u}_m\)</span> we need to calculate the values of the coefficients <span class="math notranslate nohighlight">\(\alpha_1, \alpha_2, \ldots, \alpha_m\)</span> from equation <a class="reference internal" href="#equation-linear-combination-equation">(3.6)</a>. To do this we need to solve the system of linear equations</p>
 <div class="math notranslate nohighlight">
-\[ \vec{u}_1 \alpha_1 + \vec{u}_2 \alpha_2 + \cdots + \vec{u}_m \alpha_m = \vec{v}\]</div>
+\[ \mathbf{u}_1 \alpha_1 + \mathbf{u}_2 \alpha_2 + \cdots + \mathbf{u}_m \alpha_m = \mathbf{v}\]</div>
 <p>which can be written as the augmented matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \left( \begin{array}{cccc|c}
     \uparrow &amp; \uparrow &amp; &amp; \uparrow &amp; \uparrow \\
-    \vec{u}_1 &amp; \vec{u}_2 &amp; \cdots &amp; \vec{u}_m &amp; \vec{v} \\
+    \mathbf{u}_1 &amp; \mathbf{u}_2 &amp; \cdots &amp; \mathbf{u}_m &amp; \mathbf{v} \\
     \downarrow &amp; \downarrow &amp; &amp; \downarrow &amp; \downarrow
 \end{array} \right)\end{split}\]</div>
 <p>and the values of the coefficients <span class="math notranslate nohighlight">\(\alpha_1, \alpha_2, \ldots, \alpha_m\)</span> can be calculated using <a class="reference internal" href="2.3_Gaussian_elimination.html#gaussian-elimination-section"><span class="std std-ref">Gaussian elimination</span></a>.</p>
 <div class="proof example admonition" id="linear-combination-of-vectors-example">
-<p class="admonition-title"><span class="caption-number">Example 3.6 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 3.5 </span></p>
 <section class="example-content" id="proof-content">
-<p>Express the vector <span class="math notranslate nohighlight">\(\vec{v} = (7, -2, -11)\)</span> as a linear combination of the vectors</p>
+<p>Express the vector <span class="math notranslate nohighlight">\(\mathbf{v} = (7, -2, -11)\)</span> as a linear combination of the vectors</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \vec{u}_1 &amp;= \begin{pmatrix} 1 \\ 0 \\ 7 \end{pmatrix}, &amp;
-    \vec{u}_2 &amp;= \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix}, &amp;
-    \vec{u}_3 &amp;= \begin{pmatrix} 5 \\ -2 \\ -6 \end{pmatrix}.
+    \mathbf{u}_1 &amp;= \begin{pmatrix} 1 \\ 0 \\ 7 \end{pmatrix}, &amp;
+    \mathbf{u}_2 &amp;= \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix}, &amp;
+    \mathbf{u}_3 &amp;= \begin{pmatrix} 5 \\ -2 \\ -6 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">We need to find the values of the coefficients <span class="math notranslate nohighlight">\(\alpha_1\)</span>, <span class="math notranslate nohighlight">\(\alpha_2\)</span> and <span class="math notranslate nohighlight">\(\alpha_3\)</span> in the following linear combination</p>
+<hr class="docutils" />
+<p><strong>Solution</strong></p>
+<p>We need to find the values of the coefficients <span class="math notranslate nohighlight">\(\alpha_1\)</span>, <span class="math notranslate nohighlight">\(\alpha_2\)</span> and <span class="math notranslate nohighlight">\(\alpha_3\)</span> in the following linear combination</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \alpha_1 \begin{pmatrix} 1 \\ 0 \\ 7 \end{pmatrix} 
@@ -442,14 +437,14 @@ Solution<div class="sd-summary-down docutils">
     + \alpha_3 \begin{pmatrix} 5 \\ -2 \\ -6 \end{pmatrix}
     &amp;= \begin{pmatrix} 7 \\ -2 \\ -11 \end{pmatrix},
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">so we need the solution to the linear system</p>
+<p>so we need the solution to the linear system</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \alpha_1 + 2\alpha_2 + 5\alpha_3 &amp;= 7, \\
     -\alpha_2 - 2\alpha_3 &amp;= -2, \\
     7\alpha_1 + 3\alpha_2 - 6\alpha_3 &amp;= -11.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Using Gauss-Jordan elimination</p>
+<p>Using Gauss-Jordan elimination</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     &amp;\left( \begin{array}{ccc|c} 
@@ -493,37 +488,37 @@ Solution<div class="sd-summary-down docutils">
         0 &amp; 0 &amp; 1 &amp; 2
     \end{array} \right),
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">so <span class="math notranslate nohighlight">\(\alpha_1 = 1\)</span>, <span class="math notranslate nohighlight">\(\alpha_2 = -2\)</span> and <span class="math notranslate nohighlight">\(\alpha_3 = 2\)</span>. Therefore <span class="math notranslate nohighlight">\(\vec{v}\)</span> can be expressed as the linear combination of vectors</p>
+<p>so <span class="math notranslate nohighlight">\(\alpha_1 = 1\)</span>, <span class="math notranslate nohighlight">\(\alpha_2 = -2\)</span> and <span class="math notranslate nohighlight">\(\alpha_3 = 2\)</span>. Therefore <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> can be expressed as the linear combination of vectors</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \vec{v} = \vec{u}_1 - 2\vec{u}_2 + 2\vec{u}_3
+    \mathbf{v} = \mathbf{u}_1 - 2\mathbf{u}_2 + 2\mathbf{u}_3
     =  \begin{pmatrix} 1 \\ 0 \\ 7 \end{pmatrix} 
     - 2 \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix} 
     + 2 \begin{pmatrix} 5 \\ -2 \\ -6 \end{pmatrix}
     &amp;= \begin{pmatrix} 7 \\ -2 \\ -11 \end{pmatrix}
 \end{align*} \end{split}\]</div>
-</div>
-</details></section>
+</section>
 </div><iframe width="560" height="315" src="https://www.youtube.com/embed/z8gu1kmJyy0?si=7UY3dvJUtOWqwpI1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<hr class="docutils" />
 <span class="target" id="basis-vectors-section"></span><section id="basis-vectors">
 <span id="index-1"></span><h2><span class="section-number">3.7.1. </span>Basis vectors<a class="headerlink" href="#basis-vectors" title="Permalink to this heading">#</a></h2>
-<p>A special type of vector is a <strong>basis vector</strong> which all other vectors in the space can be represented as a linear combination of the basis vectors (we will cover basis in more detail <a class="reference internal" href="5.4_Basis.html#basis-section"><span class="std std-ref">later</span></a>). In a Cartesian space the simplest basis vectors are unit vectors that point in the co-ordinate directions. In <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> we use the basis vectors <span class="math notranslate nohighlight">\(\vec{i} = (1, 0, 0)\)</span>, <span class="math notranslate nohighlight">\(\vec{j} = (0, 1, 0)\)</span> and <span class="math notranslate nohighlight">\(\vec{k} = (0, 0, 1)\)</span> (<a class="reference internal" href="#basis-vectors-figure"><span class="std std-numref">Fig. 3.11</span></a>).</p>
+<p>A special type of vector is a <strong>basis vector</strong> which all other vectors in the space can be represented as a linear combination of the basis vectors (we will cover basis in more detail <a class="reference internal" href="5.4_Basis.html#basis-section"><span class="std std-ref">later</span></a>). In a Cartesian space the simplest basis vectors are unit vectors that point in the co-ordinate directions. In <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> we use the basis vectors <span class="math notranslate nohighlight">\(\mathbf{i} = (1, 0, 0)\)</span>, <span class="math notranslate nohighlight">\(\mathbf{j} = (0, 1, 0)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{k} = (0, 0, 1)\)</span> (<a class="reference internal" href="#basis-vectors-figure"><span class="std std-numref">Fig. 3.10</span></a>).</p>
 <figure class="align-default" id="basis-vectors-figure">
 <a class="reference internal image-reference" href="../_images/3_basis_vectors.svg"><img alt="../_images/3_basis_vectors.svg" src="../_images/3_basis_vectors.svg" width="225" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.11 </span><span class="caption-text">The three basis vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</span><a class="headerlink" href="#basis-vectors-figure" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.10 </span><span class="caption-text">The three basis vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</span><a class="headerlink" href="#basis-vectors-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Using basis vectors we can represent any vector, <span class="math notranslate nohighlight">\(\vec{a} = (a_1, a_2, a_3)\)</span> say, as a linear combination of <span class="math notranslate nohighlight">\(\vec{i}\)</span>, <span class="math notranslate nohighlight">\(\vec{j}\)</span> and <span class="math notranslate nohighlight">\(\vec{k}\)</span>, i.e.,</p>
+<p>Using basis vectors we can represent any vector, <span class="math notranslate nohighlight">\(\mathbf{a} = (a_1, a_2, a_3)\)</span> say, as a linear combination of <span class="math notranslate nohighlight">\(\mathbf{i}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{j}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{k}\)</span>, i.e.,</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}a_1 \vec{i} + a_2 \vec{j} + a_3 \vec{k}
+\[\begin{split} \begin{align*}a_1 \mathbf{i} + a_2 \mathbf{j} + a_3 \mathbf{k}
     = a_1 \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} + a_2 \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix} + a_3
     \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}
-    = \begin{pmatrix} a_1 \\ a_2 \\ a_3 \end{pmatrix} = \vec{a}.
+    = \begin{pmatrix} a_1 \\ a_2 \\ a_3 \end{pmatrix} = \mathbf{a}.
 \end{align*} \end{split}\]</div>
 <p>For example</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \begin{pmatrix} 2 \\ 5 \\ 3 \end{pmatrix} = 2 \vec{i} + 5 \vec{j} + 3 \vec{k}. \end{split}\]</div>
+\[ (2, 5, 3) = 2 \mathbf{i} + 5 \mathbf{j} + 3 \mathbf{k}. \]</div>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="id2" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>

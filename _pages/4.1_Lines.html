@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/4.1_Lines';</script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
@@ -160,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="0.1_Teaching_schedule.html">Teaching schedule</a></li>
 <li class="toctree-l1"><a class="reference internal" href="0.3_Mathematical_preliminaries.html">Mathematical preliminaries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0.5_How_to_pass.html">How to pass the unit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0.5_How_to_pass.html">How to Pass the Module</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul class="current nav bd-sidenav">
@@ -398,52 +398,47 @@ document.write(`
 <div class="proof definition admonition" id="vector-equation-of-a-line-definition">
 <span id="index-1"></span><p class="admonition-title"><span class="caption-number">Definition 4.1 </span> (Vector equation of a line)</p>
 <section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(\vec{p}\)</span> be a position vector of a point in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> and <span class="math notranslate nohighlight">\(\vec{d}\)</span> a non-zero vector in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>. The line <span class="math notranslate nohighlight">\(\ell\)</span> <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> which passes through <span class="math notranslate nohighlight">\(\vec{p}\)</span> in the direction of <span class="math notranslate nohighlight">\(\vec{d}\)</span> has equation</p>
+<p>Let <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> be a position vector of a point in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> a non-zero vector in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>. The line <span class="math notranslate nohighlight">\(\ell\)</span> <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> which passes through <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> in the direction of <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> has equation</p>
 <div class="math notranslate nohighlight" id="equation-line-vector-equation">
-<span class="eqno">(4.1)<a class="headerlink" href="#equation-line-vector-equation" title="Permalink to this equation">#</a></span>\[ \vec{r} = \vec{p} + t\vec{d}, \]</div>
-<p>where <span class="math notranslate nohighlight">\(\vec{r}\)</span> is a point on <span class="math notranslate nohighlight">\(\ell\)</span> and <span class="math notranslate nohighlight">\(t \in \mathbb{R}\)</span> is a <strong>parameter</strong>.</p>
+<span class="eqno">(4.1)<a class="headerlink" href="#equation-line-vector-equation" title="Permalink to this equation">#</a></span>\[ \mathbf{r} = \mathbf{p} + t\mathbf{d}, \]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> is a point on <span class="math notranslate nohighlight">\(\ell\)</span> and <span class="math notranslate nohighlight">\(t \in \mathbb{R}\)</span> is a <strong>parameter</strong>.</p>
 </section>
-</div><p>In other words, every point on <span class="math notranslate nohighlight">\(\ell\)</span> is obtained by adding some scalar multiple of <span class="math notranslate nohighlight">\(\vec{d}\)</span> to <span class="math notranslate nohighlight">\(\vec{p}\)</span> (<a class="reference internal" href="#line-vector-equation-figure"><span class="std std-numref">Fig. 4.3</span></a>). So <span class="math notranslate nohighlight">\(\ell\)</span> is the line which passes through <span class="math notranslate nohighlight">\(\vec{p}\)</span> in the direction of <span class="math notranslate nohighlight">\(\vec{d}\)</span>. We call the vector <span class="math notranslate nohighlight">\(\vec{d}\)</span> a <strong>direction vector</strong> of the line.</p>
+</div><p>In other words, every point on <span class="math notranslate nohighlight">\(\ell\)</span> is obtained by adding some scalar multiple of <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> to <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> (<a class="reference internal" href="#line-vector-equation-figure"><span class="std std-numref">Fig. 4.3</span></a>). So <span class="math notranslate nohighlight">\(\ell\)</span> is the line which passes through <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> in the direction of <span class="math notranslate nohighlight">\(\mathbf{d}\)</span>. We call the vector <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> a <strong>direction vector</strong> of the line.</p>
 <figure class="align-default" id="line-vector-equation-figure">
 <a class="reference internal image-reference" href="../_images/4_vector_equation_of_a_line.svg"><img alt="../_images/4_vector_equation_of_a_line.svg" src="../_images/4_vector_equation_of_a_line.svg" width="500" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.3 </span><span class="caption-text">The position of any point on the line <span class="math notranslate nohighlight">\(\ell\)</span> can be obtained by adding a scalar multiple of <span class="math notranslate nohighlight">\(\vec{d}\)</span> to <span class="math notranslate nohighlight">\(\vec{p}\)</span>.</span><a class="headerlink" href="#line-vector-equation-figure" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.3 </span><span class="caption-text">The position of any point on the line <span class="math notranslate nohighlight">\(\ell\)</span> can be obtained by adding a scalar multiple of <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> to <span class="math notranslate nohighlight">\(\mathbf{p}\)</span>.</span><a class="headerlink" href="#line-vector-equation-figure" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The equation of the line that passes through the two points with position vectors <span class="math notranslate nohighlight">\(\vec{p}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{p}_2\)</span> can be determined by using <a class="reference internal" href="#equation-line-vector-equation">(4.1)</a> with <span class="math notranslate nohighlight">\(\vec{p} = \vec{p}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{d} = \vec{p}_2 - \vec{p}_1\)</span>. In particular, <span class="math notranslate nohighlight">\(\vec{d}\)</span> and <span class="math notranslate nohighlight">\(\vec{p}\)</span> are not unique and we can choose any point on the line for <span class="math notranslate nohighlight">\(\vec{p}\)</span> and non-zero scalar multiple of <span class="math notranslate nohighlight">\(\vec{d}\)</span> to express the same line. Take for instance the <span class="math notranslate nohighlight">\(x\)</span>-axis in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. <span class="math notranslate nohighlight">\(\ell\)</span> can be described as</p>
+<p>The equation of the line that passes through the two points with position vectors <span class="math notranslate nohighlight">\(\mathbf{p}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{p}_2\)</span> can be determined by using <a class="reference internal" href="#equation-line-vector-equation">(4.1)</a> with <span class="math notranslate nohighlight">\(\mathbf{p} = \mathbf{p}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d} = \mathbf{p}_2 - \mathbf{p}_1\)</span>. In particular, <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> are not unique and we can choose any point on the line for <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> and non-zero scalar multiple of <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> to express the same line. Take for instance the <span class="math notranslate nohighlight">\(x\)</span>-axis in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. <span class="math notranslate nohighlight">\(\ell\)</span> can be described as</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \vec{r} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix} + t \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} = \begin{pmatrix} t \\ 0 \\ 0 \end{pmatrix}, \end{split}\]</div>
-<p>which means we are taking <span class="math notranslate nohighlight">\(\vec{p} = (0,0,0)\)</span> and <span class="math notranslate nohighlight">\(\vec{d}=(1,0,0)\)</span> and for example the point with position vector <span class="math notranslate nohighlight">\(\vec{q} = (5,0,0)\)</span> is found when <span class="math notranslate nohighlight">\(t=5\)</span>. Alternatively we can describe the <span class="math notranslate nohighlight">\(x\)</span>-axis as</p>
+\[\begin{split} \mathbf{r} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix} + t \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} = \begin{pmatrix} t \\ 0 \\ 0 \end{pmatrix}, \end{split}\]</div>
+<p>which means we are taking <span class="math notranslate nohighlight">\(\mathbf{p} = (0,0,0)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}=(1,0,0)\)</span> and for example the point with position vector <span class="math notranslate nohighlight">\(\mathbf{q} = (5,0,0)\)</span> is found when <span class="math notranslate nohighlight">\(t=5\)</span>. Alternatively we can describe the <span class="math notranslate nohighlight">\(x\)</span>-axis as</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \vec{r} = \begin{pmatrix} 71 \\ 0 \\ 0 \end{pmatrix} + t \begin{pmatrix} 5 \\ 0 \\ 0 \end{pmatrix} = \begin{pmatrix} 71 + 5t \\ 0 \\ 0 \end{pmatrix}, \end{split}\]</div>
-<p>which means we are taking <span class="math notranslate nohighlight">\(\vec{p} = (71,0,0)\)</span> and <span class="math notranslate nohighlight">\(\vec{d} = (5,0,0)\)</span> and the point <span class="math notranslate nohighlight">\(\vec{q} = (5,0,0)\)</span> is found when <span class="math notranslate nohighlight">\(71 +5t = 5 \implies t = -66/5\)</span>.</p>
+\[\begin{split} \mathbf{r} = \begin{pmatrix} 71 \\ 0 \\ 0 \end{pmatrix} + t \begin{pmatrix} 5 \\ 0 \\ 0 \end{pmatrix} = \begin{pmatrix} 71 + 5t \\ 0 \\ 0 \end{pmatrix}, \end{split}\]</div>
+<p>which means we are taking <span class="math notranslate nohighlight">\(\mathbf{p} = (71,0,0)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d} = (5,0,0)\)</span> and the point <span class="math notranslate nohighlight">\(\mathbf{q} = (5,0,0)\)</span> is found when <span class="math notranslate nohighlight">\(71 +5t = 5 \implies t = -66/5\)</span>.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/r5WaA6IuOQY?si=jC6hElrFuCOx1WI1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <div class="proof example admonition" id="line-vector-equation-example">
 <p class="admonition-title"><span class="caption-number">Example 4.1 </span></p>
 <section class="example-content" id="proof-content">
-<p>Given a point with position vector <span class="math notranslate nohighlight">\(\vec{p} = (1, 0, 2, 1, 4)\)</span> and a direction vector <span class="math notranslate nohighlight">\(\vec{d} = (1, -1, 0, -1, 1)\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^5\)</span>, find the equation of the line <span class="math notranslate nohighlight">\(\ell\)</span> which passes through <span class="math notranslate nohighlight">\(\vec{p}\)</span> in the direction of <span class="math notranslate nohighlight">\(\vec{d}\)</span>.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<p>Given a point with position vector <span class="math notranslate nohighlight">\(\mathbf{p} = (1, 0, 2, 1, 4)\)</span> and a direction vector <span class="math notranslate nohighlight">\(\mathbf{d} = (1, -1, 0, -1, 1)\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^5\)</span>, find the equation of the line <span class="math notranslate nohighlight">\(\ell\)</span> which passes through <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> in the direction of <span class="math notranslate nohighlight">\(\mathbf{d}\)</span>.</p>
+<hr class="docutils" />
+<p><strong>Solution</strong></p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \vec{p} + t\vec{d}
+\[\begin{split} \mathbf{p} + t\mathbf{d}
 = \begin{pmatrix} 1 \\ 0 \\ 2 \\ 1 \\ 4 \end{pmatrix} + t
 \begin{pmatrix} 1 \\ -1 \\ 0 \\ -1 \\ 1 \end{pmatrix}
 = \begin{pmatrix} 1 + t \\ -t \\ 2 \\ 1 - t \\ 4 + t \end{pmatrix}. \end{split}\]</div>
-</div>
-</details></section>
-</div><span class="target" id="intersecting-lines-section"></span><section id="intersecting-lines">
+</section>
+</div><hr class="docutils" />
+<span class="target" id="intersecting-lines-section"></span><section id="intersecting-lines">
 <span id="index-2"></span><h2><span class="section-number">4.2.1. </span>Intersecting lines<a class="headerlink" href="#intersecting-lines" title="Permalink to this heading">#</a></h2>
 <div class="proof definition admonition" id="line-line-intersection-definition">
 <p class="admonition-title"><span class="caption-number">Definition 4.2 </span> (Intersection between two lines)</p>
 <section class="definition-content" id="proof-content">
-<p>Two lines <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> with corresponding vector equations <span class="math notranslate nohighlight">\(\vec{p}_1 + t_1\vec{d}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{p}_2 + t_2\vec{d}_2\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> <strong>intersect</strong> if there exists values of <span class="math notranslate nohighlight">\(t_1\)</span> and <span class="math notranslate nohighlight">\(t_2\)</span> such that</p>
+<p>Two lines <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> with corresponding vector equations <span class="math notranslate nohighlight">\(\mathbf{p}_1 + t_1\mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{p}_2 + t_2\mathbf{d}_2\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> <strong>intersect</strong> if there exists values of <span class="math notranslate nohighlight">\(t_1\)</span> and <span class="math notranslate nohighlight">\(t_2\)</span> such that</p>
 <div class="math notranslate nohighlight">
-\[ \vec{p}_1 + t_1 \vec{d}_1 = \vec{p}_2 + t_2 \vec{d}_2. \]</div>
+\[ \mathbf{p}_1 + t_1 \mathbf{d}_1 = \mathbf{p}_2 + t_2 \mathbf{d}_2. \]</div>
 <figure class="align-default" id="line-line-intersection-figure">
 <a class="reference internal image-reference" href="../_images/4_line_line_intersection.svg"><img alt="../_images/4_line_line_intersection.svg" src="../_images/4_line_line_intersection.svg" width="500" /></a>
 <figcaption>
@@ -457,58 +452,53 @@ Solution<div class="sd-summary-down docutils">
 <p class="admonition-title"><span class="caption-number">Example 4.2 </span></p>
 <section class="example-content" id="proof-content">
 <p>Three lines <span class="math notranslate nohighlight">\(\ell_1\)</span>, <span class="math notranslate nohighlight">\(\ell_2\)</span> and <span class="math notranslate nohighlight">\(\ell_3\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> are defined by the vector equations <span class="math notranslate nohighlight">\((1 + t_1, -3 + 2t_1, t_1)\)</span>, <span class="math notranslate nohighlight">\((6 - t_2, -5 + 2t_2, t_2 - 1)\)</span> and <span class="math notranslate nohighlight">\((6 + 2t_3, -11 + 2t_3, -2 - t_3)\)</span> respectively. Determine the points of intersection between the three lines (if possible).</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Equating <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> gives</p>
+<hr class="docutils" />
+<p><strong>Solution</strong></p>
+<p>Equating <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> gives</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     1 + t_1 &amp;= 6 - t_2, \\
     -3 + 2t_1 &amp;= -5 + 2t_2, \\
     t_1 &amp;= -1 + t_2.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">The third equation is <span class="math notranslate nohighlight">\(t_1 = t_2 - 1\)</span> and substituting into the first equation gives <span class="math notranslate nohighlight">\(t_2 = 3\)</span> so <span class="math notranslate nohighlight">\(t_1 = 2\)</span>. Substituting these into the second equation gives <span class="math notranslate nohighlight">\(-3 + 2(2) = -5 + 2(3)\)</span> which is <span class="math notranslate nohighlight">\(1 = 1\)</span> so <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> intersect. To find the point of intersection we substitute <span class="math notranslate nohighlight">\(t_1\)</span> or <span class="math notranslate nohighlight">\(t_2\)</span> into the equations for <span class="math notranslate nohighlight">\(\ell_1\)</span> or <span class="math notranslate nohighlight">\(\ell_2\)</span> respectively.</p>
+<p>The third equation is <span class="math notranslate nohighlight">\(t_1 = t_2 - 1\)</span> and substituting into the first equation gives <span class="math notranslate nohighlight">\(t_2 = 3\)</span> so <span class="math notranslate nohighlight">\(t_1 = 2\)</span>. Substituting these into the second equation gives <span class="math notranslate nohighlight">\(-3 + 2(2) = -5 + 2(3)\)</span> which is <span class="math notranslate nohighlight">\(1 = 1\)</span> so <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> intersect. To find the point of intersection we substitute <span class="math notranslate nohighlight">\(t_1\)</span> or <span class="math notranslate nohighlight">\(t_2\)</span> into the equations for <span class="math notranslate nohighlight">\(\ell_1\)</span> or <span class="math notranslate nohighlight">\(\ell_2\)</span> respectively.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} 1 + 2 \\ -3 + 2(2) \\ 2 \end{pmatrix}  &amp;= \begin{pmatrix} 3 \\ 1 \\ 2 \end{pmatrix}, \\
     \begin{pmatrix} 6 - 3 \\ -5 + 2(3) \\ 3 - 1 \end{pmatrix} &amp;= \begin{pmatrix} 3 \\ 1 \\ 2 \end{pmatrix}. \\
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">So <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> intersect at <span class="math notranslate nohighlight">\((3, 1, 2)\)</span>.</p>
-<p class="sd-card-text">Equating <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_3\)</span> gives</p>
+<p>So <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> intersect at <span class="math notranslate nohighlight">\((3, 1, 2)\)</span>.</p>
+<p>Equating <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_3\)</span> gives</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     1 + t_1 &amp;= 6 + t_3, \\
     -3 + 2t_1 &amp;= -11 + 2t_3, \\
     t_1 &amp;= -2 - t_3.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Substituting the third equation into the first equation gives <span class="math notranslate nohighlight">\(1 - 2 - t_3 = 6 + t_3\)</span> so <span class="math notranslate nohighlight">\(t_3 = -7/2\)</span> and <span class="math notranslate nohighlight">\(t_1 = -21/2\)</span>. Substituting these into the second equation gives <span class="math notranslate nohighlight">\(-3 + 2(-21/2) = -11 + 2(-7/2)\)</span> which is <span class="math notranslate nohighlight">\(-24 = -18\)</span> which is a contradiction so no values of <span class="math notranslate nohighlight">\(t_1\)</span> or <span class="math notranslate nohighlight">\(t_3\)</span> satisfy <span class="math notranslate nohighlight">\(\ell_1 = \ell_3\)</span> and <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_3\)</span> do not intersect.</p>
-<p class="sd-card-text">Equating <span class="math notranslate nohighlight">\(\ell_2\)</span> and <span class="math notranslate nohighlight">\(\ell_3\)</span> gives the system</p>
+<p>Substituting the third equation into the first equation gives <span class="math notranslate nohighlight">\(1 - 2 - t_3 = 6 + t_3\)</span> so <span class="math notranslate nohighlight">\(t_3 = -7/2\)</span> and <span class="math notranslate nohighlight">\(t_1 = -21/2\)</span>. Substituting these into the second equation gives <span class="math notranslate nohighlight">\(-3 + 2(-21/2) = -11 + 2(-7/2)\)</span> which is <span class="math notranslate nohighlight">\(-24 = -18\)</span> which is a contradiction so no values of <span class="math notranslate nohighlight">\(t_1\)</span> or <span class="math notranslate nohighlight">\(t_3\)</span> satisfy <span class="math notranslate nohighlight">\(\ell_1 = \ell_3\)</span> and <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_3\)</span> do not intersect.</p>
+<p>Equating <span class="math notranslate nohighlight">\(\ell_2\)</span> and <span class="math notranslate nohighlight">\(\ell_3\)</span> gives the system</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     6 - t_2 &amp;= 6 + 2t_3, \\
     -5 + 2t_2 &amp;= -11 + 2t_3, \\
     -1 + t_2 &amp;= -2 - t_3.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">The third equation gives <span class="math notranslate nohighlight">\(t_2 = -1 - t_3\)</span> and substituting into the first equation gives <span class="math notranslate nohighlight">\(6 + 1 + t_3 = 6 + 2t_3\)</span> so <span class="math notranslate nohighlight">\(t_3 = 1\)</span> and <span class="math notranslate nohighlight">\(t_2 = -2\)</span>. Substituting these into the second equation gives <span class="math notranslate nohighlight">\(-5 + 2(-2) = -11 + 2(1)\)</span> which is <span class="math notranslate nohighlight">\(-9 = -9\)</span> so <span class="math notranslate nohighlight">\(\ell_2\)</span> and <span class="math notranslate nohighlight">\(\ell_3\)</span> intersect. Substituting <span class="math notranslate nohighlight">\(t_2\)</span> and <span class="math notranslate nohighlight">\(t_3\)</span> into the equations for <span class="math notranslate nohighlight">\(\ell_2\)</span> and <span class="math notranslate nohighlight">\(\ell_3\)</span></p>
+<p>The third equation gives <span class="math notranslate nohighlight">\(t_2 = -1 - t_3\)</span> and substituting into the first equation gives <span class="math notranslate nohighlight">\(6 + 1 + t_3 = 6 + 2t_3\)</span> so <span class="math notranslate nohighlight">\(t_3 = 1\)</span> and <span class="math notranslate nohighlight">\(t_2 = -2\)</span>. Substituting these into the second equation gives <span class="math notranslate nohighlight">\(-5 + 2(-2) = -11 + 2(1)\)</span> which is <span class="math notranslate nohighlight">\(-9 = -9\)</span> so <span class="math notranslate nohighlight">\(\ell_2\)</span> and <span class="math notranslate nohighlight">\(\ell_3\)</span> intersect. Substituting <span class="math notranslate nohighlight">\(t_2\)</span> and <span class="math notranslate nohighlight">\(t_3\)</span> into the equations for <span class="math notranslate nohighlight">\(\ell_2\)</span> and <span class="math notranslate nohighlight">\(\ell_3\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} 6 - (-2) \\ -5 + 2(-2) \\ -1 + (-2) \end{pmatrix} &amp;= \begin{pmatrix} 8 \\ -9 \\ -3 \end{pmatrix}, \\
     \begin{pmatrix} 6 + 2(1) \\ -11 + 2(1) \\ -2 - 1 \end{pmatrix} &amp;= \begin{pmatrix} 8 \\ -9 \\ -3 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">So <span class="math notranslate nohighlight">\(\ell_2\)</span> and <span class="math notranslate nohighlight">\(\ell_3\)</span> intersect at <span class="math notranslate nohighlight">\((8, -9, -3)\)</span>.</p>
-</div>
-</details></section>
-</div></section>
+<p>So <span class="math notranslate nohighlight">\(\ell_2\)</span> and <span class="math notranslate nohighlight">\(\ell_3\)</span> intersect at <span class="math notranslate nohighlight">\((8, -9, -3)\)</span>.</p>
+</section>
+</div><hr class="docutils" />
+</section>
 <section id="parallel-lines">
 <span id="index-3"></span><h2><span class="section-number">4.2.2. </span>Parallel lines<a class="headerlink" href="#parallel-lines" title="Permalink to this heading">#</a></h2>
 <div class="proof definition admonition" id="parallel-lines-definition">
 <p class="admonition-title"><span class="caption-number">Definition 4.3 </span> (Parallel lines)</p>
 <section class="definition-content" id="proof-content">
-<p>Two lines <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> defined by the vector equations <span class="math notranslate nohighlight">\(\vec{r}_1 = \vec{p}_1 + t_1 \vec{d}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{r}_2 = \vec{p}_2 + t_2 \vec{d}_2\)</span> respectively are said to be <strong>parallel</strong> if their direction vectors are parallel, i.e., <span class="math notranslate nohighlight">\(\vec{d_1} = k\vec{d_2},\)</span> for some non-zero scalar <span class="math notranslate nohighlight">\(k\)</span> (<a class="reference internal" href="#parallel-lines-figure"><span class="std std-numref">Fig. 4.5</span></a>).</p>
+<p>Two lines <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> defined by the vector equations <span class="math notranslate nohighlight">\(\mathbf{r}_1 = \mathbf{p}_1 + t_1 \mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{r}_2 = \mathbf{p}_2 + t_2 \mathbf{d}_2\)</span> respectively are said to be <strong>parallel</strong> if their direction vectors are parallel, i.e., <span class="math notranslate nohighlight">\(\mathbf{d_1} = k\mathbf{d_2},\)</span> for some non-zero scalar <span class="math notranslate nohighlight">\(k\)</span> (<a class="reference internal" href="#parallel-lines-figure"><span class="std std-numref">Fig. 4.5</span></a>).</p>
 <figure class="align-default" id="parallel-lines-figure">
 <a class="reference internal image-reference" href="../_images/4_parallel_lines.svg"><img alt="../_images/4_parallel_lines.svg" src="../_images/4_parallel_lines.svg" width="500" /></a>
 <figcaption>
@@ -516,57 +506,44 @@ Solution<div class="sd-summary-down docutils">
 </figcaption>
 </figure>
 </section>
-</div><p>In practice the condition from the <a class="reference internal" href="#parallel-lines-definition">definition of parallel lines</a> can be verified as follows: two lines <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> are parallel if for any two distinct points <span class="math notranslate nohighlight">\(\vec{p}_1, \vec{p}_2 \in \ell_1\)</span> and any two distinct points <span class="math notranslate nohighlight">\(\vec{q}_1, \vec{q}_2 \in \ell_2\)</span></p>
+</div><p>In practice the condition from the <a class="reference internal" href="#parallel-lines-definition">definition of parallel lines</a> can be verified as follows: two lines <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> are parallel if for any two distinct points <span class="math notranslate nohighlight">\(\mathbf{p}_1, \mathbf{p}_2 \in \ell_1\)</span> and any two distinct points <span class="math notranslate nohighlight">\(\mathbf{q}_1, \mathbf{q}_2 \in \ell_2\)</span></p>
 <div class="math notranslate nohighlight">
-\[ \vec{p}_2 - \vec{p}_1 = k(\vec{q}_2 - \vec{q}_1), \]</div>
+\[ \mathbf{p}_2 - \mathbf{p}_1 = k(\mathbf{q}_2 - \mathbf{q}_1), \]</div>
 <p>for some non-zero <span class="math notranslate nohighlight">\(k \in \mathbb{R}\)</span>.</p>
 <div class="proof example admonition" id="parallel-lines-example">
 <p class="admonition-title"><span class="caption-number">Example 4.3 </span></p>
 <section class="example-content" id="proof-content">
 <p><span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> are two lines in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> be defined by <span class="math notranslate nohighlight">\(\{(x,y,z) : z = x+1, y=0\}\)</span> and <span class="math notranslate nohighlight">\(\{(x,y,z) : z = -x-1, y=3\}\)</span>.</p>
-<p>(i)   Write equations for <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> in vector form;</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">To calculate the direction vector <span class="math notranslate nohighlight">\(\vec{d}\)</span> we need two points on the line. Choosing <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(x=1\)</span> then we have the two points with position vectors <span class="math notranslate nohighlight">\(\vec{p}_1 = (0, 0, 1)\)</span> and <span class="math notranslate nohighlight">\(\vec{p}_2 = (1, 0, 2)\)</span> on <span class="math notranslate nohighlight">\(\ell_1\)</span>. Therefore</p>
+<p>(i)   Write equations for <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> in vector form</p>
+<p>(ii)   Show that these lines are not parallel in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span></p>
+<hr class="docutils" />
+<p><strong>Solution</strong></p>
+<p>(i)   To calculate the direction vector <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> we need two points on the line. Choosing <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(x=1\)</span> then we have the two points with position vectors <span class="math notranslate nohighlight">\(\mathbf{p}_1 = (0, 0, 1)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{p}_2 = (1, 0, 2)\)</span> on <span class="math notranslate nohighlight">\(\ell_1\)</span>. Therefore</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \vec{d} = \vec{p}_2 - \vec{p}_1 = \begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix} - 
+    \mathbf{d} = \mathbf{p}_2 - \mathbf{p}_1 = \begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix} - 
     \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} =
     \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix},
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">so the equation of <span class="math notranslate nohighlight">\(\ell_1\)</span> is</p>
+<p>so the equation of <span class="math notranslate nohighlight">\(\ell_1\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \vec{r}_1 = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} + t \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} = \begin{pmatrix} t \\ 0 \\ 1 + t \end{pmatrix}.
+    \mathbf{r}_1 = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} + t \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} = \begin{pmatrix} t \\ 0 \\ 1 + t \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Doing similar for <span class="math notranslate nohighlight">\(\ell_2\)</span> we have <span class="math notranslate nohighlight">\(\vec{p}_1 = (0, 3, -1)\)</span>, <span class="math notranslate nohighlight">\(\vec{p}_2 = (1, 3, -2)\)</span> so</p>
+<p>Doing similar for <span class="math notranslate nohighlight">\(\ell_2\)</span> we have <span class="math notranslate nohighlight">\(\mathbf{p}_1 = (0, 3, -1)\)</span>, <span class="math notranslate nohighlight">\(\mathbf{p}_2 = (1, 3, -2)\)</span> so</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \vec{d} = \vec{p}_2 - \vec{p}_1 = 
+    \mathbf{d} = \mathbf{p}_2 - \mathbf{p}_1 = 
     \begin{pmatrix} 1 \\ 3 \\ -2 \end{pmatrix} - 
     \begin{pmatrix} 0 \\ 3 \\ -1 \end{pmatrix} =
     \begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix},
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">so the equation of <span class="math notranslate nohighlight">\(\ell_2\)</span> is</p>
+<p>so the equation of <span class="math notranslate nohighlight">\(\ell_2\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \vec{r}_2 = \begin{pmatrix} 0 \\ 3 \\ -1 \end{pmatrix} + t \begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix} = \begin{pmatrix} t \\ 3 \\ -1 -t \end{pmatrix}.
+    \mathbf{r}_2 = \begin{pmatrix} 0 \\ 3 \\ -1 \end{pmatrix} + t \begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix} = \begin{pmatrix} t \\ 3 \\ -1 -t \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-</div>
-</details><p>(ii)   show that these lines are not parallel in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">To verify if the two lines are parallel we do not need to know their equations, just their direction vectors. From <a class="reference internal" href="#parallel-lines-definition">the definition of parallel lines</a>, <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> are parallel if <span class="math notranslate nohighlight">\(\vec{d}_1 = k\vec{d}_2\)</span>, therefore</p>
+<p>(ii)   To verify if the two lines are parallel we do not need to know their equations, just their direction vectors. From <a class="reference internal" href="#parallel-lines-definition">the definition of parallel lines</a>, <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> are parallel if <span class="math notranslate nohighlight">\(\mathbf{d}_1 = k\mathbf{d}_2\)</span>, therefore</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} &amp;= k
@@ -577,10 +554,10 @@ Solution<div class="sd-summary-down docutils">
         k = -1
     \end{matrix}
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Here we have a contradiction so no value of <span class="math notranslate nohighlight">\(k\)</span> exists to satisfy <span class="math notranslate nohighlight">\(\vec{d}_1 = k\vec{d}_2\)</span> so <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> are not parallel.</p>
-</div>
-</details></section>
-</div></section>
+<p>Here we have a contradiction so no value of <span class="math notranslate nohighlight">\(k\)</span> exists to satisfy <span class="math notranslate nohighlight">\(\mathbf{d}_1 = k\mathbf{d}_2\)</span> so <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> are not parallel.</p>
+</section>
+</div><hr class="docutils" />
+</section>
 <section id="skew-lines">
 <span id="index-4"></span><h2><span class="section-number">4.2.3. </span>Skew lines<a class="headerlink" href="#skew-lines" title="Permalink to this heading">#</a></h2>
 <div class="proof definition admonition" id="skew-lines-definition">
@@ -598,80 +575,61 @@ Solution<div class="sd-summary-down docutils">
 <p class="admonition-title"><span class="caption-number">Example 4.4 </span></p>
 <section class="example-content" id="proof-content">
 <p>Show that the lines <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> from <a class="reference internal" href="#parallel-lines-example">Example 4.3</a> are skew lines.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">We have shown in <a class="reference internal" href="#parallel-lines-example">Example 4.3</a> that <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> are not parallel. Therefore to we need to show that they do not intersect. Equating <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> gives</p>
+<hr class="docutils" />
+<p><strong>Solution</strong></p>
+<p>We have shown in <a class="reference internal" href="#parallel-lines-example">Example 4.3</a> that <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> are not parallel. Therefore to we need to show that they do not intersect. Equating <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> gives</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     t_1 &amp;= t_2, \\
     0 &amp;= 3, \\
     -1 &amp;= -1 - t_2.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Here the second equation is a contradiction so this system is inconsistent and the lines <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> do not intersect. Since <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> are not parallel and do not intersect then they must be skew.</p>
-</div>
-</details></section>
-</div></section>
+<p>Here the second equation is a contradiction so this system is inconsistent and the lines <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> do not intersect. Since <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> are not parallel and do not intersect then they must be skew.</p>
+</section>
+</div><hr class="docutils" />
+</section>
 <section id="perpendicular-lines">
 <span id="index-5"></span><h2><span class="section-number">4.2.4. </span>Perpendicular lines<a class="headerlink" href="#perpendicular-lines" title="Permalink to this heading">#</a></h2>
 <div class="proof definition admonition" id="perpendicular-lines-definition">
 <p class="admonition-title"><span class="caption-number">Definition 4.5 </span> (Perpendicular lines)</p>
 <section class="definition-content" id="proof-content">
-<p>Two lines, <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span>, are <strong>perpendicular</strong> if their direction vectors <span class="math notranslate nohighlight">\(\vec{d}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{d}_2\)</span> respectively are at right angles. We denote this using <span class="math notranslate nohighlight">\(\ell_1 \perp \ell_2\)</span>. In <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> two lines are perpendicular if and only if their direction vectors are perpendicular, which happens precisely when their dot product is zero.</p>
+<p>Two lines, <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span>, are <strong>perpendicular</strong> if their direction vectors <span class="math notranslate nohighlight">\(\mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}_2\)</span> respectively are at right angles. We denote this using <span class="math notranslate nohighlight">\(\ell_1 \perp \ell_2\)</span>. In <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> two lines are perpendicular if and only if their direction vectors are perpendicular, which happens precisely when their dot product is zero.</p>
 </section>
 </div><div class="proof example admonition" id="perpendicular-lines-example">
 <p class="admonition-title"><span class="caption-number">Example 4.5 </span></p>
 <section class="example-content" id="proof-content">
 <p>(i)   Determine whether the two lines from <a class="reference internal" href="#parallel-lines-example">Example 4.3</a> are perpendicular.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The direction vectors were <span class="math notranslate nohighlight">\(\vec{d}_1 = (1, 0, 1)\)</span> and <span class="math notranslate nohighlight">\(\vec{d}_2 = (1, 0, -1)\)</span></p>
+<p>(ii)   Find the equation of a line <span class="math notranslate nohighlight">\(\ell_2\)</span> which is perpendicular to <span class="math notranslate nohighlight">\((t,-t,1+t)\)</span> at the point with position vector <span class="math notranslate nohighlight">\(\mathbf{p} = (-1,1,0)\)</span>.</p>
+<hr class="docutils" />
+<p><strong>Solution</strong></p>
+<p>(i)   The direction vectors were <span class="math notranslate nohighlight">\(\mathbf{d}_1 = (1, 0, 1)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}_2 = (1, 0, -1)\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \vec{d}_1 \cdot \vec{d}_2 = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} \cdot
+    \mathbf{d}_1 \cdot \mathbf{d}_2 = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} \cdot
     \begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix} = 1 + 0 + (-1) = 0.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">So <span class="math notranslate nohighlight">\(\ell_1 \perp \ell_2\)</span>.</p>
-</div>
-</details><p>(ii)   Find the equation of a line <span class="math notranslate nohighlight">\(\ell_2\)</span> which is perpendicular to <span class="math notranslate nohighlight">\((t,-t,1+t)\)</span> at the point with position vector <span class="math notranslate nohighlight">\(\vec{p} = (-1,1,0)\)</span>.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Writing the line <span class="math notranslate nohighlight">\((t,-t,1+t)\)</span> in the form <span class="math notranslate nohighlight">\(\vec{p}_1 + t \vec{d}_1\)</span> we have</p>
+<p>So <span class="math notranslate nohighlight">\(\ell_1 \perp \ell_2\)</span>.</p>
+<p>(ii)   Writing the line <span class="math notranslate nohighlight">\((t,-t,1+t)\)</span> in the form <span class="math notranslate nohighlight">\(\mathbf{p}_1 + t \mathbf{d}_1\)</span> we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \vec{p}_1 &amp;= \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}, &amp;
-    \vec{d}_1 &amp;= \begin{pmatrix} 1 \\ -1 \\ 1 \end{pmatrix}.
+    \mathbf{p}_1 &amp;= \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}, &amp;
+    \mathbf{d}_1 &amp;= \begin{pmatrix} 1 \\ -1 \\ 1 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">To find a direction vector perpendicular to <span class="math notranslate nohighlight">\(\vec{d}_1\)</span>, <span class="math notranslate nohighlight">\(\vec{d}_2\)</span> say, we need to satisfy <span class="math notranslate nohighlight">\(\vec{d}_1 \cdot \vec{d}_2 = 0\)</span></p>
+<p>To find a direction vector perpendicular to <span class="math notranslate nohighlight">\(\mathbf{d}_1\)</span>, <span class="math notranslate nohighlight">\(\mathbf{d}_2\)</span> say, we need to satisfy <span class="math notranslate nohighlight">\(\mathbf{d}_1 \cdot \mathbf{d}_2 = 0\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \begin{pmatrix} 1 \\ -1 \\ 1 \end{pmatrix}  \cdot \vec{d}_2 = 
+    \begin{pmatrix} 1 \\ -1 \\ 1 \end{pmatrix}  \cdot \mathbf{d}_2 = 
     \begin{pmatrix} 1 \\ -1 \\ 1 \end{pmatrix} \cdot 
     \begin{pmatrix} d_1 \\ d_2 \\ d_3 \end{pmatrix} = d_1 - d_2 + d_3 = 0.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">This equation has infinitely many solutions, to find a solution we need to choose values for any two from <span class="math notranslate nohighlight">\(d_1\)</span> ,<span class="math notranslate nohighlight">\(d_2\)</span> and <span class="math notranslate nohighlight">\(d_3\)</span> (where at least one is non-zero). Let <span class="math notranslate nohighlight">\(d_1 = 1\)</span> and <span class="math notranslate nohighlight">\(d_2 = 0\)</span> then <span class="math notranslate nohighlight">\(d_3 = -1\)</span> so <span class="math notranslate nohighlight">\(\vec{d}_2 = (1, 0, -1)\)</span>. Since <span class="math notranslate nohighlight">\(\ell_2\)</span> passes through <span class="math notranslate nohighlight">\(\vec{p} = (-1, 1, 0)\)</span> and the equation of <span class="math notranslate nohighlight">\(\ell_2\)</span> is</p>
+<p>This equation has infinitely many solutions, to find a solution we need to choose values for any two from <span class="math notranslate nohighlight">\(d_1\)</span> ,<span class="math notranslate nohighlight">\(d_2\)</span> and <span class="math notranslate nohighlight">\(d_3\)</span> (where at least one is non-zero). Let <span class="math notranslate nohighlight">\(d_1 = 1\)</span> and <span class="math notranslate nohighlight">\(d_2 = 0\)</span> then <span class="math notranslate nohighlight">\(d_3 = -1\)</span> so <span class="math notranslate nohighlight">\(\mathbf{d}_2 = (1, 0, -1)\)</span>. Since <span class="math notranslate nohighlight">\(\ell_2\)</span> passes through <span class="math notranslate nohighlight">\(\mathbf{p} = (-1, 1, 0)\)</span> and the equation of <span class="math notranslate nohighlight">\(\ell_2\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix} + t
     \begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix} = 
     \begin{pmatrix} -1 + t \\ 1 \\ -t \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-</div>
-</details></section>
+</section>
 </div><p>The notion of perpendicularity does not necessarily require that the lines intersect. The only condition is that the direction vectors of lines are perpendicular.</p>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="id2" role="note">

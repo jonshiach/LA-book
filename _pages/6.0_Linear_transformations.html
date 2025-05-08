@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/6.0_Linear_transformations';</script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
@@ -160,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="0.1_Teaching_schedule.html">Teaching schedule</a></li>
 <li class="toctree-l1"><a class="reference internal" href="0.3_Mathematical_preliminaries.html">Mathematical preliminaries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0.5_How_to_pass.html">How to pass the unit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0.5_How_to_pass.html">How to Pass the Module</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul class="current nav bd-sidenav">
@@ -382,91 +382,79 @@ document.write(`
   <span class="target" id="linear-transformations-chapter"></span><section class="tex2jax_ignore mathjax_ignore" id="linear-transformations">
 <span id="index-0"></span><h1><span class="section-number">6. </span>Linear Transformations<a class="headerlink" href="#linear-transformations" title="Permalink to this heading">#</a></h1>
 <p>You will already be familiar with the use of <a href="https://en.wikipedia.org/wiki/Function_(mathematics)" target="_blank">functions</a> in mathematics to study sets and the <strong>mapping</strong> from a set of inputs set to another set of outputs. The notation used to denote functions is of the form <span class="math notranslate nohighlight">\(f: X \to Y\)</span> where <span class="math notranslate nohighlight">\(f\)</span> is the name of the function, <span class="math notranslate nohighlight">\(X\)</span> is the set of inputs known as the <strong>domain</strong> and <span class="math notranslate nohighlight">\(Y\)</span> is a member of the set of outputs known as the <strong>codomain</strong>. The mapping which defines the relationship between the domain and codmain is defined using <span class="math notranslate nohighlight">\(y = f(x)\)</span> where <span class="math notranslate nohighlight">\(x\)</span> is a member of the domain and <span class="math notranslate nohighlight">\(y\)</span> is a member of the codomain.</p>
-<p>In linear algebra we study the linear mapping of a set of vectors to another set of vectors so we define <span class="math notranslate nohighlight">\(T: V \to W\)</span> where <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(W\)</span> are vector spaces and the mapping from an input vector <span class="math notranslate nohighlight">\(\vec{u} \in V\)</span> to an output vector <span class="math notranslate nohighlight">\(\vec{w} \in W\)</span> is given by <span class="math notranslate nohighlight">\(\vec{w} = T(\vec{u})\)</span>.</p>
+<p>In linear algebra we study the linear mapping of a set of vectors to another set of vectors so we define <span class="math notranslate nohighlight">\(T: V \to W\)</span> where <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(W\)</span> are vector spaces and the mapping from an input vector <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> to an output vector <span class="math notranslate nohighlight">\(\mathbf{w} \in W\)</span> is given by <span class="math notranslate nohighlight">\(\mathbf{w} = T(\mathbf{u})\)</span>.</p>
 <p>Linear transformations have lots of uses in mathematics and computing. A good example is in the field of computer graphics and computer games where they are fundamental to the manipulation and visualisation of three-dimensional objects.</p>
 <p>We begin with the formal definition of a linear transformation.</p>
 <div class="proof definition admonition" id="linear-transformation-definition">
 <p class="admonition-title"><span class="caption-number">Definition 6.1 </span> (Linear transformation)</p>
 <section class="definition-content" id="proof-content">
-<p>If <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(W\)</span> are two vector spaces over the same field <span class="math notranslate nohighlight">\(F\)</span> then by a <strong>linear transformation</strong> (or <strong>linear mapping</strong>) is a mapping <span class="math notranslate nohighlight">\(T: V \to W\)</span> that for any two vectors <span class="math notranslate nohighlight">\(\vec{u}, \vec{v} \in V\)</span> and any scalar <span class="math notranslate nohighlight">\(\alpha \in F\)</span> the following conditions hold</p>
+<p>If <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(W\)</span> are two vector spaces over the same field <span class="math notranslate nohighlight">\(F\)</span> then by a <strong>linear transformation</strong> (or <strong>linear mapping</strong>) is a mapping <span class="math notranslate nohighlight">\(T: V \to W\)</span> that for any two vectors <span class="math notranslate nohighlight">\(\mathbf{u}, \mathbf{v} \in V\)</span> and any scalar <span class="math notranslate nohighlight">\(\alpha \in F\)</span> the following conditions hold</p>
 <ul class="simple">
-<li><p>addition operation: <span class="math notranslate nohighlight">\(T(\vec{u} + \vec{v}) = T(\vec{u}) + T(\vec{v})\)</span>;</p></li>
-<li><p>scalar multiplication:  <span class="math notranslate nohighlight">\(T(\alpha \vec{u}) = \alpha T(\vec{u})\)</span>.</p></li>
+<li><p>addition operation: <span class="math notranslate nohighlight">\(T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})\)</span>;</p></li>
+<li><p>scalar multiplication:  <span class="math notranslate nohighlight">\(T(\alpha \mathbf{u}) = \alpha T(\mathbf{u})\)</span>.</p></li>
 </ul>
 <p>The result of applying a linear transformation to an object is known as the <strong>image</strong>.</p>
 </section>
-</div><p>For example, let <span class="math notranslate nohighlight">\(V = \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(W = \mathbb{R}^3\)</span> then <span class="math notranslate nohighlight">\(T : V \to W\)</span> defined by <span class="math notranslate nohighlight">\(T : (x, y) \mapsto (x, y, 0)\)</span> is a linear transformation. Let <span class="math notranslate nohighlight">\(\vec{u} = (u_1, u_2), \vec{v} = (v_1, v_2) \in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
+</div><p>For example, let <span class="math notranslate nohighlight">\(V = \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(W = \mathbb{R}^3\)</span> then <span class="math notranslate nohighlight">\(T : V \to W\)</span> defined by <span class="math notranslate nohighlight">\(T : (x, y) \mapsto (x, y, 0)\)</span> is a linear transformation. Let <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2), \mathbf{v} = (v_1, v_2) \in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    T (\vec{u} + \vec{v}) 
+    T (\mathbf{u} + \mathbf{v}) 
     &amp;= T \begin{pmatrix} u_1 + v_1 \\ u_2 + v_2 \end{pmatrix}
     = \begin{pmatrix} u_1 + v_1 \\ u_2 + v_2 \\ 0 \end{pmatrix}, \\
-    T (\vec{u}) + T(\vec{v}) &amp;= 
+    T (\mathbf{u}) + T(\mathbf{v}) &amp;= 
     \begin{pmatrix} u_1 \\ u_2 \\ 0 \end{pmatrix} + \begin{pmatrix} v_1 \\ v_2 \\ 0 \end{pmatrix}
     = \begin{pmatrix} u_1 + v_1 \\ u_2 + v_2 \\ 0 \end{pmatrix},
 \end{align*} \end{split}\]</div>
-<p>so <span class="math notranslate nohighlight">\(T(\vec{u} + \vec{v}) = T(\vec{u}) + T(\vec{v})\)</span> and the addition condition is satisfied. Similarly</p>
+<p>so <span class="math notranslate nohighlight">\(T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})\)</span> and the addition condition is satisfied. Similarly</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*} 
-    T(\alpha \vec{u})
+    T(\alpha \mathbf{u})
     &amp;= T \begin{pmatrix} \alpha u_1 \\ \alpha u_2 \end{pmatrix} 
     = \begin{pmatrix} \alpha u_1 \\ \alpha u_2 \\ 0 \end{pmatrix}, \\
-    \alpha T(\vec{u}) &amp;= \alpha \begin{pmatrix} u_1 \\ u_2 \\ 0 \end{pmatrix}
+    \alpha T(\mathbf{u}) &amp;= \alpha \begin{pmatrix} u_1 \\ u_2 \\ 0 \end{pmatrix}
     = \begin{pmatrix} \alpha u_1 \\ \alpha u_2 \\ 0 \end{pmatrix},
 \end{align*} \end{split}\]</div>
-<p>so <span class="math notranslate nohighlight">\(T(\alpha \vec{u}) = \alpha T(\vec{u})\)</span> and the scalar multiplication condition is satisfied and combined with the addition condition we have shown that <span class="math notranslate nohighlight">\(T\)</span> is a linear transformation. We can combine the addition and scalar multiplication conditions to give a single condition.</p>
+<p>so <span class="math notranslate nohighlight">\(T(\alpha \mathbf{u}) = \alpha T(\mathbf{u})\)</span> and the scalar multiplication condition is satisfied and combined with the addition condition we have shown that <span class="math notranslate nohighlight">\(T\)</span> is a linear transformation. We can combine the addition and scalar multiplication conditions to give a single condition.</p>
 <div class="proof definition admonition" id="linear-transformation-condition -definition">
 <p class="admonition-title"><span class="caption-number">Definition 6.2 </span> (Linear transformation condition)</p>
 <section class="definition-content" id="proof-content">
-<p>A transformation <span class="math notranslate nohighlight">\(T : V \to W\)</span> is a linear transformation if the following condition is satisfied for any <span class="math notranslate nohighlight">\(\vec{u}, \vec{v} \in V\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span></p>
+<p>A transformation <span class="math notranslate nohighlight">\(T : V \to W\)</span> is a linear transformation if the following condition is satisfied for any <span class="math notranslate nohighlight">\(\mathbf{u}, \mathbf{v} \in V\)</span> and <span class="math notranslate nohighlight">\(\alpha \in F\)</span></p>
 <div class="math notranslate nohighlight" id="equation-linear-transformation-condition-equation">
-<span class="eqno">(6.1)<a class="headerlink" href="#equation-linear-transformation-condition-equation" title="Permalink to this equation">#</a></span>\[ T(\vec{u} + \alpha \vec{v}) = T(\vec{u}) + \alpha T(\vec{v}). \]</div>
+<span class="eqno">(6.1)<a class="headerlink" href="#equation-linear-transformation-condition-equation" title="Permalink to this equation">#</a></span>\[ T(\mathbf{u} + \alpha \mathbf{v}) = T(\mathbf{u}) + \alpha T(\mathbf{v}). \]</div>
 </section>
 </div><div class="proof example admonition" id="linear-transformation-example">
 <p class="admonition-title"><span class="caption-number">Example 6.1 </span></p>
 <section class="example-content" id="proof-content">
 <p>Determine which of the following transformations are linear transformations</p>
 <p>(i)   <span class="math notranslate nohighlight">\(T: \mathbb{R}^3 \to \mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(T: (x, y, z) \mapsto (x, y)\)</span></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(\vec{u} = (u_1, u_2, u_3), \vec{v} = (v_1, v_2, v_3) \in \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
+<p>(ii)   <span class="math notranslate nohighlight">\(T: \mathbb{R}^3 \to \mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(T: (x, y, z) \mapsto (x + 3, y)\)</span></p>
+<p>(iii)   <span class="math notranslate nohighlight">\(T: P(\mathbb{R}) \to P(\mathbb{R})\)</span> defined by <span class="math notranslate nohighlight">\(T: p \mapsto p \dfrac{\mathrm{d}p}{\mathrm{d}x}\)</span></p>
+<hr class="docutils" />
+<p><strong>Solution</strong></p>
+<p>(i)   Let <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2, u_3), \mathbf{v} = (v_1, v_2, v_3) \in \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    T(\vec{u} + \alpha \vec{v}) &amp;= T\left(
+    T(\mathbf{u} + \alpha \mathbf{v}) &amp;= T\left(
         \begin{pmatrix} u_1 \\ u_2 \\ u_3 \end{pmatrix} + \alpha
         \begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix}
     \right)
     = T \begin{pmatrix} u_1 + \alpha v_1 \\ u_2 + \alpha v_2 \\ u_3 + \alpha v_3 \end{pmatrix}
     = \begin{pmatrix} u_1 + \alpha v_1 \\  u_2 + \alpha v_2 \end{pmatrix}, \\
-    T(\vec{u}) + \alpha T(\vec{v}) &amp;= T
+    T(\mathbf{u}) + \alpha T(\mathbf{v}) &amp;= T
     \begin{pmatrix} u_1 \\ u_2 \\ u_3 \end{pmatrix} + \alpha T
     \begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix} =
     \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} + \alpha
     \begin{pmatrix} v_1 \\ v_2 \end{pmatrix} =
     \begin{pmatrix} u_1 + \alpha v_1 \\ u_2 + \alpha v_2 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(T(\vec{u} + \alpha \vec{v}) = T(\vec{u}) + \alpha T(\vec{v})\)</span> then <span class="math notranslate nohighlight">\(T: (x, y, z) \mapsto (x, y)\)</span> is a linear transformation.</p>
-</div>
-</details><p>(ii)   <span class="math notranslate nohighlight">\(T: \mathbb{R}^3 \to \mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(T: (x, y, z) \mapsto (x + 3, y)\)</span></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(\vec{u} = (u_1, u_2, u_3), \vec{v} = (v_1, v_2, v_3) \in \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
+<p>Since <span class="math notranslate nohighlight">\(T(\mathbf{u} + \alpha \mathbf{v}) = T(\mathbf{u}) + \alpha T(\mathbf{v})\)</span> then <span class="math notranslate nohighlight">\(T: (x, y, z) \mapsto (x, y)\)</span> is a linear transformation.</p>
+<p>(ii)   Let <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2, u_3), \mathbf{v} = (v_1, v_2, v_3) \in \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    T(\vec{u} + \alpha \vec{v}) &amp;= T 
+    T(\mathbf{u} + \alpha \mathbf{v}) &amp;= T 
     \begin{pmatrix} u_1 + \alpha v_1 \\ u_2 + \alpha v_2 \\ u_3 + \alpha v_3 \end{pmatrix} 
     = \begin{pmatrix} u_1 + \alpha v_1 + 3 \\ u_2 + \alpha v_2 \end{pmatrix}, \\
-    T(\vec{u}) + \alpha T(\vec{v}) &amp;= T
+    T(\mathbf{u}) + \alpha T(\mathbf{v}) &amp;= T
     \begin{pmatrix} u_1 \\ u_2 \\ u_3 \end{pmatrix} + \alpha T
     \begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix} =
     \begin{pmatrix} u_1 + 3 \\ u_2 \end{pmatrix} + \alpha
@@ -474,35 +462,25 @@ Solution<div class="sd-summary-down docutils">
     = 
     \begin{pmatrix} u_1 + v_1 + 3 + 3\alpha \\ u_2 + \alpha v_2 \end{pmatrix}
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(T(\vec{u} + \alpha \vec{v}) \neq T(\vec{u}) + \alpha T(\vec{v})\)</span> then <span class="math notranslate nohighlight">\(T: (x, y, z) \mapsto (x + 3, y)\)</span> is not a linear transformation.</p>
-<p class="sd-card-text">Note that we could have shown this by a counterexample, e.g., let <span class="math notranslate nohighlight">\(\vec{u} = ( 1, 0 , 0 ), \vec{v} = (2, 0, 0) \in \mathbb{R}^3\)</span> then</p>
+<p>Since <span class="math notranslate nohighlight">\(T(\mathbf{u} + \alpha \mathbf{v}) \neq T(\mathbf{u}) + \alpha T(\mathbf{v})\)</span> then <span class="math notranslate nohighlight">\(T: (x, y, z) \mapsto (x + 3, y)\)</span> is not a linear transformation.</p>
+<p>Note that we could have shown this by a counterexample, e.g., let <span class="math notranslate nohighlight">\(\mathbf{u} = ( 1, 0 , 0 ), \mathbf{v} = (2, 0, 0) \in \mathbb{R}^3\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    T(\vec{u} + \vec{v}) &amp;= T
+    T(\mathbf{u} + \mathbf{v}) &amp;= T
     \begin{pmatrix} 3 \\ 0 \\ 0 \end{pmatrix} 
     = \begin{pmatrix} 6 \\ 0 \end{pmatrix}, \\
-    T(\vec{u}) + T(\vec{v}) &amp;=
+    T(\mathbf{u}) + T(\mathbf{v}) &amp;=
     \begin{pmatrix} 4 \\ 0 \\ 0 \end{pmatrix} + \begin{pmatrix} 5 \\ 0 \\ 0 \end{pmatrix}
     = \begin{pmatrix} 9 \\ 0 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-</div>
-</details><p>(iii)   <span class="math notranslate nohighlight">\(T: P(\mathbb{R}) \to P(\mathbb{R})\)</span> defined by <span class="math notranslate nohighlight">\(T: p \mapsto p \dfrac{\mathrm{d}p}{\mathrm{d}x}\)</span></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Let <span class="math notranslate nohighlight">\(u = x \in P(\mathbb{R})\)</span> then</p>
+<p>(iii)   Let <span class="math notranslate nohighlight">\(u = x \in P(\mathbb{R})\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     T(2u) &amp;= T(2x) = 2x(2) = 4x, \\
     2T(u) &amp;= 2T(x) = 2(x)(1) = 2x,
 \end{align*}  \end{split}\]</div>
-<p class="sd-card-text">therefore <span class="math notranslate nohighlight">\(T(2u) \neq 2T(u)\)</span> and <span class="math notranslate nohighlight">\(T: p \mapsto p \dfrac{\mathrm{d}p}{\mathrm{d}x}\)</span> is not a linear transformation.</p>
-</div>
-</details></section>
+<p>therefore <span class="math notranslate nohighlight">\(T(2u) \neq 2T(u)\)</span> and <span class="math notranslate nohighlight">\(T: p \mapsto p \dfrac{\mathrm{d}p}{\mathrm{d}x}\)</span> is not a linear transformation.</p>
+</section>
 </div><span class="target" id="transformation-matrix-section"></span><div class="toctree-wrapper compound" id="index-1">
 </div>
 </section>

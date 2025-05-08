@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/1.2_Matrix_multiplication';</script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
@@ -160,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="0.1_Teaching_schedule.html">Teaching schedule</a></li>
 <li class="toctree-l1"><a class="reference internal" href="0.3_Mathematical_preliminaries.html">Mathematical preliminaries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0.5_How_to_pass.html">How to pass the unit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0.5_How_to_pass.html">How to Pass the Module</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul class="current nav bd-sidenav">
@@ -398,7 +398,7 @@ document.write(`
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix and <span class="math notranslate nohighlight">\(B\)</span> a <span class="math notranslate nohighlight">\(p \times q\)</span> matrix, the product <span class="math notranslate nohighlight">\(AB\)</span> is defined as</p>
 <div class="math notranslate nohighlight" id="equation-matrix-multiplication-equation">
 <span class="eqno">(1.4)<a class="headerlink" href="#equation-matrix-multiplication-equation" title="Permalink to this equation">#</a></span>\[ [AB]_{ij} = \sum_{k=1}^n a_{ik}b_{kj}. \]</div>
-<p>The product <span class="math notranslate nohighlight">\(AB\)</span> is only defined if the number of columns in the first matrix is the same as the number of rows in the second matrix, i.e., <span class="math notranslate nohighlight">\(n = p\)</span>, and the resulting matrix has the same number of rows as the first matrix and the same number of columnbs of the second matrix, i.e., a <span class="math notranslate nohighlight">\(m \times q\)</span> matrix.</p>
+<p>The product <span class="math notranslate nohighlight">\(AB\)</span> is only defined if the number of columns in the first matrix is the same as the number of rows in the second matrix, i.e., <span class="math notranslate nohighlight">\(n = p\)</span>, and the resulting matrix has the same number of rows as the first matrix and the same number of columns of the second matrix, i.e., a <span class="math notranslate nohighlight">\(m \times q\)</span> matrix.</p>
 </section>
 </div><p>The technique used to multiply two matrices together requires us to move across the horizontal rows of the first matrix (the <span class="math notranslate nohighlight">\(i\)</span> index) and down the vertical columns of the second matrix (the <span class="math notranslate nohighlight">\(j\)</span> index). We multiply corresponding elements together and sum the result. For example, consider the multiplication of the two <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> given below</p>
 <div class="math notranslate nohighlight">
@@ -412,7 +412,7 @@ document.write(`
     AB = \underset{2 \times \textcolor{red}{2}}{\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}}
     \underset{\textcolor{red}{2} \times 2}{\begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}}.
 \end{align*} \end{split}\]</div>
-<p>Here the two inside numbers are the same so this matrix multiplication is defined. Futhermore the dimensions of the product of these two matrices is given by the two outside numbers. Using equation <a class="reference internal" href="#equation-matrix-multiplication-equation">(1.4)</a>, to calculate <span class="math notranslate nohighlight">\([AB]_{11}\)</span> we have <span class="math notranslate nohighlight">\(i=1\)</span> and <span class="math notranslate nohighlight">\(j=1\)</span> so move through the elements from row 1 of <span class="math notranslate nohighlight">\(A\)</span> and column 1 of <span class="math notranslate nohighlight">\(B\)</span>,  multiplying the corresponding values and summing the result</p>
+<p>Here the two inside numbers are the same, so this matrix multiplication is defined. Furthermore, the dimensions of the product of these two matrices is given by the two outside numbers. Using equation <a class="reference internal" href="#equation-matrix-multiplication-equation">(1.4)</a>, to calculate <span class="math notranslate nohighlight">\([AB]_{11}\)</span> we have <span class="math notranslate nohighlight">\(i=1\)</span> and <span class="math notranslate nohighlight">\(j=1\)</span> so move through the elements from row 1 of <span class="math notranslate nohighlight">\(A\)</span> and column 1 of <span class="math notranslate nohighlight">\(B\)</span>, multiplying the corresponding values and summing the result</p>
 <div class="math notranslate nohighlight">
 \[ [AB]_{11} = a_{11}b_{11} + a_{12}b_{21} = 1(5) + 2(7) = 5 + 14 = 19. \]</div>
 <p>So we have</p>
@@ -433,7 +433,7 @@ document.write(`
     = \begin{pmatrix} 5 + 14 &amp; \textcolor{lightgray}{\square} \\ \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square} \end{pmatrix}
     = \begin{pmatrix} 19 &amp; \textcolor{lightgray}{\square} \\ \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square} \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>Moving across the top row we then need to calculate the value of <span class="math notranslate nohighlight">\([AB]_{12}\)</span>. Now <span class="math notranslate nohighlight">\(i = 1\)</span> and <span class="math notranslate nohighlight">\(j = 2\)</span> so we multiply the values from row 1 of <span class="math notranslate nohighlight">\(A\)</span> and column 2 of <span class="math notranslate nohighlight">\(B\)</span> and sum the result</p>
+<p>Moving across the top row we then need to calculate the value of <span class="math notranslate nohighlight">\([AB]_{12}\)</span>. Now <span class="math notranslate nohighlight">\(i = 1\)</span> and <span class="math notranslate nohighlight">\(j = 2\)</span>, so we multiply the values from row 1 of <span class="math notranslate nohighlight">\(A\)</span> and column 2 of <span class="math notranslate nohighlight">\(B\)</span> and sum the result</p>
 <div class="math notranslate nohighlight">
 \[ [AB]_{12} = a_{11}b_{12} + a_{12}b_{22} = 1(6) + 2(8) = 6 + 16 = 22. \]</div>
 <p>So we have</p>
@@ -454,7 +454,7 @@ document.write(`
     = \begin{pmatrix} 19 &amp; 6 + 16 \\ \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square} \end{pmatrix}
     = \begin{pmatrix} 19 &amp; 22 \\ \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square} \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>Now that we have finished the first row of <span class="math notranslate nohighlight">\(AB\)</span> we now move down to the second row and back to the first column to calculate <span class="math notranslate nohighlight">\([AB]_{21}\)</span>. Now <span class="math notranslate nohighlight">\(i = 2\)</span> and <span class="math notranslate nohighlight">\(j = 1\)</span> so we multiply the values from row 2 of <span class="math notranslate nohighlight">\(A\)</span> and column 1 of <span class="math notranslate nohighlight">\(B\)</span> and sum the result</p>
+<p>Now that we have finished the first row of <span class="math notranslate nohighlight">\(AB\)</span> we now move down to the second row and back to the first column to calculate <span class="math notranslate nohighlight">\([AB]_{21}\)</span>. Now <span class="math notranslate nohighlight">\(i = 2\)</span> and <span class="math notranslate nohighlight">\(j = 1\)</span>, so we multiply the values from row 2 of <span class="math notranslate nohighlight">\(A\)</span> and column 1 of <span class="math notranslate nohighlight">\(B\)</span> and sum the result</p>
 <div class="math notranslate nohighlight">
 \[[AB]_{21} = a_{21} b_{11} + a_{22} b_{21} = 3(5) + 4(7) = 15 + 28 = 43.\]</div>
 <p>So we have</p>
@@ -475,7 +475,7 @@ document.write(`
     = \begin{pmatrix} 19 &amp; 22 \\ 15 + 28 &amp; \textcolor{lightgray}{\square} \end{pmatrix}
     = \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; \textcolor{lightgray}{\square} \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>Moving across we now need to calculate the final element <span class="math notranslate nohighlight">\([AB]_{22}\)</span>. Now <span class="math notranslate nohighlight">\(i = 2\)</span> and <span class="math notranslate nohighlight">\(j = 2\)</span> so we multiply the values from row 2 of <span class="math notranslate nohighlight">\(A\)</span> and column 2 of <span class="math notranslate nohighlight">\(B\)</span> and sum the result</p>
+<p>Moving across we now need to calculate the final element <span class="math notranslate nohighlight">\([AB]_{22}\)</span>. Now <span class="math notranslate nohighlight">\(i = 2\)</span> and <span class="math notranslate nohighlight">\(j = 2\)</span>, so we multiply the values from row 2 of <span class="math notranslate nohighlight">\(A\)</span> and column 2 of <span class="math notranslate nohighlight">\(B\)</span> and sum the result</p>
 <div class="math notranslate nohighlight">
 \[[AB]_{22} = a_{21} b_{12} + a_{22} b_{22} = 3(6) + 4(8) = 18 + 32 = 50.\]</div>
 <p>So we have</p>
@@ -505,107 +505,81 @@ document.write(`
 <p>This method of multiplying matrices together may seem unnecessarily convoluted when first encountered. The reason we perform matrix multiplication in this way is because English mathematician Arthur Cayley found that it allows for a convenient way to represent <a class="reference internal" href="6.2_Composite_transformations.html#composite-linear-transformations-section"><span class="std std-ref">composite linear transformations</span></a> which we will study towards the end of the semester.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dPot7peK1NI?si=vOwVpAVNjFKxvuqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <div class="proof example admonition" id="matrix-multiplication-example">
-<p class="admonition-title"><span class="caption-number">Example 1.6 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 1.4 </span></p>
 <section class="example-content" id="proof-content">
 <p>Given the matrices</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     A &amp;= \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix}, &amp;
-    B &amp;= \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix}, \\
+    B &amp;= \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix}, &amp;
     C &amp;= \begin{pmatrix} 1 &amp; 1 &amp; 0 \\ 3 &amp; -2 &amp; 1 \end{pmatrix}, &amp;
     D &amp;= \begin{pmatrix} 1 \\ 3 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 <p>calculate the following (where possible):</p>
-<p>(i)   <span class="math notranslate nohighlight">\(AB\)</span></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<p>(i)   <span class="math notranslate nohighlight">\(AB\)</span>;  
+(ii)   <span class="math notranslate nohighlight">\(BC\)</span>;  
+(iii)   <span class="math notranslate nohighlight">\(CD\)</span>;  
+(iv)   <span class="math notranslate nohighlight">\(CC^\mathsf{T}\)</span></p>
+<hr class="docutils" />
+<p><strong>Solution</strong></p>
+<p>(i)  </p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    AB &amp;= \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix} \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 1(2) + 0(1) &amp; 1(3) + 0(5)\\ -2(2) + 3(1) &amp; -2(3) + 3(5) \end{pmatrix} \\ 
-    &amp;= \begin{pmatrix} 2 + 0 &amp; 3 + 0 \\ -4 + 3 &amp; -6 + 15\end{pmatrix} \\
-    &amp;= \begin{pmatrix} 2 &amp; 3 \\ -1 &amp; 9 \end{pmatrix}
+    AB &amp;= \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix} \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix} 
+    = \begin{pmatrix} 1(2) + 0(1) &amp; 1(3) + 0(5)\\ -2(2) + 3(1) &amp; -2(3) + 3(5) \end{pmatrix} \\ 
+    &amp;= \begin{pmatrix} 2 + 0 &amp; 3 + 0 \\ -4 + 3 &amp; -6 + 15\end{pmatrix} 
+    = \begin{pmatrix} 2 &amp; 3 \\ -1 &amp; 9 \end{pmatrix}
 \end{align*} \end{split}\]</div>
-</div>
-</details><p>(ii)   <span class="math notranslate nohighlight">\(BC\)</span></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<p>(ii)  </p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    BC &amp;= \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix} \begin{pmatrix} 1 &amp; 1 &amp; 0 \\ 3 &amp; -2 &amp; 1 \end{pmatrix} \\
-    &amp;= \begin{pmatrix}
+    BC &amp;= \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix} \begin{pmatrix} 1 &amp; 1 &amp; 0 \\ 3 &amp; -2 &amp; 1 \end{pmatrix}
+    = \begin{pmatrix}
         2(1) + 3(3) &amp; 2(1) + 3(-2) &amp; 2(0) + 3(1) \\
         1(1) + 5(3) &amp; 1(1) + 5(-2) &amp; 1(0) + 5(1)
     \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 2+9 &amp; 2-6 &amp; 0+3 \\ 1+15 &amp; 1-10 &amp; 0+5 \end{pmatrix} \\
-    &amp;= \begin{pmatrix}11 &amp; -4 &amp; 3 \\ 16 &amp; -9 &amp; 5 \end{pmatrix}
+    &amp;= \begin{pmatrix} 2+9 &amp; 2-6 &amp; 0+3 \\ 1+15 &amp; 1-10 &amp; 0+5 \end{pmatrix}
+    = \begin{pmatrix}11 &amp; -4 &amp; 3 \\ 16 &amp; -9 &amp; 5 \end{pmatrix}
 \end{align*} \end{split}\]</div>
-</div>
-</details><p>(iii)   <span class="math notranslate nohighlight">\(CD\)</span></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><span class="math notranslate nohighlight">\(CD\)</span> is undefined since <span class="math notranslate nohighlight">\(C\)</span> has 3 columns and <span class="math notranslate nohighlight">\(D\)</span> only has 2 rows.</p>
-</div>
-</details><p>(iv)   <span class="math notranslate nohighlight">\(CC^\mathsf{T}\)</span></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<p>(iii)   <span class="math notranslate nohighlight">\(CD\)</span> is undefined since <span class="math notranslate nohighlight">\(C\)</span> has 3 columns and <span class="math notranslate nohighlight">\(D\)</span> only has 2 rows.</p>
+<p>(iv)</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
-    CC^\mathsf{T} &amp;= 
+    CC^\mathsf{T} &amp;=
     \begin{pmatrix} 1 &amp; 1 &amp; 0 \\ 3 &amp; -2 &amp; 1 \end{pmatrix} 
-    \begin{pmatrix} 1 &amp; 3 \\ 1 &amp; -2 \\ 0 &amp; 1 \end{pmatrix} \\
-    &amp;= 
+    \begin{pmatrix} 1 &amp; 3 \\ 1 &amp; -2 \\ 0 &amp; 1 \end{pmatrix}
+    =
     \begin{pmatrix}
         1(1) + 1(1) + 0(0) &amp; 1(3) + 1(-2) + 0(1) \\
         3(1) + (-2)(1) + 1(0) &amp; 3(3) + (-2)(-2) + 1(1)
     \end{pmatrix} \\
-    &amp;= 
+    &amp;=
     \begin{pmatrix}
         1 + 1 + 0 &amp; 3 - 2 + 0 \\
         3 - 2 + 0 &amp; 9 + 4 + 1
-    \end{pmatrix} \\
-    &amp;=
+    \end{pmatrix} 
+    =
     \begin{pmatrix}
         2 &amp; 1 \\
         1 &amp; 14
     \end{pmatrix}
 \end{align*} \end{split}\]</div>
-</div>
-</details></section>
+</section>
 </div><div class="proof theorem admonition" id="theorem-2">
-<span id="index-1"></span><p class="admonition-title"><span class="caption-number">Theorem 1.4 </span> (Properties of matrix multiplication)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 1.4 </span> (Properties of matrix multiplication)</p>
 <section class="theorem-content" id="proof-content">
 <p>The following properties hold for matrix multiplication</p>
 <ul class="simple">
-<li><p>Matrix multiplication is not commutative: <span class="math notranslate nohighlight">\(AB \neq BA\)</span></p></li>
-<li><p>Associative law: <span class="math notranslate nohighlight">\(A(BC) = (AB)C\)</span></p></li>
-<li><p>Left distributive law: <span class="math notranslate nohighlight">\(A(B + C) = AB + AC\)</span></p></li>
-<li><p>Right distributive law: <span class="math notranslate nohighlight">\((A + B)C = AC + BC\)</span></p></li>
-<li><p>Transpose of a product: <span class="math notranslate nohighlight">\((AB)^\mathsf{T} = B^\mathsf{T}A^\mathsf{T}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(AB \neq BA\)</span>   (matrix multiplication is not commutative)</p></li>
+<li><p><span class="math notranslate nohighlight">\(A(BC) = (AB)C\)</span>   (associative)</p></li>
+<li><p><span class="math notranslate nohighlight">\(A(B + C) = AB + AC\)</span>   (left distributive law)</p></li>
+<li><p><span class="math notranslate nohighlight">\((A + B)C = AC + BC\)</span>   (right distributive law)</p></li>
+<li><p><span class="math notranslate nohighlight">\((AB)^\mathsf{T} = B^\mathsf{T}A^\mathsf{T}\)</span></p></li>
 </ul>
 </section>
-</div><section id="matrix-exponents">
-<h2><span class="section-number">1.3.1. </span>Matrix exponents<a class="headerlink" href="#matrix-exponents" title="Permalink to this heading">#</a></h2>
+</div><hr class="docutils" />
+<section id="matrix-exponents">
+<span id="index-1"></span><h2><span class="section-number">1.3.1. </span>Matrix exponents<a class="headerlink" href="#matrix-exponents" title="Permalink to this heading">#</a></h2>
 <p>Just like with scalar quantities we can calculate the exponent of a number <span class="math notranslate nohighlight">\(a^n\)</span> by multiplying by itself <span class="math notranslate nohighlight">\(n\)</span> times, i.e., <span class="math notranslate nohighlight">\(a^3 = a \cdot a \cdot a\)</span>, we can also do this for square matrices that have the same number of rows and columns.</p>
 <div class="proof definition admonition" id="matrix-exponents-definition">
 <p class="admonition-title"><span class="caption-number">Definition 1.7 </span> (Matrix exponents)</p>
@@ -617,63 +591,42 @@ Solution<div class="sd-summary-down docutils">
 \end{align*} \]</div>
 </section>
 </div><div class="proof example admonition" id="matrix-exponents-example">
-<p class="admonition-title"><span class="caption-number">Example 1.7 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 1.5 </span></p>
 <section class="example-content" id="proof-content">
 <p>Given the matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} A = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}, \end{split}\]</div>
 <p>evaluate:</p>
-<p>(i)   <span class="math notranslate nohighlight">\(A^2\)</span></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<p>(i)   <span class="math notranslate nohighlight">\(A^2\)</span>;   (ii)   <span class="math notranslate nohighlight">\(A^3\)</span>;   (iii)   <span class="math notranslate nohighlight">\(A^5\)</span></p>
+<hr class="docutils" />
+<p><strong>Solution</strong></p>
+<p>(i)</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     A^2 = AA &amp;= \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}
-    \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 1 + 6 &amp; 2 + 8 \\ 3 + 12 &amp; 6 + 16 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 7 &amp; 10 \\ 15 &amp; 22 \end{pmatrix}
+    \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}
+    = \begin{pmatrix} 1 + 6 &amp; 2 + 8 \\ 3 + 12 &amp; 6 + 16 \end{pmatrix}
+    = \begin{pmatrix} 7 &amp; 10 \\ 15 &amp; 22 \end{pmatrix}
 \end{align*} \end{split}\]</div>
-</div>
-</details><p>(ii)   <span class="math notranslate nohighlight">\(A^3\)</span></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<p>(ii)</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     A^3 = AA^2 &amp;=
     \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}
-    \begin{pmatrix} 7 &amp; 10 \\ 15 &amp; 22 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 7 + 30 &amp; 10 + 44 \\ 21 + 60 &amp; 30 + 88 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 37 &amp; 54 \\ 81 &amp; 118 \end{pmatrix}
+    \begin{pmatrix} 7 &amp; 10 \\ 15 &amp; 22 \end{pmatrix} 
+    = \begin{pmatrix} 7 + 30 &amp; 10 + 44 \\ 21 + 60 &amp; 30 + 88 \end{pmatrix}
+    = \begin{pmatrix} 37 &amp; 54 \\ 81 &amp; 118 \end{pmatrix}
 \end{align*} \end{split}\]</div>
-</div>
-</details><p>(iii)   <span class="math notranslate nohighlight">\(A^5\)</span></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<p>(iii)</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     A^5 = A^2A^3 &amp;= 
     \begin{pmatrix} 7 &amp; 10 \\ 15 &amp; 22 \end{pmatrix}
-    \begin{pmatrix} 37 &amp; 54 \\ 81 &amp; 118 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 259 + 810 &amp; 378 + 1180 \\ 555 + 1782 &amp; 810 + 2596 \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 1069 &amp; 1558 \\ 2337 &amp; 3406 \end{pmatrix}
+    \begin{pmatrix} 37 &amp; 54 \\ 81 &amp; 118 \end{pmatrix}
+    = \begin{pmatrix} 259 + 810 &amp; 378 + 1180 \\ 555 + 1782 &amp; 810 + 2596 \end{pmatrix}
+    = \begin{pmatrix} 1069 &amp; 1558 \\ 2337 &amp; 3406 \end{pmatrix}
 \end{align*} \end{split}\]</div>
-</div>
-</details></section>
+</section>
 </div></section>
 </section>
 

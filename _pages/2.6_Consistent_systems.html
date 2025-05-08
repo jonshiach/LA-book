@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/2.6_Consistent_systems';</script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
@@ -160,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="0.1_Teaching_schedule.html">Teaching schedule</a></li>
 <li class="toctree-l1"><a class="reference internal" href="0.3_Mathematical_preliminaries.html">Mathematical preliminaries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0.5_How_to_pass.html">How to pass the unit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0.5_How_to_pass.html">How to Pass the Module</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul class="current nav bd-sidenav">
@@ -393,7 +393,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="consistent-inconsistent-and-indeterminate-systems">
 <span id="consistent-inconsistent-and-indeterminate-systems-section"></span><h1><span class="section-number">2.8. </span>Consistent, inconsistent and indeterminate systems<a class="headerlink" href="#consistent-inconsistent-and-indeterminate-systems" title="Permalink to this heading">#</a></h1>
-<p>So far all of the examples of solving systems of linear equations have had a single unique solution. This will not always be the case and it is important that we consider the different situations that can arise when dealing with systems of equations. A useful measure of a system that is used to determine the number of solutions to a system of linear equations is the rank of a matrix.</p>
+<p>So far all the examples of solving systems of linear equations have had a single unique solution. This will not always be the case, and it is important that we consider the different situations that can arise when dealing with systems of equations. A useful measure of a system that is used to determine the number of solutions to a system of linear equations is the rank of a matrix.</p>
 <span class="target" id="index-0"></span><div class="proof definition admonition" id="rank-definition">
 <span id="index-1"></span><p class="admonition-title"><span class="caption-number">Definition 2.7 </span> (Rank of a matrix)</p>
 <section class="definition-content" id="proof-content">
@@ -405,9 +405,10 @@ document.write(`
 <section class="definition-content" id="proof-content">
 <p>A system of equations is said to be <strong>consistent</strong> if it has a solution, otherwise it is said to be an <strong>inconsistent</strong>. If a system of equations has more than one solution then it is said to be <strong>indeterminate</strong>.</p>
 </section>
-</div><section id="consistent-systems">
-<span id="index-2"></span><h2><span class="section-number">2.8.1. </span>Consistent systems<a class="headerlink" href="#consistent-systems" title="Permalink to this heading">#</a></h2>
-<p>We can visualise consistent systems by considering the plot of a system with two variables, <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span>. If the lines that represent each equation in a system intersect at a single point then the point of intersection is the solution to the system. Consider the following system of linear equations</p>
+</div><hr class="docutils" id="index-2" />
+<section id="consistent-systems">
+<h2><span class="section-number">2.8.1. </span>Consistent systems<a class="headerlink" href="#consistent-systems" title="Permalink to this heading">#</a></h2>
+<p id="index-3">We can visualise consistent systems by considering the plot of a system with two variables, <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span>. If the lines that represent each equation in a system intersect at a single point then the point of intersection is the solution to the system. Consider the following system of linear equations</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     x_1 - x_2 &amp;= 1, \\
@@ -438,12 +439,13 @@ document.write(`
 <div class="proof theorem admonition" id="consistent-system-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 2.5 </span> (Consistent systems)</p>
 <section class="theorem-content" id="proof-content">
-<p>A system of linear equations <span class="math notranslate nohighlight">\(A\vec{x} = \vec{b}\)</span> is consistent if <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = \operatorname{rank}(A \mid \vec{b})\)</span>.</p>
+<p>A system of linear equations <span class="math notranslate nohighlight">\(A\mathbf{x} = \mathbf{b}\)</span> is consistent if <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = \operatorname{rank}(A \mid \mathbf{b})\)</span>.</p>
 </section>
-</div></section>
+</div><hr class="docutils" />
+</section>
 <section id="inconsistent-systems">
-<span id="index-3"></span><h2><span class="section-number">2.8.2. </span>Inconsistent systems<a class="headerlink" href="#inconsistent-systems" title="Permalink to this heading">#</a></h2>
-<p>If the lines that represent each equation in a system with two variables do not intersect then they must be parallel and we have an inconsistent system. Consider the following system of linear equations</p>
+<span id="index-4"></span><h2><span class="section-number">2.8.2. </span>Inconsistent systems<a class="headerlink" href="#inconsistent-systems" title="Permalink to this heading">#</a></h2>
+<p>If the lines that represent each equation in a system with two variables do not intersect then they must be parallel, and we have an inconsistent system. Consider the following system of linear equations</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     x_1 - x_2 &amp;= 1, \\
@@ -468,18 +470,19 @@ document.write(`
     \left( \begin{array}{cc|c}
         1 &amp; -1 &amp; 1 \\
         0 &amp; 0 &amp; -2
-    \end{array} \right)
+    \end{array} \right),
 \end{align*} \end{split}\]</div>
 <p>so the second equation is <span class="math notranslate nohighlight">\(0x_1 + 0x_2 = -2\)</span> which is clearly impossible. This leads to the following theorem regarding inconsistent systems.</p>
 <div class="proof theorem admonition" id="inconsistent-system-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 2.6 </span> (Inconsistent systems)</p>
 <section class="theorem-content" id="proof-content">
-<p>A system of linear equations is inconsistent if <span class="math notranslate nohighlight">\(A\vec{x} = \vec{b}\)</span> is inconsistent if <span class="math notranslate nohighlight">\(\operatorname{rank}(A) &lt; \operatorname{rank}(A \mid \vec{b})\)</span>.</p>
+<p>A system of linear equations is inconsistent if <span class="math notranslate nohighlight">\(A\mathbf{x} = \mathbf{b}\)</span> is inconsistent if <span class="math notranslate nohighlight">\(\operatorname{rank}(A) &lt; \operatorname{rank}(A \mid \mathbf{b})\)</span>.</p>
 </section>
-</div></section>
+</div><hr class="docutils" />
+</section>
 <section id="indeterminate-systems">
-<span id="index-4"></span><h2><span class="section-number">2.8.3. </span>Indeterminate systems<a class="headerlink" href="#indeterminate-systems" title="Permalink to this heading">#</a></h2>
-<p>If the lines that represent each equation in a system with two variables are equivalent to each other then we have an indeterminate system where we have an infinite number of solutions. Consider the following system of linear equations</p>
+<span id="index-5"></span><h2><span class="section-number">2.8.3. </span>Indeterminate systems<a class="headerlink" href="#indeterminate-systems" title="Permalink to this heading">#</a></h2>
+<p>If the lines that represent each equation in a system with two variables are equivalent to each other than we have an indeterminate system where we have an infinite number of solutions. Consider the following system of linear equations</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     x_1 - x_2 &amp;= 1, \\
@@ -504,13 +507,13 @@ document.write(`
     \left( \begin{array}{cc|c}
         1 &amp; -1 &amp; 1 \\
         0 &amp; 0 &amp; 0 
-    \end{array} \right)
+    \end{array} \right),
 \end{align*} \end{split}\]</div>
 <p>so since the second equation has been eliminated we have a single equation <span class="math notranslate nohighlight">\(x_1 - x_2 = 1\)</span>.</p>
 <div class="proof theorem admonition" id="indeterminate-system-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 2.7 </span> (indeterminate systems)</p>
 <section class="theorem-content" id="proof-content">
-<p>A system of linear equations with <span class="math notranslate nohighlight">\(n\)</span> unknowns <span class="math notranslate nohighlight">\(A\vec{x} = \vec{b}\)</span> is indeterminate if <span class="math notranslate nohighlight">\(\operatorname{rank}(A) &lt; n\)</span>.</p>
+<p>A system of linear equations with <span class="math notranslate nohighlight">\(n\)</span> unknowns <span class="math notranslate nohighlight">\(A\mathbf{x} = \mathbf{b}\)</span> is indeterminate if <span class="math notranslate nohighlight">\(\operatorname{rank}(A) &lt; n\)</span>.</p>
 </section>
 </div><p>If we have an indeterminate system, the variables that correspond to columns in coefficient matrix without pivots (i.e., we cannot solve for these variables) are called <strong>free variables</strong>. We express the solution of indeterminate systems by assigning a parameter (<span class="math notranslate nohighlight">\(r\)</span>, <span class="math notranslate nohighlight">\(s\)</span>, <span class="math notranslate nohighlight">\(t\)</span> etc.) to the free variables and proceed is normal. For example, in our system <span class="math notranslate nohighlight">\(x_2\)</span> is a free variable so let <span class="math notranslate nohighlight">\(x_2 = r\)</span> where <span class="math notranslate nohighlight">\(r \in \mathbb{R}\)</span> and</p>
 <div class="math notranslate nohighlight">
@@ -525,14 +528,20 @@ document.write(`
     3x_1 + x_2 - 2x_3  \!\!\!\! &amp;= 1, \\
     x_1 - x_2 + 2x_3  \!\!\!\! &amp;= 3, \\
     2x_1 - 3x_2 + 7x_3  \!\!\!\! &amp;= 4.
-\end{array}\)</span>;</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+\end{array}\)</span>;  
+(ii)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
+    x_1 - x_2 + 2x_3  \!\!\!\! &amp;= 3, \\
+    2x_1 - 3x_2 + 7x_3  \!\!\!\! &amp;= 4, \\
+    -x_1 + 3x_2 - 8x_3  \!\!\!\! &amp;= 1.
+\end{array}\)</span>;  
+(iii)    <span class="math notranslate nohighlight">\(\begin{array}{rcl}
+    x_1 + x_2 - 2x_3  \!\!\!\! &amp;= 1, \\
+    2x_1 - x_2 + x_3  \!\!\!\! &amp;= 9, \\
+    x_1 + 4x_2 - 7x_3  \!\!\!\! &amp;= 2.
+\end{array}\)</span></p>
+<hr class="docutils" />
+<p><strong>Solution</strong></p>
+<p>(i)  </p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     &amp; \left( \begin{array}{ccc|c}
@@ -562,20 +571,8 @@ Solution<div class="sd-summary-down docutils">
         0 &amp; 0 &amp; 1 &amp; -4
     \end{array} \right)
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">The augmented matrix is now in reduced row echelon form. Since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = \operatorname{rank}(A \mid \vec{b}) = 3\)</span> then this is a consistent system by the <a class="reference internal" href="#consistent-system-theorem">theorem for consistent systems</a>. Using back substitution the solution is <span class="math notranslate nohighlight">\(x_1 = 1\)</span>, <span class="math notranslate nohighlight">\(x_2 = -10\)</span> and <span class="math notranslate nohighlight">\(x_3 = -4\)</span>.</p>
-</div>
-</details><p>(ii)   <span class="math notranslate nohighlight">\(\begin{array}{rl}
-    x_1 - x_2 + 2x_3  \!\!\!\! &amp;= 3, \\
-    2x_1 - 3x_2 + 7x_3  \!\!\!\! &amp;= 4, \\
-    -x_1 + 3x_2 - 8x_3  \!\!\!\! &amp;= 1.
-\end{array}\)</span></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<p>The augmented matrix is now in reduced row echelon form. Since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = \operatorname{rank}(A \mid \mathbf{b}) = 3\)</span> then this is a consistent system by the <a class="reference internal" href="#consistent-system-theorem">theorem for consistent systems</a>. Using back substitution the solution is <span class="math notranslate nohighlight">\(x_1 = 1\)</span>, <span class="math notranslate nohighlight">\(x_2 = -10\)</span> and <span class="math notranslate nohighlight">\(x_3 = -4\)</span>.</p>
+<p>(ii)</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     &amp; \left( \begin{array}{ccc|c}
@@ -598,20 +595,8 @@ Solution<div class="sd-summary-down docutils">
         0 &amp; 0 &amp; 0 &amp; 0
     \end{array} \right)
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">The augmented matrix is now in reduced row echelon form. Since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = \operatorname{rank}(A \mid \vec{b}) = 2\)</span> then this is a consistent system by the <a class="reference internal" href="#consistent-system-theorem">theorem for consistent systems</a>. Furthermore, since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) \)</span> is less that the number of unknowns then this is an indeterminate system by the <a class="reference internal" href="#indeterminate-system-theorem">theorem for indeterminate systems</a>. Let <span class="math notranslate nohighlight">\(x_3 = r\)</span> then using back substitution we have <span class="math notranslate nohighlight">\(x_1 = 5 + r\)</span> and <span class="math notranslate nohighlight">\(x_2 = 2 + 3r\)</span>.</p>
-</div>
-</details><p>(iii)    <span class="math notranslate nohighlight">\(\begin{array}{rcl}
-    x_1 + x_2 - 2x_3  \!\!\!\! &amp;= 1, \\
-    2x_1 - x_2 + x_3  \!\!\!\! &amp;= 9, \\
-    x_1 + 4x_2 - 7x_3  \!\!\!\! &amp;= 2.
-\end{array}\)</span></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<p>The augmented matrix is now in reduced row echelon form. Since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = \operatorname{rank}(A \mid \mathbf{b}) = 2\)</span> then this is a consistent system by the <a class="reference internal" href="#consistent-system-theorem">theorem for consistent systems</a>. Furthermore, since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) \)</span> is less that the number of unknowns then this is an indeterminate system by the <a class="reference internal" href="#indeterminate-system-theorem">theorem for indeterminate systems</a>. Let <span class="math notranslate nohighlight">\(x_3 = r\)</span> then using back substitution we have <span class="math notranslate nohighlight">\(x_1 = 5 + r\)</span> and <span class="math notranslate nohighlight">\(x_2 = 2 + 3r\)</span>.</p>
+<p>(iii)</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     &amp; \left( \begin{array}{ccc|c}
@@ -634,9 +619,8 @@ Solution<div class="sd-summary-down docutils">
         0 &amp; 0 &amp; 0 &amp; 8
     \end{array} \right)
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">The augmented matrix is now in reduced row echelon form and <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = 2\)</span> and <span class="math notranslate nohighlight">\(\operatorname{rank}(A \mid \vec{b}) = 3\)</span>. Since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) &lt; \operatorname{rank}(A \mid \vec{b})\)</span> then this is an inconsistent system by the <a class="reference internal" href="#inconsistent-system-theorem">theorem for inconsistent systems</a> and does not have a solution.</p>
-</div>
-</details></section>
+<p>The augmented matrix is now in reduced row echelon form and <span class="math notranslate nohighlight">\(\operatorname{rank}(A) = 2\)</span> and <span class="math notranslate nohighlight">\(\operatorname{rank}(A \mid \mathbf{b}) = 3\)</span>. Since <span class="math notranslate nohighlight">\(\operatorname{rank}(A) &lt; \operatorname{rank}(A \mid \mathbf{b})\)</span> then this is an inconsistent system by the <a class="reference internal" href="#inconsistent-system-theorem">theorem for inconsistent systems</a> and does not have a solution.</p>
+</section>
 </div></section>
 </section>
 

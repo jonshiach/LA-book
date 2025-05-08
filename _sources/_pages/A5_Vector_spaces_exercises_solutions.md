@@ -5,25 +5,25 @@
 ```{solution} vector-spaces-ex-R3-axioms
 
 
-Let $\vec{u}, \vec{v}, \vec{w} \in \mathbb{R}^3$ and $\alpha, \beta \in \mathbb{R}$ then 
+Let $\mathbf{u}, \mathbf{v}, \mathbf{w} \in \mathbb{R}^3$ and $\alpha, \beta \in \mathbb{R}$ then 
 
-- A1: $\vec{u} + (\vec{v} + \vec{w}) = (\vec{u} + \vec{v}) + \vec{w} \checkmark$
-- A2: $\vec{u} + \vec{v} = \vec{v} + \vec{u} \checkmark$
-- A3: $\vec{u} + \vec{0} = \vec{u} \checkmark$
-- A4: $\vec{u} + (-\vec{u}) = \vec{0} \checkmark$
-- M1: $\alpha(\beta \vec{u}) = (\alpha \beta) \vec{u} \checkmark$
-- M2: $1 \vec{u} = \vec{u} \checkmark$
-- M3: $\alpha(\vec{u} + \vec{v}) = \alpha\vec{u} + \alpha \vec{v} \checkmark$
-- M4: $(\alpha + \beta) \vec{u} = \alpha \vec{u} + \beta \vec{u} \checkmark$
+- A1: $\mathbf{u} + (\mathbf{v} + \mathbf{w}) = (\mathbf{u} + \mathbf{v}) + \mathbf{w} \checkmark$
+- A2: $\mathbf{u} + \mathbf{v} = \mathbf{v} + \mathbf{u} \checkmark$
+- A3: $\mathbf{u} + \mathbf{0} = \mathbf{u} \checkmark$
+- A4: $\mathbf{u} + (-\mathbf{u}) = \mathbf{0} \checkmark$
+- M1: $\alpha(\beta \mathbf{u}) = (\alpha \beta) \mathbf{u} \checkmark$
+- M2: $1 \mathbf{u} = \mathbf{u} \checkmark$
+- M3: $\alpha(\mathbf{u} + \mathbf{v}) = \alpha\mathbf{u} + \alpha \mathbf{v} \checkmark$
+- M4: $(\alpha + \beta) \mathbf{u} = \alpha \mathbf{u} + \beta \mathbf{u} \checkmark$
 
 All of the axioms of vector spaces hold for $\mathbb{R}^3$.
 ```
 ```{solution} vector-spaces-ex-R3-subspaces
 
 
-(a) &emsp; $U$ is non-empty since $\vec{0} \in U$. Let $\vec{u} = (u_1, u_2, 0), \vec{v} = (v_1, v_2, 0) \in U$ and $\alpha \in \mathbb{R}$ then
+(a) &emsp; $U$ is non-empty since $\mathbf{0} \in U$. Let $\mathbf{u} = (u_1, u_2, 0), \mathbf{v} = (v_1, v_2, 0) \in U$ and $\alpha \in \mathbb{R}$ then
 
-$$ \vec{u} + \alpha \vec{v} = 
+$$ \mathbf{u} + \alpha \mathbf{v} = 
     \begin{pmatrix} u_1 \\ u_2 \\ 0 \end{pmatrix} + \alpha 
     \begin{pmatrix} v_1 \\ v_2 \\ 0 \end{pmatrix} = 
     \begin{pmatrix} 
@@ -35,16 +35,16 @@ therefore $U$ is a subspace.
 
 (b) &emsp; $V$ is non-empty since $(1,2,0) \in V$. However $\alpha (1, 2, 0) = (\alpha , 2\alpha , 0) \notin V$ for $\alpha \in \mathbb{R}$ so $V$ is not a subspace.
 
-(c) &emsp; $W$ is non-empty since $\vec{0} \in W$. Let $\vec{u} = (0, u_2, 0), \vec{v} = (0, v_2, 0) \in U$ and $\alpha \in \mathbb{R}$ then
+(c) &emsp; $W$ is non-empty since $\mathbf{0} \in W$. Let $\mathbf{u} = (0, u_2, 0), \mathbf{v} = (0, v_2, 0) \in U$ and $\alpha \in \mathbb{R}$ then
 
-$$ \vec{u} + \alpha \vec{v} = 
+$$ \mathbf{u} + \alpha \mathbf{v} = 
     \begin{pmatrix} 0 \\ u_2 \\ 0 \end{pmatrix} + \alpha 
     \begin{pmatrix} 0 \\ v_2 \\ 0 \end{pmatrix} = 
     \begin{pmatrix} 0 \\ u_2 + \alpha v_2 \\ 0 \end{pmatrix} \in W, $$
 
 therefore $W$ is a subspace. Note that $W \subseteq U$ so since we showed $U$ is a subspace then $W$ must also be a subspace.
 
-(d) &emsp; $X$ is not a subspace since if $\vec{u} = (1, 1, 0), \vec{v} = (-1, 1, 0) \in X$ then $\vec{u} + \vec{v} = (0, 2, 0) \notin X$.
+(d) &emsp; $X$ is not a subspace since if $\mathbf{u} = (1, 1, 0), \mathbf{v} = (-1, 1, 0) \in X$ then $\mathbf{u} + \mathbf{v} = (0, 2, 0) \notin X$.
 ```
 ```{solution} vector-spaces-ex-M2-subspaces
 
@@ -190,12 +190,12 @@ $$ \begin{align*}
     \end{array} \right)
 \end{align*} $$
 
-Therefore $\{(1, 1, 2, 4), (2, -1, -5, 2), \vec{e}_1, \vec{e}_2 \}$ is a basis for $\mathbb{R}^4$. Note that we could have used any two vectors in $\mathbb{R}^4$ that form a linearly independent set of vectors.
+Therefore $\{(1, 1, 2, 4), (2, -1, -5, 2), \mathbf{e}_1, \mathbf{e}_2 \}$ is a basis for $\mathbb{R}^4$. Note that we could have used any two vectors in $\mathbb{R}^4$ that form a linearly independent set of vectors.
 ```
 ```{solution} vector-spaces-ex-R4-basis-2
 
 
-We need to find which of the vectors $\vec{u}$, $\vec{v}$, $\vec{w}$, $\vec{x}$ and $\vec{y}$ are linearly dependent (and therefore remove them to from the basis).
+We need to find which of the vectors $\mathbf{u}$, $\mathbf{v}$, $\mathbf{w}$, $\mathbf{x}$ and $\mathbf{y}$ are linearly dependent (and therefore remove them to from the basis).
 
 $$ \begin{align*}
     & \left( \begin{array}{ccccc|c}
@@ -270,5 +270,5 @@ $$ \begin{align*}
     \end{array} \right)
 \end{align*} $$
 
-The fifth column does not have a pivot element so $\vec{y}$ is linearly dependent on the other vectors, therefore a basis for $W$ is $\{ \vec{u}, \vec{v}, \vec{w}, \vec{x}\}$ and $\dim(W) = 4$.
+The fifth column does not have a pivot element so $\mathbf{y}$ is linearly dependent on the other vectors, therefore a basis for $W$ is $\{ \mathbf{u}, \mathbf{v}, \mathbf{w}, \mathbf{x}\}$ and $\dim(W) = 4$.
 ```

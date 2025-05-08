@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/A4_Coordinate_geometry_exercises_solutions';</script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
@@ -160,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="0.1_Teaching_schedule.html">Teaching schedule</a></li>
 <li class="toctree-l1"><a class="reference internal" href="0.3_Mathematical_preliminaries.html">Mathematical preliminaries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0.5_How_to_pass.html">How to pass the unit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0.5_How_to_pass.html">How to Pass the Module</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul class="nav bd-sidenav">
@@ -385,26 +385,26 @@ document.write(`
 
 <p class="admonition-title">Solution to<a class="reference internal" href="4.4_Coordinate_geometry_exercises.html#geometry-ex-line-plane-equations"> Exercise 4.1</a></p>
 <section id="solution-content">
-<p>(a)   Using the <a class="reference internal" href="4.1_Lines.html#vector-equation-of-a-line-definition">vector equation of a line</a> we have <span class="math notranslate nohighlight">\(\vec{r} = \vec{a} + t\vec{d}_1\)</span></p>
+<p>(a)   Using the <a class="reference internal" href="4.1_Lines.html#vector-equation-of-a-line-definition">vector equation of a line</a> we have <span class="math notranslate nohighlight">\(\mathbf{r} = \mathbf{a} + t\mathbf{d}_1\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \vec{d}_1 &amp;= \vec{b} - \vec{a} =
+    \mathbf{d}_1 &amp;= \mathbf{b} - \mathbf{a} =
     \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} -
     \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} = 
     \begin{pmatrix} -1 \\ 0 \\ 0 \end{pmatrix}, \\
-    \therefore \vec{r} &amp;= \vec{a} + t\vec{d}_1 =
+    \therefore \mathbf{r} &amp;= \mathbf{a} + t\mathbf{d}_1 =
     \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} + t 
     \begin{pmatrix} -1 \\ 0 \\ 0 \end{pmatrix} = 
     \begin{pmatrix} 2 - t \\ 1 \\ 0 \end{pmatrix}
 \end{align*} \end{split}\]</div>
-<p>(b)   Using the <a class="reference internal" href="4.1_Lines.html#vector-equation-of-a-line-definition">vector equation of a line</a> we have <span class="math notranslate nohighlight">\(\vec{r} = \vec{c} + t\vec{d}_2\)</span></p>
+<p>(b)   Using the <a class="reference internal" href="4.1_Lines.html#vector-equation-of-a-line-definition">vector equation of a line</a> we have <span class="math notranslate nohighlight">\(\mathbf{r} = \mathbf{c} + t\mathbf{d}_2\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \vec{d}_2 &amp;= \vec{d} - \vec{c} =
+    \mathbf{d}_2 &amp;= \mathbf{d} - \mathbf{c} =
     \begin{pmatrix} 5 \\ 2 \\ 6 \end{pmatrix} -
     \begin{pmatrix} 3 \\ -1 \\ 4 \end{pmatrix} = 
     \begin{pmatrix} 2 \\ 3 \\ 2 \end{pmatrix}, \\
-    \therefore \vec{r} &amp;= \vec{c} + t\vec{d}_2 =
+    \therefore \mathbf{r} &amp;= \mathbf{c} + t\mathbf{d}_2 =
     \begin{pmatrix} 3 \\ -1 \\ 4 \end{pmatrix} + t 
     \begin{pmatrix} 2 \\ 3 \\ 2 \end{pmatrix} = 
     \begin{pmatrix} 3 + 2 t \\ -1 + 3 t \\ 4 + 2 t \end{pmatrix}
@@ -412,15 +412,15 @@ document.write(`
 <p>(c)   Calculate the normal vector to the plane</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \vec{b} - \vec{a} &amp;= \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} - 
+    \mathbf{b} - \mathbf{a} &amp;= \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} - 
     \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} = 
     \begin{pmatrix} -1 \\ 0 \\ 0 \end{pmatrix}, \\
-    \vec{c} - \vec{a} &amp;= \begin{pmatrix} 3 \\ -1 \\ 4 \end{pmatrix} -
+    \mathbf{c} - \mathbf{a} &amp;= \begin{pmatrix} 3 \\ -1 \\ 4 \end{pmatrix} -
     \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix} =
     \begin{pmatrix} 1 \\ -2 \\ 4 \end{pmatrix}, \\
-    \therefore \vec{n} &amp;= (\vec{b} - \vec{a}) \times (\vec{c} - \vec{a}) = 
+    \therefore \mathbf{n} &amp;= (\mathbf{b} - \mathbf{a}) \times (\mathbf{c} - \mathbf{a}) = 
     \begin{vmatrix} 
-        \vec{i} &amp; \vec{j} &amp; \vec{k} \\
+        \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
         -1 &amp; 0 &amp; 0 \\
         1 &amp; -2 &amp; 4 
     \end{vmatrix} =
@@ -436,15 +436,15 @@ document.write(`
 <p>(d)   Calculate the normal vector to the plane</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \vec{c} - \vec{b} &amp;= \begin{pmatrix} 3 \\ -1 \\ 4 \end{pmatrix} - 
+    \mathbf{c} - \mathbf{b} &amp;= \begin{pmatrix} 3 \\ -1 \\ 4 \end{pmatrix} - 
     \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} =
     \begin{pmatrix} 2 \\ -2 \\ 4 \end{pmatrix}, \\
-    \vec{d} - \vec{b} &amp;= \begin{pmatrix} 5 \\ 2 \\ 6 \end{pmatrix} -
+    \mathbf{d} - \mathbf{b} &amp;= \begin{pmatrix} 5 \\ 2 \\ 6 \end{pmatrix} -
     \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} =
     \begin{pmatrix} 4 \\ 1 \\ 6 \end{pmatrix}, \\
-    \vec{n} &amp;= (\vec{c} - \vec{b}) \times (\vec{d} - \vec{b}) = 
+    \mathbf{n} &amp;= (\mathbf{c} - \mathbf{b}) \times (\mathbf{d} - \mathbf{b}) = 
     \begin{vmatrix}
-        \vec{i} &amp; \vec{j} &amp; \vec{k} \\
+        \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
         2 &amp; -2 &amp; 4 \\
         4 &amp; 1 &amp; 6
     \end{vmatrix} =
@@ -464,7 +464,7 @@ document.write(`
 <p class="admonition-title">Solution to<a class="reference internal" href="4.4_Coordinate_geometry_exercises.html#geometry-ex-line-equation-1"> Exercise 4.2</a></p>
 <section id="solution-content">
 <div class="math notranslate nohighlight">
-\[\begin{split} \vec{r} = \begin{pmatrix} 3 \\ 2 \\ 1 \end{pmatrix} + t \begin{pmatrix} 2 \\ 1 \\ 3 \end{pmatrix}  = \begin{pmatrix} 3 + 2 t \\ 2 + t \\ 1 + 3 t \end{pmatrix} \end{split}\]</div>
+\[\begin{split} \mathbf{r} = \begin{pmatrix} 3 \\ 2 \\ 1 \end{pmatrix} + t \begin{pmatrix} 2 \\ 1 \\ 3 \end{pmatrix}  = \begin{pmatrix} 3 + 2 t \\ 2 + t \\ 1 + 3 t \end{pmatrix} \end{split}\]</div>
 </section>
 </div>
 <div class="solution admonition" id="_pages/A4_Coordinate_geometry_exercises_solutions-solution-2">
@@ -474,7 +474,7 @@ document.write(`
 <p>Using the <a class="reference internal" href="4.2_Planes.html#point-normal-definition">point normal definition of a plane</a></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \vec{n} \cdot \begin{pmatrix} x - x_0 \\ y - y_0 \\ z - z_0 \end{pmatrix} &amp;= 0 \\
+    \mathbf{n} \cdot \begin{pmatrix} x - x_0 \\ y - y_0 \\ z - z_0 \end{pmatrix} &amp;= 0 \\
     \begin{pmatrix} 2 \\ 1 \\ 3 \end{pmatrix} \cdot
     \begin{pmatrix} x - 3 \\ y - 2 \\ z - 5 \end{pmatrix} \\
     2(x - 3) + (y - 2) + 3(z - 5) &amp;= 0 \\
@@ -486,7 +486,7 @@ document.write(`
 
 <p class="admonition-title">Solution to<a class="reference internal" href="4.4_Coordinate_geometry_exercises.html#geometry-ex-plane-1"> Exercise 4.4</a></p>
 <section id="solution-content">
-<p><span class="math notranslate nohighlight">\(\vec{n} = (3, -2, 1)\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(\mathbf{n} = (3, -2, 1)\)</span>.</p>
 <p>Let <span class="math notranslate nohighlight">\(x=0\)</span> then <span class="math notranslate nohighlight">\(3(0) - 2 y + 2 = 10\)</span> so <span class="math notranslate nohighlight">\(y = -4\)</span> and a point on the plane has co-ordinates <span class="math notranslate nohighlight">\((0, -4, 2)\)</span>.</p>
 <p>Let <span class="math notranslate nohighlight">\(x = 2\)</span> then <span class="math notranslate nohighlight">\(3(2) - 2 y + 2 = 10\)</span> so <span class="math notranslate nohighlight">\(y = -1\)</span> and a point on the plane has co-ordinates <span class="math notranslate nohighlight">\((2, -1, 2)\)</span>.</p>
 </section>
@@ -503,7 +503,7 @@ document.write(`
     1 + 3t_1 &amp;= 7 - t_2
 \end{align*} \end{split}\]</div>
 <p>From the second equation <span class="math notranslate nohighlight">\(t_1 = -4\)</span> which when substituted into the third equation gives <span class="math notranslate nohighlight">\(t_2 = 18\)</span>. Substituting these into the first equation gives <span class="math notranslate nohighlight">\(-7 = 37\)</span> which is a contradiction so <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> do not intersect.</p>
-<p>We also need to show that they are not parallel, i.e., there is no value <span class="math notranslate nohighlight">\(k\)</span> such that <span class="math notranslate nohighlight">\(\vec{d}_1 = k \vec{d}_2\)</span>. The direction vectors for <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> are <span class="math notranslate nohighlight">\(\vec{d}_1 = (2, -1, 3)\)</span> and <span class="math notranslate nohighlight">\(\vec{d}_2 = (2, 0, -1)\)</span> so</p>
+<p>We also need to show that they are not parallel, i.e., there is no value <span class="math notranslate nohighlight">\(k\)</span> such that <span class="math notranslate nohighlight">\(\mathbf{d}_1 = k \mathbf{d}_2\)</span>. The direction vectors for <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> are <span class="math notranslate nohighlight">\(\mathbf{d}_1 = (2, -1, 3)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}_2 = (2, 0, -1)\)</span> so</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix} &amp;= k \begin{pmatrix} 2 \\ 0 \\ -1 \end{pmatrix}, \end{split}\]</div>
 <p>which gives the system</p>
@@ -517,7 +517,7 @@ document.write(`
 <p>(b)   Using the <a class="reference internal" href="4.3_Shortest_distance_problems.html#point-line-distance-theorem">shortest distance between a point and a line</a></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    t &amp;= \frac{(\vec{p} - \vec{p}_1)\cdot \vec{d}_1}{\vec{d}_1 \cdot \vec{d}_1} = \frac{ 
+    t &amp;= \frac{(\mathbf{p} - \mathbf{p}_1)\cdot \mathbf{d}_1}{\mathbf{d}_1 \cdot \mathbf{d}_1} = \frac{ 
     \left( \begin{pmatrix} 0 \\ -1 \\ 3 \end{pmatrix} -
     \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} \right) \cdot
     \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix}}{
@@ -525,23 +525,23 @@ document.write(`
         \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix}
     } 
     = \frac{5}{14}, \\
-    \therefore \vec{r} &amp;= \vec{p}_1 + t\vec{d}_1 = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} + \frac{5}{14} 
+    \therefore \mathbf{r} &amp;= \mathbf{p}_1 + t\mathbf{d}_1 = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} + \frac{5}{14} 
     \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix} = 
     \begin{pmatrix} \frac{12}{7} \\ - \frac{5}{14} \\ \frac{29}{14} \end{pmatrix}, \\
-    \overrightarrow{\vec{rp}} &amp;= \begin{pmatrix} 0 \\ -1 \\ 3 \end{pmatrix} - 
+    \overrightarrow{\mathbf{rp}} &amp;= \begin{pmatrix} 0 \\ -1 \\ 3 \end{pmatrix} - 
     \begin{pmatrix} \frac{12}{7} \\ -\frac{5}{14} \\ \frac{29}{14} \end{pmatrix} =
     \begin{pmatrix} -\frac{12}{7} \\ -\frac{9}{14} \\ \frac{13}{14} \end{pmatrix}, \\
-    \therefore d &amp;= \|\overrightarrow{\vec{rp}}\| = 
+    \therefore d &amp;= \|\overrightarrow{\mathbf{rp}}\| = 
     \sqrt{\left(-\frac{12}{7}\right)^2 + \left(-\frac{9}{14}\right)^2 + \left(\frac{13}{14}\right)^2} 
     = \frac{\sqrt{826}}{14}.
 \end{align*} \end{split}\]</div>
-<p>(c)   The direction vectors for lines <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> are <span class="math notranslate nohighlight">\(\vec{d}_1 = (2, -1, 3)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\vec{d}_2 = (2, -, -1)^\mathsf{T}\)</span> respectively. Calculating a vector perpendicular to both <span class="math notranslate nohighlight">\(\vec{d}_1\)</span> and <span class="math notranslate nohighlight">\(\vec{d}_2\)</span></p>
+<p>(c)   The direction vectors for lines <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> are <span class="math notranslate nohighlight">\(\mathbf{d}_1 = (2, -1, 3)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}_2 = (2, -, -1)^\mathsf{T}\)</span> respectively. Calculating a vector perpendicular to both <span class="math notranslate nohighlight">\(\mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{d}_2\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \vec{n} &amp;= \vec{d}_1 \times \vec{d_1} = \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix} \times
+    \mathbf{n} &amp;= \mathbf{d}_1 \times \mathbf{d_1} = \begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix} \times
     \begin{pmatrix} 2 \\ 0 \\ -1 \end{pmatrix} =
     \begin{vmatrix}
-        \vec{i} &amp; \vec{j} &amp; \vec{k} \\
+        \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
         2 &amp; -1 &amp; 3 \\
         2 &amp; 0 &amp; -1 
     \end{vmatrix} = 
@@ -550,14 +550,14 @@ document.write(`
 <p>and normalising gives</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \hat{\vec{n}} = \frac{\vec{n}}{\|\vec{n}\|} = \frac{1}{\sqrt{69}} 
+    \hat{\mathbf{n}} = \frac{\mathbf{n}}{\|\mathbf{n}\|} = \frac{1}{\sqrt{69}} 
     \begin{pmatrix} 1 \\ 8 \\ 2 \end{pmatrix} =
     \begin{pmatrix} \frac{\sqrt{69}}{69} \\ \frac{8\sqrt{69}}{69} \\ \frac{2\sqrt{69}}{69} \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 <p>Using <a class="reference internal" href="4.3_Shortest_distance_problems.html#line-line-distance-theorem">the distance between two lines</a></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    d &amp;= (\vec{p}_2 - \vec{p}_1) \cdot \hat{\vec{n}} \\
+    d &amp;= (\mathbf{p}_2 - \mathbf{p}_1) \cdot \hat{\mathbf{n}} \\
     &amp;= \left( \begin{pmatrix} 1 \\ 4 \\ 7 \end{pmatrix} -
     \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} \right) \cdot
     \begin{pmatrix} \frac{\sqrt{69}}{69} \\ \frac{8\sqrt{69}}{69} \\ \frac{2\sqrt{69}}{69} \end{pmatrix} \\
@@ -571,10 +571,10 @@ document.write(`
 
 <p class="admonition-title">Solution to<a class="reference internal" href="4.4_Coordinate_geometry_exercises.html#geometry-ex-line-plane-intersection"> Exercise 4.6</a></p>
 <section id="solution-content">
-<p>First we need to find the position vector of a point, <span class="math notranslate nohighlight">\(\vec{r}\)</span> say, that lies on the plane. Let <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(y=1\)</span> then <span class="math notranslate nohighlight">\(z=-1\)</span> so we know that <span class="math notranslate nohighlight">\(\vec{r} = (0, 1, -1)^\mathsf{T}\)</span> lies on the plane. Using the <a class="reference internal" href="4.2_Planes.html#point-normal-definition">point normal definition of a plane</a></p>
+<p>First we need to find the position vector of a point, <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> say, that lies on the plane. Let <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(y=1\)</span> then <span class="math notranslate nohighlight">\(z=-1\)</span> so we know that <span class="math notranslate nohighlight">\(\mathbf{r} = (0, 1, -1)^\mathsf{T}\)</span> lies on the plane. Using the <a class="reference internal" href="4.2_Planes.html#point-normal-definition">point normal definition of a plane</a></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \vec{n} \cdot \begin{pmatrix} x - x_0 \\ y - y_0 \\ z - z_0 \end{pmatrix} &amp;= 0 \\
+    \mathbf{n} \cdot \begin{pmatrix} x - x_0 \\ y - y_0 \\ z - z_0 \end{pmatrix} &amp;= 0 \\
     \begin{pmatrix} 6 \\ -1 \\ -4 \end{pmatrix} \cdot
     \begin{pmatrix} 0 - (1 + 2 t) \\ 1 - (2 + t) \\ -1 - (-1 + 4 t) \end{pmatrix} &amp;= 0 \\
     \begin{pmatrix} 6 \\ -1 \\ -4 \end{pmatrix} \cdot
@@ -586,7 +586,7 @@ document.write(`
 <p>So the line intersects with the plane at</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \vec{p} + t \vec{d} = 
+    \mathbf{p} + t \mathbf{d} = 
     \begin{pmatrix} 1 \\ 2 \\ -1 \end{pmatrix} + 
     \begin{pmatrix} 2 \\ 1 \\ 4 \end{pmatrix} =
     \begin{pmatrix} 3 \\ 3 \\ 3 \end{pmatrix}.
@@ -600,20 +600,20 @@ document.write(`
 <p>Using the <a class="reference internal" href="3.3_Dot_and_cross_products.html#dot-product-definition">geometric definition of a dot product</a></p>
 <div class="math notranslate nohighlight">
 \[ \begin{align*}
-    (\vec{q} - \vec{p})\cdot \vec{n} &amp;= \|\vec{n}\|\|\vec{q} - \vec{p}\| \cos(\theta).
+    (\mathbf{q} - \mathbf{p})\cdot \mathbf{n} &amp;= \|\mathbf{n}\|\|\mathbf{q} - \mathbf{p}\| \cos(\theta).
 \end{align*} \]</div>
 <p>Since <span class="math notranslate nohighlight">\(d\)</span> is the length of the adjacent side of the right-angled triangle then</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align*}
-    \cos(\theta) &amp;= \frac{d}{\|\vec{q} - \vec{p}\|},
+    \cos(\theta) &amp;= \frac{d}{\|\mathbf{q} - \mathbf{p}\|},
 \end{align*} \]</div>
 <p>so</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    (\vec{q} - \vec{p}) \cdot \vec{n} &amp;= \|\vec{n}\| \|\vec{q} - \vec{p}\| \frac{d}{\|\vec{q} - \vec{p}\|} \\
-    \therefore d &amp;= (\vec{q} - \vec{p})\cdot \frac{\vec{n}}{\|\vec{n}\|}.
+    (\mathbf{q} - \mathbf{p}) \cdot \mathbf{n} &amp;= \|\mathbf{n}\| \|\mathbf{q} - \mathbf{p}\| \frac{d}{\|\mathbf{q} - \mathbf{p}\|} \\
+    \therefore d &amp;= (\mathbf{q} - \mathbf{p})\cdot \frac{\mathbf{n}}{\|\mathbf{n}\|}.
 \end{align*} \end{split}\]</div>
-<p>The equation of the plane is <span class="math notranslate nohighlight">\(6 x-y-4 z=3\)</span> so letting <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(y=1\)</span> then <span class="math notranslate nohighlight">\(z = 1\)</span> so we know that <span class="math notranslate nohighlight">\(\vec{p} = (0, 1, -1)\)</span> lies on the plane. Since <span class="math notranslate nohighlight">\(\vec{q} = (2, 4, -3)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\vec{n} = (6, -1, -4)^\mathsf{T}\)</span> then applying the above formula gives</p>
+<p>The equation of the plane is <span class="math notranslate nohighlight">\(6 x-y-4 z=3\)</span> so letting <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(y=1\)</span> then <span class="math notranslate nohighlight">\(z = 1\)</span> so we know that <span class="math notranslate nohighlight">\(\mathbf{p} = (0, 1, -1)\)</span> lies on the plane. Since <span class="math notranslate nohighlight">\(\mathbf{q} = (2, 4, -3)^\mathsf{T}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{n} = (6, -1, -4)^\mathsf{T}\)</span> then applying the above formula gives</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     d &amp;= \left( \begin{pmatrix} 2 \\ 4 \\ -3 \end{pmatrix} -

@@ -64,7 +64,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"vec": ["\\mathbf{#1}", 1], "adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/A6_Linear_transformations_exercises_solutions';</script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
@@ -160,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="0.1_Teaching_schedule.html">Teaching schedule</a></li>
 <li class="toctree-l1"><a class="reference internal" href="0.3_Mathematical_preliminaries.html">Mathematical preliminaries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0.5_How_to_pass.html">How to pass the unit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0.5_How_to_pass.html">How to Pass the Module</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul class="nav bd-sidenav">
@@ -385,13 +385,13 @@ document.write(`
 
 <p class="admonition-title">Solution to<a class="reference internal" href="6.5_Linear_transforation_exercises.html#transformations-ex-linear-transformations"> Exercise 6.1</a></p>
 <section id="solution-content">
-<p>(a) Let <span class="math notranslate nohighlight">\(\vec{u} = (u_1, u_2), \vec{v} = (v_1, v_2) \in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span></p>
+<p>(a) Let <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2), \mathbf{v} = (v_1, v_2) \in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    T(\vec{u} + \alpha \vec{v}) 
+    T(\mathbf{u} + \alpha \mathbf{v}) 
     &amp;= T\begin{pmatrix} u_1 + \alpha v_1 \\ u_2 + \alpha v_2 \end{pmatrix} 
     = \begin{pmatrix} 0 \\ u_2 + \alpha v_2 \end{pmatrix}, \\
-    T(\vec{u}) + \alpha T(\vec{v})
+    T(\mathbf{u}) + \alpha T(\mathbf{v})
     &amp;= T\begin{pmatrix} u_1 \\ u_2 \end{pmatrix} + \alpha T \begin{pmatrix} v_1 \\ v_2 \end{pmatrix}
     = \begin{pmatrix} 0 \\ u_2 + \alpha v_2 \end{pmatrix},
 \end{align*} \end{split}\]</div>
@@ -402,24 +402,24 @@ document.write(`
     T\left( \begin{pmatrix} 1 \\ 0 \end{pmatrix} + \begin{pmatrix} 1 \\ 1 \end{pmatrix} \right) = \begin{pmatrix} 2 \\ 5 \end{pmatrix}, \\
     T\begin{pmatrix} 1 \\ 0 \end{pmatrix} + T\begin{pmatrix} 1 \\ 1 \end{pmatrix} = \begin{pmatrix} 2 \\ 10 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>(c) Let <span class="math notranslate nohighlight">\(\vec{u} = (u_1, u_2), \vec{v} = (v_1, v_2) \in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span></p>
+<p>(c) Let <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2), \mathbf{v} = (v_1, v_2) \in \mathbb{R}^2\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    T(\vec{u} + \alpha \vec{v})
+    T(\mathbf{u} + \alpha \mathbf{v})
     &amp;= T\begin{pmatrix} u_1 + \alpha v_1 \\ u_2 + \alpha v_2 \end{pmatrix}
     = \begin{pmatrix} u_1 + \alpha v_1 \\ u_1 - u_2 + \alpha v_1 - \alpha v_2 \end{pmatrix}, \\
-    T(\vec{u}) + \alpha T(\vec{v})
+    T(\mathbf{u}) + \alpha T(\mathbf{v})
     &amp;= T\begin{pmatrix} u_1 \\ u_2 \end{pmatrix} + \alpha T\begin{pmatrix} v_1 \\ v_2 \end{pmatrix}
     = \begin{pmatrix} u_1 + \alpha v_1 \\ u_1 + \alpha v_1 - u_2 - \alpha v_2\end{pmatrix},
 \end{align*} \end{split}\]</div>
 <p>therefore <span class="math notranslate nohighlight">\(T\)</span> is a linear transformation.</p>
-<p>(d) Let <span class="math notranslate nohighlight">\(\vec{u} = (u_1, u_2, v_3),\vec{v} = (v_1, v_2, v_3)\in \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span></p>
+<p>(d) Let <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2, v_3),\mathbf{v} = (v_1, v_2, v_3)\in \mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    T(\vec{u} + \alpha \vec{v}) 
+    T(\mathbf{u} + \alpha \mathbf{v}) 
     &amp;= T\begin{pmatrix} u_1 + \alpha v_1 \\ u_2 + \alpha v_2 \\ u_3 + \alpha v_3 \end{pmatrix}
     = \begin{pmatrix} u_1 + u_2 + \alpha v_1 + \alpha v_2 \\  u_3 + \alpha v_3 \end{pmatrix} , \\
-    T(\vec{u}) + \alpha T(\vec{v}) 
+    T(\mathbf{u}) + \alpha T(\mathbf{v}) 
     &amp;= T\begin{pmatrix} u_1 \\ u_2 \\ u_3 \end{pmatrix} + \alpha \begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix}
     = \begin{pmatrix} u_1 + \alpha v_1 + u_2 + \alpha v_2 \\  u_3 + \alpha v_3 \end{pmatrix}
 \end{align*} \end{split}\]</div>
@@ -484,7 +484,7 @@ document.write(`
 \end{pmatrix}. \end{split}\]</div>
 <p>Therefore</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \vec{u} = A^{-1} 
+\[\begin{split} \mathbf{u} = A^{-1} 
 \begin{pmatrix} -1 \\ 5 \end{pmatrix} =  \frac{1}{7}
 \begin{pmatrix} 
     3 &amp; 2 \\
@@ -500,9 +500,9 @@ document.write(`
 <section id="solution-content">
 <p>The transformation matrix is determined using equation <a class="reference internal" href="6.1_Transformation_matrices.html#equation-determining-the-transformation-matrix">(6.2)</a> which is</p>
 <div class="math notranslate nohighlight">
-\[A = \begin{pmatrix} T(\vec{u}_1) &amp; T(\vec{u}_2) &amp; \cdots &amp; T(\vec{u}_n) \end{pmatrix}
-\begin{pmatrix} \vec{u}_1 &amp; \vec{u}_2 &amp; \cdots &amp; \vec{u}_n \end{pmatrix}^{-1}.\]</div>
-<p>Using Gauss-Jordan elimination to calculate the inverse of <span class="math notranslate nohighlight">\((\vec{u}_1, \vec{u}_2, \vec{u}_3)^{-1}\)</span></p>
+\[A = \begin{pmatrix} T(\mathbf{u}_1) &amp; T(\mathbf{u}_2) &amp; \cdots &amp; T(\mathbf{u}_n) \end{pmatrix}
+\begin{pmatrix} \mathbf{u}_1 &amp; \mathbf{u}_2 &amp; \cdots &amp; \mathbf{u}_n \end{pmatrix}^{-1}.\]</div>
+<p>Using Gauss-Jordan elimination to calculate the inverse of <span class="math notranslate nohighlight">\((\mathbf{u}_1, \mathbf{u}_2, \mathbf{u}_3)^{-1}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     &amp; \left( \begin{array}{rrr|rrr}
@@ -532,7 +532,7 @@ document.write(`
        0 &amp; 0 &amp; 1 &amp; -2 &amp; -2 &amp; 1
     \end{array} \right)
 \end{align*} \end{split}\]</div>
-<p>So <span class="math notranslate nohighlight">\((\vec{u}_1, \vec{u}_2, \vec{u}_3)^{-1} = \begin{pmatrix}  -1 &amp; -2 &amp; 1 \\ 1 &amp; 1 &amp; 0 \\ -2 &amp; -2 &amp; 1 \end{pmatrix}\)</span> and</p>
+<p>So <span class="math notranslate nohighlight">\((\mathbf{u}_1, \mathbf{u}_2, \mathbf{u}_3)^{-1} = \begin{pmatrix}  -1 &amp; -2 &amp; 1 \\ 1 &amp; 1 &amp; 0 \\ -2 &amp; -2 &amp; 1 \end{pmatrix}\)</span> and</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     A &amp;= \begin{pmatrix} 1 &amp; 6 &amp; 2 \\ -2 &amp; 5 &amp; 4 \\ -4 &amp; 10 &amp; 7 \end{pmatrix}
@@ -651,7 +651,7 @@ Re\!f \left(\pi/3\right)
         0 &amp; 0 &amp; 1
     \end{pmatrix}
 \end{align*} \end{split}\]</div>
-<p>Translate by <span class="math notranslate nohighlight">\((3, 2)\)</span> so that the centre of the square is back to <span class="math notranslate nohighlight">\(\vec{c}\)</span></p>
+<p>Translate by <span class="math notranslate nohighlight">\((3, 2)\)</span> so that the centre of the square is back to <span class="math notranslate nohighlight">\(\mathbf{c}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     T \begin{pmatrix} 3 \\ 2 \end{pmatrix} &amp;= 
