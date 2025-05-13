@@ -218,7 +218,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="7.0_Exam_Questions.html">7. Exam Questions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="7.1_2025_Exam.html">7.1. Exam 2025</a></li>
-<li class="toctree-l2"><a class="reference internal" href="7.2_2024_Exam.html">7.2. Exam 2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7.2_2024_Exam%20copy.html">7.2. Exam 2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7.3_2023_Exam.html">7.3. Exam 2023</a></li>
 </ul>
 </li>
 </ul>
@@ -442,9 +443,9 @@ document.write(`
 \end{align*} \end{split}\]</div>
 <p>Therefore the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> rotated by angle <span class="math notranslate nohighlight">\(\theta\)</span> anti-clockwise about the original is</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} Rot(\theta) \cdot \mathbf{u} = 
+\[\begin{split} Rot(\theta) \cdot \mathbf{u} =
     \begin{pmatrix} \cos(\theta) &amp; -\sin(\theta) \\ \sin(\theta) &amp; \cos(\theta) \end{pmatrix}
-    \begin{pmatrix} u_x \\ u_y \end{pmatrix} = 
+    \begin{pmatrix} u_x \\ u_y \end{pmatrix} =
     \begin{pmatrix}
         u_x \cos(\theta) - u_y \sin(\theta) \\
         u_x \sin(\theta) + u_y \cos(\theta)
@@ -454,12 +455,12 @@ document.write(`
 <section class="theorem-content" id="proof-content">
 <p>The rotation of a vector <span class="math notranslate nohighlight">\(\mathbf{u} = (u_x, u_y) \in \mathbb{R}^2\)</span> <strong>anti-clockwise</strong> by an angle <span class="math notranslate nohighlight">\(\theta\)</span> is the linear transformation <span class="math notranslate nohighlight">\(Rot(\theta): \mathbb{R}^2 \to \mathbb{R}^2\)</span> defined by</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} Rot(\theta) : 
-    \begin{pmatrix} u_x \\ u_y \end{pmatrix} \mapsto 
+\[\begin{split} Rot(\theta) :
+    \begin{pmatrix} u_x \\ u_y \end{pmatrix} \mapsto
     \begin{pmatrix} u_x \cos(\theta) - u_y \sin(\theta) \\ u_x \sin(\theta) + u_y \cos(\theta) \end{pmatrix}. \end{split}\]</div>
 <p>The transformation matrix for rotation in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-rotation-matrix-equation">
-<span class="eqno">(6.8)<a class="headerlink" href="#equation-rotation-matrix-equation" title="Permalink to this equation">#</a></span>\[\begin{split} Rot(\theta) = \begin{pmatrix} 
+<span class="eqno">(6.8)<a class="headerlink" href="#equation-rotation-matrix-equation" title="Permalink to this equation">#</a></span>\[\begin{split} Rot(\theta) = \begin{pmatrix}
         \cos(\theta) &amp; -\sin(\theta) \\
         \sin(\theta) &amp; \cos(\theta)
     \end{pmatrix}. \end{split}\]</div>
@@ -495,7 +496,7 @@ document.write(`
 <p><strong>Solution</strong></p>
 <p>The transformation matrix for this rotation is</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} Rot \left( \frac{\pi}{2} \right) = 
+\[\begin{split} Rot \left( \frac{\pi}{2} \right) =
     \begin{pmatrix}
         \cos({\pi}/{2}) &amp; -\sin({\pi}/{2}) \\
         \sin({\pi}/{2}) &amp; \cos({\pi}/{2})
@@ -506,9 +507,9 @@ document.write(`
     \end{pmatrix}. \end{split}\]</div>
 <p>Applying the transformation to <span class="math notranslate nohighlight">\(\mathbf{u} = (2, 1)\)</span></p>
 <div class="math notranslate nohighlight">
-\[\begin{split} Rot\left( \frac{\pi}{2} \right) \cdot \mathbf{u} = 
+\[\begin{split} Rot\left( \frac{\pi}{2} \right) \cdot \mathbf{u} =
     \begin{pmatrix}
-        0 &amp; -1 \\ 
+        0 &amp; -1 \\
         1 &amp; 0
     \end{pmatrix}
     \begin{pmatrix} 2 \\ 1 \end{pmatrix}
@@ -545,7 +546,7 @@ document.write(`
 </figure>
 <p>To reflect about the <span class="math notranslate nohighlight">\(x\)</span>-axis we simply change the sign of the <span class="math notranslate nohighlight">\(y\)</span> co-ordinate</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} Re\!f(0) \cdot \mathbf{u} = 
+\[\begin{split} Re\!f(0) \cdot \mathbf{u} =
 \begin{pmatrix} u_x \\ -u_y \end{pmatrix}, \end{split}\]</div>
 <p>and the transformation matrix is</p>
 <div class="math notranslate nohighlight" id="equation-reflection-about-x-equation">
@@ -576,11 +577,11 @@ document.write(`
 <p>therefore</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    Re\!f(\theta) &amp;= 
+    Re\!f(\theta) &amp;=
     \begin{pmatrix} \cos(\theta) &amp; -\sin(\theta) \\ \sin(\theta) &amp; \cos(\theta) \end{pmatrix}
-    \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} 
+    \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}
     \begin{pmatrix} \cos(\theta) &amp; \sin(\theta) \\ -\sin(\theta) &amp; \cos(\theta) \end{pmatrix} \\
-    &amp;= \begin{pmatrix} 
+    &amp;= \begin{pmatrix}
         \cos^2(\theta) - \sin^2(\theta) &amp; 2\cos(\theta)\sin(\theta) \\
         2\cos(\theta)\sin(\theta) &amp; \sin^2(\theta) - \cos^2(\theta)
     \end{pmatrix}.
@@ -589,13 +590,13 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \cos(2\theta) &amp;= \cos^2(\theta) - \sin^2(\theta), \\
-    \sin(2\theta) &amp;= 2\cos(\theta) \sin(\theta), 
+    \sin(2\theta) &amp;= 2\cos(\theta) \sin(\theta),
 \end{align*} \end{split}\]</div>
 <p>then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    Re\!f(\theta) &amp;= 
-    \begin{pmatrix} 
+    Re\!f(\theta) &amp;=
+    \begin{pmatrix}
         \cos(2\theta) &amp; \sin(2\theta) \\
         \sin(2\theta) &amp; -\cos(2\theta)
     \end{pmatrix}.
@@ -607,7 +608,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     Re\!f(\theta) :
-    \begin{pmatrix} u_x \\ u_y \end{pmatrix} \mapsto 
+    \begin{pmatrix} u_x \\ u_y \end{pmatrix} \mapsto
     \begin{pmatrix} u_x \cos (2\theta) + u_y \sin(2 \theta) \\ u_x \sin(2\theta) - u_y \cos (2\theta) \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 <p>The transformation matrix for reflection in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> is</p>
@@ -675,7 +676,7 @@ document.write(`
 <p>The scaling of a vector <span class="math notranslate nohighlight">\(\mathbf{u} \in \mathbb{R}^n\)</span> by the scaling vector <span class="math notranslate nohighlight">\(\mathbf{s}\)</span> is the linear transformation <span class="math notranslate nohighlight">\(S(\mathbf{s}): \mathbf{u} \mapsto \mathbf{v}\)</span> calculated using</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    S(\mathbf{s}): \begin{pmatrix} u_1 \\ u_2 \\ \vdots \\ u_n \end{pmatrix} \mapsto 
+    S(\mathbf{s}): \begin{pmatrix} u_1 \\ u_2 \\ \vdots \\ u_n \end{pmatrix} \mapsto
     \begin{pmatrix} s_1 u_1 \\ s_2 u_2 \\ \vdots \\ s_n u_n \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 <p>The transformation matrix for scaling is</p>
@@ -683,8 +684,8 @@ document.write(`
 <span class="eqno">(6.11)<a class="headerlink" href="#equation-scaling-matrix-equation" title="Permalink to this equation">#</a></span>\[\begin{split} \begin{align*}
     S(\mathbf{s}) =
     \begin{pmatrix}
-        s_1 &amp; 0 &amp; \cdots &amp; 0 \\ 
-        0 &amp; s_2 &amp; \ddots &amp; \vdots \\ 
+        s_1 &amp; 0 &amp; \cdots &amp; 0 \\
+        0 &amp; s_2 &amp; \ddots &amp; \vdots \\
         \vdots &amp; \ddots &amp; \ddots &amp; 0 \\
         0 &amp; \cdots &amp; 0 &amp; s_n
         \end{pmatrix}.

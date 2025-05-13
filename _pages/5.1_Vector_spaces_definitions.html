@@ -218,7 +218,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="7.0_Exam_Questions.html">7. Exam Questions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="7.1_2025_Exam.html">7.1. Exam 2025</a></li>
-<li class="toctree-l2"><a class="reference internal" href="7.2_2024_Exam.html">7.2. Exam 2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7.2_2024_Exam%20copy.html">7.2. Exam 2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7.3_2023_Exam.html">7.3. Exam 2023</a></li>
 </ul>
 </li>
 </ul>
@@ -393,30 +394,12 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="definitions">
 <span id="vector-spaces-definitions-section"></span><h1><span class="section-number">5.1. </span>Definitions<a class="headerlink" href="#definitions" title="Permalink to this heading">#</a></h1>
-<!-- ```{prf:definition} Binary operation
-:label: binary-operation-definition
-
-A **binary operation** is a mapping of two elements of the same set $S$ whose output is also an element of $S$. 
-
-$$ f: S \times S \to S$$
-
-The symbol $\times$ is used to denote the <a href="https://en.wikipedia.org/wiki/Cartesian_product" target="_blank">Cartesian product</a> and $\to$ denotes a mapping from one set to another.
-```
-
-We have already met examples of binary operations in addition, multiplication, subtraction and division of real numbers. If $a,b \in \mathbb{R}$ then the following operations all output real numbers
-
-- $f(a,b) = a + b$
-- $f(a,b) = a \cdot b$
-- $f(a,b) = a - b$
-- $f(a,b) = a \div b$
-
-Another example is for the set of all $2 \times 2$ matrices $M_{2 \times 2}(\mathbb{R})$, $f(A, B) = AB$ is a binary operation since $AB$ is also a $2 \times 2$ matrix. -->
 <div class="proof definition admonition" id="field-definition">
 <p class="admonition-title"><span class="caption-number">Definition 5.1 </span> (Field)</p>
 <section class="definition-content" id="proof-content">
 <p>A <strong>field</strong> is a set <span class="math notranslate nohighlight">\(F\)</span> together with two binary operations on elements of <span class="math notranslate nohighlight">\(F\)</span> called <em>addition</em> and <em>multiplication</em>. If <span class="math notranslate nohighlight">\(a,b \in F\)</span> then addition is written as <span class="math notranslate nohighlight">\(a + b\)</span> and multiplication is written as <span class="math notranslate nohighlight">\(a \times b\)</span>.</p>
 </section>
-</div><p>The classic example of a field is a set of numbers which will suffice for what we will be doing here. However, a field can be any set of objects for which the above definition is satisfied and you may meet other examples of fields in your studies in the future.</p>
+</div><p>The classic example of a field is a set of numbers which will suffice for what we will be doing here. However, a field can be any set of objects for which the above definition is satisfied, and you may meet other examples of fields in your studies in the future.</p>
 <div class="proof definition admonition" id="vector-space-definition">
 <p class="admonition-title"><span class="caption-number">Definition 5.2 </span> (Vector space)</p>
 <section class="definition-content" id="proof-content">
@@ -455,7 +438,7 @@ Another example is for the set of all $2 \times 2$ matrices $M_{2 \times 2}(\mat
 <li><p><span class="math notranslate nohighlight">\(-(\alpha u) = (-\alpha)u = \alpha (-u)\)</span>.</p></li>
 </ul>
 </section>
-</div><p>The name <em>‘vector space’</em> indicates a connection with the study of vectors. Indeed our Euclidean spaces <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, as introduced in <a class="reference internal" href="3.0_Vectors.html#vectors-chapter"><span class="std std-ref">Vectors</span></a>, are vector spaces over <span class="math notranslate nohighlight">\(F=\mathbb{R}\)</span>. Addition and scalar multiplication, in the sense of a vector space, for <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> are as given in <a class="reference internal" href="3.1_Vector_arithmetic.html#vector-addition-definition">vector addition</a> and <a class="reference internal" href="3.1_Vector_arithmetic.html#scalar-multiplication-of-a-vector-definition">scalar multiplication</a> respectively. Euclidean vector spaces are often the first examples of vector spaces that a student meets. However, maybe they do not quite demonstrate the power behind this construction. The real motivation of the study of the vector spaces comes from the fact that a lot of more abstract sets, such as differentiable functions or matrices, can be viewed as vector spaces. Everything that we learn about vector spaces can be then applied to any set which satisfies the definition of a vector space. This means that the set of <span class="math notranslate nohighlight">\(m\times n\)</span> matrices with matrix addition and scalar multiplication or the set of all polynomials of degree at most <span class="math notranslate nohighlight">\(n\)</span>, in some sense, behave in a very similar fashion to Euclidean space.</p>
+</div><p>The name <em>‘vector space’</em> indicates a connection with the study of vectors. Indeed, our Euclidean spaces <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, as introduced in <a class="reference internal" href="3.0_Vectors.html#vectors-chapter"><span class="std std-ref">Vectors</span></a>, are vector spaces over <span class="math notranslate nohighlight">\(F=\mathbb{R}\)</span>. Addition and scalar multiplication, in the sense of a vector space, for <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> are as given in <a class="reference internal" href="3.1_Vector_arithmetic.html#vector-addition-definition">vector addition</a> and <a class="reference internal" href="3.1_Vector_arithmetic.html#scalar-multiplication-of-a-vector-definition">scalar multiplication</a> respectively. Euclidean vector spaces are often the first examples of vector spaces that a student meets. However, maybe they do not quite demonstrate the power behind this construction. The real motivation of the study of the vector spaces comes from the fact that a lot of more abstract sets, such as differentiable functions or matrices, can be viewed as vector spaces. Everything that we learn about vector spaces can be then applied to any set which satisfies the definition of a vector space. This means that the set of <span class="math notranslate nohighlight">\(m\times n\)</span> matrices with matrix addition and scalar multiplication or the set of all polynomials of degree at most <span class="math notranslate nohighlight">\(n\)</span>, in some sense, behave in a very similar fashion to Euclidean space.</p>
 <div class="proof example admonition" id="real-numbers-vector-space-example">
 <p class="admonition-title"><span class="caption-number">Example 5.1 </span></p>
 <section class="example-content" id="proof-content">

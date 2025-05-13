@@ -218,7 +218,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="7.0_Exam_Questions.html">7. Exam Questions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="7.1_2025_Exam.html">7.1. Exam 2025</a></li>
-<li class="toctree-l2"><a class="reference internal" href="7.2_2024_Exam.html">7.2. Exam 2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7.2_2024_Exam%20copy.html">7.2. Exam 2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7.3_2023_Exam.html">7.3. Exam 2023</a></li>
 </ul>
 </li>
 </ul>
@@ -403,12 +404,12 @@ document.write(`
 <p>so <span class="math notranslate nohighlight">\(T(\mathbf{u})\)</span> depends on the vectors <span class="math notranslate nohighlight">\(T(\mathbf{v}_1), T(\mathbf{v}_2), \ldots, T(\mathbf{v}_n)\)</span>. We can write this as the matrix equation</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    T(\mathbf{u}) &amp;= \begin{pmatrix} 
+    T(\mathbf{u}) &amp;= \begin{pmatrix}
         \uparrow &amp; \uparrow &amp; &amp; \uparrow \\
         T(\mathbf{v}_1) &amp; T(\mathbf{v}_2) &amp; \cdots &amp; T(\mathbf{v}_n) \\
         \downarrow &amp; \downarrow &amp; &amp; \downarrow
     \end{pmatrix}
-    \begin{pmatrix} u_1 \\ u_2 \\ \vdots \\ u_n \end{pmatrix} 
+    \begin{pmatrix} u_1 \\ u_2 \\ \vdots \\ u_n \end{pmatrix}
     = A \mathbf{u}.
 \end{align*} \end{split}\]</div>
 <p>In other words we can apply a linear transformation simply by multiplying <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> by a matrix <span class="math notranslate nohighlight">\(A\)</span>.</p>
@@ -417,7 +418,7 @@ document.write(`
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(T : V \to W\)</span> be a linear transformation and <span class="math notranslate nohighlight">\(A\)</span> be a matrix such that</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} A = \begin{pmatrix} 
+\[\begin{split} A = \begin{pmatrix}
     \uparrow &amp; \uparrow &amp; &amp; \uparrow \\
     T(\mathbf{v}_1) &amp; T(\mathbf{v}_2) &amp; \cdots &amp; T(\mathbf{v}_n) \\
     \downarrow &amp; \downarrow &amp; &amp; \downarrow
@@ -439,11 +440,11 @@ document.write(`
 <p>Applying the transformation to the standard basis vectors</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    T(\mathbf{e}_1) = T\begin{pmatrix} 1 \\ 0 \end{pmatrix} 
-    = \begin{pmatrix} 3(1) + 0 \\ 1 + 2(0) \end{pmatrix} 
-    =  \begin{pmatrix} 3 \\ 1 \end{pmatrix}, \\
-    T(\mathbf{e}_2) = T\begin{pmatrix} 0 \\ 1 \end{pmatrix} 
-    = \begin{pmatrix} 3(0) + 1 \\ 0 + 2(1) \end{pmatrix} 
+    T(\mathbf{e}_1) = T\begin{pmatrix} 1 \\ 0 \end{pmatrix}
+    = \begin{pmatrix} 3(1) + 0 \\ 1 + 2(0) \end{pmatrix}
+    = \begin{pmatrix} 3 \\ 1 \end{pmatrix}, \\
+    T(\mathbf{e}_2) = T\begin{pmatrix} 0 \\ 1 \end{pmatrix}
+    = \begin{pmatrix} 3(0) + 1 \\ 0 + 2(1) \end{pmatrix}
     = \begin{pmatrix} 1 \\ 2 \end{pmatrix},
 \end{align*} \end{split}\]</div>
 <p>so the transformation matrix is</p>
@@ -452,8 +453,8 @@ document.write(`
 <p>Applying the transformation matrix to <span class="math notranslate nohighlight">\((1, 1)\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} T\begin{pmatrix} 1 \\ 1 \end{pmatrix} = A \cdot \begin{pmatrix} 1 \\ 1 \end{pmatrix} =  
-    \begin{pmatrix} 3 &amp; 1 \\ 1 &amp; 2 \end{pmatrix} 
-    \begin{pmatrix} 1 \\ 1 \end{pmatrix} = 
+    \begin{pmatrix} 3 &amp; 1 \\ 1 &amp; 2 \end{pmatrix}
+    \begin{pmatrix} 1 \\ 1 \end{pmatrix} =
     \begin{pmatrix} 4 \\ 3 \end{pmatrix}. \end{split}\]</div>
 </section>
 </div><p>The affects of the linear transformation from <a class="reference internal" href="6.0_Linear_transformations.html#linear-transformation-example">Example 6.1</a> is illustrated in <a class="reference internal" href="#linear-transformation-figure"><span class="std std-numref">Fig. 6.1</span></a>. Note that the transformation <span class="math notranslate nohighlight">\(T\)</span> can be thought of as changing the basis of the vector space. The unit square with respect to the basis <span class="math notranslate nohighlight">\(\{\mathbf{e}_1, \mathbf{e}_1\}\)</span> has been transformed into a unit parallelogram with respect to the basis <span class="math notranslate nohighlight">\(\{ T(\mathbf{e}_1), T(\mathbf{e}_2)\}\)</span>.</p>
@@ -474,7 +475,7 @@ document.write(`
         \uparrow &amp; \uparrow &amp; &amp; \uparrow \\
         \mathbf{u}_1 &amp; \mathbf{u}_2 &amp; \cdots &amp; \mathbf{u}_n \\
         \downarrow &amp; \downarrow &amp; &amp; \downarrow
-    \end{pmatrix} = 
+    \end{pmatrix} =
     \begin{pmatrix}
         \uparrow &amp; \uparrow &amp; &amp; \uparrow \\
         T(\mathbf{u}_1) &amp; T(\mathbf{u}_2) &amp; \cdots &amp; T(\mathbf{u}_n) \\
@@ -518,7 +519,7 @@ document.write(`
 <p>The inverse of <span class="math notranslate nohighlight">\((\mathbf{u}_1, \mathbf{u}_2)\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; 2 \end{pmatrix}^{-1} &amp;= \begin{pmatrix} 2 &amp; -1 \\ -1 &amp; 1 \end{pmatrix} 
+    \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; 2 \end{pmatrix}^{-1} &amp;= \begin{pmatrix} 2 &amp; -1 \\ -1 &amp; 1 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 <p>Right multiplying the image matrix</p>
 <div class="math notranslate nohighlight">
@@ -568,7 +569,7 @@ document.write(`
 \[\begin{split} \begin{align*}
     A^{-1} \begin{pmatrix} 4 \\ 3 \end{pmatrix} &amp;=
    \frac{1}{5} \begin{pmatrix} 2 &amp; -1 \\ -1 &amp; 3 \end{pmatrix}
-    \begin{pmatrix} 4 \\ 3 \end{pmatrix} 
+    \begin{pmatrix} 4 \\ 3 \end{pmatrix}
     = \begin{pmatrix} 1 \\ 1 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 </section>

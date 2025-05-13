@@ -218,7 +218,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="7.0_Exam_Questions.html">7. Exam Questions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="7.1_2025_Exam.html">7.1. Exam 2025</a></li>
-<li class="toctree-l2"><a class="reference internal" href="7.2_2024_Exam.html">7.2. Exam 2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7.2_2024_Exam%20copy.html">7.2. Exam 2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7.3_2023_Exam.html">7.3. Exam 2023</a></li>
 </ul>
 </li>
 </ul>
@@ -408,7 +409,7 @@ document.write(`
         0 &amp; 1 &amp; 0.9898\ldots
     \end{array} \right).
 \end{align*} \end{split}\]</div>
-<p>So <span class="math notranslate nohighlight">\(x_2 = 0.998998\ldots\)</span> which we can round to <span class="math notranslate nohighlight">\(x_2 = 1\)</span> and using back substitution we have <span class="math notranslate nohighlight">\(x_1 = \dfrac{1 - 1(1)}{0.001} = 0\)</span>. However, lets check our solution to see if we are correct</p>
+<p>So <span class="math notranslate nohighlight">\(x_2 = 0.998998\ldots\)</span> which we can round to <span class="math notranslate nohighlight">\(x_2 = 1\)</span> and using back substitution we have <span class="math notranslate nohighlight">\(x_1 = \dfrac{1 - 1(1)}{0.001} = 0\)</span>. However, let’s check our solution to see if we are correct</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     0.01(0) + 1(1) &amp;= 1, \\
@@ -425,7 +426,7 @@ document.write(`
     \longrightarrow &amp;
     \left( \begin{array}{cc|c}
         1 &amp; 1 &amp; 2 \\
-        0.001 &amp; 1 &amp; 1 
+        0.001 &amp; 1 &amp; 1
     \end{array} \right)
     \begin{array}{l} \\  R_2 - 0.001 R_1 \end{array} \\ \\
     \longrightarrow &amp;
@@ -434,7 +435,7 @@ document.write(`
         0 &amp; 0.999 &amp; 0.998
     \end{array} \right)
 \end{align*} \end{split}\]</div>
-<p>Solving using back substitution we have <span class="math notranslate nohighlight">\(x_2 = \dfrac{0.998}{0.999} = 0.998998\ldots \approx 1\)</span> as before and using back substitution we now have <span class="math notranslate nohighlight">\(x_1 = 2 - 1(1) = 1\)</span>. Lets check this solution to see if it is correct</p>
+<p>Solving using back substitution we have <span class="math notranslate nohighlight">\(x_2 = \dfrac{0.998}{0.999} = 0.998998\ldots \approx 1\)</span> as before and using back substitution we now have <span class="math notranslate nohighlight">\(x_1 = 2 - 1(1) = 1\)</span>. Let’s check this solution to see if it is correct</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align*}
     0.001(1) + 1(1) &amp;= 1.001 \approx 1,
@@ -490,10 +491,10 @@ document.write(`
         1 &amp; -1 &amp; 3 &amp; 13 \\
         -3 &amp; -1 &amp; 4 &amp; 8
     \end{array} \right)
-    \begin{array}{l} \\  R_2 - \frac{1}{4}R_1 \\[1pt]  R_3 + \frac{3}{4}R_1 \end{array} \\ \\
+    \begin{array}{l} \\ R_2 - \frac{1}{4}R_1 \\[1pt] R_3 + \frac{3}{4}R_1 \end{array} \\ \\
     \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
-        4 &amp; -2 &amp; 1 &amp; 15\\ 
+        4 &amp; -2 &amp; 1 &amp; 15 \\
         0 &amp; -\frac{1}{2} &amp; \frac{11}{4} &amp; \frac{37}{4} \\
         0 &amp; -\frac{5}{2} &amp; \frac{19}{4} &amp; \frac{77}{4}
     \end{array} \right)

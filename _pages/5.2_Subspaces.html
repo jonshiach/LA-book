@@ -218,7 +218,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="7.0_Exam_Questions.html">7. Exam Questions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="7.1_2025_Exam.html">7.1. Exam 2025</a></li>
-<li class="toctree-l2"><a class="reference internal" href="7.2_2024_Exam.html">7.2. Exam 2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7.2_2024_Exam%20copy.html">7.2. Exam 2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7.3_2023_Exam.html">7.3. Exam 2023</a></li>
 </ul>
 </li>
 </ul>
@@ -393,13 +394,13 @@ document.write(`
                   
   <span class="target" id="subspaces-section"></span><section class="tex2jax_ignore mathjax_ignore" id="subspaces">
 <span id="index-0"></span><h1><span class="section-number">5.2. </span>Subspaces<a class="headerlink" href="#subspaces" title="Permalink to this heading">#</a></h1>
-<p>We have seen that a <a class="reference internal" href="5.1_Vector_spaces_definitions.html#vector-space-definition">vector space</a> is a set, and hence we can consider studying its <a href="https://en.wikipedia.org/wiki/Subset" target="_blank">subsets</a>. Think of the Euclidean space <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> (which we think of with the usual <span class="math notranslate nohighlight">\(x,y,z\)</span>-coordinates). This is a vector space, and consider the plane <span class="math notranslate nohighlight">\(p = \{(x,y,z) : x + y + z = 0\} \subseteq \mathbb{R}^3\)</span>. In fact, we can view <span class="math notranslate nohighlight">\(p\)</span> itself as a vector space, meaning it satisfies the <a class="reference internal" href="5.1_Vector_spaces_definitions.html#vector-space-axioms">vector space axioms</a> A1 – A4 and M1 – M4, where we define addition and scalar multiplication as coming from <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. We saw in the chapter on <a class="reference internal" href="4.0_Coordinate_geometry.html#coordinate-geometry-chapter"><span class="std std-ref">co-ordinate geometry</span></a> that this vector space <span class="math notranslate nohighlight">\(p\)</span> actually closely resembles <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>.</p>
+<p>We have seen that a <a class="reference internal" href="5.1_Vector_spaces_definitions.html#vector-space-definition">vector space</a> is a set, and hence we can consider studying its <a href="https://en.wikipedia.org/wiki/Subset" target="_blank">subsets</a>. Think of the Euclidean space <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> (which we think of with the usual <span class="math notranslate nohighlight">\(x,y,z\)</span>-co-ordinates). This is a vector space, and consider the plane <span class="math notranslate nohighlight">\(p = \{(x,y,z) : x + y + z = 0\} \subseteq \mathbb{R}^3\)</span>. In fact, we can view <span class="math notranslate nohighlight">\(p\)</span> itself as a vector space, meaning it satisfies the <a class="reference internal" href="5.1_Vector_spaces_definitions.html#vector-space-axioms">vector space axioms</a> A1 – A4 and M1 – M4, where we define addition and scalar multiplication as coming from <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. We saw in the chapter on <a class="reference internal" href="4.0_Coordinate_geometry.html#co-ordinate-geometry-chapter"><span class="std std-ref">co-ordinate geometry</span></a> that this vector space <span class="math notranslate nohighlight">\(p\)</span> actually closely resembles <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>.</p>
 <div class="proof definition admonition" id="subspace-definition">
 <p class="admonition-title"><span class="caption-number">Definition 5.3 </span> (Subspace)</p>
 <section class="definition-content" id="proof-content">
 <p>A non-empty subset <span class="math notranslate nohighlight">\(W\)</span> of a vector space <span class="math notranslate nohighlight">\(V\)</span> is called a <strong>subspace</strong> (or a vector subspace) if it satisfies all the <a class="reference internal" href="5.1_Vector_spaces_definitions.html#vector-space-axioms">vector space axioms</a> A1 – A4 and M1 – M4.</p>
 </section>
-</div><p>Most of the <a class="reference internal" href="5.1_Vector_spaces_definitions.html#vector-space-axioms">axioms</a> A1 – A4 and M1 – M4 are automatically satisfied, simply because they’re satisfied in <span class="math notranslate nohighlight">\(V\)</span>. The only things we really need to check are that addition and scalar multiplication are well-defined. In other words we need to check that when we ‘add’ or ‘multiply’ in <span class="math notranslate nohighlight">\(W\)</span> we are not taken outside of <span class="math notranslate nohighlight">\(W\)</span> (<a class="reference internal" href="#subspaces-figure"><span class="std std-numref">Fig. 5.1</span></a>). This idea is formalised in <a class="reference internal" href="#subspace-condition-theorem">the subspace condition</a>.</p>
+</div><p>Most of the <a class="reference internal" href="5.1_Vector_spaces_definitions.html#vector-space-axioms">axioms</a> A1 – A4 and M1 – M4 are automatically satisfied, simply because they’re satisfied in <span class="math notranslate nohighlight">\(V\)</span>. The only things we really need to check are that addition and scalar multiplication are well-defined. In other words we need to check that when we ‘add’ or ‘multiply’ in <span class="math notranslate nohighlight">\(W\)</span> we are not taken outside <span class="math notranslate nohighlight">\(W\)</span> (<a class="reference internal" href="#subspaces-figure"><span class="std std-numref">Fig. 5.1</span></a>). This idea is formalised in <a class="reference internal" href="#subspace-condition-theorem">the subspace condition</a>.</p>
 <figure class="align-default" id="subspaces-figure">
 <a class="reference internal image-reference" href="../_images/5_subspaces.svg"><img alt="../_images/5_subspaces.svg" src="../_images/5_subspaces.svg" width="350" /></a>
 <figcaption>
@@ -417,10 +418,7 @@ document.write(`
 </div><p>To demonstrate the use of <a class="reference internal" href="#subspace-condition-theorem">the subspace condition</a> let’s check whether <span class="math notranslate nohighlight">\(W = \{(x, y, z) : x + 2y - 3z = 0\}\)</span> is a subspace of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. First we need to verify that <span class="math notranslate nohighlight">\(W\)</span> is non-empty. To do this we simply need to find an element of <span class="math notranslate nohighlight">\(W\)</span>, e.g., <span class="math notranslate nohighlight">\(\mathbf{0} \in W\)</span> so <span class="math notranslate nohighlight">\(W\)</span> is non-empty.</p>
 <p>Next we need to take two arbitrary vectors in <span class="math notranslate nohighlight">\(W\)</span>, <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2, u_3), \mathbf{v} = (v_1, v_2, v_3) \in W\)</span> say and a scalar <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \mathbf{u} + \alpha \mathbf{v} =
-    \begin{pmatrix} u_1 \\ u_2 \\ u_3 \end{pmatrix} + \alpha 
-    \begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix} 
-    = \begin{pmatrix} u_1 + \alpha v_1 \\ u_2 + \alpha v_2 \\ u_3 + \alpha v_3 \end{pmatrix}. \end{split}\]</div>
+\[\begin{split} \mathbf{u} + \alpha \mathbf{v} = \begin{pmatrix} u_1 \\ u_2 \\ u_3 \end{pmatrix} + \alpha \begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix} = \begin{pmatrix} u_1 + \alpha v_1 \\ u_2 + \alpha v_2 \\ u_3 + \alpha v_3 \end{pmatrix}. \end{split}\]</div>
 <p>We now need to show that <span class="math notranslate nohighlight">\((u_1 + \alpha v_1, u_2 + \alpha v_2, u_3 + \alpha v_3)  \in W\)</span>, i.e., that <span class="math notranslate nohighlight">\(x + 2y - 3z = 0\)</span>, so since <span class="math notranslate nohighlight">\(x = u_1 + \alpha v_1\)</span>, <span class="math notranslate nohighlight">\(y = u_2 + \alpha v_2\)</span> and <span class="math notranslate nohighlight">\(z = u_3 + \alpha v_3\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -433,7 +431,7 @@ document.write(`
 <div class="proof example admonition" id="subspace-example">
 <p class="admonition-title"><span class="caption-number">Example 5.3 </span></p>
 <section class="example-content" id="proof-content">
-<p>(i)   <span class="math notranslate nohighlight">\(W\)</span> is a subset of<span class="math notranslate nohighlight">\(M_{2\times 2}\)</span> (the set of all <span class="math notranslate nohighlight">\(2\times 2\)</span> matrixs) given by</p>
+<p>(i)   <span class="math notranslate nohighlight">\(W\)</span> is a subset of<span class="math notranslate nohighlight">\(M_{2\times 2}\)</span> (the set of all <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices) given by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     W = \left\{ \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} : a + b + c + d = 0 \right\}.
@@ -448,18 +446,18 @@ document.write(`
 <p>(i)   <span class="math notranslate nohighlight">\(\mathbf{0}_{2\times 2} \in W\)</span> so <span class="math notranslate nohighlight">\(W\)</span> is non-empty. Let <span class="math notranslate nohighlight">\(U, V \in W\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>. Then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    U + \alpha V = 
+    U + \alpha V =
     \begin{pmatrix} u_{11} &amp; u_{12} \\ u_{21} &amp; u_{22} \end{pmatrix} + \alpha
-    \begin{pmatrix} v_{11} &amp; v_{12} \\ v_{21} &amp; v_{22} \end{pmatrix} = 
-    \begin{pmatrix} 
-        u_{11} + \alpha v_{11} &amp; u_{12} + \alpha v_{12} \\ 
-        u_{21} + \alpha v_{21} &amp; u_{22} + \alpha v_{22} 
+    \begin{pmatrix} v_{11} &amp; v_{12} \\ v_{21} &amp; v_{22} \end{pmatrix} =
+    \begin{pmatrix}
+        u_{11} + \alpha v_{11} &amp; u_{12} + \alpha v_{12} \\
+        u_{21} + \alpha v_{21} &amp; u_{22} + \alpha v_{22}
     \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 <p>Checking that <span class="math notranslate nohighlight">\(U + \alpha V \in W\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    a + b + c + d &amp;= (u_{11} + \alpha v_{11}) + (u_{12} + \alpha v_{12}) + (u_{21} + \alpha v_{21}) + (u_{22} + \alpha v_{22}) \\ 
+    a + b + c + d &amp;= (u_{11} + \alpha v_{11}) + (u_{12} + \alpha v_{12}) + (u_{21} + \alpha v_{21}) + (u_{22} + \alpha v_{22}) \\
     &amp; = (u_{11} + u_{12} + u_{21} + u_{22}) + \alpha (v_{11} + v_{12} + v_{21} + v_{22}) \\
     &amp; = 0 + \alpha \cdot 0 = 0,
 \end{align*} \end{split}\]</div>
@@ -481,8 +479,8 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[ W = \{p \in P_n(\mathbb{R}) : \operatorname{deg}(p) \in \{0,2,4\}\} \]</div>
 <p>i.e, the set of all polynomials of even degree at most 4 together with the zero polynomial. Is <span class="math notranslate nohighlight">\(W\)</span> a subspace of <span class="math notranslate nohighlight">\(P_4(\mathbb{R})\)</span>?</p>
-<p>Let <span class="math notranslate nohighlight">\(u = x^2\)</span> and <span class="math notranslate nohighlight">\(v = -x ^ 2 + x\)</span> then <span class="math notranslate nohighlight">\(u, v \in W\)</span> but <span class="math notranslate nohighlight">\(u + v = x^2 - x^2 + x = x \notin W\)</span> since <span class="math notranslate nohighlight">\(\operatorname{deg}(x) = 1\)</span> is odd. Therefore <span class="math notranslate nohighlight">\(W\)</span> is not a subspace of <span class="math notranslate nohighlight">\(P_4(\mathbb{R})\)</span>. Here we came up with a single counter example to show that the linear combination <span class="math notranslate nohighlight">\(u + v \notin W\)</span>.</p>
-<p>This counterexample is great but how does one come up with such a counterexample if you can’t immediately think of one? If you do not see an obvious counterexample, try and construct one: we are looking for two even-degree polynomials, whose sum is not an even polynomial. Let’s start at the lowest degree: <span class="math notranslate nohighlight">\(0\)</span>. The sum of two polynomials of degree <span class="math notranslate nohighlight">\(0\)</span> is just the sum of two real numbers, so there is no counterexample here. Let’s try degree <span class="math notranslate nohighlight">\(2\)</span>. Now we need to find: <span class="math notranslate nohighlight">\(u = ax^2 + bx + c\)</span> and <span class="math notranslate nohighlight">\(v = dx^2 + ex + f\)</span>, such that <span class="math notranslate nohighlight">\(u + v\)</span> has an odd degree. Now</p>
+<p>Let <span class="math notranslate nohighlight">\(u = x^2\)</span> and <span class="math notranslate nohighlight">\(v = -x ^ 2 + x\)</span> then <span class="math notranslate nohighlight">\(u, v \in W\)</span> but <span class="math notranslate nohighlight">\(u + v = x^2 - x^2 + x = x \notin W\)</span> since <span class="math notranslate nohighlight">\(\operatorname{deg}(x) = 1\)</span> is odd. Therefore, <span class="math notranslate nohighlight">\(W\)</span> is not a subspace of <span class="math notranslate nohighlight">\(P_4(\mathbb{R})\)</span>. Here we came up with a single counter example to show that the linear combination <span class="math notranslate nohighlight">\(u + v \notin W\)</span>.</p>
+<p>This counterexample is great, but how does one come up with such a counterexample if you can’t immediately think of one? If you do not see an obvious counterexample, try and construct one: we are looking for two even-degree polynomials, whose sum is not an even polynomial. Let’s start at the lowest degree: <span class="math notranslate nohighlight">\(0\)</span>. The sum of two polynomials of degree <span class="math notranslate nohighlight">\(0\)</span> is just the sum of two real numbers, so there is no counterexample here. Let’s try degree <span class="math notranslate nohighlight">\(2\)</span>. Now we need to find: <span class="math notranslate nohighlight">\(u = ax^2 + bx + c\)</span> and <span class="math notranslate nohighlight">\(v = dx^2 + ex + f\)</span>, such that <span class="math notranslate nohighlight">\(u + v\)</span> has an odd degree. Now</p>
 <div class="math notranslate nohighlight">
 \[ u + v = (a + d)x^2 + (b + e)x + (c + f) \]</div>
 <p>has degree one when <span class="math notranslate nohighlight">\((a + d) = 0\)</span> and <span class="math notranslate nohighlight">\((b + e) \neq 0\)</span>. So let’s take <span class="math notranslate nohighlight">\(a = 1\)</span>, <span class="math notranslate nohighlight">\(d = -1\)</span> and <span class="math notranslate nohighlight">\(b = 0\)</span>, <span class="math notranslate nohighlight">\(e = 1\)</span> (we don’t care about <span class="math notranslate nohighlight">\(c\)</span> or <span class="math notranslate nohighlight">\(f\)</span>, so let’s just set both to be 0). This yields <span class="math notranslate nohighlight">\(u = x^2\)</span> and <span class="math notranslate nohighlight">\(v = -x^2 + x\)</span>, which was our counterexample.</p>

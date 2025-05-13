@@ -218,7 +218,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="7.0_Exam_Questions.html">7. Exam Questions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="7.1_2025_Exam.html">7.1. Exam 2025</a></li>
-<li class="toctree-l2"><a class="reference internal" href="7.2_2024_Exam.html">7.2. Exam 2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7.2_2024_Exam%20copy.html">7.2. Exam 2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7.3_2023_Exam.html">7.3. Exam 2023</a></li>
 </ul>
 </li>
 </ul>
@@ -427,7 +428,7 @@ document.write(`
     \begin{pmatrix} n_x \\ n_y \\ n_z \end{pmatrix}
     \cdot \left( 
         \begin{pmatrix} x \\ y \\ z \end{pmatrix} -
-        \begin{pmatrix} p_x \\ p_y \\ p_z \end{pmatrix} 
+        \begin{pmatrix} p_x \\ p_y \\ p_z \end{pmatrix}
     \right) &amp;= 0 \\
     n_x(x - p_x) + n_y(y - p_y) + n_z(z - p_z) &amp;= 0.
 \end{align*} \end{split}\]</div>
@@ -458,8 +459,8 @@ document.write(`
 <p>(i)   First we need to calculate the normal vector to the plane. We can do this by calculating the cross product of any two vectors that line on the plane, since we know <span class="math notranslate nohighlight">\(\mathbf{p}_1\)</span>, <span class="math notranslate nohighlight">\(\mathbf{p}_2\)</span> and <span class="math notranslate nohighlight">\(\mathbf{p}_3\)</span> lie on the plane then so must the vectors <span class="math notranslate nohighlight">\(\mathbf{p}_2 - \mathbf{p}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{p}_3 - \mathbf{p}_2\)</span> (or any other combination of these points)</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \mathbf{p}_2 - \mathbf{p}_1 &amp;= 
-    \begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix} - 
+    \mathbf{p}_2 - \mathbf{p}_1 &amp;=
+    \begin{pmatrix} 1 \\ 0 \\ -1 \end{pmatrix} -
     \begin{pmatrix} 2 \\ 3 \\ 1 \end{pmatrix} =
     \begin{pmatrix} -1 \\ -3 \\ -2 \end{pmatrix}, \\
     \mathbf{p}_3 - \mathbf{p}_2 &amp;=
@@ -470,11 +471,11 @@ document.write(`
     \begin{pmatrix} -1 \\ -3 \\ -2 \end{pmatrix} \times
     \begin{pmatrix} 1 \\ 1 \\ 4 \end{pmatrix} \\
     &amp;=
-    \begin{vmatrix} 
+    \begin{vmatrix}
         \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
         -1 &amp; -3 &amp; -2 \\
         1 &amp; 1 &amp; 4
-    \end{vmatrix} = 
+    \end{vmatrix} =
     \begin{pmatrix} -10 \\ 2 \\ 2 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 <p>Using equation <a class="reference internal" href="#equation-point-normal-equation">(4.2)</a> with <span class="math notranslate nohighlight">\(\mathbf{p} = \mathbf{p}_1\)</span></p>
@@ -486,7 +487,7 @@ document.write(`
         \begin{pmatrix} 2 \\ 3 \\ 1 \end{pmatrix}
     \right) &amp;= 0 \\
     -10(x - 2) + 2(y - 3) + 2(z - 1) &amp;= 0 \\
-    -10x + 2y + 2z + 12 &amp;= 0. 
+    -10x + 2y + 2z + 12 &amp;= 0.
 \end{align*} \end{split}\]</div>
 <p>If we had chosen <span class="math notranslate nohighlight">\(\mathbf{p} = \mathbf{p}_2\)</span> instead</p>
 <div class="math notranslate nohighlight">
@@ -499,7 +500,7 @@ document.write(`
     -10(x - 1) + 2(y - 0) + 2(z + 1) &amp;= 0 \\
     -10x + 2y + 2z + 12 &amp;= 0.
 \end{align*} \end{split}\]</div>
-<p>which was the same answer as before. The same applies for any other point on the plane.</p>
+<p>This is the same as the answer as before. The same applies for any other point on the plane.</p>
 <p>(ii)   Checking <span class="math notranslate nohighlight">\(\mathbf{p}_4\)</span></p>
 <div class="math notranslate nohighlight">
 \[ -10(1) + 2(2) + 2(1) + 12 = 8 \neq 0, \]</div>
@@ -604,10 +605,10 @@ All 3 planes coincide: infinite solutions
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \mathbf{d} = \mathbf{n}_1 \times \mathbf{n}_2 =
-    \begin{vmatrix} 
-        \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\ 
-        3 &amp; -4 &amp; 1 \\ 
-        1 &amp; 1 &amp; -1 
+    \begin{vmatrix}
+        \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+        3 &amp; -4 &amp; 1 \\
+        1 &amp; 1 &amp; -1
     \end{vmatrix} =
     \begin{pmatrix} 3 \\ 4 \\ 7 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
@@ -621,14 +622,14 @@ All 3 planes coincide: infinite solutions
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     3x - 4y + z + x + y -z &amp;= 7 \\
-    4x - 3y &amp;= 7\\ 
+    4x - 3y &amp;= 7\\
     \therefore y &amp;= \frac{4x - 7}{3}.
 \end{align*} \end{split}\]</div>
 <p>Let <span class="math notranslate nohighlight">\(x = 1\)</span> then <span class="math notranslate nohighlight">\(y = -1\)</span> and <span class="math notranslate nohighlight">\(z = -2\)</span> so the line of intersection between the two planes is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \mathbf{r} = \begin{pmatrix} 1 \\ -1 \\ -2 \end{pmatrix} + t
-    \begin{pmatrix} 3 \\ 4 \\ 7 \end{pmatrix} = 
+    \begin{pmatrix} 3 \\ 4 \\ 7 \end{pmatrix} =
     \begin{pmatrix} 1 + 3t \\ -1 + 4t \\ -2 + 7t \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 </section>

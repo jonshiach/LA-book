@@ -218,7 +218,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="7.0_Exam_Questions.html">7. Exam Questions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="7.1_2025_Exam.html">7.1. Exam 2025</a></li>
-<li class="toctree-l2"><a class="reference internal" href="7.2_2024_Exam.html">7.2. Exam 2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7.2_2024_Exam%20copy.html">7.2. Exam 2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7.3_2023_Exam.html">7.3. Exam 2023</a></li>
 </ul>
 </li>
 </ul>
@@ -388,7 +389,7 @@ document.write(`
 \[\begin{split} \begin{align*}
     A\mathbf{x} &amp;= \mathbf{b}\\
     A^{-1}A \mathbf{x} &amp;= A^{-1}\mathbf{b}\\
-    \mathbf{x} &amp;= A^{-1}\mathbf{b} \qquad \text{(since $I = A^{-1}A$)}.
+    \mathbf{x} &amp;= A^{-1}\mathbf{b} \qquad (\text{since } I = A^{-1}A).
 \end{align*} \end{split}\]</div>
 <p>So we can use the inverse of the coefficient matrix <span class="math notranslate nohighlight">\(A\)</span> to solve for <span class="math notranslate nohighlight">\(\mathbf{x}\)</span>.</p>
 <div class="proof theorem admonition" id="solution-using-inverse-matrix-theorem">
@@ -461,8 +462,8 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \det\begin{pmatrix} 1 &amp; -2 \\ 2 &amp; 4 \end{pmatrix} &amp;= 8, \\
-    \operatorname{adj}\begin{pmatrix} 1 &amp; -2 \\ 2 &amp; 4 \end{pmatrix} &amp;= 
-    \begin{pmatrix} 4 &amp; -2 \\ 2 &amp; 1 \end{pmatrix}^\mathsf{T} = 
+    \operatorname{adj}\begin{pmatrix} 1 &amp; -2 \\ 2 &amp; 4 \end{pmatrix} &amp;=
+    \begin{pmatrix} 4 &amp; -2 \\ 2 &amp; 1 \end{pmatrix}^\mathsf{T} =
     \begin{pmatrix} 4 &amp; 2 \\ -2 &amp; 1 \end{pmatrix},\\
     \therefore A^{-1} &amp;= \frac{1}{8} \begin{pmatrix} 4 &amp; 2 \\ -2 &amp; 1 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
@@ -470,9 +471,9 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \mathbf{x} &amp;= \frac{1}{8} \begin{pmatrix} 4 &amp; 2 \\ -2 &amp; 1 \end{pmatrix}
-    \begin{pmatrix} 11 \\ -18 \end{pmatrix} = 
-    \frac{1}{8} \begin{pmatrix} 8 \\ -40 \end{pmatrix} = 
-    \begin{pmatrix} 1 \\ -5 \end{pmatrix}. 
+    \begin{pmatrix} 11 \\ -18 \end{pmatrix} =
+    \frac{1}{8} \begin{pmatrix} 8 \\ -40 \end{pmatrix} =
+    \begin{pmatrix} 1 \\ -5 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 <p>Checking the solution</p>
 <div class="math notranslate nohighlight">
@@ -480,11 +481,11 @@ document.write(`
 <p>(ii)   Here <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; -2 &amp; 3 \\ 0 &amp; 2 &amp; -4 \\ 3 &amp; 1 &amp; -4 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b} = \begin{pmatrix}-7 \\ 8 \\ 7 \end{pmatrix}\)</span>. Calculating <span class="math notranslate nohighlight">\(A^{-1}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \det \begin{pmatrix} 1 &amp; -2 &amp; 3 \\ 0 &amp; 2 &amp; -4 \\ 3 &amp; 1 &amp; -4 \end{pmatrix} &amp;= 
-    \begin{vmatrix} 2 &amp; -4 \\ 1 &amp; -4 \end{vmatrix} + 
+    \det \begin{pmatrix} 1 &amp; -2 &amp; 3 \\ 0 &amp; 2 &amp; -4 \\ 3 &amp; 1 &amp; -4 \end{pmatrix} &amp;=
+    \begin{vmatrix} 2 &amp; -4 \\ 1 &amp; -4 \end{vmatrix} +
     3 \begin{vmatrix} -2 &amp; 3 \\ 2 &amp; -4 \end{vmatrix} = -4 + 3(2) = 2, \\
     \operatorname{adj} \begin{pmatrix} 1 &amp; -2 &amp; 3 \\ 0 &amp; 2 &amp; -4 \\ 3 &amp; 1 &amp; -4 \end{pmatrix}
-    &amp;= \begin{pmatrix} -4 &amp; -12 &amp; -6 \\ -5 &amp; -13 &amp; -7 \\ 2 &amp; 4 &amp; 2 \end{pmatrix}^\mathsf{T} 
+    &amp;= \begin{pmatrix} -4 &amp; -12 &amp; -6 \\ -5 &amp; -13 &amp; -7 \\ 2 &amp; 4 &amp; 2 \end{pmatrix}^\mathsf{T}
     = \begin{pmatrix} -4 &amp; -5 &amp; 2 \\ -12 &amp; -13 &amp; 4 \\ -6 &amp; -7 &amp; 2 \end{pmatrix}, \\
     \therefore A^{-1} &amp;= \frac{1}{2}
     \begin{pmatrix}

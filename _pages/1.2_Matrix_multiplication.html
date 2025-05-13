@@ -218,7 +218,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="7.0_Exam_Questions.html">7. Exam Questions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="7.1_2025_Exam.html">7.1. Exam 2025</a></li>
-<li class="toctree-l2"><a class="reference internal" href="7.2_2024_Exam.html">7.2. Exam 2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7.2_2024_Exam%20copy.html">7.2. Exam 2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7.3_2023_Exam.html">7.3. Exam 2023</a></li>
 </ul>
 </li>
 </ul>
@@ -420,18 +421,18 @@ document.write(`
 <p>So we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \begin{pmatrix} 
+    \begin{pmatrix}
         \textcolor{blue}{1} &amp; \textcolor{blue}{2} \\
-        \textcolor{lightgray}{3} &amp; \textcolor{lightgray}{4} 
+        \textcolor{lightgray}{3} &amp; \textcolor{lightgray}{4}
     \end{pmatrix}
-    \begin{pmatrix} 
+    \begin{pmatrix}
         \textcolor{red}{5} &amp; \textcolor{lightgray}{6} \\
-        \textcolor{red}{7} &amp; \textcolor{lightgray}{8} 
+        \textcolor{red}{7} &amp; \textcolor{lightgray}{8}
     \end{pmatrix} =
-    \begin{pmatrix} 
+    \begin{pmatrix}
         \textcolor{blue}{1} (\textcolor{red}{5}) + \textcolor{blue}{2} (\textcolor{red}{7}) &amp; \textcolor{lightgray}{\square} \\
         \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square}
-    \end{pmatrix} 
+    \end{pmatrix}
     = \begin{pmatrix} 5 + 14 &amp; \textcolor{lightgray}{\square} \\ \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square} \end{pmatrix}
     = \begin{pmatrix} 19 &amp; \textcolor{lightgray}{\square} \\ \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square} \end{pmatrix}.
 \end{align*} \end{split}\]</div>
@@ -445,9 +446,9 @@ document.write(`
         \textcolor{blue}{1} &amp; \textcolor{blue}{2} \\
         \textcolor{lightgray}{3} &amp; \textcolor{lightgray}{4}
     \end{pmatrix}
-    \begin{pmatrix} 
+    \begin{pmatrix}
         \textcolor{lightgray}{5} &amp; \textcolor{red}{6} \\
-        \textcolor{lightgray}{7} &amp; \textcolor{red}{8} 
+        \textcolor{lightgray}{7} &amp; \textcolor{red}{8}
     \end{pmatrix} =
     \begin{pmatrix}
         19 &amp; \textcolor{blue}{1} (\textcolor{red}{6}) + \textcolor{blue}{2} (\textcolor{red}{8}) \\
@@ -456,21 +457,21 @@ document.write(`
     = \begin{pmatrix} 19 &amp; 6 + 16 \\ \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square} \end{pmatrix}
     = \begin{pmatrix} 19 &amp; 22 \\ \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square} \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>Now that we have finished the first row of <span class="math notranslate nohighlight">\(AB\)</span> we now move down to the second row and back to the first column to calculate <span class="math notranslate nohighlight">\([AB]_{21}\)</span>. Now <span class="math notranslate nohighlight">\(i = 2\)</span> and <span class="math notranslate nohighlight">\(j = 1\)</span>, so we multiply the values from row 2 of <span class="math notranslate nohighlight">\(A\)</span> and column 1 of <span class="math notranslate nohighlight">\(B\)</span> and sum the result</p>
+<p>Now that we have finished the first row of <span class="math notranslate nohighlight">\(AB\)</span> we now move down to the second row and back to the first column to calculate <span class="math notranslate nohighlight">\([AB]_{21}\)</span>. Since <span class="math notranslate nohighlight">\(i = 2\)</span> and <span class="math notranslate nohighlight">\(j = 1\)</span>, we multiply the values from row 2 of <span class="math notranslate nohighlight">\(A\)</span> and column 1 of <span class="math notranslate nohighlight">\(B\)</span> and sum the result</p>
 <div class="math notranslate nohighlight">
 \[[AB]_{21} = a_{21} b_{11} + a_{22} b_{21} = 3(5) + 4(7) = 15 + 28 = 43.\]</div>
 <p>So we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \begin{pmatrix} 
+    \begin{pmatrix}
         \textcolor{lightgray}{1} &amp; \textcolor{lightgray}{2} \\
-        \textcolor{blue}{3} &amp; \textcolor{blue}{4} 
+        \textcolor{blue}{3} &amp; \textcolor{blue}{4}
     \end{pmatrix}
-    \begin{pmatrix} 
-        \textcolor{red}{5} &amp; \textcolor{lightgray}{6} \\ 
-        \textcolor{red}{7} &amp; \textcolor{lightgray}{8} 
-    \end{pmatrix} = 
-    \begin{pmatrix} 
+    \begin{pmatrix}
+        \textcolor{red}{5} &amp; \textcolor{lightgray}{6} \\
+        \textcolor{red}{7} &amp; \textcolor{lightgray}{8}
+    \end{pmatrix} =
+    \begin{pmatrix}
         19 &amp; 22 \\
         \textcolor{blue}{3} (\textcolor{red}{5}) + \textcolor{blue}{4} (\textcolor{red}{7}) &amp; \textcolor{lightgray}{\square}
     \end{pmatrix}
@@ -483,15 +484,15 @@ document.write(`
 <p>So we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \begin{pmatrix} 
+    \begin{pmatrix}
         \textcolor{lightgray}{1} &amp; \textcolor{lightgray}{2} \\
         \textcolor{blue}{3} &amp; \textcolor{blue}{4}
     \end{pmatrix}
-    \begin{pmatrix} 
+    \begin{pmatrix}
         \textcolor{lightgray}{5} &amp; \textcolor{red}{6} \\
         \textcolor{lightgray}{7} &amp; \textcolor{red}{8}
-    \end{pmatrix} = 
-    \begin{pmatrix} 
+    \end{pmatrix} =
+    \begin{pmatrix}
         19 &amp; 22 \\
         43 &amp; \textcolor{blue}{3} (\textcolor{red}{6}) + \textcolor{blue}{4} (\textcolor{red}{8})
     \end{pmatrix}
@@ -527,9 +528,9 @@ document.write(`
 <p>(i)  </p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    AB &amp;= \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix} \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix} 
-    = \begin{pmatrix} 1(2) + 0(1) &amp; 1(3) + 0(5)\\ -2(2) + 3(1) &amp; -2(3) + 3(5) \end{pmatrix} \\ 
-    &amp;= \begin{pmatrix} 2 + 0 &amp; 3 + 0 \\ -4 + 3 &amp; -6 + 15\end{pmatrix} 
+    AB &amp;= \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix} \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix}
+    = \begin{pmatrix} 1(2) + 0(1) &amp; 1(3) + 0(5)\\ -2(2) + 3(1) &amp; -2(3) + 3(5) \end{pmatrix} \\
+    &amp;= \begin{pmatrix} 2 + 0 &amp; 3 + 0 \\ -4 + 3 &amp; -6 + 15\end{pmatrix}
     = \begin{pmatrix} 2 &amp; 3 \\ -1 &amp; 9 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 <p>(ii)  </p>
@@ -548,7 +549,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
     CC^\mathsf{T} &amp;=
-    \begin{pmatrix} 1 &amp; 1 &amp; 0 \\ 3 &amp; -2 &amp; 1 \end{pmatrix} 
+    \begin{pmatrix} 1 &amp; 1 &amp; 0 \\ 3 &amp; -2 &amp; 1 \end{pmatrix}
     \begin{pmatrix} 1 &amp; 3 \\ 1 &amp; -2 \\ 0 &amp; 1 \end{pmatrix}
     =
     \begin{pmatrix}
@@ -559,7 +560,7 @@ document.write(`
     \begin{pmatrix}
         1 + 1 + 0 &amp; 3 - 2 + 0 \\
         3 - 2 + 0 &amp; 9 + 4 + 1
-    \end{pmatrix} 
+    \end{pmatrix}
     =
     \begin{pmatrix}
         2 &amp; 1 \\
@@ -615,14 +616,14 @@ document.write(`
 \[\begin{split} \begin{align*}
     A^3 = AA^2 &amp;=
     \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}
-    \begin{pmatrix} 7 &amp; 10 \\ 15 &amp; 22 \end{pmatrix} 
+    \begin{pmatrix} 7 &amp; 10 \\ 15 &amp; 22 \end{pmatrix}
     = \begin{pmatrix} 7 + 30 &amp; 10 + 44 \\ 21 + 60 &amp; 30 + 88 \end{pmatrix}
     = \begin{pmatrix} 37 &amp; 54 \\ 81 &amp; 118 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 <p>(iii)</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    A^5 = A^2A^3 &amp;= 
+    A^5 = A^2A^3 &amp;=
     \begin{pmatrix} 7 &amp; 10 \\ 15 &amp; 22 \end{pmatrix}
     \begin{pmatrix} 37 &amp; 54 \\ 81 &amp; 118 \end{pmatrix}
     = \begin{pmatrix} 259 + 810 &amp; 378 + 1180 \\ 555 + 1782 &amp; 810 + 2596 \end{pmatrix}

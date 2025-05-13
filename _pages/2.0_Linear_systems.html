@@ -395,7 +395,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="systems-of-linear-equations">
 <span id="systems-of-linear-equations-chapter"></span><span id="index-0"></span><h1><span class="section-number">2. </span>Systems of Linear Equations<a class="headerlink" href="#systems-of-linear-equations" title="Permalink to this heading">#</a></h1>
-<p id="index-1">Systems of linear equations and the methods used to solve them is a fundamental part of linear algebra. They are used to describe relationships between sets of variables and have many applications including co-ordinate geometry, numerical methods, computer science, engineering and statistics. There are many techniques we can use to compute the solutions to systems of linear equations and we will be covering the most common of these.</p>
+<p id="index-1">Systems of linear equations and the methods used to solve them is a fundamental part of linear algebra. They describe relationships between sets of variables and have many applications including co-ordinate geometry, numerical methods, computer science, engineering and statistics. There are many techniques we can use to compute the solutions to systems of linear equations, and we will be covering the most common of these.</p>
 <p>A linear equation is an equation formed using a set of <strong>variables</strong> multiplied by scalar <strong>coefficients</strong> where the sum is of these is equal to some <strong>constant</strong> scalar value. For example if <span class="math notranslate nohighlight">\(x_1, x_2, \ldots, x_n\)</span> are variables, <span class="math notranslate nohighlight">\(a_1, a_2, \ldots, a_n\)</span> are coefficients and <span class="math notranslate nohighlight">\(b\)</span> is a constant value then a linear equation can take the form</p>
 <div class="math notranslate nohighlight">
 \[ a_1 x_1 + a_2 x_2 + \cdots + a_n x_n = b. \]</div>
@@ -417,22 +417,18 @@ document.write(`
 <hr class="docutils" />
 <section id="representing-systems-of-linear-equation-as-a-matrix-equation">
 <span id="index-2"></span><h2><span class="section-number">2.1. </span>Representing systems of linear equation as a matrix equation<a class="headerlink" href="#representing-systems-of-linear-equation-as-a-matrix-equation" title="Permalink to this heading">#</a></h2>
-<p>Systems of linear equations are often represented using the matrix equation <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span> where <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\(m \times n\)</span> <strong>coefficient matrix</strong> containing the values of <span class="math notranslate nohighlight">\(a_{ij}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> is an <span class="math notranslate nohighlight">\(m \times\)</span> <strong>variable vector</strong> containing the variables <span class="math notranslate nohighlight">\(x_i\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> is a <span class="math notranslate nohighlight">\(m \times 1\)</span> <strong>constant vector</strong> containing the constant terms <span class="math notranslate nohighlight">\(b_i\)</span>. Vectors are introduced in the <a class="reference internal" href="3.0_Vectors.html#vectors-chapter"><span class="std std-ref">next chapter</span></a> but for now simply consider them as matrices with a single column.</p>
+<p>Systems of linear equations are often represented using the matrix equation <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span> where <span class="math notranslate nohighlight">\(A\)</span> is a <span class="math notranslate nohighlight">\(m \times n\)</span> <strong>coefficient matrix</strong> containing the values of <span class="math notranslate nohighlight">\(a_{ij}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> is a <span class="math notranslate nohighlight">\(m \times\)</span> <strong>variable vector</strong> containing the variables <span class="math notranslate nohighlight">\(x_i\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> is a <span class="math notranslate nohighlight">\(m \times 1\)</span> <strong>constant vector</strong> containing the constant terms <span class="math notranslate nohighlight">\(b_i\)</span>. Vectors are introduced in the <a class="reference internal" href="3.0_Vectors.html#vectors-chapter"><span class="std std-ref">next chapter</span></a> but for now simply consider them as matrices with a single column.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{array}{cccc}
     A &amp; \mathbf{x} &amp; = &amp; \mathbf{b} \\[4pt]
-    \underbrace{\begin{pmatrix} 
+    \underbrace{\begin{pmatrix}
         a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
         a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
         \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
         a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
     \end{pmatrix}}_{\textsf{coefficient matrix}} &amp;
-    \underbrace{
-        \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}
-    }_{\textsf{variable vector}} &amp; = &amp;
-    \underbrace{
-        \begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_m \end{pmatrix}
-    }_{\textsf{constant vector}}
+    \underbrace{\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}}_{\textsf{variable vector}} &amp; = &amp;
+    \underbrace{\begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_m \end{pmatrix}}_{\textsf{constant vector}}
 \end{array} \end{split}\]</div>
 <p>For example, the follow system of linear equations</p>
 <div class="math notranslate nohighlight">
@@ -443,15 +439,15 @@ document.write(`
 <p>can be written as the matrix equation</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \begin{pmatrix} 
-        2 &amp; 1 \\ 
-        4 &amp; 3 
+    \begin{pmatrix}
+        2 &amp; 1 \\
+        4 &amp; 3
     \end{pmatrix}
     \begin{pmatrix}
-        x_1 \\ x_2 
-    \end{pmatrix} = 
-    \begin{pmatrix} 
-        4 \\ 10 
+        x_1 \\ x_2
+    \end{pmatrix} =
+    \begin{pmatrix}
+        4 \\ 10
     \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 <hr class="docutils" />

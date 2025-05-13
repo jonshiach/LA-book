@@ -218,7 +218,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="7.0_Exam_Questions.html">7. Exam Questions</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="7.1_2025_Exam.html">7.1. Exam 2025</a></li>
-<li class="toctree-l2"><a class="reference internal" href="7.2_2024_Exam.html">7.2. Exam 2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7.2_2024_Exam%20copy.html">7.2. Exam 2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7.3_2023_Exam.html">7.3. Exam 2023</a></li>
 </ul>
 </li>
 </ul>
@@ -380,7 +381,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-determinant-of-a-2-times-2-matrix">1.5.1. Calculating the determinant of a <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determinant-of-an-n-times-n-matrix">1.5.2. Determinant of an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determinant-of-n-times-n-matrices">1.5.2. Determinant of <span class="math notranslate nohighlight">\(n \times n\)</span> matrices</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minors">Minors</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cofactors">Cofactors</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-determinant-of-an-n-times-n-matrix">Calculating the determinant of an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix</a></li>
@@ -402,14 +403,14 @@ document.write(`
 <p>A <strong>determinant</strong> is a scalar value that is calculated using the elements of a square matrix (non-square matrices do not have a determinant).  Determinants play a very important role in linear algebra, one of their uses is they enable us to determine if a system of equations has a unique solution. Consider the system of two linear equations</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    a x + b y &amp;= e, \\
-    c x + d y &amp;= f.
+    ax + by &amp;= e, \\
+    cx + dy &amp;= f.
 \end{align*} \end{split}\]</div>
 <p>To solve for <span class="math notranslate nohighlight">\(x\)</span> we could multiply the second equation by <span class="math notranslate nohighlight">\(\dfrac{b}{d}\)</span> and subtract from first equation and rearrange to make <span class="math notranslate nohighlight">\(x\)</span> the subject</p>
 <p>To solve for <span class="math notranslate nohighlight">\(x\)</span> we could look to eliminate <span class="math notranslate nohighlight">\(y\)</span> by multiplying the second equation by <span class="math notranslate nohighlight">\(\dfrac{b}{d}\)</span> to give</p>
 <div class="math notranslate nohighlight">
 \[ \frac{b}{d}c x + by = \frac{b}{d}f,\]</div>
-<p>and subtract this from the first equation</p>
+<p>Subtract this from the first equation</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     ax - \frac{b}{d}c x &amp;= e - \frac{b}{d}f \\
@@ -418,8 +419,8 @@ document.write(`
 \end{align*} \end{split}\]</div>
 <p>We can also solve for <span class="math notranslate nohighlight">\(y\)</span> by multiplying the first equation by <span class="math notranslate nohighlight">\(\dfrac{c}{a}\)</span> to give</p>
 <div class="math notranslate nohighlight">
-\[ c x + \frac{c}{a} b y = \frac{c}{a} e, \]</div>
-<p>and subtract this from the second equation</p>
+\[ c x + \frac{c}{a} b y = \frac{c}{a} e. \]</div>
+<p>Subtract this from the second equation</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     d y - \frac{c}{a} b y &amp;= f - \frac{c}{a} e \\
@@ -437,7 +438,7 @@ document.write(`
         cx + dy \!\!\! &amp;= f.
     \end{matrix}
 \end{align*} \end{split}\]</div>
-<p>then the expression <span class="math notranslate nohighlight">\(ad - bc\)</span> is known as the determinant of the <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix containing the coefficients of <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<p>The expression <span class="math notranslate nohighlight">\(ad - bc\)</span> is known as the determinant of the <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix containing the coefficients of <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>.</p>
 <p>The determinant of a square matrix <span class="math notranslate nohighlight">\(A\)</span> is denoted by <span class="math notranslate nohighlight">\(\det(A)\)</span> or <span class="math notranslate nohighlight">\(|A|\)</span> and is a scalar value that can be computed from the values of its elements.</p>
 <hr class="docutils" id="index-2" />
 <section id="calculating-the-determinant-of-a-2-times-2-matrix">
@@ -466,9 +467,9 @@ document.write(`
 </section>
 </div><hr class="docutils" />
 </section>
-<section id="determinant-of-an-n-times-n-matrix">
-<span id="index-3"></span><h2><span class="section-number">1.5.2. </span>Determinant of an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix<a class="headerlink" href="#determinant-of-an-n-times-n-matrix" title="Permalink to this heading">#</a></h2>
-<p>To compute the determinant of a matrix larger than <span class="math notranslate nohighlight">\(2\times 2\)</span> we need to split the matrix up into multiple <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices so we can use equation <a class="reference internal" href="#equation-2x2-determinant-equation">(1.6)</a>. This is done in a specific way explained below which using <strong>minors</strong> and <strong>cofactors</strong>.</p>
+<section id="determinant-of-n-times-n-matrices">
+<span id="index-3"></span><h2><span class="section-number">1.5.2. </span>Determinant of <span class="math notranslate nohighlight">\(n \times n\)</span> matrices<a class="headerlink" href="#determinant-of-n-times-n-matrices" title="Permalink to this heading">#</a></h2>
+<p>To compute the determinant of a matrix larger than <span class="math notranslate nohighlight">\(2\times 2\)</span> we need to split the matrix up into multiple <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices, so we can use equation <a class="reference internal" href="#equation-2x2-determinant-equation">(1.6)</a>. This is done in a specific way explained below which using <strong>minors</strong> and <strong>cofactors</strong>.</p>
 <section id="minors">
 <h3>Minors<a class="headerlink" href="#minors" title="Permalink to this heading">#</a></h3>
 <div class="proof definition admonition" id="minor-definition">
@@ -478,7 +479,7 @@ document.write(`
 </section>
 </div><p>For example, given the matrix <span class="math notranslate nohighlight">\(A\)</span></p>
 <div class="math notranslate nohighlight">
-\[\begin{split}A = \begin{pmatrix}
+\[\begin{split} A = \begin{pmatrix}
     a_{11} &amp; a_{12} &amp; a_{13} \\
     a_{21} &amp; a_{22} &amp; a_{23} \\
     a_{31} &amp; a_{32} &amp; a_{33}
@@ -547,9 +548,9 @@ document.write(`
 <p>we can expand across row 1 using <span class="math notranslate nohighlight">\(k = 1\)</span> in the first summation in equation <a class="reference internal" href="#equation-nxn-determinant-equation">(1.8)</a></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \det(A) &amp;= a C_{11} + b C_{12} + c C_{13} \\
+    \det(A) &amp;= a C_{11} + b C_{12} + cC_{13} \\
     &amp;= (-1)^{(1+1)} a \begin{vmatrix} e &amp; f \\ h &amp; i \end{vmatrix}
-    + (-1)^{(1+2)} b \begin{vmatrix}d &amp; f \\ g &amp; i \end{vmatrix} 
+    + (-1)^{(1+2)} b \begin{vmatrix}d &amp; f \\ g &amp; i \end{vmatrix}
     + (-1)^{(1+3)} c \begin{vmatrix}d &amp; e \\ g &amp; h \end{vmatrix} \\
     &amp;= a(ei - fh) - b(di - fg) + c(dh - eg) \\
     &amp;= aei - afh - bdi + bfg + cdh - ceg.
@@ -558,8 +559,8 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \det(A) &amp;= b C_{12} + e C_{22} + h C_{32} \\
-    &amp;= (-1)^{(1+2)} b\begin{vmatrix} d &amp; f \\ g &amp; i \end{vmatrix} 
-    + (-1)^{(2+2)}e \begin{vmatrix} a &amp; c \\ g &amp; i \end{vmatrix} 
+    &amp;= (-1)^{(1+2)} b\begin{vmatrix} d &amp; f \\ g &amp; i \end{vmatrix}
+    + (-1)^{(2+2)}e \begin{vmatrix} a &amp; c \\ g &amp; i \end{vmatrix}
     + (-1)^{(3+2)}h \begin{vmatrix} a &amp; c \\ d &amp; f \end{vmatrix} \\
     &amp;= -b(di-fg) + e(ai-cg) - h(af-cd) \\
     &amp;= -bdi + bfg + aei - ceg - afh + cdh.
@@ -580,15 +581,15 @@ document.write(`
 <p>(i)</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    \begin{vmatrix}1 &amp; 0 &amp; 4 \\ 2 &amp; 5 &amp; 6 \\ 4 &amp; 5 &amp; 2 \end{vmatrix} 
+    \begin{vmatrix}1 &amp; 0 &amp; 4 \\ 2 &amp; 5 &amp; 6 \\ 4 &amp; 5 &amp; 2 \end{vmatrix}
     &amp;= 1\begin{vmatrix}5 &amp; 6 \\ 5 &amp; 2 \end{vmatrix} - 0 \begin{vmatrix} 2 &amp; 6 \\ 4 &amp; 2 \end{vmatrix} + 4 \begin{vmatrix}2 &amp; 5 \\ 4 &amp; 5 \end{vmatrix} \\
     &amp;= (10-30) + 4(10-20)
     = -60
 \end{align*} \end{split}\]</div>
 <p>(ii)</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*} 
-    \begin{vmatrix}1 &amp; 0 &amp; 4 \\ 2 &amp; 5 &amp; 6 \\ 4 &amp; 5 &amp; 2 \end{vmatrix} 
+\[\begin{split} \begin{align*}
+    \begin{vmatrix}1 &amp; 0 &amp; 4 \\ 2 &amp; 5 &amp; 6 \\ 4 &amp; 5 &amp; 2 \end{vmatrix}
     &amp;= 4 \begin{vmatrix} 2 &amp; 5 \\ 4 &amp; 5 \end{vmatrix} - 6\begin{vmatrix}1 &amp; 0 \\ 4 &amp; 5 \end{vmatrix} + 2\begin{vmatrix}1 &amp; 0 \\ 2 &amp; 5 \end{vmatrix} \\
     &amp;= 4(10-20) - 6(5 - 0) + 2(5 - 0)
     = -60
@@ -607,17 +608,17 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{vmatrix} 1 &amp; -1 &amp; 4 &amp; 3 \\ 2 &amp; 0 &amp; 5 &amp; -3 \\ 1 &amp; 2 &amp; 4 &amp; 5 \\ 2 &amp; 0 &amp; -2 &amp; 4 \end{vmatrix} &amp;=
-    - (-1) \begin{vmatrix}2 &amp; 5 &amp; -3 \\ 1 &amp; 4 &amp; 5 \\ 2 &amp; -2 &amp; 4 \end{vmatrix} 
+    - (-1) \begin{vmatrix}2 &amp; 5 &amp; -3 \\ 1 &amp; 4 &amp; 5 \\ 2 &amp; -2 &amp; 4 \end{vmatrix}
     - 2 \begin{vmatrix} 1 &amp; 4 &amp; 3 \\ 2 &amp; 5 &amp; -3 \\ 2 &amp; -2 &amp; 4 \end{vmatrix} \\
     &amp;= 1\left(
-        2 \begin{vmatrix} 4 &amp; 5 \\ -2 &amp; 4 \end{vmatrix} 
+        2 \begin{vmatrix} 4 &amp; 5 \\ -2 &amp; 4 \end{vmatrix}
       - 5\begin{vmatrix}1 &amp; 5 \\ 2 &amp; 4 \end{vmatrix}
       - 3 \begin{vmatrix} 1 &amp; 4 \\ 2 &amp; -2 \end{vmatrix}
     \right) \\
-    &amp; \qquad - 2 \left( 
+    &amp; \qquad - 2 \left(
         \begin{vmatrix} 5 &amp; -3 \\ -2 &amp; 4 \end{vmatrix}
       - 4 \begin{vmatrix} 2 &amp; -3 \\ 2 &amp; 4 \end{vmatrix}
-      + 3 \begin{vmatrix} 2 &amp; 5 \\ 2 &amp; -2 \end{vmatrix} 
+      + 3 \begin{vmatrix} 2 &amp; 5 \\ 2 &amp; -2 \end{vmatrix}
     \right) \\
     &amp;= 2(16 + 10) - 5(4 - 10) - 3(-2-8) \\
     &amp; \qquad - 2(20-6) + 8(8+6) - 6(-4-10) \\
@@ -710,7 +711,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-determinant-of-a-2-times-2-matrix">1.5.1. Calculating the determinant of a <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determinant-of-an-n-times-n-matrix">1.5.2. Determinant of an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determinant-of-n-times-n-matrices">1.5.2. Determinant of <span class="math notranslate nohighlight">\(n \times n\)</span> matrices</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minors">Minors</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cofactors">Cofactors</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-determinant-of-an-n-times-n-matrix">Calculating the determinant of an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix</a></li>
