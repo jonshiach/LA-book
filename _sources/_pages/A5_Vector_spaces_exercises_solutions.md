@@ -1,6 +1,6 @@
 (vector-spaces-exercises-solutions-section)=
 
-# Vector Spaces
+# Vector Spaces Exercise Solutions
 
 ```{solution} vector-spaces-ex-R3-axioms
 
