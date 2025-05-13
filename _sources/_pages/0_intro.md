@@ -49,7 +49,7 @@ Vectors
 ````
 
 ````{grid-item-card}
-:link: ../_pages/4.0_Coordinate_geometry
+:link: ../_pages/4.0_co-ordinate_geometry
 :link-type: doc
 :class-header: bg-light
 :columns: 4
