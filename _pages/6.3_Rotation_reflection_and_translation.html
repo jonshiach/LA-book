@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>6.3. Rotation, reflection and scaling &#8212; Linear Algebra</title>
   
@@ -15,59 +14,56 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-proof.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-proof.css?v=9dc65063" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"tex": {"macros": {"adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/6.3_Rotation_reflection_and_translation';</script>
-    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="6.4. Translation" href="6.4_Translation.html" />
@@ -81,19 +77,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -115,12 +115,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -135,9 +143,13 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="0_intro.html">
+  
   
   
   
@@ -147,12 +159,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/LA_logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/LA_logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/LA_logo.png" class="logo__image only-light" alt="Linear Algebra - Home"/>
+    <script>document.write(`<img src="../_static/LA_logo.png" class="logo__image only-dark" alt="Linear Algebra - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -170,7 +193,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="1.0_Matrices.html">1. Matrices</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="1.0_Matrices.html">1. Matrices</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="1.1_Matrix_operations.html">1.2. Arithmetic operations on matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.2_Matrix_multiplication.html">1.3. Matrix multiplication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.3_Special_matrices.html">1.4. Special matrices</a></li>
@@ -179,8 +202,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="1.6_Matrix_algebra.html">1.7. Matrix algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.8_Matrices_exercises.html">1.8. Matrices Exercises</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="2.1_Solving_using_inverse_matrix.html">2.3. Solving systems of linear equations using the inverse matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.2_Cramers_rule.html">2.4. Cramer’s rule</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.3_Gaussian_elimination.html">2.5. Gaussian elimination</a></li>
@@ -190,38 +213,38 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.9. Homogeneous systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.10. Systems of Linear Equations Exercises</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.5_Vectors_exercises.html">3.8. Vectors Exercises</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="4.0_Coordinate_geometry.html">4. Co-ordinate Geometry</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="4.0_Coordinate_geometry.html">4. Co-ordinate Geometry</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="4.1_Lines.html">4.2. Lines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.2_Planes.html">4.3. Planes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.3_Shortest_distance_problems.html">4.4. Shortest distance problems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate Geometry Exercises</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="5.1_Vector_spaces_definitions.html">5.1. Definitions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5.2_Subspaces.html">5.2. Subspaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5.3_Linear_dependence.html">5.3. Linear dependence</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5.4_Basis.html">5.4. Basis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5.5_Vector_spaces_exercises.html">5.5. Vector spaces exercises</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="6.0_Linear_transformations.html">6. Linear Transformations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="6.0_Linear_transformations.html">6. Linear Transformations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="6.1_Transformation_matrices.html">6.1. Transformation matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.2_Composite_transformations.html">6.2. Composite linear transformations</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">6.3. Rotation, reflection and scaling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.4_Translation.html">6.4. Translation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transforation_exercises.html">6.5. Transformations exercises</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercise Solutions</span></p>
 <ul class="nav bd-sidenav">
@@ -249,7 +272,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -258,14 +281,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -340,26 +363,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -392,28 +417,29 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="rotation-reflection-and-scaling">
-<span id="rotation-reflection-and-scaling-section"></span><h1><span class="section-number">6.3. </span>Rotation, reflection and scaling<a class="headerlink" href="#rotation-reflection-and-scaling" title="Permalink to this heading">#</a></h1>
+<span id="rotation-reflection-and-scaling-section"></span><h1><span class="section-number">6.3. </span>Rotation, reflection and scaling<a class="headerlink" href="#rotation-reflection-and-scaling" title="Link to this heading">#</a></h1>
 <p>Three of the most common geometrical linear transformations is rotation of vectors about the origin, reflection of vectors about a line and translation of vectors from one position to another.</p>
 <hr class="docutils" />
-<span class="target" id="rotation-section"></span><section id="rotation">
-<span id="index-0"></span><h2><span class="section-number">6.3.1. </span>Rotation<a class="headerlink" href="#rotation" title="Permalink to this heading">#</a></h2>
+<section id="rotation">
+<span id="index-0"></span><span id="rotation-section"></span><h2><span class="section-number">6.3.1. </span>Rotation<a class="headerlink" href="#rotation" title="Link to this heading">#</a></h2>
 <div class="proof definition admonition" id="rotation-definition">
 <p class="admonition-title"><span class="caption-number">Definition 6.6 </span> (Rotation transformation)</p>
 <section class="definition-content" id="proof-content">
 <p>The linear transformation <span class="math notranslate nohighlight">\(Rot(\theta): \mathbb{R}^2 \to \mathbb{R}^2\)</span> applied to the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> rotates <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> by an angle <span class="math notranslate nohighlight">\(\theta\)</span> <em>anti-clockwise</em> about the origin.</p>
 </section>
 </div><figure class="align-default" id="rotation-figure">
-<a class="reference internal image-reference" href="../_images/6_rotation.svg"><img alt="../_images/6_rotation.svg" src="../_images/6_rotation.svg" width="300" /></a>
+<a class="reference internal image-reference" href="../_images/6_rotation.svg"><img alt="../_images/6_rotation.svg" src="../_images/6_rotation.svg" style="width: 300px;" />
+</a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.2 </span><span class="caption-text">Rotation of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> anti-clockwise about the origin.</span><a class="headerlink" href="#rotation-figure" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.2 </span><span class="caption-text">Rotation of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> anti-clockwise about the origin.</span><a class="headerlink" href="#rotation-figure" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Consider the diagram in <a class="reference internal" href="#rotation-figure"><span class="std std-numref">Fig. 6.2</span></a>. Here we have the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> which is rotated by angle <span class="math notranslate nohighlight">\(\theta\)</span> anti-clockwise about the origin to give the vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>. To determine the linear mapping <span class="math notranslate nohighlight">\(Rot(\theta): \mathbf{u} \mapsto \mathbf{v}\)</span> we first consider the rotation from the vector <span class="math notranslate nohighlight">\(\mathbf{e}_1\|\mathbf{u}\|\)</span>, which points along the <span class="math notranslate nohighlight">\(x\)</span>-axis and has the same magnitude as <span class="math notranslate nohighlight">\(\mathbf{u}\)</span>, by angle <span class="math notranslate nohighlight">\(\phi\)</span> anti-clockwise about the original to <span class="math notranslate nohighlight">\(\mathbf{u}=(u_x, u_y)\)</span>. Forming a right-angled triangle (the blue triangle) with the angle <span class="math notranslate nohighlight">\(\phi\)</span> and hypotenuse of length <span class="math notranslate nohighlight">\(\|\mathbf{u}\|\)</span> then</p>
 <div class="math notranslate nohighlight" id="equation-rotation-equation-1">
-<span class="eqno">(6.6)<a class="headerlink" href="#equation-rotation-equation-1" title="Permalink to this equation">#</a></span>\[\begin{split} \begin{align*}
+<span class="eqno">(6.6)<a class="headerlink" href="#equation-rotation-equation-1" title="Link to this equation">#</a></span>\[\begin{split} \begin{align*}
     \cos(\phi) &amp;= \frac{u_x}{\|\mathbf{u}\|} &amp; \therefore u_x &amp;= \|\mathbf{u}\| \cos(\phi), \\
     \sin(\phi) &amp;= \frac{u_y}{\|\mathbf{u}\|} &amp; \therefore u_y &amp;= \|\mathbf{u}\| \sin(\phi).
 \end{align*} \end{split}\]</div>
@@ -431,7 +457,7 @@ document.write(`
 \end{align*} \end{split}\]</div>
 <p>then</p>
 <div class="math notranslate nohighlight" id="equation-rotation-equation-2">
-<span class="eqno">(6.7)<a class="headerlink" href="#equation-rotation-equation-2" title="Permalink to this equation">#</a></span>\[\begin{split} \begin{align*}
+<span class="eqno">(6.7)<a class="headerlink" href="#equation-rotation-equation-2" title="Link to this equation">#</a></span>\[\begin{split} \begin{align*}
     v_x &amp;= \|\mathbf{u}\| \cos(\phi) \cos(\theta) - \|\mathbf{u}\|\sin(\phi) \sin(\theta) \\
     v_y &amp;= \|\mathbf{u}\| \sin(\phi) \cos(\theta) + \|\mathbf{u}\|\cos(\phi) \sin(\theta).
 \end{align*} \end{split}\]</div>
@@ -460,7 +486,7 @@ document.write(`
     \begin{pmatrix} u_x \cos(\theta) - u_y \sin(\theta) \\ u_x \sin(\theta) + u_y \cos(\theta) \end{pmatrix}. \end{split}\]</div>
 <p>The transformation matrix for rotation in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-rotation-matrix-equation">
-<span class="eqno">(6.8)<a class="headerlink" href="#equation-rotation-matrix-equation" title="Permalink to this equation">#</a></span>\[\begin{split} Rot(\theta) = \begin{pmatrix}
+<span class="eqno">(6.8)<a class="headerlink" href="#equation-rotation-matrix-equation" title="Link to this equation">#</a></span>\[\begin{split} Rot(\theta) = \begin{pmatrix}
         \cos(\theta) &amp; -\sin(\theta) \\
         \sin(\theta) &amp; \cos(\theta)
     \end{pmatrix}. \end{split}\]</div>
@@ -492,9 +518,10 @@ document.write(`
 <p class="admonition-title"><span class="caption-number">Example 6.6 </span></p>
 <section class="example-content" id="proof-content">
 <p>Rotate the vector <span class="math notranslate nohighlight">\(\mathbf{u} = (2, 1)\)</span> by angle <span class="math notranslate nohighlight">\(\theta = \frac{\pi}{2}\)</span> anti-clockwise about the origin.</p>
-<hr class="docutils" />
-<p><strong>Solution</strong></p>
-<p>The transformation matrix for this rotation is</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The transformation matrix for this rotation is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} Rot \left( \frac{\pi}{2} \right) =
     \begin{pmatrix}
@@ -505,7 +532,7 @@ document.write(`
         0 &amp; -1 \\
         1 &amp; 0
     \end{pmatrix}. \end{split}\]</div>
-<p>Applying the transformation to <span class="math notranslate nohighlight">\(\mathbf{u} = (2, 1)\)</span></p>
+<p class="sd-card-text">Applying the transformation to <span class="math notranslate nohighlight">\(\mathbf{u} = (2, 1)\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} Rot\left( \frac{\pi}{2} \right) \cdot \mathbf{u} =
     \begin{pmatrix}
@@ -514,34 +541,38 @@ document.write(`
     \end{pmatrix}
     \begin{pmatrix} 2 \\ 1 \end{pmatrix}
     = \begin{pmatrix} -1 \\ 2 \end{pmatrix}. \end{split}\]</div>
-<p>This rotation is illustrated in the diagram below</p>
+<p class="sd-card-text">This rotation is illustrated in the diagram below</p>
 <figure class="align-default" id="id1">
-<a class="reference internal image-reference" href="../_images/6_rotation_example.svg"><img alt="../_images/6_rotation_example.svg" src="../_images/6_rotation_example.svg" width="400" /></a>
+<a class="reference internal image-reference" href="../_images/6_rotation_example.svg"><img alt="../_images/6_rotation_example.svg" src="../_images/6_rotation_example.svg" style="width: 400px;" />
+</a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.3 </span><span class="caption-text">Rotation of the vector <span class="math notranslate nohighlight">\(\mathbf{u} = (2,1)\)</span> anti-clockwise by angle <span class="math notranslate nohighlight">\(\theta = \frac{\pi}{2}\)</span>.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.3 </span><span class="caption-text">Rotation of the vector <span class="math notranslate nohighlight">\(\mathbf{u} = (2,1)\)</span> anti-clockwise by angle <span class="math notranslate nohighlight">\(\theta = \frac{\pi}{2}\)</span>.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-</section>
+</div>
+</details></section>
 </div><hr class="docutils" />
-<span class="target" id="reflection-section"></span></section>
+</section>
 <section id="reflection">
-<span id="index-1"></span><h2><span class="section-number">6.3.2. </span>Reflection<a class="headerlink" href="#reflection" title="Permalink to this heading">#</a></h2>
+<span id="index-1"></span><span id="reflection-section"></span><h2><span class="section-number">6.3.2. </span>Reflection<a class="headerlink" href="#reflection" title="Link to this heading">#</a></h2>
 <div class="proof definition admonition" id="reflection-definition">
 <p class="admonition-title"><span class="caption-number">Definition 6.7 </span> (Reflection about a line)</p>
 <section class="definition-content" id="proof-content">
 <p>The linear transformation <span class="math notranslate nohighlight">\(Re\!f(\theta): \mathbb{R}^2 \to \mathbb{R^2}\)</span> is the reflection of a vector <span class="math notranslate nohighlight">\(\mathbf{u} \in \mathbb{R}^2\)</span> about the line which passes through the origin and makes an angle of <span class="math notranslate nohighlight">\(\theta\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis such that the distance of the head of the image vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> is the same as that of <span class="math notranslate nohighlight">\(\mathbf{u}\)</span>.</p>
 </section>
 </div><figure class="align-default" id="reflection-figure">
-<a class="reference internal image-reference" href="../_images/6_reflection.svg"><img alt="../_images/6_reflection.svg" src="../_images/6_reflection.svg" width="300" /></a>
+<a class="reference internal image-reference" href="../_images/6_reflection.svg"><img alt="../_images/6_reflection.svg" src="../_images/6_reflection.svg" style="width: 300px;" />
+</a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.4 </span><span class="caption-text">The reflection of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> about a line that passes through the origin.</span><a class="headerlink" href="#reflection-figure" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.4 </span><span class="caption-text">The reflection of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> about a line that passes through the origin.</span><a class="headerlink" href="#reflection-figure" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The simplest reflection we can perform is to reflect a vector <span class="math notranslate nohighlight">\(\mathbf{u} =(u_x, u_y)\)</span> about the <span class="math notranslate nohighlight">\(x\)</span>-axis or <span class="math notranslate nohighlight">\(y\)</span>-axis (<a class="reference internal" href="#reflection-about-x-figure"><span class="std std-numref">Fig. 6.5</span></a>).</p>
 <figure class="align-default" id="reflection-about-x-figure">
-<a class="reference internal image-reference" href="../_images/6_reflection_about_x.svg"><img alt="../_images/6_reflection_about_x.svg" src="../_images/6_reflection_about_x.svg" width="300" /></a>
+<a class="reference internal image-reference" href="../_images/6_reflection_about_x.svg"><img alt="../_images/6_reflection_about_x.svg" src="../_images/6_reflection_about_x.svg" style="width: 300px;" />
+</a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.5 </span><span class="caption-text">Reflection of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> about the <span class="math notranslate nohighlight">\(x\)</span> axis.</span><a class="headerlink" href="#reflection-about-x-figure" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.5 </span><span class="caption-text">Reflection of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> about the <span class="math notranslate nohighlight">\(x\)</span> axis.</span><a class="headerlink" href="#reflection-about-x-figure" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>To reflect about the <span class="math notranslate nohighlight">\(x\)</span>-axis we simply change the sign of the <span class="math notranslate nohighlight">\(y\)</span> co-ordinate</p>
@@ -550,25 +581,28 @@ document.write(`
 \begin{pmatrix} u_x \\ -u_y \end{pmatrix}, \end{split}\]</div>
 <p>and the transformation matrix is</p>
 <div class="math notranslate nohighlight" id="equation-reflection-about-x-equation">
-<span class="eqno">(6.9)<a class="headerlink" href="#equation-reflection-about-x-equation" title="Permalink to this equation">#</a></span>\[\begin{split} Re\!f(0) = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}. \end{split}\]</div>
+<span class="eqno">(6.9)<a class="headerlink" href="#equation-reflection-about-x-equation" title="Link to this equation">#</a></span>\[\begin{split} Re\!f(0) = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}. \end{split}\]</div>
 <p>Note that here the line of reflection makes an angle of <span class="math notranslate nohighlight">\(\theta=0\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis.</p>
 <p>The determine the reflection about a line that makes and arbitrary angle <span class="math notranslate nohighlight">\(\theta\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis we first perform a rotation by <span class="math notranslate nohighlight">\(-\theta\)</span> so that the line of reflection is on the <span class="math notranslate nohighlight">\(x\)</span>-axis (<a class="reference internal" href="#reflection-about-line-1-figure"><span class="std std-numref">Fig. 6.6</span></a>). This means we can then use equation <a class="reference internal" href="#equation-reflection-about-x-equation">(6.9)</a> to reflect the rotated <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> vector to give the vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> (<a class="reference internal" href="#reflection-about-line-2-figure"><span class="std std-numref">Fig. 6.7</span></a>) before rotating by <span class="math notranslate nohighlight">\(\theta\)</span> so that the line of reflection is back to its original position (<a class="reference internal" href="#reflection-about-line-3-figure"><span class="std std-numref">Fig. 6.8</span></a>).</p>
 <figure class="align-default" id="reflection-about-line-1-figure">
-<a class="reference internal image-reference" href="../_images/6_reflection_about_line_1.svg"><img alt="../_images/6_reflection_about_line_1.svg" src="../_images/6_reflection_about_line_1.svg" width="300" /></a>
+<a class="reference internal image-reference" href="../_images/6_reflection_about_line_1.svg"><img alt="../_images/6_reflection_about_line_1.svg" src="../_images/6_reflection_about_line_1.svg" style="width: 300px;" />
+</a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.6 </span><span class="caption-text">Rotate by <span class="math notranslate nohighlight">\(-\theta\)</span>.</span><a class="headerlink" href="#reflection-about-line-1-figure" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.6 </span><span class="caption-text">Rotate by <span class="math notranslate nohighlight">\(-\theta\)</span>.</span><a class="headerlink" href="#reflection-about-line-1-figure" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="reflection-about-line-2-figure">
-<a class="reference internal image-reference" href="../_images/6_reflection_about_line_2.svg"><img alt="../_images/6_reflection_about_line_2.svg" src="../_images/6_reflection_about_line_2.svg" width="300" /></a>
+<a class="reference internal image-reference" href="../_images/6_reflection_about_line_2.svg"><img alt="../_images/6_reflection_about_line_2.svg" src="../_images/6_reflection_about_line_2.svg" style="width: 300px;" />
+</a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.7 </span><span class="caption-text">Reflect about the <span class="math notranslate nohighlight">\(x\)</span>-axis.</span><a class="headerlink" href="#reflection-about-line-2-figure" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.7 </span><span class="caption-text">Reflect about the <span class="math notranslate nohighlight">\(x\)</span>-axis.</span><a class="headerlink" href="#reflection-about-line-2-figure" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="reflection-about-line-3-figure">
-<a class="reference internal image-reference" href="../_images/6_reflection_about_line_3.svg"><img alt="../_images/6_reflection_about_line_3.svg" src="../_images/6_reflection_about_line_3.svg" width="300" /></a>
+<a class="reference internal image-reference" href="../_images/6_reflection_about_line_3.svg"><img alt="../_images/6_reflection_about_line_3.svg" src="../_images/6_reflection_about_line_3.svg" style="width: 300px;" />
+</a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.8 </span><span class="caption-text">Rotate by <span class="math notranslate nohighlight">\(\theta\)</span>.</span><a class="headerlink" href="#reflection-about-line-3-figure" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.8 </span><span class="caption-text">Rotate by <span class="math notranslate nohighlight">\(\theta\)</span>.</span><a class="headerlink" href="#reflection-about-line-3-figure" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Using composite transformations we can calculate the transformation matrix for reflection about a line</p>
@@ -613,7 +647,7 @@ document.write(`
 \end{align*} \end{split}\]</div>
 <p>The transformation matrix for reflection in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-reflection-matrix-equation">
-<span class="eqno">(6.10)<a class="headerlink" href="#equation-reflection-matrix-equation" title="Permalink to this equation">#</a></span>\[\begin{split} Re\!f(\theta) =
+<span class="eqno">(6.10)<a class="headerlink" href="#equation-reflection-matrix-equation" title="Link to this equation">#</a></span>\[\begin{split} Re\!f(\theta) =
 \begin{pmatrix}
     \cos(2\theta) &amp; \sin(2 \theta) \\
     \sin(2\theta) &amp; -\cos(2\theta)
@@ -626,9 +660,10 @@ document.write(`
 <p class="admonition-title"><span class="caption-number">Example 6.7 </span></p>
 <section class="example-content" id="proof-content">
 <p>Reflect the vector <span class="math notranslate nohighlight">\(\mathbf{u} = (3, -1)\)</span> about the line that passes through the origin and has gradient of 1.</p>
-<hr class="docutils" />
-<p><strong>Solution</strong></p>
-<p>Since the line of reflection has gradient 1 then <span class="math notranslate nohighlight">\(\theta = \tan^{-1}(1) = \pi/4\)</span> and the reflection matrix is</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Since the line of reflection has gradient 1 then <span class="math notranslate nohighlight">\(\theta = \tan^{-1}(1) = \pi/4\)</span> and the reflection matrix is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     Re\!f\left( \frac{\pi}{4} \right) = \begin{pmatrix}
@@ -640,7 +675,7 @@ document.write(`
         1 &amp; 0
     \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>Applying the transformation to <span class="math notranslate nohighlight">\(\mathbf{u} = \begin{pmatrix} 3 \\ -1 \end{pmatrix}\)</span></p>
+<p class="sd-card-text">Applying the transformation to <span class="math notranslate nohighlight">\(\mathbf{u} = \begin{pmatrix} 3 \\ -1 \end{pmatrix}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     Re\!f\left(\frac{\pi}{4}\right) = \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix}
@@ -648,25 +683,28 @@ document.write(`
     \begin{pmatrix} -1 \\ 3 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 <figure class="align-default" id="id2">
-<a class="reference internal image-reference" href="../_images/6_reflection_example.svg"><img alt="../_images/6_reflection_example.svg" src="../_images/6_reflection_example.svg" width="400" /></a>
+<a class="reference internal image-reference" href="../_images/6_reflection_example.svg"><img alt="../_images/6_reflection_example.svg" src="../_images/6_reflection_example.svg" style="width: 400px;" />
+</a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.9 </span><span class="caption-text">Reflection of the vector <span class="math notranslate nohighlight">\(\mathbf{u} = (3, -1)\)</span> about the line that passes through the origin and makes an angle of <span class="math notranslate nohighlight">\(\theta = \frac{\pi}{4}\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.9 </span><span class="caption-text">Reflection of the vector <span class="math notranslate nohighlight">\(\mathbf{u} = (3, -1)\)</span> about the line that passes through the origin and makes an angle of <span class="math notranslate nohighlight">\(\theta = \frac{\pi}{4}\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-</section>
+</div>
+</details></section>
 </div><hr class="docutils" />
-<span class="target" id="scaling-section"></span></section>
+</section>
 <section id="scaling">
-<span id="index-2"></span><h2><span class="section-number">6.3.3. </span>Scaling<a class="headerlink" href="#scaling" title="Permalink to this heading">#</a></h2>
+<span id="index-2"></span><span id="scaling-section"></span><h2><span class="section-number">6.3.3. </span>Scaling<a class="headerlink" href="#scaling" title="Link to this heading">#</a></h2>
 <div class="proof definition admonition" id="scaling-definition">
 <p class="admonition-title"><span class="caption-number">Definition 6.8 </span> (Scaling transformation)</p>
 <section class="definition-content" id="proof-content">
 <p>The linear transformation <span class="math notranslate nohighlight">\(S(\mathbf{s}) : \mathbb{R}^n \to \mathbb{R}^n\)</span> where <span class="math notranslate nohighlight">\(\mathbf{s} \in \mathbb{R}^n\)</span> applied to the position vector <span class="math notranslate nohighlight">\(\mathbf{u} \in \mathbb{R}^n\)</span> scales <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> so that the head is moved closer or further away from the origin.</p>
 </section>
 </div><figure class="align-default" id="scaling-figure">
-<a class="reference internal image-reference" href="../_images/6_scaling.svg"><img alt="../_images/6_scaling.svg" src="../_images/6_scaling.svg" width="400" /></a>
+<a class="reference internal image-reference" href="../_images/6_scaling.svg"><img alt="../_images/6_scaling.svg" src="../_images/6_scaling.svg" style="width: 400px;" />
+</a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.10 </span><span class="caption-text">The scaling of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> by the scaling vector <span class="math notranslate nohighlight">\(\mathbf{s}\)</span>.</span><a class="headerlink" href="#scaling-figure" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.10 </span><span class="caption-text">The scaling of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> by the scaling vector <span class="math notranslate nohighlight">\(\mathbf{s}\)</span>.</span><a class="headerlink" href="#scaling-figure" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The scaling of a vector <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2, \ldots, u_n) \in \mathbb{R}^n\)</span> by a scaling vector <span class="math notranslate nohighlight">\(\mathbf{s} = (s_1, s_2, \ldots, s_n)\)</span> is achieved by multiplying the corresponding elements in <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{s}\)</span>.</p>
@@ -681,7 +719,7 @@ document.write(`
 \end{align*} \end{split}\]</div>
 <p>The transformation matrix for scaling is</p>
 <div class="math notranslate nohighlight" id="equation-scaling-matrix-equation">
-<span class="eqno">(6.11)<a class="headerlink" href="#equation-scaling-matrix-equation" title="Permalink to this equation">#</a></span>\[\begin{split} \begin{align*}
+<span class="eqno">(6.11)<a class="headerlink" href="#equation-scaling-matrix-equation" title="Link to this equation">#</a></span>\[\begin{split} \begin{align*}
     S(\mathbf{s}) =
     \begin{pmatrix}
         s_1 &amp; 0 &amp; \cdots &amp; 0 \\
@@ -706,12 +744,13 @@ document.write(`
 <p class="admonition-title"><span class="caption-number">Example 6.8 </span></p>
 <section class="example-content" id="proof-content">
 <p>Scale the point with position vector <span class="math notranslate nohighlight">\(\mathbf{u} = (2, 1)\)</span> by scaling scaling vector <span class="math notranslate nohighlight">\(\mathbf{s} = (2, 3)\)</span>.</p>
-<hr class="docutils" />
-<p><strong>Solution</strong></p>
-<p>The transformation matrix is</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The transformation matrix is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} S\begin{pmatrix} 2 \\ 3 \end{pmatrix} = \begin{pmatrix} 2 &amp; 0 \\ 0 &amp; 3 \end{pmatrix}. \end{split}\]</div>
-<p>Applying the transformation to <span class="math notranslate nohighlight">\(\mathbf{u} = \begin{pmatrix} 2 \\ 1 \end{pmatrix}\)</span></p>
+<p class="sd-card-text">Applying the transformation to <span class="math notranslate nohighlight">\(\mathbf{u} = \begin{pmatrix} 2 \\ 1 \end{pmatrix}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} S\begin{pmatrix} 2 \\ 3 \end{pmatrix} \cdot \mathbf{u} = \begin{pmatrix}
     2 &amp; 0 \\ 0 &amp; 3
@@ -719,12 +758,14 @@ document.write(`
 \begin{pmatrix} 2 \\ 1 \end{pmatrix}
 = \begin{pmatrix} 4 \\ 3 \end{pmatrix}. \end{split}\]</div>
 <figure class="align-default" id="id3">
-<a class="reference internal image-reference" href="../_images/6_scaling_example.svg"><img alt="../_images/6_scaling_example.svg" src="../_images/6_scaling_example.svg" width="400" /></a>
+<a class="reference internal image-reference" href="../_images/6_scaling_example.svg"><img alt="../_images/6_scaling_example.svg" src="../_images/6_scaling_example.svg" style="width: 400px;" />
+</a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.11 </span><span class="caption-text">Scaling of the vector <span class="math notranslate nohighlight">\(\mathbf{u} = (2, 1)\)</span> by the scaling vector <span class="math notranslate nohighlight">\(\mathbf{s} = (2, 3)\)</span>.</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.11 </span><span class="caption-text">Scaling of the vector <span class="math notranslate nohighlight">\(\mathbf{u} = (2, 1)\)</span> by the scaling vector <span class="math notranslate nohighlight">\(\mathbf{s} = (2, 3)\)</span>.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-</section>
+</div>
+</details></section>
 </div></section>
 </section>
 
@@ -753,11 +794,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="6.2_Composite_transformations.html"
@@ -777,10 +817,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -788,6 +825,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -819,6 +857,7 @@ By Dr Jon Shiach
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -845,8 +884,8 @@ By Dr Jon Shiach
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

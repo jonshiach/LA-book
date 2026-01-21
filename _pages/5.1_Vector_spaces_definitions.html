@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>5.1. Definitions &#8212; Linear Algebra</title>
   
@@ -15,59 +14,56 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-proof.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-proof.css?v=9dc65063" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"tex": {"macros": {"adj": ["\\operatorname{adj}", 0]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_pages/5.1_Vector_spaces_definitions';</script>
-    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="5.2. Subspaces" href="5.2_Subspaces.html" />
@@ -81,19 +77,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -115,12 +115,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -135,9 +143,13 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="0_intro.html">
+  
   
   
   
@@ -147,12 +159,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/LA_logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/LA_logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/LA_logo.png" class="logo__image only-light" alt="Linear Algebra - Home"/>
+    <script>document.write(`<img src="../_static/LA_logo.png" class="logo__image only-dark" alt="Linear Algebra - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -170,7 +193,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="1.0_Matrices.html">1. Matrices</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="1.0_Matrices.html">1. Matrices</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="1.1_Matrix_operations.html">1.2. Arithmetic operations on matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.2_Matrix_multiplication.html">1.3. Matrix multiplication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.3_Special_matrices.html">1.4. Special matrices</a></li>
@@ -179,8 +202,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="1.6_Matrix_algebra.html">1.7. Matrix algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.8_Matrices_exercises.html">1.8. Matrices Exercises</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="2.1_Solving_using_inverse_matrix.html">2.3. Solving systems of linear equations using the inverse matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.2_Cramers_rule.html">2.4. Cramer’s rule</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.3_Gaussian_elimination.html">2.5. Gaussian elimination</a></li>
@@ -190,38 +213,38 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.9. Homogeneous systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.10. Systems of Linear Equations Exercises</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.5_Vectors_exercises.html">3.8. Vectors Exercises</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="4.0_Coordinate_geometry.html">4. Co-ordinate Geometry</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="4.0_Coordinate_geometry.html">4. Co-ordinate Geometry</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="4.1_Lines.html">4.2. Lines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.2_Planes.html">4.3. Planes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.3_Shortest_distance_problems.html">4.4. Shortest distance problems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate Geometry Exercises</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">5.1. Definitions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5.2_Subspaces.html">5.2. Subspaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5.3_Linear_dependence.html">5.3. Linear dependence</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5.4_Basis.html">5.4. Basis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5.5_Vector_spaces_exercises.html">5.5. Vector spaces exercises</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="6.0_Linear_transformations.html">6. Linear Transformations</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="6.0_Linear_transformations.html">6. Linear Transformations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="6.1_Transformation_matrices.html">6.1. Transformation matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.2_Composite_transformations.html">6.2. Composite linear transformations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.3_Rotation_reflection_and_translation.html">6.3. Rotation, reflection and scaling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.4_Translation.html">6.4. Translation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transforation_exercises.html">6.5. Transformations exercises</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercise Solutions</span></p>
 <ul class="nav bd-sidenav">
@@ -249,7 +272,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -258,14 +281,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -340,26 +363,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -390,10 +415,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="definitions">
-<span id="vector-spaces-definitions-section"></span><h1><span class="section-number">5.1. </span>Definitions<a class="headerlink" href="#definitions" title="Permalink to this heading">#</a></h1>
+<span id="vector-spaces-definitions-section"></span><h1><span class="section-number">5.1. </span>Definitions<a class="headerlink" href="#definitions" title="Link to this heading">#</a></h1>
 <div class="proof definition admonition" id="field-definition">
 <p class="admonition-title"><span class="caption-number">Definition 5.1 </span> (Field)</p>
 <section class="definition-content" id="proof-content">
@@ -450,22 +475,23 @@ document.write(`
     p(x) := a_0x^0 + a_1x^1 + a_2x^2 + \cdots + a_nx^n = \sum_{i=0}^n a_ix^i,
 \end{align*} \]</div>
 <p>where <span class="math notranslate nohighlight">\(a_i \in \mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(x\)</span> is some variable. Show that <span class="math notranslate nohighlight">\(P(\mathbb{R}_n)\)</span> is a vector space.</p>
-<hr class="docutils" />
-<p><strong>Solution</strong></p>
-<p>(i)   We need to check that all the axioms of vector spaces are satisfied. Here <span class="math notranslate nohighlight">\(V = \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(F = \mathbb{R}\)</span> and let <span class="math notranslate nohighlight">\(u, v, w \in V\)</span> and <span class="math notranslate nohighlight">\(\alpha, \beta \in \mathbb{R}\)</span></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">(i)   We need to check that all the axioms of vector spaces are satisfied. Here <span class="math notranslate nohighlight">\(V = \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(F = \mathbb{R}\)</span> and let <span class="math notranslate nohighlight">\(u, v, w \in V\)</span> and <span class="math notranslate nohighlight">\(\alpha, \beta \in \mathbb{R}\)</span></p>
 <ul class="simple">
-<li><p>A1: <span class="math notranslate nohighlight">\(u + (v + w) = (u + v) + w \quad \checkmark\)</span></p></li>
-<li><p>A2: <span class="math notranslate nohighlight">\(u + v = v + u \quad \checkmark\)</span></p></li>
-<li><p>A3: <span class="math notranslate nohighlight">\(u + 0 = u \quad \checkmark\)</span> (i.e., 0 is the identity element of addition)</p></li>
-<li><p>A4: <span class="math notranslate nohighlight">\(u + (-u) = 0 \quad \checkmark\)</span> (i.e., the negative of any number is the additive inverse)</p></li>
-<li><p>M1: <span class="math notranslate nohighlight">\(\alpha(\beta u) = (\alpha \beta) u \quad \checkmark\)</span></p></li>
-<li><p>M2: <span class="math notranslate nohighlight">\(1 u = u \quad \checkmark\)</span> (i.e., 1 is the multiplicative identity of all numbers)</p></li>
-<li><p>M3: <span class="math notranslate nohighlight">\(\alpha(u + v) = \alpha u + \alpha v \quad \checkmark\)</span></p></li>
-<li><p>M4: <span class="math notranslate nohighlight">\((\alpha + \beta) u = \alpha u + \beta u \quad \checkmark\)</span></p></li>
+<li><p class="sd-card-text">A1: <span class="math notranslate nohighlight">\(u + (v + w) = (u + v) + w \quad \checkmark\)</span></p></li>
+<li><p class="sd-card-text">A2: <span class="math notranslate nohighlight">\(u + v = v + u \quad \checkmark\)</span></p></li>
+<li><p class="sd-card-text">A3: <span class="math notranslate nohighlight">\(u + 0 = u \quad \checkmark\)</span> (i.e., 0 is the identity element of addition)</p></li>
+<li><p class="sd-card-text">A4: <span class="math notranslate nohighlight">\(u + (-u) = 0 \quad \checkmark\)</span> (i.e., the negative of any number is the additive inverse)</p></li>
+<li><p class="sd-card-text">M1: <span class="math notranslate nohighlight">\(\alpha(\beta u) = (\alpha \beta) u \quad \checkmark\)</span></p></li>
+<li><p class="sd-card-text">M2: <span class="math notranslate nohighlight">\(1 u = u \quad \checkmark\)</span> (i.e., 1 is the multiplicative identity of all numbers)</p></li>
+<li><p class="sd-card-text">M3: <span class="math notranslate nohighlight">\(\alpha(u + v) = \alpha u + \alpha v \quad \checkmark\)</span></p></li>
+<li><p class="sd-card-text">M4: <span class="math notranslate nohighlight">\((\alpha + \beta) u = \alpha u + \beta u \quad \checkmark\)</span></p></li>
 </ul>
-<p>(ii)   Let <span class="math notranslate nohighlight">\(u(x), v(x), w(x) \in P_n(\mathbb{R})\)</span> where <span class="math notranslate nohighlight">\(u_i, v_i, w_i \in \mathbb{R}\)</span> are the coefficients for <span class="math notranslate nohighlight">\(u(x)\)</span>, <span class="math notranslate nohighlight">\(v(x)\)</span> and <span class="math notranslate nohighlight">\(w(x)\)</span> respectively and <span class="math notranslate nohighlight">\(k\in \mathbb{R}\)</span> is some scalar then we define</p>
+<p class="sd-card-text">(ii)   Let <span class="math notranslate nohighlight">\(u(x), v(x), w(x) \in P_n(\mathbb{R})\)</span> where <span class="math notranslate nohighlight">\(u_i, v_i, w_i \in \mathbb{R}\)</span> are the coefficients for <span class="math notranslate nohighlight">\(u(x)\)</span>, <span class="math notranslate nohighlight">\(v(x)\)</span> and <span class="math notranslate nohighlight">\(w(x)\)</span> respectively and <span class="math notranslate nohighlight">\(k\in \mathbb{R}\)</span> is some scalar then we define</p>
 <ul class="simple">
-<li><p>Vector addition:</p></li>
+<li><p class="sd-card-text">Vector addition:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -473,7 +499,7 @@ document.write(`
     &amp;= \sum_{i=0}^n (u_i + v_i)x^i.
 \end{align*} \end{split}\]</div>
 <ul class="simple">
-<li><p>Scalar multiplication:</p></li>
+<li><p class="sd-card-text">Scalar multiplication:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -481,14 +507,14 @@ document.write(`
     &amp;= \sum_{i=0}^n ku_ix^i.
 \end{align*} \end{split}\]</div>
 <ul class="simple">
-<li><p>Additive identity element is the zero polynomial</p></li>
+<li><p class="sd-card-text">Additive identity element is the zero polynomial</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[ \begin{align*}
     0 = 0x^0 + 0x^1 + \cdots + 0x^n.
 \end{align*} \]</div>
 <ul class="simple">
-<li><p>The additive inverse to the polynomial <span class="math notranslate nohighlight">\(p\)</span> is</p></li>
+<li><p class="sd-card-text">The additive inverse to the polynomial <span class="math notranslate nohighlight">\(p\)</span> is</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -496,9 +522,9 @@ document.write(`
     &amp;= \sum_{i=0}^n (-u_i)x^i \\
     &amp;= -\sum_{i=0}^n u_ix^i.
 \end{align*} \end{split}\]</div>
-<p>Checking the that axioms of vector spaces are satisfied</p>
+<p class="sd-card-text">Checking the that axioms of vector spaces are satisfied</p>
 <ul class="simple">
-<li><p>A1: Associativity of addition</p></li>
+<li><p class="sd-card-text">A1: Associativity of addition</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -507,7 +533,7 @@ document.write(`
     &amp;= (u(x) + v(x)) + w(x) \quad \checkmark
 \end{align*} \end{split}\]</div>
 <ul class="simple">
-<li><p>A2: Commutativity of addition</p></li>
+<li><p class="sd-card-text">A2: Commutativity of addition</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -516,7 +542,7 @@ document.write(`
     &amp;= v(x) + u(x) \quad \checkmark
 \end{align*} \end{split}\]</div>
 <ul class="simple">
-<li><p>A3: Identity element for addition</p></li>
+<li><p class="sd-card-text">A3: Identity element for addition</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -525,7 +551,7 @@ document.write(`
     &amp;= u(x) \quad \checkmark
 \end{align*} \end{split}\]</div>
 <ul class="simple">
-<li><p>A4: Inverse element for addition</p></li>
+<li><p class="sd-card-text">A4: Inverse element for addition</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -533,7 +559,7 @@ document.write(`
     &amp;= 0 \quad \checkmark
 \end{align*} \end{split}\]</div>
 <ul class="simple">
-<li><p>M1: Associativity of scalar multiplication</p></li>
+<li><p class="sd-card-text">M1: Associativity of scalar multiplication</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -542,7 +568,7 @@ document.write(`
     &amp;= (\alpha \beta) u(x) \quad \checkmark
 \end{align*} \end{split}\]</div>
 <ul class="simple">
-<li><p>M2: Identity element for scalar multiplication</p></li>
+<li><p class="sd-card-text">M2: Identity element for scalar multiplication</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -551,7 +577,7 @@ document.write(`
     &amp;= u(x) \quad \checkmark
 \end{align*} \end{split}\]</div>
 <ul class="simple">
-<li><p>M3: Distributivity of scalar multiplication</p></li>
+<li><p class="sd-card-text">M3: Distributivity of scalar multiplication</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -560,7 +586,7 @@ document.write(`
     &amp;= \alpha u(x) + \alpha v(x) \quad \checkmark
 \end{align*} \end{split}\]</div>
 <ul class="simple">
-<li><p>M4: Distributivity of scalar multiplication over addition</p></li>
+<li><p class="sd-card-text">M4: Distributivity of scalar multiplication over addition</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -568,10 +594,11 @@ document.write(`
     &amp;= \alpha \displaystyle \sum_{i=0}^n u_i x^i + \beta \displaystyle \sum_{i=0}^n u_i x^i \\
     &amp;= \alpha u(x) + \beta u(x) \quad \checkmark
 \end{align*} \end{split}\]</div>
-</section>
+</div>
+</details></section>
 </div><hr class="docutils" />
 <section id="examples-of-non-vector-spaces">
-<h2><span class="section-number">5.1.1. </span>Examples of non-vector spaces<a class="headerlink" href="#examples-of-non-vector-spaces" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.1.1. </span>Examples of non-vector spaces<a class="headerlink" href="#examples-of-non-vector-spaces" title="Link to this heading">#</a></h2>
 <p>Of course not all sets are vector spaces. For example, consider the set of integers <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> over the field <span class="math notranslate nohighlight">\(F=\mathbb{R}\)</span>. It is easy to show that the <a class="reference internal" href="#vector-space-axioms">axioms A1 to A4</a> are satisfied for the set of integers. The problem comes when one tries to define scalar multiplication. From the <a class="reference internal" href="#vector-space-definition">definition of scalar multiplication</a>, <span class="math notranslate nohighlight">\(\mathbb{R} \times \mathbb{Z} \to \mathbb{Z}\)</span> so for <span class="math notranslate nohighlight">\(u \in \mathbb{Z}\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(\alpha x\in \mathbb{Z}\)</span>. However, this is not always the case, for example, when <span class="math notranslate nohighlight">\(u=1\)</span> and <span class="math notranslate nohighlight">\(\alpha = \frac{1}{2}\)</span> we have <span class="math notranslate nohighlight">\(\frac{1}{2} \cdot 1 = \frac{1}{2} \notin \mathbb{Z}\)</span>. This was an example of a proof by counterexample where we just need to show 1 instance where the axioms are not satisfied to prove that we do not have a vector space.</p>
 <div class="proof example admonition" id="non-vector-space-example">
 <p class="admonition-title"><span class="caption-number">Example 5.2 </span></p>
@@ -579,11 +606,13 @@ document.write(`
 <p>Show that the following a not vector spaces:</p>
 <p>(i)   The set of all positive real numbers, <span class="math notranslate nohighlight">\(\mathbb{R}_+\)</span> over itself;</p>
 <p>(ii)   <span class="math notranslate nohighlight">\(V\)</span> is defined to be a parabola <span class="math notranslate nohighlight">\(y=x^2\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>, i.e., all the points in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> defined by <span class="math notranslate nohighlight">\(V = {(x, x^2)}\)</span>.</p>
-<hr class="docutils" />
-<p><strong>Solution</strong></p>
-<p>(i)   We do not have an identity element for addition since <span class="math notranslate nohighlight">\(0 \notin \mathbb{R}_+\)</span> so axiom A3 is not satisfied. Also, by axiom A4, if <span class="math notranslate nohighlight">\(u, v \in \mathbb{R}_+\)</span> are two positive real numbers then <span class="math notranslate nohighlight">\(x + y &gt; 0\)</span> so no additive inverse exists.</p>
-<p>(ii)   If we take the example <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> such that <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 1)\)</span> then the additive inverse <span class="math notranslate nohighlight">\(-\mathbf{u} = (-1, -1) \notin V\)</span> so <span class="math notranslate nohighlight">\(V\)</span> is not a vector space.</p>
-</section>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">(i)   We do not have an identity element for addition since <span class="math notranslate nohighlight">\(0 \notin \mathbb{R}_+\)</span> so axiom A3 is not satisfied. Also, by axiom A4, if <span class="math notranslate nohighlight">\(u, v \in \mathbb{R}_+\)</span> are two positive real numbers then <span class="math notranslate nohighlight">\(x + y &gt; 0\)</span> so no additive inverse exists.</p>
+<p class="sd-card-text">(ii)   If we take the example <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span> such that <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 1)\)</span> then the additive inverse <span class="math notranslate nohighlight">\(-\mathbf{u} = (-1, -1) \notin V\)</span> so <span class="math notranslate nohighlight">\(V\)</span> is not a vector space.</p>
+</div>
+</details></section>
 </div><iframe width="560" height="315" src="https://www.youtube.com/embed/FBjz56gTkA4?si=QGstB_gRQBMAN_aQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></section>
 </section>
 
@@ -612,11 +641,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="5.0_Vector_spaces.html"
@@ -636,10 +664,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -647,6 +672,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -676,6 +702,7 @@ By Dr Jon Shiach
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024.
@@ -702,8 +729,8 @@ By Dr Jon Shiach
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
